@@ -1,0 +1,392 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20220258",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:0258: httpd:2.4 security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:0258",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-0258.html"
+			},
+			{
+				"ref_id": "ALSA-2022:0258",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-0258.html"
+			},
+			{
+				"ref_id": "CVE-2021-44790",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-44790"
+			}
+		],
+		"Description": "The httpd packages provide the Apache HTTP Server, a powerful, efficient, and extensible web server.\nSecurity Fix(es):\n* httpd: mod_lua: Possible buffer overflow when parsing multipart content (CVE-2021-44790)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-01-25"
+			},
+			"updated": {
+				"date": "2022-01-25"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2034674",
+					"id": "2034674"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-44790",
+					"public": "20211220",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-44790",
+					"impact": "important",
+					"cwe": "(CWE-400|CWE-787)",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202202580011",
+										"comment": "httpd is earlier than 0:2.4.37-43.module_el8.5.0+2631+6f259f31.3.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190980002",
+										"comment": "httpd is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202202580012",
+										"comment": "httpd is earlier than 0:2.4.37-43.module_el8.5.0+230+b2ab8c5d.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190980002",
+										"comment": "httpd is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202202580031",
+										"comment": "httpd-devel is earlier than 0:2.4.37-43.module_el8.5.0+2631+6f259f31.3.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190980004",
+										"comment": "httpd-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202202580032",
+										"comment": "httpd-devel is earlier than 0:2.4.37-43.module_el8.5.0+230+b2ab8c5d.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190980004",
+										"comment": "httpd-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202202580051",
+										"comment": "httpd-filesystem is earlier than 0:2.4.37-43.module_el8.5.0+2631+6f259f31.3.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190980006",
+										"comment": "httpd-filesystem is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202202580052",
+										"comment": "httpd-filesystem is earlier than 0:2.4.37-43.module_el8.5.0+230+b2ab8c5d.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190980006",
+										"comment": "httpd-filesystem is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202202580071",
+										"comment": "httpd-manual is earlier than 0:2.4.37-43.module_el8.5.0+2631+6f259f31.3.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190980008",
+										"comment": "httpd-manual is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202202580072",
+										"comment": "httpd-manual is earlier than 0:2.4.37-43.module_el8.5.0+230+b2ab8c5d.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190980008",
+										"comment": "httpd-manual is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202202580091",
+										"comment": "httpd-tools is earlier than 0:2.4.37-43.module_el8.5.0+2631+6f259f31.3.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190980010",
+										"comment": "httpd-tools is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202202580092",
+										"comment": "httpd-tools is earlier than 0:2.4.37-43.module_el8.5.0+230+b2ab8c5d.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190980010",
+										"comment": "httpd-tools is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118090111",
+										"comment": "mod_http2 is earlier than 0:1.15.7-3.module_el8.5.0+2609+b30d9eec"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190980012",
+										"comment": "mod_http2 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118090112",
+										"comment": "mod_http2 is earlier than 0:1.15.7-3.module_el8.5.0+230+b2ab8c5d"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190980012",
+										"comment": "mod_http2 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202202580131",
+										"comment": "mod_ldap is earlier than 0:2.4.37-43.module_el8.5.0+2631+6f259f31.3.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190980014",
+										"comment": "mod_ldap is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202202580132",
+										"comment": "mod_ldap is earlier than 0:2.4.37-43.module_el8.5.0+230+b2ab8c5d.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190980014",
+										"comment": "mod_ldap is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202047510151",
+										"comment": "mod_md is earlier than 1:2.0.8-8.module_el8.5.0+2609+b30d9eec"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190980016",
+										"comment": "mod_md is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202047510152",
+										"comment": "mod_md is earlier than 1:2.0.8-8.module_el8.5.0+230+b2ab8c5d"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190980016",
+										"comment": "mod_md is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202202580171",
+										"comment": "mod_proxy_html is earlier than 1:2.4.37-43.module_el8.5.0+2631+6f259f31.3.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190980018",
+										"comment": "mod_proxy_html is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202202580172",
+										"comment": "mod_proxy_html is earlier than 1:2.4.37-43.module_el8.5.0+230+b2ab8c5d.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190980018",
+										"comment": "mod_proxy_html is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202202580191",
+										"comment": "mod_session is earlier than 0:2.4.37-43.module_el8.5.0+2631+6f259f31.3.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190980020",
+										"comment": "mod_session is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202202580192",
+										"comment": "mod_session is earlier than 0:2.4.37-43.module_el8.5.0+230+b2ab8c5d.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190980020",
+										"comment": "mod_session is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202202580211",
+										"comment": "mod_ssl is earlier than 1:2.4.37-43.module_el8.5.0+2631+6f259f31.3.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190980022",
+										"comment": "mod_ssl is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202202580212",
+										"comment": "mod_ssl is earlier than 1:2.4.37-43.module_el8.5.0+230+b2ab8c5d.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190980022",
+										"comment": "mod_ssl is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20190980023",
+						"comment": "Module httpd:2.4 is enabled"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

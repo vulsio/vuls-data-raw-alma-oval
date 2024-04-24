@@ -1,0 +1,842 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20214743",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:4743: llvm-toolset:rhel8 security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:4743",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4743.html"
+			},
+			{
+				"ref_id": "ALSA-2021:4743",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4743.html"
+			},
+			{
+				"ref_id": "CVE-2021-42574",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-42574"
+			}
+		],
+		"Description": "LLVM Toolset provides the LLVM compiler infrastructure framework, the Clang compiler for the C and C++ languages, the LLDB debugger, and related tools for code analysis.\nSecurity Fix(es):\n* Developer environment: Unicode's bidirectional (BiDi) override characters can cause trojan source attacks (CVE-2021-42574)\nThe following changes were introduced in clang in order to facilitate detection of BiDi Unicode characters:\nclang-tidy now finds identifiers that contain Unicode characters with right-to-left direction, which can be confusing as they may change the understanding of a whole statement.\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-11-18"
+			},
+			"updated": {
+				"date": "2021-11-18"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2005819",
+					"id": "2005819"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-42574",
+					"public": "20211101",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-42574",
+					"impact": "moderate",
+					"cwe": "CWE-838",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430011",
+										"comment": "clang is earlier than 0:12.0.1-4.module_el8.4.0+2600+cefb5d4c"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743002",
+										"comment": "clang is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430012",
+										"comment": "clang is earlier than 0:12.0.1-4.module_el8.5.0+25+1221a7f4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743002",
+										"comment": "clang is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430031",
+										"comment": "clang-analyzer is earlier than 0:12.0.1-4.module_el8.4.0+2600+cefb5d4c"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743004",
+										"comment": "clang-analyzer is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430032",
+										"comment": "clang-analyzer is earlier than 0:12.0.1-4.module_el8.5.0+25+1221a7f4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743004",
+										"comment": "clang-analyzer is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430051",
+										"comment": "clang-devel is earlier than 0:12.0.1-4.module_el8.4.0+2600+cefb5d4c"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743006",
+										"comment": "clang-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430052",
+										"comment": "clang-devel is earlier than 0:12.0.1-4.module_el8.5.0+25+1221a7f4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743006",
+										"comment": "clang-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430071",
+										"comment": "clang-libs is earlier than 0:12.0.1-4.module_el8.4.0+2600+cefb5d4c"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743008",
+										"comment": "clang-libs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430072",
+										"comment": "clang-libs is earlier than 0:12.0.1-4.module_el8.5.0+25+1221a7f4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743008",
+										"comment": "clang-libs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430091",
+										"comment": "clang-resource-filesystem is earlier than 0:12.0.1-4.module_el8.4.0+2600+cefb5d4c"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743010",
+										"comment": "clang-resource-filesystem is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430092",
+										"comment": "clang-resource-filesystem is earlier than 0:12.0.1-4.module_el8.5.0+25+1221a7f4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743010",
+										"comment": "clang-resource-filesystem is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430111",
+										"comment": "clang-tools-extra is earlier than 0:12.0.1-4.module_el8.4.0+2600+cefb5d4c"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743012",
+										"comment": "clang-tools-extra is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430112",
+										"comment": "clang-tools-extra is earlier than 0:12.0.1-4.module_el8.5.0+25+1221a7f4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743012",
+										"comment": "clang-tools-extra is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430131",
+										"comment": "compiler-rt is earlier than 0:12.0.1-1.module_el8.5.0+2598+6a7729ff"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743014",
+										"comment": "compiler-rt is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430132",
+										"comment": "compiler-rt is earlier than 0:12.0.1-1.module_el8.5.0+25+1221a7f4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743014",
+										"comment": "compiler-rt is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430151",
+										"comment": "git-clang-format is earlier than 0:12.0.1-4.module_el8.4.0+2600+cefb5d4c"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743016",
+										"comment": "git-clang-format is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430152",
+										"comment": "git-clang-format is earlier than 0:12.0.1-4.module_el8.5.0+25+1221a7f4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743016",
+										"comment": "git-clang-format is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430171",
+										"comment": "libomp is earlier than 0:12.0.1-1.module_el8.5.0+2598+6a7729ff"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743018",
+										"comment": "libomp is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430172",
+										"comment": "libomp is earlier than 0:12.0.1-1.module_el8.5.0+25+1221a7f4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743018",
+										"comment": "libomp is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430191",
+										"comment": "libomp-devel is earlier than 0:12.0.1-1.module_el8.5.0+2598+6a7729ff"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743020",
+										"comment": "libomp-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430192",
+										"comment": "libomp-devel is earlier than 0:12.0.1-1.module_el8.5.0+25+1221a7f4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743020",
+										"comment": "libomp-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430211",
+										"comment": "libomp-test is earlier than 0:12.0.1-1.module_el8.5.0+2598+6a7729ff"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743022",
+										"comment": "libomp-test is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430212",
+										"comment": "libomp-test is earlier than 0:12.0.1-1.module_el8.5.0+25+1221a7f4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743022",
+										"comment": "libomp-test is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430231",
+										"comment": "lld is earlier than 0:12.0.1-1.module_el8.5.0+2598+6a7729ff"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743024",
+										"comment": "lld is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430232",
+										"comment": "lld is earlier than 0:12.0.1-1.module_el8.5.0+25+1221a7f4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743024",
+										"comment": "lld is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430251",
+										"comment": "lld-devel is earlier than 0:12.0.1-1.module_el8.5.0+2598+6a7729ff"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743026",
+										"comment": "lld-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430252",
+										"comment": "lld-devel is earlier than 0:12.0.1-1.module_el8.5.0+25+1221a7f4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743026",
+										"comment": "lld-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430271",
+										"comment": "lld-libs is earlier than 0:12.0.1-1.module_el8.5.0+2598+6a7729ff"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743028",
+										"comment": "lld-libs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430272",
+										"comment": "lld-libs is earlier than 0:12.0.1-1.module_el8.5.0+25+1221a7f4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743028",
+										"comment": "lld-libs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430291",
+										"comment": "lld-test is earlier than 0:12.0.1-1.module_el8.5.0+2598+6a7729ff"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743030",
+										"comment": "lld-test is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430292",
+										"comment": "lld-test is earlier than 0:12.0.1-1.module_el8.5.0+25+1221a7f4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743030",
+										"comment": "lld-test is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430311",
+										"comment": "lldb is earlier than 0:12.0.1-1.module_el8.5.0+2598+6a7729ff"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743032",
+										"comment": "lldb is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430312",
+										"comment": "lldb is earlier than 0:12.0.1-1.module_el8.5.0+25+1221a7f4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743032",
+										"comment": "lldb is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430331",
+										"comment": "lldb-devel is earlier than 0:12.0.1-1.module_el8.5.0+2598+6a7729ff"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743034",
+										"comment": "lldb-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430332",
+										"comment": "lldb-devel is earlier than 0:12.0.1-1.module_el8.5.0+25+1221a7f4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743034",
+										"comment": "lldb-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430351",
+										"comment": "llvm is earlier than 0:12.0.1-2.module_el8.5.0+2598+6a7729ff"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743036",
+										"comment": "llvm is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430352",
+										"comment": "llvm is earlier than 0:12.0.1-2.module_el8.5.0+25+1221a7f4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743036",
+										"comment": "llvm is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430371",
+										"comment": "llvm-devel is earlier than 0:12.0.1-2.module_el8.5.0+2598+6a7729ff"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743038",
+										"comment": "llvm-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430372",
+										"comment": "llvm-devel is earlier than 0:12.0.1-2.module_el8.5.0+25+1221a7f4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743038",
+										"comment": "llvm-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430391",
+										"comment": "llvm-doc is earlier than 0:12.0.1-2.module_el8.5.0+2598+6a7729ff"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743040",
+										"comment": "llvm-doc is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430392",
+										"comment": "llvm-doc is earlier than 0:12.0.1-2.module_el8.5.0+25+1221a7f4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743040",
+										"comment": "llvm-doc is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430411",
+										"comment": "llvm-googletest is earlier than 0:12.0.1-2.module_el8.5.0+2598+6a7729ff"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743042",
+										"comment": "llvm-googletest is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430412",
+										"comment": "llvm-googletest is earlier than 0:12.0.1-2.module_el8.5.0+25+1221a7f4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743042",
+										"comment": "llvm-googletest is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430431",
+										"comment": "llvm-libs is earlier than 0:12.0.1-2.module_el8.5.0+2598+6a7729ff"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743044",
+										"comment": "llvm-libs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430432",
+										"comment": "llvm-libs is earlier than 0:12.0.1-2.module_el8.5.0+25+1221a7f4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743044",
+										"comment": "llvm-libs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430451",
+										"comment": "llvm-static is earlier than 0:12.0.1-2.module_el8.5.0+2598+6a7729ff"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743046",
+										"comment": "llvm-static is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430452",
+										"comment": "llvm-static is earlier than 0:12.0.1-2.module_el8.5.0+25+1221a7f4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743046",
+										"comment": "llvm-static is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430471",
+										"comment": "llvm-test is earlier than 0:12.0.1-2.module_el8.5.0+2598+6a7729ff"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743048",
+										"comment": "llvm-test is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430472",
+										"comment": "llvm-test is earlier than 0:12.0.1-2.module_el8.5.0+25+1221a7f4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743048",
+										"comment": "llvm-test is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430491",
+										"comment": "llvm-toolset is earlier than 0:12.0.1-1.module_el8.5.0+2598+6a7729ff"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743050",
+										"comment": "llvm-toolset is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430492",
+										"comment": "llvm-toolset is earlier than 0:12.0.1-1.module_el8.5.0+25+1221a7f4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743050",
+										"comment": "llvm-toolset is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430511",
+										"comment": "python3-clang is earlier than 0:12.0.1-4.module_el8.4.0+2600+cefb5d4c"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743052",
+										"comment": "python3-clang is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430512",
+										"comment": "python3-clang is earlier than 0:12.0.1-4.module_el8.5.0+25+1221a7f4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743052",
+										"comment": "python3-clang is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430531",
+										"comment": "python3-lit is earlier than 0:12.0.1-1.module_el8.5.0+2598+6a7729ff"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743054",
+										"comment": "python3-lit is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430532",
+										"comment": "python3-lit is earlier than 0:12.0.1-1.module_el8.5.0+25+1221a7f4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743054",
+										"comment": "python3-lit is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430551",
+										"comment": "python3-lldb is earlier than 0:12.0.1-1.module_el8.5.0+2598+6a7729ff"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743056",
+										"comment": "python3-lldb is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202147430552",
+										"comment": "python3-lldb is earlier than 0:12.0.1-1.module_el8.5.0+25+1221a7f4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214743056",
+										"comment": "python3-lldb is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20214743057",
+						"comment": "Module llvm-toolset:rhel8 is enabled"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

@@ -1,0 +1,181 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20211979",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:1979: squid:4 security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:1979",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1979.html"
+			},
+			{
+				"ref_id": "ALSA-2021:1979",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1979.html"
+			},
+			{
+				"ref_id": "CVE-2020-25097",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-25097"
+			}
+		],
+		"Description": "Squid is a high-performance proxy caching server for web clients, supporting FTP, Gopher, and HTTP data objects.\nSecurity Fix(es):\n* squid: improper input validation may allow a trusted client to perform HTTP request smuggling (CVE-2020-25097)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-05-18"
+			},
+			"updated": {
+				"date": "2021-05-18"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1939925",
+					"id": "1939925"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2020-25097",
+					"public": "20200904",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-25097",
+					"impact": "important",
+					"cwe": "CWE-444",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201934760011",
+										"comment": "libecap is earlier than 0:1.0.1-2.module_el8.5.0+2548+24c223d9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192593002",
+										"comment": "libecap is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201934760012",
+										"comment": "libecap is earlier than 0:1.0.1-2.module_el8.5.0+72+8ec05e37"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192593002",
+										"comment": "libecap is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201934760031",
+										"comment": "libecap-devel is earlier than 0:1.0.1-2.module_el8.5.0+2548+24c223d9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192593004",
+										"comment": "libecap-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201934760032",
+										"comment": "libecap-devel is earlier than 0:1.0.1-2.module_el8.5.0+72+8ec05e37"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192593004",
+										"comment": "libecap-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202119790051",
+										"comment": "squid is earlier than 7:4.11-4.module_el8.4.0+2339+2063f9d1.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192593006",
+										"comment": "squid is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202119790052",
+										"comment": "squid is earlier than 7:4.11-4.module_el8.4.0+2349+2063f9d1.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192593006",
+										"comment": "squid is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202119790053",
+										"comment": "squid is earlier than 7:4.11-4.module_el8.4.0+787+bd6d340e.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201925930062",
+										"comment": "squid is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20192593007",
+						"comment": "Module squid:4 is enabled"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

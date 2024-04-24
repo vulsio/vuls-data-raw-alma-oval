@@ -1,0 +1,87 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20231572",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:1572: pesign security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2023:1572",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-1572.html"
+			},
+			{
+				"ref_id": "CVE-2022-3560",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-3560"
+			},
+			{
+				"ref_id": "ALSA-2023:1572",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-1572.html"
+			}
+		],
+		"Description": "The pesign packages provide the pesign utility for signing UEFI binaries as well as other associated tools.\n\nSecurity Fix(es):\n\n* pesign: Local privilege escalation on pesign systemd service (CVE-2022-3560)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-04-04"
+			},
+			"updated": {
+				"date": "2023-04-04"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2135420",
+					"id": "2135420"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-3560",
+					"public": "20230131",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-3560",
+					"impact": "Important",
+					"cwe": "CWE-22->CWE-269",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20231572001",
+						"comment": "pesign is earlier than 0:0.112-27.el8_7"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20231572002",
+						"comment": "pesign is signed with AlmaLinux OS 8 key"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

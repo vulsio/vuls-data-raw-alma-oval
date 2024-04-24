@@ -1,0 +1,153 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20221552",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:1552: vim security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:1552",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-1552.html"
+			},
+			{
+				"ref_id": "ALSA-2022:1552",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-1552.html"
+			},
+			{
+				"ref_id": "CVE-2022-1154",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-1154"
+			}
+		],
+		"Description": "Vim (Vi IMproved) is an updated and improved version of the vi editor.\nSecurity Fix(es):\n* vim: use after free in utf_ptr2char (CVE-2022-1154)",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-04-26"
+			},
+			"updated": {
+				"date": "2022-04-26"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2073013",
+					"id": "2073013"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-1154",
+					"public": "20220406",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-1154",
+					"impact": "low",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20221552001",
+										"comment": "vim-X11 is earlier than 2:8.0.1763-16.el8_5.13"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191619002",
+										"comment": "vim-X11 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20221552003",
+										"comment": "vim-common is earlier than 2:8.0.1763-16.el8_5.13"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191619004",
+										"comment": "vim-common is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20221552005",
+										"comment": "vim-enhanced is earlier than 2:8.0.1763-16.el8_5.13"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191619006",
+										"comment": "vim-enhanced is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20221552007",
+										"comment": "vim-filesystem is earlier than 2:8.0.1763-16.el8_5.13"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191619008",
+										"comment": "vim-filesystem is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20221552009",
+										"comment": "vim-minimal is earlier than 2:8.0.1763-16.el8_5.13"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191619010",
+										"comment": "vim-minimal is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

@@ -1,0 +1,200 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20234838",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:4838: cups security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2023:4838",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-4838.html"
+			},
+			{
+				"ref_id": "CVE-2023-32360",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-32360"
+			},
+			{
+				"ref_id": "ALSA-2023:4838",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-4838.html"
+			}
+		],
+		"Description": "The Common UNIX Printing System (CUPS) provides a portable printing layer for Linux, UNIX, and similar operating systems.\n\nSecurity Fix(es):\n\n* cups: Information leak through Cups-Get-Document operation (CVE-2023-32360)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-08-29"
+			},
+			"updated": {
+				"date": "2023-08-29"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2230495",
+					"id": "2230495"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-32360",
+					"public": "20221206",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-32360",
+					"impact": "Important",
+					"cwe": "CWE-200",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234838001",
+										"comment": "cups is earlier than 1:2.3.3op2-16.el9_2.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224990002",
+										"comment": "cups is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234838003",
+										"comment": "cups-client is earlier than 1:2.3.3op2-16.el9_2.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224990004",
+										"comment": "cups-client is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234838005",
+										"comment": "cups-devel is earlier than 1:2.3.3op2-16.el9_2.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224990006",
+										"comment": "cups-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234838007",
+										"comment": "cups-filesystem is earlier than 1:2.3.3op2-16.el9_2.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224990008",
+										"comment": "cups-filesystem is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234838009",
+										"comment": "cups-ipptool is earlier than 1:2.3.3op2-16.el9_2.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224990010",
+										"comment": "cups-ipptool is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234838011",
+										"comment": "cups-libs is earlier than 1:2.3.3op2-16.el9_2.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224990012",
+										"comment": "cups-libs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234838013",
+										"comment": "cups-lpd is earlier than 1:2.3.3op2-16.el9_2.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224990014",
+										"comment": "cups-lpd is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234838015",
+										"comment": "cups-printerapp is earlier than 1:2.3.3op2-16.el9_2.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224990016",
+										"comment": "cups-printerapp is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

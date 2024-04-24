@@ -1,0 +1,129 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20204490",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2020:4490: gnupg2 security, bug fix, and enhancement update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2020:4490",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-4490.html"
+			},
+			{
+				"ref_id": "ALSA-2020:4490",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-4490.html"
+			},
+			{
+				"ref_id": "CVE-2018-1000858",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2018-1000858"
+			},
+			{
+				"ref_id": "CVE-2019-13050",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-13050"
+			}
+		],
+		"Description": "The GNU Privacy Guard (GnuPG or GPG) is a tool for encrypting data and creating digital signatures, compliant with OpenPGP and S/MIME standards.\nThe following packages have been upgraded to a later upstream version: gnupg2 (2.2.20). (BZ#1663944)\nSecurity Fix(es):\n* GnuPG: interaction between the sks-keyserver code and GnuPG allows for a Certificate Spamming Attack which leads to persistent DoS (CVE-2019-13050)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2020-11-04"
+			},
+			"updated": {
+				"date": "2020-11-04"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1663917",
+					"id": "1663917"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1726146",
+					"id": "1726146"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2018-1000858",
+					"public": "20181123",
+					"href": "https://access.redhat.com/security/cve/CVE-2018-1000858",
+					"impact": "moderate",
+					"cwe": "CWE-352",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:L"
+				},
+				{
+					"text": "CVE-2019-13050",
+					"public": "20190629",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-13050",
+					"impact": "moderate",
+					"cwe": "CWE-297",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204490001",
+										"comment": "gnupg2 is earlier than 0:2.2.20-2.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204490002",
+										"comment": "gnupg2 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204490003",
+										"comment": "gnupg2-smime is earlier than 0:2.2.20-2.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204490004",
+										"comment": "gnupg2-smime is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

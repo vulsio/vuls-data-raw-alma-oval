@@ -1,0 +1,398 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20215171",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:5171: nodejs:16 security, bug fix, and enhancement update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:5171",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-5171.html"
+			},
+			{
+				"ref_id": "ALSA-2021:5171",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-5171.html"
+			},
+			{
+				"ref_id": "CVE-2020-28469",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-28469"
+			},
+			{
+				"ref_id": "CVE-2020-7788",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-7788"
+			},
+			{
+				"ref_id": "CVE-2021-22959",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-22959"
+			},
+			{
+				"ref_id": "CVE-2021-22960",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-22960"
+			},
+			{
+				"ref_id": "CVE-2021-33502",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-33502"
+			},
+			{
+				"ref_id": "CVE-2021-3807",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-3807"
+			},
+			{
+				"ref_id": "CVE-2021-3918",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-3918"
+			}
+		],
+		"Description": "Node.js is a software development platform for building fast and scalable network applications in the JavaScript programming language. \nThe following packages have been upgraded to a later upstream version: nodejs (16.13.1), nodejs-nodemon (2.0.15). (BZ#2027610)\nSecurity Fix(es):\n* nodejs-json-schema: Prototype pollution vulnerability (CVE-2021-3918)\n* nodejs-ini: Prototype pollution via malicious INI file (CVE-2020-7788)\n* nodejs-glob-parent: Regular expression denial of service (CVE-2020-28469)\n* nodejs-ansi-regex: Regular expression denial of service (ReDoS) matching ANSI escape codes (CVE-2021-3807)\n* normalize-url: ReDoS for data URLs (CVE-2021-33502)\n* llhttp: HTTP Request Smuggling due to spaces in headers (CVE-2021-22959)\n* llhttp: HTTP Request Smuggling when parsing the body of chunked requests (CVE-2021-22960)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-12-16"
+			},
+			"updated": {
+				"date": "2021-12-16"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1907444",
+					"id": "1907444"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1945459",
+					"id": "1945459"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1964461",
+					"id": "1964461"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2007557",
+					"id": "2007557"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2014057",
+					"id": "2014057"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2014059",
+					"id": "2014059"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2024702",
+					"id": "2024702"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2020-28469",
+					"public": "20210112",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-28469",
+					"impact": "moderate",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-7788",
+					"public": "20201208",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-7788",
+					"impact": "moderate",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+				},
+				{
+					"text": "CVE-2021-22959",
+					"public": "20211012",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-22959",
+					"impact": "low",
+					"cwe": "CWE-444",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+				},
+				{
+					"text": "CVE-2021-22960",
+					"public": "20211012",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-22960",
+					"impact": "low",
+					"cwe": "CWE-444",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+				},
+				{
+					"text": "CVE-2021-33502",
+					"public": "20210521",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-33502",
+					"impact": "moderate",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-3807",
+					"public": "20210917",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-3807",
+					"impact": "moderate",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-3918",
+					"public": "20211003",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-3918",
+					"impact": "important",
+					"cwe": "CWE-915",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202151710011",
+										"comment": "nodejs is earlier than 1:16.13.1-3.module_el8.5.0+2605+45d748af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:20200330002",
+										"comment": "nodejs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202151710012",
+										"comment": "nodejs is earlier than 1:16.13.1-3.module_el8.5.0+246+05401605"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:20200330002",
+										"comment": "nodejs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202151710031",
+										"comment": "nodejs-devel is earlier than 1:16.13.1-3.module_el8.5.0+2605+45d748af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:20200330004",
+										"comment": "nodejs-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202151710032",
+										"comment": "nodejs-devel is earlier than 1:16.13.1-3.module_el8.5.0+246+05401605"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:20200330004",
+										"comment": "nodejs-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202151710051",
+										"comment": "nodejs-docs is earlier than 1:16.13.1-3.module_el8.5.0+2605+45d748af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:20200330006",
+										"comment": "nodejs-docs is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202151710052",
+										"comment": "nodejs-docs is earlier than 1:16.13.1-3.module_el8.5.0+246+05401605"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:20200330006",
+										"comment": "nodejs-docs is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202151710071",
+										"comment": "nodejs-full-i18n is earlier than 1:16.13.1-3.module_el8.5.0+2605+45d748af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20202848008",
+										"comment": "nodejs-full-i18n is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202151710072",
+										"comment": "nodejs-full-i18n is earlier than 1:16.13.1-3.module_el8.5.0+246+05401605"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20202848008",
+										"comment": "nodejs-full-i18n is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202151710091",
+										"comment": "nodejs-nodemon is earlier than 0:2.0.15-1.module_el8.5.0+2605+45d748af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:20200330008",
+										"comment": "nodejs-nodemon is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202151710092",
+										"comment": "nodejs-nodemon is earlier than 0:2.0.15-1.module_el8.5.0+246+05401605"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:20200330008",
+										"comment": "nodejs-nodemon is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202151710111",
+										"comment": "nodejs-packaging is earlier than 0:25-1.module_el8.5.0+2605+45d748af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:20200330010",
+										"comment": "nodejs-packaging is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202151710112",
+										"comment": "nodejs-packaging is earlier than 0:25-1.module_el8.5.0+246+05401605"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:20200330010",
+										"comment": "nodejs-packaging is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202151710131",
+										"comment": "npm is earlier than 1:8.1.2-1.16.13.1.3.module_el8.5.0+2605+45d748af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:20200330012",
+										"comment": "npm is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202151710132",
+										"comment": "npm is earlier than 1:8.1.2-1.16.13.1.3.module_el8.5.0+246+05401605"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:20200330012",
+										"comment": "npm is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20215171015",
+						"comment": "Module nodejs:16 is enabled"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

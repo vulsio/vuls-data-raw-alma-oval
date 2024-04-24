@@ -1,0 +1,146 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20227514",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:7514: fribidi security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:7514",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7514.html"
+			},
+			{
+				"ref_id": "CVE-2022-25308",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-25308"
+			},
+			{
+				"ref_id": "CVE-2022-25309",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-25309"
+			},
+			{
+				"ref_id": "CVE-2022-25310",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-25310"
+			},
+			{
+				"ref_id": "ALSA-2022:7514",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7514.html"
+			}
+		],
+		"Description": "FriBidi is a library to handle bidirectional scripts (for example Hebrew, Arabic), so that the display is done in the proper way, while the text data itself is always written in logical order.\n\nSecurity Fix(es):\n\n* fribidi: Stack based buffer overflow (CVE-2022-25308)\n* fribidi: Heap-buffer-overflow in fribidi_cap_rtl_to_unicode (CVE-2022-25309)\n* fribidi: SEGV in fribidi_remove_bidi_marks (CVE-2022-25310)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-11-08"
+			},
+			"updated": {
+				"date": "2022-11-08"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2047890",
+					"id": "2047890"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2047896",
+					"id": "2047896"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2047923",
+					"id": "2047923"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-25308",
+					"public": "20211222",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-25308",
+					"impact": "Moderate",
+					"cwe": "CWE-121",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-25309",
+					"public": "20211222",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-25309",
+					"impact": "Moderate",
+					"cwe": "CWE-122",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:H"
+				},
+				{
+					"text": "CVE-2022-25310",
+					"public": "20211222",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-25310",
+					"impact": "Low",
+					"cwe": "CWE-119",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227514001",
+										"comment": "fribidi is earlier than 0:1.0.4-9.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20194361002",
+										"comment": "fribidi is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227514003",
+										"comment": "fribidi-devel is earlier than 0:1.0.4-9.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20194361004",
+										"comment": "fribidi-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

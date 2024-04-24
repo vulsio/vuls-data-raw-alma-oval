@@ -1,0 +1,271 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20201880",
+	"version": "637",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2020:1880: ibus and glib2 security and bug fix update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2020:1880",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-1880.html"
+			},
+			{
+				"ref_id": "ALSA-2020:1880",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-1880.html"
+			},
+			{
+				"ref_id": "CVE-2019-14822",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-14822"
+			}
+		],
+		"Description": "GLib provides the core application building blocks for libraries and applications written in C. It provides the core object system used in GNOME, the main loop implementation, and a large set of utility functions for strings and common data structures.\nThe Intelligent Input Bus (IBus) is an input method framework for multilingual input in Unix-like operating systems.\nSecurity Fix(es):\n* ibus: missing authorization allows local attacker to access the input bus of another user (CVE-2019-14822)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2020-04-28"
+			},
+			"updated": {
+				"date": "2020-04-28"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1717958",
+					"id": "1717958"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2019-14822",
+					"public": "20190913",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-14822",
+					"impact": "moderate",
+					"cwe": "CWE-862",
+					"cvss3": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201880001",
+										"comment": "ibus is earlier than 0:1.5.19-11.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201880002",
+										"comment": "ibus is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201880003",
+										"comment": "ibus-devel is earlier than 0:1.5.19-11.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201880004",
+										"comment": "ibus-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201880005",
+										"comment": "ibus-devel-docs is earlier than 0:1.5.19-11.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201880006",
+										"comment": "ibus-devel-docs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201880007",
+										"comment": "ibus-gtk2 is earlier than 0:1.5.19-11.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201880008",
+										"comment": "ibus-gtk2 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201880009",
+										"comment": "ibus-gtk3 is earlier than 0:1.5.19-11.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201880010",
+										"comment": "ibus-gtk3 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201880011",
+										"comment": "ibus-libs is earlier than 0:1.5.19-11.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201880012",
+										"comment": "ibus-libs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201880013",
+										"comment": "ibus-setup is earlier than 0:1.5.19-11.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201880014",
+										"comment": "ibus-setup is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201880015",
+										"comment": "ibus-wayland is earlier than 0:1.5.19-11.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201880016",
+										"comment": "ibus-wayland is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201880017",
+										"comment": "glib2 is earlier than 0:2.56.4-8.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193530002",
+										"comment": "glib2 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201880019",
+										"comment": "glib2-devel is earlier than 0:2.56.4-8.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193530004",
+										"comment": "glib2-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201880021",
+										"comment": "glib2-doc is earlier than 0:2.56.4-8.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193530006",
+										"comment": "glib2-doc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201880023",
+										"comment": "glib2-fam is earlier than 0:2.56.4-8.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193530008",
+										"comment": "glib2-fam is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201880025",
+										"comment": "glib2-static is earlier than 0:2.56.4-8.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193530010",
+										"comment": "glib2-static is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201880027",
+										"comment": "glib2-tests is earlier than 0:2.56.4-8.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193530012",
+										"comment": "glib2-tests is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

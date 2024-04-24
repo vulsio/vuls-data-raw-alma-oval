@@ -1,0 +1,138 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20226358",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:6358: open-vm-tools security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:6358",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-6358.html"
+			},
+			{
+				"ref_id": "CVE-2022-31676",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-31676"
+			},
+			{
+				"ref_id": "ALSA-2022:6358",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-6358.html"
+			}
+		],
+		"Description": "The Open Virtual Machine Tools are the open source implementation of the VMware Tools. They are a set of guest operating system virtualization components that enhance performance and user experience of virtual machines.\n\nSecurity Fix(es):\n\n* open-vm-tools: local root privilege escalation in the virtual machine (CVE-2022-31676)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-09-06"
+			},
+			"updated": {
+				"date": "2022-09-06"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2118714",
+					"id": "2118714"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-31676",
+					"public": "20220823",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-31676",
+					"impact": "Important",
+					"cwe": "CWE-250",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226358001",
+										"comment": "open-vm-tools is earlier than 0:11.3.5-1.el9_0.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226358002",
+										"comment": "open-vm-tools is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226358003",
+										"comment": "open-vm-tools-desktop is earlier than 0:11.3.5-1.el9_0.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226358004",
+										"comment": "open-vm-tools-desktop is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226358005",
+										"comment": "open-vm-tools-sdmp is earlier than 0:11.3.5-1.el9_0.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226358006",
+										"comment": "open-vm-tools-sdmp is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226358007",
+										"comment": "open-vm-tools-test is earlier than 0:11.3.5-1.el9_0.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226358008",
+										"comment": "open-vm-tools-test is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

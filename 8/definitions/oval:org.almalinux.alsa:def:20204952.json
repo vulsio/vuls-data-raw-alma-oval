@@ -1,0 +1,112 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20204952",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2020:4952: freetype security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2020:4952",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-4952.html"
+			},
+			{
+				"ref_id": "ALSA-2020:4952",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-4952.html"
+			},
+			{
+				"ref_id": "CVE-2020-15999",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-15999"
+			}
+		],
+		"Description": "FreeType is a free, high-quality, portable font engine that can open and manage font files. FreeType loads, hints, and renders individual glyphs efficiently.\nSecurity Fix(es):\n* freetype: Heap-based buffer overflow due to integer truncation in Load_SBit_Png (CVE-2020-15999)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2020-11-05"
+			},
+			"updated": {
+				"date": "2020-11-05"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1890210",
+					"id": "1890210"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2020-15999",
+					"public": "20201019",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-15999",
+					"impact": "important",
+					"cwe": "CWE-190->CWE-122",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204952001",
+										"comment": "freetype is earlier than 0:2.9.1-4.el8_3.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204952002",
+										"comment": "freetype is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204952003",
+										"comment": "freetype-devel is earlier than 0:2.9.1-4.el8_3.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204952004",
+										"comment": "freetype-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

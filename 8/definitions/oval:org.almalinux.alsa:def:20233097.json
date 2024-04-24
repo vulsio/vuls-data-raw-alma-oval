@@ -1,0 +1,165 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20233097",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:3097: gssntlmssp security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2023:3097",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-3097.html"
+			},
+			{
+				"ref_id": "CVE-2023-25563",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-25563"
+			},
+			{
+				"ref_id": "CVE-2023-25564",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-25564"
+			},
+			{
+				"ref_id": "CVE-2023-25565",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-25565"
+			},
+			{
+				"ref_id": "CVE-2023-25566",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-25566"
+			},
+			{
+				"ref_id": "CVE-2023-25567",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-25567"
+			},
+			{
+				"ref_id": "ALSA-2023:3097",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-3097.html"
+			}
+		],
+		"Description": "The gssntlmssp is a GSSAPI NTLM mechanism that allows to perform NTLM authentication in GSSAPI programs.\n\nSecurity Fix(es):\n\n* gssntlmssp: multiple out-of-bounds read when decoding NTLM fields (CVE-2023-25563)\n* gssntlmssp: memory corruption when decoding UTF16 strings (CVE-2023-25564)\n* gssntlmssp: incorrect free when decoding target information (CVE-2023-25565)\n* gssntlmssp: memory leak when parsing usernames (CVE-2023-25566)\n* gssntlmssp: out-of-bounds read when decoding target information (CVE-2023-25567)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-05-16"
+			},
+			"updated": {
+				"date": "2023-05-16"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2172019",
+					"id": "2172019"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2172020",
+					"id": "2172020"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2172021",
+					"id": "2172021"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2172022",
+					"id": "2172022"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2172023",
+					"id": "2172023"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-25563",
+					"public": "20230214",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-25563",
+					"impact": "Moderate",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-25564",
+					"public": "20230214",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-25564",
+					"impact": "Moderate",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-25565",
+					"public": "20230214",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-25565",
+					"impact": "Moderate",
+					"cwe": "CWE-590",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-25566",
+					"public": "20230214",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-25566",
+					"impact": "Moderate",
+					"cwe": "CWE-401",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-25567",
+					"public": "20230214",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-25567",
+					"impact": "Moderate",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20233097001",
+						"comment": "gssntlmssp is earlier than 0:1.2.0-1.el8_8"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20233097002",
+						"comment": "gssntlmssp is signed with AlmaLinux OS 8 key"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

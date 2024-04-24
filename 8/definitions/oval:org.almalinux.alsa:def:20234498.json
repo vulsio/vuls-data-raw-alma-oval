@@ -1,0 +1,187 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20234498",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:4498: dbus security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2023:4498",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-4498.html"
+			},
+			{
+				"ref_id": "CVE-2023-34969",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-34969"
+			},
+			{
+				"ref_id": "ALSA-2023:4498",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-4498.html"
+			}
+		],
+		"Description": "D-Bus is a system for sending messages between applications. It is used both for the system-wide message bus service, and as a per-user-login-session messaging facility.\n\nSecurity Fix(es):\n\n* dbus: dbus-daemon: assertion failure when a monitor is active and a message from the driver cannot be delivered (CVE-2023-34969)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-08-07"
+			},
+			"updated": {
+				"date": "2023-08-07"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2213166",
+					"id": "2213166"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-34969",
+					"public": "20230606",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-34969",
+					"impact": "Moderate",
+					"cwe": "CWE-617",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234498001",
+										"comment": "dbus is earlier than 1:1.12.8-24.el8_8.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193707002",
+										"comment": "dbus is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234498003",
+										"comment": "dbus-common is earlier than 1:1.12.8-24.el8_8.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193707004",
+										"comment": "dbus-common is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234498005",
+										"comment": "dbus-daemon is earlier than 1:1.12.8-24.el8_8.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193707006",
+										"comment": "dbus-daemon is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234498007",
+										"comment": "dbus-devel is earlier than 1:1.12.8-24.el8_8.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193707008",
+										"comment": "dbus-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234498009",
+										"comment": "dbus-libs is earlier than 1:1.12.8-24.el8_8.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193707010",
+										"comment": "dbus-libs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234498011",
+										"comment": "dbus-tools is earlier than 1:1.12.8-24.el8_8.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193707012",
+										"comment": "dbus-tools is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234498013",
+										"comment": "dbus-x11 is earlier than 1:1.12.8-24.el8_8.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193707014",
+										"comment": "dbus-x11 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

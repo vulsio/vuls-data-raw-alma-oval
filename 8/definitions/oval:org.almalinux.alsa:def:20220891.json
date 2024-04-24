@@ -1,0 +1,132 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20220891",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:0891: httpd:2.4 security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:0891",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-0891.html"
+			},
+			{
+				"ref_id": "ALSA-2022:0891",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-0891.html"
+			},
+			{
+				"ref_id": "CVE-2021-34798",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-34798"
+			},
+			{
+				"ref_id": "CVE-2021-39275",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-39275"
+			}
+		],
+		"Description": "The httpd packages provide the Apache HTTP Server, a powerful, efficient, and extensible web server.\nSecurity Fix(es):\n* httpd: NULL pointer dereference via malformed requests (CVE-2021-34798)\n* httpd: Out-of-bounds write in ap_escape_quotes() via malicious input (CVE-2021-39275)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-03-15"
+			},
+			"updated": {
+				"date": "2022-03-15"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2005119",
+					"id": "2005119"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2005128",
+					"id": "2005128"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-34798",
+					"public": "20210916",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-34798",
+					"impact": "moderate",
+					"cwe": "CWE-476",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-39275",
+					"public": "20210916",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-39275",
+					"impact": "moderate",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterias": [
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204751015",
+														"comment": "mod_md is earlier than 1:2.0.8-8.module_el8.6.0+2872+fe0ff7aa"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20190980016",
+														"comment": "mod_md is signed with AlmaLinux OS 8 key"
+													}
+												]
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190980023",
+										"comment": "Module httpd:2.4 is enabled"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

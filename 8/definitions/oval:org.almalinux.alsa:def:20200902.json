@@ -1,0 +1,138 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20200902",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2020:0902: icu security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2020:0902",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-0902.html"
+			},
+			{
+				"ref_id": "ALSA-2020:0902",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-0902.html"
+			},
+			{
+				"ref_id": "CVE-2020-10531",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-10531"
+			}
+		],
+		"Description": "The International Components for Unicode (ICU) library provides robust and full-featured Unicode services.\nSecurity Fix(es):\n* ICU: Integer overflow in UnicodeString::doAppend() (CVE-2020-10531)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2020-03-19"
+			},
+			"updated": {
+				"date": "2020-03-19"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1807349",
+					"id": "1807349"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2020-10531",
+					"public": "20200225",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-10531",
+					"impact": "important",
+					"cwe": "CWE-190",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20200902001",
+										"comment": "icu is earlier than 0:60.3-2.el8_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20200902002",
+										"comment": "icu is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20200902003",
+										"comment": "libicu is earlier than 0:60.3-2.el8_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20200902004",
+										"comment": "libicu is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20200902005",
+										"comment": "libicu-devel is earlier than 0:60.3-2.el8_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20200902006",
+										"comment": "libicu-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20200902007",
+										"comment": "libicu-doc is earlier than 0:60.3-2.el8_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20200902008",
+										"comment": "libicu-doc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

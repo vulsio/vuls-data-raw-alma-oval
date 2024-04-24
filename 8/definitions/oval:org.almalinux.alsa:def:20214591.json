@@ -1,0 +1,125 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20214591",
+	"version": "637",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:4591: gcc-toolset-11-annobin security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:4591",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4591.html"
+			},
+			{
+				"ref_id": "ALSA-2021:4591",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4591.html"
+			},
+			{
+				"ref_id": "CVE-2021-42574",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-42574"
+			}
+		],
+		"Description": "Annobin provides a compiler plugin to annotate and tools to examine compiled binary files.\nSecurity Fix(es):\n* Developer environment: Unicode's bidirectional (BiDi) override characters can cause trojan source attacks (CVE-2021-42574)\nThe following changes were introduced in annobin in order to facilitate detection of BiDi Unicode characters:\nThis update of annobin adds a new annocheck test to detect the presence of multibyte characters in symbol names.\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-11-10"
+			},
+			"updated": {
+				"date": "2021-11-10"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2005819",
+					"id": "2005819"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-42574",
+					"public": "20211101",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-42574",
+					"impact": "moderate",
+					"cwe": "CWE-838",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214591001",
+										"comment": "gcc-toolset-11-annobin-annocheck is earlier than 0:9.85-1.el8_5.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214591002",
+										"comment": "gcc-toolset-11-annobin-annocheck is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214591003",
+										"comment": "gcc-toolset-11-annobin-docs is earlier than 0:9.85-1.el8_5.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214591004",
+										"comment": "gcc-toolset-11-annobin-docs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214591005",
+										"comment": "gcc-toolset-11-annobin-plugin-gcc is earlier than 0:9.85-1.el8_5.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214591006",
+										"comment": "gcc-toolset-11-annobin-plugin-gcc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

@@ -1,0 +1,238 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20220894",
+	"version": "638",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:0894: vim security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:0894",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-0894.html"
+			},
+			{
+				"ref_id": "ALSA-2022:0894",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-0894.html"
+			},
+			{
+				"ref_id": "CVE-2022-0261",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-0261"
+			},
+			{
+				"ref_id": "CVE-2022-0318",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-0318"
+			},
+			{
+				"ref_id": "CVE-2022-0359",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-0359"
+			},
+			{
+				"ref_id": "CVE-2022-0361",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-0361"
+			},
+			{
+				"ref_id": "CVE-2022-0392",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-0392"
+			},
+			{
+				"ref_id": "CVE-2022-0413",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-0413"
+			}
+		],
+		"Description": "Vim (Vi IMproved) is an updated and improved version of the vi editor.\nSecurity Fix(es):\n* vim: Heap-based buffer overflow in block_insert() in src/ops.c (CVE-2022-0261)\n* vim: Heap-based buffer overflow in utf_head_off() in mbyte.c (CVE-2022-0318)\n* vim: Heap-based buffer overflow in init_ccline() in ex_getln.c (CVE-2022-0359)\n* vim: Illegal memory access when copying lines in visual mode leads to heap buffer overflow (CVE-2022-0361)\n* vim: Heap-based buffer overflow in getexmodeline() in ex_getln.c (CVE-2022-0392)\n* vim: Use after free in src/ex_cmds.c (CVE-2022-0413)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-03-15"
+			},
+			"updated": {
+				"date": "2022-03-15"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2044607",
+					"id": "2044607"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2045355",
+					"id": "2045355"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2046479",
+					"id": "2046479"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2048519",
+					"id": "2048519"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2049175",
+					"id": "2049175"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2050053",
+					"id": "2050053"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-0261",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-0261",
+					"impact": "moderate",
+					"cwe": "CWE-119",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-0318",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-0318",
+					"impact": "moderate",
+					"cwe": "CWE-119",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:H"
+				},
+				{
+					"text": "CVE-2022-0359",
+					"public": "20220124",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-0359",
+					"impact": "moderate",
+					"cwe": "CWE-119",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-0361",
+					"public": "20220124",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-0361",
+					"impact": "moderate",
+					"cwe": "CWE-119",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-0392",
+					"public": "20220125",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-0392",
+					"impact": "moderate",
+					"cwe": "CWE-119",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-0413",
+					"public": "20220130",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-0413",
+					"impact": "moderate",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220894001",
+										"comment": "vim-X11 is earlier than 2:8.0.1763-16.el8_5.13"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191619002",
+										"comment": "vim-X11 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220894003",
+										"comment": "vim-common is earlier than 2:8.0.1763-16.el8_5.13"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191619004",
+										"comment": "vim-common is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220894005",
+										"comment": "vim-enhanced is earlier than 2:8.0.1763-16.el8_5.13"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191619006",
+										"comment": "vim-enhanced is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220894007",
+										"comment": "vim-filesystem is earlier than 2:8.0.1763-16.el8_5.13"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191619008",
+										"comment": "vim-filesystem is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220894009",
+										"comment": "vim-minimal is earlier than 2:8.0.1763-16.el8_5.13"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191619010",
+										"comment": "vim-minimal is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

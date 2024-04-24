@@ -1,0 +1,168 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20222008",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:2008: cockpit security, bug fix, and enhancement update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:2008",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-2008.html"
+			},
+			{
+				"ref_id": "ALSA-2022:2008",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-2008.html"
+			},
+			{
+				"ref_id": "CVE-2021-3660",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-3660"
+			},
+			{
+				"ref_id": "CVE-2021-3698",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-3698"
+			}
+		],
+		"Description": "Cockpit enables users to administer GNU/Linux servers using a web browser. It offers network configuration, log inspection, diagnostic reports, SELinux troubleshooting, interactive command-line sessions, and more.\nThe following packages have been upgraded to a later upstream version: cockpit (264.1). (BZ#1984902, BZ#1992620, BZ#2004041, BZ#2008208)\nSecurity Fix(es):\n* cockpit: authenticates with revoked certificates (CVE-2021-3698)\n* cockpit: pages vulnerable to clickjacking (CVE-2021-3660)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-05-10"
+			},
+			"updated": {
+				"date": "2022-05-10"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1980688",
+					"id": "1980688"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1992149",
+					"id": "1992149"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-3660",
+					"public": "20210720",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-3660",
+					"impact": "low",
+					"cwe": "CWE-1021",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N"
+				},
+				{
+					"text": "CVE-2021-3698",
+					"public": "20210827",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-3698",
+					"impact": "moderate",
+					"cwe": "CWE-295",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20222008001",
+										"comment": "cockpit is earlier than 0:264.1-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20222008002",
+										"comment": "cockpit is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20222008003",
+										"comment": "cockpit-bridge is earlier than 0:264.1-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20222008004",
+										"comment": "cockpit-bridge is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20222008005",
+										"comment": "cockpit-doc is earlier than 0:264.1-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20222008006",
+										"comment": "cockpit-doc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20222008007",
+										"comment": "cockpit-system is earlier than 0:264.1-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20222008008",
+										"comment": "cockpit-system is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20222008009",
+										"comment": "cockpit-ws is earlier than 0:264.1-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20222008010",
+										"comment": "cockpit-ws is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

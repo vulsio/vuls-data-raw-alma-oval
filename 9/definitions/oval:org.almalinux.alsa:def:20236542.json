@@ -1,0 +1,97 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20236542",
+	"version": "640",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:6542: perl-HTTP-Tiny security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2023:6542",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-6542.html"
+			},
+			{
+				"ref_id": "CVE-2023-31486",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-31486"
+			},
+			{
+				"ref_id": "ALSA-2023:6542",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-6542.html"
+			}
+		],
+		"Description": "HTTP::Tiny is a small and simple HTTP/1.1 client written in Perl.\n\nSecurity Fix(es):\n\n* http-tiny: insecure TLS cert default (CVE-2023-31486)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-11-07"
+			},
+			"updated": {
+				"date": "2023-11-07"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2228392",
+					"id": "2228392"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-31486",
+					"public": "20230418",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-31486",
+					"impact": "Moderate",
+					"cwe": "CWE-1188",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20236542001",
+						"comment": "perl-HTTP-Tiny is earlier than 0:0.076-461.el9"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20236542002",
+						"comment": "perl-HTTP-Tiny is signed with AlmaLinux OS 9 key"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

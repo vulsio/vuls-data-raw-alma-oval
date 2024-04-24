@@ -1,0 +1,87 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20214324",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:4324: python-psutil security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:4324",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4324.html"
+			},
+			{
+				"ref_id": "ALSA-2021:4324",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4324.html"
+			},
+			{
+				"ref_id": "CVE-2019-18874",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-18874"
+			}
+		],
+		"Description": "psutil is a module providing an interface for retrieving information on all running processes and system utilization (CPU, memory, disks, network, users) in a portable way by using Python.\nSecurity Fix(es):\n* python-psutil: double free because of refcount mishandling (CVE-2019-18874)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-11-09"
+			},
+			"updated": {
+				"date": "2021-11-09"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1772014",
+					"id": "1772014"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2019-18874",
+					"public": "20191107",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-18874",
+					"impact": "moderate",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.0/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20214324001",
+						"comment": "python3-psutil is earlier than 0:5.4.3-11.el8"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20214324002",
+						"comment": "python3-psutil is signed with AlmaLinux OS 8 key"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

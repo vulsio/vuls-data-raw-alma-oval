@@ -1,0 +1,165 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20214364",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:4364: binutils security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:4364",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4364.html"
+			},
+			{
+				"ref_id": "ALSA-2021:4364",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4364.html"
+			},
+			{
+				"ref_id": "CVE-2020-35448",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-35448"
+			},
+			{
+				"ref_id": "CVE-2021-20197",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-20197"
+			},
+			{
+				"ref_id": "CVE-2021-20284",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-20284"
+			},
+			{
+				"ref_id": "CVE-2021-3487",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-3487"
+			}
+		],
+		"Description": "The binutils packages provide a collection of binary utilities for the manipulation of object code in various object file formats. It includes the ar, as, gprof, ld, nm, objcopy, objdump, ranlib, readelf, size, strings, strip, and addr2line utilities.\nSecurity Fix(es):\n* binutils: Excessive debug section size can cause excessive memory consumption in bfd's dwarf2.c read_section() (CVE-2021-3487)\n* binutils: Race window allows users to own arbitrary files (CVE-2021-20197)\n* binutils: Heap-based buffer overflow in bfd_getl_signed_32() in libbfd.c because sh_entsize is not validated in _bfd_elf_slurp_secondary_reloc_section() in elf.c (CVE-2020-35448)\n* binutils: Heap-based buffer overflow in _bfd_elf_slurp_secondary_reloc_section in elf.c (CVE-2021-20284)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-11-09"
+			},
+			"updated": {
+				"date": "2021-11-09"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1913743",
+					"id": "1913743"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1937784",
+					"id": "1937784"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1947111",
+					"id": "1947111"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1950478",
+					"id": "1950478"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2020-35448",
+					"public": "20200904",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-35448",
+					"impact": "low",
+					"cwe": "CWE-119",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N"
+				},
+				{
+					"text": "CVE-2021-20197",
+					"public": "20210107",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-20197",
+					"impact": "moderate",
+					"cwe": "CWE-59",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:L/I:L/A:N"
+				},
+				{
+					"text": "CVE-2021-20284",
+					"public": "20201122",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-20284",
+					"impact": "low",
+					"cwe": "CWE-119",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-3487",
+					"public": "20201125",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-3487",
+					"impact": "moderate",
+					"cwe": "CWE-20->CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214364001",
+										"comment": "binutils is earlier than 0:2.30-108.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201797002",
+										"comment": "binutils is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214364003",
+										"comment": "binutils-devel is earlier than 0:2.30-108.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201797004",
+										"comment": "binutils-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

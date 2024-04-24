@@ -1,0 +1,3587 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20213061",
+	"version": "638",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:3061: virt:rhel and virt-devel:rhel security and bug fix update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:3061",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-3061.html"
+			},
+			{
+				"ref_id": "ALSA-2021:3061",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-3061.html"
+			},
+			{
+				"ref_id": "CVE-2020-13754",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-13754"
+			},
+			{
+				"ref_id": "CVE-2020-27617",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-27617"
+			},
+			{
+				"ref_id": "CVE-2021-20221",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-20221"
+			},
+			{
+				"ref_id": "CVE-2021-3416",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-3416"
+			},
+			{
+				"ref_id": "CVE-2021-3504",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-3504"
+			}
+		],
+		"Description": "Kernel-based Virtual Machine (KVM) offers a full virtualization solution for Linux on numerous hardware platforms. The virt:rhel module contains packages which provide user-space components used to run virtual machines using KVM. The packages also provide APIs for managing and interacting with the virtualized systems.\nSecurity Fix(es):\n* QEMU: msix: OOB access during mmio operations may lead to DoS (CVE-2020-13754)\n* hivex: Buffer overflow when provided invalid node key length (CVE-2021-3504)\n* QEMU: net: an assert failure via eth_get_gso_type (CVE-2020-27617)\n* QEMU: net: infinite loop in loopback mode may lead to stack overflow (CVE-2021-3416)\n* qemu: out-of-bound heap buffer access via an interrupt ID field (CVE-2021-20221)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nBug Fix(es):\n* cannot restart default network and firewalld: iptables: No chain/target/match by that name. (BZ#1958301)\n* AlmaLinux8.4 Nightly[0322] - KVM guest fails to find zipl boot menu index (qemu-kvm) (BZ#1975679)",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-08-10"
+			},
+			"updated": {
+				"date": "2021-08-10"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1842363",
+					"id": "1842363"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1891668",
+					"id": "1891668"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1924601",
+					"id": "1924601"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1932827",
+					"id": "1932827"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1949687",
+					"id": "1949687"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2020-13754",
+					"public": "20200601",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-13754",
+					"impact": "moderate",
+					"cwe": "CWE-125->CWE-787",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:L"
+				},
+				{
+					"text": "CVE-2020-27617",
+					"public": "20201020",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-27617",
+					"impact": "low",
+					"cwe": "CWE-617",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2021-20221",
+					"public": "20210202",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-20221",
+					"impact": "low",
+					"cwe": "CWE-125->CWE-787",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2021-3416",
+					"public": "20210224",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-3416",
+					"impact": "low",
+					"cwe": "CWE-835",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2021-3504",
+					"public": "20210503",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-3504",
+					"impact": "moderate",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:L"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterias": [
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046760011",
+														"comment": "SLOF is earlier than 0:20191022-3.git899d9883.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175002",
+														"comment": "SLOF is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+														"comment": "AlmaLinux arch is ppc64le"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610031",
+														"comment": "hivex is earlier than 0:1.3.18-21.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175004",
+														"comment": "hivex is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610032",
+														"comment": "hivex is earlier than 0:1.3.18-21.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175004",
+														"comment": "hivex is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610051",
+														"comment": "hivex-devel is earlier than 0:1.3.18-21.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175006",
+														"comment": "hivex-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610052",
+														"comment": "hivex-devel is earlier than 0:1.3.18-21.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175006",
+														"comment": "hivex-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620071",
+														"comment": "libguestfs is earlier than 1:1.40.2-27.module_el8.4.0+2523+3300d70f.alma"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175008",
+														"comment": "libguestfs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620072",
+														"comment": "libguestfs is earlier than 1:1.40.2-27.module_el8.4.0+783+f8734d30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750082",
+														"comment": "libguestfs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620091",
+														"comment": "libguestfs-bash-completion is earlier than 1:1.40.2-27.module_el8.4.0+2523+3300d70f.alma"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175010",
+														"comment": "libguestfs-bash-completion is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+														"comment": "AlmaLinux arch is aarch64|x86_64"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620092",
+														"comment": "libguestfs-bash-completion is earlier than 1:1.40.2-27.module_el8.4.0+783+f8734d30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750102",
+														"comment": "libguestfs-bash-completion is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+														"comment": "AlmaLinux arch is ppc64le"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620111",
+														"comment": "libguestfs-benchmarking is earlier than 1:1.40.2-27.module_el8.4.0+2523+3300d70f.alma"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175012",
+														"comment": "libguestfs-benchmarking is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620131",
+														"comment": "libguestfs-devel is earlier than 1:1.40.2-27.module_el8.4.0+2523+3300d70f.alma"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175014",
+														"comment": "libguestfs-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620132",
+														"comment": "libguestfs-devel is earlier than 1:1.40.2-27.module_el8.4.0+783+f8734d30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750142",
+														"comment": "libguestfs-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620151",
+														"comment": "libguestfs-gfs2 is earlier than 1:1.40.2-27.module_el8.4.0+2523+3300d70f.alma"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175016",
+														"comment": "libguestfs-gfs2 is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620152",
+														"comment": "libguestfs-gfs2 is earlier than 1:1.40.2-27.module_el8.4.0+783+f8734d30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750162",
+														"comment": "libguestfs-gfs2 is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620171",
+														"comment": "libguestfs-gobject is earlier than 1:1.40.2-27.module_el8.4.0+2523+3300d70f.alma"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175018",
+														"comment": "libguestfs-gobject is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620172",
+														"comment": "libguestfs-gobject is earlier than 1:1.40.2-27.module_el8.4.0+783+f8734d30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750182",
+														"comment": "libguestfs-gobject is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620191",
+														"comment": "libguestfs-gobject-devel is earlier than 1:1.40.2-27.module_el8.4.0+2523+3300d70f.alma"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175020",
+														"comment": "libguestfs-gobject-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620192",
+														"comment": "libguestfs-gobject-devel is earlier than 1:1.40.2-27.module_el8.4.0+783+f8734d30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750202",
+														"comment": "libguestfs-gobject-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620211",
+														"comment": "libguestfs-inspect-icons is earlier than 1:1.40.2-27.module_el8.4.0+2523+3300d70f.alma"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175022",
+														"comment": "libguestfs-inspect-icons is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+														"comment": "AlmaLinux arch is aarch64|x86_64"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620212",
+														"comment": "libguestfs-inspect-icons is earlier than 1:1.40.2-27.module_el8.4.0+783+f8734d30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750222",
+														"comment": "libguestfs-inspect-icons is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+														"comment": "AlmaLinux arch is ppc64le"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620231",
+														"comment": "libguestfs-java is earlier than 1:1.40.2-27.module_el8.4.0+2523+3300d70f.alma"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175024",
+														"comment": "libguestfs-java is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620232",
+														"comment": "libguestfs-java is earlier than 1:1.40.2-27.module_el8.4.0+783+f8734d30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750242",
+														"comment": "libguestfs-java is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620251",
+														"comment": "libguestfs-java-devel is earlier than 1:1.40.2-27.module_el8.4.0+2523+3300d70f.alma"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175026",
+														"comment": "libguestfs-java-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620252",
+														"comment": "libguestfs-java-devel is earlier than 1:1.40.2-27.module_el8.4.0+783+f8734d30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750262",
+														"comment": "libguestfs-java-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620271",
+														"comment": "libguestfs-javadoc is earlier than 1:1.40.2-27.module_el8.4.0+2523+3300d70f.alma"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175028",
+														"comment": "libguestfs-javadoc is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+														"comment": "AlmaLinux arch is aarch64|x86_64"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620272",
+														"comment": "libguestfs-javadoc is earlier than 1:1.40.2-27.module_el8.4.0+783+f8734d30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750282",
+														"comment": "libguestfs-javadoc is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+														"comment": "AlmaLinux arch is ppc64le"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620291",
+														"comment": "libguestfs-man-pages-ja is earlier than 1:1.40.2-27.module_el8.4.0+2523+3300d70f.alma"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175030",
+														"comment": "libguestfs-man-pages-ja is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+														"comment": "AlmaLinux arch is aarch64|x86_64"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620292",
+														"comment": "libguestfs-man-pages-ja is earlier than 1:1.40.2-27.module_el8.4.0+783+f8734d30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750302",
+														"comment": "libguestfs-man-pages-ja is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+														"comment": "AlmaLinux arch is ppc64le"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620311",
+														"comment": "libguestfs-man-pages-uk is earlier than 1:1.40.2-27.module_el8.4.0+2523+3300d70f.alma"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175032",
+														"comment": "libguestfs-man-pages-uk is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+														"comment": "AlmaLinux arch is aarch64|x86_64"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620312",
+														"comment": "libguestfs-man-pages-uk is earlier than 1:1.40.2-27.module_el8.4.0+783+f8734d30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750322",
+														"comment": "libguestfs-man-pages-uk is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+														"comment": "AlmaLinux arch is ppc64le"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620331",
+														"comment": "libguestfs-rescue is earlier than 1:1.40.2-27.module_el8.4.0+2523+3300d70f.alma"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175034",
+														"comment": "libguestfs-rescue is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620332",
+														"comment": "libguestfs-rescue is earlier than 1:1.40.2-27.module_el8.4.0+783+f8734d30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750342",
+														"comment": "libguestfs-rescue is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620351",
+														"comment": "libguestfs-rsync is earlier than 1:1.40.2-27.module_el8.4.0+2523+3300d70f.alma"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175036",
+														"comment": "libguestfs-rsync is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620352",
+														"comment": "libguestfs-rsync is earlier than 1:1.40.2-27.module_el8.4.0+783+f8734d30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750362",
+														"comment": "libguestfs-rsync is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620371",
+														"comment": "libguestfs-tools is earlier than 1:1.40.2-27.module_el8.4.0+2523+3300d70f.alma"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175038",
+														"comment": "libguestfs-tools is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+														"comment": "AlmaLinux arch is aarch64|x86_64"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620372",
+														"comment": "libguestfs-tools is earlier than 1:1.40.2-27.module_el8.4.0+783+f8734d30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750382",
+														"comment": "libguestfs-tools is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+														"comment": "AlmaLinux arch is ppc64le"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620391",
+														"comment": "libguestfs-tools-c is earlier than 1:1.40.2-27.module_el8.4.0+2523+3300d70f.alma"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175040",
+														"comment": "libguestfs-tools-c is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620392",
+														"comment": "libguestfs-tools-c is earlier than 1:1.40.2-27.module_el8.4.0+783+f8734d30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750402",
+														"comment": "libguestfs-tools-c is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046760411",
+														"comment": "libguestfs-winsupport is earlier than 0:8.2-1.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175042",
+														"comment": "libguestfs-winsupport is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046760412",
+														"comment": "libguestfs-winsupport is earlier than 0:8.2-1.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175042",
+														"comment": "libguestfs-winsupport is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620431",
+														"comment": "libguestfs-xfs is earlier than 1:1.40.2-27.module_el8.4.0+2523+3300d70f.alma"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175044",
+														"comment": "libguestfs-xfs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117620432",
+														"comment": "libguestfs-xfs is earlier than 1:1.40.2-27.module_el8.4.0+783+f8734d30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750442",
+														"comment": "libguestfs-xfs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201933450451",
+														"comment": "libiscsi is earlier than 0:1.18.0-8.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175046",
+														"comment": "libiscsi is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201933450452",
+														"comment": "libiscsi is earlier than 0:1.18.0-8.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175046",
+														"comment": "libiscsi is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201933450471",
+														"comment": "libiscsi-devel is earlier than 0:1.18.0-8.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175048",
+														"comment": "libiscsi-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201933450472",
+														"comment": "libiscsi-devel is earlier than 0:1.18.0-8.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175048",
+														"comment": "libiscsi-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201933450491",
+														"comment": "libiscsi-utils is earlier than 0:1.18.0-8.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175050",
+														"comment": "libiscsi-utils is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201933450492",
+														"comment": "libiscsi-utils is earlier than 0:1.18.0-8.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175050",
+														"comment": "libiscsi-utils is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046760511",
+														"comment": "libnbd is earlier than 0:1.2.2-1.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676052",
+														"comment": "libnbd is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046760512",
+														"comment": "libnbd is earlier than 0:1.2.2-1.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676052",
+														"comment": "libnbd is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046760531",
+														"comment": "libnbd-devel is earlier than 0:1.2.2-1.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676054",
+														"comment": "libnbd-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046760532",
+														"comment": "libnbd-devel is earlier than 0:1.2.2-1.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676054",
+														"comment": "libnbd-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610551",
+														"comment": "libvirt is earlier than 0:6.0.0-35.1.module_el8.4.0+2523+3300d70f"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175054",
+														"comment": "libvirt is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610552",
+														"comment": "libvirt is earlier than 0:6.0.0-35.1.module_el8.4.0+885+5e18b468"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750542",
+														"comment": "libvirt is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610571",
+														"comment": "libvirt-admin is earlier than 0:6.0.0-35.1.module_el8.4.0+2523+3300d70f"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175056",
+														"comment": "libvirt-admin is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610572",
+														"comment": "libvirt-admin is earlier than 0:6.0.0-35.1.module_el8.4.0+885+5e18b468"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750562",
+														"comment": "libvirt-admin is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610591",
+														"comment": "libvirt-bash-completion is earlier than 0:6.0.0-35.1.module_el8.4.0+2523+3300d70f"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175058",
+														"comment": "libvirt-bash-completion is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610592",
+														"comment": "libvirt-bash-completion is earlier than 0:6.0.0-35.1.module_el8.4.0+885+5e18b468"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750582",
+														"comment": "libvirt-bash-completion is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610611",
+														"comment": "libvirt-client is earlier than 0:6.0.0-35.1.module_el8.4.0+2523+3300d70f"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175060",
+														"comment": "libvirt-client is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610612",
+														"comment": "libvirt-client is earlier than 0:6.0.0-35.1.module_el8.4.0+885+5e18b468"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750602",
+														"comment": "libvirt-client is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610631",
+														"comment": "libvirt-daemon is earlier than 0:6.0.0-35.1.module_el8.4.0+2523+3300d70f"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175062",
+														"comment": "libvirt-daemon is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610632",
+														"comment": "libvirt-daemon is earlier than 0:6.0.0-35.1.module_el8.4.0+885+5e18b468"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750622",
+														"comment": "libvirt-daemon is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610651",
+														"comment": "libvirt-daemon-config-network is earlier than 0:6.0.0-35.1.module_el8.4.0+2523+3300d70f"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175064",
+														"comment": "libvirt-daemon-config-network is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610652",
+														"comment": "libvirt-daemon-config-network is earlier than 0:6.0.0-35.1.module_el8.4.0+885+5e18b468"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750642",
+														"comment": "libvirt-daemon-config-network is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610671",
+														"comment": "libvirt-daemon-config-nwfilter is earlier than 0:6.0.0-35.1.module_el8.4.0+2523+3300d70f"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175066",
+														"comment": "libvirt-daemon-config-nwfilter is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610672",
+														"comment": "libvirt-daemon-config-nwfilter is earlier than 0:6.0.0-35.1.module_el8.4.0+885+5e18b468"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750662",
+														"comment": "libvirt-daemon-config-nwfilter is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610691",
+														"comment": "libvirt-daemon-driver-interface is earlier than 0:6.0.0-35.1.module_el8.4.0+2523+3300d70f"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175068",
+														"comment": "libvirt-daemon-driver-interface is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610692",
+														"comment": "libvirt-daemon-driver-interface is earlier than 0:6.0.0-35.1.module_el8.4.0+885+5e18b468"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750682",
+														"comment": "libvirt-daemon-driver-interface is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610711",
+														"comment": "libvirt-daemon-driver-network is earlier than 0:6.0.0-35.1.module_el8.4.0+2523+3300d70f"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175070",
+														"comment": "libvirt-daemon-driver-network is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610712",
+														"comment": "libvirt-daemon-driver-network is earlier than 0:6.0.0-35.1.module_el8.4.0+885+5e18b468"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750702",
+														"comment": "libvirt-daemon-driver-network is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610731",
+														"comment": "libvirt-daemon-driver-nodedev is earlier than 0:6.0.0-35.1.module_el8.4.0+2523+3300d70f"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175072",
+														"comment": "libvirt-daemon-driver-nodedev is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610732",
+														"comment": "libvirt-daemon-driver-nodedev is earlier than 0:6.0.0-35.1.module_el8.4.0+885+5e18b468"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750722",
+														"comment": "libvirt-daemon-driver-nodedev is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610751",
+														"comment": "libvirt-daemon-driver-nwfilter is earlier than 0:6.0.0-35.1.module_el8.4.0+2523+3300d70f"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175074",
+														"comment": "libvirt-daemon-driver-nwfilter is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610752",
+														"comment": "libvirt-daemon-driver-nwfilter is earlier than 0:6.0.0-35.1.module_el8.4.0+885+5e18b468"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750742",
+														"comment": "libvirt-daemon-driver-nwfilter is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610771",
+														"comment": "libvirt-daemon-driver-qemu is earlier than 0:6.0.0-35.1.module_el8.4.0+2523+3300d70f"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175076",
+														"comment": "libvirt-daemon-driver-qemu is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610772",
+														"comment": "libvirt-daemon-driver-qemu is earlier than 0:6.0.0-35.1.module_el8.4.0+885+5e18b468"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750762",
+														"comment": "libvirt-daemon-driver-qemu is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610791",
+														"comment": "libvirt-daemon-driver-secret is earlier than 0:6.0.0-35.1.module_el8.4.0+2523+3300d70f"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175078",
+														"comment": "libvirt-daemon-driver-secret is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610792",
+														"comment": "libvirt-daemon-driver-secret is earlier than 0:6.0.0-35.1.module_el8.4.0+885+5e18b468"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750782",
+														"comment": "libvirt-daemon-driver-secret is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610811",
+														"comment": "libvirt-daemon-driver-storage is earlier than 0:6.0.0-35.1.module_el8.4.0+2523+3300d70f"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175080",
+														"comment": "libvirt-daemon-driver-storage is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610812",
+														"comment": "libvirt-daemon-driver-storage is earlier than 0:6.0.0-35.1.module_el8.4.0+885+5e18b468"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750802",
+														"comment": "libvirt-daemon-driver-storage is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610831",
+														"comment": "libvirt-daemon-driver-storage-core is earlier than 0:6.0.0-35.1.module_el8.4.0+2523+3300d70f"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175082",
+														"comment": "libvirt-daemon-driver-storage-core is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610832",
+														"comment": "libvirt-daemon-driver-storage-core is earlier than 0:6.0.0-35.1.module_el8.4.0+885+5e18b468"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750822",
+														"comment": "libvirt-daemon-driver-storage-core is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610851",
+														"comment": "libvirt-daemon-driver-storage-disk is earlier than 0:6.0.0-35.1.module_el8.4.0+2523+3300d70f"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175084",
+														"comment": "libvirt-daemon-driver-storage-disk is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610852",
+														"comment": "libvirt-daemon-driver-storage-disk is earlier than 0:6.0.0-35.1.module_el8.4.0+885+5e18b468"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750842",
+														"comment": "libvirt-daemon-driver-storage-disk is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610871",
+														"comment": "libvirt-daemon-driver-storage-gluster is earlier than 0:6.0.0-35.1.module_el8.4.0+2523+3300d70f"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175086",
+														"comment": "libvirt-daemon-driver-storage-gluster is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610872",
+														"comment": "libvirt-daemon-driver-storage-gluster is earlier than 0:6.0.0-35.1.module_el8.4.0+885+5e18b468"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750862",
+														"comment": "libvirt-daemon-driver-storage-gluster is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610891",
+														"comment": "libvirt-daemon-driver-storage-iscsi is earlier than 0:6.0.0-35.1.module_el8.4.0+2523+3300d70f"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175088",
+														"comment": "libvirt-daemon-driver-storage-iscsi is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610892",
+														"comment": "libvirt-daemon-driver-storage-iscsi is earlier than 0:6.0.0-35.1.module_el8.4.0+885+5e18b468"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750882",
+														"comment": "libvirt-daemon-driver-storage-iscsi is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610911",
+														"comment": "libvirt-daemon-driver-storage-iscsi-direct is earlier than 0:6.0.0-35.1.module_el8.4.0+2523+3300d70f"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676092",
+														"comment": "libvirt-daemon-driver-storage-iscsi-direct is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610912",
+														"comment": "libvirt-daemon-driver-storage-iscsi-direct is earlier than 0:6.0.0-35.1.module_el8.4.0+885+5e18b468"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046760922",
+														"comment": "libvirt-daemon-driver-storage-iscsi-direct is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610931",
+														"comment": "libvirt-daemon-driver-storage-logical is earlier than 0:6.0.0-35.1.module_el8.4.0+2523+3300d70f"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175090",
+														"comment": "libvirt-daemon-driver-storage-logical is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610932",
+														"comment": "libvirt-daemon-driver-storage-logical is earlier than 0:6.0.0-35.1.module_el8.4.0+885+5e18b468"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750902",
+														"comment": "libvirt-daemon-driver-storage-logical is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610951",
+														"comment": "libvirt-daemon-driver-storage-mpath is earlier than 0:6.0.0-35.1.module_el8.4.0+2523+3300d70f"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175092",
+														"comment": "libvirt-daemon-driver-storage-mpath is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610952",
+														"comment": "libvirt-daemon-driver-storage-mpath is earlier than 0:6.0.0-35.1.module_el8.4.0+885+5e18b468"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750922",
+														"comment": "libvirt-daemon-driver-storage-mpath is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610971",
+														"comment": "libvirt-daemon-driver-storage-rbd is earlier than 0:6.0.0-35.1.module_el8.4.0+2523+3300d70f"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175094",
+														"comment": "libvirt-daemon-driver-storage-rbd is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610972",
+														"comment": "libvirt-daemon-driver-storage-rbd is earlier than 0:6.0.0-35.1.module_el8.4.0+885+5e18b468"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750942",
+														"comment": "libvirt-daemon-driver-storage-rbd is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610991",
+														"comment": "libvirt-daemon-driver-storage-scsi is earlier than 0:6.0.0-35.1.module_el8.4.0+2523+3300d70f"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175096",
+														"comment": "libvirt-daemon-driver-storage-scsi is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130610992",
+														"comment": "libvirt-daemon-driver-storage-scsi is earlier than 0:6.0.0-35.1.module_el8.4.0+885+5e18b468"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750962",
+														"comment": "libvirt-daemon-driver-storage-scsi is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611011",
+														"comment": "libvirt-daemon-kvm is earlier than 0:6.0.0-35.1.module_el8.4.0+2523+3300d70f"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175098",
+														"comment": "libvirt-daemon-kvm is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611012",
+														"comment": "libvirt-daemon-kvm is earlier than 0:6.0.0-35.1.module_el8.4.0+885+5e18b468"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911750982",
+														"comment": "libvirt-daemon-kvm is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761031",
+														"comment": "libvirt-dbus is earlier than 0:1.3.0-2.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175100",
+														"comment": "libvirt-dbus is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761032",
+														"comment": "libvirt-dbus is earlier than 0:1.3.0-2.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175100",
+														"comment": "libvirt-dbus is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611051",
+														"comment": "libvirt-devel is earlier than 0:6.0.0-35.1.module_el8.4.0+2523+3300d70f"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175102",
+														"comment": "libvirt-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611052",
+														"comment": "libvirt-devel is earlier than 0:6.0.0-35.1.module_el8.4.0+885+5e18b468"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911751022",
+														"comment": "libvirt-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611071",
+														"comment": "libvirt-docs is earlier than 0:6.0.0-35.1.module_el8.4.0+2523+3300d70f"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175104",
+														"comment": "libvirt-docs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611072",
+														"comment": "libvirt-docs is earlier than 0:6.0.0-35.1.module_el8.4.0+885+5e18b468"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911751042",
+														"comment": "libvirt-docs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611091",
+														"comment": "libvirt-libs is earlier than 0:6.0.0-35.1.module_el8.4.0+2523+3300d70f"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175106",
+														"comment": "libvirt-libs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611092",
+														"comment": "libvirt-libs is earlier than 0:6.0.0-35.1.module_el8.4.0+885+5e18b468"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911751062",
+														"comment": "libvirt-libs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611111",
+														"comment": "libvirt-lock-sanlock is earlier than 0:6.0.0-35.1.module_el8.4.0+2523+3300d70f"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175108",
+														"comment": "libvirt-lock-sanlock is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611112",
+														"comment": "libvirt-lock-sanlock is earlier than 0:6.0.0-35.1.module_el8.4.0+885+5e18b468"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911751082",
+														"comment": "libvirt-lock-sanlock is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611131",
+														"comment": "libvirt-nss is earlier than 0:6.0.0-35.1.module_el8.4.0+2523+3300d70f"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175110",
+														"comment": "libvirt-nss is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611132",
+														"comment": "libvirt-nss is earlier than 0:6.0.0-35.1.module_el8.4.0+885+5e18b468"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911751102",
+														"comment": "libvirt-nss is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117621151",
+														"comment": "lua-guestfs is earlier than 1:1.40.2-27.module_el8.4.0+2523+3300d70f.alma"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175112",
+														"comment": "lua-guestfs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117621152",
+														"comment": "lua-guestfs is earlier than 1:1.40.2-27.module_el8.4.0+783+f8734d30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911751122",
+														"comment": "lua-guestfs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761171",
+														"comment": "nbdfuse is earlier than 0:1.2.2-1.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676118",
+														"comment": "nbdfuse is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761172",
+														"comment": "nbdfuse is earlier than 0:1.2.2-1.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676118",
+														"comment": "nbdfuse is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761191",
+														"comment": "nbdkit is earlier than 0:1.16.2-4.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175114",
+														"comment": "nbdkit is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761192",
+														"comment": "nbdkit is earlier than 0:1.16.2-4.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175114",
+														"comment": "nbdkit is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761211",
+														"comment": "nbdkit-bash-completion is earlier than 0:1.16.2-4.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175116",
+														"comment": "nbdkit-bash-completion is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+														"comment": "AlmaLinux arch is aarch64|x86_64"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761212",
+														"comment": "nbdkit-bash-completion is earlier than 0:1.16.2-4.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175116",
+														"comment": "nbdkit-bash-completion is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+														"comment": "AlmaLinux arch is ppc64le"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761231",
+														"comment": "nbdkit-basic-filters is earlier than 0:1.16.2-4.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676124",
+														"comment": "nbdkit-basic-filters is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761232",
+														"comment": "nbdkit-basic-filters is earlier than 0:1.16.2-4.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676124",
+														"comment": "nbdkit-basic-filters is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761251",
+														"comment": "nbdkit-basic-plugins is earlier than 0:1.16.2-4.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175118",
+														"comment": "nbdkit-basic-plugins is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761252",
+														"comment": "nbdkit-basic-plugins is earlier than 0:1.16.2-4.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175118",
+														"comment": "nbdkit-basic-plugins is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761271",
+														"comment": "nbdkit-curl-plugin is earlier than 0:1.16.2-4.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676128",
+														"comment": "nbdkit-curl-plugin is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761272",
+														"comment": "nbdkit-curl-plugin is earlier than 0:1.16.2-4.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676128",
+														"comment": "nbdkit-curl-plugin is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761291",
+														"comment": "nbdkit-devel is earlier than 0:1.16.2-4.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175120",
+														"comment": "nbdkit-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761292",
+														"comment": "nbdkit-devel is earlier than 0:1.16.2-4.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175120",
+														"comment": "nbdkit-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761311",
+														"comment": "nbdkit-example-plugins is earlier than 0:1.16.2-4.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175122",
+														"comment": "nbdkit-example-plugins is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761312",
+														"comment": "nbdkit-example-plugins is earlier than 0:1.16.2-4.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175122",
+														"comment": "nbdkit-example-plugins is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761331",
+														"comment": "nbdkit-gzip-plugin is earlier than 0:1.16.2-4.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676134",
+														"comment": "nbdkit-gzip-plugin is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761332",
+														"comment": "nbdkit-gzip-plugin is earlier than 0:1.16.2-4.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676134",
+														"comment": "nbdkit-gzip-plugin is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761351",
+														"comment": "nbdkit-linuxdisk-plugin is earlier than 0:1.16.2-4.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676136",
+														"comment": "nbdkit-linuxdisk-plugin is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761352",
+														"comment": "nbdkit-linuxdisk-plugin is earlier than 0:1.16.2-4.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676136",
+														"comment": "nbdkit-linuxdisk-plugin is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761371",
+														"comment": "nbdkit-python-plugin is earlier than 0:1.16.2-4.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676138",
+														"comment": "nbdkit-python-plugin is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761372",
+														"comment": "nbdkit-python-plugin is earlier than 0:1.16.2-4.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676138",
+														"comment": "nbdkit-python-plugin is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761391",
+														"comment": "nbdkit-server is earlier than 0:1.16.2-4.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676140",
+														"comment": "nbdkit-server is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761392",
+														"comment": "nbdkit-server is earlier than 0:1.16.2-4.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676140",
+														"comment": "nbdkit-server is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761411",
+														"comment": "nbdkit-ssh-plugin is earlier than 0:1.16.2-4.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676142",
+														"comment": "nbdkit-ssh-plugin is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761412",
+														"comment": "nbdkit-ssh-plugin is earlier than 0:1.16.2-4.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676142",
+														"comment": "nbdkit-ssh-plugin is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761431",
+														"comment": "nbdkit-vddk-plugin is earlier than 0:1.16.2-4.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676144",
+														"comment": "nbdkit-vddk-plugin is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761451",
+														"comment": "nbdkit-xz-filter is earlier than 0:1.16.2-4.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676146",
+														"comment": "nbdkit-xz-filter is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761452",
+														"comment": "nbdkit-xz-filter is earlier than 0:1.16.2-4.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676146",
+														"comment": "nbdkit-xz-filter is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201933451311",
+														"comment": "netcf is earlier than 0:0.2.8-12.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175134",
+														"comment": "netcf is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201933451312",
+														"comment": "netcf is earlier than 0:0.2.8-12.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175134",
+														"comment": "netcf is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201933451331",
+														"comment": "netcf-devel is earlier than 0:0.2.8-12.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175136",
+														"comment": "netcf-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201933451332",
+														"comment": "netcf-devel is earlier than 0:0.2.8-12.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175136",
+														"comment": "netcf-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201933451351",
+														"comment": "netcf-libs is earlier than 0:0.2.8-12.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175138",
+														"comment": "netcf-libs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201933451352",
+														"comment": "netcf-libs is earlier than 0:0.2.8-12.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175138",
+														"comment": "netcf-libs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117621531",
+														"comment": "perl-Sys-Guestfs is earlier than 1:1.40.2-27.module_el8.4.0+2523+3300d70f.alma"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175140",
+														"comment": "perl-Sys-Guestfs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117621532",
+														"comment": "perl-Sys-Guestfs is earlier than 1:1.40.2-27.module_el8.4.0+783+f8734d30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911751402",
+														"comment": "perl-Sys-Guestfs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761551",
+														"comment": "perl-Sys-Virt is earlier than 0:6.0.0-1.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175142",
+														"comment": "perl-Sys-Virt is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761552",
+														"comment": "perl-Sys-Virt is earlier than 0:6.0.0-1.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175142",
+														"comment": "perl-Sys-Virt is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611571",
+														"comment": "perl-hivex is earlier than 0:1.3.18-21.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175144",
+														"comment": "perl-hivex is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611572",
+														"comment": "perl-hivex is earlier than 0:1.3.18-21.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175144",
+														"comment": "perl-hivex is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611591",
+														"comment": "python3-hivex is earlier than 0:1.3.18-21.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175146",
+														"comment": "python3-hivex is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611592",
+														"comment": "python3-hivex is earlier than 0:1.3.18-21.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175146",
+														"comment": "python3-hivex is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117621611",
+														"comment": "python3-libguestfs is earlier than 1:1.40.2-27.module_el8.4.0+2523+3300d70f.alma"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175148",
+														"comment": "python3-libguestfs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117621612",
+														"comment": "python3-libguestfs is earlier than 1:1.40.2-27.module_el8.4.0+783+f8734d30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911751482",
+														"comment": "python3-libguestfs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761631",
+														"comment": "python3-libnbd is earlier than 0:1.2.2-1.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676164",
+														"comment": "python3-libnbd is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761632",
+														"comment": "python3-libnbd is earlier than 0:1.2.2-1.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676164",
+														"comment": "python3-libnbd is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761651",
+														"comment": "python3-libvirt is earlier than 0:6.0.0-1.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175150",
+														"comment": "python3-libvirt is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761652",
+														"comment": "python3-libvirt is earlier than 0:6.0.0-1.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175150",
+														"comment": "python3-libvirt is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611671",
+														"comment": "qemu-guest-agent is earlier than 15:4.2.0-48.module_el8.4.0+2523+3300d70f.3"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175152",
+														"comment": "qemu-guest-agent is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611672",
+														"comment": "qemu-guest-agent is earlier than 15:4.2.0-48.module_el8.4.0+885+5e18b468.3"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911751522",
+														"comment": "qemu-guest-agent is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611691",
+														"comment": "qemu-img is earlier than 15:4.2.0-48.module_el8.4.0+2523+3300d70f.3"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175154",
+														"comment": "qemu-img is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611692",
+														"comment": "qemu-img is earlier than 15:4.2.0-48.module_el8.4.0+885+5e18b468.3"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911751542",
+														"comment": "qemu-img is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611711",
+														"comment": "qemu-kvm is earlier than 15:4.2.0-48.module_el8.4.0+2523+3300d70f.3"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175156",
+														"comment": "qemu-kvm is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611712",
+														"comment": "qemu-kvm is earlier than 15:4.2.0-48.module_el8.4.0+885+5e18b468.3"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911751562",
+														"comment": "qemu-kvm is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611731",
+														"comment": "qemu-kvm-block-curl is earlier than 15:4.2.0-48.module_el8.4.0+2523+3300d70f.3"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175158",
+														"comment": "qemu-kvm-block-curl is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611732",
+														"comment": "qemu-kvm-block-curl is earlier than 15:4.2.0-48.module_el8.4.0+885+5e18b468.3"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911751582",
+														"comment": "qemu-kvm-block-curl is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611751",
+														"comment": "qemu-kvm-block-gluster is earlier than 15:4.2.0-48.module_el8.4.0+2523+3300d70f.3"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175160",
+														"comment": "qemu-kvm-block-gluster is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611771",
+														"comment": "qemu-kvm-block-iscsi is earlier than 15:4.2.0-48.module_el8.4.0+2523+3300d70f.3"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175162",
+														"comment": "qemu-kvm-block-iscsi is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611772",
+														"comment": "qemu-kvm-block-iscsi is earlier than 15:4.2.0-48.module_el8.4.0+885+5e18b468.3"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911751622",
+														"comment": "qemu-kvm-block-iscsi is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611791",
+														"comment": "qemu-kvm-block-rbd is earlier than 15:4.2.0-48.module_el8.4.0+2523+3300d70f.3"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175164",
+														"comment": "qemu-kvm-block-rbd is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611792",
+														"comment": "qemu-kvm-block-rbd is earlier than 15:4.2.0-48.module_el8.4.0+885+5e18b468.3"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911751642",
+														"comment": "qemu-kvm-block-rbd is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611811",
+														"comment": "qemu-kvm-block-ssh is earlier than 15:4.2.0-48.module_el8.4.0+2523+3300d70f.3"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175166",
+														"comment": "qemu-kvm-block-ssh is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611812",
+														"comment": "qemu-kvm-block-ssh is earlier than 15:4.2.0-48.module_el8.4.0+885+5e18b468.3"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911751662",
+														"comment": "qemu-kvm-block-ssh is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611831",
+														"comment": "qemu-kvm-common is earlier than 15:4.2.0-48.module_el8.4.0+2523+3300d70f.3"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175168",
+														"comment": "qemu-kvm-common is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611832",
+														"comment": "qemu-kvm-common is earlier than 15:4.2.0-48.module_el8.4.0+885+5e18b468.3"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911751682",
+														"comment": "qemu-kvm-common is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611851",
+														"comment": "qemu-kvm-core is earlier than 15:4.2.0-48.module_el8.4.0+2523+3300d70f.3"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175170",
+														"comment": "qemu-kvm-core is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611852",
+														"comment": "qemu-kvm-core is earlier than 15:4.2.0-48.module_el8.4.0+885+5e18b468.3"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911751702",
+														"comment": "qemu-kvm-core is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611871",
+														"comment": "ruby-hivex is earlier than 0:1.3.18-21.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175172",
+														"comment": "ruby-hivex is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130611872",
+														"comment": "ruby-hivex is earlier than 0:1.3.18-21.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175172",
+														"comment": "ruby-hivex is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117621891",
+														"comment": "ruby-libguestfs is earlier than 1:1.40.2-27.module_el8.4.0+2523+3300d70f.alma"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175174",
+														"comment": "ruby-libguestfs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117621892",
+														"comment": "ruby-libguestfs is earlier than 1:1.40.2-27.module_el8.4.0+783+f8734d30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911751742",
+														"comment": "ruby-libguestfs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761911",
+														"comment": "seabios is earlier than 0:1.13.0-2.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175176",
+														"comment": "seabios is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761931",
+														"comment": "seabios-bin is earlier than 0:1.13.0-2.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175178",
+														"comment": "seabios-bin is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:2019373500111",
+														"comment": "AlmaLinux arch is x86_64"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046761951",
+														"comment": "seavgabios-bin is earlier than 0:1.13.0-2.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175180",
+														"comment": "seavgabios-bin is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:2019373500111",
+														"comment": "AlmaLinux arch is x86_64"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201933451791",
+														"comment": "sgabios is earlier than 1:0.20170427git-3.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175182",
+														"comment": "sgabios is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201933451811",
+														"comment": "sgabios-bin is earlier than 1:0.20170427git-3.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175184",
+														"comment": "sgabios-bin is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:2019373500111",
+														"comment": "AlmaLinux arch is x86_64"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046762011",
+														"comment": "supermin is earlier than 0:5.1.19-10.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175186",
+														"comment": "supermin is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046762012",
+														"comment": "supermin is earlier than 0:5.1.19-10.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175186",
+														"comment": "supermin is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046762031",
+														"comment": "supermin-devel is earlier than 0:5.1.19-10.module_el8.5.0+2608+72063365"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175188",
+														"comment": "supermin-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046762032",
+														"comment": "supermin-devel is earlier than 0:5.1.19-10.module_el8.5.0+243+0350d008"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175188",
+														"comment": "supermin-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117622051",
+														"comment": "virt-dib is earlier than 1:1.40.2-27.module_el8.4.0+2523+3300d70f.alma"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175190",
+														"comment": "virt-dib is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117622052",
+														"comment": "virt-dib is earlier than 1:1.40.2-27.module_el8.4.0+783+f8734d30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201911751902",
+														"comment": "virt-dib is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117622071",
+														"comment": "virt-v2v is earlier than 1:1.40.2-27.module_el8.4.0+2523+3300d70f.alma"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175194",
+														"comment": "virt-v2v is signed with AlmaLinux OS 8 key"
+													}
+												]
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191175195",
+										"comment": "Module virt:rhel is enabled"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterias": [
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130612101",
+														"comment": "hivex is earlier than 0:1.3.18-21.module_el8.5.0+2564+74ace547"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175004",
+														"comment": "hivex is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130612111",
+														"comment": "hivex-devel is earlier than 0:1.3.18-21.module_el8.5.0+2564+74ace547"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175006",
+														"comment": "hivex-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046762121",
+														"comment": "libguestfs-winsupport is earlier than 0:8.2-1.module_el8.3.0+2048+e7a0a3ea"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175042",
+														"comment": "libguestfs-winsupport is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201933451971",
+														"comment": "libiscsi is earlier than 0:1.18.0-8.module_el8.3.0+2048+e7a0a3ea"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175046",
+														"comment": "libiscsi is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201933451981",
+														"comment": "libiscsi-devel is earlier than 0:1.18.0-8.module_el8.3.0+2048+e7a0a3ea"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175048",
+														"comment": "libiscsi-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201933451991",
+														"comment": "libiscsi-utils is earlier than 0:1.18.0-8.module_el8.3.0+2048+e7a0a3ea"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175050",
+														"comment": "libiscsi-utils is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046762161",
+														"comment": "libnbd is earlier than 0:1.2.2-1.module_el8.3.0+2048+e7a0a3ea"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676052",
+														"comment": "libnbd is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046762171",
+														"comment": "libnbd-devel is earlier than 0:1.2.2-1.module_el8.3.0+2048+e7a0a3ea"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676054",
+														"comment": "libnbd-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175054",
+														"comment": "libvirt is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20213061218",
+														"comment": "libvirt is earlier than 0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175056",
+														"comment": "libvirt-admin is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20213061219",
+														"comment": "libvirt-admin is earlier than 0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175058",
+														"comment": "libvirt-bash-completion is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20213061220",
+														"comment": "libvirt-bash-completion is earlier than 0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175060",
+														"comment": "libvirt-client is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20213061221",
+														"comment": "libvirt-client is earlier than 0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175062",
+														"comment": "libvirt-daemon is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20213061222",
+														"comment": "libvirt-daemon is earlier than 0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175064",
+														"comment": "libvirt-daemon-config-network is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20213061223",
+														"comment": "libvirt-daemon-config-network is earlier than 0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175066",
+														"comment": "libvirt-daemon-config-nwfilter is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20213061224",
+														"comment": "libvirt-daemon-config-nwfilter is earlier than 0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175068",
+														"comment": "libvirt-daemon-driver-interface is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20213061225",
+														"comment": "libvirt-daemon-driver-interface is earlier than 0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175070",
+														"comment": "libvirt-daemon-driver-network is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20213061226",
+														"comment": "libvirt-daemon-driver-network is earlier than 0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175072",
+														"comment": "libvirt-daemon-driver-nodedev is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20213061227",
+														"comment": "libvirt-daemon-driver-nodedev is earlier than 0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175074",
+														"comment": "libvirt-daemon-driver-nwfilter is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20213061228",
+														"comment": "libvirt-daemon-driver-nwfilter is earlier than 0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175078",
+														"comment": "libvirt-daemon-driver-secret is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20213061229",
+														"comment": "libvirt-daemon-driver-secret is earlier than 0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175080",
+														"comment": "libvirt-daemon-driver-storage is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20213061230",
+														"comment": "libvirt-daemon-driver-storage is earlier than 0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175082",
+														"comment": "libvirt-daemon-driver-storage-core is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20213061231",
+														"comment": "libvirt-daemon-driver-storage-core is earlier than 0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175084",
+														"comment": "libvirt-daemon-driver-storage-disk is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20213061232",
+														"comment": "libvirt-daemon-driver-storage-disk is earlier than 0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175088",
+														"comment": "libvirt-daemon-driver-storage-iscsi is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20213061233",
+														"comment": "libvirt-daemon-driver-storage-iscsi is earlier than 0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676092",
+														"comment": "libvirt-daemon-driver-storage-iscsi-direct is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20213061234",
+														"comment": "libvirt-daemon-driver-storage-iscsi-direct is earlier than 0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175090",
+														"comment": "libvirt-daemon-driver-storage-logical is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20213061235",
+														"comment": "libvirt-daemon-driver-storage-logical is earlier than 0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175092",
+														"comment": "libvirt-daemon-driver-storage-mpath is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20213061236",
+														"comment": "libvirt-daemon-driver-storage-mpath is earlier than 0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175094",
+														"comment": "libvirt-daemon-driver-storage-rbd is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20213061237",
+														"comment": "libvirt-daemon-driver-storage-rbd is earlier than 0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175096",
+														"comment": "libvirt-daemon-driver-storage-scsi is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20213061238",
+														"comment": "libvirt-daemon-driver-storage-scsi is earlier than 0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046762391",
+														"comment": "libvirt-dbus is earlier than 0:1.3.0-2.module_el8.3.0+2048+e7a0a3ea"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175100",
+														"comment": "libvirt-dbus is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175102",
+														"comment": "libvirt-devel is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20213061240",
+														"comment": "libvirt-devel is earlier than 0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175104",
+														"comment": "libvirt-docs is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20213061241",
+														"comment": "libvirt-docs is earlier than 0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175106",
+														"comment": "libvirt-libs is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20213061242",
+														"comment": "libvirt-libs is earlier than 0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175110",
+														"comment": "libvirt-nss is signed with AlmaLinux OS 8 key"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20213061243",
+														"comment": "libvirt-nss is earlier than 0:6.0.0-35.1.module+el8.4.0+11273+64eb94ef"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046762441",
+														"comment": "nbdfuse is earlier than 0:1.2.2-1.module_el8.3.0+2048+e7a0a3ea"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676118",
+														"comment": "nbdfuse is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201933452251",
+														"comment": "netcf is earlier than 0:0.2.8-12.module_el8.3.0+2048+e7a0a3ea"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175134",
+														"comment": "netcf is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201933452261",
+														"comment": "netcf-devel is earlier than 0:0.2.8-12.module_el8.3.0+2048+e7a0a3ea"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175136",
+														"comment": "netcf-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201933452271",
+														"comment": "netcf-libs is earlier than 0:0.2.8-12.module_el8.3.0+2048+e7a0a3ea"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175138",
+														"comment": "netcf-libs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130612481",
+														"comment": "ocaml-hivex is earlier than 0:1.3.18-21.module_el8.5.0+2564+74ace547"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20193345229",
+														"comment": "ocaml-hivex is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130612501",
+														"comment": "ocaml-hivex-devel is earlier than 0:1.3.18-21.module_el8.5.0+2564+74ace547"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20193345231",
+														"comment": "ocaml-hivex-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117622521",
+														"comment": "ocaml-libguestfs is earlier than 1:1.40.2-27.module_el8.4.0+2358+630e803b.alma"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20193345233",
+														"comment": "ocaml-libguestfs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117622522",
+														"comment": "ocaml-libguestfs is earlier than 1:1.40.2-27.module_el8.4.0+2405+630e803b.alma"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20193345233",
+														"comment": "ocaml-libguestfs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117622523",
+														"comment": "ocaml-libguestfs is earlier than 1:1.40.2-27.module_el8.4.0+783+f8734d30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201933452332",
+														"comment": "ocaml-libguestfs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117622541",
+														"comment": "ocaml-libguestfs-devel is earlier than 1:1.40.2-27.module_el8.4.0+2358+630e803b.alma"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20193345235",
+														"comment": "ocaml-libguestfs-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117622542",
+														"comment": "ocaml-libguestfs-devel is earlier than 1:1.40.2-27.module_el8.4.0+2405+630e803b.alma"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20193345235",
+														"comment": "ocaml-libguestfs-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202117622543",
+														"comment": "ocaml-libguestfs-devel is earlier than 1:1.40.2-27.module_el8.4.0+783+f8734d30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201933452352",
+														"comment": "ocaml-libguestfs-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046762561",
+														"comment": "ocaml-libnbd is earlier than 0:1.2.2-1.module_el8.3.0+2048+e7a0a3ea"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676257",
+														"comment": "ocaml-libnbd is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046762581",
+														"comment": "ocaml-libnbd-devel is earlier than 0:1.2.2-1.module_el8.3.0+2048+e7a0a3ea"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676259",
+														"comment": "ocaml-libnbd-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046762601",
+														"comment": "perl-Sys-Virt is earlier than 0:6.0.0-1.module_el8.3.0+2048+e7a0a3ea"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175142",
+														"comment": "perl-Sys-Virt is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130612611",
+														"comment": "perl-hivex is earlier than 0:1.3.18-21.module_el8.5.0+2564+74ace547"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175144",
+														"comment": "perl-hivex is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130612621",
+														"comment": "python3-hivex is earlier than 0:1.3.18-21.module_el8.5.0+2564+74ace547"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175146",
+														"comment": "python3-hivex is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046762631",
+														"comment": "python3-libnbd is earlier than 0:1.2.2-1.module_el8.3.0+2048+e7a0a3ea"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204676164",
+														"comment": "python3-libnbd is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202046762641",
+														"comment": "python3-libvirt is earlier than 0:6.0.0-1.module_el8.3.0+2048+e7a0a3ea"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175150",
+														"comment": "python3-libvirt is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130612651",
+														"comment": "qemu-kvm-tests is earlier than 15:4.2.0-48.module_el8.4.0+2358+630e803b"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20193345241",
+														"comment": "qemu-kvm-tests is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130612652",
+														"comment": "qemu-kvm-tests is earlier than 15:4.2.0-48.module_el8.4.0+2405+630e803b"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20193345241",
+														"comment": "qemu-kvm-tests is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130612653",
+														"comment": "qemu-kvm-tests is earlier than 15:4.2.0-48.module_el8.4.0+885+5e18b468.3"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201933452412",
+														"comment": "qemu-kvm-tests is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202130612671",
+														"comment": "ruby-hivex is earlier than 0:1.3.18-21.module_el8.5.0+2564+74ace547"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175172",
+														"comment": "ruby-hivex is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201933452431",
+														"comment": "sgabios is earlier than 1:0.20170427git-3.module_el8.3.0+2048+e7a0a3ea"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20191175182",
+														"comment": "sgabios is signed with AlmaLinux OS 8 key"
+													}
+												]
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193345244",
+										"comment": "Module virt-devel:rhel is enabled"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

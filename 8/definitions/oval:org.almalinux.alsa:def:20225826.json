@@ -1,0 +1,904 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20225826",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:5826: mariadb:10.5 security, bug fix, and enhancement update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:5826",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-5826.html"
+			},
+			{
+				"ref_id": "ALSA-2022:5826",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-5826.html"
+			},
+			{
+				"ref_id": "CVE-2021-46659",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-46659"
+			},
+			{
+				"ref_id": "CVE-2021-46661",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-46661"
+			},
+			{
+				"ref_id": "CVE-2021-46663",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-46663"
+			},
+			{
+				"ref_id": "CVE-2021-46664",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-46664"
+			},
+			{
+				"ref_id": "CVE-2021-46665",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-46665"
+			},
+			{
+				"ref_id": "CVE-2021-46668",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-46668"
+			},
+			{
+				"ref_id": "CVE-2021-46669",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-46669"
+			},
+			{
+				"ref_id": "CVE-2022-24048",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-24048"
+			},
+			{
+				"ref_id": "CVE-2022-24050",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-24050"
+			},
+			{
+				"ref_id": "CVE-2022-24051",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-24051"
+			},
+			{
+				"ref_id": "CVE-2022-24052",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-24052"
+			},
+			{
+				"ref_id": "CVE-2022-27376",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-27376"
+			},
+			{
+				"ref_id": "CVE-2022-27377",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-27377"
+			},
+			{
+				"ref_id": "CVE-2022-27378",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-27378"
+			},
+			{
+				"ref_id": "CVE-2022-27379",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-27379"
+			},
+			{
+				"ref_id": "CVE-2022-27380",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-27380"
+			},
+			{
+				"ref_id": "CVE-2022-27381",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-27381"
+			},
+			{
+				"ref_id": "CVE-2022-27382",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-27382"
+			},
+			{
+				"ref_id": "CVE-2022-27383",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-27383"
+			},
+			{
+				"ref_id": "CVE-2022-27384",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-27384"
+			},
+			{
+				"ref_id": "CVE-2022-27386",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-27386"
+			},
+			{
+				"ref_id": "CVE-2022-27387",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-27387"
+			},
+			{
+				"ref_id": "CVE-2022-27444",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-27444"
+			},
+			{
+				"ref_id": "CVE-2022-27445",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-27445"
+			},
+			{
+				"ref_id": "CVE-2022-27446",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-27446"
+			},
+			{
+				"ref_id": "CVE-2022-27447",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-27447"
+			},
+			{
+				"ref_id": "CVE-2022-27448",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-27448"
+			},
+			{
+				"ref_id": "CVE-2022-27449",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-27449"
+			},
+			{
+				"ref_id": "CVE-2022-27451",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-27451"
+			},
+			{
+				"ref_id": "CVE-2022-27452",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-27452"
+			},
+			{
+				"ref_id": "CVE-2022-27455",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-27455"
+			},
+			{
+				"ref_id": "CVE-2022-27456",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-27456"
+			},
+			{
+				"ref_id": "CVE-2022-27457",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-27457"
+			},
+			{
+				"ref_id": "CVE-2022-27458",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-27458"
+			},
+			{
+				"ref_id": "CVE-2022-31622",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-31622"
+			},
+			{
+				"ref_id": "CVE-2022-31623",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-31623"
+			}
+		],
+		"Description": "MariaDB is a multi-user, multi-threaded SQL database server that is binary compatible with MySQL.\nThe following packages have been upgraded to a later upstream version: galera (26.4.11), mariadb (10.5.16).\nSecurity Fix(es):\n* mariadb: MariaDB through 10.5.9 allows attackers to trigger a convert_const_to_int use-after-free when the BIGINT data type is used (CVE-2021-46669)\n* mariadb: lack of proper validation of the length of user-supplied data prior to copying it to a fixed-length stack-based buffer (CVE-2022-24048)\n* mariadb: lack of validating the existence of an object prior to performing operations on the object (CVE-2022-24050)\n* mariadb: lack of proper validation of a user-supplied string before using it as a format specifier (CVE-2022-24051)\n* mariadb: CONNECT Storage Engine Heap-based Buffer Overflow Privilege Escalation Vulnerability (CVE-2022-24052)\n* mariadb: assertion failure in Item_args::walk_arg (CVE-2022-27376)\n* mariadb: use-after-poison when complex conversion is involved in blob (CVE-2022-27377)\n* mariadb: crash in create_tmp_table::finalize (CVE-2022-27378)\n* mariadb: crash in component arg_comparator::compare_real_fixed (CVE-2022-27379)\n* mariadb: crash at my_decimal::operator= (CVE-2022-27380)\n* mariadb: crash at Field::set_default via specially crafted SQL statements (CVE-2022-27381)\n* mariadb: assertion failure via component Item_field::used_tables/update_depend_map_for_order (CVE-2022-27382)\n* mariadb: use-after-poison in my_strcasecmp_8bit() of ctype-simple.c (CVE-2022-27383)\n* mariadb: via component Item_subselect::init_expr_cache_tracker (CVE-2022-27384)\n* mariadb: crash in query_arena::set_query_arena upon SELECT from view (CVE-2022-27386)\n* mariadb: assertion failures in decimal_bin_size (CVE-2022-27387)\n* mariadb: crash when using HAVING with NOT EXIST predicate in an equality (CVE-2022-27444)\n* mariadb: assertion failure in compare_order_elements (CVE-2022-27445)\n* mariadb: crash when using HAVING with IS NULL predicate in an equality (CVE-2022-27446)\n* mariadb: use-after-poison in Binary_string::free_buffer (CVE-2022-27447)\n* mariadb: crash in multi-update and implicit grouping (CVE-2022-27448)\n* mariadb: assertion failure in sql/item_func.cc (CVE-2022-27449)\n* mariadb: crash via window function in expression in ORDER BY (CVE-2022-27451)\n* mariadb: assertion failure in sql/item_cmpfunc.cc (CVE-2022-27452)\n* mariadb: use-after-free when WHERE has subquery with an outer reference in HAVING (CVE-2022-27455)\n* mariadb: assertion failure in VDec::VDec at /sql/sql_type.cc (CVE-2022-27456)\n* mariadb: incorrect key in \"dup value\" error after long unique (CVE-2022-27457)\n* mariadb: use-after-poison in Binary_string::free_buffer (CVE-2022-27458)\n* mariadb: improper locking due to the unreleased lock in extra/mariabackup/ds_compress.cc (CVE-2022-31622)\n* mariadb: improper locking due to the unreleased lock in extra/mariabackup/ds_compress.cc (CVE-2022-31623)\n* mariadb: Crash executing query with VIEW, aggregate and subquery (CVE-2021-46659)\n* mariadb: MariaDB allows an application crash in find_field_in_tables and find_order_in_list via an unused common table expression (CTE) (CVE-2021-46661)\n* mariadb: MariaDB through 10.5.13 allows a ha_maria::extra application crash via certain SELECT statements (CVE-2021-46663)\n* mariadb: crash in sub_select_postjoin_aggr for a NULL value of aggr (CVE-2021-46664)\n* mariadb: crash because of incorrect used_tables expectations (CVE-2021-46665)\n* mariadb: crash via certain long SELECT DISTINCT statements (CVE-2021-46668)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nBug Fix(es):\n* Don't use less parallelism if not necessary (BZ#2096934)\n* Links in galera package description are bad (BZ#2096935)\n* [Tracker] Rebase to Galera 26.4.11 (BZ#2096936)",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-08-02"
+			},
+			"updated": {
+				"date": "2022-08-02"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2049302",
+					"id": "2049302"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2050017",
+					"id": "2050017"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2050022",
+					"id": "2050022"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2050024",
+					"id": "2050024"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2050026",
+					"id": "2050026"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2050032",
+					"id": "2050032"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2050034",
+					"id": "2050034"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2068211",
+					"id": "2068211"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2068233",
+					"id": "2068233"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2068234",
+					"id": "2068234"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2069833",
+					"id": "2069833"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2074817",
+					"id": "2074817"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2074947",
+					"id": "2074947"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2074949",
+					"id": "2074949"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2074951",
+					"id": "2074951"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2074966",
+					"id": "2074966"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2074981",
+					"id": "2074981"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2074987",
+					"id": "2074987"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2074996",
+					"id": "2074996"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2074999",
+					"id": "2074999"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2075005",
+					"id": "2075005"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2075006",
+					"id": "2075006"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2075691",
+					"id": "2075691"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2075692",
+					"id": "2075692"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2075693",
+					"id": "2075693"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2075694",
+					"id": "2075694"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2075695",
+					"id": "2075695"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2075696",
+					"id": "2075696"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2075697",
+					"id": "2075697"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2075699",
+					"id": "2075699"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2075700",
+					"id": "2075700"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2075701",
+					"id": "2075701"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2076144",
+					"id": "2076144"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2076145",
+					"id": "2076145"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2092354",
+					"id": "2092354"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2092360",
+					"id": "2092360"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-46659",
+					"public": "20210510",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-46659",
+					"impact": "low",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-46661",
+					"public": "20210525",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-46661",
+					"impact": "low",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-46663",
+					"public": "20210813",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-46663",
+					"impact": "low",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-46664",
+					"public": "20210524",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-46664",
+					"impact": "low",
+					"cwe": "CWE-476",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-46665",
+					"public": "20210510",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-46665",
+					"impact": "low",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-46668",
+					"public": "20210527",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-46668",
+					"impact": "low",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-46669",
+					"public": "20210510",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-46669",
+					"impact": "moderate",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-24048",
+					"public": "20220218",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-24048",
+					"impact": "moderate",
+					"cwe": "CWE-120",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-24050",
+					"public": "20220218",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-24050",
+					"impact": "moderate",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-24051",
+					"public": "20220218",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-24051",
+					"impact": "moderate",
+					"cwe": "CWE-20->CWE-120",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-24052",
+					"public": "20220218",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-24052",
+					"impact": "moderate",
+					"cwe": "CWE-119",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-27376",
+					"public": "20201109",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-27376",
+					"impact": "moderate",
+					"cwe": "CWE-617",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-27377",
+					"public": "20210730",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-27377",
+					"impact": "moderate",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-27378",
+					"public": "20210819",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-27378",
+					"impact": "moderate",
+					"cwe": "CWE-89",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-27379",
+					"public": "20210813",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-27379",
+					"impact": "moderate",
+					"cwe": "CWE-89",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-27380",
+					"public": "20210623",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-27380",
+					"impact": "moderate",
+					"cwe": "CWE-89",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-27381",
+					"public": "20210701",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-27381",
+					"impact": "moderate",
+					"cwe": "CWE-89",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-27382",
+					"public": "20210819",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-27382",
+					"impact": "moderate",
+					"cwe": "CWE-617",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-27383",
+					"public": "20210809",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-27383",
+					"impact": "moderate",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-27384",
+					"public": "20210630",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-27384",
+					"impact": "moderate",
+					"cwe": "CWE-89",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-27386",
+					"public": "20191111",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-27386",
+					"impact": "moderate",
+					"cwe": "CWE-89",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-27387",
+					"public": "20210401",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-27387",
+					"impact": "moderate",
+					"cwe": "CWE-119",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-27444",
+					"public": "20220316",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-27444",
+					"impact": "moderate",
+					"cwe": "CWE-89",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-27445",
+					"public": "20190506",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-27445",
+					"impact": "moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-27446",
+					"public": "20220316",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-27446",
+					"impact": "moderate",
+					"cwe": "CWE-617",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-27447",
+					"public": "20201109",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-27447",
+					"impact": "moderate",
+					"cwe": "CWE-617",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-27448",
+					"public": "20220316",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-27448",
+					"impact": "moderate",
+					"cwe": "CWE-617",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-27449",
+					"public": "20201109",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-27449",
+					"impact": "moderate",
+					"cwe": "CWE-617",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-27451",
+					"public": "20220316",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-27451",
+					"impact": "moderate",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-27452",
+					"public": "20201109",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-27452",
+					"impact": "moderate",
+					"cwe": "CWE-617",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-27455",
+					"public": "20220316",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-27455",
+					"impact": "moderate",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-27456",
+					"public": "20201109",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-27456",
+					"impact": "moderate",
+					"cwe": "CWE-617",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-27457",
+					"public": "20220316",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-27457",
+					"impact": "moderate",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-27458",
+					"public": "20201109",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-27458",
+					"impact": "moderate",
+					"cwe": "CWE-617",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-31622",
+					"public": "20210907",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-31622",
+					"impact": "moderate",
+					"cwe": "CWE-404",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-31623",
+					"public": "20210907",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-31623",
+					"impact": "moderate",
+					"cwe": "CWE-667",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterias": [
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20221557001",
+														"comment": "Judy is earlier than 0:1.0.5-18.module_el8.8.0+3620+5d452900"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20193708002",
+														"comment": "Judy is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20225826003",
+														"comment": "galera is earlier than 0:26.4.11-1.module_el8.6.0+3072+3c630e87"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20193708004",
+														"comment": "galera is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20225826005",
+														"comment": "mariadb is earlier than 3:10.5.16-2.module_el8.6.0+3072+3c630e87"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20193708006",
+														"comment": "mariadb is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20225826007",
+														"comment": "mariadb-backup is earlier than 3:10.5.16-2.module_el8.6.0+3072+3c630e87"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20193708008",
+														"comment": "mariadb-backup is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20225826009",
+														"comment": "mariadb-common is earlier than 3:10.5.16-2.module_el8.6.0+3072+3c630e87"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20193708010",
+														"comment": "mariadb-common is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20225826011",
+														"comment": "mariadb-devel is earlier than 3:10.5.16-2.module_el8.6.0+3072+3c630e87"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20193708012",
+														"comment": "mariadb-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20225826013",
+														"comment": "mariadb-embedded is earlier than 3:10.5.16-2.module_el8.6.0+3072+3c630e87"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20193708014",
+														"comment": "mariadb-embedded is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20225826015",
+														"comment": "mariadb-embedded-devel is earlier than 3:10.5.16-2.module_el8.6.0+3072+3c630e87"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20193708016",
+														"comment": "mariadb-embedded-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20225826017",
+														"comment": "mariadb-errmsg is earlier than 3:10.5.16-2.module_el8.6.0+3072+3c630e87"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20193708018",
+														"comment": "mariadb-errmsg is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20225826019",
+														"comment": "mariadb-gssapi-server is earlier than 3:10.5.16-2.module_el8.6.0+3072+3c630e87"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20193708020",
+														"comment": "mariadb-gssapi-server is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20225826021",
+														"comment": "mariadb-oqgraph-engine is earlier than 3:10.5.16-2.module_el8.6.0+3072+3c630e87"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20193708022",
+														"comment": "mariadb-oqgraph-engine is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20225826023",
+														"comment": "mariadb-pam is earlier than 3:10.5.16-2.module_el8.6.0+3072+3c630e87"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20221557024",
+														"comment": "mariadb-pam is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20225826025",
+														"comment": "mariadb-server is earlier than 3:10.5.16-2.module_el8.6.0+3072+3c630e87"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20193708024",
+														"comment": "mariadb-server is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20225826027",
+														"comment": "mariadb-server-galera is earlier than 3:10.5.16-2.module_el8.6.0+3072+3c630e87"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20193708026",
+														"comment": "mariadb-server-galera is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20225826029",
+														"comment": "mariadb-server-utils is earlier than 3:10.5.16-2.module_el8.6.0+3072+3c630e87"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20193708028",
+														"comment": "mariadb-server-utils is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20225826031",
+														"comment": "mariadb-test is earlier than 3:10.5.16-2.module_el8.6.0+3072+3c630e87"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20193708030",
+														"comment": "mariadb-test is signed with AlmaLinux OS 8 key"
+													}
+												]
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20221557033",
+										"comment": "Module mariadb:10.5 is enabled"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

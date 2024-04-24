@@ -1,0 +1,247 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20240158",
+	"version": "639",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:0158: .NET 6.0 security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2024:0158",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-0158.html"
+			},
+			{
+				"ref_id": "CVE-2024-0056",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-0056"
+			},
+			{
+				"ref_id": "CVE-2024-0057",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-0057"
+			},
+			{
+				"ref_id": "CVE-2024-21319",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-21319"
+			},
+			{
+				"ref_id": "ALSA-2024:0158",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-0158.html"
+			}
+		],
+		"Description": ".NET is a managed-software framework. It implements a subset of the .NET framework APIs and several new APIs, and it includes a CLR implementation.\n\nNew versions of .NET that address a security vulnerability are now available. The updated versions are .NET SDK 6.0.126 and .NET Runtime 6.0.26.\n\nSecurity Fix(es):\n\n* dotnet: Information Disclosure: MD.SqlClient(MDS) & System.data.SQLClient (SDS) (CVE-2024-0056)\n* dotnet: X509 Certificates - Validation Bypass across Azure (CVE-2024-0057)\n* dotnet: .NET Denial of Service Vulnerability (CVE-2024-21319)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-01-10"
+			},
+			"updated": {
+				"date": "2024-01-10"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2255384",
+					"id": "2255384"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2255386",
+					"id": "2255386"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2257566",
+					"id": "2257566"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2024-0056",
+					"public": "20240109",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-0056",
+					"impact": "Important",
+					"cwe": "CWE-420",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2024-0057",
+					"public": "20240109",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-0057",
+					"impact": "Important",
+					"cwe": "CWE-295",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2024-21319",
+					"public": "20240110",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-21319",
+					"impact": "Moderate",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240158001",
+										"comment": "aspnetcore-runtime-6.0 is earlier than 0:6.0.26-1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20225747002",
+										"comment": "aspnetcore-runtime-6.0 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240158003",
+										"comment": "aspnetcore-targeting-pack-6.0 is earlier than 0:6.0.26-1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20225747004",
+										"comment": "aspnetcore-targeting-pack-6.0 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240158005",
+										"comment": "dotnet-apphost-pack-6.0 is earlier than 0:6.0.26-1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20225747008",
+										"comment": "dotnet-apphost-pack-6.0 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240158007",
+										"comment": "dotnet-hostfxr-6.0 is earlier than 0:6.0.26-1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20225747012",
+										"comment": "dotnet-hostfxr-6.0 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240158009",
+										"comment": "dotnet-runtime-6.0 is earlier than 0:6.0.26-1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20225747014",
+										"comment": "dotnet-runtime-6.0 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240158011",
+										"comment": "dotnet-sdk-6.0 is earlier than 0:6.0.126-1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20225747016",
+										"comment": "dotnet-sdk-6.0 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240158013",
+										"comment": "dotnet-sdk-6.0-source-built-artifacts is earlier than 0:6.0.126-1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20225747018",
+										"comment": "dotnet-sdk-6.0-source-built-artifacts is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240158015",
+										"comment": "dotnet-targeting-pack-6.0 is earlier than 0:6.0.26-1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20225747020",
+										"comment": "dotnet-targeting-pack-6.0 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240158017",
+										"comment": "dotnet-templates-6.0 is earlier than 0:6.0.126-1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20225747022",
+										"comment": "dotnet-templates-6.0 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

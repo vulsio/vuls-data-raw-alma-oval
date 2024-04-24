@@ -1,0 +1,255 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20227692",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:7692: xmlrpc-c security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:7692",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7692.html"
+			},
+			{
+				"ref_id": "CVE-2021-46143",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-46143"
+			},
+			{
+				"ref_id": "CVE-2022-22822",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-22822"
+			},
+			{
+				"ref_id": "CVE-2022-22823",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-22823"
+			},
+			{
+				"ref_id": "CVE-2022-22824",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-22824"
+			},
+			{
+				"ref_id": "CVE-2022-22825",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-22825"
+			},
+			{
+				"ref_id": "CVE-2022-22826",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-22826"
+			},
+			{
+				"ref_id": "CVE-2022-22827",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-22827"
+			},
+			{
+				"ref_id": "ALSA-2022:7692",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7692.html"
+			}
+		],
+		"Description": "XML-RPC is a remote procedure call (RPC) protocol that uses XML to encode its calls and HTTP as a transport mechanism. The xmlrpc-c packages provide a network protocol to allow a client program to make a simple RPC (remote procedure call) over the Internet. It converts an RPC into an XML document, sends it to a remote server using HTTP, and gets back the response in XML.\n\nSecurity Fix(es):\n\n* expat: Integer overflow in doProlog in xmlparse.c (CVE-2021-46143)\n* expat: Integer overflow in addBinding in xmlparse.c (CVE-2022-22822)\n* expat: Integer overflow in build_model in xmlparse.c (CVE-2022-22823)\n* expat: Integer overflow in defineAttribute in xmlparse.c (CVE-2022-22824)\n* expat: Integer overflow in lookup in xmlparse.c (CVE-2022-22825)\n* expat: Integer overflow in nextScaffoldPart in xmlparse.c (CVE-2022-22826)\n* expat: Integer overflow in storeAtts in xmlparse.c (CVE-2022-22827)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-11-08"
+			},
+			"updated": {
+				"date": "2022-11-08"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2044455",
+					"id": "2044455"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2044457",
+					"id": "2044457"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2044464",
+					"id": "2044464"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2044467",
+					"id": "2044467"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2044479",
+					"id": "2044479"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2044484",
+					"id": "2044484"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2044488",
+					"id": "2044488"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-46143",
+					"public": "20220115",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-46143",
+					"impact": "moderate",
+					"cwe": "CWE-190",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-22822",
+					"public": "20220115",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-22822",
+					"impact": "moderate",
+					"cwe": "CWE-190",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-22823",
+					"public": "20220115",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-22823",
+					"impact": "moderate",
+					"cwe": "CWE-190",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-22824",
+					"public": "20220115",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-22824",
+					"impact": "moderate",
+					"cwe": "CWE-190",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-22825",
+					"public": "20220115",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-22825",
+					"impact": "moderate",
+					"cwe": "CWE-190",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-22826",
+					"public": "20220115",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-22826",
+					"impact": "moderate",
+					"cwe": "CWE-190",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-22827",
+					"public": "20220115",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-22827",
+					"impact": "moderate",
+					"cwe": "CWE-190",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227692001",
+										"comment": "xmlrpc-c is earlier than 0:1.51.0-8.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20221643002",
+										"comment": "xmlrpc-c is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227692003",
+										"comment": "xmlrpc-c-c++ is earlier than 0:1.51.0-8.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20221643004",
+										"comment": "xmlrpc-c-c++ is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227692005",
+										"comment": "xmlrpc-c-client is earlier than 0:1.51.0-8.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20221643006",
+										"comment": "xmlrpc-c-client is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227692007",
+										"comment": "xmlrpc-c-client++ is earlier than 0:1.51.0-8.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20221643008",
+										"comment": "xmlrpc-c-client++ is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227692009",
+										"comment": "xmlrpc-c-devel is earlier than 0:1.51.0-8.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20221643010",
+										"comment": "xmlrpc-c-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

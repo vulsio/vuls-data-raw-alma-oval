@@ -1,0 +1,158 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20220545",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:0545: ruby:2.5 security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:0545",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-0545.html"
+			},
+			{
+				"ref_id": "ALSA-2022:0545",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-0545.html"
+			},
+			{
+				"ref_id": "CVE-2020-36327",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-36327"
+			}
+		],
+		"Description": "Ruby is an extensible, interpreted, object-oriented, scripting language. It has features to process text files and to perform system management tasks.\nSecurity Fix(es):\n* rubygem-bundler: Dependencies of gems with explicit source may be installed from a different source (CVE-2020-36327)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-02-16"
+			},
+			"updated": {
+				"date": "2022-02-16"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1958999",
+					"id": "1958999"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2020-36327",
+					"public": "20210209",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-36327",
+					"impact": "important",
+					"cwe": "CWE-494",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202205450011",
+										"comment": "rubygem-bundler is earlier than 0:1.16.1-4.module_el8.5.0+2625+ec418553"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193384022",
+										"comment": "rubygem-bundler is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202205450012",
+										"comment": "rubygem-bundler is earlier than 0:1.16.1-4.module_el8.5.0+259+8cec6917"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193384022",
+										"comment": "rubygem-bundler is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202205450031",
+										"comment": "rubygem-bundler-doc is earlier than 0:1.16.1-4.module_el8.5.0+2625+ec418553"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193384024",
+										"comment": "rubygem-bundler-doc is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202205450032",
+										"comment": "rubygem-bundler-doc is earlier than 0:1.16.1-4.module_el8.5.0+259+8cec6917"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193384024",
+										"comment": "rubygem-bundler-doc is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20193384065",
+						"comment": "Module ruby:2.5 is enabled"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

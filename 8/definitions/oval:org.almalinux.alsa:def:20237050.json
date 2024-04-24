@@ -1,0 +1,808 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20237050",
+	"version": "637",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:7050: python38:3.8 and python38-devel:3.8 security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2023:7050",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-7050.html"
+			},
+			{
+				"ref_id": "CVE-2007-4559",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2007-4559"
+			},
+			{
+				"ref_id": "CVE-2023-32681",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-32681"
+			},
+			{
+				"ref_id": "ALSA-2023:7050",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-7050.html"
+			}
+		],
+		"Description": "Python is an interpreted, interactive, object-oriented programming language, which includes modules, classes, exceptions, very high level dynamic data types and dynamic typing. Python supports interfaces to many system calls and libraries, as well as to various windowing systems. \n\nSecurity Fix(es):\n\n* python: tarfile module directory traversal (CVE-2007-4559)\n* python-requests: Unintended leak of Proxy-Authorization header (CVE-2023-32681)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-11-14"
+			},
+			"updated": {
+				"date": "2023-11-14"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/263261",
+					"id": "263261"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2209469",
+					"id": "2209469"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2007-4559",
+					"public": "20070824",
+					"href": "https://access.redhat.com/security/cve/CVE-2007-4559",
+					"impact": "Moderate",
+					"cwe": "CWE-22",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N"
+				},
+				{
+					"text": "CVE-2023-32681",
+					"public": "20230523",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-32681",
+					"impact": "Moderate",
+					"cwe": "CWE-402",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:N/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterias": [
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050001",
+														"comment": "python38 is earlier than 0:3.8.17-2.module_el8.9.0+3633+e453b53a"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641002",
+														"comment": "python38 is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050003",
+														"comment": "python38-Cython is earlier than 0:0.29.14-4.module_el8.6.0+2778+cd494b30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641004",
+														"comment": "python38-Cython is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050005",
+														"comment": "python38-PyMySQL is earlier than 0:0.10.1-1.module_el8.6.0+2778+cd494b30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641006",
+														"comment": "python38-PyMySQL is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050007",
+														"comment": "python38-asn1crypto is earlier than 0:1.2.0-3.module_el8.6.0+2778+cd494b30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641008",
+														"comment": "python38-asn1crypto is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050009",
+														"comment": "python38-babel is earlier than 0:2.7.0-11.module_el8.6.0+2778+cd494b30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641010",
+														"comment": "python38-babel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050011",
+														"comment": "python38-cffi is earlier than 0:1.13.2-3.module_el8.6.0+2778+cd494b30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641012",
+														"comment": "python38-cffi is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050013",
+														"comment": "python38-chardet is earlier than 0:3.0.4-19.module_el8.6.0+2778+cd494b30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641014",
+														"comment": "python38-chardet is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050015",
+														"comment": "python38-cryptography is earlier than 0:2.8-3.module_el8.6.0+2778+cd494b30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641016",
+														"comment": "python38-cryptography is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050017",
+														"comment": "python38-debug is earlier than 0:3.8.17-2.module_el8.9.0+3633+e453b53a"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641018",
+														"comment": "python38-debug is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050019",
+														"comment": "python38-devel is earlier than 0:3.8.17-2.module_el8.9.0+3633+e453b53a"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641020",
+														"comment": "python38-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050021",
+														"comment": "python38-idle is earlier than 0:3.8.17-2.module_el8.9.0+3633+e453b53a"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641022",
+														"comment": "python38-idle is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050023",
+														"comment": "python38-idna is earlier than 0:2.8-6.module_el8.6.0+2778+cd494b30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641024",
+														"comment": "python38-idna is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050025",
+														"comment": "python38-jinja2 is earlier than 0:2.11.3-1.module_el8.7.0+3344+99a6a656"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641026",
+														"comment": "python38-jinja2 is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050027",
+														"comment": "python38-libs is earlier than 0:3.8.17-2.module_el8.9.0+3633+e453b53a"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641028",
+														"comment": "python38-libs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050029",
+														"comment": "python38-lxml is earlier than 0:4.4.1-7.module_el8.6.0+2778+cd494b30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641030",
+														"comment": "python38-lxml is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050031",
+														"comment": "python38-markupsafe is earlier than 0:1.1.1-6.module_el8.6.0+2778+cd494b30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641032",
+														"comment": "python38-markupsafe is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050033",
+														"comment": "python38-mod_wsgi is earlier than 0:4.6.8-5.module_el8.9.0+3633+e453b53a"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641034",
+														"comment": "python38-mod_wsgi is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050035",
+														"comment": "python38-numpy is earlier than 0:1.17.3-7.module_el8.9.0+3633+e453b53a"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641036",
+														"comment": "python38-numpy is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050037",
+														"comment": "python38-numpy-doc is earlier than 0:1.17.3-7.module_el8.9.0+3633+e453b53a"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641038",
+														"comment": "python38-numpy-doc is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050039",
+														"comment": "python38-numpy-f2py is earlier than 0:1.17.3-7.module_el8.9.0+3633+e453b53a"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641040",
+														"comment": "python38-numpy-f2py is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050041",
+														"comment": "python38-pip is earlier than 0:19.3.1-7.module_el8.9.0+3633+e453b53a"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641042",
+														"comment": "python38-pip is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050043",
+														"comment": "python38-pip-wheel is earlier than 0:19.3.1-7.module_el8.9.0+3633+e453b53a"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641044",
+														"comment": "python38-pip-wheel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050045",
+														"comment": "python38-ply is earlier than 0:3.11-10.module_el8.6.0+2778+cd494b30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641046",
+														"comment": "python38-ply is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050047",
+														"comment": "python38-psutil is earlier than 0:5.6.4-4.module_el8.6.0+2778+cd494b30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641048",
+														"comment": "python38-psutil is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050049",
+														"comment": "python38-psycopg2 is earlier than 0:2.8.4-4.module_el8.7.0+3344+99a6a656"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641050",
+														"comment": "python38-psycopg2 is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050051",
+														"comment": "python38-psycopg2-doc is earlier than 0:2.8.4-4.module_el8.7.0+3344+99a6a656"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641052",
+														"comment": "python38-psycopg2-doc is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050053",
+														"comment": "python38-psycopg2-tests is earlier than 0:2.8.4-4.module_el8.7.0+3344+99a6a656"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641054",
+														"comment": "python38-psycopg2-tests is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050055",
+														"comment": "python38-pycparser is earlier than 0:2.19-3.module_el8.6.0+2778+cd494b30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641056",
+														"comment": "python38-pycparser is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050057",
+														"comment": "python38-pysocks is earlier than 0:1.7.1-4.module_el8.6.0+2778+cd494b30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641058",
+														"comment": "python38-pysocks is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050059",
+														"comment": "python38-pytz is earlier than 0:2019.3-4.module_el8.9.0+3633+e453b53a"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641060",
+														"comment": "python38-pytz is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050061",
+														"comment": "python38-pyyaml is earlier than 0:5.4.1-1.module_el8.6.0+2778+cd494b30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641062",
+														"comment": "python38-pyyaml is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050063",
+														"comment": "python38-requests is earlier than 0:2.22.0-10.module_el8.9.0+3633+e453b53a"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641064",
+														"comment": "python38-requests is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050065",
+														"comment": "python38-rpm-macros is earlier than 0:3.8.17-2.module_el8.9.0+3633+e453b53a"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641066",
+														"comment": "python38-rpm-macros is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050067",
+														"comment": "python38-scipy is earlier than 0:1.3.1-5.module_el8.9.0+3633+e453b53a"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641068",
+														"comment": "python38-scipy is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050069",
+														"comment": "python38-setuptools is earlier than 0:41.6.0-5.module_el8.6.0+2778+cd494b30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641070",
+														"comment": "python38-setuptools is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050071",
+														"comment": "python38-setuptools-wheel is earlier than 0:41.6.0-5.module_el8.6.0+2778+cd494b30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641072",
+														"comment": "python38-setuptools-wheel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050073",
+														"comment": "python38-six is earlier than 0:1.12.0-10.module_el8.6.0+2778+cd494b30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641074",
+														"comment": "python38-six is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050075",
+														"comment": "python38-test is earlier than 0:3.8.17-2.module_el8.9.0+3633+e453b53a"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641076",
+														"comment": "python38-test is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050077",
+														"comment": "python38-tkinter is earlier than 0:3.8.17-2.module_el8.9.0+3633+e453b53a"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641078",
+														"comment": "python38-tkinter is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050079",
+														"comment": "python38-urllib3 is earlier than 0:1.25.7-5.module_el8.6.0+2778+cd494b30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641080",
+														"comment": "python38-urllib3 is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050081",
+														"comment": "python38-wheel is earlier than 0:0.33.6-6.module_el8.6.0+2778+cd494b30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641082",
+														"comment": "python38-wheel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050083",
+														"comment": "python38-wheel-wheel is earlier than 0:0.33.6-6.module_el8.6.0+2778+cd494b30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204641084",
+														"comment": "python38-wheel-wheel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204641085",
+										"comment": "Module python38:3.8 is enabled"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterias": [
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050086",
+														"comment": "python38-atomicwrites is earlier than 0:1.3.0-8.module_el8.6.0+2778+cd494b30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20212583087",
+														"comment": "python38-atomicwrites is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050088",
+														"comment": "python38-attrs is earlier than 0:19.3.0-3.module_el8.6.0+2778+cd494b30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20212583089",
+														"comment": "python38-attrs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050090",
+														"comment": "python38-more-itertools is earlier than 0:7.2.0-5.module_el8.6.0+2778+cd494b30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20212583091",
+														"comment": "python38-more-itertools is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050092",
+														"comment": "python38-packaging is earlier than 0:19.2-3.module_el8.6.0+2778+cd494b30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20212583093",
+														"comment": "python38-packaging is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050094",
+														"comment": "python38-pluggy is earlier than 0:0.13.0-3.module_el8.6.0+2778+cd494b30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20212583095",
+														"comment": "python38-pluggy is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050096",
+														"comment": "python38-py is earlier than 0:1.8.0-8.module_el8.6.0+2778+cd494b30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20212583097",
+														"comment": "python38-py is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050098",
+														"comment": "python38-pyparsing is earlier than 0:2.4.5-3.module_el8.6.0+2778+cd494b30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20212583099",
+														"comment": "python38-pyparsing is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050100",
+														"comment": "python38-pytest is earlier than 0:4.6.6-3.module_el8.6.0+2778+cd494b30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20212583101",
+														"comment": "python38-pytest is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20237050102",
+														"comment": "python38-wcwidth is earlier than 0:0.1.7-16.module_el8.6.0+2778+cd494b30"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20212583103",
+														"comment": "python38-wcwidth is signed with AlmaLinux OS 8 key"
+													}
+												]
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20212583104",
+										"comment": "Module python38-devel:3.8 is enabled"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

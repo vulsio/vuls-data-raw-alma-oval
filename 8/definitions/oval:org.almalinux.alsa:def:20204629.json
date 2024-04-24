@@ -1,0 +1,164 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20204629",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2020:4629: libvpx security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2020:4629",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-4629.html"
+			},
+			{
+				"ref_id": "ALSA-2020:4629",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-4629.html"
+			},
+			{
+				"ref_id": "CVE-2019-2126",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-2126"
+			},
+			{
+				"ref_id": "CVE-2019-9232",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-9232"
+			},
+			{
+				"ref_id": "CVE-2019-9371",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-9371"
+			},
+			{
+				"ref_id": "CVE-2019-9433",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-9433"
+			}
+		],
+		"Description": "The libvpx packages provide the VP8 SDK, which allows the encoding and decoding of the VP8 video codec, commonly used with the WebM multimedia container file format.\nSecurity Fix(es):\n* libvpx: Double free in ParseContentEncodingEntry() in mkvparser.cc (CVE-2019-2126)\n* libvpx: Out of bounds read in vp8_norm table (CVE-2019-9232)\n* libvpx: Resource exhaustion after memory leak in mkvparser.cc (CVE-2019-9371)\n* libvpx: Use-after-free in vp8_deblock() in vp8/common/postproc.c (CVE-2019-9433)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2020-11-04"
+			},
+			"updated": {
+				"date": "2020-11-04"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1788966",
+					"id": "1788966"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1788994",
+					"id": "1788994"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1789004",
+					"id": "1789004"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1789008",
+					"id": "1789008"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2019-2126",
+					"public": "20191026",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-2126",
+					"impact": "moderate",
+					"cwe": "CWE-672",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2019-9232",
+					"public": "20191026",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-9232",
+					"impact": "moderate",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2019-9371",
+					"public": "20191026",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-9371",
+					"impact": "moderate",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2019-9433",
+					"public": "20191026",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-9433",
+					"impact": "moderate",
+					"cwe": "CWE-416->CWE-200",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204629001",
+										"comment": "libvpx is earlier than 0:1.7.0-8.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204629002",
+										"comment": "libvpx is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204629003",
+										"comment": "libvpx-devel is earlier than 0:1.7.0-8.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204629004",
+										"comment": "libvpx-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

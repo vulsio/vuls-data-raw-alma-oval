@@ -1,0 +1,126 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20201653",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2020:1653: zziplib security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2020:1653",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-1653.html"
+			},
+			{
+				"ref_id": "ALSA-2020:1653",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-1653.html"
+			},
+			{
+				"ref_id": "CVE-2018-17828",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2018-17828"
+			}
+		],
+		"Description": "The zziplib is a lightweight library to easily extract data from zip files.\nSecurity Fix(es):\n* zziplib: directory traversal in unzzip_cat in the bins/unzzipcat-mem.c (CVE-2018-17828)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2020-04-28"
+			},
+			"updated": {
+				"date": "2020-04-28"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1635888",
+					"id": "1635888"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2018-17828",
+					"public": "20180925",
+					"href": "https://access.redhat.com/security/cve/CVE-2018-17828",
+					"impact": "moderate",
+					"cwe": "CWE-22",
+					"cvss3": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201653001",
+										"comment": "zziplib is earlier than 0:0.13.68-8.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201653002",
+										"comment": "zziplib is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201653003",
+										"comment": "zziplib-devel is earlier than 0:0.13.68-8.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201653004",
+										"comment": "zziplib-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201653005",
+										"comment": "zziplib-utils is earlier than 0:0.13.68-8.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201653006",
+										"comment": "zziplib-utils is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

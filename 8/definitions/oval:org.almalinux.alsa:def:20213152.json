@@ -1,0 +1,139 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20213152",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:3152: exiv2 security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:3152",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-3152.html"
+			},
+			{
+				"ref_id": "ALSA-2021:3152",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-3152.html"
+			},
+			{
+				"ref_id": "CVE-2021-31291",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-31291"
+			}
+		],
+		"Description": "Exiv2 is a C++ library to access image metadata, supporting read and write access to the Exif, IPTC and XMP metadata, Exif MakerNote support, extract and delete methods for Exif thumbnails, classes to access Ifd, and support for various image formats.\nSecurity Fix(es):\n* exiv2: Heap-based buffer overflow vulnerability in jp2image.cpp (CVE-2021-31291)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-08-16"
+			},
+			"updated": {
+				"date": "2021-08-16"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1990327",
+					"id": "1990327"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-31291",
+					"public": "20210726",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-31291",
+					"impact": "important",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20213152001",
+										"comment": "exiv2 is earlier than 0:0.27.3-3.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201577010",
+										"comment": "exiv2 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20213152003",
+										"comment": "exiv2-devel is earlier than 0:0.27.3-3.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201577012",
+										"comment": "exiv2-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20213152005",
+										"comment": "exiv2-doc is earlier than 0:0.27.3-3.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201577014",
+										"comment": "exiv2-doc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20213152007",
+										"comment": "exiv2-libs is earlier than 0:0.27.3-3.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201577016",
+										"comment": "exiv2-libs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

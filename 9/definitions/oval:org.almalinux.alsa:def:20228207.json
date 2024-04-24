@@ -1,0 +1,126 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20228207",
+	"version": "637",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:8207: openjpeg2 security update (Low)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:8207",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-8207.html"
+			},
+			{
+				"ref_id": "CVE-2022-1122",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-1122"
+			},
+			{
+				"ref_id": "ALSA-2022:8207",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-8207.html"
+			}
+		],
+		"Description": "OpenJPEG is an open source library for reading and writing image files in JPEG2000 format.\n\nSecurity Fix(es):\n\n* openjpeg: segmentation fault in opj2_decompress due to uninitialized pointer (CVE-2022-1122)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Low",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-11-15"
+			},
+			"updated": {
+				"date": "2022-11-15"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2067052",
+					"id": "2067052"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-1122",
+					"public": "20210713",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-1122",
+					"impact": "Low",
+					"cwe": "CWE-665->CWE-824",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228207001",
+										"comment": "openjpeg2 is earlier than 0:2.4.0-7.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228207002",
+										"comment": "openjpeg2 is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228207003",
+										"comment": "openjpeg2-devel is earlier than 0:2.4.0-7.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228207004",
+										"comment": "openjpeg2-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228207005",
+										"comment": "openjpeg2-tools is earlier than 0:2.4.0-7.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228207006",
+										"comment": "openjpeg2-tools is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

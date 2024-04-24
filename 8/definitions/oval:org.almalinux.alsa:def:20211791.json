@@ -1,0 +1,138 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20211791",
+	"version": "638",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:1791: spice-vdagent security and bug fix update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:1791",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1791.html"
+			},
+			{
+				"ref_id": "ALSA-2021:1791",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1791.html"
+			},
+			{
+				"ref_id": "CVE-2020-25650",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-25650"
+			},
+			{
+				"ref_id": "CVE-2020-25651",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-25651"
+			},
+			{
+				"ref_id": "CVE-2020-25652",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-25652"
+			},
+			{
+				"ref_id": "CVE-2020-25653",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-25653"
+			}
+		],
+		"Description": "The spice-vdagent packages provide a SPICE agent for Linux guests.\nSecurity Fix(es):\n* spice-vdagent: possible file transfer DoS and information leak via active_xfers hash map (CVE-2020-25651)\n* spice-vdagent: UNIX domain socket peer PID retrieved via SO_PEERCRED is subject to race condition (CVE-2020-25653)\n* spice-vdagent: memory DoS via arbitrary entries in active_xfers hash table (CVE-2020-25650)\n* spice-vdagent: possibility to exhaust file descriptors in vdagentd (CVE-2020-25652)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-05-18"
+			},
+			"updated": {
+				"date": "2021-05-18"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1886345",
+					"id": "1886345"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1886359",
+					"id": "1886359"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1886366",
+					"id": "1886366"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1886372",
+					"id": "1886372"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2020-25650",
+					"public": "20201103",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-25650",
+					"impact": "low",
+					"cwe": "CWE-770",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2020-25651",
+					"public": "20201103",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-25651",
+					"impact": "moderate",
+					"cwe": "CWE-362->CWE-200",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:N/A:L"
+				},
+				{
+					"text": "CVE-2020-25652",
+					"public": "20201103",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-25652",
+					"impact": "low",
+					"cwe": "CWE-770",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2020-25653",
+					"public": "20201103",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-25653",
+					"impact": "moderate",
+					"cwe": "CWE-362->CWE-200",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:N/A:L"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20211791001",
+						"comment": "spice-vdagent is earlier than 0:0.20.0-3.el8"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20211791002",
+						"comment": "spice-vdagent is signed with AlmaLinux OS 8 key"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

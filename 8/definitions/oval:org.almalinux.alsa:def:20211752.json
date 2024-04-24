@@ -1,0 +1,282 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20211752",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:1752: evolution security, bug fix, and enhancement update (Low)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:1752",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1752.html"
+			},
+			{
+				"ref_id": "ALSA-2021:1752",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1752.html"
+			},
+			{
+				"ref_id": "CVE-2020-16117",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-16117"
+			}
+		],
+		"Description": "Evolution is a GNOME application that provides integrated email, calendar, contact management, and communications functionality.\nThe evolution-data-server packages provide a unified back end for applications which interact with contacts, tasks and calendar information. Evolution Data Server was originally developed as a back end for the Evolution information management application, but is now used by various other applications.\nSecurity Fix(es):\n* evolution-data-server: NULL pointer dereference related to imapx_free_capability and imapx_connect_to_server (CVE-2020-16117)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Low",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-05-18"
+			},
+			"updated": {
+				"date": "2021-05-18"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1862125",
+					"id": "1862125"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2020-16117",
+					"public": "20200730",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-16117",
+					"impact": "low",
+					"cwe": "CWE-476",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211752001",
+										"comment": "evolution-data-server is earlier than 0:3.28.5-15.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193699006",
+										"comment": "evolution-data-server is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211752003",
+										"comment": "evolution-data-server-devel is earlier than 0:3.28.5-15.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193699008",
+										"comment": "evolution-data-server-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211752005",
+										"comment": "evolution-data-server-doc is earlier than 0:3.28.5-15.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193699010",
+										"comment": "evolution-data-server-doc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211752007",
+										"comment": "evolution-data-server-langpacks is earlier than 0:3.28.5-15.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193699012",
+										"comment": "evolution-data-server-langpacks is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211752009",
+										"comment": "evolution-data-server-perl is earlier than 0:3.28.5-15.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193699014",
+										"comment": "evolution-data-server-perl is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211752011",
+										"comment": "evolution-data-server-tests is earlier than 0:3.28.5-15.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193699016",
+										"comment": "evolution-data-server-tests is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211752013",
+										"comment": "evolution-ews is earlier than 0:3.28.5-10.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193699002",
+										"comment": "evolution-ews is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211752015",
+										"comment": "evolution-ews-langpacks is earlier than 0:3.28.5-10.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193699004",
+										"comment": "evolution-ews-langpacks is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211752017",
+										"comment": "evolution is earlier than 0:3.28.5-16.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193699018",
+										"comment": "evolution is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211752019",
+										"comment": "evolution-bogofilter is earlier than 0:3.28.5-16.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193699020",
+										"comment": "evolution-bogofilter is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211752021",
+										"comment": "evolution-devel is earlier than 0:3.28.5-16.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193699022",
+										"comment": "evolution-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211752023",
+										"comment": "evolution-help is earlier than 0:3.28.5-16.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193699024",
+										"comment": "evolution-help is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211752025",
+										"comment": "evolution-langpacks is earlier than 0:3.28.5-16.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193699026",
+										"comment": "evolution-langpacks is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211752027",
+										"comment": "evolution-pst is earlier than 0:3.28.5-16.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193699028",
+										"comment": "evolution-pst is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211752029",
+										"comment": "evolution-spamassassin is earlier than 0:3.28.5-16.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193699030",
+										"comment": "evolution-spamassassin is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

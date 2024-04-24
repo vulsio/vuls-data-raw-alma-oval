@@ -1,0 +1,113 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20220177",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:0177: gegl04 security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:0177",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-0177.html"
+			},
+			{
+				"ref_id": "ALSA-2022:0177",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-0177.html"
+			},
+			{
+				"ref_id": "CVE-2021-45463",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-45463"
+			}
+		],
+		"Description": "GEGL (Generic Graphics Library) is a graph-based image processing framework.\nSecurity Fix(es):\n* gegl: shell expansion via a crafted pathname (CVE-2021-45463)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-01-19"
+			},
+			"updated": {
+				"date": "2022-01-19"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2035383",
+					"id": "2035383"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-45463",
+					"public": "20211215",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-45463",
+					"impact": "important",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220177001",
+										"comment": "gegl04 is earlier than 0:0.4.4-6.el8_5.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220177002",
+										"comment": "gegl04 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220177003",
+										"comment": "gegl04-devel is earlier than 0:0.4.4-6.el8_5.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220177004",
+										"comment": "gegl04-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

@@ -1,0 +1,219 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20214396",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:4396: sqlite security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:4396",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4396.html"
+			},
+			{
+				"ref_id": "ALSA-2021:4396",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4396.html"
+			},
+			{
+				"ref_id": "CVE-2019-13750",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-13750"
+			},
+			{
+				"ref_id": "CVE-2019-13751",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-13751"
+			},
+			{
+				"ref_id": "CVE-2019-19603",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-19603"
+			},
+			{
+				"ref_id": "CVE-2019-5827",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-5827"
+			},
+			{
+				"ref_id": "CVE-2020-13435",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-13435"
+			}
+		],
+		"Description": "SQLite is a C library that implements an SQL database engine. A large subset of SQL92 is supported. A complete database is stored in a single disk file. The API is designed for convenience and ease of use. Applications that link against SQLite can enjoy the power and flexibility of an SQL database without the administrative hassles of supporting a separate database server.\nSecurity Fix(es):\n* sqlite: out-of-bounds access due to the use of 32-bit memory allocator interfaces (CVE-2019-5827)\n* sqlite: dropping of shadow tables not restricted in defensive mode (CVE-2019-13750)\n* sqlite: fts3: improve detection of corrupted records (CVE-2019-13751)\n* sqlite: mishandling of certain SELECT statements with non-existent VIEW can lead to DoS (CVE-2019-19603)\n* sqlite: NULL pointer dereference in sqlite3ExprCodeTarget() (CVE-2020-13435)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-11-09"
+			},
+			"updated": {
+				"date": "2021-11-09"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1706805",
+					"id": "1706805"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1781997",
+					"id": "1781997"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1781998",
+					"id": "1781998"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1785318",
+					"id": "1785318"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1841231",
+					"id": "1841231"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2019-13750",
+					"public": "20191210",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-13750",
+					"impact": "moderate",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2019-13751",
+					"public": "20191210",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-13751",
+					"impact": "moderate",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2019-19603",
+					"public": "20191209",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-19603",
+					"impact": "moderate",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2019-5827",
+					"public": "20190430",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-5827",
+					"impact": "important",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2020-13435",
+					"public": "20200523",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-13435",
+					"impact": "moderate",
+					"cwe": "CWE-476",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214396001",
+										"comment": "lemon is earlier than 0:3.26.0-15.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20200273002",
+										"comment": "lemon is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214396003",
+										"comment": "sqlite is earlier than 0:3.26.0-15.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20200273004",
+										"comment": "sqlite is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214396005",
+										"comment": "sqlite-devel is earlier than 0:3.26.0-15.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20200273006",
+										"comment": "sqlite-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214396007",
+										"comment": "sqlite-doc is earlier than 0:3.26.0-15.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20200273008",
+										"comment": "sqlite-doc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214396009",
+										"comment": "sqlite-libs is earlier than 0:3.26.0-15.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20200273010",
+										"comment": "sqlite-libs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

@@ -1,0 +1,155 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20214526",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:4526: mingw-glib2 security, bug fix, and enhancement update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:4526",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4526.html"
+			},
+			{
+				"ref_id": "ALSA-2021:4526",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4526.html"
+			},
+			{
+				"ref_id": "CVE-2021-27218",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-27218"
+			},
+			{
+				"ref_id": "CVE-2021-27219",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-27219"
+			}
+		],
+		"Description": "GLib provides the core application building blocks for libraries and applications written in C. It provides the core object system used in GNOME, the main loop implementation, and a large set of utility functions for strings and common data structures.\nThe following packages have been upgraded to a later upstream version: mingw-glib2 (2.66.7). (BZ#1935248, BZ#1939111)\nSecurity Fix(es):\n* glib: integer overflow in g_bytes_new function on 64-bit platforms due to an implicit cast from 64 bits to 32 bits (CVE-2021-27219)\n* glib: integer overflow in g_byte_array_new_take function when called with a buffer of 4GB or more on a 64-bit platform (CVE-2021-27218)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-11-09"
+			},
+			"updated": {
+				"date": "2021-11-09"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::powertools"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1929847",
+					"id": "1929847"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1929858",
+					"id": "1929858"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-27218",
+					"public": "20210210",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-27218",
+					"impact": "moderate",
+					"cwe": "CWE-190",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-27219",
+					"public": "20210204",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-27219",
+					"impact": "important",
+					"cwe": "CWE-190->CWE-787",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214526001",
+										"comment": "mingw32-glib2 is earlier than 0:2.66.7-2.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214526002",
+										"comment": "mingw32-glib2 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214526003",
+										"comment": "mingw32-glib2-static is earlier than 0:2.66.7-2.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214526004",
+										"comment": "mingw32-glib2-static is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214526005",
+										"comment": "mingw64-glib2 is earlier than 0:2.66.7-2.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214526006",
+										"comment": "mingw64-glib2 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214526007",
+										"comment": "mingw64-glib2-static is earlier than 0:2.66.7-2.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214526008",
+										"comment": "mingw64-glib2-static is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

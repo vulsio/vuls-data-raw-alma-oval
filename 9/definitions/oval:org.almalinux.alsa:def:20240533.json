@@ -1,0 +1,195 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20240533",
+	"version": "639",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:0533: gnutls security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2024:0533",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-0533.html"
+			},
+			{
+				"ref_id": "CVE-2023-5981",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-5981"
+			},
+			{
+				"ref_id": "CVE-2024-0553",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-0553"
+			},
+			{
+				"ref_id": "CVE-2024-0567",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-0567"
+			},
+			{
+				"ref_id": "ALSA-2024:0533",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-0533.html"
+			}
+		],
+		"Description": "The gnutls packages provide the GNU Transport Layer Security (GnuTLS) library, which implements cryptographic algorithms and protocols such as SSL, TLS, and DTLS.\n\nSecurity Fix(es):\n\n* gnutls: timing side-channel in the RSA-PSK authentication (CVE-2023-5981)\n* gnutls: incomplete fix for CVE-2023-5981 (CVE-2024-0553)\n* gnutls: rejects certificate chain with distributed trust (CVE-2024-0567)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-01-29"
+			},
+			"updated": {
+				"date": "2024-01-29"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2248445",
+					"id": "2248445"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2258412",
+					"id": "2258412"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2258544",
+					"id": "2258544"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-5981",
+					"public": "20231115",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-5981",
+					"impact": "Moderate",
+					"cwe": "CWE-1300->CWE-203",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2024-0553",
+					"public": "20240116",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-0553",
+					"impact": "Moderate",
+					"cwe": "CWE-1300->CWE-203",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2024-0567",
+					"public": "20240116",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-0567",
+					"impact": "Moderate",
+					"cwe": "CWE-347",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240533001",
+										"comment": "gnutls is earlier than 0:3.7.6-23.el9_3.3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226854002",
+										"comment": "gnutls is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240533003",
+										"comment": "gnutls-c++ is earlier than 0:3.7.6-23.el9_3.3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226854004",
+										"comment": "gnutls-c++ is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240533005",
+										"comment": "gnutls-dane is earlier than 0:3.7.6-23.el9_3.3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226854006",
+										"comment": "gnutls-dane is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240533007",
+										"comment": "gnutls-devel is earlier than 0:3.7.6-23.el9_3.3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226854008",
+										"comment": "gnutls-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240533009",
+										"comment": "gnutls-utils is earlier than 0:3.7.6-23.el9_3.3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226854010",
+										"comment": "gnutls-utils is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

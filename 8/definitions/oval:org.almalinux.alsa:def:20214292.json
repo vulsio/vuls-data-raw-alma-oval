@@ -1,0 +1,270 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20214292",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:4292: squid:4 security, bug fix, and enhancement update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:4292",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4292.html"
+			},
+			{
+				"ref_id": "ALSA-2021:4292",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4292.html"
+			},
+			{
+				"ref_id": "CVE-2021-28651",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-28651"
+			},
+			{
+				"ref_id": "CVE-2021-28652",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-28652"
+			},
+			{
+				"ref_id": "CVE-2021-28662",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-28662"
+			},
+			{
+				"ref_id": "CVE-2021-31806",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-31806"
+			},
+			{
+				"ref_id": "CVE-2021-31807",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-31807"
+			},
+			{
+				"ref_id": "CVE-2021-31808",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-31808"
+			},
+			{
+				"ref_id": "CVE-2021-33620",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-33620"
+			}
+		],
+		"Description": "Squid is a high-performance proxy caching server for web clients, supporting FTP, Gopher, and HTTP data objects.\nThe following packages have been upgraded to a later upstream version: squid (4.15). (BZ#1964384)\nSecurity Fix(es):\n* squid: denial of service in URN processing (CVE-2021-28651)\n* squid: denial of service issue in Cache Manager (CVE-2021-28652)\n* squid: denial of service in HTTP response processing (CVE-2021-28662)\n* squid: improper input validation in HTTP Range header (CVE-2021-31806)\n* squid: incorrect memory management in HTTP Range header (CVE-2021-31807)\n* squid: integer overflow in HTTP Range header (CVE-2021-31808)\n* squid: denial of service in HTTP response processing (CVE-2021-33620)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-11-09"
+			},
+			"updated": {
+				"date": "2021-11-09"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1959537",
+					"id": "1959537"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1962243",
+					"id": "1962243"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1962246",
+					"id": "1962246"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1962254",
+					"id": "1962254"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1962595",
+					"id": "1962595"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1962597",
+					"id": "1962597"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1962599",
+					"id": "1962599"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-28651",
+					"public": "20210510",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-28651",
+					"impact": "moderate",
+					"cwe": "CWE-401->CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-28652",
+					"public": "20210510",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-28652",
+					"impact": "moderate",
+					"cwe": "CWE-401",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-28662",
+					"public": "20210510",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-28662",
+					"impact": "moderate",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-31806",
+					"public": "20210510",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-31806",
+					"impact": "moderate",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-31807",
+					"public": "20210510",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-31807",
+					"impact": "moderate",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-31808",
+					"public": "20210510",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-31808",
+					"impact": "moderate",
+					"cwe": "CWE-190",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-33620",
+					"public": "20210510",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-33620",
+					"impact": "moderate",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201934760011",
+										"comment": "libecap is earlier than 0:1.0.1-2.module_el8.5.0+2548+24c223d9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192593002",
+										"comment": "libecap is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201934760012",
+										"comment": "libecap is earlier than 0:1.0.1-2.module_el8.5.0+72+8ec05e37"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192593002",
+										"comment": "libecap is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201934760031",
+										"comment": "libecap-devel is earlier than 0:1.0.1-2.module_el8.5.0+2548+24c223d9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192593004",
+										"comment": "libecap-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201934760032",
+										"comment": "libecap-devel is earlier than 0:1.0.1-2.module_el8.5.0+72+8ec05e37"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192593004",
+										"comment": "libecap-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202142920051",
+										"comment": "squid is earlier than 7:4.15-1.module_el8.5.0+2548+24c223d9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192593006",
+										"comment": "squid is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202142920052",
+										"comment": "squid is earlier than 7:4.15-1.module_el8.5.0+72+8ec05e37"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192593006",
+										"comment": "squid is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20192593007",
+						"comment": "Module squid:4 is enabled"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

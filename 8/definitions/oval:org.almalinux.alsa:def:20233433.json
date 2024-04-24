@@ -1,0 +1,165 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20233433",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:3433: webkit2gtk3 security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2023:3433",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-3433.html"
+			},
+			{
+				"ref_id": "CVE-2023-28204",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-28204"
+			},
+			{
+				"ref_id": "CVE-2023-32373",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-32373"
+			},
+			{
+				"ref_id": "ALSA-2023:3433",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-3433.html"
+			}
+		],
+		"Description": "WebKitGTK is the port of the portable web rendering engine WebKit to the GTK platform.\n\nSecurity Fix(es):\n\n* webkitgtk: a use-after-free when processing maliciously crafted web content (CVE-2023-32373)\n* webkitgtk: an out-of-bounds read when processing malicious content (CVE-2023-28204)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-06-05"
+			},
+			"updated": {
+				"date": "2023-06-05"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2209208",
+					"id": "2209208"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2209214",
+					"id": "2209214"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-28204",
+					"public": "20230522",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-28204",
+					"impact": "Moderate",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2023-32373",
+					"public": "20230522",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-32373",
+					"impact": "Important",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233433001",
+										"comment": "webkit2gtk3 is earlier than 0:2.38.5-1.el8_8.4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:20194262002",
+										"comment": "webkit2gtk3 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233433003",
+										"comment": "webkit2gtk3-devel is earlier than 0:2.38.5-1.el8_8.4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:20194262004",
+										"comment": "webkit2gtk3-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233433005",
+										"comment": "webkit2gtk3-jsc is earlier than 0:2.38.5-1.el8_8.4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:20194262006",
+										"comment": "webkit2gtk3-jsc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233433007",
+										"comment": "webkit2gtk3-jsc-devel is earlier than 0:2.38.5-1.el8_8.4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:20194262008",
+										"comment": "webkit2gtk3-jsc-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

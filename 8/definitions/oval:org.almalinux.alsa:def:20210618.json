@@ -1,0 +1,87 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20210618",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:0618: stunnel security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:0618",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-0618.html"
+			},
+			{
+				"ref_id": "ALSA-2021:0618",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-0618.html"
+			},
+			{
+				"ref_id": "CVE-2021-20230",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-20230"
+			}
+		],
+		"Description": "Stunnel is a wrapper for network connections. It can be used to tunnel an unencrypted network connection over an encrypted connection (encrypted using SSL or TLS) or to provide an encrypted means of connecting to services that do not natively support encryption.\nSecurity Fix(es):\n* stunnel: client certificate not correctly verified when redirect and verifyChain options are used (CVE-2021-20230)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-02-22"
+			},
+			"updated": {
+				"date": "2021-02-22"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1925226",
+					"id": "1925226"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-20230",
+					"public": "20201011",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-20230",
+					"impact": "important",
+					"cwe": "CWE-295",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20210618001",
+						"comment": "stunnel is earlier than 0:5.56-5.el8_3"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20210618002",
+						"comment": "stunnel is signed with AlmaLinux OS 8 key"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

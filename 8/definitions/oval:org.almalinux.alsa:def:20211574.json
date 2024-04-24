@@ -1,0 +1,310 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20211574",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:1574: NetworkManager and libnma security, bug fix, and enhancement update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:1574",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1574.html"
+			},
+			{
+				"ref_id": "ALSA-2021:1574",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1574.html"
+			},
+			{
+				"ref_id": "CVE-2021-20297",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-20297"
+			}
+		],
+		"Description": "NetworkManager is a system network service that manages network devices and connections, attempting to keep active network connectivity when available. Its capabilities include managing Ethernet, wireless, mobile broadband (WWAN), and PPPoE devices, as well as providing VPN integration with a variety of different VPN services.\nThe following packages have been upgraded to a later upstream version: NetworkManager (1.30.0). (BZ#1878783)\nSecurity Fix(es):\n* NetworkManager: Profile with match.path setting triggers crash (CVE-2021-20297)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-05-18"
+			},
+			"updated": {
+				"date": "2021-05-18"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1943282",
+					"id": "1943282"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-20297",
+					"public": "20210325",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-20297",
+					"impact": "moderate",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211574001",
+										"comment": "libnma is earlier than 0:1.8.30-2.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211574002",
+										"comment": "libnma is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211574003",
+										"comment": "libnma-devel is earlier than 0:1.8.30-2.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211574004",
+										"comment": "libnma-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211574005",
+										"comment": "NetworkManager is earlier than 1:1.30.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203011002",
+										"comment": "NetworkManager is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211574007",
+										"comment": "NetworkManager-adsl is earlier than 1:1.30.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203011004",
+										"comment": "NetworkManager-adsl is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211574009",
+										"comment": "NetworkManager-bluetooth is earlier than 1:1.30.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203011006",
+										"comment": "NetworkManager-bluetooth is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211574011",
+										"comment": "NetworkManager-cloud-setup is earlier than 1:1.30.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203011008",
+										"comment": "NetworkManager-cloud-setup is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211574013",
+										"comment": "NetworkManager-config-connectivity-redhat is earlier than 1:1.30.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203011010",
+										"comment": "NetworkManager-config-connectivity-redhat is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211574015",
+										"comment": "NetworkManager-config-server is earlier than 1:1.30.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203011012",
+										"comment": "NetworkManager-config-server is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211574017",
+										"comment": "NetworkManager-dispatcher-routing-rules is earlier than 1:1.30.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203011014",
+										"comment": "NetworkManager-dispatcher-routing-rules is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211574019",
+										"comment": "NetworkManager-libnm is earlier than 1:1.30.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203011016",
+										"comment": "NetworkManager-libnm is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211574021",
+										"comment": "NetworkManager-libnm-devel is earlier than 1:1.30.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203011018",
+										"comment": "NetworkManager-libnm-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211574023",
+										"comment": "NetworkManager-ovs is earlier than 1:1.30.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203011020",
+										"comment": "NetworkManager-ovs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211574025",
+										"comment": "NetworkManager-ppp is earlier than 1:1.30.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203011022",
+										"comment": "NetworkManager-ppp is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211574027",
+										"comment": "NetworkManager-team is earlier than 1:1.30.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203011024",
+										"comment": "NetworkManager-team is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211574029",
+										"comment": "NetworkManager-tui is earlier than 1:1.30.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203011026",
+										"comment": "NetworkManager-tui is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211574031",
+										"comment": "NetworkManager-wifi is earlier than 1:1.30.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203011028",
+										"comment": "NetworkManager-wifi is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211574033",
+										"comment": "NetworkManager-wwan is earlier than 1:1.30.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203011030",
+										"comment": "NetworkManager-wwan is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

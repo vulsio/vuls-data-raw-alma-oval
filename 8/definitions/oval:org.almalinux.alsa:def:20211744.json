@@ -1,0 +1,177 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20211744",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:1744: sane-backends security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:1744",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1744.html"
+			},
+			{
+				"ref_id": "ALSA-2021:1744",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1744.html"
+			},
+			{
+				"ref_id": "CVE-2020-12867",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-12867"
+			}
+		],
+		"Description": "Scanner Access Now Easy (SANE) is a universal scanner interface. The SANE application programming interface (API) provides standardized access to any raster image scanner hardware (for example, flatbed scanners, hand-held scanners, video and still cameras, and frame-grabbers).\nSecurity Fix(es):\n* sane-backends: NULL pointer dereference in sanei_epson_net_read function (CVE-2020-12867)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-05-18"
+			},
+			"updated": {
+				"date": "2021-05-18"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1848097",
+					"id": "1848097"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2020-12867",
+					"public": "20200601",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-12867",
+					"impact": "moderate",
+					"cwe": "CWE-476",
+					"cvss3": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211744001",
+										"comment": "sane-backends is earlier than 0:1.0.27-22.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20202902002",
+										"comment": "sane-backends is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211744003",
+										"comment": "sane-backends-daemon is earlier than 0:1.0.27-22.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20202902004",
+										"comment": "sane-backends-daemon is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211744005",
+										"comment": "sane-backends-devel is earlier than 0:1.0.27-22.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20202902006",
+										"comment": "sane-backends-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211744007",
+										"comment": "sane-backends-doc is earlier than 0:1.0.27-22.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20202902008",
+										"comment": "sane-backends-doc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211744009",
+										"comment": "sane-backends-drivers-cameras is earlier than 0:1.0.27-22.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20202902010",
+										"comment": "sane-backends-drivers-cameras is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211744011",
+										"comment": "sane-backends-drivers-scanners is earlier than 0:1.0.27-22.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20202902012",
+										"comment": "sane-backends-drivers-scanners is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211744013",
+										"comment": "sane-backends-libs is earlier than 0:1.0.27-22.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20202902014",
+										"comment": "sane-backends-libs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

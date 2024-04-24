@@ -1,0 +1,193 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20211675",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:1675: libdb security update (Low)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:1675",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1675.html"
+			},
+			{
+				"ref_id": "ALSA-2021:1675",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1675.html"
+			},
+			{
+				"ref_id": "CVE-2019-2708",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-2708"
+			}
+		],
+		"Description": "The libdb packages provide the Berkeley Database, an embedded database supporting both traditional and client/server applications.\nSecurity Fix(es):\n* libdb: Denial of service in the Data Store component (CVE-2019-2708)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Low",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-05-18"
+			},
+			"updated": {
+				"date": "2021-05-18"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1853242",
+					"id": "1853242"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2019-2708",
+					"public": "20190423",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-2708",
+					"impact": "low",
+					"cwe": "CWE-284",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211675001",
+										"comment": "libdb is earlier than 0:5.3.28-40.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211675002",
+										"comment": "libdb is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211675003",
+										"comment": "libdb-cxx is earlier than 0:5.3.28-40.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211675004",
+										"comment": "libdb-cxx is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211675005",
+										"comment": "libdb-cxx-devel is earlier than 0:5.3.28-40.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211675006",
+										"comment": "libdb-cxx-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211675007",
+										"comment": "libdb-devel is earlier than 0:5.3.28-40.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211675008",
+										"comment": "libdb-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211675009",
+										"comment": "libdb-devel-doc is earlier than 0:5.3.28-40.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211675010",
+										"comment": "libdb-devel-doc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211675011",
+										"comment": "libdb-sql is earlier than 0:5.3.28-40.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211675012",
+										"comment": "libdb-sql is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211675013",
+										"comment": "libdb-sql-devel is earlier than 0:5.3.28-40.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211675014",
+										"comment": "libdb-sql-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211675015",
+										"comment": "libdb-utils is earlier than 0:5.3.28-40.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211675016",
+										"comment": "libdb-utils is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

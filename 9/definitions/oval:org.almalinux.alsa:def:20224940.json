@@ -1,0 +1,140 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20224940",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:4940: xz security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:4940",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-4940.html"
+			},
+			{
+				"ref_id": "ALSA-2022:4940",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-4940.html"
+			},
+			{
+				"ref_id": "CVE-2022-1271",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-1271"
+			}
+		],
+		"Description": "XZ Utils is an integrated collection of user-space file compression utilities based on the Lempel-Ziv-Markov chain algorithm (LZMA), which performs lossless data compression. The algorithm provides a high compression ratio while keeping the decompression time short.\nSecurity Fix(es):\n* gzip: arbitrary-file-write vulnerability (CVE-2022-1271)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-06-08"
+			},
+			"updated": {
+				"date": "2022-06-08"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2073310",
+					"id": "2073310"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-1271",
+					"public": "20220407",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-1271",
+					"impact": "important",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224940001",
+										"comment": "xz is earlier than 0:5.2.5-8.el9_0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224940002",
+										"comment": "xz is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224940003",
+										"comment": "xz-devel is earlier than 0:5.2.5-8.el9_0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224940004",
+										"comment": "xz-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224940005",
+										"comment": "xz-libs is earlier than 0:5.2.5-8.el9_0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224940006",
+										"comment": "xz-libs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224940007",
+										"comment": "xz-lzma-compat is earlier than 0:5.2.5-8.el9_0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224940008",
+										"comment": "xz-lzma-compat is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

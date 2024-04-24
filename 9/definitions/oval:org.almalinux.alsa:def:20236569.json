@@ -1,0 +1,97 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20236569",
+	"version": "639",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:6569: sysstat security and bug fix update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2023:6569",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-6569.html"
+			},
+			{
+				"ref_id": "CVE-2023-33204",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-33204"
+			},
+			{
+				"ref_id": "ALSA-2023:6569",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-6569.html"
+			}
+		],
+		"Description": "The sysstat packages provide the sar and iostat commands. These commands enable system monitoring of disk, network, and other I/O activity.\n\nSecurity Fix(es):\n\n* sysstat: check_overflow() function can work incorrectly, which could lead to an overflow (CVE-2023-33204)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-11-07"
+			},
+			"updated": {
+				"date": "2023-11-07"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2208270",
+					"id": "2208270"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-33204",
+					"public": "20230518",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-33204",
+					"impact": "Moderate",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20236569001",
+						"comment": "sysstat is earlier than 0:12.5.4-7.el9"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20232234002",
+						"comment": "sysstat is signed with AlmaLinux OS 9 key"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

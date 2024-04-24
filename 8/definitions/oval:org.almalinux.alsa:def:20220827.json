@@ -1,0 +1,238 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20220827",
+	"version": "638",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:0827: .NET Core 3.1 security and bugfix update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:0827",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-0827.html"
+			},
+			{
+				"ref_id": "ALSA-2022:0827",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-0827.html"
+			},
+			{
+				"ref_id": "CVE-2020-8927",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-8927"
+			},
+			{
+				"ref_id": "CVE-2022-24464",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-24464"
+			},
+			{
+				"ref_id": "CVE-2022-24512",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-24512"
+			}
+		],
+		"Description": ".NET is a managed-software framework. It implements a subset of the .NET framework APIs and several new APIs, and it includes a CLR implementation.\nNew versions of .NET that address security vulnerabilities are now available. The updated versions are .NET SDK 3.1.417 and .NET Runtime 3.1.23.\nSecurity Fix(es):\n* dotnet: ASP.NET Denial of Service via FormPipeReader (CVE-2022-24464)\n* dotnet: double parser stack buffer overrun (CVE-2022-24512)\n* brotli: buffer overflow when input chunk is larger than 2GiB (CVE-2020-8927)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-03-10"
+			},
+			"updated": {
+				"date": "2022-03-10"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1879225",
+					"id": "1879225"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2061847",
+					"id": "2061847"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2061854",
+					"id": "2061854"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2020-8927",
+					"public": "20200827",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-8927",
+					"impact": "important",
+					"cwe": "CWE-130",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
+				},
+				{
+					"text": "CVE-2022-24464",
+					"public": "20220308",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-24464",
+					"impact": "important",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-24512",
+					"public": "20220308",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-24512",
+					"impact": "important",
+					"cwe": "CWE-119",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220827001",
+										"comment": "aspnetcore-runtime-3.1 is earlier than 0:3.1.23-1.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20202250002",
+										"comment": "aspnetcore-runtime-3.1 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220827003",
+										"comment": "aspnetcore-targeting-pack-3.1 is earlier than 0:3.1.23-1.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20202250004",
+										"comment": "aspnetcore-targeting-pack-3.1 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220827005",
+										"comment": "dotnet-apphost-pack-3.1 is earlier than 0:3.1.23-1.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20202250008",
+										"comment": "dotnet-apphost-pack-3.1 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220827007",
+										"comment": "dotnet-hostfxr-3.1 is earlier than 0:3.1.23-1.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20202250012",
+										"comment": "dotnet-hostfxr-3.1 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220827009",
+										"comment": "dotnet-runtime-3.1 is earlier than 0:3.1.23-1.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20202250014",
+										"comment": "dotnet-runtime-3.1 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220827011",
+										"comment": "dotnet-sdk-3.1 is earlier than 0:3.1.417-1.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20202250016",
+										"comment": "dotnet-sdk-3.1 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220827013",
+										"comment": "dotnet-sdk-3.1-source-built-artifacts is earlier than 0:3.1.417-1.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220827014",
+										"comment": "dotnet-sdk-3.1-source-built-artifacts is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220827015",
+										"comment": "dotnet-targeting-pack-3.1 is earlier than 0:3.1.23-1.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20202250018",
+										"comment": "dotnet-targeting-pack-3.1 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220827017",
+										"comment": "dotnet-templates-3.1 is earlier than 0:3.1.417-1.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20202250020",
+										"comment": "dotnet-templates-3.1 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

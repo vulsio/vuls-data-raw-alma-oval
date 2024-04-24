@@ -1,0 +1,115 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20221049",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:1049: httpd:2.4 security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:1049",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-1049.html"
+			},
+			{
+				"ref_id": "ALSA-2022:1049",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-1049.html"
+			},
+			{
+				"ref_id": "CVE-2022-22720",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-22720"
+			}
+		],
+		"Description": "The httpd packages provide the Apache HTTP Server, a powerful, efficient, and extensible web server.\nSecurity Fix(es):\n* httpd: Errors encountered during the discarding of request body lead to HTTP request smuggling (CVE-2022-22720)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-03-24"
+			},
+			"updated": {
+				"date": "2022-03-24"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2064321",
+					"id": "2064321"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-22720",
+					"public": "20220314",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-22720",
+					"impact": "important",
+					"cwe": "CWE-444",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterias": [
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204751015",
+														"comment": "mod_md is earlier than 1:2.0.8-8.module_el8.6.0+2872+fe0ff7aa"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20190980016",
+														"comment": "mod_md is signed with AlmaLinux OS 8 key"
+													}
+												]
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190980023",
+										"comment": "Module httpd:2.4 is enabled"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

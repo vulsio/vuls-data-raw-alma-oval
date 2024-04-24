@@ -1,0 +1,152 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20226439",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:6439: booth security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:6439",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-6439.html"
+			},
+			{
+				"ref_id": "CVE-2022-2553",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-2553"
+			},
+			{
+				"ref_id": "ALSA-2022:6439",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-6439.html"
+			}
+		],
+		"Description": "The Booth cluster ticket manager is a component to bridge high availability clusters spanning multiple sites, in particular, to provide decision inputs to local Pacemaker cluster resource managers. It operates as a distributed consensus-based service, presumably on a separate physical network. Tickets facilitated by a Booth formation are the units of authorization that can be bound to certain resources. This will ensure that the resources are run at only one (granted) site at a time.\n\nSecurity Fix(es):\n\n* booth: authfile directive in booth config file is completely ignored. (CVE-2022-2553)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-09-13"
+			},
+			"updated": {
+				"date": "2022-09-13"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2109251",
+					"id": "2109251"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-2553",
+					"public": "20220701",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-2553",
+					"impact": "Moderate",
+					"cwe": "CWE-287",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226439001",
+										"comment": "booth is earlier than 0:1.0-199.1.ac1d34c.git.el8_6.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226439002",
+										"comment": "booth is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226439003",
+										"comment": "booth-arbitrator is earlier than 0:1.0-199.1.ac1d34c.git.el8_6.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226439004",
+										"comment": "booth-arbitrator is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226439005",
+										"comment": "booth-core is earlier than 0:1.0-199.1.ac1d34c.git.el8_6.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226439006",
+										"comment": "booth-core is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226439007",
+										"comment": "booth-site is earlier than 0:1.0-199.1.ac1d34c.git.el8_6.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226439008",
+										"comment": "booth-site is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226439009",
+										"comment": "booth-test is earlier than 0:1.0-199.1.ac1d34c.git.el8_6.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226439010",
+										"comment": "booth-test is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

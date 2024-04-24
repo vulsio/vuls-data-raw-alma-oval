@@ -1,0 +1,775 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20234377",
+	"version": "646",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:4377: kernel security, bug fix, and enhancement update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2023:4377",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-4377.html"
+			},
+			{
+				"ref_id": "CVE-2022-45869",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-45869"
+			},
+			{
+				"ref_id": "CVE-2023-0458",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-0458"
+			},
+			{
+				"ref_id": "CVE-2023-1998",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-1998"
+			},
+			{
+				"ref_id": "CVE-2023-3090",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-3090"
+			},
+			{
+				"ref_id": "CVE-2023-35788",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-35788"
+			},
+			{
+				"ref_id": "ALSA-2023:4377",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-4377.html"
+			}
+		],
+		"Description": "The kernel packages contain the Linux kernel, the core of any Linux operating system.\n\nSecurity Fix(es):\n\n* kernel: ipvlan: out-of-bounds write caused by unclear skb->cb (CVE-2023-3090)\n* kernel: cls_flower: out-of-bounds write in fl_set_geneve_opt() (CVE-2023-35788)\n* kernel: KVM: x86/mmu: race condition in direct_page_fault() (CVE-2022-45869)\n* kernel: speculative pointer dereference in do_prlimit() in kernel/sys.c (CVE-2023-0458)\n* kernel: Spectre v2 SMT mitigations problem (CVE-2023-1998)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-08-01"
+			},
+			"updated": {
+				"date": "2023-08-01"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2151317",
+					"id": "2151317"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2187257",
+					"id": "2187257"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2193219",
+					"id": "2193219"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2215768",
+					"id": "2215768"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2218672",
+					"id": "2218672"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-45869",
+					"public": "20221123",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-45869",
+					"impact": "Moderate",
+					"cwe": "CWE-362",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-0458",
+					"public": "20230121",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-0458",
+					"impact": "Moderate",
+					"cwe": "CWE-476",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2023-1998",
+					"public": "20230412",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-1998",
+					"impact": "Moderate",
+					"cwe": "CWE-226->CWE-385->CWE-200",
+					"cvss3": "CVSS:3.0/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2023-3090",
+					"public": "20230510",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-3090",
+					"impact": "Important",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2023-35788",
+					"public": "20230529",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-35788",
+					"impact": "Important",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377001",
+										"comment": "bpftool is earlier than 0:7.0.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225249002",
+										"comment": "bpftool is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377003",
+										"comment": "kernel is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225214002",
+										"comment": "kernel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377005",
+										"comment": "kernel-64k is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232458006",
+										"comment": "kernel-64k is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377007",
+										"comment": "kernel-64k-core is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232458008",
+										"comment": "kernel-64k-core is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377009",
+										"comment": "kernel-64k-debug is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232458010",
+										"comment": "kernel-64k-debug is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377011",
+										"comment": "kernel-64k-debug-core is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232458012",
+										"comment": "kernel-64k-debug-core is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377013",
+										"comment": "kernel-64k-debug-devel is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232458014",
+										"comment": "kernel-64k-debug-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377015",
+										"comment": "kernel-64k-debug-devel-matched is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232458016",
+										"comment": "kernel-64k-debug-devel-matched is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377017",
+										"comment": "kernel-64k-debug-modules is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232458018",
+										"comment": "kernel-64k-debug-modules is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377019",
+										"comment": "kernel-64k-debug-modules-core is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232458020",
+										"comment": "kernel-64k-debug-modules-core is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377021",
+										"comment": "kernel-64k-debug-modules-extra is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232458022",
+										"comment": "kernel-64k-debug-modules-extra is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377023",
+										"comment": "kernel-64k-devel is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232458024",
+										"comment": "kernel-64k-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377025",
+										"comment": "kernel-64k-devel-matched is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232458026",
+										"comment": "kernel-64k-devel-matched is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377027",
+										"comment": "kernel-64k-modules is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232458028",
+										"comment": "kernel-64k-modules is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377029",
+										"comment": "kernel-64k-modules-core is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232458030",
+										"comment": "kernel-64k-modules-core is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377031",
+										"comment": "kernel-64k-modules-extra is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232458032",
+										"comment": "kernel-64k-modules-extra is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377033",
+										"comment": "kernel-abi-stablelists is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225249006",
+										"comment": "kernel-abi-stablelists is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377035",
+										"comment": "kernel-core is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225249008",
+										"comment": "kernel-core is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377037",
+										"comment": "kernel-cross-headers is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225249010",
+										"comment": "kernel-cross-headers is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377039",
+										"comment": "kernel-debug is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225249012",
+										"comment": "kernel-debug is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377041",
+										"comment": "kernel-debug-core is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225249014",
+										"comment": "kernel-debug-core is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377043",
+										"comment": "kernel-debug-devel is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225249016",
+										"comment": "kernel-debug-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377045",
+										"comment": "kernel-debug-devel-matched is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225249018",
+										"comment": "kernel-debug-devel-matched is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377047",
+										"comment": "kernel-debug-modules is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225249020",
+										"comment": "kernel-debug-modules is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377049",
+										"comment": "kernel-debug-modules-core is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232458050",
+										"comment": "kernel-debug-modules-core is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377051",
+										"comment": "kernel-debug-modules-extra is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225249022",
+										"comment": "kernel-debug-modules-extra is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377053",
+										"comment": "kernel-debug-uki-virt is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232458054",
+										"comment": "kernel-debug-uki-virt is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377055",
+										"comment": "kernel-devel is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225249024",
+										"comment": "kernel-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377057",
+										"comment": "kernel-devel-matched is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225249026",
+										"comment": "kernel-devel-matched is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377059",
+										"comment": "kernel-doc is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225249028",
+										"comment": "kernel-doc is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377061",
+										"comment": "kernel-modules is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225249032",
+										"comment": "kernel-modules is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377063",
+										"comment": "kernel-modules-core is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232458066",
+										"comment": "kernel-modules-core is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377065",
+										"comment": "kernel-modules-extra is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225249034",
+										"comment": "kernel-modules-extra is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377067",
+										"comment": "kernel-tools is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225249036",
+										"comment": "kernel-tools is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377069",
+										"comment": "kernel-tools-libs is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225249038",
+										"comment": "kernel-tools-libs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377071",
+										"comment": "kernel-tools-libs-devel is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225249040",
+										"comment": "kernel-tools-libs-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377073",
+										"comment": "kernel-uki-virt is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232458076",
+										"comment": "kernel-uki-virt is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377075",
+										"comment": "kernel-zfcpdump is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225249042",
+										"comment": "kernel-zfcpdump is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377077",
+										"comment": "kernel-zfcpdump-core is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225249044",
+										"comment": "kernel-zfcpdump-core is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377079",
+										"comment": "kernel-zfcpdump-devel is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225249046",
+										"comment": "kernel-zfcpdump-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377081",
+										"comment": "kernel-zfcpdump-devel-matched is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225249048",
+										"comment": "kernel-zfcpdump-devel-matched is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377083",
+										"comment": "kernel-zfcpdump-modules is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225249050",
+										"comment": "kernel-zfcpdump-modules is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377085",
+										"comment": "kernel-zfcpdump-modules-core is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232458088",
+										"comment": "kernel-zfcpdump-modules-core is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377087",
+										"comment": "kernel-zfcpdump-modules-extra is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225249052",
+										"comment": "kernel-zfcpdump-modules-extra is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377089",
+										"comment": "perf is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225249054",
+										"comment": "perf is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377091",
+										"comment": "python3-perf is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225249056",
+										"comment": "python3-perf is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234377093",
+										"comment": "rtla is earlier than 0:5.14.0-284.25.1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232458096",
+										"comment": "rtla is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

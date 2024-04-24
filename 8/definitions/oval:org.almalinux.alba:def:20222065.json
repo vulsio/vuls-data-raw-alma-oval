@@ -1,0 +1,112 @@
+{
+	"id": "oval:org.almalinux.alba:def:20222065",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALBA-2022:2065: libtirpc bug fix and enhancement update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALBA-2022:2065",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALBA-2022-2065.html"
+			},
+			{
+				"ref_id": "CVE-2021-46828",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-46828"
+			},
+			{
+				"ref_id": "ALBA-2022:2065",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALBA-2022-2065.html"
+			}
+		],
+		"Description": "For detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-05-10"
+			},
+			"updated": {
+				"date": "2022-05-10"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2109352",
+					"id": "2109352"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-46828",
+					"public": "20220720",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-46828",
+					"impact": "Moderate",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20222065001",
+										"comment": "libtirpc is earlier than 0:1.1.4-6.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20222065002",
+										"comment": "libtirpc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20222065003",
+										"comment": "libtirpc-devel is earlier than 0:1.1.4-6.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20222065004",
+										"comment": "libtirpc-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

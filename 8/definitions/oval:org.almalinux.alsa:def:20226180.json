@@ -1,0 +1,112 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20226180",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:6180: rsync security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:6180",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-6180.html"
+			},
+			{
+				"ref_id": "CVE-2022-29154",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-29154"
+			},
+			{
+				"ref_id": "ALSA-2022:6180",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-6180.html"
+			}
+		],
+		"Description": "The rsync utility enables the users to copy and synchronize files locally or across a network. Synchronization with rsync is fast because rsync only sends the differences in files over the network instead of sending whole files. The rsync utility is also used as a mirroring tool.\nSecurity Fix(es):\n* rsync: remote arbitrary files write inside the directories of connecting peers (CVE-2022-29154)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-08-24"
+			},
+			"updated": {
+				"date": "2022-08-24"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2110928",
+					"id": "2110928"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-29154",
+					"public": "20220802",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-29154",
+					"impact": "Important",
+					"cwe": "CWE-22",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226180001",
+										"comment": "rsync is earlier than 0:3.1.3-14.el8_6.3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20222201002",
+										"comment": "rsync is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226180003",
+										"comment": "rsync-daemon is earlier than 0:3.1.3-14.el8_6.3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20222201004",
+										"comment": "rsync-daemon is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

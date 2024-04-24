@@ -1,0 +1,231 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20220658",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:0658: cyrus-sasl security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:0658",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-0658.html"
+			},
+			{
+				"ref_id": "ALSA-2022:0658",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-0658.html"
+			},
+			{
+				"ref_id": "CVE-2022-24407",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-24407"
+			}
+		],
+		"Description": "The cyrus-sasl packages contain the Cyrus implementation of Simple Authentication and Security Layer (SASL). SASL is a method for adding authentication support to connection-based protocols.\nSecurity Fix(es):\n* cyrus-sasl: failure to properly escape SQL input allows an attacker to execute arbitrary SQL commands (CVE-2022-24407)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-02-23"
+			},
+			"updated": {
+				"date": "2022-02-23"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2055326",
+					"id": "2055326"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-24407",
+					"public": "20220222",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-24407",
+					"impact": "important",
+					"cwe": "CWE-20->CWE-89",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220658001",
+										"comment": "cyrus-sasl is earlier than 0:2.1.27-6.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204497002",
+										"comment": "cyrus-sasl is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220658003",
+										"comment": "cyrus-sasl-devel is earlier than 0:2.1.27-6.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204497004",
+										"comment": "cyrus-sasl-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220658005",
+										"comment": "cyrus-sasl-gs2 is earlier than 0:2.1.27-6.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204497006",
+										"comment": "cyrus-sasl-gs2 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220658007",
+										"comment": "cyrus-sasl-gssapi is earlier than 0:2.1.27-6.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204497008",
+										"comment": "cyrus-sasl-gssapi is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220658009",
+										"comment": "cyrus-sasl-ldap is earlier than 0:2.1.27-6.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204497010",
+										"comment": "cyrus-sasl-ldap is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220658011",
+										"comment": "cyrus-sasl-lib is earlier than 0:2.1.27-6.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204497012",
+										"comment": "cyrus-sasl-lib is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220658013",
+										"comment": "cyrus-sasl-md5 is earlier than 0:2.1.27-6.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204497014",
+										"comment": "cyrus-sasl-md5 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220658015",
+										"comment": "cyrus-sasl-ntlm is earlier than 0:2.1.27-6.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204497016",
+										"comment": "cyrus-sasl-ntlm is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220658017",
+										"comment": "cyrus-sasl-plain is earlier than 0:2.1.27-6.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204497018",
+										"comment": "cyrus-sasl-plain is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220658019",
+										"comment": "cyrus-sasl-scram is earlier than 0:2.1.27-6.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204497020",
+										"comment": "cyrus-sasl-scram is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220658021",
+										"comment": "cyrus-sasl-sql is earlier than 0:2.1.27-6.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204497022",
+										"comment": "cyrus-sasl-sql is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

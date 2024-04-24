@@ -1,0 +1,344 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20227469",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:7469: container-tools:4.0 security and bug fix update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:7469",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7469.html"
+			},
+			{
+				"ref_id": "CVE-2022-1708",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-1708"
+			},
+			{
+				"ref_id": "CVE-2022-27191",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-27191"
+			},
+			{
+				"ref_id": "CVE-2022-29162",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-29162"
+			},
+			{
+				"ref_id": "ALSA-2022:7469",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7469.html"
+			}
+		],
+		"Description": "The container-tools module contains tools for working with containers, notably podman, buildah, skopeo, and runc.\n\nSecurity Fix(es):\n\n* cri-o: memory exhaustion on the node when access to the kube api (CVE-2022-1708)\n* golang: crash in a golang.org/x/crypto/ssh server (CVE-2022-27191)\n* runc: incorrect handling of inheritable capabilities (CVE-2022-29162)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-11-08"
+			},
+			"updated": {
+				"date": "2022-11-08"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2064702",
+					"id": "2064702"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2085361",
+					"id": "2085361"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2086398",
+					"id": "2086398"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-1708",
+					"public": "20220606",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-1708",
+					"impact": "Moderate",
+					"cwe": "CWE-400->CWE-770",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-27191",
+					"public": "20220315",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-27191",
+					"impact": "Moderate",
+					"cwe": "CWE-327",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-29162",
+					"public": "20220513",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-29162",
+					"impact": "Low",
+					"cwe": "CWE-276",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterias": [
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227469001",
+														"comment": "aardvark-dns is earlier than 2:1.0.1-35.module_el8.6.0+3070+1510fbd1"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20221762002",
+														"comment": "aardvark-dns is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227469011",
+														"comment": "container-selinux is earlier than 2:2.189.0-1.module_el8.6.0+3336+00d107d5"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alba:tst:20220348010",
+														"comment": "container-selinux is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227469015",
+														"comment": "containers-common is earlier than 2:1-35.module_el8.6.0+3070+1510fbd1"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alba:tst:20220348014",
+														"comment": "containers-common is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227469017",
+														"comment": "crit is earlier than 0:3.15-3.module_el8.6.0+2877+8e437bf5"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alba:tst:20220348016",
+														"comment": "crit is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227469019",
+														"comment": "criu is earlier than 0:3.15-3.module_el8.6.0+2877+8e437bf5"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alba:tst:20220348018",
+														"comment": "criu is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227469021",
+														"comment": "criu-devel is earlier than 0:3.15-3.module_el8.6.0+2877+8e437bf5"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20214154020",
+														"comment": "criu-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227469023",
+														"comment": "criu-libs is earlier than 0:3.15-3.module_el8.6.0+2877+8e437bf5"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20214154022",
+														"comment": "criu-libs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227469025",
+														"comment": "crun is earlier than 0:1.5-1.module_el8.6.0+3336+00d107d5"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alba:tst:20220348020",
+														"comment": "crun is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227469027",
+														"comment": "fuse-overlayfs is earlier than 0:1.9-1.module_el8.6.0+3070+1510fbd1"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alba:tst:20220348022",
+														"comment": "fuse-overlayfs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227469029",
+														"comment": "libslirp is earlier than 0:4.4.0-1.module_el8.6.0+2877+8e437bf5"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alba:tst:20220348024",
+														"comment": "libslirp is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227469031",
+														"comment": "libslirp-devel is earlier than 0:4.4.0-1.module_el8.6.0+2877+8e437bf5"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alba:tst:20220348026",
+														"comment": "libslirp-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227469033",
+														"comment": "netavark is earlier than 2:1.0.1-35.module_el8.6.0+3070+1510fbd1"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20221762034",
+														"comment": "netavark is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227469051",
+														"comment": "python3-criu is earlier than 0:3.15-3.module_el8.6.0+2877+8e437bf5"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alba:tst:20220348042",
+														"comment": "python3-criu is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227469053",
+														"comment": "python3-podman is earlier than 0:4.0.0-1.module_el8.6.0+2877+8e437bf5"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20214154050",
+														"comment": "python3-podman is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227469061",
+														"comment": "slirp4netns is earlier than 0:1.1.8-2.module_el8.6.0+2877+8e437bf5"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alba:tst:20220348050",
+														"comment": "slirp4netns is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227469067",
+														"comment": "udica is earlier than 0:0.2.6-3.module_el8.6.0+2887+b13e3d7b"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alba:tst:20220348056",
+														"comment": "udica is signed with AlmaLinux OS 8 key"
+													}
+												]
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227469069",
+										"comment": "Module container-tools:4.0 is enabled"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

@@ -1,0 +1,113 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20224661",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:4661: pcs security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:4661",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-4661.html"
+			},
+			{
+				"ref_id": "ALSA-2022:4661",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-4661.html"
+			},
+			{
+				"ref_id": "CVE-2022-29970",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-29970"
+			}
+		],
+		"Description": "The pcs packages provide a command-line configuration system for the Pacemaker and Corosync utilities.\nSecurity Fix(es):\n* sinatra: path traversal possible outside of public_dir when serving static files (CVE-2022-29970)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-05-18"
+			},
+			"updated": {
+				"date": "2022-05-18"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2081096",
+					"id": "2081096"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-29970",
+					"public": "20220502",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-29970",
+					"impact": "important",
+					"cwe": "CWE-22",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224661001",
+										"comment": "pcs is earlier than 0:0.10.12-6.el8_6.1.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20202462002",
+										"comment": "pcs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224661003",
+										"comment": "pcs-snmp is earlier than 0:0.10.12-6.el8_6.1.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20202462004",
+										"comment": "pcs-snmp is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

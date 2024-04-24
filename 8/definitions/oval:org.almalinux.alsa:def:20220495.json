@@ -1,0 +1,204 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20220495",
+	"version": "639",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:0495: .NET 5.0 security and bugfix update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:0495",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-0495.html"
+			},
+			{
+				"ref_id": "ALSA-2022:0495",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-0495.html"
+			},
+			{
+				"ref_id": "CVE-2022-21986",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21986"
+			}
+		],
+		"Description": ".NET is a managed-software framework. It implements a subset of the .NET framework APIs and several new APIs, and it includes a CLR implementation.\nNew versions of .NET that address a security vulnerability are now available. The updated versions are .NET SDK 5.0.211 and .NET Runtime 5.0.14.\nSecurity Fix(es):\n* dotnet: ASP.NET Core Krestel HTTP headers pooling denial of service (CVE-2022-219862)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-02-09"
+			},
+			"updated": {
+				"date": "2022-02-09"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2051490",
+					"id": "2051490"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-21986",
+					"public": "20220208",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21986",
+					"impact": "important",
+					"cwe": "CWE-770",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220495001",
+										"comment": "aspnetcore-runtime-5.0 is earlier than 0:5.0.14-1.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20210094002",
+										"comment": "aspnetcore-runtime-5.0 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220495003",
+										"comment": "aspnetcore-targeting-pack-5.0 is earlier than 0:5.0.14-1.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20210094004",
+										"comment": "aspnetcore-targeting-pack-5.0 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220495005",
+										"comment": "dotnet-apphost-pack-5.0 is earlier than 0:5.0.14-1.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20210094008",
+										"comment": "dotnet-apphost-pack-5.0 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220495007",
+										"comment": "dotnet-hostfxr-5.0 is earlier than 0:5.0.14-1.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20210094012",
+										"comment": "dotnet-hostfxr-5.0 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220495009",
+										"comment": "dotnet-runtime-5.0 is earlier than 0:5.0.14-1.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20210094014",
+										"comment": "dotnet-runtime-5.0 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220495011",
+										"comment": "dotnet-sdk-5.0 is earlier than 0:5.0.211-1.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20210094016",
+										"comment": "dotnet-sdk-5.0 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220495013",
+										"comment": "dotnet-sdk-5.0-source-built-artifacts is earlier than 0:5.0.211-1.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220495014",
+										"comment": "dotnet-sdk-5.0-source-built-artifacts is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220495015",
+										"comment": "dotnet-targeting-pack-5.0 is earlier than 0:5.0.14-1.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20210094018",
+										"comment": "dotnet-targeting-pack-5.0 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220495017",
+										"comment": "dotnet-templates-5.0 is earlier than 0:5.0.211-1.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20210094020",
+										"comment": "dotnet-templates-5.0 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

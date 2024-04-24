@@ -1,0 +1,502 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20232256",
+	"version": "651",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:2256: webkit2gtk3 security and bug fix update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2023:2256",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-2256.html"
+			},
+			{
+				"ref_id": "CVE-2022-32886",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-32886"
+			},
+			{
+				"ref_id": "CVE-2022-32888",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-32888"
+			},
+			{
+				"ref_id": "CVE-2022-32923",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-32923"
+			},
+			{
+				"ref_id": "CVE-2022-42799",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-42799"
+			},
+			{
+				"ref_id": "CVE-2022-42823",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-42823"
+			},
+			{
+				"ref_id": "CVE-2022-42824",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-42824"
+			},
+			{
+				"ref_id": "CVE-2022-42826",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-42826"
+			},
+			{
+				"ref_id": "CVE-2022-42852",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-42852"
+			},
+			{
+				"ref_id": "CVE-2022-42863",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-42863"
+			},
+			{
+				"ref_id": "CVE-2022-42867",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-42867"
+			},
+			{
+				"ref_id": "CVE-2022-46691",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-46691"
+			},
+			{
+				"ref_id": "CVE-2022-46692",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-46692"
+			},
+			{
+				"ref_id": "CVE-2022-46698",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-46698"
+			},
+			{
+				"ref_id": "CVE-2022-46699",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-46699"
+			},
+			{
+				"ref_id": "CVE-2022-46700",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-46700"
+			},
+			{
+				"ref_id": "CVE-2023-23517",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-23517"
+			},
+			{
+				"ref_id": "CVE-2023-23518",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-23518"
+			},
+			{
+				"ref_id": "CVE-2023-25358",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-25358"
+			},
+			{
+				"ref_id": "CVE-2023-25360",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-25360"
+			},
+			{
+				"ref_id": "CVE-2023-25361",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-25361"
+			},
+			{
+				"ref_id": "CVE-2023-25362",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-25362"
+			},
+			{
+				"ref_id": "CVE-2023-25363",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-25363"
+			},
+			{
+				"ref_id": "ALSA-2023:2256",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-2256.html"
+			}
+		],
+		"Description": "WebKitGTK is the port of the portable web rendering engine WebKit to the GTK platform.\n\nSecurity Fix(es):\n\n* webkitgtk: use-after-free issue leading to arbitrary code execution (CVE-2022-42826)\n* webkitgtk: memory corruption issue leading to arbitrary code execution (CVE-2023-23517)\n* webkitgtk: memory corruption issue leading to arbitrary code execution (CVE-2023-23518)\n* webkitgtk: buffer overflow issue was addressed with improved memory handling (CVE-2022-32886)\n* webkitgtk: out-of-bounds write issue was addressed with improved bounds checking (CVE-2022-32888)\n* webkitgtk: correctness issue in the JIT was addressed with improved checks (CVE-2022-32923)\n* webkitgtk: issue was addressed with improved UI handling (CVE-2022-42799)\n* webkitgtk: type confusion issue leading to arbitrary code execution (CVE-2022-42823)\n* webkitgtk: sensitive information disclosure issue (CVE-2022-42824)\n* webkitgtk: memory disclosure issue was addressed with improved memory handling (CVE-2022-42852)\n* webkitgtk: memory corruption issue leading to arbitrary code execution (CVE-2022-42863)\n* webkitgtk: use-after-free issue leading to arbitrary code execution (CVE-2022-42867)\n* webkitgtk: memory corruption issue leading to arbitrary code execution (CVE-2022-46691)\n* webkitgtk: Same Origin Policy bypass issue (CVE-2022-46692)\n* webkitgtk: logic issue leading to user information disclosure (CVE-2022-46698)\n* webkitgtk: memory corruption issue leading to arbitrary code execution (CVE-2022-46699)\n* webkitgtk: memory corruption issue leading to arbitrary code execution (CVE-2022-46700)\n* webkitgtk: heap-use-after-free in WebCore::RenderLayer::addChild() (CVE-2023-25358)\n* webkitgtk: heap-use-after-free in WebCore::RenderLayer::renderer() (CVE-2023-25360)\n* webkitgtk: heap-use-after-free in WebCore::RenderLayer::setNextSibling() (CVE-2023-25361)\n* webkitgtk: heap-use-after-free in WebCore::RenderLayer::repaintBlockSelectionGaps() (CVE-2023-25362)\n* webkitgtk: heap-use-after-free in WebCore::RenderLayer::updateDescendantDependentFlags() (CVE-2023-25363)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-05-09"
+			},
+			"updated": {
+				"date": "2023-05-09"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2128643",
+					"id": "2128643"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2140501",
+					"id": "2140501"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2140502",
+					"id": "2140502"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2140503",
+					"id": "2140503"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2140504",
+					"id": "2140504"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2140505",
+					"id": "2140505"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2156986",
+					"id": "2156986"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2156987",
+					"id": "2156987"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2156989",
+					"id": "2156989"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2156990",
+					"id": "2156990"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2156991",
+					"id": "2156991"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2156992",
+					"id": "2156992"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2156993",
+					"id": "2156993"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2156994",
+					"id": "2156994"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2167715",
+					"id": "2167715"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2167716",
+					"id": "2167716"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2167717",
+					"id": "2167717"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2175099",
+					"id": "2175099"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2175101",
+					"id": "2175101"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2175103",
+					"id": "2175103"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2175105",
+					"id": "2175105"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2175107",
+					"id": "2175107"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-32886",
+					"public": "20220912",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-32886",
+					"impact": "Moderate",
+					"cwe": "CWE-119",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-32888",
+					"public": "20221031",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-32888",
+					"impact": "Moderate",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-32923",
+					"public": "20221031",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-32923",
+					"impact": "Moderate",
+					"cwe": "CWE-119",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2022-42799",
+					"public": "20221031",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-42799",
+					"impact": "Moderate",
+					"cwe": "CWE-1021",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+				},
+				{
+					"text": "CVE-2022-42823",
+					"public": "20221031",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-42823",
+					"impact": "Moderate",
+					"cwe": "CWE-843",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-42824",
+					"public": "20221031",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-42824",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2022-42826",
+					"public": "20230202",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-42826",
+					"impact": "Important",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-42852",
+					"public": "20221215",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-42852",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2022-42863",
+					"public": "20221215",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-42863",
+					"impact": "Moderate",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-42867",
+					"public": "20221215",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-42867",
+					"impact": "Moderate",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-46691",
+					"public": "20221215",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-46691",
+					"impact": "Moderate",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-46692",
+					"public": "20221215",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-46692",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N"
+				},
+				{
+					"text": "CVE-2022-46698",
+					"public": "20221215",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-46698",
+					"impact": "Moderate",
+					"cwe": "CWE-200",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2022-46699",
+					"public": "20221215",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-46699",
+					"impact": "Moderate",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-46700",
+					"public": "20221215",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-46700",
+					"impact": "Moderate",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2023-23517",
+					"public": "20230202",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-23517",
+					"impact": "Important",
+					"cwe": "CWE-119",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2023-23518",
+					"public": "20230202",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-23518",
+					"impact": "Important",
+					"cwe": "CWE-119",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2023-25358",
+					"public": "20220713",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-25358",
+					"impact": "Moderate",
+					"cwe": "CWE-94->CWE-416",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2023-25360",
+					"public": "20220713",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-25360",
+					"impact": "Moderate",
+					"cwe": "CWE-94->CWE-416",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2023-25361",
+					"public": "20220713",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-25361",
+					"impact": "Moderate",
+					"cwe": "CWE-94->CWE-416",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2023-25362",
+					"public": "20220713",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-25362",
+					"impact": "Moderate",
+					"cwe": "CWE-94->CWE-416",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2023-25363",
+					"public": "20220713",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-25363",
+					"impact": "Moderate",
+					"cwe": "CWE-94->CWE-416",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232256001",
+										"comment": "webkit2gtk3 is earlier than 0:2.38.5-1.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226634002",
+										"comment": "webkit2gtk3 is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232256003",
+										"comment": "webkit2gtk3-devel is earlier than 0:2.38.5-1.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226634004",
+										"comment": "webkit2gtk3-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232256005",
+										"comment": "webkit2gtk3-jsc is earlier than 0:2.38.5-1.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226634006",
+										"comment": "webkit2gtk3-jsc is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232256007",
+										"comment": "webkit2gtk3-jsc-devel is earlier than 0:2.38.5-1.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226634008",
+										"comment": "webkit2gtk3-jsc-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

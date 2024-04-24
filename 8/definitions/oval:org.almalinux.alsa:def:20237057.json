@@ -1,0 +1,122 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20237057",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:7057: yajl security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2023:7057",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-7057.html"
+			},
+			{
+				"ref_id": "CVE-2023-33460",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-33460"
+			},
+			{
+				"ref_id": "ALSA-2023:7057",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-7057.html"
+			}
+		],
+		"Description": "Yet Another JSON Library (YAJL) is a small event-driven (SAX-style) JSON parser written in ANSI C, and a small validating JSON generator.\n\nSecurity Fix(es):\n\n* yajl: Memory leak in yajl_tree_parse function (CVE-2023-33460)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-11-14"
+			},
+			"updated": {
+				"date": "2023-11-14"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2221249",
+					"id": "2221249"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-33460",
+					"public": "20230606",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-33460",
+					"impact": "Moderate",
+					"cwe": "CWE-401",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237057001",
+										"comment": "yajl is earlier than 0:2.1.0-12.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227524002",
+										"comment": "yajl is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237057003",
+										"comment": "yajl-devel is earlier than 0:2.1.0-12.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227524004",
+										"comment": "yajl-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

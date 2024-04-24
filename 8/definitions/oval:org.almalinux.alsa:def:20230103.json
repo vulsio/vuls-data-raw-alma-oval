@@ -1,0 +1,112 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20230103",
+	"version": "634",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:0103: expat security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2023:0103",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-0103.html"
+			},
+			{
+				"ref_id": "CVE-2022-43680",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-43680"
+			},
+			{
+				"ref_id": "ALSA-2023:0103",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-0103.html"
+			}
+		],
+		"Description": "Expat is a C library for parsing XML documents.\n\nSecurity Fix(es):\n\n* expat: use-after free caused by overeager destruction of a shared DTD in\nXML_ExternalEntityParserCreate (CVE-2022-43680)\n\nFor more details about the security issue(s), including the impact, a CVSS\nscore, acknowledgments, and other related information, refer to the CVE page(s)\nlisted in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-01-12"
+			},
+			"updated": {
+				"date": "2023-01-12"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2140059",
+					"id": "2140059"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-43680",
+					"public": "20221024",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-43680",
+					"impact": "Moderate",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230103001",
+										"comment": "expat is earlier than 0:2.2.5-10.el8_7.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204484002",
+										"comment": "expat is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230103003",
+										"comment": "expat-devel is earlier than 0:2.2.5-10.el8_7.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204484004",
+										"comment": "expat-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

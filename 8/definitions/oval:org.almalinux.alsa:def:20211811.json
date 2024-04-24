@@ -1,0 +1,181 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20211811",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:1811: libvncserver security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:1811",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1811.html"
+			},
+			{
+				"ref_id": "ALSA-2021:1811",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1811.html"
+			},
+			{
+				"ref_id": "CVE-2018-21247",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2018-21247"
+			},
+			{
+				"ref_id": "CVE-2019-20839",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-20839"
+			},
+			{
+				"ref_id": "CVE-2020-14397",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-14397"
+			},
+			{
+				"ref_id": "CVE-2020-14405",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-14405"
+			},
+			{
+				"ref_id": "CVE-2020-25708",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-25708"
+			}
+		],
+		"Description": "LibVNCServer is a C library that enables you to implement VNC server functionality into own programs.\nSecurity Fix(es):\n* libvncserver: uninitialized memory contents are vulnerable to Information Leak (CVE-2018-21247)\n* libvncserver: buffer overflow in ConnectClientToUnixSock() (CVE-2019-20839)\n* libvncserver: libvncserver/rfbregion.c has a NULL pointer dereference (CVE-2020-14397)\n* libvncserver: libvncclient/rfbproto.c does not limit TextChat size (CVE-2020-14405)\n* libvncserver: libvncserver/rfbserver.c has a divide by zero which could result in DoS (CVE-2020-25708)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-05-18"
+			},
+			"updated": {
+				"date": "2021-05-18"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1849877",
+					"id": "1849877"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1849886",
+					"id": "1849886"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1860325",
+					"id": "1860325"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1860344",
+					"id": "1860344"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1896739",
+					"id": "1896739"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2018-21247",
+					"public": "20200617",
+					"href": "https://access.redhat.com/security/cve/CVE-2018-21247",
+					"impact": "moderate",
+					"cwe": "CWE-200",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2019-20839",
+					"public": "20200617",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-20839",
+					"impact": "moderate",
+					"cwe": "CWE-120",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-14397",
+					"public": "20200617",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-14397",
+					"impact": "moderate",
+					"cwe": "CWE-119",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-14405",
+					"public": "20200617",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-14405",
+					"impact": "moderate",
+					"cwe": "CWE-20->CWE-770",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-25708",
+					"public": "20200513",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-25708",
+					"impact": "moderate",
+					"cwe": "CWE-369",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211811001",
+										"comment": "libvncserver is earlier than 0:0.9.11-17.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20200920002",
+										"comment": "libvncserver is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211811003",
+										"comment": "libvncserver-devel is earlier than 0:0.9.11-17.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20200920004",
+										"comment": "libvncserver-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

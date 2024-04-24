@@ -1,0 +1,104 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20221964",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:1964: fetchmail security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:1964",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-1964.html"
+			},
+			{
+				"ref_id": "ALSA-2022:1964",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-1964.html"
+			},
+			{
+				"ref_id": "CVE-2021-36386",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-36386"
+			},
+			{
+				"ref_id": "CVE-2021-39272",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-39272"
+			}
+		],
+		"Description": "Fetchmail is a remote mail retrieval and forwarding utility intended for use over on-demand TCP/IP links, like SLIP or PPP connections. Fetchmail supports every remote-mail protocol currently in use on the Internet (POP2, POP3, RPOP, APOP, KPOP, all IMAPs, ESMTP ETRN, IPv6, and IPSEC) for retrieval. Then Fetchmail forwards the mail through SMTP so the user can read it through their favorite mail client.\nSecurity Fix(es):\n* fetchmail: DoS or information disclosure when logging long messages (CVE-2021-36386)\n* fetchmail: STARTTLS session encryption bypassing (CVE-2021-39272)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-05-10"
+			},
+			"updated": {
+				"date": "2022-05-10"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1987766",
+					"id": "1987766"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1999190",
+					"id": "1999190"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-36386",
+					"public": "20210728",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-36386",
+					"impact": "moderate",
+					"cwe": "CWE-665",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-39272",
+					"public": "20210810",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-39272",
+					"impact": "moderate",
+					"cwe": "CWE-319",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20221964001",
+						"comment": "fetchmail is earlier than 0:6.4.24-1.el8"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20221964002",
+						"comment": "fetchmail is signed with AlmaLinux OS 8 key"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

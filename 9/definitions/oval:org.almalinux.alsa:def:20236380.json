@@ -1,0 +1,165 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20236380",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:6380: runc security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2023:6380",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-6380.html"
+			},
+			{
+				"ref_id": "CVE-2021-43784",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-43784"
+			},
+			{
+				"ref_id": "CVE-2022-41724",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-41724"
+			},
+			{
+				"ref_id": "CVE-2023-25809",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-25809"
+			},
+			{
+				"ref_id": "CVE-2023-27561",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-27561"
+			},
+			{
+				"ref_id": "CVE-2023-28642",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-28642"
+			},
+			{
+				"ref_id": "ALSA-2023:6380",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-6380.html"
+			}
+		],
+		"Description": "The runC tool is a lightweight, portable implementation of the Open Container Format (OCF) that provides container runtime.\n\nSecurity Fix(es):\n\n* golang: crypto/tls: large handshake records may cause panics (CVE-2022-41724)\n* runc: Rootless runc makes `/sys/fs/cgroup` writable (CVE-2023-25809)\n* runc: volume mount race condition (regression of CVE-2019-19921) (CVE-2023-27561)\n* runc: AppArmor can be bypassed when `/proc` inside the container is symlinked with a specific mount configuration (CVE-2023-28642)\n* runc: integer overflow in netlink bytemsg length field allows attacker to override netlink-based container configuration (CVE-2021-43784)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-11-07"
+			},
+			"updated": {
+				"date": "2023-11-07"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2029439",
+					"id": "2029439"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2175721",
+					"id": "2175721"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2178492",
+					"id": "2178492"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2182883",
+					"id": "2182883"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2182884",
+					"id": "2182884"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-43784",
+					"public": "20211206",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-43784",
+					"impact": "Low",
+					"cwe": "CWE-190",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L"
+				},
+				{
+					"text": "CVE-2022-41724",
+					"public": "20230215",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-41724",
+					"impact": "Moderate",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-25809",
+					"public": "20230329",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-25809",
+					"impact": "Moderate",
+					"cwe": "CWE-276",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L"
+				},
+				{
+					"text": "CVE-2023-27561",
+					"public": "20230220",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-27561",
+					"impact": "Moderate",
+					"cwe": "CWE-41",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2023-28642",
+					"public": "20230329",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-28642",
+					"impact": "Moderate",
+					"cwe": "CWE-305",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20236380001",
+						"comment": "runc is earlier than 4:1.1.9-1.el9"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20228090002",
+						"comment": "runc is signed with AlmaLinux OS 9 key"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

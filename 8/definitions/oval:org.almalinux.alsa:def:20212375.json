@@ -1,0 +1,695 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20212375",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:2375: postgresql:13 security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:2375",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-2375.html"
+			},
+			{
+				"ref_id": "ALSA-2021:2375",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-2375.html"
+			},
+			{
+				"ref_id": "CVE-2021-32027",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-32027"
+			},
+			{
+				"ref_id": "CVE-2021-32028",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-32028"
+			},
+			{
+				"ref_id": "CVE-2021-32029",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-32029"
+			}
+		],
+		"Description": "PostgreSQL is an advanced object-relational database management system (DBMS).\nThe following packages have been upgraded to a later upstream version: postgresql (13.3).\nSecurity Fix(es):\n* postgresql: Buffer overrun from integer overflow in array subscripting calculations (CVE-2021-32027)\n* postgresql: Memory disclosure in INSERT ... ON CONFLICT ... DO UPDATE (CVE-2021-32028)\n* postgresql: Memory disclosure in partitioned-table UPDATE ... RETURNING (CVE-2021-32029)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-06-10"
+			},
+			"updated": {
+				"date": "2021-06-10"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1956876",
+					"id": "1956876"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1956877",
+					"id": "1956877"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1956883",
+					"id": "1956883"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-32027",
+					"public": "20210513",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-32027",
+					"impact": "important",
+					"cwe": "CWE-190->CWE-119",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2021-32028",
+					"public": "20210513",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-32028",
+					"impact": "moderate",
+					"cwe": "CWE-200",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2021-32029",
+					"public": "20210513",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-32029",
+					"impact": "moderate",
+					"cwe": "CWE-200",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750011",
+										"comment": "pgaudit is earlier than 0:1.5.0-1.module_el8.5.0+2607+8c0fd184"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20205620002",
+										"comment": "pgaudit is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750012",
+										"comment": "pgaudit is earlier than 0:1.5.0-1.module_el8.5.0+248+483a9143"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20205620002",
+										"comment": "pgaudit is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750031",
+										"comment": "postgres-decoderbufs is earlier than 0:0.10.0-2.module_el8.5.0+2607+8c0fd184"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20205620004",
+										"comment": "postgres-decoderbufs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750032",
+										"comment": "postgres-decoderbufs is earlier than 0:0.10.0-2.module_el8.5.0+248+483a9143"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20205620004",
+										"comment": "postgres-decoderbufs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750051",
+										"comment": "postgresql is earlier than 0:13.3-1.module_el8.4.0+2484+85259292"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203669002",
+										"comment": "postgresql is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750052",
+										"comment": "postgresql is earlier than 0:13.3-1.module_el8.4.0+2495+85259292"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203669002",
+										"comment": "postgresql is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750053",
+										"comment": "postgresql is earlier than 0:13.3-1.module_el8.4.0+829+d585ddcd"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202036690022",
+										"comment": "postgresql is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750071",
+										"comment": "postgresql-contrib is earlier than 0:13.3-1.module_el8.4.0+2484+85259292"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203669004",
+										"comment": "postgresql-contrib is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750072",
+										"comment": "postgresql-contrib is earlier than 0:13.3-1.module_el8.4.0+2495+85259292"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203669004",
+										"comment": "postgresql-contrib is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750073",
+										"comment": "postgresql-contrib is earlier than 0:13.3-1.module_el8.4.0+829+d585ddcd"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202036690042",
+										"comment": "postgresql-contrib is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750091",
+										"comment": "postgresql-docs is earlier than 0:13.3-1.module_el8.4.0+2484+85259292"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203669006",
+										"comment": "postgresql-docs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750092",
+										"comment": "postgresql-docs is earlier than 0:13.3-1.module_el8.4.0+2495+85259292"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203669006",
+										"comment": "postgresql-docs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750093",
+										"comment": "postgresql-docs is earlier than 0:13.3-1.module_el8.4.0+829+d585ddcd"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202036690062",
+										"comment": "postgresql-docs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750111",
+										"comment": "postgresql-plperl is earlier than 0:13.3-1.module_el8.4.0+2484+85259292"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203669008",
+										"comment": "postgresql-plperl is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750112",
+										"comment": "postgresql-plperl is earlier than 0:13.3-1.module_el8.4.0+2495+85259292"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203669008",
+										"comment": "postgresql-plperl is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750113",
+										"comment": "postgresql-plperl is earlier than 0:13.3-1.module_el8.4.0+829+d585ddcd"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202036690082",
+										"comment": "postgresql-plperl is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750131",
+										"comment": "postgresql-plpython3 is earlier than 0:13.3-1.module_el8.4.0+2484+85259292"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203669010",
+										"comment": "postgresql-plpython3 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750132",
+										"comment": "postgresql-plpython3 is earlier than 0:13.3-1.module_el8.4.0+2495+85259292"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203669010",
+										"comment": "postgresql-plpython3 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750133",
+										"comment": "postgresql-plpython3 is earlier than 0:13.3-1.module_el8.4.0+829+d585ddcd"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202036690102",
+										"comment": "postgresql-plpython3 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750151",
+										"comment": "postgresql-pltcl is earlier than 0:13.3-1.module_el8.4.0+2484+85259292"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203669012",
+										"comment": "postgresql-pltcl is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750152",
+										"comment": "postgresql-pltcl is earlier than 0:13.3-1.module_el8.4.0+2495+85259292"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203669012",
+										"comment": "postgresql-pltcl is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750153",
+										"comment": "postgresql-pltcl is earlier than 0:13.3-1.module_el8.4.0+829+d585ddcd"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202036690122",
+										"comment": "postgresql-pltcl is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750171",
+										"comment": "postgresql-server is earlier than 0:13.3-1.module_el8.4.0+2484+85259292"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203669014",
+										"comment": "postgresql-server is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750172",
+										"comment": "postgresql-server is earlier than 0:13.3-1.module_el8.4.0+2495+85259292"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203669014",
+										"comment": "postgresql-server is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750173",
+										"comment": "postgresql-server is earlier than 0:13.3-1.module_el8.4.0+829+d585ddcd"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202036690142",
+										"comment": "postgresql-server is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750191",
+										"comment": "postgresql-server-devel is earlier than 0:13.3-1.module_el8.4.0+2484+85259292"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203669016",
+										"comment": "postgresql-server-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750192",
+										"comment": "postgresql-server-devel is earlier than 0:13.3-1.module_el8.4.0+2495+85259292"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203669016",
+										"comment": "postgresql-server-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750193",
+										"comment": "postgresql-server-devel is earlier than 0:13.3-1.module_el8.4.0+829+d585ddcd"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202036690162",
+										"comment": "postgresql-server-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750211",
+										"comment": "postgresql-static is earlier than 0:13.3-1.module_el8.4.0+2484+85259292"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203669018",
+										"comment": "postgresql-static is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750212",
+										"comment": "postgresql-static is earlier than 0:13.3-1.module_el8.4.0+2495+85259292"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203669018",
+										"comment": "postgresql-static is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750213",
+										"comment": "postgresql-static is earlier than 0:13.3-1.module_el8.4.0+829+d585ddcd"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202036690182",
+										"comment": "postgresql-static is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750231",
+										"comment": "postgresql-test is earlier than 0:13.3-1.module_el8.4.0+2484+85259292"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203669020",
+										"comment": "postgresql-test is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750232",
+										"comment": "postgresql-test is earlier than 0:13.3-1.module_el8.4.0+2495+85259292"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203669020",
+										"comment": "postgresql-test is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750233",
+										"comment": "postgresql-test is earlier than 0:13.3-1.module_el8.4.0+829+d585ddcd"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202036690202",
+										"comment": "postgresql-test is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750251",
+										"comment": "postgresql-test-rpm-macros is earlier than 0:13.3-1.module_el8.4.0+2484+85259292"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203669022",
+										"comment": "postgresql-test-rpm-macros is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500111",
+										"comment": "AlmaLinux arch is x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750252",
+										"comment": "postgresql-test-rpm-macros is earlier than 0:13.3-1.module_el8.4.0+2495+85259292"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203669022",
+										"comment": "postgresql-test-rpm-macros is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500121",
+										"comment": "AlmaLinux arch is aarch64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750253",
+										"comment": "postgresql-test-rpm-macros is earlier than 0:13.3-1.module_el8.4.0+829+d585ddcd"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202036690222",
+										"comment": "postgresql-test-rpm-macros is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750271",
+										"comment": "postgresql-upgrade is earlier than 0:13.3-1.module_el8.4.0+2484+85259292"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203669024",
+										"comment": "postgresql-upgrade is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750272",
+										"comment": "postgresql-upgrade is earlier than 0:13.3-1.module_el8.4.0+2495+85259292"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203669024",
+										"comment": "postgresql-upgrade is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750273",
+										"comment": "postgresql-upgrade is earlier than 0:13.3-1.module_el8.4.0+829+d585ddcd"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202036690242",
+										"comment": "postgresql-upgrade is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750291",
+										"comment": "postgresql-upgrade-devel is earlier than 0:13.3-1.module_el8.4.0+2484+85259292"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203669026",
+										"comment": "postgresql-upgrade-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750292",
+										"comment": "postgresql-upgrade-devel is earlier than 0:13.3-1.module_el8.4.0+2495+85259292"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203669026",
+										"comment": "postgresql-upgrade-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202123750293",
+										"comment": "postgresql-upgrade-devel is earlier than 0:13.3-1.module_el8.4.0+829+d585ddcd"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202036690262",
+										"comment": "postgresql-upgrade-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20212375031",
+						"comment": "Module postgresql:13 is enabled"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

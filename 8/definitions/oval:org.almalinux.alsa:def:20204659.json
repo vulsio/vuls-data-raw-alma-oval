@@ -1,0 +1,146 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20204659",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2020:4659: gd security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2020:4659",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-4659.html"
+			},
+			{
+				"ref_id": "ALSA-2020:4659",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-4659.html"
+			},
+			{
+				"ref_id": "CVE-2018-14553",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2018-14553"
+			},
+			{
+				"ref_id": "CVE-2019-6977",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-6977"
+			},
+			{
+				"ref_id": "CVE-2019-6978",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-6978"
+			}
+		],
+		"Description": "GD is an open source code library for the dynamic creation of images by programmers. GD creates PNG, JPEG, GIF, WebP, XPM, BMP images, among other formats. \nSecurity Fix(es):\n* gd: Heap-based buffer overflow in gdImageColorMatch() in gd_color_match.c (CVE-2019-6977)\n* gd: NULL pointer dereference in gdImageClone (CVE-2018-14553)\n* gd: Double free in the gdImage*Ptr in gd_gif_out.c, gd_jpeg.c, and gd_wbmp.c (CVE-2019-6978)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2020-11-04"
+			},
+			"updated": {
+				"date": "2020-11-04"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1600727",
+					"id": "1600727"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1671390",
+					"id": "1671390"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1672207",
+					"id": "1672207"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2018-14553",
+					"public": "20191220",
+					"href": "https://access.redhat.com/security/cve/CVE-2018-14553",
+					"impact": "low",
+					"cwe": "CWE-119",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2019-6977",
+					"public": "20181209",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-6977",
+					"impact": "moderate",
+					"cwe": "CWE-122",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+				},
+				{
+					"text": "CVE-2019-6978",
+					"public": "20190115",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-6978",
+					"impact": "low",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204659001",
+										"comment": "gd is earlier than 0:2.2.5-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204659002",
+										"comment": "gd is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204659003",
+										"comment": "gd-devel is earlier than 0:2.2.5-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204659004",
+										"comment": "gd-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

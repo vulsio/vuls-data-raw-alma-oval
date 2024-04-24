@@ -1,0 +1,197 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20227811",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:7811: mingw-expat security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:7811",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7811.html"
+			},
+			{
+				"ref_id": "CVE-2022-23990",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-23990"
+			},
+			{
+				"ref_id": "CVE-2022-25235",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-25235"
+			},
+			{
+				"ref_id": "CVE-2022-25236",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-25236"
+			},
+			{
+				"ref_id": "CVE-2022-25313",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-25313"
+			},
+			{
+				"ref_id": "CVE-2022-25314",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-25314"
+			},
+			{
+				"ref_id": "CVE-2022-25315",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-25315"
+			},
+			{
+				"ref_id": "ALSA-2022:7811",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7811.html"
+			}
+		],
+		"Description": "Expat is a C library for parsing XML documents. The mingw-expat packages provide a port of the Expat library for MinGW. \n\nThe following packages have been upgraded to a later upstream version: mingw-expat (2.4.8). (BZ#2057023, BZ#2057037, BZ#2057127)\n\nSecurity Fix(es):\n\n* expat: Malformed 2- and 3-byte UTF-8 sequences can lead to arbitrary code execution (CVE-2022-25235)\n* expat: Namespace-separator characters in \"xmlns[:prefix]\" attribute values can lead to arbitrary code execution (CVE-2022-25236)\n* expat: Integer overflow in storeRawNames() (CVE-2022-25315)\n* expat: Stack exhaustion in doctype parsing (CVE-2022-25313)\n* expat: Integer overflow in copyString() (CVE-2022-25314)\n* expat: Integer overflow in the doProlog function (CVE-2022-23990)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-11-08"
+			},
+			"updated": {
+				"date": "2022-11-08"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::powertools"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2048356",
+					"id": "2048356"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2056350",
+					"id": "2056350"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2056354",
+					"id": "2056354"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2056363",
+					"id": "2056363"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2056366",
+					"id": "2056366"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2056370",
+					"id": "2056370"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-23990",
+					"public": "20220126",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-23990",
+					"impact": "Low",
+					"cwe": "CWE-190",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-25235",
+					"public": "20220219",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-25235",
+					"impact": "important",
+					"cwe": "CWE-838",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-25236",
+					"public": "20220219",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-25236",
+					"impact": "important",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-25313",
+					"public": "20220219",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-25313",
+					"impact": "moderate",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-25314",
+					"public": "20220219",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-25314",
+					"impact": "moderate",
+					"cwe": "CWE-190",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-25315",
+					"public": "20220219",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-25315",
+					"impact": "important",
+					"cwe": "CWE-190->CWE-787",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227811001",
+										"comment": "mingw32-expat is earlier than 0:2.4.8-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204846002",
+										"comment": "mingw32-expat is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227811003",
+										"comment": "mingw64-expat is earlier than 0:2.4.8-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204846004",
+										"comment": "mingw64-expat is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

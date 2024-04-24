@@ -1,0 +1,191 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20237083",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:7083: emacs security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2023:7083",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-7083.html"
+			},
+			{
+				"ref_id": "CVE-2022-48337",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-48337"
+			},
+			{
+				"ref_id": "CVE-2022-48339",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-48339"
+			},
+			{
+				"ref_id": "ALSA-2023:7083",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-7083.html"
+			}
+		],
+		"Description": "GNU Emacs is a powerful, customizable, self-documenting text editor. It provides special code editing features, a scripting language (elisp), and the capability to read e-mail and news.\n\nSecurity Fix(es):\n\n* emacs: command execution via shell metacharacters (CVE-2022-48337)\n* emacs: command injection vulnerability in htmlfontify.el (CVE-2022-48339)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-11-14"
+			},
+			"updated": {
+				"date": "2023-11-14"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2171987",
+					"id": "2171987"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2171989",
+					"id": "2171989"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-48337",
+					"public": "20230221",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-48337",
+					"impact": "Moderate",
+					"cwe": "CWE-77",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-48339",
+					"public": "20230221",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-48339",
+					"impact": "Moderate",
+					"cwe": "CWE-77",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237083001",
+										"comment": "emacs is earlier than 1:26.1-11.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20231930002",
+										"comment": "emacs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237083003",
+										"comment": "emacs-common is earlier than 1:26.1-11.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20231930004",
+										"comment": "emacs-common is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237083005",
+										"comment": "emacs-filesystem is earlier than 1:26.1-11.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20231930006",
+										"comment": "emacs-filesystem is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237083007",
+										"comment": "emacs-lucid is earlier than 1:26.1-11.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20231930008",
+										"comment": "emacs-lucid is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237083009",
+										"comment": "emacs-nox is earlier than 1:26.1-11.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20231930010",
+										"comment": "emacs-nox is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237083011",
+										"comment": "emacs-terminal is earlier than 1:26.1-11.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20231930012",
+										"comment": "emacs-terminal is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

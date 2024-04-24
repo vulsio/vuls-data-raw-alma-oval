@@ -1,0 +1,213 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20214451",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:4451: gnutls and nettle security, bug fix, and enhancement update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:4451",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4451.html"
+			},
+			{
+				"ref_id": "ALSA-2021:4451",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4451.html"
+			},
+			{
+				"ref_id": "CVE-2021-20231",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-20231"
+			},
+			{
+				"ref_id": "CVE-2021-20232",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-20232"
+			},
+			{
+				"ref_id": "CVE-2021-3580",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-3580"
+			}
+		],
+		"Description": "The gnutls packages provide the GNU Transport Layer Security (GnuTLS) library, which implements cryptographic algorithms and protocols such as SSL, TLS, and DTLS.\nNettle is a cryptographic library that is designed to fit easily in almost any context: In crypto toolkits for object-oriented languages, such as C++, Python, or Pike, in applications like LSH or GNUPG, or even in kernel space.\nThe following packages have been upgraded to a later upstream version: gnutls (3.6.16). (BZ#1956783)\nSecurity Fix(es):\n* nettle: Remote crash in RSA decryption via manipulated ciphertext (CVE-2021-3580)\n* gnutls: Use after free in client key_share extension (CVE-2021-20231)\n* gnutls: Use after free in client_send_params in lib/ext/pre_shared_key.c (CVE-2021-20232)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-11-09"
+			},
+			"updated": {
+				"date": "2021-11-09"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1922275",
+					"id": "1922275"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1922276",
+					"id": "1922276"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1967983",
+					"id": "1967983"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-20231",
+					"public": "20210312",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-20231",
+					"impact": "moderate",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2021-20232",
+					"public": "20210312",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-20232",
+					"impact": "moderate",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2021-3580",
+					"public": "20210607",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-3580",
+					"impact": "moderate",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214451001",
+										"comment": "gnutls is earlier than 0:3.6.16-4.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193600002",
+										"comment": "gnutls is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214451003",
+										"comment": "gnutls-c++ is earlier than 0:3.6.16-4.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193600004",
+										"comment": "gnutls-c++ is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214451005",
+										"comment": "gnutls-dane is earlier than 0:3.6.16-4.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193600006",
+										"comment": "gnutls-dane is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214451007",
+										"comment": "gnutls-devel is earlier than 0:3.6.16-4.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193600008",
+										"comment": "gnutls-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214451009",
+										"comment": "gnutls-utils is earlier than 0:3.6.16-4.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193600010",
+										"comment": "gnutls-utils is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214451011",
+										"comment": "nettle is earlier than 0:3.4.1-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211206002",
+										"comment": "nettle is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214451013",
+										"comment": "nettle-devel is earlier than 0:3.4.1-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211206004",
+										"comment": "nettle-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

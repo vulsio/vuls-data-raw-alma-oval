@@ -1,0 +1,161 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20241784",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:1784: gnutls security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2024:1784",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-1784.html"
+			},
+			{
+				"ref_id": "CVE-2024-28834",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-28834"
+			},
+			{
+				"ref_id": "ALSA-2024:1784",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-1784.html"
+			}
+		],
+		"Description": "The gnutls package provide the GNU Transport Layer Security (GnuTLS) library,\nwhich implements cryptographic algorithms and protocols such as SSL, TLS, and\nDTLS.\n\nThis package update fixes a timing side-channel in deterministic ECDSA.\n\nSecurity Fix(es):\n\n* gnutls: vulnerable to Minerva side-channel information leak (CVE-2024-28834)\n\nFor more details about the security issue(s), including the impact, a CVSS\nscore, acknowledgments, and other related information, refer to the CVE page(s)\nlisted in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-04-11"
+			},
+			"updated": {
+				"date": "2024-04-11"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2269228",
+					"id": "2269228"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2024-28834",
+					"public": "20240321",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-28834",
+					"impact": "Moderate",
+					"cwe": "CWE-200",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20241784001",
+										"comment": "gnutls is earlier than 0:3.6.16-8.el8_9.3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193600002",
+										"comment": "gnutls is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20241784003",
+										"comment": "gnutls-c++ is earlier than 0:3.6.16-8.el8_9.3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193600004",
+										"comment": "gnutls-c++ is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20241784005",
+										"comment": "gnutls-dane is earlier than 0:3.6.16-8.el8_9.3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193600006",
+										"comment": "gnutls-dane is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20241784007",
+										"comment": "gnutls-devel is earlier than 0:3.6.16-8.el8_9.3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193600008",
+										"comment": "gnutls-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20241784009",
+										"comment": "gnutls-utils is earlier than 0:3.6.16-8.el8_9.3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193600010",
+										"comment": "gnutls-utils is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

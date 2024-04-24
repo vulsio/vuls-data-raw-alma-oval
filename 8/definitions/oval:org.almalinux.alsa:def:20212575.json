@@ -1,0 +1,125 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20212575",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:2575: lz4 security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:2575",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-2575.html"
+			},
+			{
+				"ref_id": "ALSA-2021:2575",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-2575.html"
+			},
+			{
+				"ref_id": "CVE-2021-3520",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-3520"
+			}
+		],
+		"Description": "The lz4 packages provide support for LZ4, a very fast, lossless compression algorithm that provides compression speeds of 400 MB/s per core and scales with multicore CPUs. It also features an extremely fast decoder that reaches speeds of multiple GB/s per core and typically reaches RAM speed limits on multicore systems.\nSecurity Fix(es):\n* lz4: memory corruption due to an integer overflow bug caused by memmove argument (CVE-2021-3520)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-06-29"
+			},
+			"updated": {
+				"date": "2021-06-29"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1954559",
+					"id": "1954559"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-3520",
+					"public": "20210428",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-3520",
+					"impact": "moderate",
+					"cwe": "CWE-190->CWE-787",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20212575001",
+										"comment": "lz4 is earlier than 0:1.8.3-3.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20212575002",
+										"comment": "lz4 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20212575003",
+										"comment": "lz4-devel is earlier than 0:1.8.3-3.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20212575004",
+										"comment": "lz4-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20212575005",
+										"comment": "lz4-libs is earlier than 0:1.8.3-3.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20212575006",
+										"comment": "lz4-libs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

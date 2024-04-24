@@ -1,0 +1,510 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20237549",
+	"version": "638",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:7549: kernel security and bug fix update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2023:7549",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-7549.html"
+			},
+			{
+				"ref_id": "CVE-2022-45884",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-45884"
+			},
+			{
+				"ref_id": "CVE-2022-45886",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-45886"
+			},
+			{
+				"ref_id": "CVE-2022-45919",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-45919"
+			},
+			{
+				"ref_id": "CVE-2023-1192",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-1192"
+			},
+			{
+				"ref_id": "CVE-2023-2163",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-2163"
+			},
+			{
+				"ref_id": "CVE-2023-3812",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-3812"
+			},
+			{
+				"ref_id": "CVE-2023-5178",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-5178"
+			},
+			{
+				"ref_id": "ALSA-2023:7549",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-7549.html"
+			}
+		],
+		"Description": "The kernel packages contain the Linux kernel, the core of any Linux operating system.\n\nSecurity Fix(es):\n\n* kernel: bpf: Incorrect verifier pruning leads to unsafe code paths being incorrectly marked as safe (CVE-2023-2163)\n* kernel: tun: bugs for oversize packet when napi frags enabled in tun_napi_alloc_frags (CVE-2023-3812)\n* kernel: use after free in nvmet_tcp_free_crypto in NVMe (CVE-2023-5178)\n* kernel: use-after-free due to race condition occurring in dvb_register_device() (CVE-2022-45884)\n* kernel: use-after-free due to race condition occurring in dvb_net.c (CVE-2022-45886)\n* kernel: use-after-free due to race condition occurring in dvb_ca_en50221.c (CVE-2022-45919)\n* kernel: use-after-free in smb2_is_status_io_timeout() (CVE-2023-1192)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nBug Fix(es):\n* Fix max integer mmu_invalidate_seq hanging vCPU (ALBZ#445)\n* Random delay receiving packets after bringing up VLAN on top of VF with vf-vlan-pruning enabled (BZ#2240750)\n* bpf_jit_limit hit again (BZ#2243011)\n* HPE Edgeline 920t resets during kdump context when ice driver is loaded and when system is booted with intel_iommu=on iommu=pt (BZ#2244625)",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-11-28"
+			},
+			"updated": {
+				"date": "2023-11-28"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2148510",
+					"id": "2148510"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2148517",
+					"id": "2148517"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2151956",
+					"id": "2151956"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2154178",
+					"id": "2154178"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2224048",
+					"id": "2224048"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2240249",
+					"id": "2240249"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2241924",
+					"id": "2241924"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-45884",
+					"public": "20221115",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-45884",
+					"impact": "Moderate",
+					"cwe": "CWE-362->CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-45886",
+					"public": "20221115",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-45886",
+					"impact": "Moderate",
+					"cwe": "CWE-362->CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-45919",
+					"public": "20221121",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-45919",
+					"impact": "Moderate",
+					"cwe": "CWE-362->CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2023-1192",
+					"public": "20221002",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-1192",
+					"impact": "Low",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-2163",
+					"public": "20230419",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-2163",
+					"impact": "Important",
+					"cwe": "CWE-682",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2023-3812",
+					"public": "20221022",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-3812",
+					"impact": "Important",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2023-5178",
+					"public": "20231015",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-5178",
+					"impact": "Important",
+					"cwe": "CWE-415->CWE-416",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237549001",
+										"comment": "bpftool is earlier than 0:4.18.0-513.9.1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191167002",
+										"comment": "bpftool is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237549003",
+										"comment": "kernel is earlier than 0:4.18.0-513.9.1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191167004",
+										"comment": "kernel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237549005",
+										"comment": "kernel-abi-stablelists is earlier than 0:4.18.0-513.9.1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211578006",
+										"comment": "kernel-abi-stablelists is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237549007",
+										"comment": "kernel-core is earlier than 0:4.18.0-513.9.1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191167008",
+										"comment": "kernel-core is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237549009",
+										"comment": "kernel-cross-headers is earlier than 0:4.18.0-513.9.1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191167010",
+										"comment": "kernel-cross-headers is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237549011",
+										"comment": "kernel-debug is earlier than 0:4.18.0-513.9.1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191167012",
+										"comment": "kernel-debug is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237549013",
+										"comment": "kernel-debug-core is earlier than 0:4.18.0-513.9.1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191167014",
+										"comment": "kernel-debug-core is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237549015",
+										"comment": "kernel-debug-devel is earlier than 0:4.18.0-513.9.1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191167016",
+										"comment": "kernel-debug-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237549017",
+										"comment": "kernel-debug-modules is earlier than 0:4.18.0-513.9.1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191167018",
+										"comment": "kernel-debug-modules is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237549019",
+										"comment": "kernel-debug-modules-extra is earlier than 0:4.18.0-513.9.1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191167020",
+										"comment": "kernel-debug-modules-extra is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237549021",
+										"comment": "kernel-devel is earlier than 0:4.18.0-513.9.1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191167022",
+										"comment": "kernel-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237549023",
+										"comment": "kernel-doc is earlier than 0:4.18.0-513.9.1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191167024",
+										"comment": "kernel-doc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237549025",
+										"comment": "kernel-modules is earlier than 0:4.18.0-513.9.1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191167028",
+										"comment": "kernel-modules is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237549027",
+										"comment": "kernel-modules-extra is earlier than 0:4.18.0-513.9.1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191167030",
+										"comment": "kernel-modules-extra is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237549029",
+										"comment": "kernel-tools is earlier than 0:4.18.0-513.9.1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191167032",
+										"comment": "kernel-tools is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237549031",
+										"comment": "kernel-tools-libs is earlier than 0:4.18.0-513.9.1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191167034",
+										"comment": "kernel-tools-libs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237549033",
+										"comment": "kernel-tools-libs-devel is earlier than 0:4.18.0-513.9.1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191167036",
+										"comment": "kernel-tools-libs-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237549035",
+										"comment": "kernel-zfcpdump is earlier than 0:4.18.0-513.9.1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191167038",
+										"comment": "kernel-zfcpdump is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237549037",
+										"comment": "kernel-zfcpdump-core is earlier than 0:4.18.0-513.9.1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191167040",
+										"comment": "kernel-zfcpdump-core is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237549039",
+										"comment": "kernel-zfcpdump-devel is earlier than 0:4.18.0-513.9.1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191167042",
+										"comment": "kernel-zfcpdump-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237549041",
+										"comment": "kernel-zfcpdump-modules is earlier than 0:4.18.0-513.9.1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191167044",
+										"comment": "kernel-zfcpdump-modules is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237549043",
+										"comment": "kernel-zfcpdump-modules-extra is earlier than 0:4.18.0-513.9.1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191167046",
+										"comment": "kernel-zfcpdump-modules-extra is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237549045",
+										"comment": "perf is earlier than 0:4.18.0-513.9.1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191167048",
+										"comment": "perf is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237549047",
+										"comment": "python3-perf is earlier than 0:4.18.0-513.9.1.el8_9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191167050",
+										"comment": "python3-perf is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

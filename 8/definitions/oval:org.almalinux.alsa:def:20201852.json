@@ -1,0 +1,87 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20201852",
+	"version": "638",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2020:1852: patch security and bug fix update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2020:1852",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-1852.html"
+			},
+			{
+				"ref_id": "ALSA-2020:1852",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-1852.html"
+			},
+			{
+				"ref_id": "CVE-2019-13636",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-13636"
+			}
+		],
+		"Description": "The patch program applies diff files to originals. The diff command is used to compare an original to a changed file. Diff lists the changes made to the file. A person who has the original file can then use the patch command with the diff file to add the changes to their original file (patching the file).\nSecurity Fix(es):\n* patch: the following of symlinks in inp.c and util.c is mishandled in cases other than input files (CVE-2019-13636)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2020-04-28"
+			},
+			"updated": {
+				"date": "2020-04-28"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1732781",
+					"id": "1732781"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2019-13636",
+					"public": "20190724",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-13636",
+					"impact": "moderate",
+					"cwe": "CWE-59",
+					"cvss3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20201852001",
+						"comment": "patch is earlier than 0:2.7.6-11.el8"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20192798002",
+						"comment": "patch is signed with AlmaLinux OS 8 key"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

@@ -1,0 +1,616 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20211852",
+	"version": "639",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:1852: ghostscript security, bug fix, and enhancement update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:1852",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1852.html"
+			},
+			{
+				"ref_id": "ALSA-2021:1852",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1852.html"
+			},
+			{
+				"ref_id": "CVE-2020-14373",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-14373"
+			},
+			{
+				"ref_id": "CVE-2020-16287",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-16287"
+			},
+			{
+				"ref_id": "CVE-2020-16288",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-16288"
+			},
+			{
+				"ref_id": "CVE-2020-16289",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-16289"
+			},
+			{
+				"ref_id": "CVE-2020-16290",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-16290"
+			},
+			{
+				"ref_id": "CVE-2020-16291",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-16291"
+			},
+			{
+				"ref_id": "CVE-2020-16292",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-16292"
+			},
+			{
+				"ref_id": "CVE-2020-16293",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-16293"
+			},
+			{
+				"ref_id": "CVE-2020-16294",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-16294"
+			},
+			{
+				"ref_id": "CVE-2020-16295",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-16295"
+			},
+			{
+				"ref_id": "CVE-2020-16296",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-16296"
+			},
+			{
+				"ref_id": "CVE-2020-16297",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-16297"
+			},
+			{
+				"ref_id": "CVE-2020-16298",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-16298"
+			},
+			{
+				"ref_id": "CVE-2020-16299",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-16299"
+			},
+			{
+				"ref_id": "CVE-2020-16300",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-16300"
+			},
+			{
+				"ref_id": "CVE-2020-16301",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-16301"
+			},
+			{
+				"ref_id": "CVE-2020-16302",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-16302"
+			},
+			{
+				"ref_id": "CVE-2020-16303",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-16303"
+			},
+			{
+				"ref_id": "CVE-2020-16304",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-16304"
+			},
+			{
+				"ref_id": "CVE-2020-16305",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-16305"
+			},
+			{
+				"ref_id": "CVE-2020-16306",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-16306"
+			},
+			{
+				"ref_id": "CVE-2020-16307",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-16307"
+			},
+			{
+				"ref_id": "CVE-2020-16308",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-16308"
+			},
+			{
+				"ref_id": "CVE-2020-16309",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-16309"
+			},
+			{
+				"ref_id": "CVE-2020-16310",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-16310"
+			},
+			{
+				"ref_id": "CVE-2020-17538",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-17538"
+			}
+		],
+		"Description": "The Ghostscript suite contains utilities for rendering PostScript and PDF documents. Ghostscript translates PostScript code to common bitmap formats so that the code can be displayed or printed.\nThe following packages have been upgraded to a later upstream version: ghostscript (9.27). (BZ#1874523)\nSecurity Fix(es):\n* ghostscript: use-after-free vulnerability in igc_reloc_struct_ptr() could result in DoS (CVE-2020-14373)\n* ghostscript: buffer overflow in lprn_is_black() in contrib/lips4/gdevlprn.c could result in a DoS (CVE-2020-16287)\n* ghostscript: buffer overflow in pj_common_print_page() in devices/gdevpjet.c could result in a DoS (CVE-2020-16288)\n* ghostscript: buffer overflow in jetp3852_print_page() in devices/gdev3852.c could result in a DoS (CVE-2020-16290)\n* ghostscript: buffer overflow in contrib/gdevdj9.c could result in a DoS (CVE-2020-16291)\n* ghostscript: buffer overflow in mj_raster_cmd() in contrib/japanese/gdevmjc.c could result in a DoS (CVE-2020-16292)\n* ghostscript: NULL pointer dereference in compose_group_nonknockout_nonblend_isolated_allmask_common() in base/gxblend.c could result in a DoS (CVE-2020-16293)\n* ghostscript: buffer overflow in epsc_print_page() in devices/gdevepsc.c could result in a DoS (CVE-2020-16294)\n* ghostscript: NULL pointer dereference in clj_media_size() in devices/gdevclj.c could result in a DoS (CVE-2020-16295)\n* ghostscript: buffer overflow in GetNumWrongData() in contrib/lips4/gdevlips.c could result in a DoS (CVE-2020-16296)\n* ghostscript: buffer overflow in FloydSteinbergDitheringC() in contrib/gdevbjca.c could result in a DoS (CVE-2020-16297)\n* ghostscript: buffer overflow in mj_color_correct() in contrib/japanese/gdevmjc.c could result in a DoS (CVE-2020-16298)\n* ghostscript: division by zero in bj10v_print_page() in contrib/japanese/gdev10v.c could result in a DoS (CVE-2020-16299)\n* ghostscript: buffer overflow in tiff12_print_page() in devices/gdevtfnx.c could result in a DoS (CVE-2020-16300)\n* ghostscript: buffer overflow in okiibm_print_page1() in devices/gdevokii.c could result in a DoS (CVE-2020-16301)\n* ghostscript: buffer overflow in jetp3852_print_page() in devices/gdev3852.c could result in a privilege escalation (CVE-2020-16302)\n* ghostscript: use-after-free in xps_finish_image_path() in devices/vector/gdevxps.c could result in a privilege escalation (CVE-2020-16303)\n* ghostscript: buffer overflow in image_render_color_thresh() in base/gxicolor.c could result in a DoS (CVE-2020-16304)\n* ghostscript: NULL pointer dereference in devices/gdevtsep.c could result in a DoS (CVE-2020-16306)\n* ghostscript: NULL pointer dereference in devices/vector/gdevtxtw.c and psi/zbfont.c could result in a DoS (CVE-2020-16307)\n* ghostscript: buffer overflow in p_print_image() in devices/gdevcdj.c could result in a DoS (CVE-2020-16308)\n* ghostscript: buffer overflow in lxm5700m_print_page() in devices/gdevlxm.c could result in a DoS (CVE-2020-16309)\n* ghostscript: division by zero in dot24_print_page() in devices/gdevdm24.c could result in a DoS (CVE-2020-16310)\n* ghostscript: buffer overflow in GetNumSameData() in contrib/lips4/gdevlips.c could result in a DoS (CVE-2020-17538)\n* ghostscript: buffer overflow in cif_print_page() in devices/gdevcif.c could result in a DoS (CVE-2020-16289)\n* ghostscript: buffer overflow in pcx_write_rle() in contrib/japanese/gdev10v.c could result in a DoS (CVE-2020-16305)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-05-18"
+			},
+			"updated": {
+				"date": "2021-05-18"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1870149",
+					"id": "1870149"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1870152",
+					"id": "1870152"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1870159",
+					"id": "1870159"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1870162",
+					"id": "1870162"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1870165",
+					"id": "1870165"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1870167",
+					"id": "1870167"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1870169",
+					"id": "1870169"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1870171",
+					"id": "1870171"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1870175",
+					"id": "1870175"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1870179",
+					"id": "1870179"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1870227",
+					"id": "1870227"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1870229",
+					"id": "1870229"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1870231",
+					"id": "1870231"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1870237",
+					"id": "1870237"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1870240",
+					"id": "1870240"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1870242",
+					"id": "1870242"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1870244",
+					"id": "1870244"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1870248",
+					"id": "1870248"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1870249",
+					"id": "1870249"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1870256",
+					"id": "1870256"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1870257",
+					"id": "1870257"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1870258",
+					"id": "1870258"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1870262",
+					"id": "1870262"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1870266",
+					"id": "1870266"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1870267",
+					"id": "1870267"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1873239",
+					"id": "1873239"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2020-14373",
+					"public": "20200902",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-14373",
+					"impact": "moderate",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-16287",
+					"public": "20200813",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-16287",
+					"impact": "moderate",
+					"cwe": "CWE-682->CWE-122->CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-16288",
+					"public": "20200813",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-16288",
+					"impact": "moderate",
+					"cwe": "CWE-456->CWE-805->CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-16289",
+					"public": "20200813",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-16289",
+					"impact": "low",
+					"cwe": "CWE-131->CWE-787",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-16290",
+					"public": "20200813",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-16290",
+					"impact": "moderate",
+					"cwe": "CWE-20->CWE-121",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-16291",
+					"public": "20200813",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-16291",
+					"impact": "moderate",
+					"cwe": "CWE-20->CWE-122->CWE-787",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-16292",
+					"public": "20200813",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-16292",
+					"impact": "moderate",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-16293",
+					"public": "20200813",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-16293",
+					"impact": "moderate",
+					"cwe": "CWE-476",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-16294",
+					"public": "20200813",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-16294",
+					"impact": "moderate",
+					"cwe": "CWE-20->CWE-131->CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-16295",
+					"public": "20200813",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-16295",
+					"impact": "moderate",
+					"cwe": "CWE-20->(CWE-369|CWE-476)",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-16296",
+					"public": "20200813",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-16296",
+					"impact": "moderate",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-16297",
+					"public": "20200813",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-16297",
+					"impact": "moderate",
+					"cwe": "CWE-20->CWE-805->CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-16298",
+					"public": "20200813",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-16298",
+					"impact": "moderate",
+					"cwe": "CWE-20->CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-16299",
+					"public": "20200813",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-16299",
+					"impact": "moderate",
+					"cwe": "CWE-20->CWE-369",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-16300",
+					"public": "20200813",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-16300",
+					"impact": "moderate",
+					"cwe": "CWE-20->CWE-122->CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-16301",
+					"public": "20200813",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-16301",
+					"impact": "moderate",
+					"cwe": "CWE-20->CWE-805->CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-16302",
+					"public": "20200813",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-16302",
+					"impact": "moderate",
+					"cwe": "CWE-456->CWE-805->CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-16303",
+					"public": "20200813",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-16303",
+					"impact": "moderate",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2020-16304",
+					"public": "20200813",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-16304",
+					"impact": "moderate",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-16305",
+					"public": "20200813",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-16305",
+					"impact": "low",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-16306",
+					"public": "20200813",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-16306",
+					"impact": "moderate",
+					"cwe": "CWE-476",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-16307",
+					"public": "20200813",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-16307",
+					"impact": "moderate",
+					"cwe": "CWE-20->CWE-476",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-16308",
+					"public": "20200813",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-16308",
+					"impact": "moderate",
+					"cwe": "CWE-131->CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-16309",
+					"public": "20200813",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-16309",
+					"impact": "moderate",
+					"cwe": "CWE-122->CWE-787",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-16310",
+					"public": "20200813",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-16310",
+					"impact": "moderate",
+					"cwe": "CWE-369",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-17538",
+					"public": "20200813",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-17538",
+					"impact": "moderate",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211852001",
+										"comment": "ghostscript is earlier than 0:9.27-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190971002",
+										"comment": "ghostscript is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211852003",
+										"comment": "ghostscript-doc is earlier than 0:9.27-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190971004",
+										"comment": "ghostscript-doc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211852005",
+										"comment": "ghostscript-tools-dvipdf is earlier than 0:9.27-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190971006",
+										"comment": "ghostscript-tools-dvipdf is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211852007",
+										"comment": "ghostscript-tools-fonts is earlier than 0:9.27-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190971008",
+										"comment": "ghostscript-tools-fonts is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211852009",
+										"comment": "ghostscript-tools-printing is earlier than 0:9.27-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190971010",
+										"comment": "ghostscript-tools-printing is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211852011",
+										"comment": "ghostscript-x11 is earlier than 0:9.27-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190971012",
+										"comment": "ghostscript-x11 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211852013",
+										"comment": "libgs is earlier than 0:9.27-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190971014",
+										"comment": "libgs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211852015",
+										"comment": "libgs-devel is earlier than 0:9.27-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190971016",
+										"comment": "libgs-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

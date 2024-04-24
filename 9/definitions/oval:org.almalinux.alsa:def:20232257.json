@@ -1,0 +1,271 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20232257",
+	"version": "638",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:2257: tigervnc security and bug fix update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2023:2257",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-2257.html"
+			},
+			{
+				"ref_id": "CVE-2022-4283",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-4283"
+			},
+			{
+				"ref_id": "CVE-2022-46340",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-46340"
+			},
+			{
+				"ref_id": "CVE-2022-46341",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-46341"
+			},
+			{
+				"ref_id": "CVE-2022-46342",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-46342"
+			},
+			{
+				"ref_id": "CVE-2022-46343",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-46343"
+			},
+			{
+				"ref_id": "CVE-2022-46344",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-46344"
+			},
+			{
+				"ref_id": "ALSA-2023:2257",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-2257.html"
+			}
+		],
+		"Description": "Virtual Network Computing (VNC) is a remote display system which allows users to view a computing desktop environment not only on the machine where it is running, but from anywhere on the Internet and from a wide variety of machine architectures. TigerVNC is a suite of VNC servers and clients.\n\nSecurity Fix(es):\n\n* xorg-x11-server: XkbGetKbdByName use-after-free (CVE-2022-4283)\n* xorg-x11-server: XTestSwapFakeInput stack overflow (CVE-2022-46340)\n* xorg-x11-server: XIPassiveUngrab out-of-bounds access (CVE-2022-46341)\n* xorg-x11-server: XvdiSelectVideoNotify use-after-free (CVE-2022-46342)\n* xorg-x11-server: ScreenSaverSetAttributes use-after-free (CVE-2022-46343)\n* xorg-x11-server: XIChangeProperty out-of-bounds access (CVE-2022-46344)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-05-09"
+			},
+			"updated": {
+				"date": "2023-05-09"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2151755",
+					"id": "2151755"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2151756",
+					"id": "2151756"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2151757",
+					"id": "2151757"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2151758",
+					"id": "2151758"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2151760",
+					"id": "2151760"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2151761",
+					"id": "2151761"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-4283",
+					"public": "20221214",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-4283",
+					"impact": "Important",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-46340",
+					"public": "20221214",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-46340",
+					"impact": "Important",
+					"cwe": "CWE-121",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-46341",
+					"public": "20221214",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-46341",
+					"impact": "Important",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-46342",
+					"public": "20221214",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-46342",
+					"impact": "Important",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-46343",
+					"public": "20221214",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-46343",
+					"impact": "Important",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-46344",
+					"public": "20221214",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-46344",
+					"impact": "Important",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232257001",
+										"comment": "tigervnc is earlier than 0:1.12.0-13.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230622002",
+										"comment": "tigervnc is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232257003",
+										"comment": "tigervnc-icons is earlier than 0:1.12.0-13.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230622004",
+										"comment": "tigervnc-icons is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232257005",
+										"comment": "tigervnc-license is earlier than 0:1.12.0-13.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230622006",
+										"comment": "tigervnc-license is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232257007",
+										"comment": "tigervnc-selinux is earlier than 0:1.12.0-13.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230622008",
+										"comment": "tigervnc-selinux is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232257009",
+										"comment": "tigervnc-server is earlier than 0:1.12.0-13.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230622010",
+										"comment": "tigervnc-server is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232257011",
+										"comment": "tigervnc-server-minimal is earlier than 0:1.12.0-13.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230622012",
+										"comment": "tigervnc-server-minimal is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232257013",
+										"comment": "tigervnc-server-module is earlier than 0:1.12.0-13.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230622014",
+										"comment": "tigervnc-server-module is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

@@ -1,0 +1,128 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20227329",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:7329: lua security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:7329",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-7329.html"
+			},
+			{
+				"ref_id": "CVE-2022-33099",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-33099"
+			},
+			{
+				"ref_id": "ALSA-2022:7329",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-7329.html"
+			}
+		],
+		"Description": "The lua packages provide support for Lua, a powerful light-weight programming language designed for extending applications. Lua is also frequently used as a general-purpose, stand-alone language.\n\nSecurity Fix(es):\n\n* lua: heap buffer overflow in luaG_errormsg() in ldebug.c due to uncontrolled recursion in error handling (CVE-2022-33099)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-11-02"
+			},
+			"updated": {
+				"date": "2022-11-02"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2104427",
+					"id": "2104427"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-33099",
+					"public": "20220701",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-33099",
+					"impact": "Moderate",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227329001",
+										"comment": "lua is earlier than 0:5.4.2-4.el9_0.3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227329002",
+										"comment": "lua is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227329003",
+										"comment": "lua-devel is earlier than 0:5.4.2-4.el9_0.3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227329004",
+										"comment": "lua-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227329005",
+										"comment": "lua-libs is earlier than 0:5.4.2-4.el9_0.3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227329006",
+										"comment": "lua-libs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

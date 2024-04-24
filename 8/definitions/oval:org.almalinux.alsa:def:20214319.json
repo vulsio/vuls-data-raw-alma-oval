@@ -1,0 +1,121 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20214319",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:4319: compat-exiv2-026 security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:4319",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4319.html"
+			},
+			{
+				"ref_id": "ALSA-2021:4319",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4319.html"
+			},
+			{
+				"ref_id": "CVE-2021-31292",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-31292"
+			},
+			{
+				"ref_id": "CVE-2021-37618",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-37618"
+			},
+			{
+				"ref_id": "CVE-2021-37619",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-37619"
+			}
+		],
+		"Description": "Exiv2 is a C++ library to access image metadata, supporting read and write access to the Exif, IPTC and XMP metadata, Exif MakerNote support, extract and delete methods for Exif thumbnails, classes to access Ifd, and support for various image formats.\nSecurity Fix(es):\n* exiv2: Integer overflow in CrwMap:encode0x1810 leading to heap-based buffer overflow and DoS (CVE-2021-31292)\n* exiv2: Out-of-bounds read in Exiv2::Jp2Image::printStructure (CVE-2021-37618)\n* exiv2: Out-of-bounds read in Exiv2::Jp2Image::encodeJp2Header (CVE-2021-37619)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-11-09"
+			},
+			"updated": {
+				"date": "2021-11-09"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1990330",
+					"id": "1990330"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1992165",
+					"id": "1992165"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1992174",
+					"id": "1992174"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-31292",
+					"public": "20210726",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-31292",
+					"impact": "moderate",
+					"cwe": "CWE-190->CWE-125",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-37618",
+					"public": "20210808",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-37618",
+					"impact": "low",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-37619",
+					"public": "20210808",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-37619",
+					"impact": "low",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20214319001",
+						"comment": "compat-exiv2-026 is earlier than 0:0.26-6.el8"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20213153002",
+						"comment": "compat-exiv2-026 is signed with AlmaLinux OS 8 key"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

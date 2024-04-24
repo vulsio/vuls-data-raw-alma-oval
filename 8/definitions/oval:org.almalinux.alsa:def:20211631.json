@@ -1,0 +1,87 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20211631",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:1631: python-urllib3 security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:1631",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1631.html"
+			},
+			{
+				"ref_id": "ALSA-2021:1631",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1631.html"
+			},
+			{
+				"ref_id": "CVE-2020-26137",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-26137"
+			}
+		],
+		"Description": "The python-urllib3 package provides the Python HTTP module with connection pooling and file POST abilities.\nSecurity Fix(es):\n* python-urllib3: CRLF injection via HTTP request method (CVE-2020-26137)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-05-18"
+			},
+			"updated": {
+				"date": "2021-05-18"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1883632",
+					"id": "1883632"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2020-26137",
+					"public": "20200210",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-26137",
+					"impact": "moderate",
+					"cwe": "CWE-113",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20211631001",
+						"comment": "python3-urllib3 is earlier than 0:1.24.2-5.el8"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20193590002",
+						"comment": "python3-urllib3 is signed with AlmaLinux OS 8 key"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

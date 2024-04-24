@@ -1,0 +1,269 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20211881",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:1881: poppler and evince security, bug fix, and enhancement update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:1881",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1881.html"
+			},
+			{
+				"ref_id": "ALSA-2021:1881",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1881.html"
+			},
+			{
+				"ref_id": "CVE-2020-27778",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-27778"
+			}
+		],
+		"Description": "Poppler is a Portable Document Format (PDF) rendering library, used by applications such as Evince.\nThe evince packages provide a simple multi-page document viewer for Portable Document Format (PDF), PostScript (PS), Encapsulated PostScript (EPS) files, and, with additional back-ends, also the Device Independent File format (DVI) files.\nThe following packages have been upgraded to a later upstream version: poppler (20.11.0). (BZ#1644423)\nSecurity Fix(es):\n* poppler: pdftohtml: access to uninitialized pointer could lead to DoS (CVE-2020-27778)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-05-18"
+			},
+			"updated": {
+				"date": "2021-05-18"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1900712",
+					"id": "1900712"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2020-27778",
+					"public": "20190322",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-27778",
+					"impact": "moderate",
+					"cwe": "CWE-824",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211881001",
+										"comment": "poppler is earlier than 0:20.11.0-2.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192713002",
+										"comment": "poppler is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211881003",
+										"comment": "poppler-cpp is earlier than 0:20.11.0-2.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192713004",
+										"comment": "poppler-cpp is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211881005",
+										"comment": "poppler-cpp-devel is earlier than 0:20.11.0-2.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192713006",
+										"comment": "poppler-cpp-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211881007",
+										"comment": "poppler-devel is earlier than 0:20.11.0-2.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192713008",
+										"comment": "poppler-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211881009",
+										"comment": "poppler-glib is earlier than 0:20.11.0-2.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192713010",
+										"comment": "poppler-glib is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211881011",
+										"comment": "poppler-glib-devel is earlier than 0:20.11.0-2.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192713012",
+										"comment": "poppler-glib-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211881013",
+										"comment": "poppler-qt5 is earlier than 0:20.11.0-2.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192713014",
+										"comment": "poppler-qt5 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211881015",
+										"comment": "poppler-qt5-devel is earlier than 0:20.11.0-2.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192713016",
+										"comment": "poppler-qt5-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211881017",
+										"comment": "poppler-utils is earlier than 0:20.11.0-2.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192713018",
+										"comment": "poppler-utils is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211881019",
+										"comment": "evince is earlier than 0:3.28.4-11.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193553024",
+										"comment": "evince is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211881021",
+										"comment": "evince-browser-plugin is earlier than 0:3.28.4-11.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193553026",
+										"comment": "evince-browser-plugin is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211881023",
+										"comment": "evince-devel is earlier than 0:3.28.4-11.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211881024",
+										"comment": "evince-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211881025",
+										"comment": "evince-libs is earlier than 0:3.28.4-11.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193553028",
+										"comment": "evince-libs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211881027",
+										"comment": "evince-nautilus is earlier than 0:3.28.4-11.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193553030",
+										"comment": "evince-nautilus is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

@@ -1,0 +1,363 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20233708",
+	"version": "642",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:3708: kernel-rt security and bug fix update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2023:3708",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-3708.html"
+			},
+			{
+				"ref_id": "CVE-2023-2002",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-2002"
+			},
+			{
+				"ref_id": "CVE-2023-2124",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-2124"
+			},
+			{
+				"ref_id": "CVE-2023-2194",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-2194"
+			},
+			{
+				"ref_id": "CVE-2023-2235",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-2235"
+			},
+			{
+				"ref_id": "CVE-2023-28466",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-28466"
+			},
+			{
+				"ref_id": "CVE-2023-32233",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-32233"
+			},
+			{
+				"ref_id": "ALSA-2023:3708",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-3708.html"
+			}
+		],
+		"Description": "The kernel-rt packages provide the Real Time Linux Kernel, which enables fine-tuning for systems with extremely high determinism requirements.\n\nSecurity Fix(es):\n\n* kernel: use-after-free vulnerability in the perf_group_detach function of the Linux Kernel Performance Events (CVE-2023-2235)\n* kernel: netfilter: use-after-free in nf_tables when processing batch requests can lead to privilege escalation (CVE-2023-32233)\n* Kernel: bluetooth: Unauthorized management command execution (CVE-2023-2002)\n* kernel: OOB access in the Linux kernel's XFS subsystem (CVE-2023-2124)\n* kernel: i2c: out-of-bounds write in xgene_slimpro_i2c_xfer() (CVE-2023-2194)\n* kernel: tls: race condition in do_tls_getsockopt may lead to use-after-free or NULL pointer dereference (CVE-2023-28466)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nBug Fix(es):\n\n* [RT] Single Node Openshift cluster becomes unreachable after running less than 2 hours (BZ#2186853)\n* kernel-rt: update RT source tree to the latest AlmaLinux-9.2.z1 Batch (BZ#2188313)",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-06-21"
+			},
+			"updated": {
+				"date": "2023-06-21"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2179000",
+					"id": "2179000"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2187308",
+					"id": "2187308"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2187439",
+					"id": "2187439"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2188396",
+					"id": "2188396"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2192589",
+					"id": "2192589"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2196105",
+					"id": "2196105"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-2002",
+					"public": "20230416",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-2002",
+					"impact": "Moderate",
+					"cwe": "CWE-250",
+					"cvss3": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:H"
+				},
+				{
+					"text": "CVE-2023-2124",
+					"public": "20230412",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-2124",
+					"impact": "Moderate",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2023-2194",
+					"public": "20230316",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-2194",
+					"impact": "Moderate",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2023-2235",
+					"public": "20230315",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-2235",
+					"impact": "Important",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2023-28466",
+					"public": "20230315",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-28466",
+					"impact": "Moderate",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2023-32233",
+					"public": "20230502",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-32233",
+					"impact": "Important",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233708001",
+										"comment": "kernel-rt is earlier than 0:5.14.0-284.18.1.rt14.303.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225267002",
+										"comment": "kernel-rt is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233708003",
+										"comment": "kernel-rt-core is earlier than 0:5.14.0-284.18.1.rt14.303.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225267004",
+										"comment": "kernel-rt-core is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233708005",
+										"comment": "kernel-rt-debug is earlier than 0:5.14.0-284.18.1.rt14.303.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225267006",
+										"comment": "kernel-rt-debug is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233708007",
+										"comment": "kernel-rt-debug-core is earlier than 0:5.14.0-284.18.1.rt14.303.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225267008",
+										"comment": "kernel-rt-debug-core is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233708009",
+										"comment": "kernel-rt-debug-devel is earlier than 0:5.14.0-284.18.1.rt14.303.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225267010",
+										"comment": "kernel-rt-debug-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233708011",
+										"comment": "kernel-rt-debug-kvm is earlier than 0:5.14.0-284.18.1.rt14.303.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225267012",
+										"comment": "kernel-rt-debug-kvm is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233708013",
+										"comment": "kernel-rt-debug-modules is earlier than 0:5.14.0-284.18.1.rt14.303.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225267014",
+										"comment": "kernel-rt-debug-modules is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233708015",
+										"comment": "kernel-rt-debug-modules-core is earlier than 0:5.14.0-284.18.1.rt14.303.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232148016",
+										"comment": "kernel-rt-debug-modules-core is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233708017",
+										"comment": "kernel-rt-debug-modules-extra is earlier than 0:5.14.0-284.18.1.rt14.303.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225267016",
+										"comment": "kernel-rt-debug-modules-extra is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233708019",
+										"comment": "kernel-rt-devel is earlier than 0:5.14.0-284.18.1.rt14.303.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225267018",
+										"comment": "kernel-rt-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233708021",
+										"comment": "kernel-rt-kvm is earlier than 0:5.14.0-284.18.1.rt14.303.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225267020",
+										"comment": "kernel-rt-kvm is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233708023",
+										"comment": "kernel-rt-modules is earlier than 0:5.14.0-284.18.1.rt14.303.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225267022",
+										"comment": "kernel-rt-modules is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233708025",
+										"comment": "kernel-rt-modules-core is earlier than 0:5.14.0-284.18.1.rt14.303.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232148026",
+										"comment": "kernel-rt-modules-core is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233708027",
+										"comment": "kernel-rt-modules-extra is earlier than 0:5.14.0-284.18.1.rt14.303.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225267024",
+										"comment": "kernel-rt-modules-extra is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

@@ -1,0 +1,186 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20237015",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:7015: wireshark security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2023:7015",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-7015.html"
+			},
+			{
+				"ref_id": "CVE-2023-0666",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-0666"
+			},
+			{
+				"ref_id": "CVE-2023-2856",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-2856"
+			},
+			{
+				"ref_id": "CVE-2023-2858",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-2858"
+			},
+			{
+				"ref_id": "CVE-2023-2952",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-2952"
+			},
+			{
+				"ref_id": "ALSA-2023:7015",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-7015.html"
+			}
+		],
+		"Description": "The wireshark packages contain a network protocol analyzer used to capture and browse the traffic running on a computer network.\n\nSecurity Fix(es):\n\n* wireshark: RTPS dissector crash (CVE-2023-0666)\n* wireshark: VMS TCPIPtrace file parser crash (CVE-2023-2856)\n* wireshark: NetScaler file parser crash (CVE-2023-2858)\n* wireshark: XRA dissector infinite loop (CVE-2023-2952)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-11-14"
+			},
+			"updated": {
+				"date": "2023-11-14"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2210824",
+					"id": "2210824"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2210829",
+					"id": "2210829"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2210832",
+					"id": "2210832"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2211406",
+					"id": "2211406"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-0666",
+					"public": "20230518",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-0666",
+					"impact": "Moderate",
+					"cwe": "CWE-122",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-2856",
+					"public": "20230518",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-2856",
+					"impact": "Moderate",
+					"cwe": "CWE-121",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-2858",
+					"public": "20230517",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-2858",
+					"impact": "Moderate",
+					"cwe": "CWE-122",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-2952",
+					"public": "20230523",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-2952",
+					"impact": "Moderate",
+					"cwe": "CWE-835",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237015001",
+										"comment": "wireshark is earlier than 1:2.6.2-17.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237015002",
+										"comment": "wireshark is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237015003",
+										"comment": "wireshark-cli is earlier than 1:2.6.2-17.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237015004",
+										"comment": "wireshark-cli is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237015005",
+										"comment": "wireshark-devel is earlier than 1:2.6.2-17.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237015006",
+										"comment": "wireshark-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

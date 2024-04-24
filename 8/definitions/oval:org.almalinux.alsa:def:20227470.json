@@ -1,0 +1,232 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20227470",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:7470: pki-core:10.6 and pki-deps:10.6 security and bug fix update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:7470",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7470.html"
+			},
+			{
+				"ref_id": "CVE-2022-2414",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-2414"
+			},
+			{
+				"ref_id": "ALSA-2022:7470",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7470.html"
+			}
+		],
+		"Description": "The Public Key Infrastructure (PKI) Core contains fundamental packages required by AlmaLinux Certificate System.\n\nSecurity Fix(es):\n\n* pki-core: access to external entities when parsing XML can lead to XXE (CVE-2022-2414)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-11-08"
+			},
+			"updated": {
+				"date": "2022-11-08"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2104676",
+					"id": "2104676"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-2414",
+					"public": "20220610",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-2414",
+					"impact": "Important",
+					"cwe": "CWE-611",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterias": [
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227470001",
+														"comment": "idm-pki-acme is earlier than 0:10.12.0-4.module_el8.7.0+3316+50b99934"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227470002",
+														"comment": "idm-pki-acme is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227470003",
+														"comment": "idm-pki-base is earlier than 0:10.12.0-4.module_el8.7.0+3316+50b99934"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227470004",
+														"comment": "idm-pki-base is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227470005",
+														"comment": "idm-pki-base-java is earlier than 0:10.12.0-4.module_el8.7.0+3316+50b99934"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227470006",
+														"comment": "idm-pki-base-java is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227470007",
+														"comment": "idm-pki-ca is earlier than 0:10.12.0-4.module_el8.7.0+3316+50b99934"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227470008",
+														"comment": "idm-pki-ca is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227470009",
+														"comment": "idm-pki-kra is earlier than 0:10.12.0-4.module_el8.7.0+3316+50b99934"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227470010",
+														"comment": "idm-pki-kra is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227470011",
+														"comment": "idm-pki-server is earlier than 0:10.12.0-4.module_el8.7.0+3316+50b99934"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227470012",
+														"comment": "idm-pki-server is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227470013",
+														"comment": "idm-pki-symkey is earlier than 0:10.12.0-4.module_el8.7.0+3316+50b99934"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227470014",
+														"comment": "idm-pki-symkey is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227470015",
+														"comment": "idm-pki-tools is earlier than 0:10.12.0-4.module_el8.7.0+3316+50b99934"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227470016",
+														"comment": "idm-pki-tools is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20221851007",
+														"comment": "ldapjdk-javadoc is earlier than 0:4.23.0-1.module_el8.6.0+2764+9fc58d50"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alba:tst:20193416075",
+														"comment": "ldapjdk-javadoc is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227470019",
+														"comment": "python3-idm-pki is earlier than 0:10.12.0-4.module_el8.7.0+3316+50b99934"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227470020",
+														"comment": "python3-idm-pki is signed with AlmaLinux OS 8 key"
+													}
+												]
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416094",
+										"comment": "Module pki-core:10.6 is enabled"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

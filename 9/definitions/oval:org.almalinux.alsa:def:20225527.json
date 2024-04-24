@@ -1,0 +1,87 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20225527",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:5527: squid security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:5527",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-5527.html"
+			},
+			{
+				"ref_id": "ALSA-2022:5527",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-5527.html"
+			},
+			{
+				"ref_id": "CVE-2021-46784",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-46784"
+			}
+		],
+		"Description": "Squid is a high-performance proxy caching server for web clients, supporting FTP, Gopher, and HTTP data objects.\nSecurity Fix(es):\n* squid: DoS when processing gopher server responses (CVE-2021-46784)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-07-07"
+			},
+			"updated": {
+				"date": "2022-07-07"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2100721",
+					"id": "2100721"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-46784",
+					"public": "20220623",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-46784",
+					"impact": "important",
+					"cwe": "CWE-617",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20225527001",
+						"comment": "squid is earlier than 7:5.2-1.el9_0.1"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20225527002",
+						"comment": "squid is signed with AlmaLinux OS 9 key"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

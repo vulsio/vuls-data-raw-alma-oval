@@ -1,0 +1,135 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20236632",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:6632: shadow-utils security and bug fix update (Low)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2023:6632",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-6632.html"
+			},
+			{
+				"ref_id": "CVE-2023-4641",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-4641"
+			},
+			{
+				"ref_id": "ALSA-2023:6632",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-6632.html"
+			}
+		],
+		"Description": "The shadow-utils packages include programs for converting UNIX password files to the shadow password format, as well as utilities for managing user and group accounts. \n\nSecurity Fix(es):\n\n* shadow-utils: possible password leak during passwd(1) change (CVE-2023-4641)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Low",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-11-07"
+			},
+			"updated": {
+				"date": "2023-11-07"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2215945",
+					"id": "2215945"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-4641",
+					"public": "20230617",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-4641",
+					"impact": "Low",
+					"cwe": "CWE-303",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236632001",
+										"comment": "shadow-utils is earlier than 2:4.9-8.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236632002",
+										"comment": "shadow-utils is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236632003",
+										"comment": "shadow-utils-subid is earlier than 2:4.9-8.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236632004",
+										"comment": "shadow-utils-subid is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236632005",
+										"comment": "shadow-utils-subid-devel is earlier than 2:4.9-8.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236632006",
+										"comment": "shadow-utils-subid-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

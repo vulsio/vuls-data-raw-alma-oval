@@ -1,0 +1,1127 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20191529",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2019:1529: pki-deps:10.6 security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2019:1529",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2019-1529.html"
+			},
+			{
+				"ref_id": "ALSA-2019:1529",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2019-1529.html"
+			},
+			{
+				"ref_id": "CVE-2018-11784",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2018-11784"
+			},
+			{
+				"ref_id": "CVE-2018-8014",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2018-8014"
+			},
+			{
+				"ref_id": "CVE-2018-8034",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2018-8034"
+			},
+			{
+				"ref_id": "CVE-2018-8037",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2018-8037"
+			}
+		],
+		"Description": "The Public Key Infrastructure (PKI) Deps module contains fundamental packages required as dependencies for the pki-core module by AlmaLinux Certificate System.\nSecurity Fix(es):\n* tomcat: Due to a mishandling of close in NIO/NIO2 connectors user sessions can get mixed up (CVE-2018-8037)\n* tomcat: Insecure defaults in CORS filter enable 'supportsCredentials' for all origins (CVE-2018-8014)\n* tomcat: Open redirect in default servlet (CVE-2018-11784)\n* tomcat: Host name verification missing in WebSocket client (CVE-2018-8034)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2019-06-18"
+			},
+			"updated": {
+				"date": "2019-06-18"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1579611",
+					"id": "1579611"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1607580",
+					"id": "1607580"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1607582",
+					"id": "1607582"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1636512",
+					"id": "1636512"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2018-11784",
+					"public": "20181003",
+					"href": "https://access.redhat.com/security/cve/CVE-2018-11784",
+					"impact": "moderate",
+					"cwe": "CWE-99",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+				},
+				{
+					"text": "CVE-2018-8014",
+					"public": "20180517",
+					"href": "https://access.redhat.com/security/cve/CVE-2018-8014",
+					"impact": "moderate",
+					"cwe": "CWE-284",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2018-8034",
+					"public": "20180722",
+					"href": "https://access.redhat.com/security/cve/CVE-2018-8034",
+					"impact": "low",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N"
+				},
+				{
+					"text": "CVE-2018-8037",
+					"public": "20180722",
+					"href": "https://access.redhat.com/security/cve/CVE-2018-8037",
+					"impact": "important",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290011",
+										"comment": "apache-commons-collections is earlier than 0:3.2.2-10.module_el8.5.0+2577+9e95fe00"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416002",
+										"comment": "apache-commons-collections is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290012",
+										"comment": "apache-commons-collections is earlier than 0:3.2.2-10.module_el8.5.0+150+5f0dbea0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416002",
+										"comment": "apache-commons-collections is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290031",
+										"comment": "apache-commons-lang is earlier than 0:2.6-21.module_el8.5.0+2577+9e95fe00"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416004",
+										"comment": "apache-commons-lang is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290032",
+										"comment": "apache-commons-lang is earlier than 0:2.6-21.module_el8.5.0+150+5f0dbea0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416004",
+										"comment": "apache-commons-lang is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290051",
+										"comment": "bea-stax-api is earlier than 0:1.2.0-16.module_el8.5.0+2577+9e95fe00"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416006",
+										"comment": "bea-stax-api is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290052",
+										"comment": "bea-stax-api is earlier than 0:1.2.0-16.module_el8.5.0+150+5f0dbea0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416006",
+										"comment": "bea-stax-api is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290071",
+										"comment": "glassfish-fastinfoset is earlier than 0:1.2.13-9.module_el8.5.0+2577+9e95fe00"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416008",
+										"comment": "glassfish-fastinfoset is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290072",
+										"comment": "glassfish-fastinfoset is earlier than 0:1.2.13-9.module_el8.5.0+150+5f0dbea0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416008",
+										"comment": "glassfish-fastinfoset is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290091",
+										"comment": "glassfish-jaxb-api is earlier than 0:2.2.12-8.module_el8.5.0+2577+9e95fe00"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416010",
+										"comment": "glassfish-jaxb-api is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290092",
+										"comment": "glassfish-jaxb-api is earlier than 0:2.2.12-8.module_el8.5.0+150+5f0dbea0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416010",
+										"comment": "glassfish-jaxb-api is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290111",
+										"comment": "glassfish-jaxb-core is earlier than 0:2.2.11-11.module_el8.5.0+2577+9e95fe00"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416012",
+										"comment": "glassfish-jaxb-core is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290112",
+										"comment": "glassfish-jaxb-core is earlier than 0:2.2.11-11.module_el8.5.0+150+5f0dbea0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416012",
+										"comment": "glassfish-jaxb-core is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290131",
+										"comment": "glassfish-jaxb-runtime is earlier than 0:2.2.11-11.module_el8.5.0+2577+9e95fe00"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416014",
+										"comment": "glassfish-jaxb-runtime is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290132",
+										"comment": "glassfish-jaxb-runtime is earlier than 0:2.2.11-11.module_el8.5.0+150+5f0dbea0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416014",
+										"comment": "glassfish-jaxb-runtime is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290151",
+										"comment": "glassfish-jaxb-txw2 is earlier than 0:2.2.11-11.module_el8.5.0+2577+9e95fe00"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416016",
+										"comment": "glassfish-jaxb-txw2 is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290152",
+										"comment": "glassfish-jaxb-txw2 is earlier than 0:2.2.11-11.module_el8.5.0+150+5f0dbea0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416016",
+										"comment": "glassfish-jaxb-txw2 is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290171",
+										"comment": "jackson-annotations is earlier than 0:2.9.8-1.module_el8.0.0+42+51564204"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201934160182",
+										"comment": "jackson-annotations is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019349400311",
+										"comment": "AlmaLinux arch is aarch64|ppc64le|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290191",
+										"comment": "jackson-core is earlier than 0:2.9.8-1.module_el8.0.0+42+51564204"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201934160202",
+										"comment": "jackson-core is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019349400311",
+										"comment": "AlmaLinux arch is aarch64|ppc64le|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290211",
+										"comment": "jackson-databind is earlier than 0:2.9.8-1.module_el8.0.0+42+51564204"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201934160222",
+										"comment": "jackson-databind is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019349400311",
+										"comment": "AlmaLinux arch is aarch64|ppc64le|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290231",
+										"comment": "jackson-jaxrs-json-provider is earlier than 0:2.9.8-1.module_el8.0.0+42+51564204"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201934160242",
+										"comment": "jackson-jaxrs-json-provider is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019349400311",
+										"comment": "AlmaLinux arch is aarch64|ppc64le|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290251",
+										"comment": "jackson-jaxrs-providers is earlier than 0:2.9.8-1.module_el8.0.0+42+51564204"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201934160262",
+										"comment": "jackson-jaxrs-providers is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019349400311",
+										"comment": "AlmaLinux arch is aarch64|ppc64le|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290271",
+										"comment": "jackson-module-jaxb-annotations is earlier than 0:2.7.6-4.module_el8.5.0+2577+9e95fe00"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416028",
+										"comment": "jackson-module-jaxb-annotations is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290272",
+										"comment": "jackson-module-jaxb-annotations is earlier than 0:2.7.6-4.module_el8.5.0+150+5f0dbea0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416028",
+										"comment": "jackson-module-jaxb-annotations is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290291",
+										"comment": "jakarta-commons-httpclient is earlier than 1:3.1-28.module_el8.5.0+2577+9e95fe00"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416030",
+										"comment": "jakarta-commons-httpclient is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290292",
+										"comment": "jakarta-commons-httpclient is earlier than 1:3.1-28.module_el8.5.0+150+5f0dbea0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416030",
+										"comment": "jakarta-commons-httpclient is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290311",
+										"comment": "javassist is earlier than 0:3.18.1-8.module_el8.5.0+2577+9e95fe00"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416032",
+										"comment": "javassist is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290312",
+										"comment": "javassist is earlier than 0:3.18.1-8.module_el8.5.0+150+5f0dbea0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416032",
+										"comment": "javassist is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290331",
+										"comment": "javassist-javadoc is earlier than 0:3.18.1-8.module_el8.5.0+2577+9e95fe00"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416034",
+										"comment": "javassist-javadoc is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290332",
+										"comment": "javassist-javadoc is earlier than 0:3.18.1-8.module_el8.5.0+150+5f0dbea0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416034",
+										"comment": "javassist-javadoc is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290351",
+										"comment": "pki-servlet-4.0-api is earlier than 1:9.0.7-14.module_el8.0.0+42+51564204"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201934160362",
+										"comment": "pki-servlet-4.0-api is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019349400311",
+										"comment": "AlmaLinux arch is aarch64|ppc64le|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290371",
+										"comment": "pki-servlet-container is earlier than 1:9.0.7-14.module_el8.0.0+42+51564204"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290382",
+										"comment": "pki-servlet-container is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019349400311",
+										"comment": "AlmaLinux arch is aarch64|ppc64le|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290391",
+										"comment": "python-nss-doc is earlier than 0:1.0.1-10.module_el8.5.0+2577+9e95fe00.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416040",
+										"comment": "python-nss-doc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290392",
+										"comment": "python-nss-doc is earlier than 0:1.0.1-10.module_el8.5.0+150+5f0dbea0.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416040",
+										"comment": "python-nss-doc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290411",
+										"comment": "python3-nss is earlier than 0:1.0.1-10.module_el8.5.0+2577+9e95fe00.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416042",
+										"comment": "python3-nss is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290412",
+										"comment": "python3-nss is earlier than 0:1.0.1-10.module_el8.5.0+150+5f0dbea0.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416042",
+										"comment": "python3-nss is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290431",
+										"comment": "relaxngDatatype is earlier than 0:2011.1-7.module_el8.5.0+2577+9e95fe00"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416044",
+										"comment": "relaxngDatatype is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290432",
+										"comment": "relaxngDatatype is earlier than 0:2011.1-7.module_el8.5.0+150+5f0dbea0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416044",
+										"comment": "relaxngDatatype is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290451",
+										"comment": "resteasy is earlier than 0:3.0.26-3.module_el8.3.0+2058+6bf11631"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416046",
+										"comment": "resteasy is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500111",
+										"comment": "AlmaLinux arch is x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290452",
+										"comment": "resteasy is earlier than 0:3.0.26-3.module_el8.3.0+454+67dccca4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201934160462",
+										"comment": "resteasy is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2020034802721",
+										"comment": "AlmaLinux arch is aarch64|ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290471",
+										"comment": "slf4j is earlier than 0:1.7.25-4.module_el8.5.0+2577+9e95fe00"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416048",
+										"comment": "slf4j is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290472",
+										"comment": "slf4j is earlier than 0:1.7.25-4.module_el8.5.0+150+5f0dbea0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416048",
+										"comment": "slf4j is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290491",
+										"comment": "slf4j-jdk14 is earlier than 0:1.7.25-4.module_el8.5.0+2577+9e95fe00"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416050",
+										"comment": "slf4j-jdk14 is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290492",
+										"comment": "slf4j-jdk14 is earlier than 0:1.7.25-4.module_el8.5.0+150+5f0dbea0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416050",
+										"comment": "slf4j-jdk14 is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290511",
+										"comment": "stax-ex is earlier than 0:1.7.7-8.module_el8.5.0+2577+9e95fe00"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416052",
+										"comment": "stax-ex is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290512",
+										"comment": "stax-ex is earlier than 0:1.7.7-8.module_el8.5.0+150+5f0dbea0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416052",
+										"comment": "stax-ex is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290531",
+										"comment": "velocity is earlier than 0:1.7-24.module_el8.5.0+2577+9e95fe00"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416054",
+										"comment": "velocity is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290532",
+										"comment": "velocity is earlier than 0:1.7-24.module_el8.5.0+150+5f0dbea0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416054",
+										"comment": "velocity is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290551",
+										"comment": "xalan-j2 is earlier than 0:2.7.1-38.module_el8.5.0+2577+9e95fe00"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416056",
+										"comment": "xalan-j2 is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290552",
+										"comment": "xalan-j2 is earlier than 0:2.7.1-38.module_el8.5.0+150+5f0dbea0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416056",
+										"comment": "xalan-j2 is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290571",
+										"comment": "xerces-j2 is earlier than 0:2.11.0-34.module_el8.5.0+2577+9e95fe00"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416058",
+										"comment": "xerces-j2 is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290572",
+										"comment": "xerces-j2 is earlier than 0:2.11.0-34.module_el8.5.0+150+5f0dbea0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416058",
+										"comment": "xerces-j2 is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290591",
+										"comment": "xml-commons-apis is earlier than 0:1.4.01-25.module_el8.5.0+2577+9e95fe00"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416060",
+										"comment": "xml-commons-apis is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290592",
+										"comment": "xml-commons-apis is earlier than 0:1.4.01-25.module_el8.5.0+150+5f0dbea0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416060",
+										"comment": "xml-commons-apis is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290611",
+										"comment": "xml-commons-resolver is earlier than 0:1.2-26.module_el8.5.0+2577+9e95fe00"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416062",
+										"comment": "xml-commons-resolver is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290612",
+										"comment": "xml-commons-resolver is earlier than 0:1.2-26.module_el8.5.0+150+5f0dbea0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416062",
+										"comment": "xml-commons-resolver is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290631",
+										"comment": "xmlstreambuffer is earlier than 0:1.5.4-8.module_el8.5.0+2577+9e95fe00"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416064",
+										"comment": "xmlstreambuffer is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290632",
+										"comment": "xmlstreambuffer is earlier than 0:1.5.4-8.module_el8.5.0+150+5f0dbea0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416064",
+										"comment": "xmlstreambuffer is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290651",
+										"comment": "xsom is earlier than 0:0-19.20110809svn.module_el8.5.0+2577+9e95fe00"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416066",
+										"comment": "xsom is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201915290652",
+										"comment": "xsom is earlier than 0:0-19.20110809svn.module_el8.5.0+150+5f0dbea0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20193416066",
+										"comment": "xsom is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20193416067",
+						"comment": "Module pki-deps:10.6 is enabled"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

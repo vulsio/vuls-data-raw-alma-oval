@@ -1,0 +1,112 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20222043",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:2043: c-ares security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:2043",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-2043.html"
+			},
+			{
+				"ref_id": "ALSA-2022:2043",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-2043.html"
+			},
+			{
+				"ref_id": "CVE-2021-3672",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-3672"
+			}
+		],
+		"Description": "The c-ares C library defines asynchronous DNS (Domain Name System) requests and provides name resolving API.\nSecurity Fix(es):\n* c-ares: Missing input validation of host names may lead to domain hijacking (CVE-2021-3672)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-05-10"
+			},
+			"updated": {
+				"date": "2022-05-10"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1988342",
+					"id": "1988342"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-3672",
+					"public": "20210810",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-3672",
+					"impact": "moderate",
+					"cwe": "CWE-79",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20222043001",
+										"comment": "c-ares is earlier than 0:1.13.0-6.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20222043002",
+										"comment": "c-ares is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20222043003",
+										"comment": "c-ares-devel is earlier than 0:1.13.0-6.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20222043004",
+										"comment": "c-ares-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

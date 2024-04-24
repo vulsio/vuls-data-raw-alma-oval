@@ -1,0 +1,460 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20192799",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2019:2799: nginx:1.14 security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2019:2799",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2019-2799.html"
+			},
+			{
+				"ref_id": "ALSA-2019:2799",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2019-2799.html"
+			},
+			{
+				"ref_id": "CVE-2019-9511",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-9511"
+			},
+			{
+				"ref_id": "CVE-2019-9513",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-9513"
+			},
+			{
+				"ref_id": "CVE-2019-9516",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-9516"
+			}
+		],
+		"Description": "Nginx is a web server and a reverse proxy server for HTTP, SMTP, POP3 (Post Office Protocol 3) and IMAP protocols, with a focus on high concurrency, performance and low memory usage. \nSecurity Fix(es):\n* HTTP/2: large amount of data request leads to denial of service (CVE-2019-9511)\n* HTTP/2: flood using PRIORITY frames resulting in excessive resource consumption (CVE-2019-9513)\n* HTTP/2: 0-length headers leads to denial of service (CVE-2019-9516)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2019-09-19"
+			},
+			"updated": {
+				"date": "2019-09-19"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1735741",
+					"id": "1735741"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1741860",
+					"id": "1741860"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1741864",
+					"id": "1741864"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2019-9511",
+					"public": "20190813",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-9511",
+					"impact": "important",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2019-9513",
+					"public": "20190813",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-9513",
+					"impact": "important",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2019-9516",
+					"public": "20190813",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-9516",
+					"impact": "important",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201927990011",
+										"comment": "nginx is earlier than 1:1.14.1-9.module_el8.3.0+2165+af250afe.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192799002",
+										"comment": "nginx is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201927990012",
+										"comment": "nginx is earlier than 1:1.14.1-9.module_el8.4.0+2221+af250afe.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192799002",
+										"comment": "nginx is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201927990013",
+										"comment": "nginx is earlier than 1:1.14.1-9.module_el8.5.0+34+dc1cfba5.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192799002",
+										"comment": "nginx is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201927990031",
+										"comment": "nginx-all-modules is earlier than 1:1.14.1-9.module_el8.3.0+2165+af250afe.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192799004",
+										"comment": "nginx-all-modules is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500111",
+										"comment": "AlmaLinux arch is x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201927990032",
+										"comment": "nginx-all-modules is earlier than 1:1.14.1-9.module_el8.4.0+2221+af250afe.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192799004",
+										"comment": "nginx-all-modules is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500121",
+										"comment": "AlmaLinux arch is aarch64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201927990033",
+										"comment": "nginx-all-modules is earlier than 1:1.14.1-9.module_el8.5.0+34+dc1cfba5.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192799004",
+										"comment": "nginx-all-modules is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201927990051",
+										"comment": "nginx-filesystem is earlier than 1:1.14.1-9.module_el8.3.0+2165+af250afe.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192799006",
+										"comment": "nginx-filesystem is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500111",
+										"comment": "AlmaLinux arch is x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201927990052",
+										"comment": "nginx-filesystem is earlier than 1:1.14.1-9.module_el8.4.0+2221+af250afe.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192799006",
+										"comment": "nginx-filesystem is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500121",
+										"comment": "AlmaLinux arch is aarch64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201927990053",
+										"comment": "nginx-filesystem is earlier than 1:1.14.1-9.module_el8.5.0+34+dc1cfba5.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192799006",
+										"comment": "nginx-filesystem is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201927990071",
+										"comment": "nginx-mod-http-image-filter is earlier than 1:1.14.1-9.module_el8.3.0+2165+af250afe.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192799008",
+										"comment": "nginx-mod-http-image-filter is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201927990072",
+										"comment": "nginx-mod-http-image-filter is earlier than 1:1.14.1-9.module_el8.4.0+2221+af250afe.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192799008",
+										"comment": "nginx-mod-http-image-filter is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201927990073",
+										"comment": "nginx-mod-http-image-filter is earlier than 1:1.14.1-9.module_el8.5.0+34+dc1cfba5.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192799008",
+										"comment": "nginx-mod-http-image-filter is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201927990091",
+										"comment": "nginx-mod-http-perl is earlier than 1:1.14.1-9.module_el8.3.0+2165+af250afe.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192799010",
+										"comment": "nginx-mod-http-perl is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201927990092",
+										"comment": "nginx-mod-http-perl is earlier than 1:1.14.1-9.module_el8.4.0+2221+af250afe.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192799010",
+										"comment": "nginx-mod-http-perl is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201927990093",
+										"comment": "nginx-mod-http-perl is earlier than 1:1.14.1-9.module_el8.5.0+34+dc1cfba5.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192799010",
+										"comment": "nginx-mod-http-perl is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201927990111",
+										"comment": "nginx-mod-http-xslt-filter is earlier than 1:1.14.1-9.module_el8.3.0+2165+af250afe.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192799012",
+										"comment": "nginx-mod-http-xslt-filter is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201927990112",
+										"comment": "nginx-mod-http-xslt-filter is earlier than 1:1.14.1-9.module_el8.4.0+2221+af250afe.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192799012",
+										"comment": "nginx-mod-http-xslt-filter is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201927990113",
+										"comment": "nginx-mod-http-xslt-filter is earlier than 1:1.14.1-9.module_el8.5.0+34+dc1cfba5.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192799012",
+										"comment": "nginx-mod-http-xslt-filter is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201927990131",
+										"comment": "nginx-mod-mail is earlier than 1:1.14.1-9.module_el8.3.0+2165+af250afe.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192799014",
+										"comment": "nginx-mod-mail is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201927990132",
+										"comment": "nginx-mod-mail is earlier than 1:1.14.1-9.module_el8.4.0+2221+af250afe.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192799014",
+										"comment": "nginx-mod-mail is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201927990133",
+										"comment": "nginx-mod-mail is earlier than 1:1.14.1-9.module_el8.5.0+34+dc1cfba5.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192799014",
+										"comment": "nginx-mod-mail is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201927990151",
+										"comment": "nginx-mod-stream is earlier than 1:1.14.1-9.module_el8.3.0+2165+af250afe.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192799016",
+										"comment": "nginx-mod-stream is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201927990152",
+										"comment": "nginx-mod-stream is earlier than 1:1.14.1-9.module_el8.4.0+2221+af250afe.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192799016",
+										"comment": "nginx-mod-stream is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201927990153",
+										"comment": "nginx-mod-stream is earlier than 1:1.14.1-9.module_el8.5.0+34+dc1cfba5.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192799016",
+										"comment": "nginx-mod-stream is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20192799017",
+						"comment": "Module nginx:1.14 is enabled"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

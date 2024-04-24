@@ -1,0 +1,152 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20211789",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:1789: gssdp and gupnp security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:1789",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1789.html"
+			},
+			{
+				"ref_id": "ALSA-2021:1789",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1789.html"
+			},
+			{
+				"ref_id": "CVE-2020-12695",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-12695"
+			}
+		],
+		"Description": "GUPnP is an object-oriented open source framework for creating UPnP devices and control points, written in C using GObject and libsoup. The GUPnP API is intended to be easy to use, efficient and flexible.\nGSSDP implements resource discovery and announcement over SSDP and is part of gUPnP. \nThe following packages have been upgraded to a later upstream version: gssdp (1.0.5), gupnp (1.0.6). (BZ#1846589, BZ#1861928)\nSecurity Fix(es):\n* hostapd: UPnP SUBSCRIBE misbehavior in WPS AP (CVE-2020-12695)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-05-18"
+			},
+			"updated": {
+				"date": "2021-05-18"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1846006",
+					"id": "1846006"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2020-12695",
+					"public": "20200608",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-12695",
+					"impact": "moderate",
+					"cwe": "CWE-20->(CWE-400|CWE-918)",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211789001",
+										"comment": "gssdp is earlier than 0:1.0.5-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211789002",
+										"comment": "gssdp is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211789003",
+										"comment": "gssdp-devel is earlier than 0:1.0.5-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211789004",
+										"comment": "gssdp-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211789005",
+										"comment": "gssdp-docs is earlier than 0:1.0.5-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211789006",
+										"comment": "gssdp-docs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211789007",
+										"comment": "gupnp is earlier than 0:1.0.6-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211789008",
+										"comment": "gupnp is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211789009",
+										"comment": "gupnp-devel is earlier than 0:1.0.6-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211789010",
+										"comment": "gupnp-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

@@ -1,0 +1,87 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20221991",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:1991: cpio security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:1991",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-1991.html"
+			},
+			{
+				"ref_id": "ALSA-2022:1991",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-1991.html"
+			},
+			{
+				"ref_id": "CVE-2021-38185",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-38185"
+			}
+		],
+		"Description": "The cpio packages provide the GNU cpio utility for creating and extracting archives, or copying files from one place to another.\nSecurity Fix(es):\n* cpio: integer overflow in ds_fgetstr() in dstring.c can lead to an out-of-bounds write via a crafted pattern file (CVE-2021-38185)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-05-10"
+			},
+			"updated": {
+				"date": "2022-05-10"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1991731",
+					"id": "1991731"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-38185",
+					"public": "20210806",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-38185",
+					"impact": "moderate",
+					"cwe": "CWE-190->CWE-787",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20221991001",
+						"comment": "cpio is earlier than 0:2.12-11.el8"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20211582002",
+						"comment": "cpio is signed with AlmaLinux OS 8 key"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

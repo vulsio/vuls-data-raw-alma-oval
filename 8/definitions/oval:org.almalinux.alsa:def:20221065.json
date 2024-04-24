@@ -1,0 +1,138 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20221065",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:1065: openssl security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:1065",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-1065.html"
+			},
+			{
+				"ref_id": "ALSA-2022:1065",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-1065.html"
+			},
+			{
+				"ref_id": "CVE-2022-0778",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-0778"
+			}
+		],
+		"Description": "OpenSSL is a toolkit that implements the Secure Sockets Layer (SSL) and Transport Layer Security (TLS) protocols, as well as a full-strength general-purpose cryptography library.\nSecurity Fix(es):\n* openssl: Infinite loop in BN_mod_sqrt() reachable when parsing certificates (CVE-2022-0778)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-03-28"
+			},
+			"updated": {
+				"date": "2022-03-28"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2062202",
+					"id": "2062202"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-0778",
+					"public": "20220315",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-0778",
+					"impact": "important",
+					"cwe": "CWE-835",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20221065001",
+										"comment": "openssl is earlier than 1:1.1.1k-6.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193700002",
+										"comment": "openssl is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20221065003",
+										"comment": "openssl-devel is earlier than 1:1.1.1k-6.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193700004",
+										"comment": "openssl-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20221065005",
+										"comment": "openssl-libs is earlier than 1:1.1.1k-6.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193700006",
+										"comment": "openssl-libs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20221065007",
+										"comment": "openssl-perl is earlier than 1:1.1.1k-6.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193700008",
+										"comment": "openssl-perl is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

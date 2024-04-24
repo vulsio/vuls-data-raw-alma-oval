@@ -1,0 +1,104 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20227700",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:7700: gdisk security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:7700",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7700.html"
+			},
+			{
+				"ref_id": "CVE-2020-0256",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-0256"
+			},
+			{
+				"ref_id": "CVE-2021-0308",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-0308"
+			},
+			{
+				"ref_id": "ALSA-2022:7700",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7700.html"
+			}
+		],
+		"Description": "The gdisk packages provide the gdisk partitioning utility for GUID Partition Table (GPT) disks. The utility features a command-line interface similar to fdisk, direct manipulation of partition table structures, recovery tools to deal with corrupt partition tables, and the ability to convert Master Boot Record (MBR) disks to the GPT format.\n\nSecurity Fix(es):\n\n* gdisk: possible out-of-bounds-write in LoadPartitionTable of gpt.cc (CVE-2020-0256)\n* gdisk: possible out-of-bounds-write in ReadLogicalParts of basicmbr.cc (CVE-2021-0308)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-11-08"
+			},
+			"updated": {
+				"date": "2022-11-08"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2051939",
+					"id": "2051939"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2051943",
+					"id": "2051943"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2020-0256",
+					"public": "20220204",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-0256",
+					"impact": "Moderate",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2021-0308",
+					"public": "20220204",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-0308",
+					"impact": "Moderate",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20227700001",
+						"comment": "gdisk is earlier than 0:1.0.3-11.el8"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20227700002",
+						"comment": "gdisk is signed with AlmaLinux OS 8 key"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

@@ -1,0 +1,86 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20230284",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:0284: sudo security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2023:0284",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-0284.html"
+			},
+			{
+				"ref_id": "CVE-2023-22809",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-22809"
+			},
+			{
+				"ref_id": "ALSA-2023:0284",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-0284.html"
+			}
+		],
+		"Description": "The sudo packages contain the sudo utility which allows system administrators to provide certain users with the permission to execute privileged commands, which are used for system management purposes, without having to log in as root.\n\nSecurity Fix(es):\n\n* sudo: arbitrary file write with privileges of the RunAs user (CVE-2023-22809)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-01-23"
+			},
+			"updated": {
+				"date": "2023-01-23"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2161142",
+					"id": "2161142"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-22809",
+					"public": "20230118",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-22809",
+					"impact": "Important",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20230284001",
+						"comment": "sudo is earlier than 0:1.8.29-8.el8_7.1"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20193694002",
+						"comment": "sudo is signed with AlmaLinux OS 8 key"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

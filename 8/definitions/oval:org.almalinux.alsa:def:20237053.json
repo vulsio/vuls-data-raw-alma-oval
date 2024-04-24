@@ -1,0 +1,234 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20237053",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:7053: ghostscript security and bug fix update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2023:7053",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-7053.html"
+			},
+			{
+				"ref_id": "CVE-2023-28879",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-28879"
+			},
+			{
+				"ref_id": "CVE-2023-38559",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-38559"
+			},
+			{
+				"ref_id": "CVE-2023-4042",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-4042"
+			},
+			{
+				"ref_id": "ALSA-2023:7053",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-7053.html"
+			}
+		],
+		"Description": "The Ghostscript suite contains utilities for rendering PostScript and PDF documents. Ghostscript translates PostScript code to common bitmap formats so that the code can be displayed or printed.\n\nSecurity Fix(es):\n\n* ghostscript: buffer overflow in base/sbcp.c leading to data corruption (CVE-2023-28879)\n* ghostscript: Out-of-bound read in base/gdevdevn.c:1973 in devn_pcx_write_rle could result in DoS (CVE-2023-38559)\n* ghostscript: Incomplete fix for CVE-2020-16305 (CVE-2023-4042)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-11-14"
+			},
+			"updated": {
+				"date": "2023-11-14"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2184585",
+					"id": "2184585"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2224367",
+					"id": "2224367"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2228151",
+					"id": "2228151"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-28879",
+					"public": "20230331",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-28879",
+					"impact": "Moderate",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2023-38559",
+					"public": "20230717",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-38559",
+					"impact": "Moderate",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-4042",
+					"public": "20230823",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-4042",
+					"impact": "Low",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237053001",
+										"comment": "ghostscript is earlier than 0:9.27-11.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190971002",
+										"comment": "ghostscript is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237053003",
+										"comment": "ghostscript-doc is earlier than 0:9.27-11.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190971004",
+										"comment": "ghostscript-doc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237053005",
+										"comment": "ghostscript-tools-dvipdf is earlier than 0:9.27-11.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190971006",
+										"comment": "ghostscript-tools-dvipdf is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237053007",
+										"comment": "ghostscript-tools-fonts is earlier than 0:9.27-11.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190971008",
+										"comment": "ghostscript-tools-fonts is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237053009",
+										"comment": "ghostscript-tools-printing is earlier than 0:9.27-11.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190971010",
+										"comment": "ghostscript-tools-printing is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237053011",
+										"comment": "ghostscript-x11 is earlier than 0:9.27-11.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190971012",
+										"comment": "ghostscript-x11 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237053013",
+										"comment": "libgs is earlier than 0:9.27-11.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190971014",
+										"comment": "libgs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237053015",
+										"comment": "libgs-devel is earlier than 0:9.27-11.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20190971016",
+										"comment": "libgs-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

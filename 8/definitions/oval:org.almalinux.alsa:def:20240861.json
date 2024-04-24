@@ -1,0 +1,311 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20240861",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:0861: gimp:2.8 security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2024:0861",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-0861.html"
+			},
+			{
+				"ref_id": "CVE-2023-44442",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-44442"
+			},
+			{
+				"ref_id": "CVE-2023-44444",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-44444"
+			},
+			{
+				"ref_id": "ALSA-2024:0861",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-0861.html"
+			}
+		],
+		"Description": "The GIMP (GNU Image Manipulation Program) is an image composition and editing program. GIMP provides a large image manipulation toolbox, including channel operations and layers, effects, sub-pixel imaging and anti-aliasing, and conversions, all with multi-level undo.\n\nSecurity Fix(es):\n\n* gimp: PSD buffer overflow RCE (CVE-2023-44442)\n* gimp: psp off-by-one RCE (CVE-2023-44444)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-02-19"
+			},
+			"updated": {
+				"date": "2024-02-19"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2249942",
+					"id": "2249942"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2249946",
+					"id": "2249946"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-44442",
+					"public": "20231114",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-44442",
+					"impact": "Important",
+					"cwe": "CWE-122",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2023-44444",
+					"public": "20231114",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-44444",
+					"impact": "Important",
+					"cwe": "CWE-193",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterias": [
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20240861001",
+														"comment": "gimp is earlier than 2:2.8.22-25.module_el8.9.0+3725+d1441900"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20240861002",
+														"comment": "gimp is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20240861003",
+														"comment": "gimp-devel is earlier than 2:2.8.22-25.module_el8.9.0+3725+d1441900"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20240861004",
+														"comment": "gimp-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20240861005",
+														"comment": "gimp-devel-tools is earlier than 2:2.8.22-25.module_el8.9.0+3725+d1441900"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20240861006",
+														"comment": "gimp-devel-tools is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20240861007",
+														"comment": "gimp-libs is earlier than 2:2.8.22-25.module_el8.9.0+3725+d1441900"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20240861008",
+														"comment": "gimp-libs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20240861009",
+														"comment": "pygobject2 is earlier than 0:2.28.7-4.module_el8.9.0+3725+d1441900"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20240861010",
+														"comment": "pygobject2 is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20240861011",
+														"comment": "pygobject2-codegen is earlier than 0:2.28.7-4.module_el8.9.0+3725+d1441900"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20240861012",
+														"comment": "pygobject2-codegen is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20240861013",
+														"comment": "pygobject2-devel is earlier than 0:2.28.7-4.module_el8.9.0+3725+d1441900"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20240861014",
+														"comment": "pygobject2-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20240861015",
+														"comment": "pygobject2-doc is earlier than 0:2.28.7-4.module_el8.9.0+3725+d1441900"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20240861016",
+														"comment": "pygobject2-doc is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20240861017",
+														"comment": "pygtk2 is earlier than 0:2.24.0-25.module_el8.9.0+3725+d1441900"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20240861018",
+														"comment": "pygtk2 is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20240861019",
+														"comment": "pygtk2-codegen is earlier than 0:2.24.0-25.module_el8.9.0+3725+d1441900"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20240861020",
+														"comment": "pygtk2-codegen is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20240861021",
+														"comment": "pygtk2-devel is earlier than 0:2.24.0-25.module_el8.9.0+3725+d1441900"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20240861022",
+														"comment": "pygtk2-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20240861023",
+														"comment": "pygtk2-doc is earlier than 0:2.24.0-25.module_el8.9.0+3725+d1441900"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20240861024",
+														"comment": "pygtk2-doc is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20240861025",
+														"comment": "python2-cairo is earlier than 0:1.16.3-6.module_el8.9.0+3725+d1441900"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20240861026",
+														"comment": "python2-cairo is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20240861027",
+														"comment": "python2-cairo-devel is earlier than 0:1.16.3-6.module_el8.9.0+3725+d1441900"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20240861028",
+														"comment": "python2-cairo-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240861029",
+										"comment": "Module gimp:2.8 is enabled"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

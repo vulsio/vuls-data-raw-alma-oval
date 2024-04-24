@@ -1,0 +1,305 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20231743",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:1743: nodejs:14 security, bug fix, and enhancement update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2023:1743",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-1743.html"
+			},
+			{
+				"ref_id": "CVE-2021-35065",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35065"
+			},
+			{
+				"ref_id": "CVE-2022-25881",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-25881"
+			},
+			{
+				"ref_id": "CVE-2022-3517",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-3517"
+			},
+			{
+				"ref_id": "CVE-2022-38900",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-38900"
+			},
+			{
+				"ref_id": "CVE-2022-4904",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-4904"
+			},
+			{
+				"ref_id": "CVE-2023-23918",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-23918"
+			},
+			{
+				"ref_id": "CVE-2023-23920",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-23920"
+			},
+			{
+				"ref_id": "ALSA-2023:1743",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-1743.html"
+			}
+		],
+		"Description": "Node.js is a software development platform for building fast and scalable network applications in the JavaScript programming language. \n\nThe following packages have been upgraded to a later upstream version: nodejs (14.21.3).\n\nSecurity Fix(es):\n\n* decode-uri-component: improper input validation resulting in DoS (CVE-2022-38900)\n* glob-parent: Regular Expression Denial of Service (CVE-2021-35065)\n* nodejs-minimatch: ReDoS via the braceExpand function (CVE-2022-3517)\n* c-ares: buffer overflow in config_sortlist() due to missing string length check (CVE-2022-4904)\n* http-cache-semantics: Regular Expression Denial of Service (ReDoS) vulnerability (CVE-2022-25881)\n* Node.js: Permissions policies can be bypassed via process.mainModule (CVE-2023-23918)\n* Node.js: insecure loading of ICU data through ICU_DATA environment variable (CVE-2023-23920)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-04-12"
+			},
+			"updated": {
+				"date": "2023-04-12"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2134609",
+					"id": "2134609"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2156324",
+					"id": "2156324"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2165824",
+					"id": "2165824"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2168631",
+					"id": "2168631"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2170644",
+					"id": "2170644"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2171935",
+					"id": "2171935"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2172217",
+					"id": "2172217"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-35065",
+					"public": "20221226",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35065",
+					"impact": "Moderate",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-25881",
+					"public": "20230131",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-25881",
+					"impact": "Moderate",
+					"cwe": "CWE-1333",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-3517",
+					"public": "20220206",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-3517",
+					"impact": "Moderate",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-38900",
+					"public": "20221128",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-38900",
+					"impact": "Important",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-4904",
+					"public": "20221213",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-4904",
+					"impact": "Moderate",
+					"cwe": "CWE-20->CWE-119",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H"
+				},
+				{
+					"text": "CVE-2023-23918",
+					"public": "20230216",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-23918",
+					"impact": "Moderate",
+					"cwe": "CWE-863",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2023-23920",
+					"public": "20230216",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-23920",
+					"impact": "Low",
+					"cwe": "CWE-426",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:U/C:N/I:H/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterias": [
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20231743001",
+														"comment": "nodejs is earlier than 1:14.21.3-1.module_el8.7.0+3551+53700ee8"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alea:tst:20200330002",
+														"comment": "nodejs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20231743003",
+														"comment": "nodejs-devel is earlier than 1:14.21.3-1.module_el8.7.0+3551+53700ee8"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alea:tst:20200330004",
+														"comment": "nodejs-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20231743005",
+														"comment": "nodejs-docs is earlier than 1:14.21.3-1.module_el8.7.0+3551+53700ee8"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alea:tst:20200330006",
+														"comment": "nodejs-docs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20231743007",
+														"comment": "nodejs-full-i18n is earlier than 1:14.21.3-1.module_el8.7.0+3551+53700ee8"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alea:tst:20225139008",
+														"comment": "nodejs-full-i18n is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20231743009",
+														"comment": "nodejs-nodemon is earlier than 0:2.0.20-3.module_el8.7.0+3551+53700ee8"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alea:tst:20200330008",
+														"comment": "nodejs-nodemon is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20210551011",
+														"comment": "nodejs-packaging is earlier than 0:23-3.module_el8.4.0+2522+3bd42762"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alea:tst:20200330010",
+														"comment": "nodejs-packaging is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20231743013",
+														"comment": "npm is earlier than 1:6.14.18-1.14.21.3.1.module_el8.7.0+3551+53700ee8"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alea:tst:20200330012",
+														"comment": "npm is signed with AlmaLinux OS 8 key"
+													}
+												]
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20210551015",
+										"comment": "Module nodejs:14 is enabled"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

@@ -1,0 +1,283 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20227954",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:7954: podman security and bug fix update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:7954",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-7954.html"
+			},
+			{
+				"ref_id": "CVE-2020-28851",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-28851"
+			},
+			{
+				"ref_id": "CVE-2020-28852",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-28852"
+			},
+			{
+				"ref_id": "CVE-2021-20199",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-20199"
+			},
+			{
+				"ref_id": "CVE-2021-20291",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-20291"
+			},
+			{
+				"ref_id": "CVE-2021-33197",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-33197"
+			},
+			{
+				"ref_id": "CVE-2021-34558",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-34558"
+			},
+			{
+				"ref_id": "CVE-2021-4024",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-4024"
+			},
+			{
+				"ref_id": "CVE-2022-27191",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-27191"
+			},
+			{
+				"ref_id": "ALSA-2022:7954",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-7954.html"
+			}
+		],
+		"Description": "The podman tool manages pods, container images, and containers. It is part of the libpod library, which is for applications that use container pods. Container pods is a concept in Kubernetes.\n\nSecurity Fix(es):\n\n* golang.org/x/text: Panic in language.ParseAcceptLanguage while parsing -u- extension (CVE-2020-28851)\n* golang.org/x/text: Panic in language.ParseAcceptLanguage while processing bcp47 tag (CVE-2020-28852)\n* podman: podman machine spawns gvproxy with port bound to all IPs (CVE-2021-4024)\n* podman: Remote traffic to rootless containers is seen as orginating from localhost (CVE-2021-20199)\n* containers/storage: DoS via malicious image (CVE-2021-20291)\n* golang: net/http/httputil: ReverseProxy forwards connection headers if first one is empty (CVE-2021-33197)\n* golang: crypto/tls: certificate of wrong type is causing TLS client to panic (CVE-2021-34558)\n* golang: crash in a golang.org/x/crypto/ssh server (CVE-2022-27191)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-11-15"
+			},
+			"updated": {
+				"date": "2022-11-15"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1913333",
+					"id": "1913333"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1913338",
+					"id": "1913338"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1919050",
+					"id": "1919050"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1939485",
+					"id": "1939485"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1983596",
+					"id": "1983596"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1989570",
+					"id": "1989570"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2026675",
+					"id": "2026675"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2064702",
+					"id": "2064702"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2020-28851",
+					"public": "20210102",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-28851",
+					"impact": "Moderate",
+					"cwe": "CWE-129",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-28852",
+					"public": "20210102",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-28852",
+					"impact": "Moderate",
+					"cwe": "CWE-129",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-20199",
+					"public": "20210101",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-20199",
+					"impact": "moderate",
+					"cwe": "CWE-346",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N"
+				},
+				{
+					"text": "CVE-2021-20291",
+					"public": "20210401",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-20291",
+					"impact": "moderate",
+					"cwe": "CWE-667",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-33197",
+					"public": "20210521",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-33197",
+					"impact": "moderate",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+				},
+				{
+					"text": "CVE-2021-34558",
+					"public": "20210713",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-34558",
+					"impact": "moderate",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-4024",
+					"public": "20211124",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-4024",
+					"impact": "Moderate",
+					"cwe": "(CWE-200|CWE-346)",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:L"
+				},
+				{
+					"text": "CVE-2022-27191",
+					"public": "20220315",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-27191",
+					"impact": "Moderate",
+					"cwe": "CWE-327",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227954001",
+										"comment": "podman is earlier than 2:4.2.0-3.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227954002",
+										"comment": "podman is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227954003",
+										"comment": "podman-docker is earlier than 2:4.2.0-3.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227954004",
+										"comment": "podman-docker is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227954005",
+										"comment": "podman-gvproxy is earlier than 2:4.2.0-3.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227954006",
+										"comment": "podman-gvproxy is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227954007",
+										"comment": "podman-plugins is earlier than 2:4.2.0-3.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227954008",
+										"comment": "podman-plugins is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227954009",
+										"comment": "podman-remote is earlier than 2:4.2.0-3.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227954010",
+										"comment": "podman-remote is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227954011",
+										"comment": "podman-tests is earlier than 2:4.2.0-3.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227954012",
+										"comment": "podman-tests is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

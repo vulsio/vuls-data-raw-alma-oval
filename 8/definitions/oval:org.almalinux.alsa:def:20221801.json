@@ -1,0 +1,87 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20221801",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:1801: gfbgraph security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:1801",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-1801.html"
+			},
+			{
+				"ref_id": "ALSA-2022:1801",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-1801.html"
+			},
+			{
+				"ref_id": "CVE-2021-39358",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-39358"
+			}
+		],
+		"Description": "GLib/GObject wrapper for the Facebook Graph API that integrates with GNOME Online Accounts.\nThe following packages have been upgraded to a later upstream version: gfbgraph (0.2.4). (BZ#1997941)\nSecurity Fix(es):\n* gfbgraph: missing TLS certificate verification (CVE-2021-39358)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-05-10"
+			},
+			"updated": {
+				"date": "2022-05-10"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1997139",
+					"id": "1997139"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-39358",
+					"public": "20210822",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-39358",
+					"impact": "moderate",
+					"cwe": "CWE-295",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20221801001",
+						"comment": "gfbgraph is earlier than 0:0.2.4-1.el8"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20221801002",
+						"comment": "gfbgraph is signed with AlmaLinux OS 8 key"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

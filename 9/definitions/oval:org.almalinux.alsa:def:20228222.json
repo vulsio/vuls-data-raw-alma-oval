@@ -1,0 +1,104 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20228222",
+	"version": "638",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:8222: xorg-x11-server-Xwayland security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:8222",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-8222.html"
+			},
+			{
+				"ref_id": "CVE-2022-2319",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-2319"
+			},
+			{
+				"ref_id": "CVE-2022-2320",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-2320"
+			},
+			{
+				"ref_id": "ALSA-2022:8222",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-8222.html"
+			}
+		],
+		"Description": "Xwayland is an X server for running X clients under Wayland.\n\nSecurity Fix(es):\n\n* xorg-x11-server: X.Org Server ProcXkbSetGeometry out-of-bounds access (CVE-2022-2319)\n* xorg-x11-server: out-of-bounds access in ProcXkbSetDeviceInfo request handler of the Xkb extension (CVE-2022-2320)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-11-15"
+			},
+			"updated": {
+				"date": "2022-11-15"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2106671",
+					"id": "2106671"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2106683",
+					"id": "2106683"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-2319",
+					"public": "20220713",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-2319",
+					"impact": "Moderate",
+					"cwe": "CWE-1320",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:L"
+				},
+				{
+					"text": "CVE-2022-2320",
+					"public": "20220712",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-2320",
+					"impact": "Moderate",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20228222001",
+						"comment": "xorg-x11-server-Xwayland is earlier than 0:21.1.3-3.el9"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20228222002",
+						"comment": "xorg-x11-server-Xwayland is signed with AlmaLinux OS 9 key"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

@@ -1,0 +1,140 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20214408",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:4408: libsolv security and bug fix update (Low)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:4408",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4408.html"
+			},
+			{
+				"ref_id": "ALSA-2021:4408",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4408.html"
+			},
+			{
+				"ref_id": "CVE-2021-3200",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-3200"
+			}
+		],
+		"Description": "The libsolv packages provide a library for resolving package dependencies using a satisfiability algorithm.\nSecurity Fix(es):\n* libsolv: heap-based buffer overflow in testcase_read() in src/testcase.c (CVE-2021-3200)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Low",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-11-09"
+			},
+			"updated": {
+				"date": "2021-11-09"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1962307",
+					"id": "1962307"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-3200",
+					"public": "20201213",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-3200",
+					"impact": "low",
+					"cwe": "CWE-20->CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214408001",
+										"comment": "libsolv is earlier than 0:0.7.19-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193583002",
+										"comment": "libsolv is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214408003",
+										"comment": "libsolv-devel is earlier than 0:0.7.19-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214060004",
+										"comment": "libsolv-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214408005",
+										"comment": "libsolv-tools is earlier than 0:0.7.19-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214060006",
+										"comment": "libsolv-tools is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214408007",
+										"comment": "python3-solv is earlier than 0:0.7.19-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204508004",
+										"comment": "python3-solv is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

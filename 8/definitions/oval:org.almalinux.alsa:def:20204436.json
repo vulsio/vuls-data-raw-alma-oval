@@ -1,0 +1,140 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20204436",
+	"version": "638",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2020:4436: gnome-software and fwupd security, bug fix, and enhancement update (Low)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2020:4436",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-4436.html"
+			},
+			{
+				"ref_id": "ALSA-2020:4436",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-4436.html"
+			},
+			{
+				"ref_id": "CVE-2020-10759",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-10759"
+			}
+		],
+		"Description": "The gnome-software packages contain an application that makes it easy to add, remove, and update software in the GNOME desktop.\nThe appstream-data package provides the distribution specific AppStream metadata required for the GNOME and KDE software centers. \nThe fwupd packages provide a service that allows session software to update device firmware.\nThe following packages have been upgraded to a later upstream version: gnome-software (3.36.1), fwupd (1.4.2).\nSecurity Fix(es):\n* fwupd: Possible bypass in signature verification (CVE-2020-10759)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Low",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2020-11-04"
+			},
+			"updated": {
+				"date": "2020-11-04"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1844316",
+					"id": "1844316"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2020-10759",
+					"public": "20200605",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-10759",
+					"impact": "low",
+					"cwe": "CWE-347",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204436001",
+										"comment": "libxmlb is earlier than 0:0.1.15-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204436002",
+										"comment": "libxmlb is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204436003",
+										"comment": "gnome-software is earlier than 0:3.36.1-4.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193553060",
+										"comment": "gnome-software is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204436005",
+										"comment": "appstream-data is earlier than 0:8-20200724.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193553122",
+										"comment": "appstream-data is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204436007",
+										"comment": "fwupd is earlier than 0:1.4.2-4.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203216010",
+										"comment": "fwupd is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

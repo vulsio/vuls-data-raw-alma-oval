@@ -1,0 +1,1265 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20211983",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:1983: idm:DL1 security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:1983",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1983.html"
+			},
+			{
+				"ref_id": "ALSA-2021:1983",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1983.html"
+			},
+			{
+				"ref_id": "CVE-2021-3480",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-3480"
+			}
+		],
+		"Description": "AlmaLinux Identity Management (IdM) is a centralized authentication, identity management, and authorization solution for both traditional and cloud-based enterprise environments. \nSecurity Fix(es):\n* slapi-nis: NULL dereference (DoS) with specially crafted Binding DN (CVE-2021-3480)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-05-18"
+			},
+			"updated": {
+				"date": "2021-05-18"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1944640",
+					"id": "1944640"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-3480",
+					"public": "20210517",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-3480",
+					"impact": "important",
+					"cwe": "CWE-476",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460321",
+										"comment": "bind-dyndb-ldap is earlier than 0:11.6-2.module_el8.5.0+2603+92118e57"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268002",
+										"comment": "bind-dyndb-ldap is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460322",
+										"comment": "bind-dyndb-ldap is earlier than 0:11.6-2.module_el8.5.0+231+72a44752"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268002",
+										"comment": "bind-dyndb-ldap is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201942680031",
+										"comment": "custodia is earlier than 0:0.6.0-3.module_el8.5.0+2603+92118e57"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268004",
+										"comment": "custodia is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201942680032",
+										"comment": "custodia is earlier than 0:0.6.0-3.module_el8.5.0+231+72a44752"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268004",
+										"comment": "custodia is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460361",
+										"comment": "ipa-client is earlier than 0:4.9.2-3.module_el8.4.0+2334+a614829d.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268006",
+										"comment": "ipa-client is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460362",
+										"comment": "ipa-client is earlier than 0:4.9.2-3.module_el8.4.0+2346+a614829d.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268006",
+										"comment": "ipa-client is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460363",
+										"comment": "ipa-client is earlier than 0:4.9.2-3.module_el8.5.0+750+c59b186b"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201942680062",
+										"comment": "ipa-client is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460371",
+										"comment": "ipa-client-common is earlier than 0:4.9.2-3.module_el8.4.0+2334+a614829d.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268008",
+										"comment": "ipa-client-common is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500111",
+										"comment": "AlmaLinux arch is x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460372",
+										"comment": "ipa-client-common is earlier than 0:4.9.2-3.module_el8.4.0+2346+a614829d.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268008",
+										"comment": "ipa-client-common is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500121",
+										"comment": "AlmaLinux arch is aarch64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460373",
+										"comment": "ipa-client-common is earlier than 0:4.9.2-3.module_el8.5.0+750+c59b186b"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201942680082",
+										"comment": "ipa-client-common is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460381",
+										"comment": "ipa-client-epn is earlier than 0:4.9.2-3.module_el8.4.0+2334+a614829d.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204670010",
+										"comment": "ipa-client-epn is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460382",
+										"comment": "ipa-client-epn is earlier than 0:4.9.2-3.module_el8.4.0+2346+a614829d.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204670010",
+										"comment": "ipa-client-epn is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460383",
+										"comment": "ipa-client-epn is earlier than 0:4.9.2-3.module_el8.5.0+750+c59b186b"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202046700102",
+										"comment": "ipa-client-epn is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460391",
+										"comment": "ipa-client-samba is earlier than 0:4.9.2-3.module_el8.4.0+2334+a614829d.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268010",
+										"comment": "ipa-client-samba is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460392",
+										"comment": "ipa-client-samba is earlier than 0:4.9.2-3.module_el8.4.0+2346+a614829d.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268010",
+										"comment": "ipa-client-samba is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460393",
+										"comment": "ipa-client-samba is earlier than 0:4.9.2-3.module_el8.5.0+750+c59b186b"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201942680102",
+										"comment": "ipa-client-samba is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460401",
+										"comment": "ipa-common is earlier than 0:4.9.2-3.module_el8.4.0+2334+a614829d.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268012",
+										"comment": "ipa-common is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500111",
+										"comment": "AlmaLinux arch is x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460402",
+										"comment": "ipa-common is earlier than 0:4.9.2-3.module_el8.4.0+2346+a614829d.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268012",
+										"comment": "ipa-common is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500121",
+										"comment": "AlmaLinux arch is aarch64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460403",
+										"comment": "ipa-common is earlier than 0:4.9.2-3.module_el8.5.0+750+c59b186b"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201942680122",
+										"comment": "ipa-common is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460411",
+										"comment": "ipa-healthcheck is earlier than 0:0.7-3.module_el8.4.0+2501+94d209c1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268014",
+										"comment": "ipa-healthcheck is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460412",
+										"comment": "ipa-healthcheck is earlier than 0:0.7-3.module_el8.5.0+750+c59b186b"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201942680142",
+										"comment": "ipa-healthcheck is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460431",
+										"comment": "ipa-healthcheck-core is earlier than 0:0.7-3.module_el8.4.0+2501+94d209c1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204670018",
+										"comment": "ipa-healthcheck-core is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460432",
+										"comment": "ipa-healthcheck-core is earlier than 0:0.7-3.module_el8.5.0+750+c59b186b"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202046700182",
+										"comment": "ipa-healthcheck-core is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460441",
+										"comment": "ipa-python-compat is earlier than 0:4.9.2-3.module_el8.4.0+2334+a614829d.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268018",
+										"comment": "ipa-python-compat is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500111",
+										"comment": "AlmaLinux arch is x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460442",
+										"comment": "ipa-python-compat is earlier than 0:4.9.2-3.module_el8.4.0+2346+a614829d.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268018",
+										"comment": "ipa-python-compat is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500121",
+										"comment": "AlmaLinux arch is aarch64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460443",
+										"comment": "ipa-python-compat is earlier than 0:4.9.2-3.module_el8.5.0+750+c59b186b"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201942680182",
+										"comment": "ipa-python-compat is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460451",
+										"comment": "ipa-selinux is earlier than 0:4.9.2-3.module_el8.4.0+2334+a614829d.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204670022",
+										"comment": "ipa-selinux is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500111",
+										"comment": "AlmaLinux arch is x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460452",
+										"comment": "ipa-selinux is earlier than 0:4.9.2-3.module_el8.4.0+2346+a614829d.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204670022",
+										"comment": "ipa-selinux is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500121",
+										"comment": "AlmaLinux arch is aarch64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460453",
+										"comment": "ipa-selinux is earlier than 0:4.9.2-3.module_el8.5.0+750+c59b186b"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202046700222",
+										"comment": "ipa-selinux is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460461",
+										"comment": "ipa-server is earlier than 0:4.9.2-3.module_el8.4.0+2334+a614829d.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268020",
+										"comment": "ipa-server is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460462",
+										"comment": "ipa-server is earlier than 0:4.9.2-3.module_el8.4.0+2346+a614829d.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268020",
+										"comment": "ipa-server is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460463",
+										"comment": "ipa-server is earlier than 0:4.9.2-3.module_el8.5.0+750+c59b186b"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201942680202",
+										"comment": "ipa-server is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460481",
+										"comment": "ipa-server-common is earlier than 0:4.9.2-3.module_el8.4.0+2334+a614829d.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268022",
+										"comment": "ipa-server-common is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500111",
+										"comment": "AlmaLinux arch is x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460482",
+										"comment": "ipa-server-common is earlier than 0:4.9.2-3.module_el8.4.0+2346+a614829d.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268022",
+										"comment": "ipa-server-common is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500121",
+										"comment": "AlmaLinux arch is aarch64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460483",
+										"comment": "ipa-server-common is earlier than 0:4.9.2-3.module_el8.5.0+750+c59b186b"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201942680222",
+										"comment": "ipa-server-common is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460501",
+										"comment": "ipa-server-dns is earlier than 0:4.9.2-3.module_el8.4.0+2334+a614829d.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268024",
+										"comment": "ipa-server-dns is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500111",
+										"comment": "AlmaLinux arch is x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460502",
+										"comment": "ipa-server-dns is earlier than 0:4.9.2-3.module_el8.4.0+2346+a614829d.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268024",
+										"comment": "ipa-server-dns is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500121",
+										"comment": "AlmaLinux arch is aarch64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460503",
+										"comment": "ipa-server-dns is earlier than 0:4.9.2-3.module_el8.5.0+750+c59b186b"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201942680242",
+										"comment": "ipa-server-dns is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460521",
+										"comment": "ipa-server-trust-ad is earlier than 0:4.9.2-3.module_el8.4.0+2334+a614829d.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268026",
+										"comment": "ipa-server-trust-ad is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460522",
+										"comment": "ipa-server-trust-ad is earlier than 0:4.9.2-3.module_el8.4.0+2346+a614829d.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268026",
+										"comment": "ipa-server-trust-ad is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460523",
+										"comment": "ipa-server-trust-ad is earlier than 0:4.9.2-3.module_el8.5.0+750+c59b186b"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201942680262",
+										"comment": "ipa-server-trust-ad is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460541",
+										"comment": "opendnssec is earlier than 0:2.1.7-1.module_el8.5.0+2603+92118e57"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268028",
+										"comment": "opendnssec is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460542",
+										"comment": "opendnssec is earlier than 0:2.1.7-1.module_el8.5.0+231+72a44752"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268028",
+										"comment": "opendnssec is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201942680291",
+										"comment": "python3-custodia is earlier than 0:0.6.0-3.module_el8.5.0+2603+92118e57"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268030",
+										"comment": "python3-custodia is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201942680292",
+										"comment": "python3-custodia is earlier than 0:0.6.0-3.module_el8.5.0+231+72a44752"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268030",
+										"comment": "python3-custodia is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460581",
+										"comment": "python3-ipaclient is earlier than 0:4.9.2-3.module_el8.4.0+2334+a614829d.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268032",
+										"comment": "python3-ipaclient is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500111",
+										"comment": "AlmaLinux arch is x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460582",
+										"comment": "python3-ipaclient is earlier than 0:4.9.2-3.module_el8.4.0+2346+a614829d.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268032",
+										"comment": "python3-ipaclient is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500121",
+										"comment": "AlmaLinux arch is aarch64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460583",
+										"comment": "python3-ipaclient is earlier than 0:4.9.2-3.module_el8.5.0+750+c59b186b"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201942680322",
+										"comment": "python3-ipaclient is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460591",
+										"comment": "python3-ipalib is earlier than 0:4.9.2-3.module_el8.4.0+2334+a614829d.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268034",
+										"comment": "python3-ipalib is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500111",
+										"comment": "AlmaLinux arch is x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460592",
+										"comment": "python3-ipalib is earlier than 0:4.9.2-3.module_el8.4.0+2346+a614829d.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268034",
+										"comment": "python3-ipalib is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500121",
+										"comment": "AlmaLinux arch is aarch64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460593",
+										"comment": "python3-ipalib is earlier than 0:4.9.2-3.module_el8.5.0+750+c59b186b"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201942680342",
+										"comment": "python3-ipalib is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460601",
+										"comment": "python3-ipaserver is earlier than 0:4.9.2-3.module_el8.4.0+2334+a614829d.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268036",
+										"comment": "python3-ipaserver is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500111",
+										"comment": "AlmaLinux arch is x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460602",
+										"comment": "python3-ipaserver is earlier than 0:4.9.2-3.module_el8.4.0+2346+a614829d.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268036",
+										"comment": "python3-ipaserver is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500121",
+										"comment": "AlmaLinux arch is aarch64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460603",
+										"comment": "python3-ipaserver is earlier than 0:4.9.2-3.module_el8.5.0+750+c59b186b"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201942680362",
+										"comment": "python3-ipaserver is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460621",
+										"comment": "python3-ipatests is earlier than 0:4.9.2-3.module_el8.4.0+2334+a614829d.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211846063",
+										"comment": "python3-ipatests is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500111",
+										"comment": "AlmaLinux arch is x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460622",
+										"comment": "python3-ipatests is earlier than 0:4.9.2-3.module_el8.4.0+2346+a614829d.alma"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211846063",
+										"comment": "python3-ipatests is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500121",
+										"comment": "AlmaLinux arch is aarch64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460623",
+										"comment": "python3-ipatests is earlier than 0:4.9.2-3.module_el8.5.0+750+c59b186b"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460632",
+										"comment": "python3-ipatests is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201942680371",
+										"comment": "python3-jwcrypto is earlier than 0:0.5.0-1.module_el8.5.0+2603+92118e57"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268038",
+										"comment": "python3-jwcrypto is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201942680372",
+										"comment": "python3-jwcrypto is earlier than 0:0.5.0-1.module_el8.5.0+231+72a44752"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268038",
+										"comment": "python3-jwcrypto is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202046700431",
+										"comment": "python3-kdcproxy is earlier than 0:0.4-5.module_el8.5.0+2603+92118e57"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268040",
+										"comment": "python3-kdcproxy is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202046700432",
+										"comment": "python3-kdcproxy is earlier than 0:0.4-5.module_el8.5.0+231+72a44752"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268040",
+										"comment": "python3-kdcproxy is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201942680411",
+										"comment": "python3-pyusb is earlier than 0:1.0.0-9.module_el8.5.0+2603+92118e57"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268042",
+										"comment": "python3-pyusb is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201942680412",
+										"comment": "python3-pyusb is earlier than 0:1.0.0-9.module_el8.5.0+231+72a44752"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268042",
+										"comment": "python3-pyusb is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201942680431",
+										"comment": "python3-qrcode is earlier than 0:5.1-12.module_el8.5.0+2603+92118e57"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268044",
+										"comment": "python3-qrcode is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201942680432",
+										"comment": "python3-qrcode is earlier than 0:5.1-12.module_el8.5.0+231+72a44752"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268044",
+										"comment": "python3-qrcode is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201942680451",
+										"comment": "python3-qrcode-core is earlier than 0:5.1-12.module_el8.5.0+2603+92118e57"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268046",
+										"comment": "python3-qrcode-core is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201942680452",
+										"comment": "python3-qrcode-core is earlier than 0:5.1-12.module_el8.5.0+231+72a44752"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268046",
+										"comment": "python3-qrcode-core is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201942680471",
+										"comment": "python3-yubico is earlier than 0:1.3.2-9.module_el8.5.0+2603+92118e57"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268048",
+										"comment": "python3-yubico is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201942680472",
+										"comment": "python3-yubico is earlier than 0:1.3.2-9.module_el8.5.0+231+72a44752"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268048",
+										"comment": "python3-yubico is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202119830551",
+										"comment": "slapi-nis is earlier than 0:0.56.6-2.module_el8.4.0+2501+94d209c1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268050",
+										"comment": "slapi-nis is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202119830552",
+										"comment": "slapi-nis is earlier than 0:0.56.6-2.module_el8.4.0+789+fad1e5d3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:201942680502",
+										"comment": "slapi-nis is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460731",
+										"comment": "softhsm is earlier than 0:2.6.0-5.module_el8.5.0+2603+92118e57"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268052",
+										"comment": "softhsm is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460732",
+										"comment": "softhsm is earlier than 0:2.6.0-5.module_el8.5.0+231+72a44752"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268052",
+										"comment": "softhsm is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460751",
+										"comment": "softhsm-devel is earlier than 0:2.6.0-5.module_el8.5.0+2603+92118e57"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268054",
+										"comment": "softhsm-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202118460752",
+										"comment": "softhsm-devel is earlier than 0:2.6.0-5.module_el8.5.0+231+72a44752"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20194268054",
+										"comment": "softhsm-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20194268055",
+						"comment": "Module idm:DL1 is enabled"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

@@ -1,0 +1,127 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20221642",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:1642: zlib security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:1642",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-1642.html"
+			},
+			{
+				"ref_id": "ALSA-2022:1642",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-1642.html"
+			},
+			{
+				"ref_id": "CVE-2018-25032",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2018-25032"
+			}
+		],
+		"Description": "The zlib packages provide a general-purpose lossless data compression library that is used by many different programs.\nSecurity Fix(es):\n* zlib: A flaw found in zlib when compressing (not decompressing) certain inputs (CVE-2018-25032)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-04-28"
+			},
+			"updated": {
+				"date": "2022-04-28"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2067945",
+					"id": "2067945"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2018-25032",
+					"public": "20180420",
+					"href": "https://access.redhat.com/security/cve/CVE-2018-25032",
+					"impact": "important",
+					"cwe": "CWE-119",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20221642001",
+										"comment": "zlib is earlier than 0:1.2.11-18.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20221642002",
+										"comment": "zlib is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20221642003",
+										"comment": "zlib-devel is earlier than 0:1.2.11-18.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20221642004",
+										"comment": "zlib-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20221642005",
+										"comment": "zlib-static is earlier than 0:1.2.11-18.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20221642006",
+										"comment": "zlib-static is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

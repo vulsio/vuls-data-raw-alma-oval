@@ -1,0 +1,166 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20213058",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:3058: glib2 security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:3058",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-3058.html"
+			},
+			{
+				"ref_id": "ALSA-2021:3058",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-3058.html"
+			},
+			{
+				"ref_id": "CVE-2021-27218",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-27218"
+			}
+		],
+		"Description": "GLib provides the core application building blocks for libraries and applications written in C. It provides the core object system used in GNOME, the main loop implementation, and a large set of utility functions for strings and common data structures.\nSecurity Fix(es):\n* glib: integer overflow in g_byte_array_new_take function when called with a buffer of 4GB or more on a 64-bit platform (CVE-2021-27218)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-08-10"
+			},
+			"updated": {
+				"date": "2021-08-10"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1929847",
+					"id": "1929847"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-27218",
+					"public": "20210210",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-27218",
+					"impact": "moderate",
+					"cwe": "CWE-190",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20213058001",
+										"comment": "glib2 is earlier than 0:2.56.4-10.el8_4.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193530002",
+										"comment": "glib2 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20213058003",
+										"comment": "glib2-devel is earlier than 0:2.56.4-10.el8_4.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193530004",
+										"comment": "glib2-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20213058005",
+										"comment": "glib2-doc is earlier than 0:2.56.4-10.el8_4.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193530006",
+										"comment": "glib2-doc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20213058007",
+										"comment": "glib2-fam is earlier than 0:2.56.4-10.el8_4.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193530008",
+										"comment": "glib2-fam is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20213058009",
+										"comment": "glib2-static is earlier than 0:2.56.4-10.el8_4.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193530010",
+										"comment": "glib2-static is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20213058011",
+										"comment": "glib2-tests is earlier than 0:2.56.4-10.el8_4.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193530012",
+										"comment": "glib2-tests is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

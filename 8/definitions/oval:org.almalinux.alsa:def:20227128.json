@@ -1,0 +1,141 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20227128",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:7128: postgresql:12 security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:7128",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7128.html"
+			},
+			{
+				"ref_id": "CVE-2022-2625",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-2625"
+			},
+			{
+				"ref_id": "ALSA-2022:7128",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7128.html"
+			}
+		],
+		"Description": "PostgreSQL is an advanced object-relational database management system (DBMS).\n\nSecurity Fix(es):\n\n* postgresql: Extension scripts replace objects not belonging to the extension. (CVE-2022-2625)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-10-25"
+			},
+			"updated": {
+				"date": "2022-10-25"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2113825",
+					"id": "2113825"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-2625",
+					"public": "20220811",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-2625",
+					"impact": "Moderate",
+					"cwe": "CWE-915",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterias": [
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20215235001",
+														"comment": "pg_repack is earlier than 0:1.4.6-3.module_el8.6.0+2760+1746ec94"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20215235002",
+														"comment": "pg_repack is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20215235003",
+														"comment": "pgaudit is earlier than 0:1.4.0-5.module_el8.6.0+2758+4f4474df"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20205620002",
+														"comment": "pgaudit is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20215235005",
+														"comment": "postgres-decoderbufs is earlier than 0:0.10.0-2.module_el8.6.0+2760+1746ec94"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20205620004",
+														"comment": "postgres-decoderbufs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20205620031",
+										"comment": "Module postgresql:12 is enabled"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

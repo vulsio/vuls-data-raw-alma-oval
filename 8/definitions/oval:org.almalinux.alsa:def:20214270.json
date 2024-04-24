@@ -1,0 +1,318 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20214270",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:4270: rust-toolset:rhel8 security, bug fix, and enhancement update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:4270",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4270.html"
+			},
+			{
+				"ref_id": "ALSA-2021:4270",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4270.html"
+			},
+			{
+				"ref_id": "CVE-2021-29922",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-29922"
+			}
+		],
+		"Description": "Rust Toolset provides the Rust programming language compiler rustc, the cargo build tool and dependency manager, and required libraries. \nThe following packages have been upgraded to a later upstream version: rust (1.54.0). (BZ#1945805)\nSecurity Fix(es):\n* rust: incorrect parsing of extraneous zero characters at the beginning of an IP address string (CVE-2021-29922)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-11-09"
+			},
+			"updated": {
+				"date": "2021-11-09"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1991962",
+					"id": "1991962"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-29922",
+					"public": "20210329",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-29922",
+					"impact": "moderate",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202142700011",
+										"comment": "cargo is earlier than 0:1.54.0-2.module_el8.5.0+2565+dc27bae9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211935002",
+										"comment": "cargo is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202142700031",
+										"comment": "cargo-doc is earlier than 0:1.54.0-2.module_el8.5.0+2565+dc27bae9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211935004",
+										"comment": "cargo-doc is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202142700051",
+										"comment": "clippy is earlier than 0:1.54.0-2.module_el8.5.0+2565+dc27bae9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211935006",
+										"comment": "clippy is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202142700071",
+										"comment": "rls is earlier than 0:1.54.0-2.module_el8.5.0+2565+dc27bae9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211935008",
+										"comment": "rls is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202142700091",
+										"comment": "rust is earlier than 0:1.54.0-2.module_el8.5.0+2565+dc27bae9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211935010",
+										"comment": "rust is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202142700111",
+										"comment": "rust-analysis is earlier than 0:1.54.0-2.module_el8.5.0+2565+dc27bae9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211935012",
+										"comment": "rust-analysis is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202142700131",
+										"comment": "rust-debugger-common is earlier than 0:1.54.0-2.module_el8.5.0+2565+dc27bae9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211935014",
+										"comment": "rust-debugger-common is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202142700151",
+										"comment": "rust-doc is earlier than 0:1.54.0-2.module_el8.5.0+2565+dc27bae9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211935016",
+										"comment": "rust-doc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202142700171",
+										"comment": "rust-gdb is earlier than 0:1.54.0-2.module_el8.5.0+2565+dc27bae9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211935018",
+										"comment": "rust-gdb is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202142700191",
+										"comment": "rust-lldb is earlier than 0:1.54.0-2.module_el8.5.0+2565+dc27bae9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211935020",
+										"comment": "rust-lldb is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202142700211",
+										"comment": "rust-src is earlier than 0:1.54.0-2.module_el8.5.0+2565+dc27bae9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211935022",
+										"comment": "rust-src is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202142700231",
+										"comment": "rust-std-static is earlier than 0:1.54.0-2.module_el8.5.0+2565+dc27bae9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211935024",
+										"comment": "rust-std-static is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202142700251",
+										"comment": "rust-std-static-wasm32-unknown-unknown is earlier than 0:1.54.0-2.module_el8.5.0+2565+dc27bae9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214270026",
+										"comment": "rust-std-static-wasm32-unknown-unknown is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202142700271",
+										"comment": "rust-toolset is earlier than 0:1.54.0-1.module_el8.5.0+2599+d655d86c"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211935026",
+										"comment": "rust-toolset is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202142700272",
+										"comment": "rust-toolset is earlier than 0:1.54.0-1.module_el8.5.0+70+a1b7d8f8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211935026",
+										"comment": "rust-toolset is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202142700291",
+										"comment": "rustfmt is earlier than 0:1.54.0-2.module_el8.5.0+2565+dc27bae9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211935028",
+										"comment": "rustfmt is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20211935029",
+						"comment": "Module rust-toolset:rhel8 is enabled"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

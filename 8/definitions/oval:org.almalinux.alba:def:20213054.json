@@ -1,0 +1,205 @@
+{
+	"id": "oval:org.almalinux.alba:def:20213054",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALBA-2021:3054: opencryptoki bug fix and enhancement update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALBA-2021:3054",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALBA-2021-3054.html"
+			},
+			{
+				"ref_id": "ALBA-2021:3054",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALBA-2021-3054.html"
+			},
+			{
+				"ref_id": "CVE-2021-3798",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-3798"
+			}
+		],
+		"Description": "The opencryptoki packages contain version 2.11 of the PKCS#11 API,\nimplemented for IBM Cryptocards, such as IBM 4764 and 4765 crypto cards.\nThese packages includes support for the IBM 4758 Cryptographic CoProcessor\n(with the PKCS#11 firmware loaded), the IBM eServer Cryptographic\nAccelerator (FC 4960 on IBM eServer System p), the IBM Crypto Express2 (FC\n0863 or FC 0870 on IBM System z), and the IBM CP Assist for Cryptographic\nFunction (FC 3863 on IBM System z). The opencryptoki packages also bring a\nsoftware token implementation that can be used without any cryptographic\nhardware. These packages contain the Slot Daemon (pkcsslotd) and general\nutilities.\nBug Fix(es) and Enhancement(s):\n* AlmaLinux8.5 - openCryptoki: Soft token does not check if an EC key is valid\n(BZ#1979173)",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-08-10"
+			},
+			"updated": {
+				"date": "2021-08-10"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1990591",
+					"id": "1990591"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-3798",
+					"public": "20210518",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-3798",
+					"impact": "moderate",
+					"cwe": "CWE-200",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20213054001",
+										"comment": "opencryptoki is earlier than 0:3.15.1-6.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20213054002",
+										"comment": "opencryptoki is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20213054003",
+										"comment": "opencryptoki-ccatok is earlier than 0:3.15.1-6.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20213054004",
+										"comment": "opencryptoki-ccatok is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20213054005",
+										"comment": "opencryptoki-devel is earlier than 0:3.15.1-6.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20213054006",
+										"comment": "opencryptoki-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20213054007",
+										"comment": "opencryptoki-ep11tok is earlier than 0:3.15.1-6.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20213054008",
+										"comment": "opencryptoki-ep11tok is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20213054009",
+										"comment": "opencryptoki-icatok is earlier than 0:3.15.1-6.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20213054010",
+										"comment": "opencryptoki-icatok is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20213054011",
+										"comment": "opencryptoki-icsftok is earlier than 0:3.15.1-6.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20213054012",
+										"comment": "opencryptoki-icsftok is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20213054013",
+										"comment": "opencryptoki-libs is earlier than 0:3.15.1-6.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20213054014",
+										"comment": "opencryptoki-libs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20213054015",
+										"comment": "opencryptoki-swtok is earlier than 0:3.15.1-6.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20213054016",
+										"comment": "opencryptoki-swtok is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20213054017",
+										"comment": "opencryptoki-tpmtok is earlier than 0:3.15.1-6.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20213054018",
+										"comment": "opencryptoki-tpmtok is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

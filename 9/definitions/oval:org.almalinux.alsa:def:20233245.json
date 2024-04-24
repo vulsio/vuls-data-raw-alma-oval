@@ -1,0 +1,356 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20233245",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:3245: git security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2023:3245",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-3245.html"
+			},
+			{
+				"ref_id": "CVE-2023-22490",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-22490"
+			},
+			{
+				"ref_id": "CVE-2023-23946",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-23946"
+			},
+			{
+				"ref_id": "CVE-2023-25652",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-25652"
+			},
+			{
+				"ref_id": "CVE-2023-25815",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-25815"
+			},
+			{
+				"ref_id": "CVE-2023-29007",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-29007"
+			},
+			{
+				"ref_id": "ALSA-2023:3245",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-3245.html"
+			}
+		],
+		"Description": "Git is a distributed revision control system with a decentralized architecture. As opposed to centralized version control systems with a client-server model, Git ensures that each working copy of a Git repository is an exact copy with complete revision history. This not only allows the user to work on and contribute to projects without the need to have permission to push the changes to their official repositories, but also makes it possible for the user to work with no network connection.\n\nSecurity Fix(es):\n\n* git: by feeding specially crafted input to `git apply --reject`, a path outside the working tree can be overwritten with partially controlled contents (CVE-2023-25652)\n* git: arbitrary configuration injection when renaming or deleting a section from a configuration file (CVE-2023-29007)\n* git: data exfiltration with maliciously crafted repository (CVE-2023-22490)\n* git: git apply: a path outside the working tree can be overwritten with crafted input (CVE-2023-23946)\n* git: malicious placement of crafted messages when git was compiled with runtime prefix (CVE-2023-25815)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-05-22"
+			},
+			"updated": {
+				"date": "2023-05-22"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2168160",
+					"id": "2168160"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2168161",
+					"id": "2168161"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2188333",
+					"id": "2188333"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2188337",
+					"id": "2188337"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2188338",
+					"id": "2188338"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-22490",
+					"public": "20230214",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-22490",
+					"impact": "Moderate",
+					"cwe": "CWE-402",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2023-23946",
+					"public": "20230214",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-23946",
+					"impact": "Moderate",
+					"cwe": "CWE-22",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+				},
+				{
+					"text": "CVE-2023-25652",
+					"public": "20230425",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-25652",
+					"impact": "Important",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+				},
+				{
+					"text": "CVE-2023-25815",
+					"public": "20230425",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-25815",
+					"impact": "Low",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:N/I:L/A:N"
+				},
+				{
+					"text": "CVE-2023-29007",
+					"public": "20230425",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-29007",
+					"impact": "Important",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233245001",
+										"comment": "git is earlier than 0:2.39.3-1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230611002",
+										"comment": "git is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233245003",
+										"comment": "git-all is earlier than 0:2.39.3-1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230611004",
+										"comment": "git-all is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233245005",
+										"comment": "git-core is earlier than 0:2.39.3-1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230611006",
+										"comment": "git-core is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233245007",
+										"comment": "git-core-doc is earlier than 0:2.39.3-1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230611008",
+										"comment": "git-core-doc is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233245009",
+										"comment": "git-credential-libsecret is earlier than 0:2.39.3-1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230611010",
+										"comment": "git-credential-libsecret is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233245011",
+										"comment": "git-daemon is earlier than 0:2.39.3-1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230611012",
+										"comment": "git-daemon is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233245013",
+										"comment": "git-email is earlier than 0:2.39.3-1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230611014",
+										"comment": "git-email is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233245015",
+										"comment": "git-gui is earlier than 0:2.39.3-1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230611016",
+										"comment": "git-gui is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233245017",
+										"comment": "git-instaweb is earlier than 0:2.39.3-1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230611018",
+										"comment": "git-instaweb is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233245019",
+										"comment": "git-subtree is earlier than 0:2.39.3-1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230611020",
+										"comment": "git-subtree is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233245021",
+										"comment": "git-svn is earlier than 0:2.39.3-1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230611022",
+										"comment": "git-svn is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233245023",
+										"comment": "gitk is earlier than 0:2.39.3-1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230611024",
+										"comment": "gitk is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233245025",
+										"comment": "gitweb is earlier than 0:2.39.3-1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230611026",
+										"comment": "gitweb is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233245027",
+										"comment": "perl-Git is earlier than 0:2.39.3-1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230611028",
+										"comment": "perl-Git is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233245029",
+										"comment": "perl-Git-SVN is earlier than 0:2.39.3-1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230611030",
+										"comment": "perl-Git-SVN is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

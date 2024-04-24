@@ -1,0 +1,178 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20214513",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:4513: libsepol security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:4513",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4513.html"
+			},
+			{
+				"ref_id": "ALSA-2021:4513",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4513.html"
+			},
+			{
+				"ref_id": "CVE-2021-36084",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-36084"
+			},
+			{
+				"ref_id": "CVE-2021-36085",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-36085"
+			},
+			{
+				"ref_id": "CVE-2021-36086",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-36086"
+			},
+			{
+				"ref_id": "CVE-2021-36087",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-36087"
+			}
+		],
+		"Description": "The libsepol library provides an API for the manipulation of SELinux binary policies. It is used by checkpolicy (the policy compiler) and similar tools, as well as by programs like load_policy that need to perform specific transformations on binary policies (for example, customizing policy boolean settings).\nSecurity Fix(es):\n* libsepol: use-after-free in __cil_verify_classperms() (CVE-2021-36084)\n* libsepol: use-after-free in __cil_verify_classperms() (CVE-2021-36085)\n* libsepol: use-after-free in cil_reset_classpermission() (CVE-2021-36086)\n* libsepol: heap-based buffer overflow in ebitmap_match_any() (CVE-2021-36087)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-11-09"
+			},
+			"updated": {
+				"date": "2021-11-09"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1979662",
+					"id": "1979662"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1979664",
+					"id": "1979664"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1979666",
+					"id": "1979666"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1979668",
+					"id": "1979668"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-36084",
+					"public": "20210419",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-36084",
+					"impact": "moderate",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2021-36085",
+					"public": "20210419",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-36085",
+					"impact": "moderate",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2021-36086",
+					"public": "20210419",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-36086",
+					"impact": "moderate",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2021-36087",
+					"public": "20210419",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-36087",
+					"impact": "moderate",
+					"cwe": "CWE-119",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214513001",
+										"comment": "libsepol is earlier than 0:2.9-3.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214513002",
+										"comment": "libsepol is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214513003",
+										"comment": "libsepol-devel is earlier than 0:2.9-3.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214513004",
+										"comment": "libsepol-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214513005",
+										"comment": "libsepol-static is earlier than 0:2.9-3.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214513006",
+										"comment": "libsepol-static is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

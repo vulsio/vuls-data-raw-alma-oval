@@ -1,0 +1,104 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20224769",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:4769: thunderbird security update (Critical)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:4769",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-4769.html"
+			},
+			{
+				"ref_id": "ALSA-2022:4769",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-4769.html"
+			},
+			{
+				"ref_id": "CVE-2022-1529",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-1529"
+			},
+			{
+				"ref_id": "CVE-2022-1802",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-1802"
+			}
+		],
+		"Description": "Mozilla Thunderbird is a standalone mail and newsgroup client.\nThis update upgrades Thunderbird to version 91.9.1.\nSecurity Fix(es):\n* Mozilla: Untrusted input used in JavaScript object indexing, leading to prototype pollution (CVE-2022-1529)\n* Mozilla: Prototype pollution in Top-Level Await implementation (CVE-2022-1802)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Critical",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-05-27"
+			},
+			"updated": {
+				"date": "2022-05-27"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2089217",
+					"id": "2089217"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2089218",
+					"id": "2089218"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-1529",
+					"public": "20220520",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-1529",
+					"impact": "critical",
+					"cwe": "CWE-843",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-1802",
+					"public": "20220520",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-1802",
+					"impact": "critical",
+					"cwe": "CWE-843",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20224769001",
+						"comment": "thunderbird is earlier than 0:91.9.1-1.el8_6.alma"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20191144002",
+						"comment": "thunderbird is signed with AlmaLinux OS 8 key"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

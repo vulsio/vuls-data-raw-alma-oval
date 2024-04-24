@@ -1,0 +1,213 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20235460",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:5460: bind9.16 security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2023:5460",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-5460.html"
+			},
+			{
+				"ref_id": "CVE-2023-3341",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-3341"
+			},
+			{
+				"ref_id": "ALSA-2023:5460",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-5460.html"
+			}
+		],
+		"Description": "The Berkeley Internet Name Domain (BIND) is an implementation of the Domain Name System (DNS) protocols. BIND includes a DNS server (named); a resolver library (routines for applications to use when interfacing with DNS); and tools for verifying that the DNS server is operating correctly.\n\nSecurity Fix(es):\n\n* bind: stack exhaustion in control channel code may lead to DoS (CVE-2023-3341)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-10-05"
+			},
+			"updated": {
+				"date": "2023-10-05"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2239621",
+					"id": "2239621"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-3341",
+					"public": "20230920",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-3341",
+					"impact": "Important",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20235460001",
+										"comment": "bind9.16 is earlier than 32:9.16.23-0.14.el8_8.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226781002",
+										"comment": "bind9.16 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20235460003",
+										"comment": "bind9.16-chroot is earlier than 32:9.16.23-0.14.el8_8.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226781004",
+										"comment": "bind9.16-chroot is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20235460005",
+										"comment": "bind9.16-devel is earlier than 32:9.16.23-0.14.el8_8.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226781006",
+										"comment": "bind9.16-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20235460007",
+										"comment": "bind9.16-dnssec-utils is earlier than 32:9.16.23-0.14.el8_8.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226781008",
+										"comment": "bind9.16-dnssec-utils is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20235460009",
+										"comment": "bind9.16-doc is earlier than 32:9.16.23-0.14.el8_8.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226781010",
+										"comment": "bind9.16-doc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20235460011",
+										"comment": "bind9.16-libs is earlier than 32:9.16.23-0.14.el8_8.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226781012",
+										"comment": "bind9.16-libs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20235460013",
+										"comment": "bind9.16-license is earlier than 32:9.16.23-0.14.el8_8.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226781014",
+										"comment": "bind9.16-license is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20235460015",
+										"comment": "bind9.16-utils is earlier than 32:9.16.23-0.14.el8_8.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226781016",
+										"comment": "bind9.16-utils is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20235460017",
+										"comment": "python3-bind9.16 is earlier than 32:9.16.23-0.14.el8_8.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226781018",
+										"comment": "python3-bind9.16 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

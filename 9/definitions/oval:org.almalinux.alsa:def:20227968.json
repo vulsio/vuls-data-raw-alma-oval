@@ -1,0 +1,139 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20227968",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:7968: virt-v2v security, bug fix, and enhancement update (Low)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:7968",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-7968.html"
+			},
+			{
+				"ref_id": "CVE-2022-2211",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-2211"
+			},
+			{
+				"ref_id": "ALSA-2022:7968",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-7968.html"
+			}
+		],
+		"Description": "The virt-v2v package provides a tool for converting virtual machines to use the KVM (Kernel-based Virtual Machine) hypervisor or AlmaLinux Enterprise Virtualization. The tool modifies both the virtual machine image and its associated libvirt metadata. Also, virt-v2v can configure a guest to use VirtIO drivers if possible.\n\nSecurity Fix(es):\n\n* libguestfs: Buffer overflow in get_keys leads to DoS (CVE-2022-2211)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Low",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-11-15"
+			},
+			"updated": {
+				"date": "2022-11-15"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2100862",
+					"id": "2100862"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-2211",
+					"public": "20220624",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-2211",
+					"impact": "Low",
+					"cwe": "CWE-119",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227968001",
+										"comment": "virt-v2v is earlier than 1:2.0.7-6.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227968002",
+										"comment": "virt-v2v is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227968003",
+										"comment": "virt-v2v-bash-completion is earlier than 1:2.0.7-6.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227968004",
+										"comment": "virt-v2v-bash-completion is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227968005",
+										"comment": "virt-v2v-man-pages-ja is earlier than 1:2.0.7-6.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227968006",
+										"comment": "virt-v2v-man-pages-ja is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227968007",
+										"comment": "virt-v2v-man-pages-uk is earlier than 1:2.0.7-6.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227968008",
+										"comment": "virt-v2v-man-pages-uk is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

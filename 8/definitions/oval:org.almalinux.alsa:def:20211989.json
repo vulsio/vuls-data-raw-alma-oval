@@ -1,0 +1,309 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20211989",
+	"version": "634",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:1989: bind security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:1989",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1989.html"
+			},
+			{
+				"ref_id": "ALSA-2021:1989",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1989.html"
+			},
+			{
+				"ref_id": "CVE-2021-25215",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-25215"
+			}
+		],
+		"Description": "The Berkeley Internet Name Domain (BIND) is an implementation of the Domain Name System (DNS) protocols. BIND includes a DNS server (named); a resolver library (routines for applications to use when interfacing with DNS); and tools for verifying that the DNS server is operating correctly.\nSecurity Fix(es):\n* bind: An assertion check can fail while answering queries for DNAME records that require the DNAME to be processed to resolve itself (CVE-2021-25215)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-05-18"
+			},
+			"updated": {
+				"date": "2021-05-18"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1953857",
+					"id": "1953857"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-25215",
+					"public": "20210428",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-25215",
+					"impact": "important",
+					"cwe": "CWE-617",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211989001",
+										"comment": "bind is earlier than 32:9.11.26-4.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191145002",
+										"comment": "bind is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211989003",
+										"comment": "bind-chroot is earlier than 32:9.11.26-4.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191145004",
+										"comment": "bind-chroot is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211989005",
+										"comment": "bind-devel is earlier than 32:9.11.26-4.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191145006",
+										"comment": "bind-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211989007",
+										"comment": "bind-export-devel is earlier than 32:9.11.26-4.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191145008",
+										"comment": "bind-export-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211989009",
+										"comment": "bind-export-libs is earlier than 32:9.11.26-4.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191145010",
+										"comment": "bind-export-libs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211989011",
+										"comment": "bind-libs is earlier than 32:9.11.26-4.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191145012",
+										"comment": "bind-libs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211989013",
+										"comment": "bind-libs-lite is earlier than 32:9.11.26-4.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191145014",
+										"comment": "bind-libs-lite is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211989015",
+										"comment": "bind-license is earlier than 32:9.11.26-4.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191145016",
+										"comment": "bind-license is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211989017",
+										"comment": "bind-lite-devel is earlier than 32:9.11.26-4.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191145018",
+										"comment": "bind-lite-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211989019",
+										"comment": "bind-pkcs11 is earlier than 32:9.11.26-4.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191145020",
+										"comment": "bind-pkcs11 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211989021",
+										"comment": "bind-pkcs11-devel is earlier than 32:9.11.26-4.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191145022",
+										"comment": "bind-pkcs11-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211989023",
+										"comment": "bind-pkcs11-libs is earlier than 32:9.11.26-4.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191145024",
+										"comment": "bind-pkcs11-libs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211989025",
+										"comment": "bind-pkcs11-utils is earlier than 32:9.11.26-4.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191145026",
+										"comment": "bind-pkcs11-utils is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211989027",
+										"comment": "bind-sdb is earlier than 32:9.11.26-4.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191145028",
+										"comment": "bind-sdb is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211989029",
+										"comment": "bind-sdb-chroot is earlier than 32:9.11.26-4.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191145030",
+										"comment": "bind-sdb-chroot is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211989031",
+										"comment": "bind-utils is earlier than 32:9.11.26-4.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191145032",
+										"comment": "bind-utils is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211989033",
+										"comment": "python3-bind is earlier than 32:9.11.26-4.el8_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20191145034",
+										"comment": "python3-bind is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

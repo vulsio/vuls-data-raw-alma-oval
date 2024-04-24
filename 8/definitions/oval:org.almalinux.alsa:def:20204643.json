@@ -1,0 +1,204 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20204643",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2020:4643: poppler security update (Low)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2020:4643",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-4643.html"
+			},
+			{
+				"ref_id": "ALSA-2020:4643",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-4643.html"
+			},
+			{
+				"ref_id": "CVE-2019-14494",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-14494"
+			}
+		],
+		"Description": "Poppler is a Portable Document Format (PDF) rendering library, used by applications such as Evince.\nSecurity Fix(es):\n* poppler: divide-by-zero in function SplashOutputDev::tilingPatternFill in SplashOutputDev.cc (CVE-2019-14494)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Low",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2020-11-04"
+			},
+			"updated": {
+				"date": "2020-11-04"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1797453",
+					"id": "1797453"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2019-14494",
+					"public": "20190711",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-14494",
+					"impact": "low",
+					"cwe": "CWE-369",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204643001",
+										"comment": "poppler is earlier than 0:0.66.0-27.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192713002",
+										"comment": "poppler is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204643003",
+										"comment": "poppler-cpp is earlier than 0:0.66.0-27.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192713004",
+										"comment": "poppler-cpp is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204643005",
+										"comment": "poppler-cpp-devel is earlier than 0:0.66.0-27.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192713006",
+										"comment": "poppler-cpp-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204643007",
+										"comment": "poppler-devel is earlier than 0:0.66.0-27.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192713008",
+										"comment": "poppler-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204643009",
+										"comment": "poppler-glib is earlier than 0:0.66.0-27.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192713010",
+										"comment": "poppler-glib is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204643011",
+										"comment": "poppler-glib-devel is earlier than 0:0.66.0-27.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192713012",
+										"comment": "poppler-glib-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204643013",
+										"comment": "poppler-qt5 is earlier than 0:0.66.0-27.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192713014",
+										"comment": "poppler-qt5 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204643015",
+										"comment": "poppler-qt5-devel is earlier than 0:0.66.0-27.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192713016",
+										"comment": "poppler-qt5-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204643017",
+										"comment": "poppler-utils is earlier than 0:0.66.0-27.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192713018",
+										"comment": "poppler-utils is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

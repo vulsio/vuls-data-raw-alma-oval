@@ -1,0 +1,271 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20211849",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:1849: freerdp security, bug fix, and enhancement update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:1849",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1849.html"
+			},
+			{
+				"ref_id": "ALSA-2021:1849",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1849.html"
+			},
+			{
+				"ref_id": "CVE-2020-11095",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-11095"
+			},
+			{
+				"ref_id": "CVE-2020-11096",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-11096"
+			},
+			{
+				"ref_id": "CVE-2020-11097",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-11097"
+			},
+			{
+				"ref_id": "CVE-2020-11098",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-11098"
+			},
+			{
+				"ref_id": "CVE-2020-11099",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-11099"
+			},
+			{
+				"ref_id": "CVE-2020-15103",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-15103"
+			},
+			{
+				"ref_id": "CVE-2020-4030",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-4030"
+			},
+			{
+				"ref_id": "CVE-2020-4033",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-4033"
+			}
+		],
+		"Description": "FreeRDP is a free implementation of the Remote Desktop Protocol (RDP), released under the Apache license. The xfreerdp client can connect to RDP servers such as Microsoft Windows machines, xrdp, and VirtualBox.\nThe following packages have been upgraded to a later upstream version: freerdp (2.2.0). (BZ#1881971)\nSecurity Fix(es):\n* freerdp: out of bounds read in TrioParse (CVE-2020-4030)\n* freerdp: out of bound reads resulting in accessing memory location outside of static array PRIMARY_DRAWING_ORDER_FIELD_BYTES (CVE-2020-11095)\n* freerdp: out of bounds read in PRIMARY_DRAWING_ORDER_FIELD_BYTES (CVE-2020-11097)\n* freerdp: out of bounds read in license_read_new_or_upgrade_license_packet (CVE-2020-11099)\n* freerdp: integer overflow due to missing input sanitation in rdpegfx channel (CVE-2020-15103)\n* freerdp: out-of-bounds read in RLEDECOMPRESS (CVE-2020-4033)\n* freerdp: out-of-bound read in update_read_cache_bitmap_v3_order (CVE-2020-11096)\n* freerdp: out-of-bound read in glyph_cache_put (CVE-2020-11098)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-05-18"
+			},
+			"updated": {
+				"date": "2021-05-18"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1854843",
+					"id": "1854843"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1854847",
+					"id": "1854847"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1854850",
+					"id": "1854850"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1854876",
+					"id": "1854876"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1854895",
+					"id": "1854895"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1854899",
+					"id": "1854899"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1854910",
+					"id": "1854910"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1858909",
+					"id": "1858909"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2020-11095",
+					"public": "20200622",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-11095",
+					"impact": "moderate",
+					"cwe": "CWE-20->CWE-125",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:L"
+				},
+				{
+					"text": "CVE-2020-11096",
+					"public": "20200622",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-11096",
+					"impact": "low",
+					"cwe": "CWE-20->CWE-129->CWE-125",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L"
+				},
+				{
+					"text": "CVE-2020-11097",
+					"public": "20200622",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-11097",
+					"impact": "moderate",
+					"cwe": "CWE-20->CWE-129->CWE-125",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:L"
+				},
+				{
+					"text": "CVE-2020-11098",
+					"public": "20200622",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-11098",
+					"impact": "low",
+					"cwe": "CWE-129->CWE-125",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L"
+				},
+				{
+					"text": "CVE-2020-11099",
+					"public": "20200622",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-11099",
+					"impact": "moderate",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L"
+				},
+				{
+					"text": "CVE-2020-15103",
+					"public": "20200720",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-15103",
+					"impact": "moderate",
+					"cwe": "CWE-190->CWE-122",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2020-4030",
+					"public": "20200622",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-4030",
+					"impact": "moderate",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L"
+				},
+				{
+					"text": "CVE-2020-4033",
+					"public": "20200622",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-4033",
+					"impact": "low",
+					"cwe": "CWE-805->CWE-125",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211849001",
+										"comment": "freerdp is earlier than 2:2.2.0-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20202336002",
+										"comment": "freerdp is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211849003",
+										"comment": "freerdp-devel is earlier than 2:2.2.0-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20202336004",
+										"comment": "freerdp-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211849005",
+										"comment": "freerdp-libs is earlier than 2:2.2.0-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20202336006",
+										"comment": "freerdp-libs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211849007",
+										"comment": "libwinpr is earlier than 2:2.2.0-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20202336008",
+										"comment": "libwinpr is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211849009",
+										"comment": "libwinpr-devel is earlier than 2:2.2.0-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20202336010",
+										"comment": "libwinpr-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

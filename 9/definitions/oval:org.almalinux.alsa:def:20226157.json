@@ -1,0 +1,187 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20226157",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:6157: curl security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:6157",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-6157.html"
+			},
+			{
+				"ref_id": "CVE-2022-32206",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-32206"
+			},
+			{
+				"ref_id": "CVE-2022-32207",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-32207"
+			},
+			{
+				"ref_id": "CVE-2022-32208",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-32208"
+			},
+			{
+				"ref_id": "ALSA-2022:6157",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-6157.html"
+			}
+		],
+		"Description": "The curl packages provide the libcurl library and the curl utility for downloading files from servers using various protocols, including HTTP, FTP, and LDAP.\nSecurity Fix(es):\n* curl: HTTP compression denial of service (CVE-2022-32206)\n* curl: Unpreserved file permissions (CVE-2022-32207)\n* curl: FTP-KRB bad message verification (CVE-2022-32208)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-08-24"
+			},
+			"updated": {
+				"date": "2022-08-24"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2099300",
+					"id": "2099300"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2099305",
+					"id": "2099305"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2099306",
+					"id": "2099306"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-32206",
+					"public": "20220627",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-32206",
+					"impact": "Moderate",
+					"cwe": "CWE-770",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-32207",
+					"public": "20220627",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-32207",
+					"impact": "Moderate",
+					"cwe": "CWE-281",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-32208",
+					"public": "20220627",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-32208",
+					"impact": "Moderate",
+					"cwe": "CWE-924",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:H/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226157001",
+										"comment": "curl is earlier than 0:7.76.1-14.el9_0.5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225245002",
+										"comment": "curl is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226157003",
+										"comment": "curl-minimal is earlier than 0:7.76.1-14.el9_0.5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225245004",
+										"comment": "curl-minimal is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226157005",
+										"comment": "libcurl is earlier than 0:7.76.1-14.el9_0.5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225245006",
+										"comment": "libcurl is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226157007",
+										"comment": "libcurl-devel is earlier than 0:7.76.1-14.el9_0.5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225245008",
+										"comment": "libcurl-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226157009",
+										"comment": "libcurl-minimal is earlier than 0:7.76.1-14.el9_0.5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225245010",
+										"comment": "libcurl-minimal is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

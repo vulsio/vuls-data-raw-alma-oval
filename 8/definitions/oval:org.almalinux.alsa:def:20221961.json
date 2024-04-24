@@ -1,0 +1,138 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20221961",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:1961: cairo and pixman security and bug fix update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:1961",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-1961.html"
+			},
+			{
+				"ref_id": "ALSA-2022:1961",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-1961.html"
+			},
+			{
+				"ref_id": "CVE-2020-35492",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-35492"
+			}
+		],
+		"Description": "Cairo is a 2D graphics library designed to provide high-quality display and print output.\nPixman is a pixel manipulation library for the X Window System and Cairo.\nSecurity Fix(es):\n* cairo: libreoffice slideshow aborts with stack smashing in cairo's composite_boxes (CVE-2020-35492)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-05-10"
+			},
+			"updated": {
+				"date": "2022-05-10"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1898396",
+					"id": "1898396"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2020-35492",
+					"public": "20201228",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-35492",
+					"impact": "moderate",
+					"cwe": "CWE-121",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20221961001",
+										"comment": "cairo is earlier than 0:1.15.12-6.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20221961002",
+										"comment": "cairo is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20221961003",
+										"comment": "cairo-devel is earlier than 0:1.15.12-6.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20221961004",
+										"comment": "cairo-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20221961005",
+										"comment": "cairo-gobject is earlier than 0:1.15.12-6.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20221961006",
+										"comment": "cairo-gobject is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20221961007",
+										"comment": "cairo-gobject-devel is earlier than 0:1.15.12-6.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20221961008",
+										"comment": "cairo-gobject-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

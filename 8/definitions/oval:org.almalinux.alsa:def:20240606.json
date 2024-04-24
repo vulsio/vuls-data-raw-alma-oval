@@ -1,0 +1,217 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20240606",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:0606: openssh security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2024:0606",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-0606.html"
+			},
+			{
+				"ref_id": "CVE-2023-48795",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-48795"
+			},
+			{
+				"ref_id": "CVE-2023-51385",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-51385"
+			},
+			{
+				"ref_id": "ALSA-2024:0606",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-0606.html"
+			}
+		],
+		"Description": "OpenSSH is an SSH protocol implementation supported by a number of Linux, UNIX, and similar operating systems. It includes the core files necessary for both the OpenSSH client and server.\n\nSecurity Fix(es):\n\n* ssh: Prefix truncation attack on Binary Packet Protocol (BPP) (CVE-2023-48795)\n* openssh: potential command injection via shell metacharacters (CVE-2023-51385)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-01-30"
+			},
+			"updated": {
+				"date": "2024-01-30"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2254210",
+					"id": "2254210"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2255271",
+					"id": "2255271"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-48795",
+					"public": "20231218",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-48795",
+					"impact": "Moderate",
+					"cwe": "CWE-222",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N"
+				},
+				{
+					"text": "CVE-2023-51385",
+					"public": "20231218",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-51385",
+					"impact": "Moderate",
+					"cwe": "CWE-78",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240606001",
+										"comment": "openssh is earlier than 0:8.0p1-19.el8_9.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193702002",
+										"comment": "openssh is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240606003",
+										"comment": "openssh-askpass is earlier than 0:8.0p1-19.el8_9.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193702004",
+										"comment": "openssh-askpass is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240606005",
+										"comment": "openssh-cavs is earlier than 0:8.0p1-19.el8_9.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193702006",
+										"comment": "openssh-cavs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240606007",
+										"comment": "openssh-clients is earlier than 0:8.0p1-19.el8_9.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193702008",
+										"comment": "openssh-clients is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240606009",
+										"comment": "openssh-keycat is earlier than 0:8.0p1-19.el8_9.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193702010",
+										"comment": "openssh-keycat is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240606011",
+										"comment": "openssh-ldap is earlier than 0:8.0p1-19.el8_9.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193702012",
+										"comment": "openssh-ldap is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240606013",
+										"comment": "openssh-server is earlier than 0:8.0p1-19.el8_9.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193702014",
+										"comment": "openssh-server is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240606015",
+										"comment": "pam_ssh_agent_auth is earlier than 0:0.10.3-7.19.el8_9.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193702016",
+										"comment": "pam_ssh_agent_auth is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

@@ -1,0 +1,255 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20211734",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:1734: shim security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:1734",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1734.html"
+			},
+			{
+				"ref_id": "ALSA-2021:1734",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1734.html"
+			},
+			{
+				"ref_id": "CVE-2020-14372",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-14372"
+			},
+			{
+				"ref_id": "CVE-2020-25632",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-25632"
+			},
+			{
+				"ref_id": "CVE-2020-25647",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-25647"
+			},
+			{
+				"ref_id": "CVE-2020-27749",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-27749"
+			},
+			{
+				"ref_id": "CVE-2020-27779",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-27779"
+			},
+			{
+				"ref_id": "CVE-2021-20225",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-20225"
+			},
+			{
+				"ref_id": "CVE-2021-20233",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-20233"
+			}
+		],
+		"Description": "The shim package contains a first-stage UEFI boot loader that handles chaining to a trusted full boot loader under secure boot environments.\nSecurity Fix(es):\n* grub2: acpi command allows privileged user to load crafted ACPI tables when Secure Boot is enabled (CVE-2020-14372)\n* grub2: Use-after-free in rmmod command (CVE-2020-25632)\n* grub2: Out-of-bounds write in grub_usb_device_initialize() (CVE-2020-25647)\n* grub2: Stack buffer overflow in grub_parser_split_cmdline() (CVE-2020-27749)\n* grub2: cutmem command allows privileged user to remove memory regions when Secure Boot is enabled (CVE-2020-27779)\n* grub2: Heap out-of-bounds write in short form option parser (CVE-2021-20225)\n* grub2: Heap out-of-bounds write due to miscalculation of space required for quoting (CVE-2021-20233)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-05-18"
+			},
+			"updated": {
+				"date": "2021-05-18"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1873150",
+					"id": "1873150"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1879577",
+					"id": "1879577"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1886936",
+					"id": "1886936"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1899966",
+					"id": "1899966"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1900698",
+					"id": "1900698"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1924696",
+					"id": "1924696"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1926263",
+					"id": "1926263"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2020-14372",
+					"public": "20210302",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-14372",
+					"impact": "moderate",
+					"cwe": "CWE-184",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2020-25632",
+					"public": "20210302",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-25632",
+					"impact": "moderate",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2020-25647",
+					"public": "20210302",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-25647",
+					"impact": "moderate",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2020-27749",
+					"public": "20210302",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-27749",
+					"impact": "moderate",
+					"cwe": "CWE-121",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2020-27779",
+					"public": "20210302",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-27779",
+					"impact": "moderate",
+					"cwe": "CWE-285",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2021-20225",
+					"public": "20210302",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-20225",
+					"impact": "moderate",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2021-20233",
+					"public": "20210302",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-20233",
+					"impact": "moderate",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211734001",
+										"comment": "shim-unsigned-aarch64 is earlier than 0:15-7.el8_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211734002",
+										"comment": "shim-unsigned-aarch64 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211734003",
+										"comment": "shim-unsigned-x64 is earlier than 0:15.4-4.el8_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203216002",
+										"comment": "shim-unsigned-x64 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211734005",
+										"comment": "shim-aa64 is earlier than 0:15.4-2.el8_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203216004",
+										"comment": "shim-aa64 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211734007",
+										"comment": "shim-ia32 is earlier than 0:15.4-2.el8_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203216006",
+										"comment": "shim-ia32 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211734009",
+										"comment": "shim-x64 is earlier than 0:15.4-2.el8_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203216008",
+										"comment": "shim-x64 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

@@ -1,0 +1,444 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20204743",
+	"version": "637",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2020:4743: squid:4 security, bug fix, and enhancement update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2020:4743",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-4743.html"
+			},
+			{
+				"ref_id": "ALSA-2020:4743",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-4743.html"
+			},
+			{
+				"ref_id": "CVE-2019-12520",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-12520"
+			},
+			{
+				"ref_id": "CVE-2019-12521",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-12521"
+			},
+			{
+				"ref_id": "CVE-2019-12523",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-12523"
+			},
+			{
+				"ref_id": "CVE-2019-12524",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-12524"
+			},
+			{
+				"ref_id": "CVE-2019-12526",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-12526"
+			},
+			{
+				"ref_id": "CVE-2019-12528",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-12528"
+			},
+			{
+				"ref_id": "CVE-2019-12529",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-12529"
+			},
+			{
+				"ref_id": "CVE-2019-12854",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-12854"
+			},
+			{
+				"ref_id": "CVE-2019-18676",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-18676"
+			},
+			{
+				"ref_id": "CVE-2019-18677",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-18677"
+			},
+			{
+				"ref_id": "CVE-2019-18678",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-18678"
+			},
+			{
+				"ref_id": "CVE-2019-18679",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-18679"
+			},
+			{
+				"ref_id": "CVE-2019-18860",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-18860"
+			},
+			{
+				"ref_id": "CVE-2020-14058",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-14058"
+			},
+			{
+				"ref_id": "CVE-2020-15049",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-15049"
+			},
+			{
+				"ref_id": "CVE-2020-24606",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-24606"
+			},
+			{
+				"ref_id": "CVE-2020-8449",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-8449"
+			},
+			{
+				"ref_id": "CVE-2020-8450",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-8450"
+			}
+		],
+		"Description": "Squid is a high-performance proxy caching server for web clients, supporting FTP, Gopher, and HTTP data objects.\nThe following packages have been upgraded to a later upstream version: squid (4.11). (BZ#1829467)\nSecurity Fix(es):\n* squid: Improper input validation in request allows for proxy manipulation (CVE-2019-12520)\n* squid: Off-by-one error in addStackElement allows for heap buffer overflow and crash (CVE-2019-12521)\n* squid: Improper input validation in URI processor (CVE-2019-12523)\n* squid: Improper access restriction in url_regex may lead to security bypass (CVE-2019-12524)\n* squid: Heap overflow issue in URN processing (CVE-2019-12526)\n* squid: Information Disclosure issue in FTP Gateway (CVE-2019-12528)\n* squid: Out of bounds read in Proxy-Authorization header causes DoS (CVE-2019-12529)\n* squid: Denial of service in cachemgr.cgi (CVE-2019-12854)\n* squid: Buffer overflow in URI processor (CVE-2019-18676)\n* squid: Cross-Site Request Forgery issue in HTTP Request processing (CVE-2019-18677)\n* squid: HTTP Request Splitting issue in HTTP message processing (CVE-2019-18678)\n* squid: Information Disclosure issue in HTTP Digest Authentication (CVE-2019-18679)\n* squid: Mishandled HTML in the host parameter to cachemgr.cgi results in insecure behaviour (CVE-2019-18860)\n* squid: Improper input validation issues in HTTP Request processing (CVE-2020-8449)\n* squid: Buffer overflow in reverse-proxy configurations (CVE-2020-8450)\n* squid: DoS in TLS handshake (CVE-2020-14058)\n* squid: Request smuggling and poisoning attack against the HTTP cache (CVE-2020-15049)\n* squid: Improper input validation could result in a DoS (CVE-2020-24606)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2020-11-04"
+			},
+			"updated": {
+				"date": "2020-11-04"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1798540",
+					"id": "1798540"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1798552",
+					"id": "1798552"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1730523",
+					"id": "1730523"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1730528",
+					"id": "1730528"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1770349",
+					"id": "1770349"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1770356",
+					"id": "1770356"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1770360",
+					"id": "1770360"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1770365",
+					"id": "1770365"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1770371",
+					"id": "1770371"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1770375",
+					"id": "1770375"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1798534",
+					"id": "1798534"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1817121",
+					"id": "1817121"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1827558",
+					"id": "1827558"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1827562",
+					"id": "1827562"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1827570",
+					"id": "1827570"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1852550",
+					"id": "1852550"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1852554",
+					"id": "1852554"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1871705",
+					"id": "1871705"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2019-12520",
+					"public": "20200424",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-12520",
+					"impact": "moderate",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N"
+				},
+				{
+					"text": "CVE-2019-12521",
+					"public": "20200424",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-12521",
+					"impact": "moderate",
+					"cwe": "CWE-122",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2019-12523",
+					"public": "20191105",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-12523",
+					"impact": "moderate",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N"
+				},
+				{
+					"text": "CVE-2019-12524",
+					"public": "20200424",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-12524",
+					"impact": "moderate",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+				},
+				{
+					"text": "CVE-2019-12526",
+					"public": "20191105",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-12526",
+					"impact": "moderate",
+					"cwe": "CWE-119",
+					"cvss3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2019-12528",
+					"public": "20200202",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-12528",
+					"impact": "moderate",
+					"cwe": "CWE-200",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2019-12529",
+					"public": "20190711",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-12529",
+					"impact": "moderate",
+					"cwe": "CWE-119",
+					"cvss3": "CVSS:3.0/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2019-12854",
+					"public": "20190712",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-12854",
+					"impact": "moderate",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.0/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2019-18676",
+					"public": "20191105",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-18676",
+					"impact": "moderate",
+					"cwe": "CWE-20->CWE-119",
+					"cvss3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2019-18677",
+					"public": "20191105",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-18677",
+					"impact": "moderate",
+					"cwe": "CWE-79",
+					"cvss3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N"
+				},
+				{
+					"text": "CVE-2019-18678",
+					"public": "20191105",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-18678",
+					"impact": "moderate",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:H/A:N"
+				},
+				{
+					"text": "CVE-2019-18679",
+					"public": "20191105",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-18679",
+					"impact": "moderate",
+					"cwe": "CWE-200",
+					"cvss3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2019-18860",
+					"public": "20191103",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-18860",
+					"impact": "moderate",
+					"cwe": "CWE-20->CWE-79",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+				},
+				{
+					"text": "CVE-2020-14058",
+					"public": "20200619",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-14058",
+					"impact": "moderate",
+					"cwe": "CWE-676",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-15049",
+					"public": "20200626",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-15049",
+					"impact": "moderate",
+					"cwe": "CWE-444",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2020-24606",
+					"public": "20200823",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-24606",
+					"impact": "moderate",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-8449",
+					"public": "20200203",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-8449",
+					"impact": "moderate",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+				},
+				{
+					"text": "CVE-2020-8450",
+					"public": "20200203",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-8450",
+					"impact": "moderate",
+					"cwe": "CWE-119",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201934760011",
+										"comment": "libecap is earlier than 0:1.0.1-2.module_el8.5.0+2548+24c223d9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192593002",
+										"comment": "libecap is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201934760012",
+										"comment": "libecap is earlier than 0:1.0.1-2.module_el8.5.0+72+8ec05e37"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192593002",
+										"comment": "libecap is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201934760031",
+										"comment": "libecap-devel is earlier than 0:1.0.1-2.module_el8.5.0+2548+24c223d9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192593004",
+										"comment": "libecap-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201934760032",
+										"comment": "libecap-devel is earlier than 0:1.0.1-2.module_el8.5.0+72+8ec05e37"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192593004",
+										"comment": "libecap-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202047430051",
+										"comment": "squid is earlier than 7:4.11-3.module_el8.3.0+6184+7808b5f9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192593006",
+										"comment": "squid is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20192593007",
+						"comment": "Module squid:4 is enabled"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

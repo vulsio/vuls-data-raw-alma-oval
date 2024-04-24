@@ -1,0 +1,112 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20203176",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2020:3176: postgresql-jdbc security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2020:3176",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-3176.html"
+			},
+			{
+				"ref_id": "ALSA-2020:3176",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-3176.html"
+			},
+			{
+				"ref_id": "CVE-2020-13692",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-13692"
+			}
+		],
+		"Description": "PostgreSQL is an advanced object-relational database management system. The postgresql-jdbc package includes the .jar files needed for Java programs to access a PostgreSQL database.\nSecurity Fix(es):\n* postgresql-jdbc: XML external entity (XXE) vulnerability in PgSQLXML (CVE-2020-13692)\nThis update introduces a backwards incompatible change required to resolve this issue. Refer to the AlmaLinux Knowledgebase article 5266441 linked to in the References section for information on how to re-enable the old insecure behavior.\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2020-07-28"
+			},
+			"updated": {
+				"date": "2020-07-28"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1852985",
+					"id": "1852985"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2020-13692",
+					"public": "20200604",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-13692",
+					"impact": "important",
+					"cwe": "CWE-611",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203176001",
+										"comment": "postgresql-jdbc is earlier than 0:42.2.3-3.el8_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203176002",
+										"comment": "postgresql-jdbc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203176003",
+										"comment": "postgresql-jdbc-javadoc is earlier than 0:42.2.3-3.el8_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203176004",
+										"comment": "postgresql-jdbc-javadoc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

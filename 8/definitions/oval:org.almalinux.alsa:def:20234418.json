@@ -1,0 +1,151 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20234418",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:4418: mod_auth_openidc:2.3 security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2023:4418",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-4418.html"
+			},
+			{
+				"ref_id": "CVE-2023-37464",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-37464"
+			},
+			{
+				"ref_id": "ALSA-2023:4418",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-4418.html"
+			}
+		],
+		"Description": "The mod_auth_openidc is an OpenID Connect authentication module for Apache HTTP Server. It enables an Apache HTTP Server to operate as an OpenID Connect Relying Party and/or OAuth 2.0 Resource Server. \n\nSecurity Fix(es):\n\n* cjose: AES GCM decryption uses the Tag length from the actual Authentication Tag provided in the JWE (CVE-2023-37464)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-08-01"
+			},
+			"updated": {
+				"date": "2023-08-01"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2223295",
+					"id": "2223295"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-37464",
+					"public": "20230714",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-37464",
+					"impact": "Important",
+					"cwe": "CWE-327",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterias": [
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20234418001",
+														"comment": "cjose is earlier than 0:0.6.1-3.module_el8.8.0+3591+c9939da8"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20203032002",
+														"comment": "cjose is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20234418003",
+														"comment": "cjose-devel is earlier than 0:0.6.1-3.module_el8.8.0+3591+c9939da8"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20203032004",
+														"comment": "cjose-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20234418005",
+														"comment": "mod_auth_openidc is earlier than 0:2.4.9.4-1.module_el8.7.0+3305+9a59f0c3"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20203032006",
+														"comment": "mod_auth_openidc is signed with AlmaLinux OS 8 key"
+													}
+												]
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203032007",
+										"comment": "Module mod_auth_openidc:2.3 is enabled"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

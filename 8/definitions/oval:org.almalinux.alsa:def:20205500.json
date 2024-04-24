@@ -1,0 +1,751 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20205500",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2020:5500: mariadb:10.3 security, bug fix, and enhancement update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2020:5500",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-5500.html"
+			},
+			{
+				"ref_id": "ALSA-2020:5500",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-5500.html"
+			},
+			{
+				"ref_id": "CVE-2019-2938",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-2938"
+			},
+			{
+				"ref_id": "CVE-2019-2974",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-2974"
+			},
+			{
+				"ref_id": "CVE-2020-13249",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-13249"
+			},
+			{
+				"ref_id": "CVE-2020-14765",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-14765"
+			},
+			{
+				"ref_id": "CVE-2020-14776",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-14776"
+			},
+			{
+				"ref_id": "CVE-2020-14789",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-14789"
+			},
+			{
+				"ref_id": "CVE-2020-14812",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-14812"
+			},
+			{
+				"ref_id": "CVE-2020-15180",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-15180"
+			},
+			{
+				"ref_id": "CVE-2020-2574",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-2574"
+			},
+			{
+				"ref_id": "CVE-2020-2752",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-2752"
+			},
+			{
+				"ref_id": "CVE-2020-2760",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-2760"
+			},
+			{
+				"ref_id": "CVE-2020-2780",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-2780"
+			},
+			{
+				"ref_id": "CVE-2020-2812",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-2812"
+			},
+			{
+				"ref_id": "CVE-2020-2814",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-2814"
+			},
+			{
+				"ref_id": "CVE-2021-2022",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-2022"
+			},
+			{
+				"ref_id": "CVE-2021-2144",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-2144"
+			},
+			{
+				"ref_id": "CVE-2021-2194",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-2194"
+			}
+		],
+		"Description": "MariaDB is a multi-user, multi-threaded SQL database server that is binary compatible with MySQL. \nThe following packages have been upgraded to a later upstream version: mariadb (10.3.27), galera (25.3.31). (BZ#1899082, BZ#1899086)\nSecurity Fix(es):\n* mariadb: Insufficient SST method name check leading to code injection in mysql-wsrep (CVE-2020-15180)\n* mysql: InnoDB unspecified vulnerability (CPU Oct 2019) (CVE-2019-2938)\n* mysql: Server: Optimizer unspecified vulnerability (CPU Oct 2019) (CVE-2019-2974)\n* mysql: C API unspecified vulnerability (CPU Apr 2020) (CVE-2020-2752)\n* mysql: InnoDB unspecified vulnerability (CPU Apr 2020) (CVE-2020-2760)\n* mysql: Server: DML unspecified vulnerability (CPU Apr 2020) (CVE-2020-2780)\n* mysql: Server: Stored Procedure unspecified vulnerability (CPU Apr 2020) (CVE-2020-2812)\n* mysql: InnoDB unspecified vulnerability (CPU Apr 2020) (CVE-2020-2814)\n* mariadb-connector-c: Improper validation of content in a OK packet received from server (CVE-2020-13249)\n* mysql: Server: FTS unspecified vulnerability (CPU Oct 2020) (CVE-2020-14765)\n* mysql: InnoDB unspecified vulnerability (CPU Oct 2020) (CVE-2020-14776)\n* mysql: Server: FTS unspecified vulnerability (CPU Oct 2020) (CVE-2020-14789)\n* mysql: Server: Locking unspecified vulnerability (CPU Oct 2020) (CVE-2020-14812)\n* mysql: C API unspecified vulnerability (CPU Jan 2020) (CVE-2020-2574)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nBug Fix(es):\n* FTBFS: -D_GLIBCXX_ASSERTIONS (BZ#1899009)\n* Queries with entity_id IN ('1', '2', …, '70000') run much slower in MariaDB 10.3 than on MariaDB 10.1 (BZ#1899017)\n* Cleanup race with wsrep_rsync_sst_tunnel may prevent full galera cluster bootstrap (BZ#1899021)\n* There are undeclared file conflicts in several mariadb and mysql packages (BZ#1899077)",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2020-12-15"
+			},
+			"updated": {
+				"date": "2020-12-15"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1764680",
+					"id": "1764680"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1764691",
+					"id": "1764691"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1798587",
+					"id": "1798587"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1830056",
+					"id": "1830056"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1830059",
+					"id": "1830059"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1830060",
+					"id": "1830060"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1830082",
+					"id": "1830082"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1835849",
+					"id": "1835849"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1839827",
+					"id": "1839827"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1890738",
+					"id": "1890738"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1890743",
+					"id": "1890743"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1890747",
+					"id": "1890747"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1890756",
+					"id": "1890756"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1894919",
+					"id": "1894919"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1922389",
+					"id": "1922389"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1951749",
+					"id": "1951749"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1951764",
+					"id": "1951764"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2019-2938",
+					"public": "20191015",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-2938",
+					"impact": "moderate",
+					"cvss3": "CVSS:3.0/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2019-2974",
+					"public": "20191015",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-2974",
+					"impact": "moderate",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-13249",
+					"public": "20200520",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-13249",
+					"impact": "moderate",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2020-14765",
+					"public": "20201020",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-14765",
+					"impact": "moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-14776",
+					"public": "20201020",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-14776",
+					"impact": "moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-14789",
+					"public": "20201020",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-14789",
+					"impact": "moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-14812",
+					"public": "20201020",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-14812",
+					"impact": "moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-15180",
+					"public": "20201006",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-15180",
+					"impact": "important",
+					"cwe": "CWE-20->CWE-96",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2020-2574",
+					"public": "20200205",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-2574",
+					"impact": "low",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-2752",
+					"public": "20200414",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-2752",
+					"impact": "moderate",
+					"cvss3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-2760",
+					"public": "20200414",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-2760",
+					"impact": "moderate",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:H"
+				},
+				{
+					"text": "CVE-2020-2780",
+					"public": "20200414",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-2780",
+					"impact": "moderate",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-2812",
+					"public": "20200414",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-2812",
+					"impact": "moderate",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-2814",
+					"public": "20200414",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-2814",
+					"impact": "moderate",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-2022",
+					"public": "20210119",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-2022",
+					"impact": "moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-2144",
+					"public": "20210420",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-2144",
+					"impact": "important",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2021-2194",
+					"public": "20210420",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-2194",
+					"impact": "moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937080011",
+										"comment": "Judy is earlier than 0:1.0.5-18.module_el8.3.0+2028+5e3224e9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193708002",
+										"comment": "Judy is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937080012",
+										"comment": "Judy is earlier than 0:1.0.5-18.module_el8.4.0+2215+7adc332a"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193708002",
+										"comment": "Judy is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937080013",
+										"comment": "Judy is earlier than 0:1.0.5-18.module_el8.5.0+104+3be1dd29"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193708002",
+										"comment": "Judy is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202055000031",
+										"comment": "galera is earlier than 0:25.3.31-1.module_el8.3.0+2063+5e3224e9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193708004",
+										"comment": "galera is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202055000032",
+										"comment": "galera is earlier than 0:25.3.31-1.module_el8.3.0+599+c587b2e7"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937080042",
+										"comment": "galera is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202055000051",
+										"comment": "mariadb is earlier than 3:10.3.27-3.module_el8.3.0+2028+5e3224e9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193708006",
+										"comment": "mariadb is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202055000052",
+										"comment": "mariadb is earlier than 3:10.3.27-3.module_el8.3.0+599+c587b2e7"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937080062",
+										"comment": "mariadb is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202055000071",
+										"comment": "mariadb-backup is earlier than 3:10.3.27-3.module_el8.3.0+2028+5e3224e9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193708008",
+										"comment": "mariadb-backup is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202055000072",
+										"comment": "mariadb-backup is earlier than 3:10.3.27-3.module_el8.3.0+599+c587b2e7"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937080082",
+										"comment": "mariadb-backup is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202055000091",
+										"comment": "mariadb-common is earlier than 3:10.3.27-3.module_el8.3.0+2028+5e3224e9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193708010",
+										"comment": "mariadb-common is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202055000092",
+										"comment": "mariadb-common is earlier than 3:10.3.27-3.module_el8.3.0+599+c587b2e7"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937080102",
+										"comment": "mariadb-common is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202055000111",
+										"comment": "mariadb-devel is earlier than 3:10.3.27-3.module_el8.3.0+2028+5e3224e9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193708012",
+										"comment": "mariadb-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202055000112",
+										"comment": "mariadb-devel is earlier than 3:10.3.27-3.module_el8.3.0+599+c587b2e7"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937080122",
+										"comment": "mariadb-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202055000131",
+										"comment": "mariadb-embedded is earlier than 3:10.3.27-3.module_el8.3.0+2028+5e3224e9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193708014",
+										"comment": "mariadb-embedded is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202055000132",
+										"comment": "mariadb-embedded is earlier than 3:10.3.27-3.module_el8.3.0+599+c587b2e7"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937080142",
+										"comment": "mariadb-embedded is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202055000151",
+										"comment": "mariadb-embedded-devel is earlier than 3:10.3.27-3.module_el8.3.0+2028+5e3224e9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193708016",
+										"comment": "mariadb-embedded-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202055000152",
+										"comment": "mariadb-embedded-devel is earlier than 3:10.3.27-3.module_el8.3.0+599+c587b2e7"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937080162",
+										"comment": "mariadb-embedded-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202055000171",
+										"comment": "mariadb-errmsg is earlier than 3:10.3.27-3.module_el8.3.0+2028+5e3224e9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193708018",
+										"comment": "mariadb-errmsg is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202055000172",
+										"comment": "mariadb-errmsg is earlier than 3:10.3.27-3.module_el8.3.0+599+c587b2e7"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937080182",
+										"comment": "mariadb-errmsg is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202055000191",
+										"comment": "mariadb-gssapi-server is earlier than 3:10.3.27-3.module_el8.3.0+2028+5e3224e9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193708020",
+										"comment": "mariadb-gssapi-server is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202055000192",
+										"comment": "mariadb-gssapi-server is earlier than 3:10.3.27-3.module_el8.3.0+599+c587b2e7"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937080202",
+										"comment": "mariadb-gssapi-server is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202055000211",
+										"comment": "mariadb-oqgraph-engine is earlier than 3:10.3.27-3.module_el8.3.0+2028+5e3224e9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193708022",
+										"comment": "mariadb-oqgraph-engine is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202055000212",
+										"comment": "mariadb-oqgraph-engine is earlier than 3:10.3.27-3.module_el8.3.0+599+c587b2e7"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937080222",
+										"comment": "mariadb-oqgraph-engine is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202055000231",
+										"comment": "mariadb-server is earlier than 3:10.3.27-3.module_el8.3.0+2028+5e3224e9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193708024",
+										"comment": "mariadb-server is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202055000232",
+										"comment": "mariadb-server is earlier than 3:10.3.27-3.module_el8.3.0+599+c587b2e7"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937080242",
+										"comment": "mariadb-server is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202055000251",
+										"comment": "mariadb-server-galera is earlier than 3:10.3.27-3.module_el8.3.0+2028+5e3224e9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193708026",
+										"comment": "mariadb-server-galera is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202055000252",
+										"comment": "mariadb-server-galera is earlier than 3:10.3.27-3.module_el8.3.0+599+c587b2e7"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937080262",
+										"comment": "mariadb-server-galera is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202055000271",
+										"comment": "mariadb-server-utils is earlier than 3:10.3.27-3.module_el8.3.0+2028+5e3224e9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193708028",
+										"comment": "mariadb-server-utils is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202055000272",
+										"comment": "mariadb-server-utils is earlier than 3:10.3.27-3.module_el8.3.0+599+c587b2e7"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937080282",
+										"comment": "mariadb-server-utils is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202055000291",
+										"comment": "mariadb-test is earlier than 3:10.3.27-3.module_el8.3.0+2028+5e3224e9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193708030",
+										"comment": "mariadb-test is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202055000292",
+										"comment": "mariadb-test is earlier than 3:10.3.27-3.module_el8.3.0+599+c587b2e7"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937080302",
+										"comment": "mariadb-test is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20193708031",
+						"comment": "Module mariadb:10.3 is enabled"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

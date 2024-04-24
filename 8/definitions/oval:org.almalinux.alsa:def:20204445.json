@@ -1,0 +1,114 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20204445",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2020:4445: librabbitmq security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2020:4445",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-4445.html"
+			},
+			{
+				"ref_id": "ALSA-2020:4445",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-4445.html"
+			},
+			{
+				"ref_id": "CVE-2019-18609",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-18609"
+			}
+		],
+		"Description": "The librabbitmq packages provide an Advanced Message Queuing Protocol (AMQP) client library that allows you to communicate with AMQP servers using protocol version 0-9-1.\nSecurity Fix(es):\n* librabbitmq: integer overflow in amqp_handle_input in amqp_connection.c leads to heap-based buffer overflow (CVE-2019-18609)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2020-11-04"
+			},
+			"updated": {
+				"date": "2020-11-04"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1786646",
+					"id": "1786646"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2019-18609",
+					"public": "20191201",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-18609",
+					"impact": "moderate",
+					"cwe": "CWE-190->CWE-122",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204445001",
+										"comment": "librabbitmq is earlier than 0:0.9.0-2.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204445002",
+										"comment": "librabbitmq is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204445003",
+										"comment": "librabbitmq-devel is earlier than 0:0.9.0-2.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204445004",
+										"comment": "librabbitmq-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

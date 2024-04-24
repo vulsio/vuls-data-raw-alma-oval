@@ -1,0 +1,2007 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20227119",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:7119: mysql:8.0 security, bug fix, and enhancement update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:7119",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7119.html"
+			},
+			{
+				"ref_id": "CVE-2021-2478",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-2478"
+			},
+			{
+				"ref_id": "CVE-2021-2479",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-2479"
+			},
+			{
+				"ref_id": "CVE-2021-2481",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-2481"
+			},
+			{
+				"ref_id": "CVE-2021-35546",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35546"
+			},
+			{
+				"ref_id": "CVE-2021-35575",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35575"
+			},
+			{
+				"ref_id": "CVE-2021-35577",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35577"
+			},
+			{
+				"ref_id": "CVE-2021-35591",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35591"
+			},
+			{
+				"ref_id": "CVE-2021-35596",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35596"
+			},
+			{
+				"ref_id": "CVE-2021-35597",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35597"
+			},
+			{
+				"ref_id": "CVE-2021-35602",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35602"
+			},
+			{
+				"ref_id": "CVE-2021-35604",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35604"
+			},
+			{
+				"ref_id": "CVE-2021-35607",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35607"
+			},
+			{
+				"ref_id": "CVE-2021-35608",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35608"
+			},
+			{
+				"ref_id": "CVE-2021-35610",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35610"
+			},
+			{
+				"ref_id": "CVE-2021-35612",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35612"
+			},
+			{
+				"ref_id": "CVE-2021-35622",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35622"
+			},
+			{
+				"ref_id": "CVE-2021-35623",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35623"
+			},
+			{
+				"ref_id": "CVE-2021-35624",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35624"
+			},
+			{
+				"ref_id": "CVE-2021-35625",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35625"
+			},
+			{
+				"ref_id": "CVE-2021-35626",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35626"
+			},
+			{
+				"ref_id": "CVE-2021-35627",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35627"
+			},
+			{
+				"ref_id": "CVE-2021-35628",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35628"
+			},
+			{
+				"ref_id": "CVE-2021-35630",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35630"
+			},
+			{
+				"ref_id": "CVE-2021-35631",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35631"
+			},
+			{
+				"ref_id": "CVE-2021-35632",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35632"
+			},
+			{
+				"ref_id": "CVE-2021-35633",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35633"
+			},
+			{
+				"ref_id": "CVE-2021-35634",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35634"
+			},
+			{
+				"ref_id": "CVE-2021-35635",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35635"
+			},
+			{
+				"ref_id": "CVE-2021-35636",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35636"
+			},
+			{
+				"ref_id": "CVE-2021-35637",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35637"
+			},
+			{
+				"ref_id": "CVE-2021-35638",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35638"
+			},
+			{
+				"ref_id": "CVE-2021-35639",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35639"
+			},
+			{
+				"ref_id": "CVE-2021-35640",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35640"
+			},
+			{
+				"ref_id": "CVE-2021-35641",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35641"
+			},
+			{
+				"ref_id": "CVE-2021-35642",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35642"
+			},
+			{
+				"ref_id": "CVE-2021-35643",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35643"
+			},
+			{
+				"ref_id": "CVE-2021-35644",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35644"
+			},
+			{
+				"ref_id": "CVE-2021-35645",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35645"
+			},
+			{
+				"ref_id": "CVE-2021-35646",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35646"
+			},
+			{
+				"ref_id": "CVE-2021-35647",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35647"
+			},
+			{
+				"ref_id": "CVE-2021-35648",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35648"
+			},
+			{
+				"ref_id": "CVE-2022-21245",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21245"
+			},
+			{
+				"ref_id": "CVE-2022-21249",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21249"
+			},
+			{
+				"ref_id": "CVE-2022-21253",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21253"
+			},
+			{
+				"ref_id": "CVE-2022-21254",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21254"
+			},
+			{
+				"ref_id": "CVE-2022-21256",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21256"
+			},
+			{
+				"ref_id": "CVE-2022-21264",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21264"
+			},
+			{
+				"ref_id": "CVE-2022-21265",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21265"
+			},
+			{
+				"ref_id": "CVE-2022-21270",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21270"
+			},
+			{
+				"ref_id": "CVE-2022-21278",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21278"
+			},
+			{
+				"ref_id": "CVE-2022-21297",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21297"
+			},
+			{
+				"ref_id": "CVE-2022-21301",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21301"
+			},
+			{
+				"ref_id": "CVE-2022-21302",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21302"
+			},
+			{
+				"ref_id": "CVE-2022-21303",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21303"
+			},
+			{
+				"ref_id": "CVE-2022-21304",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21304"
+			},
+			{
+				"ref_id": "CVE-2022-21339",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21339"
+			},
+			{
+				"ref_id": "CVE-2022-21342",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21342"
+			},
+			{
+				"ref_id": "CVE-2022-21344",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21344"
+			},
+			{
+				"ref_id": "CVE-2022-21348",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21348"
+			},
+			{
+				"ref_id": "CVE-2022-21351",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21351"
+			},
+			{
+				"ref_id": "CVE-2022-21352",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21352"
+			},
+			{
+				"ref_id": "CVE-2022-21358",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21358"
+			},
+			{
+				"ref_id": "CVE-2022-21362",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21362"
+			},
+			{
+				"ref_id": "CVE-2022-21367",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21367"
+			},
+			{
+				"ref_id": "CVE-2022-21368",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21368"
+			},
+			{
+				"ref_id": "CVE-2022-21370",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21370"
+			},
+			{
+				"ref_id": "CVE-2022-21372",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21372"
+			},
+			{
+				"ref_id": "CVE-2022-21374",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21374"
+			},
+			{
+				"ref_id": "CVE-2022-21378",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21378"
+			},
+			{
+				"ref_id": "CVE-2022-21379",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21379"
+			},
+			{
+				"ref_id": "CVE-2022-21412",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21412"
+			},
+			{
+				"ref_id": "CVE-2022-21413",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21413"
+			},
+			{
+				"ref_id": "CVE-2022-21414",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21414"
+			},
+			{
+				"ref_id": "CVE-2022-21415",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21415"
+			},
+			{
+				"ref_id": "CVE-2022-21417",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21417"
+			},
+			{
+				"ref_id": "CVE-2022-21418",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21418"
+			},
+			{
+				"ref_id": "CVE-2022-21423",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21423"
+			},
+			{
+				"ref_id": "CVE-2022-21425",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21425"
+			},
+			{
+				"ref_id": "CVE-2022-21427",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21427"
+			},
+			{
+				"ref_id": "CVE-2022-21435",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21435"
+			},
+			{
+				"ref_id": "CVE-2022-21436",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21436"
+			},
+			{
+				"ref_id": "CVE-2022-21437",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21437"
+			},
+			{
+				"ref_id": "CVE-2022-21438",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21438"
+			},
+			{
+				"ref_id": "CVE-2022-21440",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21440"
+			},
+			{
+				"ref_id": "CVE-2022-21444",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21444"
+			},
+			{
+				"ref_id": "CVE-2022-21451",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21451"
+			},
+			{
+				"ref_id": "CVE-2022-21452",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21452"
+			},
+			{
+				"ref_id": "CVE-2022-21454",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21454"
+			},
+			{
+				"ref_id": "CVE-2022-21457",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21457"
+			},
+			{
+				"ref_id": "CVE-2022-21459",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21459"
+			},
+			{
+				"ref_id": "CVE-2022-21460",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21460"
+			},
+			{
+				"ref_id": "CVE-2022-21462",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21462"
+			},
+			{
+				"ref_id": "CVE-2022-21478",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21478"
+			},
+			{
+				"ref_id": "CVE-2022-21479",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21479"
+			},
+			{
+				"ref_id": "CVE-2022-21509",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21509"
+			},
+			{
+				"ref_id": "CVE-2022-21515",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21515"
+			},
+			{
+				"ref_id": "CVE-2022-21517",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21517"
+			},
+			{
+				"ref_id": "CVE-2022-21522",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21522"
+			},
+			{
+				"ref_id": "CVE-2022-21525",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21525"
+			},
+			{
+				"ref_id": "CVE-2022-21526",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21526"
+			},
+			{
+				"ref_id": "CVE-2022-21527",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21527"
+			},
+			{
+				"ref_id": "CVE-2022-21528",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21528"
+			},
+			{
+				"ref_id": "CVE-2022-21529",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21529"
+			},
+			{
+				"ref_id": "CVE-2022-21530",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21530"
+			},
+			{
+				"ref_id": "CVE-2022-21531",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21531"
+			},
+			{
+				"ref_id": "CVE-2022-21534",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21534"
+			},
+			{
+				"ref_id": "CVE-2022-21537",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21537"
+			},
+			{
+				"ref_id": "CVE-2022-21538",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21538"
+			},
+			{
+				"ref_id": "CVE-2022-21539",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21539"
+			},
+			{
+				"ref_id": "CVE-2022-21547",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21547"
+			},
+			{
+				"ref_id": "CVE-2022-21553",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21553"
+			},
+			{
+				"ref_id": "CVE-2022-21569",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21569"
+			},
+			{
+				"ref_id": "ALSA-2022:7119",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7119.html"
+			}
+		],
+		"Description": "MySQL is a multi-user, multi-threaded SQL database server. It consists of the MySQL server daemon (mysqld) and many client programs and libraries.\n\nThe following packages have been upgraded to a later upstream version: mysql (8.0.30).\n\nSecurity Fix(es):\n\n* mysql: Server: DML multiple unspecified vulnerabilities (CVE-2021-2478, CVE-2021-2479, CVE-2021-35591, CVE-2021-35607, CVE-2022-21301, CVE-2022-21413)\n* mysql: Server: Optimizer multiple unspecified vulnerabilities (CVE-2021-2481, CVE-2021-35575, CVE-2021-35577, CVE-2021-35610, CVE-2021-35612, CVE-2021-35626, CVE-2021-35627, CVE-2021-35628, CVE-2021-35634, CVE-2021-35635, CVE-2021-35636, CVE-2021-35638, CVE-2021-35641, CVE-2021-35642, CVE-2021-35643, CVE-2021-35644, CVE-2021-35645, CVE-2021-35646, CVE-2021-35647, CVE-2022-21253, CVE-2022-21254, CVE-2022-21264, CVE-2022-21278, CVE-2022-21297, CVE-2022-21339, CVE-2022-21342, CVE-2022-21351, CVE-2022-21370, CVE-2022-21378, CVE-2022-21412, CVE-2022-21414, CVE-2022-21435, CVE-2022-21436, CVE-2022-21437, CVE-2022-21438, CVE-2022-21440, CVE-2022-21452, CVE-2022-21459, CVE-2022-21462, CVE-2022-21478, CVE-2022-21479, CVE-2022-21509, CVE-2022-21525, CVE-2022-21526, CVE-2022-21527, CVE-2022-21528, CVE-2022-21529, CVE-2022-21530, CVE-2022-21531, CVE-2022-21553, CVE-2022-21569, CVE-2022-21265)\n* mysql: Server: Replication multiple unspecified vulnerabilities (CVE-2021-35546, CVE-2022-21344, CVE-2022-21415)\n* mysql: Server: Error Handling unspecified vulnerability (CVE-2021-35596)\n* mysql: C API unspecified vulnerability (CVE-2021-35597)\n* mysql: Server: Options multiple unspecified vulnerabilities (CVE-2021-35602, CVE-2021-35630, CVE-2022-21515)\n* mysql: InnoDB multiple unspecified vulnerabilities (CVE-2021-35604, CVE-2022-21302, CVE-2022-21348, CVE-2022-21352, CVE-2022-21417, CVE-2022-21418, CVE-2022-21451, CVE-2022-21517, CVE-2022-21537, CVE-2022-21539, CVE-2022-21423)\n* mysql: Server: Group Replication Plugin multiple unspecified vulnerabilities (CVE-2021-35608, CVE-2022-21256, CVE-2022-21379, CVE-2022-21454)\n* mysql: Server: Security: Encryption multiple unspecified vulnerabilities (CVE-2021-35622, CVE-2022-21358, CVE-2022-21372, CVE-2022-21538)\n* mysql: Server: Security: Privileges multiple unspecified vulnerabilities (CVE-2021-35624, CVE-2022-21245, CVE-2021-35625)\n* mysql: Server: GIS unspecified vulnerability (CVE-2021-35631)\n* mysql: Server: Data Dictionary unspecified vulnerability (CVE-2021-35632)\n* mysql: Server: PS unspecified vulnerability (CVE-2021-35637)\n* mysql: Server: Stored Procedure multiple unspecified vulnerabilities (CVE-2021-35639, CVE-2022-21303, CVE-2022-21522, CVE-2022-21534)\n* mysql: Server: FTS multiple unspecified vulnerabilities (CVE-2021-35648, CVE-2022-21427)\n* mysql: Server: Federated multiple unspecified vulnerabilities (CVE-2022-21270, CVE-2022-21547)\n* mysql: Server: Parser unspecified vulnerability (CVE-2022-21304)\n* mysql: Server: Information Schema multiple unspecified vulnerabilities (CVE-2022-21362, CVE-2022-21374)\n* mysql: Server: Compiling unspecified vulnerability (CVE-2022-21367)\n* mysql: Server: Components Services unspecified vulnerability (CVE-2022-21368)\n* mysql: Server: DDL multiple unspecified vulnerabilities (CVE-2022-21425, CVE-2022-21444, CVE-2021-35640, CVE-2022-21249)\n* mysql: Server: PAM Auth Plugin unspecified vulnerability (CVE-2022-21457)\n* mysql: Server: Logging multiple unspecified vulnerabilities (CVE-2022-21460, CVE-2021-35633)\n* mysql: Server: Security: Roles unspecified vulnerability (CVE-2021-35623)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nBug Fix(es):\n\n* Rebuild mecab due to change in the suffix (from .el8 to .el8.0.0) [almalinux-8] (BZ#2110940)",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-10-25"
+			},
+			"updated": {
+				"date": "2023-09-15"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2016089",
+					"id": "2016089"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016090",
+					"id": "2016090"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016091",
+					"id": "2016091"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016093",
+					"id": "2016093"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016094",
+					"id": "2016094"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016095",
+					"id": "2016095"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016097",
+					"id": "2016097"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016098",
+					"id": "2016098"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016099",
+					"id": "2016099"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016100",
+					"id": "2016100"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016101",
+					"id": "2016101"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016104",
+					"id": "2016104"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016105",
+					"id": "2016105"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016106",
+					"id": "2016106"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016107",
+					"id": "2016107"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016108",
+					"id": "2016108"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016109",
+					"id": "2016109"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016110",
+					"id": "2016110"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016111",
+					"id": "2016111"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016112",
+					"id": "2016112"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016113",
+					"id": "2016113"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016114",
+					"id": "2016114"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016117",
+					"id": "2016117"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016118",
+					"id": "2016118"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016119",
+					"id": "2016119"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016120",
+					"id": "2016120"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016121",
+					"id": "2016121"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016122",
+					"id": "2016122"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016124",
+					"id": "2016124"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016126",
+					"id": "2016126"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016127",
+					"id": "2016127"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016128",
+					"id": "2016128"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016129",
+					"id": "2016129"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016130",
+					"id": "2016130"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016131",
+					"id": "2016131"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016132",
+					"id": "2016132"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016133",
+					"id": "2016133"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016134",
+					"id": "2016134"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016135",
+					"id": "2016135"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016137",
+					"id": "2016137"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2016138",
+					"id": "2016138"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2043620",
+					"id": "2043620"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2043621",
+					"id": "2043621"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2043622",
+					"id": "2043622"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2043623",
+					"id": "2043623"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2043624",
+					"id": "2043624"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2043625",
+					"id": "2043625"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2043626",
+					"id": "2043626"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2043627",
+					"id": "2043627"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2043628",
+					"id": "2043628"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2043629",
+					"id": "2043629"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2043630",
+					"id": "2043630"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2043631",
+					"id": "2043631"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2043632",
+					"id": "2043632"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2043633",
+					"id": "2043633"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2043634",
+					"id": "2043634"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2043635",
+					"id": "2043635"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2043636",
+					"id": "2043636"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2043637",
+					"id": "2043637"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2043638",
+					"id": "2043638"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2043639",
+					"id": "2043639"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2043640",
+					"id": "2043640"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2043641",
+					"id": "2043641"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2043642",
+					"id": "2043642"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2043643",
+					"id": "2043643"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2043644",
+					"id": "2043644"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2043645",
+					"id": "2043645"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2043646",
+					"id": "2043646"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2043647",
+					"id": "2043647"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2043648",
+					"id": "2043648"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2082636",
+					"id": "2082636"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2082637",
+					"id": "2082637"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2082638",
+					"id": "2082638"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2082639",
+					"id": "2082639"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2082640",
+					"id": "2082640"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2082641",
+					"id": "2082641"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2082642",
+					"id": "2082642"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2082643",
+					"id": "2082643"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2082644",
+					"id": "2082644"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2082645",
+					"id": "2082645"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2082646",
+					"id": "2082646"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2082647",
+					"id": "2082647"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2082648",
+					"id": "2082648"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2082649",
+					"id": "2082649"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2082650",
+					"id": "2082650"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2082651",
+					"id": "2082651"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2082652",
+					"id": "2082652"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2082653",
+					"id": "2082653"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2082654",
+					"id": "2082654"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2082655",
+					"id": "2082655"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2082656",
+					"id": "2082656"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2082657",
+					"id": "2082657"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2082658",
+					"id": "2082658"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2082659",
+					"id": "2082659"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2115283",
+					"id": "2115283"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2115284",
+					"id": "2115284"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2115285",
+					"id": "2115285"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2115286",
+					"id": "2115286"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2115287",
+					"id": "2115287"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2115288",
+					"id": "2115288"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2115289",
+					"id": "2115289"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2115290",
+					"id": "2115290"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2115291",
+					"id": "2115291"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2115292",
+					"id": "2115292"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2115293",
+					"id": "2115293"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2115294",
+					"id": "2115294"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2115295",
+					"id": "2115295"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2115296",
+					"id": "2115296"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2115297",
+					"id": "2115297"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2115298",
+					"id": "2115298"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2115299",
+					"id": "2115299"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2115301",
+					"id": "2115301"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-2478",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-2478",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-2479",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-2479",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-2481",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-2481",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-35546",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35546",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-35575",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35575",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-35577",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35577",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-35591",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35591",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-35596",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35596",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-35597",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35597",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-35602",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35602",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:L/A:H"
+				},
+				{
+					"text": "CVE-2021-35604",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35604",
+					"impact": "moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:H"
+				},
+				{
+					"text": "CVE-2021-35607",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35607",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-35608",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35608",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-35610",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35610",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H"
+				},
+				{
+					"text": "CVE-2021-35612",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35612",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:H"
+				},
+				{
+					"text": "CVE-2021-35622",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35622",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-35623",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35623",
+					"impact": "Low",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N"
+				},
+				{
+					"text": "CVE-2021-35624",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35624",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:N"
+				},
+				{
+					"text": "CVE-2021-35625",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35625",
+					"impact": "Low",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N"
+				},
+				{
+					"text": "CVE-2021-35626",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35626",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-35627",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35627",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-35628",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35628",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-35630",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35630",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:N"
+				},
+				{
+					"text": "CVE-2021-35631",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35631",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-35632",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35632",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-35633",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35633",
+					"impact": "Low",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2021-35634",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35634",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-35635",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35635",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-35636",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35636",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-35637",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35637",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-35638",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35638",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-35639",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35639",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-35640",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35640",
+					"impact": "Low",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:N"
+				},
+				{
+					"text": "CVE-2021-35641",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35641",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-35642",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35642",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-35643",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35643",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-35644",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35644",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-35645",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35645",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-35646",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35646",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-35647",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35647",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-35648",
+					"public": "20211019",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35648",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21245",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21245",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+				},
+				{
+					"text": "CVE-2022-21249",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21249",
+					"impact": "Low",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2022-21253",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21253",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21254",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21254",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21256",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21256",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21264",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21264",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21265",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21265",
+					"impact": "Low",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:L"
+				},
+				{
+					"text": "CVE-2022-21270",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21270",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21278",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21278",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H"
+				},
+				{
+					"text": "CVE-2022-21297",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21297",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21301",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21301",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:H"
+				},
+				{
+					"text": "CVE-2022-21302",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21302",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21303",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21303",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21304",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21304",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21339",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21339",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21342",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21342",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21344",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21344",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21348",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21348",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21351",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21351",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H"
+				},
+				{
+					"text": "CVE-2022-21352",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21352",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-21358",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21358",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21362",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21362",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21367",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21367",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:H"
+				},
+				{
+					"text": "CVE-2022-21368",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21368",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L"
+				},
+				{
+					"text": "CVE-2022-21370",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21370",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21372",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21372",
+					"impact": "Low",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2022-21374",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21374",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21378",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21378",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:H"
+				},
+				{
+					"text": "CVE-2022-21379",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21379",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21412",
+					"public": "20220419",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21412",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21413",
+					"public": "20220419",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21413",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21414",
+					"public": "20220419",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21414",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21415",
+					"public": "20220419",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21415",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21417",
+					"public": "20220419",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21417",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21418",
+					"public": "20220419",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21418",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:L/A:H"
+				},
+				{
+					"text": "CVE-2022-21423",
+					"public": "20220419",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21423",
+					"impact": "Low",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2022-21425",
+					"public": "20220419",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21425",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:H"
+				},
+				{
+					"text": "CVE-2022-21427",
+					"public": "20220419",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21427",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21435",
+					"public": "20220419",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21435",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21436",
+					"public": "20220419",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21436",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21437",
+					"public": "20220419",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21437",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21438",
+					"public": "20220419",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21438",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21440",
+					"public": "20220419",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21440",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:H"
+				},
+				{
+					"text": "CVE-2022-21444",
+					"public": "20220419",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21444",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21451",
+					"public": "20220419",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21451",
+					"impact": "moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21452",
+					"public": "20220419",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21452",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21454",
+					"public": "20220419",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21454",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21457",
+					"public": "20220419",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21457",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2022-21459",
+					"public": "20220419",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21459",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:H"
+				},
+				{
+					"text": "CVE-2022-21460",
+					"public": "20220419",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21460",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2022-21462",
+					"public": "20220419",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21462",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21478",
+					"public": "20220419",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21478",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:H"
+				},
+				{
+					"text": "CVE-2022-21479",
+					"public": "20220419",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21479",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21509",
+					"public": "20220719",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21509",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:H"
+				},
+				{
+					"text": "CVE-2022-21515",
+					"public": "20220719",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21515",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21517",
+					"public": "20220719",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21517",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21522",
+					"public": "20220719",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21522",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21525",
+					"public": "20220719",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21525",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21526",
+					"public": "20220719",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21526",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21527",
+					"public": "20220719",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21527",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:H"
+				},
+				{
+					"text": "CVE-2022-21528",
+					"public": "20220719",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21528",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:H"
+				},
+				{
+					"text": "CVE-2022-21529",
+					"public": "20220719",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21529",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21530",
+					"public": "20220719",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21530",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21531",
+					"public": "20220719",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21531",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21534",
+					"public": "20220719",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21534",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21537",
+					"public": "20220719",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21537",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21538",
+					"public": "20220719",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21538",
+					"impact": "Low",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2022-21539",
+					"public": "20220719",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21539",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L"
+				},
+				{
+					"text": "CVE-2022-21547",
+					"public": "20220719",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21547",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21553",
+					"public": "20220719",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21553",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21569",
+					"public": "20220719",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21569",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterias": [
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227119001",
+														"comment": "mecab is earlier than 0:0.996-2.module_el8.6.0+3340+d764b636"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20192511002",
+														"comment": "mecab is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20192511003",
+														"comment": "mecab-ipadic is earlier than 0:2.7.0.20070801-16.module_el8.6.0+3340+d764b636"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20192511004",
+														"comment": "mecab-ipadic is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20192511005",
+														"comment": "mecab-ipadic-EUCJP is earlier than 0:2.7.0.20070801-16.module_el8.6.0+3340+d764b636"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20192511006",
+														"comment": "mecab-ipadic-EUCJP is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227119007",
+														"comment": "mysql is earlier than 0:8.0.30-1.module_el8.6.0+3340+d764b636"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20192511008",
+														"comment": "mysql is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227119009",
+														"comment": "mysql-common is earlier than 0:8.0.30-1.module_el8.6.0+3340+d764b636"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20192511010",
+														"comment": "mysql-common is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227119011",
+														"comment": "mysql-devel is earlier than 0:8.0.30-1.module_el8.6.0+3340+d764b636"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20192511012",
+														"comment": "mysql-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227119013",
+														"comment": "mysql-errmsg is earlier than 0:8.0.30-1.module_el8.6.0+3340+d764b636"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20192511014",
+														"comment": "mysql-errmsg is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227119015",
+														"comment": "mysql-libs is earlier than 0:8.0.30-1.module_el8.6.0+3340+d764b636"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20192511016",
+														"comment": "mysql-libs is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227119017",
+														"comment": "mysql-server is earlier than 0:8.0.30-1.module_el8.6.0+3340+d764b636"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20192511018",
+														"comment": "mysql-server is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227119019",
+														"comment": "mysql-test is earlier than 0:8.0.30-1.module_el8.6.0+3340+d764b636"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20192511020",
+														"comment": "mysql-test is signed with AlmaLinux OS 8 key"
+													}
+												]
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192511021",
+										"comment": "Module mysql:8.0 is enabled"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

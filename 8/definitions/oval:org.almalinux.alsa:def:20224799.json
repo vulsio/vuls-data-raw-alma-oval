@@ -1,0 +1,346 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20224799",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:4799: rsyslog security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:4799",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-4799.html"
+			},
+			{
+				"ref_id": "ALSA-2022:4799",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-4799.html"
+			},
+			{
+				"ref_id": "CVE-2022-24903",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-24903"
+			}
+		],
+		"Description": "The rsyslog packages provide an enhanced, multi-threaded syslog daemon. It supports MySQL, syslog/TCP, RFC 3195, permitted sender lists, filtering on any message part, and fine-grained control over output format.\nSecurity Fix(es):\n* rsyslog: Heap-based overflow in TCP syslog server (CVE-2022-24903)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-05-30"
+			},
+			"updated": {
+				"date": "2022-05-30"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2081353",
+					"id": "2081353"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-24903",
+					"public": "20220505",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-24903",
+					"impact": "important",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224799001",
+										"comment": "rsyslog is earlier than 0:8.2102.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201702002",
+										"comment": "rsyslog is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224799003",
+										"comment": "rsyslog-crypto is earlier than 0:8.2102.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201702004",
+										"comment": "rsyslog-crypto is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224799005",
+										"comment": "rsyslog-doc is earlier than 0:8.2102.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201702006",
+										"comment": "rsyslog-doc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224799007",
+										"comment": "rsyslog-elasticsearch is earlier than 0:8.2102.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201702008",
+										"comment": "rsyslog-elasticsearch is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224799009",
+										"comment": "rsyslog-gnutls is earlier than 0:8.2102.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201702010",
+										"comment": "rsyslog-gnutls is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224799011",
+										"comment": "rsyslog-gssapi is earlier than 0:8.2102.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201702012",
+										"comment": "rsyslog-gssapi is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224799013",
+										"comment": "rsyslog-kafka is earlier than 0:8.2102.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201702014",
+										"comment": "rsyslog-kafka is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224799015",
+										"comment": "rsyslog-mmaudit is earlier than 0:8.2102.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201702016",
+										"comment": "rsyslog-mmaudit is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224799017",
+										"comment": "rsyslog-mmfields is earlier than 0:8.2102.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224799018",
+										"comment": "rsyslog-mmfields is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224799019",
+										"comment": "rsyslog-mmjsonparse is earlier than 0:8.2102.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201702018",
+										"comment": "rsyslog-mmjsonparse is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224799021",
+										"comment": "rsyslog-mmkubernetes is earlier than 0:8.2102.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201702020",
+										"comment": "rsyslog-mmkubernetes is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224799023",
+										"comment": "rsyslog-mmnormalize is earlier than 0:8.2102.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201702022",
+										"comment": "rsyslog-mmnormalize is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224799025",
+										"comment": "rsyslog-mmsnmptrapd is earlier than 0:8.2102.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201702024",
+										"comment": "rsyslog-mmsnmptrapd is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224799027",
+										"comment": "rsyslog-mysql is earlier than 0:8.2102.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201702026",
+										"comment": "rsyslog-mysql is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224799029",
+										"comment": "rsyslog-omamqp1 is earlier than 0:8.2102.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224799030",
+										"comment": "rsyslog-omamqp1 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224799031",
+										"comment": "rsyslog-openssl is earlier than 0:8.2102.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224799032",
+										"comment": "rsyslog-openssl is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224799033",
+										"comment": "rsyslog-pgsql is earlier than 0:8.2102.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201702028",
+										"comment": "rsyslog-pgsql is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224799035",
+										"comment": "rsyslog-relp is earlier than 0:8.2102.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201702030",
+										"comment": "rsyslog-relp is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224799037",
+										"comment": "rsyslog-snmp is earlier than 0:8.2102.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201702032",
+										"comment": "rsyslog-snmp is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224799039",
+										"comment": "rsyslog-udpspoof is earlier than 0:8.2102.0-7.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224799040",
+										"comment": "rsyslog-udpspoof is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

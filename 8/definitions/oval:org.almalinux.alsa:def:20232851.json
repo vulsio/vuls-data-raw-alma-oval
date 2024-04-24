@@ -1,0 +1,297 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20232851",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:2851: freerdp security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2023:2851",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-2851.html"
+			},
+			{
+				"ref_id": "CVE-2022-39282",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-39282"
+			},
+			{
+				"ref_id": "CVE-2022-39283",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-39283"
+			},
+			{
+				"ref_id": "CVE-2022-39316",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-39316"
+			},
+			{
+				"ref_id": "CVE-2022-39317",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-39317"
+			},
+			{
+				"ref_id": "CVE-2022-39318",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-39318"
+			},
+			{
+				"ref_id": "CVE-2022-39319",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-39319"
+			},
+			{
+				"ref_id": "CVE-2022-39320",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-39320"
+			},
+			{
+				"ref_id": "CVE-2022-39347",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-39347"
+			},
+			{
+				"ref_id": "CVE-2022-41877",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-41877"
+			},
+			{
+				"ref_id": "ALSA-2023:2851",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-2851.html"
+			}
+		],
+		"Description": "FreeRDP is a free implementation of the Remote Desktop Protocol (RDP), released under the Apache license. The xfreerdp client can connect to RDP servers such as Microsoft Windows machines, xrdp, and VirtualBox.\n\nSecurity Fix(es):\n\n* freerdp: clients using `/parallel` command line switch might read uninitialized data (CVE-2022-39282)\n* freerdp: clients using the `/video` command line switch might read uninitialized data (CVE-2022-39283)\n* freerdp: out of bounds read in zgfx decoder (CVE-2022-39316)\n* freerdp: undefined behaviour in zgfx decoder (CVE-2022-39317)\n* freerdp: division by zero in urbdrc channel (CVE-2022-39318)\n* freerdp: missing length validation in urbdrc channel (CVE-2022-39319)\n* freerdp: heap buffer overflow in urbdrc channel (CVE-2022-39320)\n* freerdp: missing path sanitation with `drive` channel (CVE-2022-39347)\n* freerdp: missing input length validation in `drive` channel (CVE-2022-41877)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-05-16"
+			},
+			"updated": {
+				"date": "2023-05-16"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2134713",
+					"id": "2134713"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2134717",
+					"id": "2134717"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2143642",
+					"id": "2143642"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2143643",
+					"id": "2143643"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2143644",
+					"id": "2143644"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2143645",
+					"id": "2143645"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2143646",
+					"id": "2143646"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2143647",
+					"id": "2143647"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2143648",
+					"id": "2143648"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-39282",
+					"public": "20221013",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-39282",
+					"impact": "Moderate",
+					"cwe": "CWE-908",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2022-39283",
+					"public": "20221013",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-39283",
+					"impact": "Moderate",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2022-39316",
+					"public": "20221116",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-39316",
+					"impact": "Low",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-39317",
+					"public": "20221116",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-39317",
+					"impact": "Low",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:N/A:L"
+				},
+				{
+					"text": "CVE-2022-39318",
+					"public": "20221116",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-39318",
+					"impact": "Low",
+					"cwe": "CWE-20->CWE-369",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-39319",
+					"public": "20221116",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-39319",
+					"impact": "Low",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:N/A:L"
+				},
+				{
+					"text": "CVE-2022-39320",
+					"public": "20221116",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-39320",
+					"impact": "Low",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:N/A:L"
+				},
+				{
+					"text": "CVE-2022-39347",
+					"public": "20221116",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-39347",
+					"impact": "Low",
+					"cwe": "CWE-22",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2022-41877",
+					"public": "20221116",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-41877",
+					"impact": "Low",
+					"cwe": "CWE-119",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:N/A:L"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232851001",
+										"comment": "freerdp is earlier than 2:2.2.0-10.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20202336002",
+										"comment": "freerdp is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232851003",
+										"comment": "freerdp-devel is earlier than 2:2.2.0-10.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20202336004",
+										"comment": "freerdp-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232851005",
+										"comment": "freerdp-libs is earlier than 2:2.2.0-10.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20202336006",
+										"comment": "freerdp-libs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232851007",
+										"comment": "libwinpr is earlier than 2:2.2.0-10.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20202336008",
+										"comment": "libwinpr is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232851009",
+										"comment": "libwinpr-devel is earlier than 2:2.2.0-10.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20202336010",
+										"comment": "libwinpr-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

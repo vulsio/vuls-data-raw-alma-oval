@@ -1,0 +1,87 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20214916",
+	"version": "634",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:4916: mailman:2.1 security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:4916",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4916.html"
+			},
+			{
+				"ref_id": "ALSA-2021:4916",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4916.html"
+			},
+			{
+				"ref_id": "CVE-2021-44227",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-44227"
+			}
+		],
+		"Description": "Mailman is a program used to help manage e-mail discussion lists.\nSecurity Fix(es):\n* mailman: CSRF token bypass allows to perform CSRF attacks and admin takeover (CVE-2021-44227)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-12-02"
+			},
+			"updated": {
+				"date": "2021-12-02"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2026862",
+					"id": "2026862"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-44227",
+					"public": "20211126",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-44227",
+					"impact": "important",
+					"cwe": "CWE-352",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20204667003",
+						"comment": "Module mailman:2.1 is enabled"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20214916001",
+						"comment": "mailman is earlier than 3:2.1.29-12.module+el8.5.0+13466+327eb9f3.2"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

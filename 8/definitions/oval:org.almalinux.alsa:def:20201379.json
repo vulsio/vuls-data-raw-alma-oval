@@ -1,0 +1,391 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20201379",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2020:1379: container-tools:rhel8 security and bug fix update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2020:1379",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-1379.html"
+			},
+			{
+				"ref_id": "ALSA-2020:1379",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-1379.html"
+			},
+			{
+				"ref_id": "CVE-2020-8608",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-8608"
+			}
+		],
+		"Description": "The container-tools module contains tools for working with containers, notably podman, buildah, skopeo, and runc.\nSecurity Fix(es):\n* QEMU: Slirp: potential OOB access due to unsafe snprintf() usages (CVE-2020-8608)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nBug Fix(es):\n* useradd and groupadd fail under rootless Buildah and podman [stream-container-tools-rhel8-rhel-8.1.1] (BZ#1803495)\n* Podman support for FIPS Mode requires a bind mount inside the container [stream-container-tools-rhel8-rhel-8.1.1/buildah] (BZ#1804188)\n* Podman support for FIPS Mode requires a bind mount inside the container [stream-container-tools-rhel8-rhel-8.1.1/podman] (BZ#1804194)\n* fuse-overlayfs segfault [stream-container-tools-rhel8-rhel-8.1.1/fuse-overlayfs] (BZ#1805016)\n* buildah COPY command is slow when .dockerignore file is not present [stream-container-tools-rhel8-rhel-8.1.1/buildah] (BZ#1806119)",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2020-04-07"
+			},
+			"updated": {
+				"date": "2020-04-07"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1798453",
+					"id": "1798453"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2020-8608",
+					"public": "20200127",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-8608",
+					"impact": "important",
+					"cwe": "CWE-122",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202013790011",
+										"comment": "buildah is earlier than 0:1.11.6-6.module_el8.1.0+298+41f9343a"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201909750022",
+										"comment": "buildah is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202013790031",
+										"comment": "buildah-tests is earlier than 0:1.11.6-6.module_el8.1.0+298+41f9343a"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201934030042",
+										"comment": "buildah-tests is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202003480051",
+										"comment": "cockpit-podman is earlier than 0:11-1.module_el8.1.0+298+41f9343a"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201934030062",
+										"comment": "cockpit-podman is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019349400311",
+										"comment": "AlmaLinux arch is aarch64|ppc64le|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202003480071",
+										"comment": "conmon is earlier than 2:2.0.6-1.module_el8.2.0+305+5e198a41"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202003480082",
+										"comment": "conmon is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202003480091",
+										"comment": "container-selinux is earlier than 2:2.124.0-1.module_el8.2.0+305+5e198a41"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201909750042",
+										"comment": "container-selinux is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019349400311",
+										"comment": "AlmaLinux arch is aarch64|ppc64le|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202003480111",
+										"comment": "containernetworking-plugins is earlier than 0:0.8.3-4.module_el8.1.0+298+41f9343a"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201909750062",
+										"comment": "containernetworking-plugins is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202003480131",
+										"comment": "containers-common is earlier than 1:0.1.40-8.module_el8.1.0+298+41f9343a"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201909750082",
+										"comment": "containers-common is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202013790151",
+										"comment": "fuse-overlayfs is earlier than 0:0.7.2-5.module_el8.2.0+305+5e198a41"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201909750102",
+										"comment": "fuse-overlayfs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202013790171",
+										"comment": "podman is earlier than 0:1.6.4-4.module_el8.1.0+298+41f9343a"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201909750162",
+										"comment": "podman is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202013790191",
+										"comment": "podman-docker is earlier than 0:1.6.4-4.module_el8.1.0+298+41f9343a"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201909750182",
+										"comment": "podman-docker is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019349400311",
+										"comment": "AlmaLinux arch is aarch64|ppc64le|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202013790211",
+										"comment": "podman-manpages is earlier than 0:1.6.4-4.module_el8.1.0+298+41f9343a"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201934030242",
+										"comment": "podman-manpages is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019349400311",
+										"comment": "AlmaLinux arch is aarch64|ppc64le|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202013790231",
+										"comment": "podman-remote is earlier than 0:1.6.4-4.module_el8.1.0+298+41f9343a"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201934030262",
+										"comment": "podman-remote is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202013790251",
+										"comment": "podman-tests is earlier than 0:1.6.4-4.module_el8.1.0+298+41f9343a"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201934030282",
+										"comment": "podman-tests is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202003480271",
+										"comment": "python-podman-api is earlier than 0:1.2.0-0.2.gitd0a45fe.module_el8.3.0+2046+68fb1526"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193403030",
+										"comment": "python-podman-api is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500111",
+										"comment": "AlmaLinux arch is x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202003480272",
+										"comment": "python-podman-api is earlier than 0:1.2.0-0.2.gitd0a45fe.module_el8.3.0+475+c50ce30b"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201934030302",
+										"comment": "python-podman-api is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2020034802721",
+										"comment": "AlmaLinux arch is aarch64|ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202003480291",
+										"comment": "runc is earlier than 0:1.0.0-64.rc9.module_el8.1.0+298+41f9343a"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201909750202",
+										"comment": "runc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202003480311",
+										"comment": "skopeo is earlier than 1:0.1.40-8.module_el8.1.0+298+41f9343a"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201909750222",
+										"comment": "skopeo is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202003480331",
+										"comment": "skopeo-tests is earlier than 1:0.1.40-8.module_el8.1.0+298+41f9343a"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201934030362",
+										"comment": "skopeo-tests is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202013790351",
+										"comment": "slirp4netns is earlier than 0:0.4.2-3.git21fdece.module_el8.2.0+305+5e198a41"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201909750242",
+										"comment": "slirp4netns is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202003480371",
+										"comment": "toolbox is earlier than 0:0.0.4-1.module_el8.1.0+293+ad8ef41f"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201934030402",
+										"comment": "toolbox is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202003480391",
+										"comment": "udica is earlier than 0:0.2.1-2.module_el8.2.0+305+5e198a41"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202003480402",
+										"comment": "udica is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019349400311",
+										"comment": "AlmaLinux arch is aarch64|ppc64le|x86_64"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20190975025",
+						"comment": "Module container-tools:rhel8 is enabled"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

@@ -1,0 +1,261 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20213945",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:3945: redis:6 security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:3945",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-3945.html"
+			},
+			{
+				"ref_id": "ALSA-2021:3945",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-3945.html"
+			},
+			{
+				"ref_id": "CVE-2021-32626",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-32626"
+			},
+			{
+				"ref_id": "CVE-2021-32627",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-32627"
+			},
+			{
+				"ref_id": "CVE-2021-32628",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-32628"
+			},
+			{
+				"ref_id": "CVE-2021-32675",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-32675"
+			},
+			{
+				"ref_id": "CVE-2021-32687",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-32687"
+			},
+			{
+				"ref_id": "CVE-2021-41099",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-41099"
+			}
+		],
+		"Description": "Redis is an advanced key-value store. It is often referred to as a data-structure server since keys can contain strings, hashes, lists, sets, and sorted sets. For performance, Redis works with an in-memory data set. You can persist it either by dumping the data set to disk every once in a while, or by appending each command to a log.\nSecurity Fix(es):\n* redis: Lua scripts can overflow the heap-based Lua stack (CVE-2021-32626)\n* redis: Integer overflow issue with Streams (CVE-2021-32627)\n* redis: Integer overflow bug in the ziplist data structure (CVE-2021-32628)\n* redis: Denial of service via Redis Standard Protocol (RESP) request (CVE-2021-32675)\n* redis: Integer overflow issue with intsets (CVE-2021-32687)\n* redis: Integer overflow issue with strings (CVE-2021-41099)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-10-20"
+			},
+			"updated": {
+				"date": "2021-10-20"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2010991",
+					"id": "2010991"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2011000",
+					"id": "2011000"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2011004",
+					"id": "2011004"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2011010",
+					"id": "2011010"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2011017",
+					"id": "2011017"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2011020",
+					"id": "2011020"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-32626",
+					"public": "20211004",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-32626",
+					"impact": "important",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2021-32627",
+					"public": "20211004",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-32627",
+					"impact": "important",
+					"cwe": "CWE-190->(CWE-125|CWE-787)",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2021-32628",
+					"public": "20211004",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-32628",
+					"impact": "important",
+					"cwe": "CWE-190->(CWE-125|CWE-787)",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2021-32675",
+					"public": "20211004",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-32675",
+					"impact": "important",
+					"cwe": "CWE-770",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-32687",
+					"public": "20211004",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-32687",
+					"impact": "important",
+					"cwe": "CWE-190->(CWE-125|CWE-787)",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2021-41099",
+					"public": "20211004",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-41099",
+					"impact": "important",
+					"cwe": "CWE-190->(CWE-125|CWE-787)",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202139450011",
+										"comment": "redis is earlier than 0:6.0.9-5.module_el8.4.0+2584+1bb0d2aa"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192002002",
+										"comment": "redis is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202139450012",
+										"comment": "redis is earlier than 0:6.0.9-5.module_el8.5.0+67+a3c431d9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192002002",
+										"comment": "redis is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202139450031",
+										"comment": "redis-devel is earlier than 0:6.0.9-5.module_el8.4.0+2584+1bb0d2aa"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192002004",
+										"comment": "redis-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202139450032",
+										"comment": "redis-devel is earlier than 0:6.0.9-5.module_el8.5.0+67+a3c431d9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192002004",
+										"comment": "redis-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202139450051",
+										"comment": "redis-doc is earlier than 0:6.0.9-5.module_el8.4.0+2584+1bb0d2aa"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192002006",
+										"comment": "redis-doc is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
+										"comment": "AlmaLinux arch is aarch64|x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202139450052",
+										"comment": "redis-doc is earlier than 0:6.0.9-5.module_el8.5.0+67+a3c431d9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20192002006",
+										"comment": "redis-doc is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20212034007",
+						"comment": "Module redis:6 is enabled"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

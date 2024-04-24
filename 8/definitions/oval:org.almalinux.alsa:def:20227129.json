@@ -1,0 +1,221 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20227129",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:7129: git-lfs security and bug fix update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:7129",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7129.html"
+			},
+			{
+				"ref_id": "CVE-2020-28851",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-28851"
+			},
+			{
+				"ref_id": "CVE-2020-28852",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-28852"
+			},
+			{
+				"ref_id": "CVE-2022-1705",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-1705"
+			},
+			{
+				"ref_id": "CVE-2022-27664",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-27664"
+			},
+			{
+				"ref_id": "CVE-2022-30630",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-30630"
+			},
+			{
+				"ref_id": "CVE-2022-30632",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-30632"
+			},
+			{
+				"ref_id": "CVE-2022-30635",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-30635"
+			},
+			{
+				"ref_id": "CVE-2022-32148",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-32148"
+			},
+			{
+				"ref_id": "CVE-2022-32189",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-32189"
+			},
+			{
+				"ref_id": "ALSA-2022:7129",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7129.html"
+			}
+		],
+		"Description": "Git Large File Storage (LFS) replaces large files such as audio samples, videos, datasets, and graphics with text pointers inside Git, while storing the file contents on a remote server.\n\nSecurity Fix(es):\n\n* golang.org/x/text: Panic in language.ParseAcceptLanguage while parsing -u- extension (CVE-2020-28851)\n* golang.org/x/text: Panic in language.ParseAcceptLanguage while processing bcp47 tag (CVE-2020-28852)\n* golang: net/http: improper sanitization of Transfer-Encoding header (CVE-2022-1705)\n* golang: net/http: handle server errors after sending GOAWAY (CVE-2022-27664)\n* golang: io/fs: stack exhaustion in Glob (CVE-2022-30630)\n* golang: path/filepath: stack exhaustion in Glob (CVE-2022-30632)\n* golang: encoding/gob: stack exhaustion in Decoder.Decode (CVE-2022-30635)\n* golang: net/http/httputil: NewSingleHostReverseProxy - omit X-Forwarded-For not working (CVE-2022-32148)\n* golang: math/big: decoding big.Float and big.Rat types can panic if the encoded message is too short, potentially allowing a denial of service (CVE-2022-32189)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nBug Fix(es):\n\n* git-lfs needs to be rebuild with golang 1.17.7-1 or above",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-10-25"
+			},
+			"updated": {
+				"date": "2022-10-25"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1913333",
+					"id": "1913333"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1913338",
+					"id": "1913338"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2107371",
+					"id": "2107371"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2107374",
+					"id": "2107374"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2107383",
+					"id": "2107383"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2107386",
+					"id": "2107386"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2107388",
+					"id": "2107388"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2113814",
+					"id": "2113814"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2124669",
+					"id": "2124669"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2020-28851",
+					"public": "20210102",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-28851",
+					"impact": "Moderate",
+					"cwe": "CWE-129",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-28852",
+					"public": "20210102",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-28852",
+					"impact": "Moderate",
+					"cwe": "CWE-129",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-1705",
+					"public": "20220712",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-1705",
+					"impact": "moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+				},
+				{
+					"text": "CVE-2022-27664",
+					"public": "20220906",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-27664",
+					"impact": "Moderate",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-30630",
+					"public": "20220712",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-30630",
+					"impact": "moderate",
+					"cwe": "CWE-1325",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-30632",
+					"public": "20220712",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-30632",
+					"impact": "moderate",
+					"cwe": "CWE-1325",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-30635",
+					"public": "20220712",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-30635",
+					"impact": "moderate",
+					"cwe": "CWE-1325",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-32148",
+					"public": "20220712",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-32148",
+					"impact": "moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+				},
+				{
+					"text": "CVE-2022-32189",
+					"public": "20220801",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-32189",
+					"impact": "Low",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20227129001",
+						"comment": "git-lfs is earlier than 0:2.13.3-3.el8_6"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20227129002",
+						"comment": "git-lfs is signed with AlmaLinux OS 8 key"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

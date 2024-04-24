@@ -1,0 +1,87 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20230005",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:0005: bcel security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2023:0005",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-0005.html"
+			},
+			{
+				"ref_id": "CVE-2022-42920",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-42920"
+			},
+			{
+				"ref_id": "ALSA-2023:0005",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-0005.html"
+			}
+		],
+		"Description": "The Byte Code Engineering Library (Apache Commons BCEL) is intended to give users a convenient way to analyze, create, and manipulate (binary) Java class files (those ending with .class).\n\nSecurity Fix(es):\n\n* Apache-Commons-BCEL: arbitrary bytecode produced via out-of-bounds writing (CVE-2022-42920)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-01-02"
+			},
+			"updated": {
+				"date": "2023-01-02"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2142707",
+					"id": "2142707"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-42920",
+					"public": "20221104",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-42920",
+					"impact": "Important",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20230005001",
+						"comment": "bcel is earlier than 0:6.4.1-9.el9_1"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20230005002",
+						"comment": "bcel is signed with AlmaLinux OS 9 key"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

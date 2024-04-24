@@ -1,0 +1,131 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20225244",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:5244: expat security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:5244",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-5244.html"
+			},
+			{
+				"ref_id": "ALSA-2022:5244",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-5244.html"
+			},
+			{
+				"ref_id": "CVE-2022-25313",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-25313"
+			},
+			{
+				"ref_id": "CVE-2022-25314",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-25314"
+			}
+		],
+		"Description": "Expat is a C library for parsing XML documents.\nSecurity Fix(es):\n* expat: stack exhaustion in doctype parsing (CVE-2022-25313)\n* expat: integer overflow in copyString() (CVE-2022-25314)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-07-01"
+			},
+			"updated": {
+				"date": "2022-07-01"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2056350",
+					"id": "2056350"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2056354",
+					"id": "2056354"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-25313",
+					"public": "20220219",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-25313",
+					"impact": "moderate",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-25314",
+					"public": "20220219",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-25314",
+					"impact": "moderate",
+					"cwe": "CWE-190",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225244001",
+										"comment": "expat is earlier than 0:2.2.10-12.el9_0.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225244002",
+										"comment": "expat is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225244003",
+										"comment": "expat-devel is earlier than 0:2.2.10-12.el9_0.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225244004",
+										"comment": "expat-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

@@ -1,0 +1,138 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20220267",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:0267: polkit security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:0267",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-0267.html"
+			},
+			{
+				"ref_id": "ALSA-2022:0267",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-0267.html"
+			},
+			{
+				"ref_id": "CVE-2021-4034",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-4034"
+			}
+		],
+		"Description": "The polkit packages provide a component for controlling system-wide privileges. This component provides a uniform and organized way for non-privileged processes to communicate with privileged ones.\nSecurity Fix(es):\n* polkit: Local privilege escalation in pkexec due to incorrect handling of argument vector (CVE-2021-4034)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-01-25"
+			},
+			"updated": {
+				"date": "2022-01-25"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2025869",
+					"id": "2025869"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-4034",
+					"public": "20220125",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-4034",
+					"impact": "important",
+					"cwe": "(CWE-787|CWE-125)",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220267001",
+										"comment": "polkit is earlier than 0:0.115-13.el8_5.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20212238002",
+										"comment": "polkit is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220267003",
+										"comment": "polkit-devel is earlier than 0:0.115-13.el8_5.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20212238004",
+										"comment": "polkit-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220267005",
+										"comment": "polkit-docs is earlier than 0:0.115-13.el8_5.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20212238006",
+										"comment": "polkit-docs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220267007",
+										"comment": "polkit-libs is earlier than 0:0.115-13.el8_5.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20212238008",
+										"comment": "polkit-libs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

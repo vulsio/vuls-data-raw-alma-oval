@@ -1,0 +1,338 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20240463",
+	"version": "638",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:0463: rpm security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2024:0463",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-0463.html"
+			},
+			{
+				"ref_id": "CVE-2021-35937",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35937"
+			},
+			{
+				"ref_id": "CVE-2021-35938",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35938"
+			},
+			{
+				"ref_id": "CVE-2021-35939",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-35939"
+			},
+			{
+				"ref_id": "ALSA-2024:0463",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-0463.html"
+			}
+		],
+		"Description": "The RPM Package Manager (RPM) is a command-line driven package management system capable of installing, uninstalling, verifying, querying, and updating software packages.\n\nSecurity Fix(es):\n\n* rpm: TOCTOU race in checks for unsafe symlinks (CVE-2021-35937)\n* rpm: races with chown/chmod/capabilities calls during installation (CVE-2021-35938)\n* rpm: checks for unsafe symlinks are not performed for intermediary directories (CVE-2021-35939)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-01-25"
+			},
+			"updated": {
+				"date": "2024-01-25"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1964114",
+					"id": "1964114"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1964125",
+					"id": "1964125"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1964129",
+					"id": "1964129"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-35937",
+					"public": "20210630",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35937",
+					"impact": "Moderate",
+					"cwe": "(CWE-59|CWE-367)",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2021-35938",
+					"public": "20210630",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35938",
+					"impact": "Moderate",
+					"cwe": "CWE-59",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2021-35939",
+					"public": "20210630",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-35939",
+					"impact": "Moderate",
+					"cwe": "CWE-59",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463001",
+										"comment": "python3-rpm is earlier than 0:4.16.1.3-27.el9_3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463002",
+										"comment": "python3-rpm is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463003",
+										"comment": "rpm is earlier than 0:4.16.1.3-27.el9_3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463004",
+										"comment": "rpm is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463005",
+										"comment": "rpm-apidocs is earlier than 0:4.16.1.3-27.el9_3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463006",
+										"comment": "rpm-apidocs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463007",
+										"comment": "rpm-build is earlier than 0:4.16.1.3-27.el9_3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463008",
+										"comment": "rpm-build is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463009",
+										"comment": "rpm-build-libs is earlier than 0:4.16.1.3-27.el9_3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463010",
+										"comment": "rpm-build-libs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463011",
+										"comment": "rpm-cron is earlier than 0:4.16.1.3-27.el9_3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463012",
+										"comment": "rpm-cron is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463013",
+										"comment": "rpm-devel is earlier than 0:4.16.1.3-27.el9_3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463014",
+										"comment": "rpm-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463015",
+										"comment": "rpm-libs is earlier than 0:4.16.1.3-27.el9_3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463016",
+										"comment": "rpm-libs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463017",
+										"comment": "rpm-plugin-audit is earlier than 0:4.16.1.3-27.el9_3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463018",
+										"comment": "rpm-plugin-audit is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463019",
+										"comment": "rpm-plugin-fapolicyd is earlier than 0:4.16.1.3-27.el9_3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463020",
+										"comment": "rpm-plugin-fapolicyd is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463021",
+										"comment": "rpm-plugin-ima is earlier than 0:4.16.1.3-27.el9_3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463022",
+										"comment": "rpm-plugin-ima is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463023",
+										"comment": "rpm-plugin-selinux is earlier than 0:4.16.1.3-27.el9_3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463024",
+										"comment": "rpm-plugin-selinux is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463025",
+										"comment": "rpm-plugin-syslog is earlier than 0:4.16.1.3-27.el9_3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463026",
+										"comment": "rpm-plugin-syslog is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463027",
+										"comment": "rpm-plugin-systemd-inhibit is earlier than 0:4.16.1.3-27.el9_3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463028",
+										"comment": "rpm-plugin-systemd-inhibit is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463029",
+										"comment": "rpm-sign is earlier than 0:4.16.1.3-27.el9_3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463030",
+										"comment": "rpm-sign is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463031",
+										"comment": "rpm-sign-libs is earlier than 0:4.16.1.3-27.el9_3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463032",
+										"comment": "rpm-sign-libs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

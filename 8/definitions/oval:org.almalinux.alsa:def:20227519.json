@@ -1,0 +1,322 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20227519",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:7519: grafana security, bug fix, and enhancement update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:7519",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7519.html"
+			},
+			{
+				"ref_id": "CVE-2021-23648",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-23648"
+			},
+			{
+				"ref_id": "CVE-2022-1705",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-1705"
+			},
+			{
+				"ref_id": "CVE-2022-1962",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-1962"
+			},
+			{
+				"ref_id": "CVE-2022-21673",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21673"
+			},
+			{
+				"ref_id": "CVE-2022-21698",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21698"
+			},
+			{
+				"ref_id": "CVE-2022-21702",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21702"
+			},
+			{
+				"ref_id": "CVE-2022-21703",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21703"
+			},
+			{
+				"ref_id": "CVE-2022-21713",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-21713"
+			},
+			{
+				"ref_id": "CVE-2022-28131",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-28131"
+			},
+			{
+				"ref_id": "CVE-2022-30630",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-30630"
+			},
+			{
+				"ref_id": "CVE-2022-30631",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-30631"
+			},
+			{
+				"ref_id": "CVE-2022-30632",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-30632"
+			},
+			{
+				"ref_id": "CVE-2022-30633",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-30633"
+			},
+			{
+				"ref_id": "CVE-2022-30635",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-30635"
+			},
+			{
+				"ref_id": "CVE-2022-32148",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-32148"
+			},
+			{
+				"ref_id": "ALSA-2022:7519",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7519.html"
+			}
+		],
+		"Description": "Grafana is an open source, feature rich metrics dashboard and graph editor for Graphite, InfluxDB & OpenTSDB. \n\nThe following packages have been upgraded to a later upstream version: grafana (7.5.15). (BZ#2055348)\n\nSecurity Fix(es):\n\n* sanitize-url: XSS due to improper sanitization in sanitizeUrl function (CVE-2021-23648)\n* golang: net/http: improper sanitization of Transfer-Encoding header (CVE-2022-1705)\n* golang: go/parser: stack exhaustion in all Parse* functions (CVE-2022-1962)\n* grafana: Forward OAuth Identity Token can allow users to access some data sources (CVE-2022-21673)\n* prometheus/client_golang: Denial of service using InstrumentHandlerCounter (CVE-2022-21698)\n* grafana: XSS vulnerability in data source handling (CVE-2022-21702)\n* grafana: CSRF vulnerability can lead to privilege escalation (CVE-2022-21703)\n* grafana: IDOR vulnerability can lead to information disclosure (CVE-2022-21713)\n* golang: encoding/xml: stack exhaustion in Decoder.Skip (CVE-2022-28131)\n* golang: io/fs: stack exhaustion in Glob (CVE-2022-30630)\n* golang: compress/gzip: stack exhaustion in Reader.Read (CVE-2022-30631)\n* golang: path/filepath: stack exhaustion in Glob (CVE-2022-30632)\n* golang: encoding/xml: stack exhaustion in Unmarshal (CVE-2022-30633)\n* golang: encoding/gob: stack exhaustion in Decoder.Decode (CVE-2022-30635)\n* golang: net/http/httputil: NewSingleHostReverseProxy - omit X-Forwarded-For not working (CVE-2022-32148)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-11-08"
+			},
+			"updated": {
+				"date": "2022-11-08"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2044628",
+					"id": "2044628"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2045880",
+					"id": "2045880"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2050648",
+					"id": "2050648"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2050742",
+					"id": "2050742"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2050743",
+					"id": "2050743"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2065290",
+					"id": "2065290"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2107342",
+					"id": "2107342"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2107371",
+					"id": "2107371"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2107374",
+					"id": "2107374"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2107376",
+					"id": "2107376"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2107383",
+					"id": "2107383"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2107386",
+					"id": "2107386"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2107388",
+					"id": "2107388"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2107390",
+					"id": "2107390"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2107392",
+					"id": "2107392"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-23648",
+					"public": "20220222",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-23648",
+					"impact": "Moderate",
+					"cwe": "CWE-79",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N"
+				},
+				{
+					"text": "CVE-2022-1705",
+					"public": "20220712",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-1705",
+					"impact": "moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+				},
+				{
+					"text": "CVE-2022-1962",
+					"public": "20220712",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-1962",
+					"impact": "moderate",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21673",
+					"public": "20220118",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21673",
+					"impact": "Moderate",
+					"cwe": "CWE-200->CWE-201",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+				},
+				{
+					"text": "CVE-2022-21698",
+					"public": "20220215",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21698",
+					"impact": "moderate",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-21702",
+					"public": "20220208",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21702",
+					"impact": "Moderate",
+					"cwe": "CWE-79",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2022-21703",
+					"public": "20220208",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21703",
+					"impact": "Moderate",
+					"cwe": "CWE-352",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N"
+				},
+				{
+					"text": "CVE-2022-21713",
+					"public": "20220208",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-21713",
+					"impact": "Moderate",
+					"cwe": "CWE-863->CWE-425",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+				},
+				{
+					"text": "CVE-2022-28131",
+					"public": "20220712",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-28131",
+					"impact": "moderate",
+					"cwe": "CWE-1325",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-30630",
+					"public": "20220712",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-30630",
+					"impact": "moderate",
+					"cwe": "CWE-1325",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-30631",
+					"public": "20220712",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-30631",
+					"impact": "important",
+					"cwe": "CWE-1325",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-30632",
+					"public": "20220712",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-30632",
+					"impact": "moderate",
+					"cwe": "CWE-1325",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-30633",
+					"public": "20220712",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-30633",
+					"impact": "moderate",
+					"cwe": "CWE-1325",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-30635",
+					"public": "20220712",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-30635",
+					"impact": "moderate",
+					"cwe": "CWE-1325",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-32148",
+					"public": "20220712",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-32148",
+					"impact": "moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20227519001",
+						"comment": "grafana is earlier than 0:7.5.15-3.el8"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20201659002",
+						"comment": "grafana is signed with AlmaLinux OS 8 key"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

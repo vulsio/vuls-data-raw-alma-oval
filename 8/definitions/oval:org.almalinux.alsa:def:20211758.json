@@ -1,0 +1,139 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20211758",
+	"version": "638",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:1758: exiv2 security, bug fix, and enhancement update (Low)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:1758",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1758.html"
+			},
+			{
+				"ref_id": "ALSA-2021:1758",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1758.html"
+			},
+			{
+				"ref_id": "CVE-2019-17402",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-17402"
+			}
+		],
+		"Description": "The exiv2 packages provide a command line utility which can display and manipulate image metadata such as EXIF, LPTC, and JPEG comments.\nThe following packages have been upgraded to a later upstream version: exiv2 (0.27.3). (BZ#1880984)\nSecurity Fix(es):\n* exiv2: out-of-bounds read in CiffDirectory::readDirectory due to lack of size check (CVE-2019-17402)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Low",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-05-18"
+			},
+			"updated": {
+				"date": "2021-05-18"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1773683",
+					"id": "1773683"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2019-17402",
+					"public": "20191006",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-17402",
+					"impact": "low",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211758001",
+										"comment": "exiv2 is earlier than 0:0.27.3-2.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201577010",
+										"comment": "exiv2 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211758003",
+										"comment": "exiv2-devel is earlier than 0:0.27.3-2.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201577012",
+										"comment": "exiv2-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211758005",
+										"comment": "exiv2-doc is earlier than 0:0.27.3-2.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201577014",
+										"comment": "exiv2-doc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211758007",
+										"comment": "exiv2-libs is earlier than 0:0.27.3-2.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201577016",
+										"comment": "exiv2-libs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

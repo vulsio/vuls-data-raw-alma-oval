@@ -1,0 +1,114 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20200903",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2020:0903: zsh security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2020:0903",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-0903.html"
+			},
+			{
+				"ref_id": "ALSA-2020:0903",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-0903.html"
+			},
+			{
+				"ref_id": "CVE-2019-20044",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-20044"
+			}
+		],
+		"Description": "The zsh shell is a command interpreter usable as an interactive login shell and as a shell script command processor. Zsh resembles the ksh shell (the Korn shell), but includes many enhancements. Zsh supports command-line editing, built-in spelling correction, programmable command completion, shell functions (with autoloading), a history mechanism, and more.\nSecurity Fix(es):\n* zsh: insecure dropping of privileges when unsetting PRIVILEGED option (CVE-2019-20044)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2020-03-19"
+			},
+			"updated": {
+				"date": "2020-03-19"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1804859",
+					"id": "1804859"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2019-20044",
+					"public": "20200216",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-20044",
+					"impact": "important",
+					"cwe": "CWE-271",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20200903001",
+										"comment": "zsh is earlier than 0:5.5.1-6.el8_1.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20200903002",
+										"comment": "zsh is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20200903003",
+										"comment": "zsh-html is earlier than 0:5.5.1-6.el8_1.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20200903004",
+										"comment": "zsh-html is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

@@ -1,0 +1,172 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20226700",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:6700: firefox security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:6700",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-6700.html"
+			},
+			{
+				"ref_id": "CVE-2022-40956",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-40956"
+			},
+			{
+				"ref_id": "CVE-2022-40957",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-40957"
+			},
+			{
+				"ref_id": "CVE-2022-40958",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-40958"
+			},
+			{
+				"ref_id": "CVE-2022-40959",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-40959"
+			},
+			{
+				"ref_id": "CVE-2022-40960",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-40960"
+			},
+			{
+				"ref_id": "CVE-2022-40962",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-40962"
+			},
+			{
+				"ref_id": "ALSA-2022:6700",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-6700.html"
+			}
+		],
+		"Description": "Mozilla Firefox is an open-source web browser, designed for standards compliance, performance, and portability.\n\nThis update upgrades Firefox to version 102.3.0 ESR.\n\nSecurity Fix(es):\n\n* Mozilla: Bypassing FeaturePolicy restrictions on transient pages (CVE-2022-40959)\n* Mozilla: Data-race when parsing non-UTF-8 URLs in threads (CVE-2022-40960)\n* Mozilla: Memory safety bugs fixed in Firefox 105 and Firefox ESR 102.3 (CVE-2022-40962)\n* Mozilla: Bypassing Secure Context restriction for cookies with __Host and __Secure prefix (CVE-2022-40958)\n* Mozilla: Content-Security-Policy base-uri bypass (CVE-2022-40956)\n* Mozilla: Incoherent instruction cache when building WASM on ARM64 (CVE-2022-40957)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-09-26"
+			},
+			"updated": {
+				"date": "2022-09-26"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2128792",
+					"id": "2128792"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2128793",
+					"id": "2128793"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2128794",
+					"id": "2128794"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2128795",
+					"id": "2128795"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2128796",
+					"id": "2128796"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2128797",
+					"id": "2128797"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-40956",
+					"public": "20220920",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-40956",
+					"impact": "Low",
+					"cwe": "CWE-1021",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+				},
+				{
+					"text": "CVE-2022-40957",
+					"public": "20220920",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-40957",
+					"impact": "Low",
+					"cwe": "CWE-240",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2022-40958",
+					"public": "20220920",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-40958",
+					"impact": "Moderate",
+					"cwe": "CWE-784",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+				},
+				{
+					"text": "CVE-2022-40959",
+					"public": "20220920",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-40959",
+					"impact": "Important",
+					"cwe": "CWE-1021",
+					"cvss3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-40960",
+					"public": "20220920",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-40960",
+					"impact": "Important",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-40962",
+					"public": "20220920",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-40962",
+					"impact": "Important",
+					"cwe": "CWE-120",
+					"cvss3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20226700001",
+						"comment": "firefox is earlier than 0:102.3.0-6.el9_0.alma"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20224590002",
+						"comment": "firefox is signed with AlmaLinux OS 9 key"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

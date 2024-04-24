@@ -1,0 +1,87 @@
+{
+	"id": "oval:org.almalinux.alba:def:20210621",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALBA-2021:0621: microcode_ctl bug fix and enhancement update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALBA-2021:0621",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALBA-2021-0621.html"
+			},
+			{
+				"ref_id": "ALBA-2021:0621",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALBA-2021-0621.html"
+			},
+			{
+				"ref_id": "CVE-2020-8696",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-8696"
+			}
+		],
+		"Description": "The microcode_ctl packages provide microcode updates for Intel and AMD\nprocessors.\nBug Fix(es) and Enhancement(s):\n* [rhel-8.3.0.z] [HPEMC 8.3.z REGRESSION] Regression in intel microcode as\nof 20201110 (BZ#1907898)",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-02-22"
+			},
+			"updated": {
+				"date": "2021-02-22"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1890355",
+					"id": "1890355"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2020-8696",
+					"public": "20201110",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-8696",
+					"impact": "moderate",
+					"cwe": "CWE-212",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:L/I:N/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20210621001",
+						"comment": "microcode_ctl is earlier than 4:20200609-2.20210216.1.el8_3"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20210621002",
+						"comment": "microcode_ctl is signed with AlmaLinux OS 8 key"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

@@ -1,0 +1,1750 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20201624",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2020:1624: php:7.2 security, bug fix, and enhancement update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2020:1624",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-1624.html"
+			},
+			{
+				"ref_id": "ALSA-2020:1624",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-1624.html"
+			},
+			{
+				"ref_id": "CVE-2018-20783",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2018-20783"
+			},
+			{
+				"ref_id": "CVE-2019-11034",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-11034"
+			},
+			{
+				"ref_id": "CVE-2019-11035",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-11035"
+			},
+			{
+				"ref_id": "CVE-2019-11036",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-11036"
+			},
+			{
+				"ref_id": "CVE-2019-11039",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-11039"
+			},
+			{
+				"ref_id": "CVE-2019-11040",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-11040"
+			},
+			{
+				"ref_id": "CVE-2019-11041",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-11041"
+			},
+			{
+				"ref_id": "CVE-2019-11042",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-11042"
+			},
+			{
+				"ref_id": "CVE-2019-9020",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-9020"
+			},
+			{
+				"ref_id": "CVE-2019-9021",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-9021"
+			},
+			{
+				"ref_id": "CVE-2019-9022",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-9022"
+			},
+			{
+				"ref_id": "CVE-2019-9023",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-9023"
+			},
+			{
+				"ref_id": "CVE-2019-9024",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-9024"
+			},
+			{
+				"ref_id": "CVE-2019-9637",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-9637"
+			},
+			{
+				"ref_id": "CVE-2019-9638",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-9638"
+			},
+			{
+				"ref_id": "CVE-2019-9639",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-9639"
+			},
+			{
+				"ref_id": "CVE-2019-9640",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-9640"
+			}
+		],
+		"Description": "PHP is an HTML-embedded scripting language commonly used with the Apache HTTP Server.\nThe following packages have been upgraded to a later upstream version: php (7.2.24). (BZ#1726981)\nSecurity Fix(es):\n* php: Invalid memory access in function xmlrpc_decode() (CVE-2019-9020)\n* php: File rename across filesystems may allow unwanted access during processing (CVE-2019-9637)\n* php: Uninitialized read in exif_process_IFD_in_MAKERNOTE (CVE-2019-9638)\n* php: Uninitialized read in exif_process_IFD_in_MAKERNOTE (CVE-2019-9639)\n* php: Invalid read in exif_process_SOFn() (CVE-2019-9640)\n* php: Out-of-bounds read due to integer overflow in iconv_mime_decode_headers() (CVE-2019-11039)\n* php: Buffer over-read in exif_read_data() (CVE-2019-11040)\n* php: Buffer over-read in PHAR reading functions (CVE-2018-20783)\n* php: Heap-based buffer over-read in PHAR reading functions (CVE-2019-9021)\n* php: memcpy with negative length via crafted DNS response (CVE-2019-9022)\n* php: Heap-based buffer over-read in mbstring regular expression functions (CVE-2019-9023)\n* php: Out-of-bounds read in base64_decode_xmlrpc in ext/xmlrpc/libxmlrpc/base64.c (CVE-2019-9024)\n* php: Heap buffer overflow in function exif_process_IFD_TAG() (CVE-2019-11034)\n* php: Heap buffer overflow in function exif_iif_add_value() (CVE-2019-11035)\n* php: Buffer over-read in exif_process_IFD_TAG() leading to information disclosure (CVE-2019-11036)\n* php: Heap buffer over-read in exif_scan_thumbnail() (CVE-2019-11041)\n* php: Heap buffer over-read in exif_process_user_comment() (CVE-2019-11042)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2020-04-28"
+			},
+			"updated": {
+				"date": "2020-04-28"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1680545",
+					"id": "1680545"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1685123",
+					"id": "1685123"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1685132",
+					"id": "1685132"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1685398",
+					"id": "1685398"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1685404",
+					"id": "1685404"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1685412",
+					"id": "1685412"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1688897",
+					"id": "1688897"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1688922",
+					"id": "1688922"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1688934",
+					"id": "1688934"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1688939",
+					"id": "1688939"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1702246",
+					"id": "1702246"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1702256",
+					"id": "1702256"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1707299",
+					"id": "1707299"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1724152",
+					"id": "1724152"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1724154",
+					"id": "1724154"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1739459",
+					"id": "1739459"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1739465",
+					"id": "1739465"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2018-20783",
+					"public": "20181112",
+					"href": "https://access.redhat.com/security/cve/CVE-2018-20783",
+					"impact": "low",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+				},
+				{
+					"text": "CVE-2019-11034",
+					"public": "20190316",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-11034",
+					"impact": "low",
+					"cwe": "CWE-122",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+				},
+				{
+					"text": "CVE-2019-11035",
+					"public": "20190402",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-11035",
+					"impact": "low",
+					"cwe": "CWE-122",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+				},
+				{
+					"text": "CVE-2019-11036",
+					"public": "20190502",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-11036",
+					"impact": "low",
+					"cwe": "CWE-122",
+					"cvss3": "CVSS:3.0/AV:L/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+				},
+				{
+					"text": "CVE-2019-11039",
+					"public": "20190618",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-11039",
+					"impact": "moderate",
+					"cwe": "CWE-190->CWE-125",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L"
+				},
+				{
+					"text": "CVE-2019-11040",
+					"public": "20190618",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-11040",
+					"impact": "moderate",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L"
+				},
+				{
+					"text": "CVE-2019-11041",
+					"public": "20190809",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-11041",
+					"impact": "low",
+					"cwe": "CWE-120",
+					"cvss3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
+				},
+				{
+					"text": "CVE-2019-11042",
+					"public": "20190809",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-11042",
+					"impact": "low",
+					"cwe": "CWE-120",
+					"cvss3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
+				},
+				{
+					"text": "CVE-2019-9020",
+					"public": "20181205",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-9020",
+					"impact": "moderate",
+					"cwe": "CWE-119",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+				},
+				{
+					"text": "CVE-2019-9021",
+					"public": "20181206",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-9021",
+					"impact": "low",
+					"cwe": "CWE-122",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2019-9022",
+					"public": "20181229",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-9022",
+					"impact": "low",
+					"cwe": "CWE-119",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:N/A:L"
+				},
+				{
+					"text": "CVE-2019-9023",
+					"public": "20181229",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-9023",
+					"impact": "low",
+					"cwe": "CWE-122",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:L"
+				},
+				{
+					"text": "CVE-2019-9024",
+					"public": "20190222",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-9024",
+					"impact": "low",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L"
+				},
+				{
+					"text": "CVE-2019-9637",
+					"public": "20190218",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-9637",
+					"impact": "moderate",
+					"cwe": "CWE-266",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2019-9638",
+					"public": "20190204",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-9638",
+					"impact": "moderate",
+					"cwe": "CWE-665",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2019-9639",
+					"public": "20190223",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-9639",
+					"impact": "moderate",
+					"cwe": "CWE-665",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2019-9640",
+					"public": "20190129",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-9640",
+					"impact": "moderate",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937350011",
+										"comment": "apcu-panel is earlier than 0:5.1.12-2.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735002",
+										"comment": "apcu-panel is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500111",
+										"comment": "AlmaLinux arch is x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937350012",
+										"comment": "apcu-panel is earlier than 0:5.1.12-2.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735002",
+										"comment": "apcu-panel is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500121",
+										"comment": "AlmaLinux arch is aarch64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937350013",
+										"comment": "apcu-panel is earlier than 0:5.1.12-2.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735002",
+										"comment": "apcu-panel is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937350031",
+										"comment": "libzip is earlier than 0:1.5.1-2.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735004",
+										"comment": "libzip is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937350032",
+										"comment": "libzip is earlier than 0:1.5.1-2.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735004",
+										"comment": "libzip is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937350033",
+										"comment": "libzip is earlier than 0:1.5.1-2.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735004",
+										"comment": "libzip is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937350051",
+										"comment": "libzip-devel is earlier than 0:1.5.1-2.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735006",
+										"comment": "libzip-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937350052",
+										"comment": "libzip-devel is earlier than 0:1.5.1-2.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735006",
+										"comment": "libzip-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937350053",
+										"comment": "libzip-devel is earlier than 0:1.5.1-2.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735006",
+										"comment": "libzip-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937350071",
+										"comment": "libzip-tools is earlier than 0:1.5.1-2.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735008",
+										"comment": "libzip-tools is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937350072",
+										"comment": "libzip-tools is earlier than 0:1.5.1-2.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735008",
+										"comment": "libzip-tools is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937350073",
+										"comment": "libzip-tools is earlier than 0:1.5.1-2.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735008",
+										"comment": "libzip-tools is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240091",
+										"comment": "php is earlier than 0:7.2.24-1.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735010",
+										"comment": "php is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240092",
+										"comment": "php is earlier than 0:7.2.24-1.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735010",
+										"comment": "php is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240093",
+										"comment": "php is earlier than 0:7.2.24-1.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735010",
+										"comment": "php is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240111",
+										"comment": "php-bcmath is earlier than 0:7.2.24-1.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735012",
+										"comment": "php-bcmath is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240112",
+										"comment": "php-bcmath is earlier than 0:7.2.24-1.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735012",
+										"comment": "php-bcmath is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240113",
+										"comment": "php-bcmath is earlier than 0:7.2.24-1.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735012",
+										"comment": "php-bcmath is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240131",
+										"comment": "php-cli is earlier than 0:7.2.24-1.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735014",
+										"comment": "php-cli is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240132",
+										"comment": "php-cli is earlier than 0:7.2.24-1.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735014",
+										"comment": "php-cli is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240133",
+										"comment": "php-cli is earlier than 0:7.2.24-1.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735014",
+										"comment": "php-cli is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240151",
+										"comment": "php-common is earlier than 0:7.2.24-1.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735016",
+										"comment": "php-common is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240152",
+										"comment": "php-common is earlier than 0:7.2.24-1.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735016",
+										"comment": "php-common is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240153",
+										"comment": "php-common is earlier than 0:7.2.24-1.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735016",
+										"comment": "php-common is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240171",
+										"comment": "php-dba is earlier than 0:7.2.24-1.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735018",
+										"comment": "php-dba is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240172",
+										"comment": "php-dba is earlier than 0:7.2.24-1.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735018",
+										"comment": "php-dba is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240173",
+										"comment": "php-dba is earlier than 0:7.2.24-1.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735018",
+										"comment": "php-dba is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240191",
+										"comment": "php-dbg is earlier than 0:7.2.24-1.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735020",
+										"comment": "php-dbg is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240192",
+										"comment": "php-dbg is earlier than 0:7.2.24-1.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735020",
+										"comment": "php-dbg is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240193",
+										"comment": "php-dbg is earlier than 0:7.2.24-1.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735020",
+										"comment": "php-dbg is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240211",
+										"comment": "php-devel is earlier than 0:7.2.24-1.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735022",
+										"comment": "php-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240212",
+										"comment": "php-devel is earlier than 0:7.2.24-1.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735022",
+										"comment": "php-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240213",
+										"comment": "php-devel is earlier than 0:7.2.24-1.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735022",
+										"comment": "php-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240231",
+										"comment": "php-embedded is earlier than 0:7.2.24-1.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735024",
+										"comment": "php-embedded is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240232",
+										"comment": "php-embedded is earlier than 0:7.2.24-1.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735024",
+										"comment": "php-embedded is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240233",
+										"comment": "php-embedded is earlier than 0:7.2.24-1.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735024",
+										"comment": "php-embedded is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240251",
+										"comment": "php-enchant is earlier than 0:7.2.24-1.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735026",
+										"comment": "php-enchant is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240252",
+										"comment": "php-enchant is earlier than 0:7.2.24-1.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735026",
+										"comment": "php-enchant is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240253",
+										"comment": "php-enchant is earlier than 0:7.2.24-1.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735026",
+										"comment": "php-enchant is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240271",
+										"comment": "php-fpm is earlier than 0:7.2.24-1.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735028",
+										"comment": "php-fpm is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240272",
+										"comment": "php-fpm is earlier than 0:7.2.24-1.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735028",
+										"comment": "php-fpm is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240273",
+										"comment": "php-fpm is earlier than 0:7.2.24-1.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735028",
+										"comment": "php-fpm is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240291",
+										"comment": "php-gd is earlier than 0:7.2.24-1.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735030",
+										"comment": "php-gd is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240292",
+										"comment": "php-gd is earlier than 0:7.2.24-1.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735030",
+										"comment": "php-gd is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240293",
+										"comment": "php-gd is earlier than 0:7.2.24-1.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735030",
+										"comment": "php-gd is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240311",
+										"comment": "php-gmp is earlier than 0:7.2.24-1.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735032",
+										"comment": "php-gmp is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240312",
+										"comment": "php-gmp is earlier than 0:7.2.24-1.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735032",
+										"comment": "php-gmp is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240313",
+										"comment": "php-gmp is earlier than 0:7.2.24-1.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735032",
+										"comment": "php-gmp is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240331",
+										"comment": "php-intl is earlier than 0:7.2.24-1.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735034",
+										"comment": "php-intl is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240332",
+										"comment": "php-intl is earlier than 0:7.2.24-1.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735034",
+										"comment": "php-intl is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240333",
+										"comment": "php-intl is earlier than 0:7.2.24-1.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735034",
+										"comment": "php-intl is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240351",
+										"comment": "php-json is earlier than 0:7.2.24-1.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735036",
+										"comment": "php-json is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240352",
+										"comment": "php-json is earlier than 0:7.2.24-1.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735036",
+										"comment": "php-json is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240353",
+										"comment": "php-json is earlier than 0:7.2.24-1.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735036",
+										"comment": "php-json is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240371",
+										"comment": "php-ldap is earlier than 0:7.2.24-1.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735038",
+										"comment": "php-ldap is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240372",
+										"comment": "php-ldap is earlier than 0:7.2.24-1.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735038",
+										"comment": "php-ldap is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240373",
+										"comment": "php-ldap is earlier than 0:7.2.24-1.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735038",
+										"comment": "php-ldap is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240391",
+										"comment": "php-mbstring is earlier than 0:7.2.24-1.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735040",
+										"comment": "php-mbstring is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240392",
+										"comment": "php-mbstring is earlier than 0:7.2.24-1.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735040",
+										"comment": "php-mbstring is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240393",
+										"comment": "php-mbstring is earlier than 0:7.2.24-1.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735040",
+										"comment": "php-mbstring is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240411",
+										"comment": "php-mysqlnd is earlier than 0:7.2.24-1.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735042",
+										"comment": "php-mysqlnd is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240412",
+										"comment": "php-mysqlnd is earlier than 0:7.2.24-1.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735042",
+										"comment": "php-mysqlnd is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240413",
+										"comment": "php-mysqlnd is earlier than 0:7.2.24-1.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735042",
+										"comment": "php-mysqlnd is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240431",
+										"comment": "php-odbc is earlier than 0:7.2.24-1.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735044",
+										"comment": "php-odbc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240432",
+										"comment": "php-odbc is earlier than 0:7.2.24-1.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735044",
+										"comment": "php-odbc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240433",
+										"comment": "php-odbc is earlier than 0:7.2.24-1.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735044",
+										"comment": "php-odbc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240451",
+										"comment": "php-opcache is earlier than 0:7.2.24-1.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735046",
+										"comment": "php-opcache is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240452",
+										"comment": "php-opcache is earlier than 0:7.2.24-1.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735046",
+										"comment": "php-opcache is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240453",
+										"comment": "php-opcache is earlier than 0:7.2.24-1.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735046",
+										"comment": "php-opcache is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240471",
+										"comment": "php-pdo is earlier than 0:7.2.24-1.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735048",
+										"comment": "php-pdo is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240472",
+										"comment": "php-pdo is earlier than 0:7.2.24-1.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735048",
+										"comment": "php-pdo is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240473",
+										"comment": "php-pdo is earlier than 0:7.2.24-1.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735048",
+										"comment": "php-pdo is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937350491",
+										"comment": "php-pear is earlier than 1:1.10.5-9.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735050",
+										"comment": "php-pear is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500111",
+										"comment": "AlmaLinux arch is x86_64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937350492",
+										"comment": "php-pear is earlier than 1:1.10.5-9.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735050",
+										"comment": "php-pear is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:2019373500121",
+										"comment": "AlmaLinux arch is aarch64"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937350493",
+										"comment": "php-pear is earlier than 1:1.10.5-9.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735050",
+										"comment": "php-pear is signed with AlmaLinux OS 8 key"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
+										"comment": "AlmaLinux arch is ppc64le"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937350511",
+										"comment": "php-pecl-apcu is earlier than 0:5.1.12-2.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735052",
+										"comment": "php-pecl-apcu is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937350512",
+										"comment": "php-pecl-apcu is earlier than 0:5.1.12-2.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735052",
+										"comment": "php-pecl-apcu is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937350513",
+										"comment": "php-pecl-apcu is earlier than 0:5.1.12-2.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735052",
+										"comment": "php-pecl-apcu is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937350531",
+										"comment": "php-pecl-apcu-devel is earlier than 0:5.1.12-2.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735054",
+										"comment": "php-pecl-apcu-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937350532",
+										"comment": "php-pecl-apcu-devel is earlier than 0:5.1.12-2.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735054",
+										"comment": "php-pecl-apcu-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937350533",
+										"comment": "php-pecl-apcu-devel is earlier than 0:5.1.12-2.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735054",
+										"comment": "php-pecl-apcu-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937350551",
+										"comment": "php-pecl-zip is earlier than 0:1.15.3-1.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735056",
+										"comment": "php-pecl-zip is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937350552",
+										"comment": "php-pecl-zip is earlier than 0:1.15.3-1.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735056",
+										"comment": "php-pecl-zip is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:201937350553",
+										"comment": "php-pecl-zip is earlier than 0:1.15.3-1.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735056",
+										"comment": "php-pecl-zip is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240571",
+										"comment": "php-pgsql is earlier than 0:7.2.24-1.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735058",
+										"comment": "php-pgsql is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240572",
+										"comment": "php-pgsql is earlier than 0:7.2.24-1.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735058",
+										"comment": "php-pgsql is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240573",
+										"comment": "php-pgsql is earlier than 0:7.2.24-1.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735058",
+										"comment": "php-pgsql is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240591",
+										"comment": "php-process is earlier than 0:7.2.24-1.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735060",
+										"comment": "php-process is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240592",
+										"comment": "php-process is earlier than 0:7.2.24-1.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735060",
+										"comment": "php-process is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240593",
+										"comment": "php-process is earlier than 0:7.2.24-1.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735060",
+										"comment": "php-process is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240611",
+										"comment": "php-recode is earlier than 0:7.2.24-1.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735062",
+										"comment": "php-recode is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240612",
+										"comment": "php-recode is earlier than 0:7.2.24-1.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735062",
+										"comment": "php-recode is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240613",
+										"comment": "php-recode is earlier than 0:7.2.24-1.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735062",
+										"comment": "php-recode is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240631",
+										"comment": "php-snmp is earlier than 0:7.2.24-1.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735064",
+										"comment": "php-snmp is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240632",
+										"comment": "php-snmp is earlier than 0:7.2.24-1.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735064",
+										"comment": "php-snmp is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240633",
+										"comment": "php-snmp is earlier than 0:7.2.24-1.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735064",
+										"comment": "php-snmp is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240651",
+										"comment": "php-soap is earlier than 0:7.2.24-1.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735066",
+										"comment": "php-soap is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240652",
+										"comment": "php-soap is earlier than 0:7.2.24-1.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735066",
+										"comment": "php-soap is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240653",
+										"comment": "php-soap is earlier than 0:7.2.24-1.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735066",
+										"comment": "php-soap is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240671",
+										"comment": "php-xml is earlier than 0:7.2.24-1.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735068",
+										"comment": "php-xml is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240672",
+										"comment": "php-xml is earlier than 0:7.2.24-1.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735068",
+										"comment": "php-xml is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240673",
+										"comment": "php-xml is earlier than 0:7.2.24-1.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735068",
+										"comment": "php-xml is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240691",
+										"comment": "php-xmlrpc is earlier than 0:7.2.24-1.module_el8.3.0+2010+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735070",
+										"comment": "php-xmlrpc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240692",
+										"comment": "php-xmlrpc is earlier than 0:7.2.24-1.module_el8.4.0+2228+7c76a223"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735070",
+										"comment": "php-xmlrpc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202016240693",
+										"comment": "php-xmlrpc is earlier than 0:7.2.24-1.module_el8.5.0+53+9945c2af"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193735070",
+										"comment": "php-xmlrpc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20193735071",
+						"comment": "Module php:7.2 is enabled"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

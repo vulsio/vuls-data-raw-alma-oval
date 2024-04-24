@@ -1,0 +1,121 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20225777",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:5777: firefox security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:5777",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-5777.html"
+			},
+			{
+				"ref_id": "ALSA-2022:5777",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-5777.html"
+			},
+			{
+				"ref_id": "CVE-2022-2505",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-2505"
+			},
+			{
+				"ref_id": "CVE-2022-36318",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-36318"
+			},
+			{
+				"ref_id": "CVE-2022-36319",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-36319"
+			}
+		],
+		"Description": "Mozilla Firefox is an open-source web browser, designed for standards compliance, performance, and portability.\nThis update upgrades Firefox to version 91.12.0 ESR.\nSecurity Fix(es):\n* Mozilla: Memory safety bugs fixed in Firefox 103 and 102.1 (CVE-2022-2505)\n* Mozilla: Directory indexes for bundled resources reflected URL parameters (CVE-2022-36318)\n* Mozilla: Mouse Position spoofing with CSS transforms (CVE-2022-36319)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-08-01"
+			},
+			"updated": {
+				"date": "2022-08-01"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2111907",
+					"id": "2111907"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2111908",
+					"id": "2111908"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2111910",
+					"id": "2111910"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-2505",
+					"public": "20220726",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-2505",
+					"impact": "important",
+					"cwe": "CWE-120",
+					"cvss3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-36318",
+					"public": "20220726",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-36318",
+					"impact": "moderate",
+					"cwe": "CWE-79",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+				},
+				{
+					"text": "CVE-2022-36319",
+					"public": "20220726",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-36319",
+					"impact": "moderate",
+					"cwe": "CWE-1021",
+					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20225777001",
+						"comment": "firefox is earlier than 0:91.12.0-2.el8_6.alma"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20190966002",
+						"comment": "firefox is signed with AlmaLinux OS 8 key"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

@@ -1,0 +1,190 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20205503",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2020:5503: mariadb-connector-c security, bug fix, and enhancement update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2020:5503",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-5503.html"
+			},
+			{
+				"ref_id": "ALSA-2020:5503",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-5503.html"
+			},
+			{
+				"ref_id": "CVE-2020-13249",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-13249"
+			},
+			{
+				"ref_id": "CVE-2020-2574",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-2574"
+			},
+			{
+				"ref_id": "CVE-2020-2752",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-2752"
+			},
+			{
+				"ref_id": "CVE-2020-2922",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-2922"
+			},
+			{
+				"ref_id": "CVE-2021-2007",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-2007"
+			}
+		],
+		"Description": "The MariaDB Native Client library (C driver) is used to connect applications developed in C/C++ to MariaDB and MySQL databases. \nThe following packages have been upgraded to a later upstream version: mariadb-connector-c (3.1.11). (BZ#1898993)\nSecurity Fix(es):\n* mysql: C API unspecified vulnerability (CPU Apr 2020) (CVE-2020-2752)\n* mysql: C API unspecified vulnerability (CPU Apr 2020) (CVE-2020-2922)\n* mariadb-connector-c: Improper validation of content in a OK packet received from server (CVE-2020-13249)\n* mysql: C API unspecified vulnerability (CPU Jan 2020) (CVE-2020-2574)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nBug Fix(es):\n* Code utilizing plugins can't be compiled properly (BZ#1899001)\n* Add \"zlib-devel\" requirement in \"-devel\" subpackage (BZ#1899005)\n* Replace hard-coded /usr with %{_prefix} (BZ#1899099)",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2020-12-15"
+			},
+			"updated": {
+				"date": "2020-12-15"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1798587",
+					"id": "1798587"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1835849",
+					"id": "1835849"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1835850",
+					"id": "1835850"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1839827",
+					"id": "1839827"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1922382",
+					"id": "1922382"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2020-13249",
+					"public": "20200520",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-13249",
+					"impact": "moderate",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2020-2574",
+					"public": "20200205",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-2574",
+					"impact": "low",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-2752",
+					"public": "20200414",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-2752",
+					"impact": "moderate",
+					"cvss3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2020-2922",
+					"public": "20200414",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-2922",
+					"impact": "moderate",
+					"cvss3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
+				},
+				{
+					"text": "CVE-2021-2007",
+					"public": "20210119",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-2007",
+					"impact": "low",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20205503001",
+										"comment": "mariadb-connector-c is earlier than 0:3.1.11-2.el8_3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20205503002",
+										"comment": "mariadb-connector-c is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20205503003",
+										"comment": "mariadb-connector-c-config is earlier than 0:3.1.11-2.el8_3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20205503004",
+										"comment": "mariadb-connector-c-config is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20205503005",
+										"comment": "mariadb-connector-c-devel is earlier than 0:3.1.11-2.el8_3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20205503006",
+										"comment": "mariadb-connector-c-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

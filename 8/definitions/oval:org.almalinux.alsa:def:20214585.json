@@ -1,0 +1,282 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20214585",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:4585: gcc-toolset-10-gcc security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:4585",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4585.html"
+			},
+			{
+				"ref_id": "ALSA-2021:4585",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4585.html"
+			},
+			{
+				"ref_id": "CVE-2021-42574",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-42574"
+			}
+		],
+		"Description": "The gcc packages provide compilers for C, C++, Java, Fortran, Objective C, and Ada 95 GNU, as well as related support libraries.\nSecurity Fix(es):\n* Developer environment: Unicode's bidirectional (BiDi) override characters can cause trojan source attacks (CVE-2021-42574)\nThe following changes were introduced in gcc in order to facilitate detection of BiDi Unicode characters:\nThis update implements a new warning option -Wbidirectional to warn about possibly dangerous bidirectional characters.\nThere are three levels of warning supported by gcc:\n\"-Wbidirectional=unpaired\", which warns about improperly terminated BiDi contexts. (This is the default.)\n\"-Wbidirectional=none\", which turns the warning off.\n\"-Wbidirectional=any\", which warns about any use of bidirectional characters.\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-11-10"
+			},
+			"updated": {
+				"date": "2021-11-10"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2005819",
+					"id": "2005819"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-42574",
+					"public": "20211101",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-42574",
+					"impact": "moderate",
+					"cwe": "CWE-838",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214585001",
+										"comment": "gcc-toolset-10-gcc is earlier than 0:10.3.1-1.2.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214585002",
+										"comment": "gcc-toolset-10-gcc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214585003",
+										"comment": "gcc-toolset-10-gcc-c++ is earlier than 0:10.3.1-1.2.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214585004",
+										"comment": "gcc-toolset-10-gcc-c++ is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214585005",
+										"comment": "gcc-toolset-10-gcc-gdb-plugin is earlier than 0:10.3.1-1.2.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214585006",
+										"comment": "gcc-toolset-10-gcc-gdb-plugin is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214585007",
+										"comment": "gcc-toolset-10-gcc-gfortran is earlier than 0:10.3.1-1.2.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214585008",
+										"comment": "gcc-toolset-10-gcc-gfortran is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214585009",
+										"comment": "gcc-toolset-10-gcc-plugin-devel is earlier than 0:10.3.1-1.2.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214585010",
+										"comment": "gcc-toolset-10-gcc-plugin-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214585011",
+										"comment": "gcc-toolset-10-libasan-devel is earlier than 0:10.3.1-1.2.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214585012",
+										"comment": "gcc-toolset-10-libasan-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214585013",
+										"comment": "gcc-toolset-10-libatomic-devel is earlier than 0:10.3.1-1.2.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214585014",
+										"comment": "gcc-toolset-10-libatomic-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214585015",
+										"comment": "gcc-toolset-10-libitm-devel is earlier than 0:10.3.1-1.2.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214585016",
+										"comment": "gcc-toolset-10-libitm-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214585017",
+										"comment": "gcc-toolset-10-liblsan-devel is earlier than 0:10.3.1-1.2.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214585018",
+										"comment": "gcc-toolset-10-liblsan-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214585019",
+										"comment": "gcc-toolset-10-libquadmath-devel is earlier than 0:10.3.1-1.2.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214585020",
+										"comment": "gcc-toolset-10-libquadmath-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214585021",
+										"comment": "gcc-toolset-10-libstdc++-devel is earlier than 0:10.3.1-1.2.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214585022",
+										"comment": "gcc-toolset-10-libstdc++-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214585023",
+										"comment": "gcc-toolset-10-libstdc++-docs is earlier than 0:10.3.1-1.2.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214585024",
+										"comment": "gcc-toolset-10-libstdc++-docs is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214585025",
+										"comment": "gcc-toolset-10-libtsan-devel is earlier than 0:10.3.1-1.2.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214585026",
+										"comment": "gcc-toolset-10-libtsan-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214585027",
+										"comment": "gcc-toolset-10-libubsan-devel is earlier than 0:10.3.1-1.2.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214585028",
+										"comment": "gcc-toolset-10-libubsan-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214585029",
+										"comment": "libasan6 is earlier than 0:10.3.1-1.2.el8_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214585030",
+										"comment": "libasan6 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

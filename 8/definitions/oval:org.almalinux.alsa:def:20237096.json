@@ -1,0 +1,97 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20237096",
+	"version": "637",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:7096: python-cryptography security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2023:7096",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-7096.html"
+			},
+			{
+				"ref_id": "CVE-2023-23931",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-23931"
+			},
+			{
+				"ref_id": "ALSA-2023:7096",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-7096.html"
+			}
+		],
+		"Description": "The python-cryptography packages contain a Python Cryptographic Authority's (PyCA's) cryptography library, which provides cryptographic primitives and recipes to Python developers.\n\nSecurity Fix(es):\n\n* python-cryptography: memory corruption via immutable objects (CVE-2023-23931)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-11-14"
+			},
+			"updated": {
+				"date": "2023-11-14"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2171817",
+					"id": "2171817"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-23931",
+					"public": "20230208",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-23931",
+					"impact": "Moderate",
+					"cwe": "CWE-754",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20237096001",
+						"comment": "python3-cryptography is earlier than 0:3.2.1-6.el8"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20211608002",
+						"comment": "python3-cryptography is signed with AlmaLinux OS 8 key"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

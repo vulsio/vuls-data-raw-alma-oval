@@ -1,0 +1,151 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20232883",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:2883: libtiff security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2023:2883",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-2883.html"
+			},
+			{
+				"ref_id": "CVE-2022-3627",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-3627"
+			},
+			{
+				"ref_id": "CVE-2022-3970",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-3970"
+			},
+			{
+				"ref_id": "ALSA-2023:2883",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-2883.html"
+			}
+		],
+		"Description": "The libtiff packages contain a library of functions for manipulating Tagged Image File Format (TIFF) files.\n\nSecurity Fix(es):\n\n* libtiff: out-of-bounds write in _TIFFmemcpy in libtiff/tif_unix.c (CVE-2022-3627)\n* libtiff: integer overflow in function TIFFReadRGBATileExt of the file (CVE-2022-3970)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-05-16"
+			},
+			"updated": {
+				"date": "2023-05-16"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2142742",
+					"id": "2142742"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2148918",
+					"id": "2148918"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-3627",
+					"public": "20220321",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-3627",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-3970",
+					"public": "20221108",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-3970",
+					"impact": "Moderate",
+					"cwe": "CWE-680",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232883001",
+										"comment": "libtiff is earlier than 0:4.0.9-27.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193419002",
+										"comment": "libtiff is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232883003",
+										"comment": "libtiff-devel is earlier than 0:4.0.9-27.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193419004",
+										"comment": "libtiff-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232883005",
+										"comment": "libtiff-tools is earlier than 0:4.0.9-27.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193419006",
+										"comment": "libtiff-tools is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

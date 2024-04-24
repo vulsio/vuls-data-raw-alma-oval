@@ -1,0 +1,113 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20203385",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2020:3385: libvncserver security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2020:3385",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-3385.html"
+			},
+			{
+				"ref_id": "ALSA-2020:3385",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-3385.html"
+			},
+			{
+				"ref_id": "CVE-2017-18922",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2017-18922"
+			}
+		],
+		"Description": "LibVNCServer is a C library that enables you to implement VNC server functionality into own programs.\nSecurity Fix(es):\n* libvncserver: websocket decoding buffer overflow (CVE-2017-18922)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2020-08-10"
+			},
+			"updated": {
+				"date": "2020-08-10"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1852356",
+					"id": "1852356"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2017-18922",
+					"public": "20170215",
+					"href": "https://access.redhat.com/security/cve/CVE-2017-18922",
+					"impact": "important",
+					"cwe": "CWE-122",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203385001",
+										"comment": "libvncserver is earlier than 0:0.9.11-15.el8_2.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20200920002",
+										"comment": "libvncserver is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20203385003",
+										"comment": "libvncserver-devel is earlier than 0:0.9.11-15.el8_2.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20200920004",
+										"comment": "libvncserver-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

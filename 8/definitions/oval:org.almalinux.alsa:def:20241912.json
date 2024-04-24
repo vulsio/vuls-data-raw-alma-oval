@@ -1,0 +1,199 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20241912",
+	"version": "638",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:1912: firefox security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2024:1912",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-1912.html"
+			},
+			{
+				"ref_id": "CVE-2024-2609",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-2609"
+			},
+			{
+				"ref_id": "CVE-2024-3852",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-3852"
+			},
+			{
+				"ref_id": "CVE-2024-3854",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-3854"
+			},
+			{
+				"ref_id": "CVE-2024-3857",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-3857"
+			},
+			{
+				"ref_id": "CVE-2024-3859",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-3859"
+			},
+			{
+				"ref_id": "CVE-2024-3861",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-3861"
+			},
+			{
+				"ref_id": "CVE-2024-3864",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-3864"
+			},
+			{
+				"ref_id": "ALSA-2024:1912",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-1912.html"
+			}
+		],
+		"Description": "Mozilla Firefox is an open-source web browser, designed for standards compliance, performance, and portability.\n\nThis update upgrades Firefox to version 115.10.0 ESR.\n\nSecurity Fix(es):\n  \n* GetBoundName in the JIT returned the wrong object (CVE-2024-3852)\n\n* Out-of-bounds-read after mis-optimized switch statement (CVE-2024-3854)\n* Incorrect JITting of arguments led to use-after-free during garbage collection (CVE-2024-3857)\n* Permission prompt input delay could expire when not in focus (CVE-2024-2609)\n* Integer-overflow led to out-of-bounds-read in the OpenType sanitizer (CVE-2024-3859)\n* Potential use-after-free due to AlignedBuffer self-move (CVE-2024-3861)\n* Memory safety bug fixed in Firefox 125, Firefox ESR 115.10, and Thunderbird 115.10 (CVE-2024-3864)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-04-18"
+			},
+			"updated": {
+				"date": "2024-04-18"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2275547",
+					"id": "2275547"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2275549",
+					"id": "2275549"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2275550",
+					"id": "2275550"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2275551",
+					"id": "2275551"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2275552",
+					"id": "2275552"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2275553",
+					"id": "2275553"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2275555",
+					"id": "2275555"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2024-2609",
+					"public": "20240416",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-2609",
+					"impact": "Moderate",
+					"cwe": "CWE-356",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+				},
+				{
+					"text": "CVE-2024-3852",
+					"public": "20240416",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-3852",
+					"impact": "Important",
+					"cwe": "CWE-843",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2024-3854",
+					"public": "20240416",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-3854",
+					"impact": "Important",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2024-3857",
+					"public": "20240416",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-3857",
+					"impact": "Important",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2024-3859",
+					"public": "20240416",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-3859",
+					"impact": "Moderate",
+					"cwe": "CWE-190->CWE-125",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+				},
+				{
+					"text": "CVE-2024-3861",
+					"public": "20240416",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-3861",
+					"impact": "Moderate",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+				},
+				{
+					"text": "CVE-2024-3864",
+					"public": "20240416",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-3864",
+					"impact": "Important",
+					"cwe": "CWE-120",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20241912001",
+						"comment": "firefox is earlier than 0:115.10.0-1.el8_9.alma.1"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20190966002",
+						"comment": "firefox is signed with AlmaLinux OS 8 key"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

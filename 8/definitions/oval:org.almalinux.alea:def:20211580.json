@@ -1,0 +1,127 @@
+{
+	"id": "oval:org.almalinux.alea:def:20211580",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALEA-2021:1580: libarchive bug fix and enhancement update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALEA-2021:1580",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALEA-2021-1580.html"
+			},
+			{
+				"ref_id": "ALEA-2021:1580",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALEA-2021-1580.html"
+			},
+			{
+				"ref_id": "CVE-2017-14502",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2017-14502"
+			}
+		],
+		"Description": "For detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-05-18"
+			},
+			"updated": {
+				"date": "2021-05-18"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1494463",
+					"id": "1494463"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2017-14502",
+					"public": "20170916",
+					"href": "https://access.redhat.com/security/cve/CVE-2017-14502",
+					"impact": "moderate",
+					"cwe": "CWE-193",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:20211580001",
+										"comment": "bsdtar is earlier than 0:3.3.3-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:20211580002",
+										"comment": "bsdtar is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:20211580003",
+										"comment": "libarchive is earlier than 0:3.3.3-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:20211580004",
+										"comment": "libarchive is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:20211580005",
+										"comment": "libarchive-devel is earlier than 0:3.3.3-1.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alea:tst:20211580006",
+										"comment": "libarchive-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

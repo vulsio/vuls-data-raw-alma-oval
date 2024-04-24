@@ -1,0 +1,155 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20231403",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:1403: thunderbird security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2023:1403",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-1403.html"
+			},
+			{
+				"ref_id": "CVE-2023-25751",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-25751"
+			},
+			{
+				"ref_id": "CVE-2023-25752",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-25752"
+			},
+			{
+				"ref_id": "CVE-2023-28162",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-28162"
+			},
+			{
+				"ref_id": "CVE-2023-28164",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-28164"
+			},
+			{
+				"ref_id": "CVE-2023-28176",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-28176"
+			},
+			{
+				"ref_id": "ALSA-2023:1403",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-1403.html"
+			}
+		],
+		"Description": "Mozilla Thunderbird is a standalone mail and newsgroup client.\n\nThis update upgrades Thunderbird to version 102.9.0.\n\nSecurity Fix(es):\n\n* Mozilla: Incorrect code generation during JIT compilation (CVE-2023-25751)\n* Mozilla: Memory safety bugs fixed in Firefox 111 and Firefox ESR 102.9 (CVE-2023-28176)\n* Mozilla: Potential out-of-bounds when accessing throttled streams (CVE-2023-25752)\n* Mozilla: Invalid downcast in Worklets (CVE-2023-28162)\n* Mozilla: URL being dragged from a removed cross-origin iframe into the same tab triggered navigation (CVE-2023-28164)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-03-22"
+			},
+			"updated": {
+				"date": "2023-03-22"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2178458",
+					"id": "2178458"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2178460",
+					"id": "2178460"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2178466",
+					"id": "2178466"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2178470",
+					"id": "2178470"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2178472",
+					"id": "2178472"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-25751",
+					"public": "20230314",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-25751",
+					"impact": "Important",
+					"cwe": "CWE-94",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2023-25752",
+					"public": "20230314",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-25752",
+					"impact": "Moderate",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+				},
+				{
+					"text": "CVE-2023-28162",
+					"public": "20230314",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-28162",
+					"impact": "Moderate",
+					"cwe": "CWE-704",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+				},
+				{
+					"text": "CVE-2023-28164",
+					"public": "20230314",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-28164",
+					"impact": "Moderate",
+					"cwe": "CWE-829",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+				},
+				{
+					"text": "CVE-2023-28176",
+					"public": "20230314",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-28176",
+					"impact": "Important",
+					"cwe": "CWE-120",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20231403001",
+						"comment": "thunderbird is earlier than 0:102.9.0-1.el8_7.alma"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20191144002",
+						"comment": "thunderbird is signed with AlmaLinux OS 8 key"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

@@ -1,0 +1,158 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20227541",
+	"version": "637",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:7541: redis:6 security, bug fix, and enhancement update (Low)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:7541",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7541.html"
+			},
+			{
+				"ref_id": "CVE-2022-24735",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-24735"
+			},
+			{
+				"ref_id": "CVE-2022-24736",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-24736"
+			},
+			{
+				"ref_id": "ALSA-2022:7541",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7541.html"
+			}
+		],
+		"Description": "Redis is an advanced key-value store. It is often referred to as a data-structure server since keys can contain strings, hashes, lists, sets, and sorted sets. For performance, Redis works with an in-memory data set. You can persist it either by dumping the data set to disk every once in a while, or by appending each command to a log.\n\nThe following packages have been upgraded to a later upstream version: redis (6.2.7). (BZ#1999873)\n\nSecurity Fix(es):\n\n* redis: Code injection via Lua script execution environment (CVE-2022-24735)\n* redis: Malformed Lua script can crash Redis (CVE-2022-24736)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Low",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-11-08"
+			},
+			"updated": {
+				"date": "2022-11-08"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2080286",
+					"id": "2080286"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2080289",
+					"id": "2080289"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-24735",
+					"public": "20220427",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-24735",
+					"impact": "Low",
+					"cwe": "CWE-94",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N"
+				},
+				{
+					"text": "CVE-2022-24736",
+					"public": "20220427",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-24736",
+					"impact": "Low",
+					"cwe": "CWE-476",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterias": [
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227541001",
+														"comment": "redis is earlier than 0:6.2.7-1.module_el8.7.0+3288+a82c1b48"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20192002002",
+														"comment": "redis is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227541003",
+														"comment": "redis-devel is earlier than 0:6.2.7-1.module_el8.7.0+3288+a82c1b48"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20192002004",
+														"comment": "redis-devel is signed with AlmaLinux OS 8 key"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20227541005",
+														"comment": "redis-doc is earlier than 0:6.2.7-1.module_el8.7.0+3288+a82c1b48"
+													},
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20192002006",
+														"comment": "redis-doc is signed with AlmaLinux OS 8 key"
+													}
+												]
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20212034007",
+										"comment": "Module redis:6 is enabled"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

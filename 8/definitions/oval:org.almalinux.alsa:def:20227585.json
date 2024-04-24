@@ -1,0 +1,262 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20227585",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:7585: libtiff security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:7585",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7585.html"
+			},
+			{
+				"ref_id": "CVE-2022-0561",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-0561"
+			},
+			{
+				"ref_id": "CVE-2022-0562",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-0562"
+			},
+			{
+				"ref_id": "CVE-2022-0865",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-0865"
+			},
+			{
+				"ref_id": "CVE-2022-0891",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-0891"
+			},
+			{
+				"ref_id": "CVE-2022-0908",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-0908"
+			},
+			{
+				"ref_id": "CVE-2022-0909",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-0909"
+			},
+			{
+				"ref_id": "CVE-2022-0924",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-0924"
+			},
+			{
+				"ref_id": "CVE-2022-1355",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-1355"
+			},
+			{
+				"ref_id": "CVE-2022-22844",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-22844"
+			},
+			{
+				"ref_id": "ALSA-2022:7585",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7585.html"
+			}
+		],
+		"Description": "The libtiff packages contain a library of functions for manipulating Tagged Image File Format (TIFF) files.\n\nSecurity Fix(es):\n\n* libtiff: Denial of Service via crafted TIFF file (CVE-2022-0561)\n* libtiff: Null source pointer lead to Denial of Service via crafted TIFF file (CVE-2022-0562)\n* libtiff: reachable assertion (CVE-2022-0865)\n* libtiff: Out-of-bounds Read error in tiffcp (CVE-2022-0924)\n* libtiff: stack-buffer-overflow in tiffcp.c in main() (CVE-2022-1355)\n* libtiff: out-of-bounds read in _TIFFmemcpy() in tif_unix.c (CVE-2022-22844)\n* libtiff: heap buffer overflow in extractImageSection (CVE-2022-0891)\n* tiff: Null source pointer passed as an argument to memcpy in TIFFFetchNormalTag() in tif_dirread.c (CVE-2022-0908)\n* tiff: Divide By Zero error in tiffcrop (CVE-2022-0909)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-11-08"
+			},
+			"updated": {
+				"date": "2022-11-08"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2042603",
+					"id": "2042603"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2054494",
+					"id": "2054494"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2054495",
+					"id": "2054495"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2064145",
+					"id": "2064145"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2064146",
+					"id": "2064146"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2064148",
+					"id": "2064148"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2064406",
+					"id": "2064406"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2064411",
+					"id": "2064411"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2074415",
+					"id": "2074415"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-0561",
+					"public": "20220211",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-0561",
+					"impact": "Moderate",
+					"cwe": "CWE-476",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-0562",
+					"public": "20220211",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-0562",
+					"impact": "Moderate",
+					"cwe": "CWE-476",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-0865",
+					"public": "20220301",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-0865",
+					"impact": "Moderate",
+					"cwe": "CWE-617",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-0891",
+					"public": "20220222",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-0891",
+					"impact": "Low",
+					"cwe": "CWE-120",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-0908",
+					"public": "20220311",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-0908",
+					"impact": "Low",
+					"cwe": "CWE-476",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-0909",
+					"public": "20220311",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-0909",
+					"impact": "Low",
+					"cwe": "CWE-369",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-0924",
+					"public": "20220311",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-0924",
+					"impact": "Moderate",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-1355",
+					"public": "20220412",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-1355",
+					"impact": "Moderate",
+					"cwe": "CWE-119->CWE-121",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:H"
+				},
+				{
+					"text": "CVE-2022-22844",
+					"public": "20220104",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-22844",
+					"impact": "Moderate",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227585001",
+										"comment": "libtiff is earlier than 0:4.0.9-23.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193419002",
+										"comment": "libtiff is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227585003",
+										"comment": "libtiff-devel is earlier than 0:4.0.9-23.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193419004",
+										"comment": "libtiff-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227585005",
+										"comment": "libtiff-tools is earlier than 0:4.0.9-23.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20193419006",
+										"comment": "libtiff-tools is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

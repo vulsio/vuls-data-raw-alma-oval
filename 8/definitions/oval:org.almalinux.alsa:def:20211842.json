@@ -1,0 +1,130 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20211842",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2021:1842: raptor2 security and bug fix update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2021:1842",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1842.html"
+			},
+			{
+				"ref_id": "ALSA-2021:1842",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1842.html"
+			},
+			{
+				"ref_id": "CVE-2017-18926",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2017-18926"
+			},
+			{
+				"ref_id": "CVE-2020-25713",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-25713"
+			}
+		],
+		"Description": "Raptor is the RDF Parser Toolkit for Redland that provides a set of standalone RDF parsers, generating triples from RDF/XML or N-Triples. \nSecurity Fix(es):\n* raptor: heap-based buffer overflows due to an error in calculating the maximum nspace declarations for the XML writer (CVE-2017-18926)\n* raptor2: malformed input file can lead to a segfault due to an out of bounds array access in raptor_xml_writer_start_element_common (CVE-2020-25713)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\nAdditional Changes:\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2021-05-18"
+			},
+			"updated": {
+				"date": "2021-05-18"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1896120",
+					"id": "1896120"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1900685",
+					"id": "1900685"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2017-18926",
+					"public": "20170607",
+					"href": "https://access.redhat.com/security/cve/CVE-2017-18926",
+					"impact": "moderate",
+					"cwe": "CWE-122",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:H"
+				},
+				{
+					"text": "CVE-2020-25713",
+					"public": "20201113",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-25713",
+					"impact": "low",
+					"cwe": "CWE-20->CWE-122->CWE-125",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211842001",
+										"comment": "raptor2 is earlier than 0:2.0.15-16.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211842002",
+										"comment": "raptor2 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211842003",
+										"comment": "raptor2-devel is earlier than 0:2.0.15-16.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211842004",
+										"comment": "raptor2-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

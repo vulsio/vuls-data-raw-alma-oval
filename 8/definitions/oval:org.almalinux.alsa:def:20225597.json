@@ -1,0 +1,112 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20225597",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:5597: pandoc security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:5597",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-5597.html"
+			},
+			{
+				"ref_id": "ALSA-2022:5597",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-5597.html"
+			},
+			{
+				"ref_id": "CVE-2022-24724",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-24724"
+			}
+		],
+		"Description": "Pandoc is a markdown/markup conversion tool. The version of pandoc in AlmaLinux 8 CRB uses cmark-gfm (GitHub's extended version of the C reference implementation of CommonMark) for parts of its conversion. The update, fixes CVE-2022-24724: an integer overflow in cmark-gfm's table row parsing which may lead to heap memory corruption when parsing tables with more than UINT16_MAX columns.\nSecurity Fix(es):\n* cmark-gfm: possible RCE due to integer overflow (CVE-2022-24724)\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-07-18"
+			},
+			"updated": {
+				"date": "2022-07-18"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::powertools"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2060662",
+					"id": "2060662"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-24724",
+					"public": "20220303",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-24724",
+					"impact": "important",
+					"cwe": "CWE-190",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225597001",
+										"comment": "pandoc is earlier than 0:2.0.6-6.el8_6"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211972002",
+										"comment": "pandoc is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225597003",
+										"comment": "pandoc-common is earlier than 0:2.0.6-6.el8_6"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211972004",
+										"comment": "pandoc-common is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

@@ -1,0 +1,127 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20227715",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:7715: libxml2 security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:7715",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7715.html"
+			},
+			{
+				"ref_id": "CVE-2016-3709",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2016-3709"
+			},
+			{
+				"ref_id": "ALSA-2022:7715",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7715.html"
+			}
+		],
+		"Description": "The libxml2 library is a development toolbox providing the implementation of various XML standards.\n\nSecurity Fix(es):\n\n* libxml2: Incorrect server side include parsing can lead to XSS (CVE-2016-3709)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-11-08"
+			},
+			"updated": {
+				"date": "2022-11-08"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2112766",
+					"id": "2112766"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2016-3709",
+					"public": "20160811",
+					"href": "https://access.redhat.com/security/cve/CVE-2016-3709",
+					"impact": "Moderate",
+					"cwe": "CWE-79",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227715001",
+										"comment": "libxml2 is earlier than 0:2.9.7-15.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201827002",
+										"comment": "libxml2 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227715003",
+										"comment": "libxml2-devel is earlier than 0:2.9.7-15.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201827004",
+										"comment": "libxml2-devel is signed with AlmaLinux OS 8 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227715005",
+										"comment": "python3-libxml2 is earlier than 0:2.9.7-15.el8"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20201827006",
+										"comment": "python3-libxml2 is signed with AlmaLinux OS 8 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}
