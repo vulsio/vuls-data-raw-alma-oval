@@ -1,0 +1,199 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20242528",
+	"version": "637",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:2528: mingw-glib2 security update (Low)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2024:2528",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-2528.html"
+			},
+			{
+				"ref_id": "CVE-2023-29499",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-29499"
+			},
+			{
+				"ref_id": "CVE-2023-32611",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-32611"
+			},
+			{
+				"ref_id": "CVE-2023-32636",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-32636"
+			},
+			{
+				"ref_id": "CVE-2023-32665",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-32665"
+			},
+			{
+				"ref_id": "ALSA-2024:2528",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-2528.html"
+			}
+		],
+		"Description": "GLib provides the core application building blocks for libraries and applications written in C. It provides the core object system used in GNOME, the main loop implementation, and a large set of utility functions for strings and common data structures.\n\nSecurity Fix(es):\n\n* glib: GVariant offset table entry size is not checked in is_normal() (CVE-2023-29499)\n* glib: g_variant_byteswap() can take a long time with some non-normal inputs (CVE-2023-32611)\n* glib: Timeout in fuzz_variant_text (CVE-2023-32636)\n* glib: GVariant deserialisation does not match spec for non-normal data (CVE-2023-32665)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Low",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-04-30"
+			},
+			"updated": {
+				"date": "2024-04-30"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2211827",
+					"id": "2211827"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2211828",
+					"id": "2211828"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2211829",
+					"id": "2211829"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2211833",
+					"id": "2211833"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-29499",
+					"public": "20221214",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-29499",
+					"impact": "Low",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-32611",
+					"public": "20221214",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-32611",
+					"impact": "Low",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-32636",
+					"public": "20221214",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-32636",
+					"impact": "Low",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-32665",
+					"public": "20221214",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-32665",
+					"impact": "Low",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242528001",
+										"comment": "mingw32-glib2 is earlier than 0:2.78.0-1.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228418002",
+										"comment": "mingw32-glib2 is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242528003",
+										"comment": "mingw32-glib2-static is earlier than 0:2.78.0-1.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228418004",
+										"comment": "mingw32-glib2-static is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242528005",
+										"comment": "mingw64-glib2 is earlier than 0:2.78.0-1.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228418006",
+										"comment": "mingw64-glib2 is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242528007",
+										"comment": "mingw64-glib2-static is earlier than 0:2.78.0-1.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228418008",
+										"comment": "mingw64-glib2-static is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

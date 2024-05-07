@@ -1,0 +1,97 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20242337",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:2337: python3.11-cryptography security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2024:2337",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-2337.html"
+			},
+			{
+				"ref_id": "CVE-2023-49083",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-49083"
+			},
+			{
+				"ref_id": "ALSA-2024:2337",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-2337.html"
+			}
+		],
+		"Description": "The python-cryptography packages contain a Python Cryptographic Authority's (PyCA's) cryptography library, which provides cryptographic primitives and recipes to Python developers.\n\nSecurity Fix(es):\n\n* python-cryptography: NULL-dereference when loading PKCS7 certificates (CVE-2023-49083)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-04-30"
+			},
+			"updated": {
+				"date": "2024-04-30"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2255331",
+					"id": "2255331"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-49083",
+					"public": "20231128",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-49083",
+					"impact": "Moderate",
+					"cwe": "CWE-476",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20242337001",
+						"comment": "python3.11-cryptography is earlier than 0:37.0.2-6.el9"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20242337002",
+						"comment": "python3.11-cryptography is signed with AlmaLinux OS 9 key"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}
