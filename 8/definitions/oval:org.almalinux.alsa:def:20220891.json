@@ -90,14 +90,25 @@
 										"criterias": [
 											{
 												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034805506",
+																"comment": "mod_md is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034805507",
+																"comment": "mod_md is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
 												"criterions": [
 													{
 														"test_ref": "oval:org.almalinux.alsa:tst:20204751015",
 														"comment": "mod_md is earlier than 1:2.0.8-8.module_el8.6.0+2872+fe0ff7aa"
-													},
-													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20190980016",
-														"comment": "mod_md is signed with AlmaLinux OS 8 key"
 													}
 												]
 											}

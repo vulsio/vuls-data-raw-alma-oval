@@ -61,14 +61,25 @@
 		"criterias": [
 			{
 				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterions": [
+							{
+								"test_ref": "oval:org.almalinux.alba:tst:2020034804668",
+								"comment": "microcode_ctl is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+							},
+							{
+								"test_ref": "oval:org.almalinux.alba:tst:2020034804669",
+								"comment": "microcode_ctl is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+							}
+						]
+					}
+				],
 				"criterions": [
 					{
 						"test_ref": "oval:org.almalinux.alba:tst:20210621001",
 						"comment": "microcode_ctl is earlier than 4:20200609-2.20210216.1.el8_3"
-					},
-					{
-						"test_ref": "oval:org.almalinux.alba:tst:20210621002",
-						"comment": "microcode_ctl is signed with AlmaLinux OS 8 key"
 					},
 					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",

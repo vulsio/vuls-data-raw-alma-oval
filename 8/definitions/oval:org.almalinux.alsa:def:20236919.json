@@ -77,27 +77,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034806198",
+												"comment": "edk2-aarch64 is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034806199",
+												"comment": "edk2-aarch64 is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20236919001",
 										"comment": "edk2-aarch64 is earlier than 0:20220126gitbb1bba3d77-6.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20190968002",
-										"comment": "edk2-aarch64 is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034806200",
+												"comment": "edk2-ovmf is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034806201",
+												"comment": "edk2-ovmf is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20236919003",
 										"comment": "edk2-ovmf is earlier than 0:20220126gitbb1bba3d77-6.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20190968004",
-										"comment": "edk2-ovmf is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

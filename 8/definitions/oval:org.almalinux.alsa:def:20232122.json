@@ -71,14 +71,25 @@
 		"criterias": [
 			{
 				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterions": [
+							{
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034807640",
+								"comment": "libreswan is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+							},
+							{
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034807641",
+								"comment": "libreswan is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+							}
+						]
+					}
+				],
 				"criterions": [
 					{
 						"test_ref": "oval:org.almalinux.alsa:tst:20232122001",
 						"comment": "libreswan is earlier than 0:4.5-1.el8_7.1"
-					},
-					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20193391002",
-						"comment": "libreswan is signed with AlmaLinux OS 8 key"
 					},
 					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",

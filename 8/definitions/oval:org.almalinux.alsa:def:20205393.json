@@ -68,27 +68,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034806168",
+												"comment": "libexif is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034806169",
+												"comment": "libexif is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20205393001",
 										"comment": "libexif is earlier than 0:0.6.22-5.el8_3"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20202550002",
-										"comment": "libexif is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034806170",
+												"comment": "libexif-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034806171",
+												"comment": "libexif-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20205393003",
 										"comment": "libexif-devel is earlier than 0:0.6.22-5.el8_3"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20202550004",
-										"comment": "libexif-devel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

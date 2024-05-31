@@ -71,14 +71,25 @@
 		"criterias": [
 			{
 				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterions": [
+							{
+								"test_ref": "oval:org.almalinux.alba:tst:2020034808754",
+								"comment": "cloud-init is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+							},
+							{
+								"test_ref": "oval:org.almalinux.alba:tst:2020034808755",
+								"comment": "cloud-init is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+							}
+						]
+					}
+				],
 				"criterions": [
 					{
 						"test_ref": "oval:org.almalinux.alsa:tst:20236943001",
 						"comment": "cloud-init is earlier than 0:23.1.1-10.el8.alma.1"
-					},
-					{
-						"test_ref": "oval:org.almalinux.alba:tst:20191992002",
-						"comment": "cloud-init is signed with AlmaLinux OS 8 key"
 					},
 					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",

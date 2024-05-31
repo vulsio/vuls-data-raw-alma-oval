@@ -69,27 +69,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805948",
+												"comment": "libpcap is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805949",
+												"comment": "libpcap is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20204547001",
 										"comment": "libpcap is earlier than 14:1.9.1-4.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204547002",
-										"comment": "libpcap is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805950",
+												"comment": "libpcap-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805951",
+												"comment": "libpcap-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20204547003",
 										"comment": "libpcap-devel is earlier than 14:1.9.1-4.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204547004",
-										"comment": "libpcap-devel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

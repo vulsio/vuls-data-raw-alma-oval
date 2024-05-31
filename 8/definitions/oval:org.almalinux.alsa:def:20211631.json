@@ -61,14 +61,25 @@
 		"criterias": [
 			{
 				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterions": [
+							{
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034806930",
+								"comment": "python3-urllib3 is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+							},
+							{
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034806931",
+								"comment": "python3-urllib3 is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+							}
+						]
+					}
+				],
 				"criterions": [
 					{
 						"test_ref": "oval:org.almalinux.alsa:tst:20211631001",
 						"comment": "python3-urllib3 is earlier than 0:1.24.2-5.el8"
-					},
-					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20193590002",
-						"comment": "python3-urllib3 is signed with AlmaLinux OS 8 key"
 					},
 					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",

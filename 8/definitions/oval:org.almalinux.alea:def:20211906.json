@@ -180,14 +180,25 @@
 		"criterias": [
 			{
 				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterions": [
+							{
+								"test_ref": "oval:org.almalinux.alea:tst:2020034804670",
+								"comment": "libyang is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+							},
+							{
+								"test_ref": "oval:org.almalinux.alea:tst:2020034804671",
+								"comment": "libyang is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+							}
+						]
+					}
+				],
 				"criterions": [
 					{
 						"test_ref": "oval:org.almalinux.alea:tst:20211906001",
 						"comment": "libyang is earlier than 0:1.0.184-1.el8"
-					},
-					{
-						"test_ref": "oval:org.almalinux.alea:tst:20211906002",
-						"comment": "libyang is signed with AlmaLinux OS 8 key"
 					},
 					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",

@@ -68,27 +68,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807800",
+												"comment": "aspell is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807801",
+												"comment": "aspell is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20221808001",
 										"comment": "aspell is earlier than 12:0.60.6.1-22.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20221808002",
-										"comment": "aspell is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807802",
+												"comment": "aspell-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807803",
+												"comment": "aspell-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20221808003",
 										"comment": "aspell-devel is earlier than 12:0.60.6.1-22.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20221808004",
-										"comment": "aspell-devel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

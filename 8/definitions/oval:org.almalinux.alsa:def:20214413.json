@@ -61,14 +61,25 @@
 		"criterias": [
 			{
 				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterions": [
+							{
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034807440",
+								"comment": "tpm2-tools is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+							},
+							{
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034807441",
+								"comment": "tpm2-tools is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+							}
+						]
+					}
+				],
 				"criterions": [
 					{
 						"test_ref": "oval:org.almalinux.alsa:tst:20214413001",
 						"comment": "tpm2-tools is earlier than 0:4.1.1-5.el8"
-					},
-					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20214413002",
-						"comment": "tpm2-tools is signed with AlmaLinux OS 8 key"
 					},
 					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",

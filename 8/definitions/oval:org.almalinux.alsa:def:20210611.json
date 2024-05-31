@@ -67,27 +67,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034806278",
+												"comment": "xterm is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034806279",
+												"comment": "xterm is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20210611001",
 										"comment": "xterm is earlier than 0:331-1.el8_3.2"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20210611002",
-										"comment": "xterm is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034806280",
+												"comment": "xterm-resize is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034806281",
+												"comment": "xterm-resize is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20210611003",
 										"comment": "xterm-resize is earlier than 0:331-1.el8_3.2"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20210611004",
-										"comment": "xterm-resize is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

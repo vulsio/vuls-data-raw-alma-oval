@@ -206,14 +206,25 @@
 		"criterias": [
 			{
 				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterions": [
+							{
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034807012",
+								"comment": "xorg-x11-server-Xwayland is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+							},
+							{
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034807013",
+								"comment": "xorg-x11-server-Xwayland is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+							}
+						]
+					}
+				],
 				"criterions": [
 					{
 						"test_ref": "oval:org.almalinux.alsa:tst:20232805001",
 						"comment": "xorg-x11-server-Xwayland is earlier than 0:21.1.3-10.el8"
-					},
-					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20211804048",
-						"comment": "xorg-x11-server-Xwayland is signed with AlmaLinux OS 8 key"
 					},
 					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",

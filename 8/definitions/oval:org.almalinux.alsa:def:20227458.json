@@ -61,14 +61,25 @@
 		"criterias": [
 			{
 				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterions": [
+							{
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034803886",
+								"comment": "flatpak-builder is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+							},
+							{
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034803887",
+								"comment": "flatpak-builder is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+							}
+						]
+					}
+				],
 				"criterions": [
 					{
 						"test_ref": "oval:org.almalinux.alsa:tst:20227458001",
 						"comment": "flatpak-builder is earlier than 0:1.0.14-2.el8"
-					},
-					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20227458002",
-						"comment": "flatpak-builder is signed with AlmaLinux OS 8 key"
 					},
 					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",

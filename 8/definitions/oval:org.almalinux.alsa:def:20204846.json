@@ -67,27 +67,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034806160",
+												"comment": "mingw32-expat is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034806161",
+												"comment": "mingw32-expat is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20204846001",
 										"comment": "mingw32-expat is earlier than 0:2.2.4-5.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204846002",
-										"comment": "mingw32-expat is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034806162",
+												"comment": "mingw64-expat is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034806163",
+												"comment": "mingw64-expat is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20204846003",
 										"comment": "mingw64-expat is earlier than 0:2.2.4-5.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204846004",
-										"comment": "mingw64-expat is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

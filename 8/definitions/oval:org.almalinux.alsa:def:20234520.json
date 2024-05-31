@@ -71,14 +71,25 @@
 		"criterias": [
 			{
 				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterions": [
+							{
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034808930",
+								"comment": "python3-requests is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+							},
+							{
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034808931",
+								"comment": "python3-requests is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+							}
+						]
+					}
+				],
 				"criterions": [
 					{
 						"test_ref": "oval:org.almalinux.alsa:tst:20234520001",
 						"comment": "python3-requests is earlier than 0:2.20.0-3.el8_8"
-					},
-					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20234520002",
-						"comment": "python3-requests is signed with AlmaLinux OS 8 key"
 					},
 					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",

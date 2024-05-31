@@ -67,27 +67,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805788",
+												"comment": "postgresql-jdbc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805789",
+												"comment": "postgresql-jdbc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20203176001",
 										"comment": "postgresql-jdbc is earlier than 0:42.2.3-3.el8_2"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20203176002",
-										"comment": "postgresql-jdbc is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805790",
+												"comment": "postgresql-jdbc-javadoc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805791",
+												"comment": "postgresql-jdbc-javadoc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20203176003",
 										"comment": "postgresql-jdbc-javadoc is earlier than 0:42.2.3-3.el8_2"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20203176004",
-										"comment": "postgresql-jdbc-javadoc is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

@@ -195,14 +195,25 @@
 		"criterias": [
 			{
 				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterions": [
+							{
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034803336",
+								"comment": "git-lfs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+							},
+							{
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034803337",
+								"comment": "git-lfs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+							}
+						]
+					}
+				],
 				"criterions": [
 					{
 						"test_ref": "oval:org.almalinux.alsa:tst:20227129001",
 						"comment": "git-lfs is earlier than 0:2.13.3-3.el8_6"
-					},
-					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20227129002",
-						"comment": "git-lfs is signed with AlmaLinux OS 8 key"
 					},
 					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",

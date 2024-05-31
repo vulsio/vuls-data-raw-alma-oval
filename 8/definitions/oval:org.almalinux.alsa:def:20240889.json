@@ -145,27 +145,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034806154",
+												"comment": "oniguruma is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034806155",
+												"comment": "oniguruma is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20240889001",
 										"comment": "oniguruma is earlier than 0:6.8.2-2.1.el8_9"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204827002",
-										"comment": "oniguruma is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034806156",
+												"comment": "oniguruma-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034806157",
+												"comment": "oniguruma-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20240889003",
 										"comment": "oniguruma-devel is earlier than 0:6.8.2-2.1.el8_9"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204827004",
-										"comment": "oniguruma-devel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

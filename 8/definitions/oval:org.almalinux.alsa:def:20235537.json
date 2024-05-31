@@ -94,27 +94,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805958",
+												"comment": "libvpx is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805959",
+												"comment": "libvpx is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20235537001",
 										"comment": "libvpx is earlier than 0:1.7.0-10.el8_8.alma.1"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204629002",
-										"comment": "libvpx is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805960",
+												"comment": "libvpx-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805961",
+												"comment": "libvpx-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20235537003",
 										"comment": "libvpx-devel is earlier than 0:1.7.0-10.el8_8.alma.1"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204629004",
-										"comment": "libvpx-devel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

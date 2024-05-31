@@ -101,27 +101,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808742",
+												"comment": "libXpm is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808743",
+												"comment": "libXpm is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20230379001",
 										"comment": "libXpm is earlier than 0:3.5.12-9.el8_7"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20230379002",
-										"comment": "libXpm is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808744",
+												"comment": "libXpm-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808745",
+												"comment": "libXpm-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20230379003",
 										"comment": "libXpm-devel is earlier than 0:3.5.12-9.el8_7"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20230379004",
-										"comment": "libXpm-devel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

@@ -67,27 +67,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807104",
+												"comment": "pandoc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807105",
+												"comment": "pandoc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20211972001",
 										"comment": "pandoc is earlier than 0:2.0.6-5.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20211972002",
-										"comment": "pandoc is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807106",
+												"comment": "pandoc-common is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807107",
+												"comment": "pandoc-common is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20211972003",
 										"comment": "pandoc-common is earlier than 0:2.0.6-5.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20211972004",
-										"comment": "pandoc-common is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

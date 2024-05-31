@@ -67,27 +67,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807898",
+												"comment": "rsync is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807899",
+												"comment": "rsync is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20226180001",
 										"comment": "rsync is earlier than 0:3.1.3-14.el8_6.3"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20222201002",
-										"comment": "rsync is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807900",
+												"comment": "rsync-daemon is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807901",
+												"comment": "rsync-daemon is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20226180003",
 										"comment": "rsync-daemon is earlier than 0:3.1.3-14.el8_6.3"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20222201004",
-										"comment": "rsync-daemon is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

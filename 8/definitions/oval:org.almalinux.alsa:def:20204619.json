@@ -67,27 +67,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034804940",
+												"comment": "frr is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034804941",
+												"comment": "frr is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20204619001",
 										"comment": "frr is earlier than 0:7.0-10.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204619002",
-										"comment": "frr is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805952",
+												"comment": "frr-contrib is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805953",
+												"comment": "frr-contrib is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20204619003",
 										"comment": "frr-contrib is earlier than 0:7.0-10.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204619004",
-										"comment": "frr-contrib is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

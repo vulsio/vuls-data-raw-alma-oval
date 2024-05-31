@@ -77,27 +77,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805800",
+												"comment": "ctags is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805801",
+												"comment": "ctags is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20232863001",
 										"comment": "ctags is earlier than 0:5.8-23.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20232863002",
-										"comment": "ctags is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805802",
+												"comment": "ctags-etags is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805803",
+												"comment": "ctags-etags is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20232863003",
 										"comment": "ctags-etags is earlier than 0:5.8-23.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20232863004",
-										"comment": "ctags-etags is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

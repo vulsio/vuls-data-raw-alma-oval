@@ -1,0 +1,1170 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20242950",
+	"version": "640",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:2950: kernel-rt security and bug fix update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2024:2950",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-2950.html"
+			},
+			{
+				"ref_id": "CVE-2019-13631",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-13631"
+			},
+			{
+				"ref_id": "CVE-2019-15505",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2019-15505"
+			},
+			{
+				"ref_id": "CVE-2020-25656",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-25656"
+			},
+			{
+				"ref_id": "CVE-2021-3753",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-3753"
+			},
+			{
+				"ref_id": "CVE-2021-4204",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-4204"
+			},
+			{
+				"ref_id": "CVE-2022-0500",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-0500"
+			},
+			{
+				"ref_id": "CVE-2022-23222",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-23222"
+			},
+			{
+				"ref_id": "CVE-2022-3565",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-3565"
+			},
+			{
+				"ref_id": "CVE-2022-45934",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-45934"
+			},
+			{
+				"ref_id": "CVE-2023-1513",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-1513"
+			},
+			{
+				"ref_id": "CVE-2023-24023",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-24023"
+			},
+			{
+				"ref_id": "CVE-2023-25775",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-25775"
+			},
+			{
+				"ref_id": "CVE-2023-28464",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-28464"
+			},
+			{
+				"ref_id": "CVE-2023-31083",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-31083"
+			},
+			{
+				"ref_id": "CVE-2023-3567",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-3567"
+			},
+			{
+				"ref_id": "CVE-2023-37453",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-37453"
+			},
+			{
+				"ref_id": "CVE-2023-38409",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-38409"
+			},
+			{
+				"ref_id": "CVE-2023-39189",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-39189"
+			},
+			{
+				"ref_id": "CVE-2023-39192",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-39192"
+			},
+			{
+				"ref_id": "CVE-2023-39193",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-39193"
+			},
+			{
+				"ref_id": "CVE-2023-39194",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-39194"
+			},
+			{
+				"ref_id": "CVE-2023-39198",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-39198"
+			},
+			{
+				"ref_id": "CVE-2023-4133",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-4133"
+			},
+			{
+				"ref_id": "CVE-2023-4244",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-4244"
+			},
+			{
+				"ref_id": "CVE-2023-42754",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-42754"
+			},
+			{
+				"ref_id": "CVE-2023-42755",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-42755"
+			},
+			{
+				"ref_id": "CVE-2023-45863",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-45863"
+			},
+			{
+				"ref_id": "CVE-2023-51779",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-51779"
+			},
+			{
+				"ref_id": "CVE-2023-51780",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-51780"
+			},
+			{
+				"ref_id": "CVE-2023-52340",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-52340"
+			},
+			{
+				"ref_id": "CVE-2023-52434",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-52434"
+			},
+			{
+				"ref_id": "CVE-2023-52448",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-52448"
+			},
+			{
+				"ref_id": "CVE-2023-52489",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-52489"
+			},
+			{
+				"ref_id": "CVE-2023-52574",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-52574"
+			},
+			{
+				"ref_id": "CVE-2023-52580",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-52580"
+			},
+			{
+				"ref_id": "CVE-2023-52581",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-52581"
+			},
+			{
+				"ref_id": "CVE-2023-52620",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-52620"
+			},
+			{
+				"ref_id": "CVE-2023-6121",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-6121"
+			},
+			{
+				"ref_id": "CVE-2023-6176",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-6176"
+			},
+			{
+				"ref_id": "CVE-2023-6622",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-6622"
+			},
+			{
+				"ref_id": "CVE-2023-6915",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-6915"
+			},
+			{
+				"ref_id": "CVE-2023-6932",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-6932"
+			},
+			{
+				"ref_id": "CVE-2024-0841",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-0841"
+			},
+			{
+				"ref_id": "CVE-2024-25742",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-25742"
+			},
+			{
+				"ref_id": "CVE-2024-25743",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-25743"
+			},
+			{
+				"ref_id": "CVE-2024-26602",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-26602"
+			},
+			{
+				"ref_id": "CVE-2024-26609",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-26609"
+			},
+			{
+				"ref_id": "CVE-2024-26671",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-26671"
+			},
+			{
+				"ref_id": "ALSA-2024:2950",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-2950.html"
+			}
+		],
+		"Description": "The kernel-rt packages provide the Real Time Linux Kernel, which enables fine-tuning for systems with extremely high determinism requirements.\n\nSecurity Fix(es):\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-05-22"
+			},
+			"updated": {
+				"date": "2024-05-22"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1731000",
+					"id": "1731000"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1746732",
+					"id": "1746732"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1888726",
+					"id": "1888726"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1999589",
+					"id": "1999589"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2039178",
+					"id": "2039178"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2043520",
+					"id": "2043520"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2044578",
+					"id": "2044578"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2150953",
+					"id": "2150953"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2151959",
+					"id": "2151959"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2177759",
+					"id": "2177759"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2179892",
+					"id": "2179892"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2213132",
+					"id": "2213132"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2218332",
+					"id": "2218332"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2219359",
+					"id": "2219359"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2221039",
+					"id": "2221039"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2221463",
+					"id": "2221463"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2221702",
+					"id": "2221702"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2226777",
+					"id": "2226777"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2226784",
+					"id": "2226784"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2226787",
+					"id": "2226787"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2226788",
+					"id": "2226788"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2230042",
+					"id": "2230042"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2231410",
+					"id": "2231410"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2235306",
+					"id": "2235306"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2239845",
+					"id": "2239845"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2239847",
+					"id": "2239847"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2244720",
+					"id": "2244720"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2250043",
+					"id": "2250043"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2253632",
+					"id": "2253632"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2254961",
+					"id": "2254961"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2254982",
+					"id": "2254982"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2255283",
+					"id": "2255283"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2256490",
+					"id": "2256490"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2256822",
+					"id": "2256822"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2257682",
+					"id": "2257682"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2257979",
+					"id": "2257979"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2265285",
+					"id": "2265285"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2265653",
+					"id": "2265653"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2267695",
+					"id": "2267695"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2267750",
+					"id": "2267750"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2267760",
+					"id": "2267760"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2267761",
+					"id": "2267761"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2269189",
+					"id": "2269189"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2269217",
+					"id": "2269217"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2270836",
+					"id": "2270836"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2270883",
+					"id": "2270883"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2272811",
+					"id": "2272811"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2019-13631",
+					"public": "20190711",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-13631",
+					"impact": "Moderate",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+				},
+				{
+					"text": "CVE-2019-15505",
+					"public": "20190823",
+					"href": "https://access.redhat.com/security/cve/CVE-2019-15505",
+					"impact": "Moderate",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:H"
+				},
+				{
+					"text": "CVE-2020-25656",
+					"public": "20201016",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-25656",
+					"impact": "Moderate",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2021-3753",
+					"public": "20210901",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-3753",
+					"impact": "Moderate",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2021-4204",
+					"public": "20220111",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-4204",
+					"impact": "Moderate",
+					"cwe": "CWE-119",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-0500",
+					"public": "20220114",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-0500",
+					"impact": "Moderate",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-23222",
+					"public": "20220114",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-23222",
+					"impact": "Moderate",
+					"cwe": "CWE-763",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-3565",
+					"public": "20220930",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-3565",
+					"impact": "Moderate",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-45934",
+					"public": "20221121",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-45934",
+					"impact": "Moderate",
+					"cwe": "CWE-190",
+					"cvss3": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-1513",
+					"public": "20230214",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-1513",
+					"impact": "Low",
+					"cwe": "CWE-665",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+				},
+				{
+					"text": "CVE-2023-24023",
+					"public": "20231202",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-24023",
+					"impact": "Moderate",
+					"cwe": "CWE-300",
+					"cvss3": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N"
+				},
+				{
+					"text": "CVE-2023-25775",
+					"public": "20230811",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-25775",
+					"impact": "Moderate",
+					"cwe": "CWE-284",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L"
+				},
+				{
+					"text": "CVE-2023-28464",
+					"public": "20230328",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-28464",
+					"impact": "Moderate",
+					"cwe": "CWE-415",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2023-31083",
+					"public": "20230417",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-31083",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-3567",
+					"public": "20230114",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-3567",
+					"impact": "Moderate",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-37453",
+					"public": "20230620",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-37453",
+					"impact": "Moderate",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-38409",
+					"public": "20230412",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-38409",
+					"impact": "Moderate",
+					"cwe": "CWE-129",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-39189",
+					"public": "20230830",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-39189",
+					"impact": "Moderate",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:L"
+				},
+				{
+					"text": "CVE-2023-39192",
+					"public": "20230929",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-39192",
+					"impact": "Moderate",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:L"
+				},
+				{
+					"text": "CVE-2023-39193",
+					"public": "20230929",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-39193",
+					"impact": "Moderate",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:L"
+				},
+				{
+					"text": "CVE-2023-39194",
+					"public": "20230929",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-39194",
+					"impact": "Low",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:L/I:N/A:N"
+				},
+				{
+					"text": "CVE-2023-39198",
+					"public": "20230817",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-39198",
+					"impact": "Moderate",
+					"cwe": "CWE-362->CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2023-4133",
+					"public": "20230415",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-4133",
+					"impact": "Moderate",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-4244",
+					"public": "20230828",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-4244",
+					"impact": "Moderate",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2023-42754",
+					"public": "20230917",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-42754",
+					"impact": "Moderate",
+					"cwe": "CWE-476",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-42755",
+					"public": "20230925",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-42755",
+					"impact": "Moderate",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-45863",
+					"public": "20230111",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-45863",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2023-51779",
+					"public": "20231225",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-51779",
+					"impact": "Moderate",
+					"cwe": "CWE-362->CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2023-51780",
+					"public": "20240110",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-51780",
+					"impact": "Moderate",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2023-52340",
+					"public": "20240122",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-52340",
+					"impact": "Moderate",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-52434",
+					"public": "20240220",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-52434",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:A/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:H"
+				},
+				{
+					"text": "CVE-2023-52448",
+					"public": "20240222",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-52448",
+					"impact": "Low",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-52489",
+					"public": "20240229",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-52489",
+					"impact": "Moderate",
+					"cwe": "CWE-362",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-52574",
+					"public": "20240302",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-52574",
+					"impact": "Moderate",
+					"cwe": "CWE-476",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-52580",
+					"public": "20240302",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-52580",
+					"impact": "Moderate",
+					"cwe": "CWE-131",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-52581",
+					"public": "20240302",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-52581",
+					"impact": "Moderate",
+					"cwe": "CWE-401",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2023-52620",
+					"public": "20240321",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-52620",
+					"impact": "Low",
+					"cwe": "CWE-99",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2023-6121",
+					"public": "20231106",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-6121",
+					"impact": "Low",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+				},
+				{
+					"text": "CVE-2023-6176",
+					"public": "20230912",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-6176",
+					"impact": "Low",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-6622",
+					"public": "20231208",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-6622",
+					"impact": "Moderate",
+					"cwe": "CWE-476",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-6915",
+					"public": "20240115",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-6915",
+					"impact": "Moderate",
+					"cwe": "CWE-476",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-6932",
+					"public": "20231219",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-6932",
+					"impact": "Moderate",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2024-0841",
+					"public": "20240123",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-0841",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:H"
+				},
+				{
+					"text": "CVE-2024-25742",
+					"public": "20240405",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-25742",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+				},
+				{
+					"text": "CVE-2024-25743",
+					"public": "20240405",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-25743",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+				},
+				{
+					"text": "CVE-2024-26602",
+					"public": "20240224",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-26602",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2024-26609",
+					"public": "20240229",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-26609",
+					"impact": "Moderate",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2024-26671",
+					"public": "20240402",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-26671",
+					"impact": "Moderate",
+					"cwe": "CWE-362",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803480",
+												"comment": "kernel-rt is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803481",
+												"comment": "kernel-rt is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242950001",
+										"comment": "kernel-rt is earlier than 0:4.18.0-553.rt7.342.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803482",
+												"comment": "kernel-rt-core is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803483",
+												"comment": "kernel-rt-core is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242950003",
+										"comment": "kernel-rt-core is earlier than 0:4.18.0-553.rt7.342.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803484",
+												"comment": "kernel-rt-debug is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803485",
+												"comment": "kernel-rt-debug is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242950005",
+										"comment": "kernel-rt-debug is earlier than 0:4.18.0-553.rt7.342.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803486",
+												"comment": "kernel-rt-debug-core is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803487",
+												"comment": "kernel-rt-debug-core is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242950007",
+										"comment": "kernel-rt-debug-core is earlier than 0:4.18.0-553.rt7.342.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803488",
+												"comment": "kernel-rt-debug-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803489",
+												"comment": "kernel-rt-debug-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242950009",
+										"comment": "kernel-rt-debug-devel is earlier than 0:4.18.0-553.rt7.342.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803490",
+												"comment": "kernel-rt-debug-kvm is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803491",
+												"comment": "kernel-rt-debug-kvm is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242950011",
+										"comment": "kernel-rt-debug-kvm is earlier than 0:4.18.0-553.rt7.342.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803492",
+												"comment": "kernel-rt-debug-modules is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803493",
+												"comment": "kernel-rt-debug-modules is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242950013",
+										"comment": "kernel-rt-debug-modules is earlier than 0:4.18.0-553.rt7.342.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803494",
+												"comment": "kernel-rt-debug-modules-extra is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803495",
+												"comment": "kernel-rt-debug-modules-extra is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242950015",
+										"comment": "kernel-rt-debug-modules-extra is earlier than 0:4.18.0-553.rt7.342.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803496",
+												"comment": "kernel-rt-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803497",
+												"comment": "kernel-rt-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242950017",
+										"comment": "kernel-rt-devel is earlier than 0:4.18.0-553.rt7.342.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803498",
+												"comment": "kernel-rt-kvm is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803499",
+												"comment": "kernel-rt-kvm is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242950019",
+										"comment": "kernel-rt-kvm is earlier than 0:4.18.0-553.rt7.342.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803500",
+												"comment": "kernel-rt-modules is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803501",
+												"comment": "kernel-rt-modules is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242950021",
+										"comment": "kernel-rt-modules is earlier than 0:4.18.0-553.rt7.342.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803502",
+												"comment": "kernel-rt-modules-extra is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803503",
+												"comment": "kernel-rt-modules-extra is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242950023",
+										"comment": "kernel-rt-modules-extra is earlier than 0:4.18.0-553.rt7.342.el8_10"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

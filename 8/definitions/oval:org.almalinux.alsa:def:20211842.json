@@ -85,27 +85,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807050",
+												"comment": "raptor2 is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807051",
+												"comment": "raptor2 is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20211842001",
 										"comment": "raptor2 is earlier than 0:2.0.15-16.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20211842002",
-										"comment": "raptor2 is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807052",
+												"comment": "raptor2-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807053",
+												"comment": "raptor2-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20211842003",
 										"comment": "raptor2-devel is earlier than 0:2.0.15-16.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20211842004",
-										"comment": "raptor2-devel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

@@ -90,27 +90,49 @@
 										"criterias": [
 											{
 												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alea:tst:2020034803750",
+																"comment": "nodejs-nodemon is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alea:tst:2020034803751",
+																"comment": "nodejs-nodemon is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
 												"criterions": [
 													{
 														"test_ref": "oval:org.almalinux.alsa:tst:20226449009",
 														"comment": "nodejs-nodemon is earlier than 0:2.0.19-2.module_el8.6.0+3261+490666b3"
-													},
-													{
-														"test_ref": "oval:org.almalinux.alea:tst:20200330008",
-														"comment": "nodejs-nodemon is signed with AlmaLinux OS 8 key"
 													}
 												]
 											},
 											{
 												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alea:tst:2020034803752",
+																"comment": "nodejs-packaging is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alea:tst:2020034803753",
+																"comment": "nodejs-packaging is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
 												"criterions": [
 													{
 														"test_ref": "oval:org.almalinux.alsa:tst:20215171011",
 														"comment": "nodejs-packaging is earlier than 0:25-1.module_el8.5.0+2605+45d748af"
-													},
-													{
-														"test_ref": "oval:org.almalinux.alea:tst:20200330010",
-														"comment": "nodejs-packaging is signed with AlmaLinux OS 8 key"
 													}
 												]
 											}

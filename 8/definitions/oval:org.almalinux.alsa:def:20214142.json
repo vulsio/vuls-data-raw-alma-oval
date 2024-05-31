@@ -85,27 +85,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803420",
+												"comment": "pcs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803421",
+												"comment": "pcs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20214142001",
 										"comment": "pcs is earlier than 0:0.10.10-4.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20202462002",
-										"comment": "pcs is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803422",
+												"comment": "pcs-snmp is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803423",
+												"comment": "pcs-snmp is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20214142003",
 										"comment": "pcs-snmp is earlier than 0:0.10.10-4.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20202462004",
-										"comment": "pcs-snmp is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

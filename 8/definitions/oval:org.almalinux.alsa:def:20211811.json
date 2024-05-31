@@ -136,27 +136,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805488",
+												"comment": "libvncserver is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805489",
+												"comment": "libvncserver is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20211811001",
 										"comment": "libvncserver is earlier than 0:0.9.11-17.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20200920002",
-										"comment": "libvncserver is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805490",
+												"comment": "libvncserver-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805491",
+												"comment": "libvncserver-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20211811003",
 										"comment": "libvncserver-devel is earlier than 0:0.9.11-17.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20200920004",
-										"comment": "libvncserver-devel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

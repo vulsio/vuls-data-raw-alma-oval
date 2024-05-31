@@ -66,27 +66,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807436",
+												"comment": "libgcrypt is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807437",
+												"comment": "libgcrypt is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20225311001",
 										"comment": "libgcrypt is earlier than 0:1.8.5-7.el8_6"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204482002",
-										"comment": "libgcrypt is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807438",
+												"comment": "libgcrypt-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807439",
+												"comment": "libgcrypt-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20225311003",
 										"comment": "libgcrypt-devel is earlier than 0:1.8.5-7.el8_6"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204482004",
-										"comment": "libgcrypt-devel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

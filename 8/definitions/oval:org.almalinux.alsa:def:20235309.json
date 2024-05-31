@@ -77,27 +77,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807306",
+												"comment": "libwebp is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807307",
+												"comment": "libwebp is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20235309001",
 										"comment": "libwebp is earlier than 0:1.0.0-8.el8_8.1"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20212354002",
-										"comment": "libwebp is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807308",
+												"comment": "libwebp-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807309",
+												"comment": "libwebp-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20235309003",
 										"comment": "libwebp-devel is earlier than 0:1.0.0-8.el8_8.1"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20212354004",
-										"comment": "libwebp-devel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

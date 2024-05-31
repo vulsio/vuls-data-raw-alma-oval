@@ -67,27 +67,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034803882",
+												"comment": "libtirpc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034803883",
+												"comment": "libtirpc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alba:tst:20222065001",
 										"comment": "libtirpc is earlier than 0:1.1.4-6.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alba:tst:20222065002",
-										"comment": "libtirpc is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034803884",
+												"comment": "libtirpc-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034803885",
+												"comment": "libtirpc-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alba:tst:20222065003",
 										"comment": "libtirpc-devel is earlier than 0:1.1.4-6.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alba:tst:20222065004",
-										"comment": "libtirpc-devel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

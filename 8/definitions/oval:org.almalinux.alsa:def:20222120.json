@@ -69,27 +69,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805146",
+												"comment": "zsh is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805147",
+												"comment": "zsh is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20222120001",
 										"comment": "zsh is earlier than 0:5.5.1-9.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20200903002",
-										"comment": "zsh is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805148",
+												"comment": "zsh-html is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805149",
+												"comment": "zsh-html is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20222120003",
 										"comment": "zsh-html is earlier than 0:5.5.1-9.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20200903004",
-										"comment": "zsh-html is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

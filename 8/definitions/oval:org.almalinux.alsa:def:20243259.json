@@ -1,0 +1,389 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20243259",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:3259: go-toolset:rhel8 security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2024:3259",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-3259.html"
+			},
+			{
+				"ref_id": "CVE-2023-45288",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-45288"
+			},
+			{
+				"ref_id": "CVE-2023-45289",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-45289"
+			},
+			{
+				"ref_id": "CVE-2023-45290",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-45290"
+			},
+			{
+				"ref_id": "CVE-2024-24783",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-24783"
+			},
+			{
+				"ref_id": "CVE-2024-24784",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-24784"
+			},
+			{
+				"ref_id": "CVE-2024-24785",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-24785"
+			},
+			{
+				"ref_id": "ALSA-2024:3259",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-3259.html"
+			}
+		],
+		"Description": "Go Toolset provides the Go programming language tools and libraries. Go is alternatively known as golang. \n\nSecurity Fix(es):\n\n* golang: net/http, x/net/http2: unlimited number of CONTINUATION frames causes DoS (CVE-2023-45288)\n* golang: net/http/cookiejar: incorrect forwarding of sensitive headers and cookies on HTTP redirect (CVE-2023-45289)\n* golang: net/http: memory exhaustion in Request.ParseMultipartForm (CVE-2023-45290)\n* golang: crypto/x509: Verify panics on certificates with an unknown public key algorithm (CVE-2024-24783)\n* golang: net/mail: comments in display names are incorrectly handled (CVE-2024-24784)\n* golang: html/template: errors returned from MarshalJSON methods may break template escaping (CVE-2024-24785)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-05-22"
+			},
+			"updated": {
+				"date": "2024-05-22"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2268017",
+					"id": "2268017"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2268018",
+					"id": "2268018"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2268019",
+					"id": "2268019"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2268021",
+					"id": "2268021"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2268022",
+					"id": "2268022"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2268273",
+					"id": "2268273"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-45288",
+					"public": "20240403",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-45288",
+					"impact": "Important",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-45289",
+					"public": "20240305",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-45289",
+					"impact": "Moderate",
+					"cwe": "CWE-200",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+				},
+				{
+					"text": "CVE-2023-45290",
+					"public": "20240305",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-45290",
+					"impact": "Moderate",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2024-24783",
+					"public": "20240305",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-24783",
+					"impact": "Moderate",
+					"cwe": "CWE-20->CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N"
+				},
+				{
+					"text": "CVE-2024-24784",
+					"public": "20240305",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-24784",
+					"impact": "Moderate",
+					"cwe": "CWE-115",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N"
+				},
+				{
+					"text": "CVE-2024-24785",
+					"public": "20240305",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-24785",
+					"impact": "Moderate",
+					"cwe": "CWE-74",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterias": [
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034809310",
+																"comment": "delve is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034809311",
+																"comment": "delve is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20243259001",
+														"comment": "delve is earlier than 0:1.21.2-3.module_el8.10.0+3760+4dd778f9"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034809312",
+																"comment": "go-toolset is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034809313",
+																"comment": "go-toolset is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20243259003",
+														"comment": "go-toolset is earlier than 0:1.21.9-1.module_el8.10.0+3840+edaca3c3"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034809314",
+																"comment": "golang is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034809315",
+																"comment": "golang is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20243259005",
+														"comment": "golang is earlier than 0:1.21.9-1.module_el8.10.0+3840+edaca3c3"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034809316",
+																"comment": "golang-bin is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034809317",
+																"comment": "golang-bin is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20243259007",
+														"comment": "golang-bin is earlier than 0:1.21.9-1.module_el8.10.0+3840+edaca3c3"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034809318",
+																"comment": "golang-docs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034809319",
+																"comment": "golang-docs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20243259009",
+														"comment": "golang-docs is earlier than 0:1.21.9-1.module_el8.10.0+3840+edaca3c3"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034809320",
+																"comment": "golang-misc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034809321",
+																"comment": "golang-misc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20243259011",
+														"comment": "golang-misc is earlier than 0:1.21.9-1.module_el8.10.0+3840+edaca3c3"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034809322",
+																"comment": "golang-src is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034809323",
+																"comment": "golang-src is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20243259013",
+														"comment": "golang-src is earlier than 0:1.21.9-1.module_el8.10.0+3840+edaca3c3"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034809324",
+																"comment": "golang-tests is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034809325",
+																"comment": "golang-tests is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20243259015",
+														"comment": "golang-tests is earlier than 0:1.21.9-1.module_el8.10.0+3840+edaca3c3"
+													}
+												]
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alba:tst:20236928017",
+										"comment": "Module go-toolset:rhel8 is enabled"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

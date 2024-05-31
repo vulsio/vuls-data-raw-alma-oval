@@ -67,27 +67,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805604",
+												"comment": "gstreamer1-plugins-good is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805605",
+												"comment": "gstreamer1-plugins-good is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20227618001",
 										"comment": "gstreamer1-plugins-good is earlier than 0:1.16.1-3.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20201631016",
-										"comment": "gstreamer1-plugins-good is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805606",
+												"comment": "gstreamer1-plugins-good-gtk is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805607",
+												"comment": "gstreamer1-plugins-good-gtk is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20227618003",
 										"comment": "gstreamer1-plugins-good-gtk is earlier than 0:1.16.1-3.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20201631018",
-										"comment": "gstreamer1-plugins-good-gtk is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

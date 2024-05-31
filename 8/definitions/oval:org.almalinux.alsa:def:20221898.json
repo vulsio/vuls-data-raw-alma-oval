@@ -67,27 +67,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807820",
+												"comment": "fapolicyd is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807821",
+												"comment": "fapolicyd is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20221898001",
 										"comment": "fapolicyd is earlier than 0:1.1-6.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20221898002",
-										"comment": "fapolicyd is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807822",
+												"comment": "fapolicyd-selinux is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807823",
+												"comment": "fapolicyd-selinux is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20221898003",
 										"comment": "fapolicyd-selinux is earlier than 0:1.1-6.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20221898004",
-										"comment": "fapolicyd-selinux is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

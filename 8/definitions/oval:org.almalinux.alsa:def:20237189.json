@@ -77,27 +77,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805836",
+												"comment": "fwupd is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805837",
+												"comment": "fwupd is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20237189001",
 										"comment": "fwupd is earlier than 0:1.7.8-2.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20203216010",
-										"comment": "fwupd is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808882",
+												"comment": "fwupd-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808883",
+												"comment": "fwupd-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20237189003",
 										"comment": "fwupd-devel is earlier than 0:1.7.8-2.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20237189004",
-										"comment": "fwupd-devel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

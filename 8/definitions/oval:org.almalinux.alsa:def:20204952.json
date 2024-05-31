@@ -67,27 +67,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034806164",
+												"comment": "freetype is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034806165",
+												"comment": "freetype is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20204952001",
 										"comment": "freetype is earlier than 0:2.9.1-4.el8_3.1"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204952002",
-										"comment": "freetype is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034806166",
+												"comment": "freetype-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034806167",
+												"comment": "freetype-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20204952003",
 										"comment": "freetype-devel is earlier than 0:2.9.1-4.el8_3.1"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204952004",
-										"comment": "freetype-devel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

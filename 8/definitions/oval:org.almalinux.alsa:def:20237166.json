@@ -77,27 +77,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808876",
+												"comment": "tpm2-tss is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808877",
+												"comment": "tpm2-tss is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20237166001",
 										"comment": "tpm2-tss is earlier than 0:2.3.2-5.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20237166002",
-										"comment": "tpm2-tss is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808878",
+												"comment": "tpm2-tss-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808879",
+												"comment": "tpm2-tss-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20237166003",
 										"comment": "tpm2-tss-devel is earlier than 0:2.3.2-5.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20237166004",
-										"comment": "tpm2-tss-devel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

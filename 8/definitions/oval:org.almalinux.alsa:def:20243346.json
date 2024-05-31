@@ -1,0 +1,159 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20243346",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:3346: git-lfs security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2024:3346",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-3346.html"
+			},
+			{
+				"ref_id": "CVE-2023-45288",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-45288"
+			},
+			{
+				"ref_id": "CVE-2023-45289",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-45289"
+			},
+			{
+				"ref_id": "CVE-2023-45290",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-45290"
+			},
+			{
+				"ref_id": "CVE-2024-24783",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-24783"
+			},
+			{
+				"ref_id": "ALSA-2024:3346",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-3346.html"
+			}
+		],
+		"Description": "Git Large File Storage (LFS) replaces large files such as audio samples, videos, datasets, and graphics with text pointers inside Git, while storing the file contents on a remote server.\n\nSecurity Fix(es):\n\n* golang: net/http, x/net/http2: unlimited number of CONTINUATION frames causes DoS (CVE-2023-45288)\n* golang: net/http/cookiejar: incorrect forwarding of sensitive headers and cookies on HTTP redirect (CVE-2023-45289)\n* golang: net/http: memory exhaustion in Request.ParseMultipartForm (CVE-2023-45290)\n* golang: crypto/x509: Verify panics on certificates with an unknown public key algorithm (CVE-2024-24783)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-05-23"
+			},
+			"updated": {
+				"date": "2024-05-23"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2268017",
+					"id": "2268017"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2268018",
+					"id": "2268018"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2268019",
+					"id": "2268019"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2268273",
+					"id": "2268273"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-45288",
+					"public": "20240403",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-45288",
+					"impact": "Important",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-45289",
+					"public": "20240305",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-45289",
+					"impact": "Moderate",
+					"cwe": "CWE-200",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+				},
+				{
+					"text": "CVE-2023-45290",
+					"public": "20240305",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-45290",
+					"impact": "Moderate",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2024-24783",
+					"public": "20240305",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-24783",
+					"impact": "Moderate",
+					"cwe": "CWE-20->CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterions": [
+							{
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034803336",
+								"comment": "git-lfs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+							},
+							{
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034803337",
+								"comment": "git-lfs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20243346001",
+						"comment": "git-lfs is earlier than 0:3.4.1-2.el8_10"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

@@ -77,27 +77,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809088",
+												"comment": "libmaxminddb is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809089",
+												"comment": "libmaxminddb is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20240768001",
 										"comment": "libmaxminddb is earlier than 0:1.2.0-10.el8_9.1"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20240768002",
-										"comment": "libmaxminddb is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809090",
+												"comment": "libmaxminddb-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809091",
+												"comment": "libmaxminddb-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20240768003",
 										"comment": "libmaxminddb-devel is earlier than 0:1.2.0-10.el8_9.1"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20240768004",
-										"comment": "libmaxminddb-devel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

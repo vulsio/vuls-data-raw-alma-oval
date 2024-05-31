@@ -68,27 +68,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807122",
+												"comment": "gupnp is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807123",
+												"comment": "gupnp is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20212363001",
 										"comment": "gupnp is earlier than 0:1.0.6-2.el8_4"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20211789008",
-										"comment": "gupnp is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807124",
+												"comment": "gupnp-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807125",
+												"comment": "gupnp-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20212363003",
 										"comment": "gupnp-devel is earlier than 0:1.0.6-2.el8_4"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20211789010",
-										"comment": "gupnp-devel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

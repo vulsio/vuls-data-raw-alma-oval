@@ -77,27 +77,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807854",
+												"comment": "c-ares is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807855",
+												"comment": "c-ares is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20233584001",
 										"comment": "c-ares is earlier than 0:1.13.0-6.el8_8.2"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20222043002",
-										"comment": "c-ares is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807856",
+												"comment": "c-ares-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807857",
+												"comment": "c-ares-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20233584003",
 										"comment": "c-ares-devel is earlier than 0:1.13.0-6.el8_8.2"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20222043004",
-										"comment": "c-ares-devel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

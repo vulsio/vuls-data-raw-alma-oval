@@ -1,0 +1,212 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20242981",
+	"version": "641",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:2981: frr security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2024:2981",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-2981.html"
+			},
+			{
+				"ref_id": "CVE-2023-31490",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-31490"
+			},
+			{
+				"ref_id": "CVE-2023-41358",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-41358"
+			},
+			{
+				"ref_id": "CVE-2023-41909",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-41909"
+			},
+			{
+				"ref_id": "CVE-2023-46752",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-46752"
+			},
+			{
+				"ref_id": "CVE-2023-46753",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-46753"
+			},
+			{
+				"ref_id": "ALSA-2024:2981",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-2981.html"
+			}
+		],
+		"Description": "FRRouting is free software that manages TCP/IP based routing protocols. It supports BGP4, OSPFv2, OSPFv3, ISIS, RIP, RIPng, PIM, NHRP, PBR, EIGRP and BFD. \n\nSecurity Fix(es):\n\n* frr: missing length check in bgp_attr_psid_sub() can lead do DoS (CVE-2023-31490)\n* frr: processes invalid NLRIs if attribute length is zero (CVE-2023-41358)\n* frr: NULL pointer dereference in bgp_nlri_parse_flowspec() in bgpd/bgp_flowspec.c (CVE-2023-41909)\n* frr: mishandled malformed data leading to a crash (CVE-2023-46752)\n* frr: crafted BGP UPDATE message leading to a crash (CVE-2023-46753)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-05-22"
+			},
+			"updated": {
+				"date": "2024-05-22"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2235839",
+					"id": "2235839"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2237416",
+					"id": "2237416"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2238992",
+					"id": "2238992"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2246379",
+					"id": "2246379"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2246381",
+					"id": "2246381"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-31490",
+					"public": "20230324",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-31490",
+					"impact": "Moderate",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-41358",
+					"public": "20230829",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-41358",
+					"impact": "Moderate",
+					"cwe": "CWE-476",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-41909",
+					"public": "20230905",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-41909",
+					"impact": "Moderate",
+					"cwe": "CWE-476",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-46752",
+					"public": "20231026",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-46752",
+					"impact": "Moderate",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-46753",
+					"public": "20231026",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-46753",
+					"impact": "Moderate",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034804940",
+												"comment": "frr is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034804941",
+												"comment": "frr is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242981001",
+										"comment": "frr is earlier than 0:7.5.1-22.el8"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034804942",
+												"comment": "frr-selinux is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034804943",
+												"comment": "frr-selinux is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242981003",
+										"comment": "frr-selinux is earlier than 0:7.5.1-22.el8"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

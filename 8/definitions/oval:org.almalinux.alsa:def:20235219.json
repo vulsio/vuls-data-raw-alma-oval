@@ -77,27 +77,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034804940",
+												"comment": "frr is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034804941",
+												"comment": "frr is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20235219001",
 										"comment": "frr is earlier than 0:7.5.1-7.el8_8.2.alma.1"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204619002",
-										"comment": "frr is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034804942",
+												"comment": "frr-selinux is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034804943",
+												"comment": "frr-selinux is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20235219003",
 										"comment": "frr-selinux is earlier than 0:7.5.1-7.el8_8.2.alma.1"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20232801004",
-										"comment": "frr-selinux is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

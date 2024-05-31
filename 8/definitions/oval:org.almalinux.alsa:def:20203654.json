@@ -69,27 +69,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805796",
+												"comment": "libcroco is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805797",
+												"comment": "libcroco is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20203654001",
 										"comment": "libcroco is earlier than 0:0.6.12-4.el8_2.1"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20203654002",
-										"comment": "libcroco is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805798",
+												"comment": "libcroco-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805799",
+												"comment": "libcroco-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20203654003",
 										"comment": "libcroco-devel is earlier than 0:0.6.12-4.el8_2.1"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20203654004",
-										"comment": "libcroco-devel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

@@ -77,27 +77,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808114",
+												"comment": "yajl is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808115",
+												"comment": "yajl is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20237057001",
 										"comment": "yajl is earlier than 0:2.1.0-12.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20227524002",
-										"comment": "yajl is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808116",
+												"comment": "yajl-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808117",
+												"comment": "yajl-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20237057003",
 										"comment": "yajl-devel is earlier than 0:2.1.0-12.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20227524004",
-										"comment": "yajl-devel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

@@ -153,27 +153,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805188",
+												"comment": "wavpack is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805189",
+												"comment": "wavpack is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20201581001",
 										"comment": "wavpack is earlier than 0:5.1.0-15.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20201581002",
-										"comment": "wavpack is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805190",
+												"comment": "wavpack-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805191",
+												"comment": "wavpack-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20201581003",
 										"comment": "wavpack-devel is earlier than 0:5.1.0-15.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20201581004",
-										"comment": "wavpack-devel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

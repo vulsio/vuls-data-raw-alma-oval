@@ -77,27 +77,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808958",
+												"comment": "pixman is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808959",
+												"comment": "pixman is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20240131001",
 										"comment": "pixman is earlier than 0:0.38.4-3.el8_9"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20240131002",
-										"comment": "pixman is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808960",
+												"comment": "pixman-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808961",
+												"comment": "pixman-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20240131003",
 										"comment": "pixman-devel is earlier than 0:0.38.4-3.el8_9"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20240131004",
-										"comment": "pixman-devel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

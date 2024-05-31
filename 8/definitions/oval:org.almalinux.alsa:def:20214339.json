@@ -68,27 +68,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807346",
+												"comment": "grilo is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807347",
+												"comment": "grilo is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20214339001",
 										"comment": "grilo is earlier than 0:0.3.6-3.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20214339002",
-										"comment": "grilo is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807348",
+												"comment": "grilo-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807349",
+												"comment": "grilo-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20214339003",
 										"comment": "grilo-devel is earlier than 0:0.3.6-3.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20214339004",
-										"comment": "grilo-devel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

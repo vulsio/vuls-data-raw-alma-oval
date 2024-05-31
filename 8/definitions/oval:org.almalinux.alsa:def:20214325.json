@@ -68,27 +68,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807342",
+												"comment": "lasso is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807343",
+												"comment": "lasso is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20214325001",
 										"comment": "lasso is earlier than 0:2.6.0-12.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20214325002",
-										"comment": "lasso is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807344",
+												"comment": "lasso-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807345",
+												"comment": "lasso-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20214325003",
 										"comment": "lasso-devel is earlier than 0:2.6.0-12.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20214325004",
-										"comment": "lasso-devel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

@@ -67,27 +67,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034806152",
+												"comment": "prometheus-jmx-exporter is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034806153",
+												"comment": "prometheus-jmx-exporter is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20226820001",
 										"comment": "prometheus-jmx-exporter is earlier than 0:0.12.0-8.el8_6"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204807002",
-										"comment": "prometheus-jmx-exporter is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808206",
+												"comment": "prometheus-jmx-exporter-openjdk11 is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808207",
+												"comment": "prometheus-jmx-exporter-openjdk11 is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20226820003",
 										"comment": "prometheus-jmx-exporter-openjdk11 is earlier than 0:0.12.0-8.el8_6"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20226820004",
-										"comment": "prometheus-jmx-exporter-openjdk11 is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

@@ -77,27 +77,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808746",
+												"comment": "python3.11-pip is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808747",
+												"comment": "python3.11-pip is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20236914001",
 										"comment": "python3.11-pip is earlier than 0:22.3.1-4.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20236914002",
-										"comment": "python3.11-pip is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808748",
+												"comment": "python3.11-pip-wheel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808749",
+												"comment": "python3.11-pip-wheel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20236914003",
 										"comment": "python3.11-pip-wheel is earlier than 0:22.3.1-4.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20236914004",
-										"comment": "python3.11-pip-wheel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

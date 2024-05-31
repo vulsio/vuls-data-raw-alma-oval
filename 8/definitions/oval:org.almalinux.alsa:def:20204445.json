@@ -69,27 +69,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805838",
+												"comment": "librabbitmq is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805839",
+												"comment": "librabbitmq is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20204445001",
 										"comment": "librabbitmq is earlier than 0:0.9.0-2.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204445002",
-										"comment": "librabbitmq is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805840",
+												"comment": "librabbitmq-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805841",
+												"comment": "librabbitmq-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20204445003",
 										"comment": "librabbitmq-devel is earlier than 0:0.9.0-2.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204445004",
-										"comment": "librabbitmq-devel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

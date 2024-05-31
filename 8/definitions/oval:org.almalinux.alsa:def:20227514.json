@@ -101,27 +101,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034804512",
+												"comment": "fribidi is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034804513",
+												"comment": "fribidi is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20227514001",
 										"comment": "fribidi is earlier than 0:1.0.4-9.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20194361002",
-										"comment": "fribidi is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034804514",
+												"comment": "fribidi-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034804515",
+												"comment": "fribidi-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20227514003",
 										"comment": "fribidi-devel is earlier than 0:1.0.4-9.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20194361004",
-										"comment": "fribidi-devel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

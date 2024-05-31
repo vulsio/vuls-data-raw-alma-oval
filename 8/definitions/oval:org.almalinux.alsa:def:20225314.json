@@ -84,27 +84,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807902",
+												"comment": "expat is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807903",
+												"comment": "expat is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20225314001",
 										"comment": "expat is earlier than 0:2.2.5-8.el8_6.2"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204484002",
-										"comment": "expat is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807904",
+												"comment": "expat-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807905",
+												"comment": "expat-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20225314003",
 										"comment": "expat-devel is earlier than 0:2.2.5-8.el8_6.2"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204484004",
-										"comment": "expat-devel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

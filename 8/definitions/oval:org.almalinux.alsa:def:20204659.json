@@ -101,27 +101,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034806072",
+												"comment": "gd is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034806073",
+												"comment": "gd is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20204659001",
 										"comment": "gd is earlier than 0:2.2.5-7.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204659002",
-										"comment": "gd is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034806074",
+												"comment": "gd-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034806075",
+												"comment": "gd-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20204659003",
 										"comment": "gd-devel is earlier than 0:2.2.5-7.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204659004",
-										"comment": "gd-devel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

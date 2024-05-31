@@ -69,27 +69,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807350",
+												"comment": "binutils is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807351",
+												"comment": "binutils is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20214595001",
 										"comment": "binutils is earlier than 0:2.30-108.el8_5.1"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20201797002",
-										"comment": "binutils is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807352",
+												"comment": "binutils-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807353",
+												"comment": "binutils-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20214595003",
 										"comment": "binutils-devel is earlier than 0:2.30-108.el8_5.1"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20201797004",
-										"comment": "binutils-devel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

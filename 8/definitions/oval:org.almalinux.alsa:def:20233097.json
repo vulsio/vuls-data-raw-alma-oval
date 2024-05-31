@@ -139,14 +139,25 @@
 		"criterias": [
 			{
 				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterions": [
+							{
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034807830",
+								"comment": "gssntlmssp is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+							},
+							{
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034807831",
+								"comment": "gssntlmssp is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+							}
+						]
+					}
+				],
 				"criterions": [
 					{
 						"test_ref": "oval:org.almalinux.alsa:tst:20233097001",
 						"comment": "gssntlmssp is earlier than 0:1.2.0-1.el8_8"
-					},
-					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20233097002",
-						"comment": "gssntlmssp is signed with AlmaLinux OS 8 key"
 					},
 					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",

@@ -67,27 +67,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805912",
+												"comment": "gnupg2 is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805913",
+												"comment": "gnupg2 is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20226463001",
 										"comment": "gnupg2 is earlier than 0:2.2.20-3.el8_6"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204490002",
-										"comment": "gnupg2 is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805914",
+												"comment": "gnupg2-smime is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034805915",
+												"comment": "gnupg2-smime is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20226463003",
 										"comment": "gnupg2-smime is earlier than 0:2.2.20-3.el8_6"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204490004",
-										"comment": "gnupg2-smime is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

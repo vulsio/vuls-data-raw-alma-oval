@@ -67,27 +67,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alea:tst:2020034807816",
+												"comment": "libpq is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alea:tst:2020034807817",
+												"comment": "libpq is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20221891001",
 										"comment": "libpq is earlier than 0:13.5-1.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:20200343002",
-										"comment": "libpq is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alea:tst:2020034807818",
+												"comment": "libpq-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alea:tst:2020034807819",
+												"comment": "libpq-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20221891003",
 										"comment": "libpq-devel is earlier than 0:13.5-1.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:20200343004",
-										"comment": "libpq-devel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}

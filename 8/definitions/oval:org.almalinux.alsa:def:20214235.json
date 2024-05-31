@@ -119,27 +119,49 @@
 						"criterias": [
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807310",
+												"comment": "jasper-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807311",
+												"comment": "jasper-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20214235001",
 										"comment": "jasper-devel is earlier than 0:2.0.14-5.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20214235002",
-										"comment": "jasper-devel is signed with AlmaLinux OS 8 key"
 									}
 								]
 							},
 							{
 								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807312",
+												"comment": "jasper-libs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807313",
+												"comment": "jasper-libs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
 								"criterions": [
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20214235003",
 										"comment": "jasper-libs is earlier than 0:2.0.14-5.el8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20214235004",
-										"comment": "jasper-libs is signed with AlmaLinux OS 8 key"
 									}
 								]
 							}
