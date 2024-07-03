@@ -1,0 +1,125 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20244267",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:4267: fontforge security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2024:4267",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-4267.html"
+			},
+			{
+				"ref_id": "CVE-2024-25081",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-25081"
+			},
+			{
+				"ref_id": "CVE-2024-25082",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-25082"
+			},
+			{
+				"ref_id": "ALSA-2024:4267",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-4267.html"
+			}
+		],
+		"Description": "FontForge is a font editor for outline and bitmap fonts. It supports a range of font formats, including PostScript (ASCII and binary Type 1, some Type 3 and Type 0), TrueType, OpenType (Type2) and CID-keyed fonts. \n\nSecurity Fix(es):\n\n* fontforge: command injection via crafted filenames (CVE-2024-25081)\n* fontforge: command injection via crafted archives or compressed files (CVE-2024-25082)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-07-02"
+			},
+			"updated": {
+				"date": "2024-07-02"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2266180",
+					"id": "2266180"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2266181",
+					"id": "2266181"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2024-25081",
+					"public": "20240226",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-25081",
+					"impact": "Moderate",
+					"cwe": "CWE-78",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:L/I:L/A:L"
+				},
+				{
+					"text": "CVE-2024-25082",
+					"public": "20240226",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-25082",
+					"impact": "Moderate",
+					"cwe": "CWE-78",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:L/I:L/A:L"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterions": [
+							{
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034806158",
+								"comment": "fontforge is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+							},
+							{
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034806159",
+								"comment": "fontforge is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20244267001",
+						"comment": "fontforge is earlier than 0:20200314-6.el8_10"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

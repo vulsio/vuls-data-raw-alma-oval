@@ -1,0 +1,108 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20244245",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:4245: python3 security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2024:4245",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-4245.html"
+			},
+			{
+				"ref_id": "CVE-2024-36039",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-36039"
+			},
+			{
+				"ref_id": "ALSA-2024:4245",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-4245.html"
+			}
+		],
+		"Description": "Python is an interpreted, interactive, object-oriented programming language, which includes modules, classes, exceptions, very high level dynamic data types and dynamic typing. Python supports interfaces to many system calls and libraries, as well as to various windowing systems.\n\nSecurity Fix(es):\n\n* python-pymysql: SQL injection if used with untrusted JSON input (CVE-2024-36039)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-07-02"
+			},
+			"updated": {
+				"date": "2024-07-02"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2282821",
+					"id": "2282821"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2024-36039",
+					"public": "20240521",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-36039",
+					"impact": "Moderate",
+					"cwe": "CWE-89",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterions": [
+							{
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034810056",
+								"comment": "python3.12-PyMySQL is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+							},
+							{
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034810057",
+								"comment": "python3.12-PyMySQL is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20244245001",
+						"comment": "python3.12-PyMySQL is earlier than 0:1.1.0-3.el8_10"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}
