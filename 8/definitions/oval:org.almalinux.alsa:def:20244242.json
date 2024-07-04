@@ -1,0 +1,4224 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20244242",
+	"version": "647",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:4242: libreoffice security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2024:4242",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-4242.html"
+			},
+			{
+				"ref_id": "CVE-2024-3044",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-3044"
+			},
+			{
+				"ref_id": "ALSA-2024:4242",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-4242.html"
+			}
+		],
+		"Description": "LibreOffice is an open source, community-developed office productivity suite. It includes key desktop applications, such as a word processor, a spreadsheet, a presentation manager, a formula editor, and a drawing program. LibreOffice replaces OpenOffice and provides a similar but enhanced and extended office suite.\n\nSecurity Fix(es):\n\n* libreoffice: create a document which without prompt will execute scripts built-into LibreOffice on clicking a graphic (CVE-2024-3044)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-07-02"
+			},
+			"updated": {
+				"date": "2024-07-02"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2280542",
+					"id": "2280542"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2024-3044",
+					"public": "20240514",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-3044",
+					"impact": "Moderate",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802842",
+												"comment": "autocorr-af is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802843",
+												"comment": "autocorr-af is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242001",
+										"comment": "autocorr-af is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802844",
+												"comment": "autocorr-bg is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802845",
+												"comment": "autocorr-bg is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242003",
+										"comment": "autocorr-bg is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802846",
+												"comment": "autocorr-ca is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802847",
+												"comment": "autocorr-ca is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242005",
+										"comment": "autocorr-ca is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802848",
+												"comment": "autocorr-cs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802849",
+												"comment": "autocorr-cs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242007",
+										"comment": "autocorr-cs is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802850",
+												"comment": "autocorr-da is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802851",
+												"comment": "autocorr-da is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242009",
+										"comment": "autocorr-da is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802852",
+												"comment": "autocorr-de is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802853",
+												"comment": "autocorr-de is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242011",
+										"comment": "autocorr-de is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802854",
+												"comment": "autocorr-en is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802855",
+												"comment": "autocorr-en is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242013",
+										"comment": "autocorr-en is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802856",
+												"comment": "autocorr-es is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802857",
+												"comment": "autocorr-es is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242015",
+										"comment": "autocorr-es is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802858",
+												"comment": "autocorr-fa is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802859",
+												"comment": "autocorr-fa is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242017",
+										"comment": "autocorr-fa is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802860",
+												"comment": "autocorr-fi is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802861",
+												"comment": "autocorr-fi is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242019",
+										"comment": "autocorr-fi is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802862",
+												"comment": "autocorr-fr is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802863",
+												"comment": "autocorr-fr is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242021",
+										"comment": "autocorr-fr is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802864",
+												"comment": "autocorr-ga is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802865",
+												"comment": "autocorr-ga is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242023",
+										"comment": "autocorr-ga is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802866",
+												"comment": "autocorr-hr is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802867",
+												"comment": "autocorr-hr is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242025",
+										"comment": "autocorr-hr is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802868",
+												"comment": "autocorr-hu is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802869",
+												"comment": "autocorr-hu is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242027",
+										"comment": "autocorr-hu is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802870",
+												"comment": "autocorr-is is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802871",
+												"comment": "autocorr-is is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242029",
+										"comment": "autocorr-is is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802872",
+												"comment": "autocorr-it is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802873",
+												"comment": "autocorr-it is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242031",
+										"comment": "autocorr-it is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802874",
+												"comment": "autocorr-ja is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802875",
+												"comment": "autocorr-ja is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242033",
+										"comment": "autocorr-ja is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802876",
+												"comment": "autocorr-ko is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802877",
+												"comment": "autocorr-ko is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242035",
+										"comment": "autocorr-ko is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802878",
+												"comment": "autocorr-lb is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802879",
+												"comment": "autocorr-lb is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242037",
+										"comment": "autocorr-lb is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802880",
+												"comment": "autocorr-lt is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802881",
+												"comment": "autocorr-lt is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242039",
+										"comment": "autocorr-lt is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802882",
+												"comment": "autocorr-mn is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802883",
+												"comment": "autocorr-mn is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242041",
+										"comment": "autocorr-mn is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802884",
+												"comment": "autocorr-nl is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802885",
+												"comment": "autocorr-nl is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242043",
+										"comment": "autocorr-nl is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802886",
+												"comment": "autocorr-pl is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802887",
+												"comment": "autocorr-pl is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242045",
+										"comment": "autocorr-pl is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802888",
+												"comment": "autocorr-pt is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802889",
+												"comment": "autocorr-pt is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242047",
+										"comment": "autocorr-pt is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802890",
+												"comment": "autocorr-ro is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802891",
+												"comment": "autocorr-ro is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242049",
+										"comment": "autocorr-ro is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802892",
+												"comment": "autocorr-ru is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802893",
+												"comment": "autocorr-ru is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242051",
+										"comment": "autocorr-ru is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802894",
+												"comment": "autocorr-sk is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802895",
+												"comment": "autocorr-sk is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242053",
+										"comment": "autocorr-sk is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802896",
+												"comment": "autocorr-sl is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802897",
+												"comment": "autocorr-sl is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242055",
+										"comment": "autocorr-sl is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802898",
+												"comment": "autocorr-sr is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802899",
+												"comment": "autocorr-sr is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242057",
+										"comment": "autocorr-sr is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802900",
+												"comment": "autocorr-sv is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802901",
+												"comment": "autocorr-sv is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242059",
+										"comment": "autocorr-sv is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802902",
+												"comment": "autocorr-tr is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802903",
+												"comment": "autocorr-tr is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242061",
+										"comment": "autocorr-tr is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802904",
+												"comment": "autocorr-vi is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802905",
+												"comment": "autocorr-vi is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242063",
+										"comment": "autocorr-vi is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802906",
+												"comment": "autocorr-zh is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802907",
+												"comment": "autocorr-zh is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242065",
+										"comment": "autocorr-zh is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808754",
+												"comment": "libreoffice is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808755",
+												"comment": "libreoffice is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242067",
+										"comment": "libreoffice is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802908",
+												"comment": "libreoffice-base is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802909",
+												"comment": "libreoffice-base is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242069",
+										"comment": "libreoffice-base is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802910",
+												"comment": "libreoffice-calc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802911",
+												"comment": "libreoffice-calc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242071",
+										"comment": "libreoffice-calc is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802912",
+												"comment": "libreoffice-core is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802913",
+												"comment": "libreoffice-core is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242073",
+										"comment": "libreoffice-core is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802914",
+												"comment": "libreoffice-data is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802915",
+												"comment": "libreoffice-data is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242075",
+										"comment": "libreoffice-data is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802916",
+												"comment": "libreoffice-draw is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802917",
+												"comment": "libreoffice-draw is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242077",
+										"comment": "libreoffice-draw is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802918",
+												"comment": "libreoffice-emailmerge is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802919",
+												"comment": "libreoffice-emailmerge is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242079",
+										"comment": "libreoffice-emailmerge is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802920",
+												"comment": "libreoffice-filters is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802921",
+												"comment": "libreoffice-filters is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242081",
+										"comment": "libreoffice-filters is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802922",
+												"comment": "libreoffice-gdb-debug-support is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802923",
+												"comment": "libreoffice-gdb-debug-support is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242083",
+										"comment": "libreoffice-gdb-debug-support is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802924",
+												"comment": "libreoffice-graphicfilter is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802925",
+												"comment": "libreoffice-graphicfilter is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242085",
+										"comment": "libreoffice-graphicfilter is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802926",
+												"comment": "libreoffice-gtk3 is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802927",
+												"comment": "libreoffice-gtk3 is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242087",
+										"comment": "libreoffice-gtk3 is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802928",
+												"comment": "libreoffice-help-ar is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802929",
+												"comment": "libreoffice-help-ar is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242089",
+										"comment": "libreoffice-help-ar is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802930",
+												"comment": "libreoffice-help-bg is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802931",
+												"comment": "libreoffice-help-bg is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242091",
+										"comment": "libreoffice-help-bg is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802932",
+												"comment": "libreoffice-help-bn is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802933",
+												"comment": "libreoffice-help-bn is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242093",
+										"comment": "libreoffice-help-bn is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802934",
+												"comment": "libreoffice-help-ca is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802935",
+												"comment": "libreoffice-help-ca is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242095",
+										"comment": "libreoffice-help-ca is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802936",
+												"comment": "libreoffice-help-cs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802937",
+												"comment": "libreoffice-help-cs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242097",
+										"comment": "libreoffice-help-cs is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802938",
+												"comment": "libreoffice-help-da is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802939",
+												"comment": "libreoffice-help-da is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242099",
+										"comment": "libreoffice-help-da is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802940",
+												"comment": "libreoffice-help-de is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802941",
+												"comment": "libreoffice-help-de is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242101",
+										"comment": "libreoffice-help-de is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802942",
+												"comment": "libreoffice-help-dz is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802943",
+												"comment": "libreoffice-help-dz is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242103",
+										"comment": "libreoffice-help-dz is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802944",
+												"comment": "libreoffice-help-el is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802945",
+												"comment": "libreoffice-help-el is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242105",
+										"comment": "libreoffice-help-el is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802946",
+												"comment": "libreoffice-help-en is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802947",
+												"comment": "libreoffice-help-en is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242107",
+										"comment": "libreoffice-help-en is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802948",
+												"comment": "libreoffice-help-es is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802949",
+												"comment": "libreoffice-help-es is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242109",
+										"comment": "libreoffice-help-es is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802950",
+												"comment": "libreoffice-help-et is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802951",
+												"comment": "libreoffice-help-et is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242111",
+										"comment": "libreoffice-help-et is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802952",
+												"comment": "libreoffice-help-eu is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802953",
+												"comment": "libreoffice-help-eu is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242113",
+										"comment": "libreoffice-help-eu is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802954",
+												"comment": "libreoffice-help-fi is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802955",
+												"comment": "libreoffice-help-fi is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242115",
+										"comment": "libreoffice-help-fi is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802956",
+												"comment": "libreoffice-help-fr is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802957",
+												"comment": "libreoffice-help-fr is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242117",
+										"comment": "libreoffice-help-fr is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802958",
+												"comment": "libreoffice-help-gl is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802959",
+												"comment": "libreoffice-help-gl is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242119",
+										"comment": "libreoffice-help-gl is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802960",
+												"comment": "libreoffice-help-gu is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802961",
+												"comment": "libreoffice-help-gu is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242121",
+										"comment": "libreoffice-help-gu is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802962",
+												"comment": "libreoffice-help-he is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802963",
+												"comment": "libreoffice-help-he is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242123",
+										"comment": "libreoffice-help-he is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802964",
+												"comment": "libreoffice-help-hi is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802965",
+												"comment": "libreoffice-help-hi is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242125",
+										"comment": "libreoffice-help-hi is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802966",
+												"comment": "libreoffice-help-hr is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802967",
+												"comment": "libreoffice-help-hr is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242127",
+										"comment": "libreoffice-help-hr is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802968",
+												"comment": "libreoffice-help-hu is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802969",
+												"comment": "libreoffice-help-hu is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242129",
+										"comment": "libreoffice-help-hu is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802970",
+												"comment": "libreoffice-help-id is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802971",
+												"comment": "libreoffice-help-id is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242131",
+										"comment": "libreoffice-help-id is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802972",
+												"comment": "libreoffice-help-it is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802973",
+												"comment": "libreoffice-help-it is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242133",
+										"comment": "libreoffice-help-it is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802974",
+												"comment": "libreoffice-help-ja is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802975",
+												"comment": "libreoffice-help-ja is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242135",
+										"comment": "libreoffice-help-ja is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802976",
+												"comment": "libreoffice-help-ko is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802977",
+												"comment": "libreoffice-help-ko is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242137",
+										"comment": "libreoffice-help-ko is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802978",
+												"comment": "libreoffice-help-lt is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802979",
+												"comment": "libreoffice-help-lt is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242139",
+										"comment": "libreoffice-help-lt is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802980",
+												"comment": "libreoffice-help-lv is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802981",
+												"comment": "libreoffice-help-lv is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242141",
+										"comment": "libreoffice-help-lv is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802982",
+												"comment": "libreoffice-help-nb is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802983",
+												"comment": "libreoffice-help-nb is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242143",
+										"comment": "libreoffice-help-nb is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802984",
+												"comment": "libreoffice-help-nl is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802985",
+												"comment": "libreoffice-help-nl is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242145",
+										"comment": "libreoffice-help-nl is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802986",
+												"comment": "libreoffice-help-nn is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802987",
+												"comment": "libreoffice-help-nn is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242147",
+										"comment": "libreoffice-help-nn is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802988",
+												"comment": "libreoffice-help-pl is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802989",
+												"comment": "libreoffice-help-pl is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242149",
+										"comment": "libreoffice-help-pl is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802990",
+												"comment": "libreoffice-help-pt-BR is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802991",
+												"comment": "libreoffice-help-pt-BR is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242151",
+										"comment": "libreoffice-help-pt-BR is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802992",
+												"comment": "libreoffice-help-pt-PT is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802993",
+												"comment": "libreoffice-help-pt-PT is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242153",
+										"comment": "libreoffice-help-pt-PT is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802994",
+												"comment": "libreoffice-help-ro is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802995",
+												"comment": "libreoffice-help-ro is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242155",
+										"comment": "libreoffice-help-ro is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802996",
+												"comment": "libreoffice-help-ru is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802997",
+												"comment": "libreoffice-help-ru is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242157",
+										"comment": "libreoffice-help-ru is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802998",
+												"comment": "libreoffice-help-si is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034802999",
+												"comment": "libreoffice-help-si is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242159",
+										"comment": "libreoffice-help-si is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803000",
+												"comment": "libreoffice-help-sk is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803001",
+												"comment": "libreoffice-help-sk is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242161",
+										"comment": "libreoffice-help-sk is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803002",
+												"comment": "libreoffice-help-sl is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803003",
+												"comment": "libreoffice-help-sl is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242163",
+										"comment": "libreoffice-help-sl is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803004",
+												"comment": "libreoffice-help-sv is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803005",
+												"comment": "libreoffice-help-sv is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242165",
+										"comment": "libreoffice-help-sv is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803006",
+												"comment": "libreoffice-help-ta is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803007",
+												"comment": "libreoffice-help-ta is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242167",
+										"comment": "libreoffice-help-ta is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803008",
+												"comment": "libreoffice-help-tr is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803009",
+												"comment": "libreoffice-help-tr is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242169",
+										"comment": "libreoffice-help-tr is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803010",
+												"comment": "libreoffice-help-uk is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803011",
+												"comment": "libreoffice-help-uk is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242171",
+										"comment": "libreoffice-help-uk is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803012",
+												"comment": "libreoffice-help-zh-Hans is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803013",
+												"comment": "libreoffice-help-zh-Hans is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242173",
+										"comment": "libreoffice-help-zh-Hans is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803014",
+												"comment": "libreoffice-help-zh-Hant is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803015",
+												"comment": "libreoffice-help-zh-Hant is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242175",
+										"comment": "libreoffice-help-zh-Hant is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803016",
+												"comment": "libreoffice-impress is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803017",
+												"comment": "libreoffice-impress is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242177",
+										"comment": "libreoffice-impress is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803018",
+												"comment": "libreoffice-langpack-af is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803019",
+												"comment": "libreoffice-langpack-af is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242179",
+										"comment": "libreoffice-langpack-af is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803020",
+												"comment": "libreoffice-langpack-ar is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803021",
+												"comment": "libreoffice-langpack-ar is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242181",
+										"comment": "libreoffice-langpack-ar is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803022",
+												"comment": "libreoffice-langpack-as is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803023",
+												"comment": "libreoffice-langpack-as is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242183",
+										"comment": "libreoffice-langpack-as is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803024",
+												"comment": "libreoffice-langpack-bg is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803025",
+												"comment": "libreoffice-langpack-bg is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242185",
+										"comment": "libreoffice-langpack-bg is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803026",
+												"comment": "libreoffice-langpack-bn is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803027",
+												"comment": "libreoffice-langpack-bn is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242187",
+										"comment": "libreoffice-langpack-bn is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803028",
+												"comment": "libreoffice-langpack-br is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803029",
+												"comment": "libreoffice-langpack-br is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242189",
+										"comment": "libreoffice-langpack-br is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803030",
+												"comment": "libreoffice-langpack-ca is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803031",
+												"comment": "libreoffice-langpack-ca is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242191",
+										"comment": "libreoffice-langpack-ca is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803032",
+												"comment": "libreoffice-langpack-cs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803033",
+												"comment": "libreoffice-langpack-cs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242193",
+										"comment": "libreoffice-langpack-cs is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803034",
+												"comment": "libreoffice-langpack-cy is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803035",
+												"comment": "libreoffice-langpack-cy is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242195",
+										"comment": "libreoffice-langpack-cy is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803036",
+												"comment": "libreoffice-langpack-da is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803037",
+												"comment": "libreoffice-langpack-da is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242197",
+										"comment": "libreoffice-langpack-da is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803038",
+												"comment": "libreoffice-langpack-de is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803039",
+												"comment": "libreoffice-langpack-de is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242199",
+										"comment": "libreoffice-langpack-de is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803040",
+												"comment": "libreoffice-langpack-dz is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803041",
+												"comment": "libreoffice-langpack-dz is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242201",
+										"comment": "libreoffice-langpack-dz is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803042",
+												"comment": "libreoffice-langpack-el is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803043",
+												"comment": "libreoffice-langpack-el is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242203",
+										"comment": "libreoffice-langpack-el is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803044",
+												"comment": "libreoffice-langpack-en is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803045",
+												"comment": "libreoffice-langpack-en is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242205",
+										"comment": "libreoffice-langpack-en is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803046",
+												"comment": "libreoffice-langpack-es is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803047",
+												"comment": "libreoffice-langpack-es is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242207",
+										"comment": "libreoffice-langpack-es is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803048",
+												"comment": "libreoffice-langpack-et is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803049",
+												"comment": "libreoffice-langpack-et is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242209",
+										"comment": "libreoffice-langpack-et is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803050",
+												"comment": "libreoffice-langpack-eu is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803051",
+												"comment": "libreoffice-langpack-eu is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242211",
+										"comment": "libreoffice-langpack-eu is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803052",
+												"comment": "libreoffice-langpack-fa is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803053",
+												"comment": "libreoffice-langpack-fa is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242213",
+										"comment": "libreoffice-langpack-fa is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803054",
+												"comment": "libreoffice-langpack-fi is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803055",
+												"comment": "libreoffice-langpack-fi is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242215",
+										"comment": "libreoffice-langpack-fi is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803056",
+												"comment": "libreoffice-langpack-fr is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803057",
+												"comment": "libreoffice-langpack-fr is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242217",
+										"comment": "libreoffice-langpack-fr is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803058",
+												"comment": "libreoffice-langpack-ga is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803059",
+												"comment": "libreoffice-langpack-ga is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242219",
+										"comment": "libreoffice-langpack-ga is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803060",
+												"comment": "libreoffice-langpack-gl is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803061",
+												"comment": "libreoffice-langpack-gl is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242221",
+										"comment": "libreoffice-langpack-gl is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803062",
+												"comment": "libreoffice-langpack-gu is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803063",
+												"comment": "libreoffice-langpack-gu is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242223",
+										"comment": "libreoffice-langpack-gu is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803064",
+												"comment": "libreoffice-langpack-he is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803065",
+												"comment": "libreoffice-langpack-he is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242225",
+										"comment": "libreoffice-langpack-he is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803066",
+												"comment": "libreoffice-langpack-hi is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803067",
+												"comment": "libreoffice-langpack-hi is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242227",
+										"comment": "libreoffice-langpack-hi is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803068",
+												"comment": "libreoffice-langpack-hr is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803069",
+												"comment": "libreoffice-langpack-hr is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242229",
+										"comment": "libreoffice-langpack-hr is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803070",
+												"comment": "libreoffice-langpack-hu is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803071",
+												"comment": "libreoffice-langpack-hu is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242231",
+										"comment": "libreoffice-langpack-hu is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803072",
+												"comment": "libreoffice-langpack-id is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803073",
+												"comment": "libreoffice-langpack-id is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242233",
+										"comment": "libreoffice-langpack-id is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803074",
+												"comment": "libreoffice-langpack-it is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803075",
+												"comment": "libreoffice-langpack-it is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242235",
+										"comment": "libreoffice-langpack-it is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803076",
+												"comment": "libreoffice-langpack-ja is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803077",
+												"comment": "libreoffice-langpack-ja is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242237",
+										"comment": "libreoffice-langpack-ja is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803078",
+												"comment": "libreoffice-langpack-kk is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803079",
+												"comment": "libreoffice-langpack-kk is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242239",
+										"comment": "libreoffice-langpack-kk is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803080",
+												"comment": "libreoffice-langpack-kn is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803081",
+												"comment": "libreoffice-langpack-kn is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242241",
+										"comment": "libreoffice-langpack-kn is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803082",
+												"comment": "libreoffice-langpack-ko is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803083",
+												"comment": "libreoffice-langpack-ko is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242243",
+										"comment": "libreoffice-langpack-ko is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803084",
+												"comment": "libreoffice-langpack-lt is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803085",
+												"comment": "libreoffice-langpack-lt is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242245",
+										"comment": "libreoffice-langpack-lt is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803086",
+												"comment": "libreoffice-langpack-lv is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803087",
+												"comment": "libreoffice-langpack-lv is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242247",
+										"comment": "libreoffice-langpack-lv is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803088",
+												"comment": "libreoffice-langpack-mai is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803089",
+												"comment": "libreoffice-langpack-mai is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242249",
+										"comment": "libreoffice-langpack-mai is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803090",
+												"comment": "libreoffice-langpack-ml is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803091",
+												"comment": "libreoffice-langpack-ml is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242251",
+										"comment": "libreoffice-langpack-ml is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803092",
+												"comment": "libreoffice-langpack-mr is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803093",
+												"comment": "libreoffice-langpack-mr is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242253",
+										"comment": "libreoffice-langpack-mr is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803094",
+												"comment": "libreoffice-langpack-nb is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803095",
+												"comment": "libreoffice-langpack-nb is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242255",
+										"comment": "libreoffice-langpack-nb is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803096",
+												"comment": "libreoffice-langpack-nl is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803097",
+												"comment": "libreoffice-langpack-nl is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242257",
+										"comment": "libreoffice-langpack-nl is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803098",
+												"comment": "libreoffice-langpack-nn is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803099",
+												"comment": "libreoffice-langpack-nn is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242259",
+										"comment": "libreoffice-langpack-nn is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803100",
+												"comment": "libreoffice-langpack-nr is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803101",
+												"comment": "libreoffice-langpack-nr is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242261",
+										"comment": "libreoffice-langpack-nr is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803102",
+												"comment": "libreoffice-langpack-nso is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803103",
+												"comment": "libreoffice-langpack-nso is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242263",
+										"comment": "libreoffice-langpack-nso is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803104",
+												"comment": "libreoffice-langpack-or is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803105",
+												"comment": "libreoffice-langpack-or is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242265",
+										"comment": "libreoffice-langpack-or is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803106",
+												"comment": "libreoffice-langpack-pa is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803107",
+												"comment": "libreoffice-langpack-pa is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242267",
+										"comment": "libreoffice-langpack-pa is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803108",
+												"comment": "libreoffice-langpack-pl is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803109",
+												"comment": "libreoffice-langpack-pl is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242269",
+										"comment": "libreoffice-langpack-pl is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803110",
+												"comment": "libreoffice-langpack-pt-BR is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803111",
+												"comment": "libreoffice-langpack-pt-BR is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242271",
+										"comment": "libreoffice-langpack-pt-BR is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803112",
+												"comment": "libreoffice-langpack-pt-PT is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803113",
+												"comment": "libreoffice-langpack-pt-PT is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242273",
+										"comment": "libreoffice-langpack-pt-PT is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803114",
+												"comment": "libreoffice-langpack-ro is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803115",
+												"comment": "libreoffice-langpack-ro is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242275",
+										"comment": "libreoffice-langpack-ro is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803116",
+												"comment": "libreoffice-langpack-ru is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803117",
+												"comment": "libreoffice-langpack-ru is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242277",
+										"comment": "libreoffice-langpack-ru is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803118",
+												"comment": "libreoffice-langpack-si is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803119",
+												"comment": "libreoffice-langpack-si is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242279",
+										"comment": "libreoffice-langpack-si is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803120",
+												"comment": "libreoffice-langpack-sk is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803121",
+												"comment": "libreoffice-langpack-sk is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242281",
+										"comment": "libreoffice-langpack-sk is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803122",
+												"comment": "libreoffice-langpack-sl is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803123",
+												"comment": "libreoffice-langpack-sl is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242283",
+										"comment": "libreoffice-langpack-sl is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803124",
+												"comment": "libreoffice-langpack-sr is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803125",
+												"comment": "libreoffice-langpack-sr is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242285",
+										"comment": "libreoffice-langpack-sr is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803126",
+												"comment": "libreoffice-langpack-ss is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803127",
+												"comment": "libreoffice-langpack-ss is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242287",
+										"comment": "libreoffice-langpack-ss is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803128",
+												"comment": "libreoffice-langpack-st is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803129",
+												"comment": "libreoffice-langpack-st is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242289",
+										"comment": "libreoffice-langpack-st is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803130",
+												"comment": "libreoffice-langpack-sv is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803131",
+												"comment": "libreoffice-langpack-sv is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242291",
+										"comment": "libreoffice-langpack-sv is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803132",
+												"comment": "libreoffice-langpack-ta is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803133",
+												"comment": "libreoffice-langpack-ta is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242293",
+										"comment": "libreoffice-langpack-ta is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803134",
+												"comment": "libreoffice-langpack-te is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803135",
+												"comment": "libreoffice-langpack-te is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242295",
+										"comment": "libreoffice-langpack-te is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803136",
+												"comment": "libreoffice-langpack-th is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803137",
+												"comment": "libreoffice-langpack-th is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242297",
+										"comment": "libreoffice-langpack-th is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803138",
+												"comment": "libreoffice-langpack-tn is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803139",
+												"comment": "libreoffice-langpack-tn is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242299",
+										"comment": "libreoffice-langpack-tn is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803140",
+												"comment": "libreoffice-langpack-tr is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803141",
+												"comment": "libreoffice-langpack-tr is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242301",
+										"comment": "libreoffice-langpack-tr is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803142",
+												"comment": "libreoffice-langpack-ts is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803143",
+												"comment": "libreoffice-langpack-ts is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242303",
+										"comment": "libreoffice-langpack-ts is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803144",
+												"comment": "libreoffice-langpack-uk is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803145",
+												"comment": "libreoffice-langpack-uk is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242305",
+										"comment": "libreoffice-langpack-uk is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803146",
+												"comment": "libreoffice-langpack-ve is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803147",
+												"comment": "libreoffice-langpack-ve is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242307",
+										"comment": "libreoffice-langpack-ve is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803148",
+												"comment": "libreoffice-langpack-xh is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803149",
+												"comment": "libreoffice-langpack-xh is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242309",
+										"comment": "libreoffice-langpack-xh is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803150",
+												"comment": "libreoffice-langpack-zh-Hans is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803151",
+												"comment": "libreoffice-langpack-zh-Hans is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242311",
+										"comment": "libreoffice-langpack-zh-Hans is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803152",
+												"comment": "libreoffice-langpack-zh-Hant is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803153",
+												"comment": "libreoffice-langpack-zh-Hant is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242313",
+										"comment": "libreoffice-langpack-zh-Hant is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803154",
+												"comment": "libreoffice-langpack-zu is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803155",
+												"comment": "libreoffice-langpack-zu is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242315",
+										"comment": "libreoffice-langpack-zu is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803156",
+												"comment": "libreoffice-math is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803157",
+												"comment": "libreoffice-math is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242317",
+										"comment": "libreoffice-math is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803158",
+												"comment": "libreoffice-ogltrans is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803159",
+												"comment": "libreoffice-ogltrans is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242319",
+										"comment": "libreoffice-ogltrans is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803160",
+												"comment": "libreoffice-opensymbol-fonts is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803161",
+												"comment": "libreoffice-opensymbol-fonts is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242321",
+										"comment": "libreoffice-opensymbol-fonts is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803162",
+												"comment": "libreoffice-pdfimport is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803163",
+												"comment": "libreoffice-pdfimport is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242323",
+										"comment": "libreoffice-pdfimport is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803164",
+												"comment": "libreoffice-pyuno is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803165",
+												"comment": "libreoffice-pyuno is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242325",
+										"comment": "libreoffice-pyuno is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803166",
+												"comment": "libreoffice-sdk is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803167",
+												"comment": "libreoffice-sdk is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242327",
+										"comment": "libreoffice-sdk is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803168",
+												"comment": "libreoffice-sdk-doc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803169",
+												"comment": "libreoffice-sdk-doc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242329",
+										"comment": "libreoffice-sdk-doc is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803170",
+												"comment": "libreoffice-ure is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803171",
+												"comment": "libreoffice-ure is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242331",
+										"comment": "libreoffice-ure is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803172",
+												"comment": "libreoffice-ure-common is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803173",
+												"comment": "libreoffice-ure-common is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242333",
+										"comment": "libreoffice-ure-common is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803174",
+												"comment": "libreoffice-wiki-publisher is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803175",
+												"comment": "libreoffice-wiki-publisher is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242335",
+										"comment": "libreoffice-wiki-publisher is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803176",
+												"comment": "libreoffice-writer is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803177",
+												"comment": "libreoffice-writer is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242337",
+										"comment": "libreoffice-writer is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803178",
+												"comment": "libreoffice-x11 is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803179",
+												"comment": "libreoffice-x11 is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242339",
+										"comment": "libreoffice-x11 is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803180",
+												"comment": "libreoffice-xsltfilter is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803181",
+												"comment": "libreoffice-xsltfilter is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242341",
+										"comment": "libreoffice-xsltfilter is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803182",
+												"comment": "libreofficekit is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034803183",
+												"comment": "libreofficekit is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244242343",
+										"comment": "libreofficekit is earlier than 1:6.4.7.2-17.el8_10.alma.1"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}
