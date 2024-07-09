@@ -1,0 +1,97 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20244379",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:4379: gvisor-tap-vsock security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2024:4379",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-4379.html"
+			},
+			{
+				"ref_id": "CVE-2024-1394",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-1394"
+			},
+			{
+				"ref_id": "ALSA-2024:4379",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-4379.html"
+			}
+		],
+		"Description": "A replacement for libslirp and VPNKit, written in pure Go. It is based on the network stack of gVisor and is used to provide networking for podman-machine virtual machines. Compared to libslirp, gvisor-tap-vsock brings a configurable DNS server and dynamic port forwarding.\n\nSecurity Fix(es):\n\n* golang-fips/openssl: Memory leaks in code encrypting and decrypting RSA payloads (CVE-2024-1394)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-07-08"
+			},
+			"updated": {
+				"date": "2024-07-08"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2262921",
+					"id": "2262921"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2024-1394",
+					"public": "20240320",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-1394",
+					"impact": "Important",
+					"cwe": "CWE-401",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20223893007",
+						"comment": "AlmaLinux 9 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20244379001",
+						"comment": "gvisor-tap-vsock is earlier than 6:0.7.3-4.el9_4.alma.1"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20243830002",
+						"comment": "gvisor-tap-vsock is signed with AlmaLinux OS 9 key"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20223893008",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}
