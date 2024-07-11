@@ -1,36 +1,36 @@
 {
-	"id": "oval:org.almalinux.alsa:def:20244351",
-	"version": "637",
+	"id": "oval:org.almalinux.alsa:def:20244420",
+	"version": "634",
 	"class": "patch",
 	"metadata": {
-		"Title": "ALSA-2024:4351: virt:rhel and virt-devel:rhel security and bug fix update (Low)",
+		"Title": "ALSA-2024:4420: virt:rhel and virt-devel:rhel security update (Important)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2024:4351",
+				"ref_id": "ALSA-2024:4420",
 				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-4351.html"
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-4420.html"
 			},
 			{
-				"ref_id": "CVE-2024-4418",
+				"ref_id": "CVE-2024-4467",
 				"source": "CVE",
-				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-4418"
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-4467"
 			},
 			{
-				"ref_id": "ALSA-2024:4351",
+				"ref_id": "ALSA-2024:4420",
 				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-4351.html"
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-4420.html"
 			}
 		],
-		"Description": "Kernel-based Virtual Machine (KVM) offers a full virtualization solution for Linux on numerous hardware platforms. The virt:rhel module contains packages which provide user-space components used to run virtual machines using KVM. The packages also provide APIs for managing and interacting with the virtualized systems.\n\nSecurity Fix:\n\n* virt:rhel/libvirt: stack use-after-free in virNetClientIOEventLoop (CVE-2024-4418) \n\nBug fix:\n\n* virsh destroy with --graceful destroyed a paused guest (qemu process paused by SIGSTOP) (JIRA:AlmaLinux-36064)",
+		"Description": "Kernel-based Virtual Machine (KVM) offers a full virtualization solution for\nLinux on numerous hardware platforms. The virt:rhel module contains packages\nwhich provide user-space components used to run virtual machines using KVM. The packages also provide APIs for managing and interacting with the virtualized systems.\n\nSecurity Fix(es):\n\n* qemu-kvm: QEMU: 'qemu-img info' leads to host file read/write (CVE-2024-4467)\n\nFor more details about the security issue(s), including the impact, a CVSS\nscore, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
 		"advisory": {
 			"from": "packager@almalinux.org",
-			"Severity": "Low",
+			"Severity": "Important",
 			"Rights": "Copyright 2024 AlmaLinux OS",
 			"issued": {
-				"date": "2024-07-08"
+				"date": "2024-07-09"
 			},
 			"updated": {
-				"date": "2024-07-08"
+				"date": "2024-07-09"
 			},
 			"affected_cpe_list": {
 				"Cpe": [
@@ -50,18 +50,18 @@
 			},
 			"bugzilla": [
 				{
-					"href": "https://bugzilla.redhat.com/2278616",
-					"id": "2278616"
+					"href": "https://bugzilla.redhat.com/2278875",
+					"id": "2278875"
 				}
 			],
 			"cve": [
 				{
-					"text": "CVE-2024-4418",
-					"public": "20240502",
-					"href": "https://access.redhat.com/security/cve/CVE-2024-4418",
-					"impact": "Moderate",
-					"cwe": "CWE-362->CWE-416",
-					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+					"text": "CVE-2024-4467",
+					"public": "20240702",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-4467",
+					"impact": "Important",
+					"cwe": "CWE-20->(CWE-200|CWE-400)",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
 				}
 			]
 		}
@@ -2260,8 +2260,8 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20242962181",
-														"comment": "qemu-guest-agent is earlier than 15:6.2.0-49.module_el8.10.0+3839+c94ce74b"
+														"test_ref": "oval:org.almalinux.alsa:tst:20244420181",
+														"comment": "qemu-guest-agent is earlier than 15:6.2.0-50.module_el8.10.0+3869+b8959270"
 													}
 												]
 											},
@@ -2284,8 +2284,8 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20242962183",
-														"comment": "qemu-img is earlier than 15:6.2.0-49.module_el8.10.0+3839+c94ce74b"
+														"test_ref": "oval:org.almalinux.alsa:tst:20244420183",
+														"comment": "qemu-img is earlier than 15:6.2.0-50.module_el8.10.0+3869+b8959270"
 													}
 												]
 											},
@@ -2308,8 +2308,8 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20242962185",
-														"comment": "qemu-kvm is earlier than 15:6.2.0-49.module_el8.10.0+3839+c94ce74b"
+														"test_ref": "oval:org.almalinux.alsa:tst:20244420185",
+														"comment": "qemu-kvm is earlier than 15:6.2.0-50.module_el8.10.0+3869+b8959270"
 													}
 												]
 											},
@@ -2332,8 +2332,8 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20242962187",
-														"comment": "qemu-kvm-block-curl is earlier than 15:6.2.0-49.module_el8.10.0+3839+c94ce74b"
+														"test_ref": "oval:org.almalinux.alsa:tst:20244420187",
+														"comment": "qemu-kvm-block-curl is earlier than 15:6.2.0-50.module_el8.10.0+3869+b8959270"
 													}
 												]
 											},
@@ -2356,8 +2356,8 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20242962189",
-														"comment": "qemu-kvm-block-gluster is earlier than 15:6.2.0-49.module_el8.10.0+3839+c94ce74b"
+														"test_ref": "oval:org.almalinux.alsa:tst:20244420189",
+														"comment": "qemu-kvm-block-gluster is earlier than 15:6.2.0-50.module_el8.10.0+3869+b8959270"
 													}
 												]
 											},
@@ -2380,8 +2380,8 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20242962191",
-														"comment": "qemu-kvm-block-iscsi is earlier than 15:6.2.0-49.module_el8.10.0+3839+c94ce74b"
+														"test_ref": "oval:org.almalinux.alsa:tst:20244420191",
+														"comment": "qemu-kvm-block-iscsi is earlier than 15:6.2.0-50.module_el8.10.0+3869+b8959270"
 													}
 												]
 											},
@@ -2404,8 +2404,8 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20242962193",
-														"comment": "qemu-kvm-block-rbd is earlier than 15:6.2.0-49.module_el8.10.0+3839+c94ce74b"
+														"test_ref": "oval:org.almalinux.alsa:tst:20244420193",
+														"comment": "qemu-kvm-block-rbd is earlier than 15:6.2.0-50.module_el8.10.0+3869+b8959270"
 													}
 												]
 											},
@@ -2428,8 +2428,8 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20242962195",
-														"comment": "qemu-kvm-block-ssh is earlier than 15:6.2.0-49.module_el8.10.0+3839+c94ce74b"
+														"test_ref": "oval:org.almalinux.alsa:tst:20244420195",
+														"comment": "qemu-kvm-block-ssh is earlier than 15:6.2.0-50.module_el8.10.0+3869+b8959270"
 													}
 												]
 											},
@@ -2452,8 +2452,8 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20242962197",
-														"comment": "qemu-kvm-common is earlier than 15:6.2.0-49.module_el8.10.0+3839+c94ce74b"
+														"test_ref": "oval:org.almalinux.alsa:tst:20244420197",
+														"comment": "qemu-kvm-common is earlier than 15:6.2.0-50.module_el8.10.0+3869+b8959270"
 													}
 												]
 											},
@@ -2476,8 +2476,8 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20242962199",
-														"comment": "qemu-kvm-core is earlier than 15:6.2.0-49.module_el8.10.0+3839+c94ce74b"
+														"test_ref": "oval:org.almalinux.alsa:tst:20244420199",
+														"comment": "qemu-kvm-core is earlier than 15:6.2.0-50.module_el8.10.0+3869+b8959270"
 													}
 												]
 											},
@@ -2500,8 +2500,8 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20242962201",
-														"comment": "qemu-kvm-docs is earlier than 15:6.2.0-49.module_el8.10.0+3839+c94ce74b"
+														"test_ref": "oval:org.almalinux.alsa:tst:20244420201",
+														"comment": "qemu-kvm-docs is earlier than 15:6.2.0-50.module_el8.10.0+3869+b8959270"
 													}
 												]
 											},
@@ -2524,8 +2524,8 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20242962203",
-														"comment": "qemu-kvm-hw-usbredir is earlier than 15:6.2.0-49.module_el8.10.0+3839+c94ce74b"
+														"test_ref": "oval:org.almalinux.alsa:tst:20244420203",
+														"comment": "qemu-kvm-hw-usbredir is earlier than 15:6.2.0-50.module_el8.10.0+3869+b8959270"
 													}
 												]
 											},
@@ -2548,8 +2548,8 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20242962205",
-														"comment": "qemu-kvm-ui-opengl is earlier than 15:6.2.0-49.module_el8.10.0+3839+c94ce74b"
+														"test_ref": "oval:org.almalinux.alsa:tst:20244420205",
+														"comment": "qemu-kvm-ui-opengl is earlier than 15:6.2.0-50.module_el8.10.0+3869+b8959270"
 													}
 												]
 											},
@@ -2572,8 +2572,8 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20242962207",
-														"comment": "qemu-kvm-ui-spice is earlier than 15:6.2.0-49.module_el8.10.0+3839+c94ce74b"
+														"test_ref": "oval:org.almalinux.alsa:tst:20244420207",
+														"comment": "qemu-kvm-ui-spice is earlier than 15:6.2.0-50.module_el8.10.0+3869+b8959270"
 													}
 												]
 											},
@@ -4196,8 +4196,8 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20242962301",
-														"comment": "qemu-kvm-tests is earlier than 15:6.2.0-49.module_el8.10.0+3839+c94ce74b"
+														"test_ref": "oval:org.almalinux.alsa:tst:20244420301",
+														"comment": "qemu-kvm-tests is earlier than 15:6.2.0-50.module_el8.10.0+3869+b8959270"
 													}
 												]
 											},
