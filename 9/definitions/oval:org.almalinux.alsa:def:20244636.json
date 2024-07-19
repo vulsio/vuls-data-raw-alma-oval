@@ -1,0 +1,97 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20244636",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:4636: libndp security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2024:4636",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-4636.html"
+			},
+			{
+				"ref_id": "CVE-2024-5564",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-5564"
+			},
+			{
+				"ref_id": "ALSA-2024:4636",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-4636.html"
+			}
+		],
+		"Description": "Libndp is a library (used by NetworkManager) that provides a wrapper for the IPv6 Neighbor Discovery Protocol. It also provides a tool named ndptool for sending and receiving NDP messages.\n\nSecurity Fix(es):\n\n* libndp: buffer overflow in route information length field (CVE-2024-5564)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-07-18"
+			},
+			"updated": {
+				"date": "2024-07-18"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2284122",
+					"id": "2284122"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2024-5564",
+					"public": "20240531",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-5564",
+					"impact": "Important",
+					"cwe": "CWE-120",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20223893007",
+						"comment": "AlmaLinux 9 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20244636001",
+						"comment": "libndp is earlier than 0:1.8-6.el9_4.alma.1"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20244636002",
+						"comment": "libndp is signed with AlmaLinux OS 9 key"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20223893008",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}
