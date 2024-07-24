@@ -1,36 +1,56 @@
 {
-	"id": "oval:org.almalinux.alsa:def:20244197",
+	"id": "oval:org.almalinux.alsa:def:20244720",
 	"version": "636",
 	"class": "patch",
 	"metadata": {
-		"Title": "ALSA-2024:4197: httpd:2.4/httpd security update (Moderate)",
+		"Title": "ALSA-2024:4720: httpd:2.4 security update (Important)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2024:4197",
+				"ref_id": "ALSA-2024:4720",
 				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-4197.html"
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-4720.html"
 			},
 			{
-				"ref_id": "CVE-2023-38709",
+				"ref_id": "CVE-2024-38473",
 				"source": "CVE",
-				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-38709"
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-38473"
 			},
 			{
-				"ref_id": "ALSA-2024:4197",
+				"ref_id": "CVE-2024-38474",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-38474"
+			},
+			{
+				"ref_id": "CVE-2024-38475",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-38475"
+			},
+			{
+				"ref_id": "CVE-2024-38477",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-38477"
+			},
+			{
+				"ref_id": "CVE-2024-39573",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-39573"
+			},
+			{
+				"ref_id": "ALSA-2024:4720",
 				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-4197.html"
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-4720.html"
 			}
 		],
-		"Description": "The httpd packages provide the Apache HTTP Server, a powerful, efficient, and extensible web server.\n\nSecurity Fix(es):\n\n* httpd:2.4: httpd: HTTP response splitting (CVE-2023-38709)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"Description": "The httpd packages provide the Apache HTTP Server, a powerful, efficient, and extensible web server.\n\nSecurity Fix(es):\n\n* httpd: Encoding problem in mod_proxy (CVE-2024-38473)\n* httpd: Substitution encoding issue in mod_rewrite (CVE-2024-38474)\n* httpd: Improper escaping of output in mod_rewrite (CVE-2024-38475)\n* httpd: NULL pointer dereference in mod_proxy (CVE-2024-38477)\n* httpd: Potential SSRF in mod_rewrite (CVE-2024-39573)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
 		"advisory": {
 			"from": "packager@almalinux.org",
-			"Severity": "Moderate",
+			"Severity": "Important",
 			"Rights": "Copyright 2024 AlmaLinux OS",
 			"issued": {
-				"date": "2024-07-01"
+				"date": "2024-07-23"
 			},
 			"updated": {
-				"date": "2024-07-01"
+				"date": "2024-07-23"
 			},
 			"affected_cpe_list": {
 				"Cpe": [
@@ -50,18 +70,66 @@
 			},
 			"bugzilla": [
 				{
-					"href": "https://bugzilla.redhat.com/2273491",
-					"id": "2273491"
+					"href": "https://bugzilla.redhat.com/2295012",
+					"id": "2295012"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2295013",
+					"id": "2295013"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2295014",
+					"id": "2295014"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2295016",
+					"id": "2295016"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2295022",
+					"id": "2295022"
 				}
 			],
 			"cve": [
 				{
-					"text": "CVE-2023-38709",
-					"public": "20240404",
-					"href": "https://access.redhat.com/security/cve/CVE-2023-38709",
+					"text": "CVE-2024-38473",
+					"public": "20240701",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-38473",
 					"impact": "Moderate",
-					"cwe": "CWE-20->CWE-113",
-					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:H/A:N"
+					"cwe": "CWE-116",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+				},
+				{
+					"text": "CVE-2024-38474",
+					"public": "20240701",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-38474",
+					"impact": "Important",
+					"cwe": "CWE-116",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2024-38475",
+					"public": "20240701",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-38475",
+					"impact": "Important",
+					"cwe": "CWE-116",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+				},
+				{
+					"text": "CVE-2024-38477",
+					"public": "20240701",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-38477",
+					"impact": "Important",
+					"cwe": "CWE-476",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2024-39573",
+					"public": "20240701",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-39573",
+					"impact": "Moderate",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N"
 				}
 			]
 		}
@@ -100,8 +168,8 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20244197001",
-														"comment": "httpd is earlier than 0:2.4.37-65.module_el8.10.0+3860+a6e26e50"
+														"test_ref": "oval:org.almalinux.alsa:tst:20244720001",
+														"comment": "httpd is earlier than 0:2.4.37-65.module_el8.10.0+3872+9b8ab21e.1"
 													}
 												]
 											},
@@ -124,8 +192,8 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20244197003",
-														"comment": "httpd-devel is earlier than 0:2.4.37-65.module_el8.10.0+3860+a6e26e50"
+														"test_ref": "oval:org.almalinux.alsa:tst:20244720003",
+														"comment": "httpd-devel is earlier than 0:2.4.37-65.module_el8.10.0+3872+9b8ab21e.1"
 													}
 												]
 											},
@@ -148,8 +216,8 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20244197005",
-														"comment": "httpd-filesystem is earlier than 0:2.4.37-65.module_el8.10.0+3860+a6e26e50"
+														"test_ref": "oval:org.almalinux.alsa:tst:20244720005",
+														"comment": "httpd-filesystem is earlier than 0:2.4.37-65.module_el8.10.0+3872+9b8ab21e.1"
 													}
 												]
 											},
@@ -172,8 +240,8 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20244197007",
-														"comment": "httpd-manual is earlier than 0:2.4.37-65.module_el8.10.0+3860+a6e26e50"
+														"test_ref": "oval:org.almalinux.alsa:tst:20244720007",
+														"comment": "httpd-manual is earlier than 0:2.4.37-65.module_el8.10.0+3872+9b8ab21e.1"
 													}
 												]
 											},
@@ -196,8 +264,8 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20244197009",
-														"comment": "httpd-tools is earlier than 0:2.4.37-65.module_el8.10.0+3860+a6e26e50"
+														"test_ref": "oval:org.almalinux.alsa:tst:20244720009",
+														"comment": "httpd-tools is earlier than 0:2.4.37-65.module_el8.10.0+3872+9b8ab21e.1"
 													}
 												]
 											},
@@ -244,8 +312,8 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20244197013",
-														"comment": "mod_ldap is earlier than 0:2.4.37-65.module_el8.10.0+3860+a6e26e50"
+														"test_ref": "oval:org.almalinux.alsa:tst:20244720013",
+														"comment": "mod_ldap is earlier than 0:2.4.37-65.module_el8.10.0+3872+9b8ab21e.1"
 													}
 												]
 											},
@@ -292,8 +360,8 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20244197017",
-														"comment": "mod_proxy_html is earlier than 1:2.4.37-65.module_el8.10.0+3860+a6e26e50"
+														"test_ref": "oval:org.almalinux.alsa:tst:20244720017",
+														"comment": "mod_proxy_html is earlier than 1:2.4.37-65.module_el8.10.0+3872+9b8ab21e.1"
 													}
 												]
 											},
@@ -316,8 +384,8 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20244197019",
-														"comment": "mod_session is earlier than 0:2.4.37-65.module_el8.10.0+3860+a6e26e50"
+														"test_ref": "oval:org.almalinux.alsa:tst:20244720019",
+														"comment": "mod_session is earlier than 0:2.4.37-65.module_el8.10.0+3872+9b8ab21e.1"
 													}
 												]
 											},
@@ -340,8 +408,8 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20244197021",
-														"comment": "mod_ssl is earlier than 1:2.4.37-65.module_el8.10.0+3860+a6e26e50"
+														"test_ref": "oval:org.almalinux.alsa:tst:20244720021",
+														"comment": "mod_ssl is earlier than 1:2.4.37-65.module_el8.10.0+3872+9b8ab21e.1"
 													}
 												]
 											}
