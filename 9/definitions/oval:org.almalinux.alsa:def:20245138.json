@@ -1,0 +1,239 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20245138",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:5138: httpd security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2024:5138",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-5138.html"
+			},
+			{
+				"ref_id": "CVE-2024-38476",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-38476"
+			},
+			{
+				"ref_id": "ALSA-2024:5138",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-5138.html"
+			}
+		],
+		"Description": "The httpd packages provide the Apache HTTP Server, a powerful, efficient, and extensible web server.\n\nSecurity Fix(es):\n\n* httpd: Security issues via?backend applications whose response headers are malicious or exploitable (CVE-2024-38476)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-08-08"
+			},
+			"updated": {
+				"date": "2024-08-08"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2295015",
+					"id": "2295015"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2024-38476",
+					"public": "20240701",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-38476",
+					"impact": "Important",
+					"cwe": "CWE-829",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20245138001",
+										"comment": "httpd is earlier than 0:2.4.57-11.el9_4.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228067002",
+										"comment": "httpd is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20245138003",
+										"comment": "httpd-core is earlier than 0:2.4.57-11.el9_4.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228067004",
+										"comment": "httpd-core is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20245138005",
+										"comment": "httpd-devel is earlier than 0:2.4.57-11.el9_4.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228067006",
+										"comment": "httpd-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20245138007",
+										"comment": "httpd-filesystem is earlier than 0:2.4.57-11.el9_4.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228067008",
+										"comment": "httpd-filesystem is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20245138009",
+										"comment": "httpd-manual is earlier than 0:2.4.57-11.el9_4.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228067010",
+										"comment": "httpd-manual is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20245138011",
+										"comment": "httpd-tools is earlier than 0:2.4.57-11.el9_4.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228067012",
+										"comment": "httpd-tools is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20245138013",
+										"comment": "mod_ldap is earlier than 0:2.4.57-11.el9_4.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228067014",
+										"comment": "mod_ldap is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20245138015",
+										"comment": "mod_lua is earlier than 0:2.4.57-11.el9_4.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228067016",
+										"comment": "mod_lua is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20245138017",
+										"comment": "mod_proxy_html is earlier than 1:2.4.57-11.el9_4.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228067018",
+										"comment": "mod_proxy_html is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20245138019",
+										"comment": "mod_session is earlier than 0:2.4.57-11.el9_4.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228067020",
+										"comment": "mod_session is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20245138021",
+										"comment": "mod_ssl is earlier than 1:2.4.57-11.el9_4.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228067022",
+										"comment": "mod_ssl is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20223893007",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20223893008",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}
