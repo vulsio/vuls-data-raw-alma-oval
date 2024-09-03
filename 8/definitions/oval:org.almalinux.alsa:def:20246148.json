@@ -1,46 +1,41 @@
 {
-	"id": "oval:org.almalinux.alsa:def:20241510",
-	"version": "637",
+	"id": "oval:org.almalinux.alsa:def:20246148",
+	"version": "635",
 	"class": "patch",
 	"metadata": {
-		"Title": "ALSA-2024:1510: nodejs:18 security update (Important)",
+		"Title": "ALSA-2024:6148: nodejs:18 security update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2024:1510",
+				"ref_id": "ALSA-2024:6148",
 				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-1510.html"
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-6148.html"
 			},
 			{
-				"ref_id": "CVE-2023-46809",
+				"ref_id": "CVE-2024-22020",
 				"source": "CVE",
-				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-46809"
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-22020"
 			},
 			{
-				"ref_id": "CVE-2024-21892",
+				"ref_id": "CVE-2024-28863",
 				"source": "CVE",
-				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-21892"
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-28863"
 			},
 			{
-				"ref_id": "CVE-2024-22019",
-				"source": "CVE",
-				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-22019"
-			},
-			{
-				"ref_id": "ALSA-2024:1510",
+				"ref_id": "ALSA-2024:6148",
 				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-1510.html"
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-6148.html"
 			}
 		],
-		"Description": "Node.js is a software development platform for building fast and scalable\nnetwork applications in the JavaScript programming language.\n\nSecurity Fix(es):\n\n* nodejs: reading unprocessed HTTP request with unbounded chunk extension allows DoS attacks (CVE-2024-22019)\n* nodejs: vulnerable to timing variant of the Bleichenbacher attack against PKCS#1 v1.5 padding (Marvin) (CVE-2023-46809)\n* nodejs: code injection and privilege escalation through Linux capabilities (CVE-2024-21892)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"Description": "Node.js is a software development platform for building fast and scalable network applications in the JavaScript programming language. \n\nSecurity Fix(es):\n\n* node-tar: denial of service while parsing a tar file due to lack of folders depth validation (CVE-2024-28863)\n* nodejs: Bypass network import restriction via data URL (CVE-2024-22020)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
 		"advisory": {
 			"from": "packager@almalinux.org",
-			"Severity": "Important",
+			"Severity": "Moderate",
 			"Rights": "Copyright 2024 AlmaLinux OS",
 			"issued": {
-				"date": "2024-03-26"
+				"date": "2024-09-03"
 			},
 			"updated": {
-				"date": "2024-03-26"
+				"date": "2024-09-03"
 			},
 			"affected_cpe_list": {
 				"Cpe": [
@@ -60,42 +55,29 @@
 			},
 			"bugzilla": [
 				{
-					"href": "https://bugzilla.redhat.com/2264569",
-					"id": "2264569"
+					"href": "https://bugzilla.redhat.com/2293200",
+					"id": "2293200"
 				},
 				{
-					"href": "https://bugzilla.redhat.com/2264574",
-					"id": "2264574"
-				},
-				{
-					"href": "https://bugzilla.redhat.com/2264582",
-					"id": "2264582"
+					"href": "https://bugzilla.redhat.com/2296417",
+					"id": "2296417"
 				}
 			],
 			"cve": [
 				{
-					"text": "CVE-2023-46809",
-					"public": "20240216",
-					"href": "https://access.redhat.com/security/cve/CVE-2023-46809",
+					"text": "CVE-2024-22020",
+					"public": "20240709",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-22020",
 					"impact": "Moderate",
-					"cwe": "CWE-385->CWE-208",
-					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:L/I:H/A:H"
 				},
 				{
-					"text": "CVE-2024-21892",
-					"public": "20240216",
-					"href": "https://access.redhat.com/security/cve/CVE-2024-21892",
-					"impact": "Important",
-					"cwe": "CWE-94",
-					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
-				},
-				{
-					"text": "CVE-2024-22019",
-					"public": "20240216",
-					"href": "https://access.redhat.com/security/cve/CVE-2024-22019",
-					"impact": "Important",
+					"text": "CVE-2024-28863",
+					"public": "20240321",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-28863",
+					"impact": "Moderate",
 					"cwe": "CWE-400",
-					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
 				}
 			]
 		}
@@ -134,8 +116,8 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20241510001",
-														"comment": "nodejs is earlier than 1:18.19.1-1.module_el8.9.0+3753+4de0891b"
+														"test_ref": "oval:org.almalinux.alsa:tst:20246148001",
+														"comment": "nodejs is earlier than 1:18.20.4-1.module_el8.10.0+3890+5a092792"
 													}
 												]
 											},
@@ -158,8 +140,8 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20241510003",
-														"comment": "nodejs-devel is earlier than 1:18.19.1-1.module_el8.9.0+3753+4de0891b"
+														"test_ref": "oval:org.almalinux.alsa:tst:20246148003",
+														"comment": "nodejs-devel is earlier than 1:18.20.4-1.module_el8.10.0+3890+5a092792"
 													}
 												]
 											},
@@ -182,8 +164,8 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20241510005",
-														"comment": "nodejs-docs is earlier than 1:18.19.1-1.module_el8.9.0+3753+4de0891b"
+														"test_ref": "oval:org.almalinux.alsa:tst:20246148005",
+														"comment": "nodejs-docs is earlier than 1:18.20.4-1.module_el8.10.0+3890+5a092792"
 													}
 												]
 											},
@@ -206,8 +188,8 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20241510007",
-														"comment": "nodejs-full-i18n is earlier than 1:18.19.1-1.module_el8.9.0+3753+4de0891b"
+														"test_ref": "oval:org.almalinux.alsa:tst:20246148007",
+														"comment": "nodejs-full-i18n is earlier than 1:18.20.4-1.module_el8.10.0+3890+5a092792"
 													}
 												]
 											},
@@ -230,7 +212,7 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20241510009",
+														"test_ref": "oval:org.almalinux.alsa:tst:20246148009",
 														"comment": "nodejs-nodemon is earlier than 0:3.0.1-1.module_el8.10.0+3890+5a092792"
 													}
 												]
@@ -254,7 +236,7 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20241510011",
+														"test_ref": "oval:org.almalinux.alsa:tst:20246148011",
 														"comment": "nodejs-packaging is earlier than 0:2021.06-4.module_el8.7.0+3343+ea2b7901"
 													}
 												]
@@ -278,7 +260,7 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20241510013",
+														"test_ref": "oval:org.almalinux.alsa:tst:20246148013",
 														"comment": "nodejs-packaging-bundler is earlier than 0:2021.06-4.module_el8.7.0+3343+ea2b7901"
 													}
 												]
@@ -302,8 +284,8 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20241510015",
-														"comment": "npm is earlier than 1:10.2.4-1.18.19.1.1.module_el8.9.0+3753+4de0891b"
+														"test_ref": "oval:org.almalinux.alsa:tst:20246148015",
+														"comment": "npm is earlier than 1:10.7.0-1.18.20.4.1.module_el8.10.0+3890+5a092792"
 													}
 												]
 											}
