@@ -1,0 +1,2513 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20246837",
+	"version": "637",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:6837: pcp security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2024:6837",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-6837.html"
+			},
+			{
+				"ref_id": "CVE-2024-45769",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-45769"
+			},
+			{
+				"ref_id": "CVE-2024-45770",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-45770"
+			},
+			{
+				"ref_id": "ALSA-2024:6837",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-6837.html"
+			}
+		],
+		"Description": "Performance Co-Pilot (PCP) is a suite of tools, services, and libraries for acquisition, archiving, and analysis of system-level performance measurements. Its light-weight distributed architecture makes it particularly well-suited to centralized analysis of complex systems.\n\nSecurity Fix(es):\n\n* pcp: pmpost symlink attack allows escalating pcp to root user (CVE-2024-45770)\n* pcp: pmcd heap corruption through metric pmstore operations (CVE-2024-45769)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-09-19"
+			},
+			"updated": {
+				"date": "2024-09-19"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2310451",
+					"id": "2310451"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2310452",
+					"id": "2310452"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2024-45769",
+					"public": "20240917",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-45769",
+					"impact": "Moderate",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2024-45770",
+					"public": "20240917",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-45770",
+					"impact": "Moderate",
+					"cwe": "CWE-59",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807778",
+												"comment": "pcp is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807779",
+												"comment": "pcp is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837001",
+										"comment": "pcp is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807780",
+												"comment": "pcp-conf is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807781",
+												"comment": "pcp-conf is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837003",
+										"comment": "pcp-conf is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807782",
+												"comment": "pcp-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807783",
+												"comment": "pcp-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837005",
+										"comment": "pcp-devel is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807784",
+												"comment": "pcp-doc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807785",
+												"comment": "pcp-doc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837007",
+										"comment": "pcp-doc is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807786",
+												"comment": "pcp-export-pcp2elasticsearch is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807787",
+												"comment": "pcp-export-pcp2elasticsearch is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837009",
+										"comment": "pcp-export-pcp2elasticsearch is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807788",
+												"comment": "pcp-export-pcp2graphite is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807789",
+												"comment": "pcp-export-pcp2graphite is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837011",
+										"comment": "pcp-export-pcp2graphite is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807790",
+												"comment": "pcp-export-pcp2influxdb is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807791",
+												"comment": "pcp-export-pcp2influxdb is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837013",
+										"comment": "pcp-export-pcp2influxdb is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807792",
+												"comment": "pcp-export-pcp2json is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807793",
+												"comment": "pcp-export-pcp2json is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837015",
+										"comment": "pcp-export-pcp2json is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807794",
+												"comment": "pcp-export-pcp2spark is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807795",
+												"comment": "pcp-export-pcp2spark is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837017",
+										"comment": "pcp-export-pcp2spark is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807796",
+												"comment": "pcp-export-pcp2xml is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807797",
+												"comment": "pcp-export-pcp2xml is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837019",
+										"comment": "pcp-export-pcp2xml is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807798",
+												"comment": "pcp-export-pcp2zabbix is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807799",
+												"comment": "pcp-export-pcp2zabbix is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837021",
+										"comment": "pcp-export-pcp2zabbix is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807800",
+												"comment": "pcp-export-zabbix-agent is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807801",
+												"comment": "pcp-export-zabbix-agent is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837023",
+										"comment": "pcp-export-zabbix-agent is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807802",
+												"comment": "pcp-gui is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807803",
+												"comment": "pcp-gui is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837025",
+										"comment": "pcp-gui is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807804",
+												"comment": "pcp-import-collectl2pcp is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807805",
+												"comment": "pcp-import-collectl2pcp is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837027",
+										"comment": "pcp-import-collectl2pcp is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807806",
+												"comment": "pcp-import-ganglia2pcp is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807807",
+												"comment": "pcp-import-ganglia2pcp is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837029",
+										"comment": "pcp-import-ganglia2pcp is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807808",
+												"comment": "pcp-import-iostat2pcp is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807809",
+												"comment": "pcp-import-iostat2pcp is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837031",
+										"comment": "pcp-import-iostat2pcp is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807810",
+												"comment": "pcp-import-mrtg2pcp is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807811",
+												"comment": "pcp-import-mrtg2pcp is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837033",
+										"comment": "pcp-import-mrtg2pcp is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807812",
+												"comment": "pcp-import-sar2pcp is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807813",
+												"comment": "pcp-import-sar2pcp is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837035",
+										"comment": "pcp-import-sar2pcp is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807814",
+												"comment": "pcp-libs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807815",
+												"comment": "pcp-libs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837037",
+										"comment": "pcp-libs is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807816",
+												"comment": "pcp-libs-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807817",
+												"comment": "pcp-libs-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837039",
+										"comment": "pcp-libs-devel is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807818",
+												"comment": "pcp-pmda-activemq is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807819",
+												"comment": "pcp-pmda-activemq is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837041",
+										"comment": "pcp-pmda-activemq is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807820",
+												"comment": "pcp-pmda-apache is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807821",
+												"comment": "pcp-pmda-apache is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837043",
+										"comment": "pcp-pmda-apache is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807822",
+												"comment": "pcp-pmda-bash is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807823",
+												"comment": "pcp-pmda-bash is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837045",
+										"comment": "pcp-pmda-bash is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807824",
+												"comment": "pcp-pmda-bcc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807825",
+												"comment": "pcp-pmda-bcc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837047",
+										"comment": "pcp-pmda-bcc is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807826",
+												"comment": "pcp-pmda-bind2 is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807827",
+												"comment": "pcp-pmda-bind2 is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837049",
+										"comment": "pcp-pmda-bind2 is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807828",
+												"comment": "pcp-pmda-bonding is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807829",
+												"comment": "pcp-pmda-bonding is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837051",
+										"comment": "pcp-pmda-bonding is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807830",
+												"comment": "pcp-pmda-bpftrace is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807831",
+												"comment": "pcp-pmda-bpftrace is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837053",
+										"comment": "pcp-pmda-bpftrace is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807832",
+												"comment": "pcp-pmda-cifs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807833",
+												"comment": "pcp-pmda-cifs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837055",
+										"comment": "pcp-pmda-cifs is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807834",
+												"comment": "pcp-pmda-cisco is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807835",
+												"comment": "pcp-pmda-cisco is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837057",
+										"comment": "pcp-pmda-cisco is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807836",
+												"comment": "pcp-pmda-dbping is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807837",
+												"comment": "pcp-pmda-dbping is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837059",
+										"comment": "pcp-pmda-dbping is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807838",
+												"comment": "pcp-pmda-denki is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807839",
+												"comment": "pcp-pmda-denki is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837061",
+										"comment": "pcp-pmda-denki is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807840",
+												"comment": "pcp-pmda-dm is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807841",
+												"comment": "pcp-pmda-dm is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837063",
+										"comment": "pcp-pmda-dm is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807842",
+												"comment": "pcp-pmda-docker is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807843",
+												"comment": "pcp-pmda-docker is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837065",
+										"comment": "pcp-pmda-docker is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807844",
+												"comment": "pcp-pmda-ds389 is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807845",
+												"comment": "pcp-pmda-ds389 is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837067",
+										"comment": "pcp-pmda-ds389 is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807846",
+												"comment": "pcp-pmda-ds389log is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807847",
+												"comment": "pcp-pmda-ds389log is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837069",
+										"comment": "pcp-pmda-ds389log is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807848",
+												"comment": "pcp-pmda-elasticsearch is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807849",
+												"comment": "pcp-pmda-elasticsearch is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837071",
+										"comment": "pcp-pmda-elasticsearch is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807850",
+												"comment": "pcp-pmda-gfs2 is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807851",
+												"comment": "pcp-pmda-gfs2 is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837073",
+										"comment": "pcp-pmda-gfs2 is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807852",
+												"comment": "pcp-pmda-gluster is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807853",
+												"comment": "pcp-pmda-gluster is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837075",
+										"comment": "pcp-pmda-gluster is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807854",
+												"comment": "pcp-pmda-gpfs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807855",
+												"comment": "pcp-pmda-gpfs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837077",
+										"comment": "pcp-pmda-gpfs is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807856",
+												"comment": "pcp-pmda-gpsd is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807857",
+												"comment": "pcp-pmda-gpsd is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837079",
+										"comment": "pcp-pmda-gpsd is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807858",
+												"comment": "pcp-pmda-hacluster is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807859",
+												"comment": "pcp-pmda-hacluster is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837081",
+										"comment": "pcp-pmda-hacluster is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807860",
+												"comment": "pcp-pmda-haproxy is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807861",
+												"comment": "pcp-pmda-haproxy is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837083",
+										"comment": "pcp-pmda-haproxy is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807862",
+												"comment": "pcp-pmda-infiniband is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807863",
+												"comment": "pcp-pmda-infiniband is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837085",
+										"comment": "pcp-pmda-infiniband is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807864",
+												"comment": "pcp-pmda-json is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807865",
+												"comment": "pcp-pmda-json is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837087",
+										"comment": "pcp-pmda-json is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807866",
+												"comment": "pcp-pmda-libvirt is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807867",
+												"comment": "pcp-pmda-libvirt is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837089",
+										"comment": "pcp-pmda-libvirt is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807868",
+												"comment": "pcp-pmda-lio is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807869",
+												"comment": "pcp-pmda-lio is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837091",
+										"comment": "pcp-pmda-lio is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807870",
+												"comment": "pcp-pmda-lmsensors is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807871",
+												"comment": "pcp-pmda-lmsensors is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837093",
+										"comment": "pcp-pmda-lmsensors is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807872",
+												"comment": "pcp-pmda-logger is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807873",
+												"comment": "pcp-pmda-logger is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837095",
+										"comment": "pcp-pmda-logger is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807874",
+												"comment": "pcp-pmda-lustre is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807875",
+												"comment": "pcp-pmda-lustre is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837097",
+										"comment": "pcp-pmda-lustre is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807876",
+												"comment": "pcp-pmda-lustrecomm is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807877",
+												"comment": "pcp-pmda-lustrecomm is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837099",
+										"comment": "pcp-pmda-lustrecomm is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807878",
+												"comment": "pcp-pmda-mailq is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807879",
+												"comment": "pcp-pmda-mailq is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837101",
+										"comment": "pcp-pmda-mailq is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807880",
+												"comment": "pcp-pmda-memcache is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807881",
+												"comment": "pcp-pmda-memcache is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837103",
+										"comment": "pcp-pmda-memcache is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807882",
+												"comment": "pcp-pmda-mic is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807883",
+												"comment": "pcp-pmda-mic is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837105",
+										"comment": "pcp-pmda-mic is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807884",
+												"comment": "pcp-pmda-mongodb is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807885",
+												"comment": "pcp-pmda-mongodb is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837107",
+										"comment": "pcp-pmda-mongodb is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807886",
+												"comment": "pcp-pmda-mounts is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807887",
+												"comment": "pcp-pmda-mounts is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837109",
+										"comment": "pcp-pmda-mounts is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807888",
+												"comment": "pcp-pmda-mssql is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807889",
+												"comment": "pcp-pmda-mssql is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837111",
+										"comment": "pcp-pmda-mssql is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807890",
+												"comment": "pcp-pmda-mysql is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807891",
+												"comment": "pcp-pmda-mysql is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837113",
+										"comment": "pcp-pmda-mysql is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807892",
+												"comment": "pcp-pmda-named is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807893",
+												"comment": "pcp-pmda-named is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837115",
+										"comment": "pcp-pmda-named is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807894",
+												"comment": "pcp-pmda-netcheck is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807895",
+												"comment": "pcp-pmda-netcheck is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837117",
+										"comment": "pcp-pmda-netcheck is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807896",
+												"comment": "pcp-pmda-netfilter is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807897",
+												"comment": "pcp-pmda-netfilter is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837119",
+										"comment": "pcp-pmda-netfilter is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807898",
+												"comment": "pcp-pmda-news is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807899",
+												"comment": "pcp-pmda-news is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837121",
+										"comment": "pcp-pmda-news is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807900",
+												"comment": "pcp-pmda-nfsclient is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807901",
+												"comment": "pcp-pmda-nfsclient is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837123",
+										"comment": "pcp-pmda-nfsclient is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807902",
+												"comment": "pcp-pmda-nginx is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807903",
+												"comment": "pcp-pmda-nginx is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837125",
+										"comment": "pcp-pmda-nginx is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807904",
+												"comment": "pcp-pmda-nvidia-gpu is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807905",
+												"comment": "pcp-pmda-nvidia-gpu is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837127",
+										"comment": "pcp-pmda-nvidia-gpu is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807906",
+												"comment": "pcp-pmda-openmetrics is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807907",
+												"comment": "pcp-pmda-openmetrics is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837129",
+										"comment": "pcp-pmda-openmetrics is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807908",
+												"comment": "pcp-pmda-openvswitch is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807909",
+												"comment": "pcp-pmda-openvswitch is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837131",
+										"comment": "pcp-pmda-openvswitch is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807910",
+												"comment": "pcp-pmda-oracle is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807911",
+												"comment": "pcp-pmda-oracle is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837133",
+										"comment": "pcp-pmda-oracle is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807912",
+												"comment": "pcp-pmda-pdns is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807913",
+												"comment": "pcp-pmda-pdns is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837135",
+										"comment": "pcp-pmda-pdns is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807914",
+												"comment": "pcp-pmda-perfevent is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807915",
+												"comment": "pcp-pmda-perfevent is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837137",
+										"comment": "pcp-pmda-perfevent is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807916",
+												"comment": "pcp-pmda-podman is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807917",
+												"comment": "pcp-pmda-podman is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837139",
+										"comment": "pcp-pmda-podman is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807918",
+												"comment": "pcp-pmda-postfix is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807919",
+												"comment": "pcp-pmda-postfix is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837141",
+										"comment": "pcp-pmda-postfix is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807920",
+												"comment": "pcp-pmda-postgresql is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807921",
+												"comment": "pcp-pmda-postgresql is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837143",
+										"comment": "pcp-pmda-postgresql is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807922",
+												"comment": "pcp-pmda-rabbitmq is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807923",
+												"comment": "pcp-pmda-rabbitmq is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837145",
+										"comment": "pcp-pmda-rabbitmq is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807924",
+												"comment": "pcp-pmda-redis is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807925",
+												"comment": "pcp-pmda-redis is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837147",
+										"comment": "pcp-pmda-redis is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807926",
+												"comment": "pcp-pmda-roomtemp is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807927",
+												"comment": "pcp-pmda-roomtemp is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837149",
+										"comment": "pcp-pmda-roomtemp is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807928",
+												"comment": "pcp-pmda-rsyslog is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807929",
+												"comment": "pcp-pmda-rsyslog is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837151",
+										"comment": "pcp-pmda-rsyslog is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807930",
+												"comment": "pcp-pmda-samba is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807931",
+												"comment": "pcp-pmda-samba is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837153",
+										"comment": "pcp-pmda-samba is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807932",
+												"comment": "pcp-pmda-sendmail is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807933",
+												"comment": "pcp-pmda-sendmail is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837155",
+										"comment": "pcp-pmda-sendmail is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807934",
+												"comment": "pcp-pmda-shping is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807935",
+												"comment": "pcp-pmda-shping is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837157",
+										"comment": "pcp-pmda-shping is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807936",
+												"comment": "pcp-pmda-slurm is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807937",
+												"comment": "pcp-pmda-slurm is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837159",
+										"comment": "pcp-pmda-slurm is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807938",
+												"comment": "pcp-pmda-smart is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807939",
+												"comment": "pcp-pmda-smart is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837161",
+										"comment": "pcp-pmda-smart is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807940",
+												"comment": "pcp-pmda-snmp is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807941",
+												"comment": "pcp-pmda-snmp is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837163",
+										"comment": "pcp-pmda-snmp is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807942",
+												"comment": "pcp-pmda-sockets is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807943",
+												"comment": "pcp-pmda-sockets is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837165",
+										"comment": "pcp-pmda-sockets is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807944",
+												"comment": "pcp-pmda-statsd is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807945",
+												"comment": "pcp-pmda-statsd is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837167",
+										"comment": "pcp-pmda-statsd is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807946",
+												"comment": "pcp-pmda-summary is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807947",
+												"comment": "pcp-pmda-summary is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837169",
+										"comment": "pcp-pmda-summary is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807948",
+												"comment": "pcp-pmda-systemd is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807949",
+												"comment": "pcp-pmda-systemd is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837171",
+										"comment": "pcp-pmda-systemd is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807950",
+												"comment": "pcp-pmda-trace is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807951",
+												"comment": "pcp-pmda-trace is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837173",
+										"comment": "pcp-pmda-trace is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807952",
+												"comment": "pcp-pmda-unbound is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807953",
+												"comment": "pcp-pmda-unbound is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837175",
+										"comment": "pcp-pmda-unbound is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807954",
+												"comment": "pcp-pmda-weblog is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807955",
+												"comment": "pcp-pmda-weblog is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837177",
+										"comment": "pcp-pmda-weblog is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807956",
+												"comment": "pcp-pmda-zimbra is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807957",
+												"comment": "pcp-pmda-zimbra is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837179",
+										"comment": "pcp-pmda-zimbra is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807958",
+												"comment": "pcp-pmda-zswap is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807959",
+												"comment": "pcp-pmda-zswap is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837181",
+										"comment": "pcp-pmda-zswap is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807960",
+												"comment": "pcp-selinux is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807961",
+												"comment": "pcp-selinux is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837183",
+										"comment": "pcp-selinux is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807962",
+												"comment": "pcp-system-tools is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807963",
+												"comment": "pcp-system-tools is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837185",
+										"comment": "pcp-system-tools is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807964",
+												"comment": "pcp-testsuite is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807965",
+												"comment": "pcp-testsuite is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837187",
+										"comment": "pcp-testsuite is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807966",
+												"comment": "pcp-zeroconf is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807967",
+												"comment": "pcp-zeroconf is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837189",
+										"comment": "pcp-zeroconf is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807968",
+												"comment": "perl-PCP-LogImport is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807969",
+												"comment": "perl-PCP-LogImport is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837191",
+										"comment": "perl-PCP-LogImport is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807970",
+												"comment": "perl-PCP-LogSummary is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807971",
+												"comment": "perl-PCP-LogSummary is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837193",
+										"comment": "perl-PCP-LogSummary is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807972",
+												"comment": "perl-PCP-MMV is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807973",
+												"comment": "perl-PCP-MMV is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837195",
+										"comment": "perl-PCP-MMV is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807974",
+												"comment": "perl-PCP-PMDA is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807975",
+												"comment": "perl-PCP-PMDA is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837197",
+										"comment": "perl-PCP-PMDA is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807976",
+												"comment": "python3-pcp is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034807977",
+												"comment": "python3-pcp is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246837199",
+										"comment": "python3-pcp is earlier than 0:5.3.7-22.el8_10"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}
