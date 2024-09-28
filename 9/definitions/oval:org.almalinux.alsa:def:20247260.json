@@ -1,0 +1,272 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20247260",
+	"version": "637",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:7260: net-snmp security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2024:7260",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-7260.html"
+			},
+			{
+				"ref_id": "CVE-2022-24805",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-24805"
+			},
+			{
+				"ref_id": "CVE-2022-24806",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-24806"
+			},
+			{
+				"ref_id": "CVE-2022-24807",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-24807"
+			},
+			{
+				"ref_id": "CVE-2022-24808",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-24808"
+			},
+			{
+				"ref_id": "CVE-2022-24809",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-24809"
+			},
+			{
+				"ref_id": "CVE-2022-24810",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-24810"
+			},
+			{
+				"ref_id": "ALSA-2024:7260",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-7260.html"
+			}
+		],
+		"Description": "The net-snmp packages provide various libraries and tools for the Simple Network Management Protocol (SNMP), including an SNMP library, an extensible agent, tools for requesting or setting information from SNMP agents, tools for generating and handling SNMP traps, a version of the netstat command which uses SNMP, and a Tk/Perl Management Information Base (MIB) browser.\n\nSecurity Fix(es):\n\n* net-snmp: A buffer overflow in the handling of the INDEX of             NET-SNMP-VACM-MIB can cause an out-of-bounds memory access. (CVE-2022-24805)\n* : net-snmp: Improper Input Validation when SETing malformed OIDs in master agent and subagent simultaneously (CVE-2022-24806)\n* net-snmp: A malformed OID in a SET request to SNMP-VIEW-BASED-ACM-MIB::vacmAccessTable can cause an out-of-bounds memory access (CVE-2022-24807)\n* net-snmp: A malformed OID in a GET-NEXT to the nsVacmAccessTable can cause a NULL pointer dereference. (CVE-2022-24809)\n* net-snmp: A malformed OID in a SET request to NET-SNMP-AGENT-MIB::nsLogTable can cause a NULL pointer dereference (CVE-2022-24808)\n* net-snmp: A malformed OID in a SET to the nsVacmAccessTable can cause a NULL pointer dereference. (CVE-2022-24810)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-09-26"
+			},
+			"updated": {
+				"date": "2024-09-26"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2103225",
+					"id": "2103225"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2104759",
+					"id": "2104759"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2104763",
+					"id": "2104763"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2104766",
+					"id": "2104766"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2104768",
+					"id": "2104768"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2104769",
+					"id": "2104769"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-24805",
+					"public": "20220701",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-24805",
+					"impact": "Moderate",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-24806",
+					"public": "20220701",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-24806",
+					"impact": "Moderate",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-24807",
+					"public": "20220701",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-24807",
+					"impact": "Moderate",
+					"cwe": "CWE-1320",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-24808",
+					"public": "20220701",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-24808",
+					"impact": "Moderate",
+					"cwe": "CWE-476",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-24809",
+					"public": "20220701",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-24809",
+					"impact": "Moderate",
+					"cwe": "CWE-476",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-24810",
+					"public": "20220701",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-24810",
+					"impact": "Moderate",
+					"cwe": "CWE-476",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20247260001",
+										"comment": "net-snmp is earlier than 1:5.9.1-13.el9_4.3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232444002",
+										"comment": "net-snmp is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20247260003",
+										"comment": "net-snmp-agent-libs is earlier than 1:5.9.1-13.el9_4.3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232444004",
+										"comment": "net-snmp-agent-libs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20247260005",
+										"comment": "net-snmp-devel is earlier than 1:5.9.1-13.el9_4.3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232444006",
+										"comment": "net-snmp-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20247260007",
+										"comment": "net-snmp-libs is earlier than 1:5.9.1-13.el9_4.3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232444008",
+										"comment": "net-snmp-libs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20247260009",
+										"comment": "net-snmp-perl is earlier than 1:5.9.1-13.el9_4.3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232444010",
+										"comment": "net-snmp-perl is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20247260011",
+										"comment": "net-snmp-utils is earlier than 1:5.9.1-13.el9_4.3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232444012",
+										"comment": "net-snmp-utils is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20247260013",
+										"comment": "python3-net-snmp is earlier than 1:5.9.1-13.el9_4.3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232444014",
+										"comment": "python3-net-snmp is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20223893007",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20223893008",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}
