@@ -1,0 +1,615 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20247481",
+	"version": "637",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:7481: linux-firmware security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2024:7481",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-7481.html"
+			},
+			{
+				"ref_id": "CVE-2023-20584",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-20584"
+			},
+			{
+				"ref_id": "CVE-2023-31356",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-31356"
+			},
+			{
+				"ref_id": "ALSA-2024:7481",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-7481.html"
+			}
+		],
+		"Description": "The linux-firmware packages contain all of the firmware files that are required by various devices to operate.\n\nSecurity Fix(es):\n\n* kernel: hw:amd:IOMMU improperly handles certain special address leading to a loss of guest integrity (CVE-2023-20584)\n* kernel: hw: amd:Incomplete system memory cleanup in SEV firmware corrupt guest private memory (CVE-2023-31356)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-10-02"
+			},
+			"updated": {
+				"date": "2024-10-02"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2304583",
+					"id": "2304583"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2304593",
+					"id": "2304593"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-20584",
+					"public": "20240813",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-20584",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:N/I:H/A:N"
+				},
+				{
+					"text": "CVE-2023-31356",
+					"public": "20240813",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-31356",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809620",
+												"comment": "iwl100-firmware is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809621",
+												"comment": "iwl100-firmware is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20247481001",
+										"comment": "iwl100-firmware is earlier than 0:39.31.5.1-124.el8_10.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809622",
+												"comment": "iwl1000-firmware is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809623",
+												"comment": "iwl1000-firmware is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20247481003",
+										"comment": "iwl1000-firmware is earlier than 1:39.31.5.1-124.el8_10.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809624",
+												"comment": "iwl105-firmware is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809625",
+												"comment": "iwl105-firmware is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20247481005",
+										"comment": "iwl105-firmware is earlier than 0:18.168.6.1-124.el8_10.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809626",
+												"comment": "iwl135-firmware is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809627",
+												"comment": "iwl135-firmware is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20247481007",
+										"comment": "iwl135-firmware is earlier than 0:18.168.6.1-124.el8_10.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809628",
+												"comment": "iwl2000-firmware is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809629",
+												"comment": "iwl2000-firmware is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20247481009",
+										"comment": "iwl2000-firmware is earlier than 0:18.168.6.1-124.el8_10.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809630",
+												"comment": "iwl2030-firmware is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809631",
+												"comment": "iwl2030-firmware is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20247481011",
+										"comment": "iwl2030-firmware is earlier than 0:18.168.6.1-124.el8_10.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809632",
+												"comment": "iwl3160-firmware is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809633",
+												"comment": "iwl3160-firmware is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20247481013",
+										"comment": "iwl3160-firmware is earlier than 1:25.30.13.0-124.el8_10.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809634",
+												"comment": "iwl3945-firmware is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809635",
+												"comment": "iwl3945-firmware is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20247481015",
+										"comment": "iwl3945-firmware is earlier than 0:15.32.2.9-124.el8_10.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809636",
+												"comment": "iwl4965-firmware is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809637",
+												"comment": "iwl4965-firmware is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20247481017",
+										"comment": "iwl4965-firmware is earlier than 0:228.61.2.24-124.el8_10.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809638",
+												"comment": "iwl5000-firmware is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809639",
+												"comment": "iwl5000-firmware is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20247481019",
+										"comment": "iwl5000-firmware is earlier than 0:8.83.5.1_1-124.el8_10.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809640",
+												"comment": "iwl5150-firmware is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809641",
+												"comment": "iwl5150-firmware is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20247481021",
+										"comment": "iwl5150-firmware is earlier than 0:8.24.2.2-124.el8_10.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809642",
+												"comment": "iwl6000-firmware is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809643",
+												"comment": "iwl6000-firmware is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20247481023",
+										"comment": "iwl6000-firmware is earlier than 0:9.221.4.1-124.el8_10.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809644",
+												"comment": "iwl6000g2a-firmware is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809645",
+												"comment": "iwl6000g2a-firmware is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20247481025",
+										"comment": "iwl6000g2a-firmware is earlier than 0:18.168.6.1-124.el8_10.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809646",
+												"comment": "iwl6000g2b-firmware is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809647",
+												"comment": "iwl6000g2b-firmware is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20247481027",
+										"comment": "iwl6000g2b-firmware is earlier than 0:18.168.6.1-124.el8_10.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809648",
+												"comment": "iwl6050-firmware is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809649",
+												"comment": "iwl6050-firmware is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20247481029",
+										"comment": "iwl6050-firmware is earlier than 0:41.28.5.1-124.el8_10.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809650",
+												"comment": "iwl7260-firmware is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809651",
+												"comment": "iwl7260-firmware is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20247481031",
+										"comment": "iwl7260-firmware is earlier than 1:25.30.13.0-124.el8_10.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809652",
+												"comment": "libertas-sd8686-firmware is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809653",
+												"comment": "libertas-sd8686-firmware is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20247481033",
+										"comment": "libertas-sd8686-firmware is earlier than 0:20240827-124.git3cff7109.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809654",
+												"comment": "libertas-sd8787-firmware is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809655",
+												"comment": "libertas-sd8787-firmware is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20247481035",
+										"comment": "libertas-sd8787-firmware is earlier than 0:20240827-124.git3cff7109.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809656",
+												"comment": "libertas-usb8388-firmware is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809657",
+												"comment": "libertas-usb8388-firmware is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20247481037",
+										"comment": "libertas-usb8388-firmware is earlier than 2:20240827-124.git3cff7109.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809658",
+												"comment": "libertas-usb8388-olpc-firmware is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809659",
+												"comment": "libertas-usb8388-olpc-firmware is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20247481039",
+										"comment": "libertas-usb8388-olpc-firmware is earlier than 0:20240827-124.git3cff7109.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809660",
+												"comment": "linux-firmware is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alba:tst:2020034809661",
+												"comment": "linux-firmware is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20247481041",
+										"comment": "linux-firmware is earlier than 0:20240827-124.git3cff7109.el8_10"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}
