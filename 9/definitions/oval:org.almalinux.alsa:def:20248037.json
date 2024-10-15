@@ -1,0 +1,148 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20248037",
+	"version": "637",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:8037: OpenIPMI security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2024:8037",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-8037.html"
+			},
+			{
+				"ref_id": "CVE-2024-42934",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-42934"
+			},
+			{
+				"ref_id": "ALSA-2024:8037",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-8037.html"
+			}
+		],
+		"Description": "The OpenIPMI packages provide command-line tools and utilities to access platform information using Intelligent Platform Management Interface (IPMI). System administrators can use OpenIPMI to manage systems and to perform system health monitoring.\n\nSecurity Fix(es):\n\n* openipmi: missing check on the authorization type on incoming LAN messages in IPMI simulator (CVE-2024-42934)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-10-14"
+			},
+			"updated": {
+				"date": "2024-10-14"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2308375",
+					"id": "2308375"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2024-42934",
+					"public": "20240822",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-42934",
+					"impact": "Moderate",
+					"cwe": "CWE-862",
+					"cvss3": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248037001",
+										"comment": "OpenIPMI is earlier than 0:2.0.32-5.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248037002",
+										"comment": "OpenIPMI is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248037003",
+										"comment": "OpenIPMI-devel is earlier than 0:2.0.32-5.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248037004",
+										"comment": "OpenIPMI-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248037005",
+										"comment": "OpenIPMI-lanserv is earlier than 0:2.0.32-5.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248037006",
+										"comment": "OpenIPMI-lanserv is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248037007",
+										"comment": "OpenIPMI-libs is earlier than 0:2.0.32-5.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248037008",
+										"comment": "OpenIPMI-libs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20223893007",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20223893008",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}
