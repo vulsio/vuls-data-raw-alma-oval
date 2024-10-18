@@ -1,0 +1,716 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20248127",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:8127: java-21-openjdk security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2024:8127",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-8127.html"
+			},
+			{
+				"ref_id": "CVE-2023-48161",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-48161"
+			},
+			{
+				"ref_id": "CVE-2024-21208",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-21208"
+			},
+			{
+				"ref_id": "CVE-2024-21210",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-21210"
+			},
+			{
+				"ref_id": "CVE-2024-21217",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-21217"
+			},
+			{
+				"ref_id": "CVE-2024-21235",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-21235"
+			},
+			{
+				"ref_id": "ALSA-2024:8127",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-8127.html"
+			}
+		],
+		"Description": "The OpenJDK 21 runtime environment.\n\nSecurity Fix(es):\n\n* giflib: Heap-Buffer Overflow during Image Saving in DumpScreen2RGB Function (CVE-2023-48161)\n* JDK: Array indexing integer overflow (8328544) (CVE-2024-21210)\n* JDK: HTTP client improper handling of maxHeaderSize (8328286) (CVE-2024-21208)\n* JDK: Unbounded allocation leads to out-of-memory error (8331446) (CVE-2024-21217)\n* JDK: Integer conversion error leads to incorrect range check (8332644) (CVE-2024-21235)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-10-16"
+			},
+			"updated": {
+				"date": "2024-10-16"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2251025",
+					"id": "2251025"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2318524",
+					"id": "2318524"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2318526",
+					"id": "2318526"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2318530",
+					"id": "2318530"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2318534",
+					"id": "2318534"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-48161",
+					"public": "20231122",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-48161",
+					"impact": "Moderate",
+					"cwe": "CWE-119",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H"
+				},
+				{
+					"text": "CVE-2024-21208",
+					"public": "20241015",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-21208",
+					"impact": "Moderate",
+					"cwe": "CWE-130",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2024-21210",
+					"public": "20241015",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-21210",
+					"impact": "Moderate",
+					"cwe": "CWE-190",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N"
+				},
+				{
+					"text": "CVE-2024-21217",
+					"public": "20241015",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-21217",
+					"impact": "Moderate",
+					"cwe": "CWE-789",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2024-21235",
+					"public": "20241015",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-21235",
+					"impact": "Moderate",
+					"cwe": "CWE-195",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809086",
+												"comment": "java-21-openjdk is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809087",
+												"comment": "java-21-openjdk is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248127001",
+										"comment": "java-21-openjdk is earlier than 1:21.0.5.0.10-3.el8.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809088",
+												"comment": "java-21-openjdk-demo is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809089",
+												"comment": "java-21-openjdk-demo is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248127003",
+										"comment": "java-21-openjdk-demo is earlier than 1:21.0.5.0.10-3.el8.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809090",
+												"comment": "java-21-openjdk-demo-fastdebug is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809091",
+												"comment": "java-21-openjdk-demo-fastdebug is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248127005",
+										"comment": "java-21-openjdk-demo-fastdebug is earlier than 1:21.0.5.0.10-3.el8.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809092",
+												"comment": "java-21-openjdk-demo-slowdebug is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809093",
+												"comment": "java-21-openjdk-demo-slowdebug is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248127007",
+										"comment": "java-21-openjdk-demo-slowdebug is earlier than 1:21.0.5.0.10-3.el8.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809094",
+												"comment": "java-21-openjdk-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809095",
+												"comment": "java-21-openjdk-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248127009",
+										"comment": "java-21-openjdk-devel is earlier than 1:21.0.5.0.10-3.el8.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809096",
+												"comment": "java-21-openjdk-devel-fastdebug is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809097",
+												"comment": "java-21-openjdk-devel-fastdebug is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248127011",
+										"comment": "java-21-openjdk-devel-fastdebug is earlier than 1:21.0.5.0.10-3.el8.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809098",
+												"comment": "java-21-openjdk-devel-slowdebug is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809099",
+												"comment": "java-21-openjdk-devel-slowdebug is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248127013",
+										"comment": "java-21-openjdk-devel-slowdebug is earlier than 1:21.0.5.0.10-3.el8.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809100",
+												"comment": "java-21-openjdk-fastdebug is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809101",
+												"comment": "java-21-openjdk-fastdebug is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248127015",
+										"comment": "java-21-openjdk-fastdebug is earlier than 1:21.0.5.0.10-3.el8.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809102",
+												"comment": "java-21-openjdk-headless is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809103",
+												"comment": "java-21-openjdk-headless is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248127017",
+										"comment": "java-21-openjdk-headless is earlier than 1:21.0.5.0.10-3.el8.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809104",
+												"comment": "java-21-openjdk-headless-fastdebug is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809105",
+												"comment": "java-21-openjdk-headless-fastdebug is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248127019",
+										"comment": "java-21-openjdk-headless-fastdebug is earlier than 1:21.0.5.0.10-3.el8.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809106",
+												"comment": "java-21-openjdk-headless-slowdebug is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809107",
+												"comment": "java-21-openjdk-headless-slowdebug is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248127021",
+										"comment": "java-21-openjdk-headless-slowdebug is earlier than 1:21.0.5.0.10-3.el8.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809108",
+												"comment": "java-21-openjdk-javadoc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809109",
+												"comment": "java-21-openjdk-javadoc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248127023",
+										"comment": "java-21-openjdk-javadoc is earlier than 1:21.0.5.0.10-3.el8.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809110",
+												"comment": "java-21-openjdk-javadoc-zip is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809111",
+												"comment": "java-21-openjdk-javadoc-zip is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248127025",
+										"comment": "java-21-openjdk-javadoc-zip is earlier than 1:21.0.5.0.10-3.el8.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809112",
+												"comment": "java-21-openjdk-jmods is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809113",
+												"comment": "java-21-openjdk-jmods is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248127027",
+										"comment": "java-21-openjdk-jmods is earlier than 1:21.0.5.0.10-3.el8.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809114",
+												"comment": "java-21-openjdk-jmods-fastdebug is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809115",
+												"comment": "java-21-openjdk-jmods-fastdebug is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248127029",
+										"comment": "java-21-openjdk-jmods-fastdebug is earlier than 1:21.0.5.0.10-3.el8.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809116",
+												"comment": "java-21-openjdk-jmods-slowdebug is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809117",
+												"comment": "java-21-openjdk-jmods-slowdebug is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248127031",
+										"comment": "java-21-openjdk-jmods-slowdebug is earlier than 1:21.0.5.0.10-3.el8.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809118",
+												"comment": "java-21-openjdk-slowdebug is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809119",
+												"comment": "java-21-openjdk-slowdebug is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248127033",
+										"comment": "java-21-openjdk-slowdebug is earlier than 1:21.0.5.0.10-3.el8.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809120",
+												"comment": "java-21-openjdk-src is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809121",
+												"comment": "java-21-openjdk-src is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248127035",
+										"comment": "java-21-openjdk-src is earlier than 1:21.0.5.0.10-3.el8.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809122",
+												"comment": "java-21-openjdk-src-fastdebug is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809123",
+												"comment": "java-21-openjdk-src-fastdebug is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248127037",
+										"comment": "java-21-openjdk-src-fastdebug is earlier than 1:21.0.5.0.10-3.el8.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809124",
+												"comment": "java-21-openjdk-src-slowdebug is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809125",
+												"comment": "java-21-openjdk-src-slowdebug is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248127039",
+										"comment": "java-21-openjdk-src-slowdebug is earlier than 1:21.0.5.0.10-3.el8.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809126",
+												"comment": "java-21-openjdk-static-libs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809127",
+												"comment": "java-21-openjdk-static-libs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248127041",
+										"comment": "java-21-openjdk-static-libs is earlier than 1:21.0.5.0.10-3.el8.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809128",
+												"comment": "java-21-openjdk-static-libs-fastdebug is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809129",
+												"comment": "java-21-openjdk-static-libs-fastdebug is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248127043",
+										"comment": "java-21-openjdk-static-libs-fastdebug is earlier than 1:21.0.5.0.10-3.el8.alma.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809130",
+												"comment": "java-21-openjdk-static-libs-slowdebug is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809131",
+												"comment": "java-21-openjdk-static-libs-slowdebug is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20248127045",
+										"comment": "java-21-openjdk-static-libs-slowdebug is earlier than 1:21.0.5.0.10-3.el8.alma.1"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}
