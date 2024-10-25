@@ -6,9 +6,9 @@
 		"Title": "ALSA-2024:2145: libX11 security update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2024:2145",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-2145.html"
+				"ref_id": "RHSA-2024:2145",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:2145"
 			},
 			{
 				"ref_id": "CVE-2023-43785",
@@ -126,19 +126,6 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20242145003",
-										"comment": "libX11-common is earlier than 0:1.7.0-9.el9"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20236497004",
-										"comment": "libX11-common is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20242145005",
 										"comment": "libX11-devel is earlier than 0:1.7.0-9.el9"
 									},
@@ -158,6 +145,19 @@
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20236497008",
 										"comment": "libX11-xcb is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242145003",
+										"comment": "libX11-common is earlier than 0:1.7.0-9.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236497004",
+										"comment": "libX11-common is signed with AlmaLinux OS 9 key"
 									}
 								]
 							}

@@ -6,9 +6,9 @@
 		"Title": "ALSA-2024:2264: edk2 security update (Important)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2024:2264",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-2264.html"
+				"ref_id": "RHSA-2024:2264",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:2264"
 			},
 			{
 				"ref_id": "CVE-2022-36763",
@@ -198,6 +198,19 @@
 								"operator": "AND",
 								"criterions": [
 									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242264005",
+										"comment": "edk2-tools is earlier than 0:20231122-6.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232165006",
+										"comment": "edk2-tools is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20242264001",
 										"comment": "edk2-aarch64 is earlier than 0:20231122-6.el9"
 									},
@@ -217,19 +230,6 @@
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20232165004",
 										"comment": "edk2-ovmf is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20242264005",
-										"comment": "edk2-tools is earlier than 0:20231122-6.el9"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20232165006",
-										"comment": "edk2-tools is signed with AlmaLinux OS 9 key"
 									}
 								]
 							},

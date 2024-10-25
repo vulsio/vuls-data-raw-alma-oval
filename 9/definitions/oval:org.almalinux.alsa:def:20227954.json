@@ -6,9 +6,9 @@
 		"Title": "ALSA-2022:7954: podman security and bug fix update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2022:7954",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-7954.html"
+				"ref_id": "RHSA-2022:7954",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2022:7954"
 			},
 			{
 				"ref_id": "CVE-2020-28851",
@@ -128,7 +128,7 @@
 					"text": "CVE-2021-20199",
 					"public": "20210101",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-20199",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-346",
 					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N"
 				},
@@ -136,7 +136,7 @@
 					"text": "CVE-2021-20291",
 					"public": "20210401",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-20291",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-667",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
 				},
@@ -144,7 +144,7 @@
 					"text": "CVE-2021-33197",
 					"public": "20210521",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-33197",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-20",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
 				},
@@ -152,7 +152,7 @@
 					"text": "CVE-2021-34558",
 					"public": "20210713",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-34558",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-20",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
 				},
@@ -194,19 +194,6 @@
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20227954002",
 										"comment": "podman is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20227954003",
-										"comment": "podman-docker is earlier than 2:4.2.0-3.el9"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20227954004",
-										"comment": "podman-docker is signed with AlmaLinux OS 9 key"
 									}
 								]
 							},
@@ -259,6 +246,19 @@
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20227954012",
 										"comment": "podman-tests is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227954003",
+										"comment": "podman-docker is earlier than 2:4.2.0-3.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227954004",
+										"comment": "podman-docker is signed with AlmaLinux OS 9 key"
 									}
 								]
 							}

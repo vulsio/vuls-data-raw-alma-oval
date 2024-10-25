@@ -6,9 +6,9 @@
 		"Title": "ALSA-2023:0954: systemd security update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2023:0954",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-0954.html"
+				"ref_id": "RHSA-2023:0954",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:0954"
 			},
 			{
 				"ref_id": "CVE-2022-4415",
@@ -127,7 +127,7 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20230954007",
+										"test_ref": "oval:org.almalinux.alsa:tst:20230954020",
 										"comment": "systemd-journal-remote is earlier than 0:250-12.el9_1.3"
 									},
 									{
@@ -153,7 +153,7 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20230954011",
+										"test_ref": "oval:org.almalinux.alsa:tst:20230954021",
 										"comment": "systemd-oomd is earlier than 0:250-12.el9_1.3"
 									},
 									{
@@ -166,7 +166,7 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20230954013",
+										"test_ref": "oval:org.almalinux.alsa:tst:20230954022",
 										"comment": "systemd-pam is earlier than 0:250-12.el9_1.3"
 									},
 									{
@@ -179,12 +179,25 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20230954015",
+										"test_ref": "oval:org.almalinux.alsa:tst:20230954023",
 										"comment": "systemd-resolved is earlier than 0:250-12.el9_1.3"
 									},
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20230336016",
 										"comment": "systemd-resolved is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230954024",
+										"comment": "systemd-udev is earlier than 0:250-12.el9_1.3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230336020",
+										"comment": "systemd-udev is signed with AlmaLinux OS 9 key"
 									}
 								]
 							},
@@ -198,19 +211,6 @@
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20230336018",
 										"comment": "systemd-rpm-macros is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20230954019",
-										"comment": "systemd-udev is earlier than 0:250-12.el9_1.3"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20230336020",
-										"comment": "systemd-udev is signed with AlmaLinux OS 9 key"
 									}
 								]
 							}

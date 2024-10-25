@@ -6,9 +6,9 @@
 		"Title": "ALSA-2022:6595: nodejs and nodejs-nodemon security and bug fix update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2022:6595",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-6595.html"
+				"ref_id": "RHSA-2022:6595",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2022:6595"
 			},
 			{
 				"ref_id": "CVE-2020-28469",
@@ -130,7 +130,7 @@
 					"text": "CVE-2020-28469",
 					"public": "20210112",
 					"href": "https://access.redhat.com/security/cve/CVE-2020-28469",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-400",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
 				},
@@ -138,7 +138,7 @@
 					"text": "CVE-2020-7788",
 					"public": "20201208",
 					"href": "https://access.redhat.com/security/cve/CVE-2020-7788",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-400",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
 				},
@@ -146,7 +146,7 @@
 					"text": "CVE-2021-33502",
 					"public": "20210521",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-33502",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-400",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
 				},
@@ -154,7 +154,7 @@
 					"text": "CVE-2021-3807",
 					"public": "20210917",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-3807",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-400",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
 				},
@@ -235,19 +235,6 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20226595003",
-										"comment": "nodejs-docs is earlier than 1:16.16.0-1.el9_0"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20226595004",
-										"comment": "nodejs-docs is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20226595005",
 										"comment": "nodejs-full-i18n is earlier than 1:16.16.0-1.el9_0"
 									},
@@ -261,7 +248,7 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20226595007",
+										"test_ref": "oval:org.almalinux.alsa:tst:20226595013",
 										"comment": "nodejs-libs is earlier than 1:16.16.0-1.el9_0"
 									},
 									{
@@ -280,6 +267,19 @@
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20226595010",
 										"comment": "npm is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226595003",
+										"comment": "nodejs-docs is earlier than 1:16.16.0-1.el9_0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226595004",
+										"comment": "nodejs-docs is signed with AlmaLinux OS 9 key"
 									}
 								]
 							},

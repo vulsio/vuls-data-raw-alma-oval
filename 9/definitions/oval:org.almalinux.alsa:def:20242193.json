@@ -6,9 +6,9 @@
 		"Title": "ALSA-2024:2193: podman security update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2024:2193",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-2193.html"
+				"ref_id": "RHSA-2024:2193",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:2193"
 			},
 			{
 				"ref_id": "CVE-2023-39326",
@@ -96,11 +96,11 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20242193001",
+										"test_ref": "oval:org.almalinux.alsa:tst:20242193010",
 										"comment": "podman is earlier than 2:4.9.4-0.1.el9"
 									},
 									{
-										"test_ref": "oval:org.almalinux.alba:tst:20241136002",
+										"test_ref": "oval:org.almalinux.alsa:tst:20227954002",
 										"comment": "podman is signed with AlmaLinux OS 9 key"
 									}
 								]
@@ -109,24 +109,11 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20242193003",
-										"comment": "podman-docker is earlier than 2:4.9.4-0.1.el9"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alba:tst:20241136004",
-										"comment": "podman-docker is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20242193005",
+										"test_ref": "oval:org.almalinux.alsa:tst:20242193011",
 										"comment": "podman-plugins is earlier than 2:4.9.4-0.1.el9"
 									},
 									{
-										"test_ref": "oval:org.almalinux.alba:tst:20241136008",
+										"test_ref": "oval:org.almalinux.alsa:tst:20227954008",
 										"comment": "podman-plugins is signed with AlmaLinux OS 9 key"
 									}
 								]
@@ -135,11 +122,11 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20242193007",
+										"test_ref": "oval:org.almalinux.alsa:tst:20242193012",
 										"comment": "podman-remote is earlier than 2:4.9.4-0.1.el9"
 									},
 									{
-										"test_ref": "oval:org.almalinux.alba:tst:20241136010",
+										"test_ref": "oval:org.almalinux.alsa:tst:20227954010",
 										"comment": "podman-remote is signed with AlmaLinux OS 9 key"
 									}
 								]
@@ -148,12 +135,25 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20242193009",
+										"test_ref": "oval:org.almalinux.alsa:tst:20242193013",
 										"comment": "podman-tests is earlier than 2:4.9.4-0.1.el9"
 									},
 									{
-										"test_ref": "oval:org.almalinux.alba:tst:20241136012",
+										"test_ref": "oval:org.almalinux.alsa:tst:20227954012",
 										"comment": "podman-tests is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242193014",
+										"comment": "podman-docker is earlier than 2:4.9.4-0.1.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227954004",
+										"comment": "podman-docker is signed with AlmaLinux OS 9 key"
 									}
 								]
 							}

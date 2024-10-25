@@ -6,9 +6,9 @@
 		"Title": "ALSA-2023:2502: dhcp security and enhancement update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2023:2502",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-2502.html"
+				"ref_id": "RHSA-2023:2502",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:2502"
 			},
 			{
 				"ref_id": "CVE-2022-2928",
@@ -108,19 +108,6 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20232502003",
-										"comment": "dhcp-common is earlier than 12:4.4.2-18.b1.el9"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20228385004",
-										"comment": "dhcp-common is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20232502005",
 										"comment": "dhcp-relay is earlier than 12:4.4.2-18.b1.el9"
 									},
@@ -140,6 +127,19 @@
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20228385008",
 										"comment": "dhcp-server is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232502003",
+										"comment": "dhcp-common is earlier than 12:4.4.2-18.b1.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228385004",
+										"comment": "dhcp-common is signed with AlmaLinux OS 9 key"
 									}
 								]
 							}

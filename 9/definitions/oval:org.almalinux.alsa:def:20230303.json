@@ -6,9 +6,9 @@
 		"Title": "ALSA-2023:0303: usbguard security update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2023:0303",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-0303.html"
+				"ref_id": "RHSA-2023:0303",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:0303"
 			},
 			{
 				"ref_id": "CVE-2019-25058",
@@ -82,7 +82,7 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20230303003",
+										"test_ref": "oval:org.almalinux.alsa:tst:20230303011",
 										"comment": "usbguard-dbus is earlier than 0:1.0.0-10.el9_1.2"
 									},
 									{
@@ -95,12 +95,25 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20230303005",
+										"test_ref": "oval:org.almalinux.alsa:tst:20230303012",
 										"comment": "usbguard-notifier is earlier than 0:1.0.0-10.el9_1.2"
 									},
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20230303006",
 										"comment": "usbguard-notifier is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230303013",
+										"comment": "usbguard-tools is earlier than 0:1.0.0-10.el9_1.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230303010",
+										"comment": "usbguard-tools is signed with AlmaLinux OS 9 key"
 									}
 								]
 							},
@@ -114,19 +127,6 @@
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20230303008",
 										"comment": "usbguard-selinux is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20230303009",
-										"comment": "usbguard-tools is earlier than 0:1.0.0-10.el9_1.2"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20230303010",
-										"comment": "usbguard-tools is signed with AlmaLinux OS 9 key"
 									}
 								]
 							}

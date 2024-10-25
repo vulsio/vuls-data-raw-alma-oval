@@ -6,9 +6,9 @@
 		"Title": "ALSA-2024:4749: edk2 security update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2024:4749",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-4749.html"
+				"ref_id": "RHSA-2024:4749",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:4749"
 			},
 			{
 				"ref_id": "CVE-2022-36765",
@@ -113,6 +113,19 @@
 								"operator": "AND",
 								"criterions": [
 									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244749005",
+										"comment": "edk2-tools is earlier than 0:20231122-6.el9_4.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232165006",
+										"comment": "edk2-tools is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20244749001",
 										"comment": "edk2-aarch64 is earlier than 0:20231122-6.el9_4.2"
 									},
@@ -139,19 +152,6 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20244749005",
-										"comment": "edk2-tools is earlier than 0:20231122-6.el9_4.2"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20232165006",
-										"comment": "edk2-tools is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20244749007",
 										"comment": "edk2-tools-doc is earlier than 0:20231122-6.el9_4.2"
 									},
@@ -166,7 +166,7 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alba:tst:20223893007",
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
 						"comment": "AlmaLinux 9 is installed"
 					}
 				]
@@ -174,7 +174,7 @@
 		],
 		"criterions": [
 			{
-				"test_ref": "oval:org.almalinux.alba:tst:20223893008",
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
 				"comment": "AlmaLinux must be installed"
 			}
 		]

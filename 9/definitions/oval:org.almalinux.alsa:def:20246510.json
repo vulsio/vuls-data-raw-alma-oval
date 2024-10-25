@@ -6,9 +6,9 @@
 		"Title": "ALSA-2024:6510: emacs security update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2024:6510",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-6510.html"
+				"ref_id": "RHSA-2024:6510",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:6510"
 			},
 			{
 				"ref_id": "CVE-2024-39331",
@@ -105,19 +105,6 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20246510005",
-										"comment": "emacs-filesystem is earlier than 1:27.2-10.el9_4"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20232074006",
-										"comment": "emacs-filesystem is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20246510007",
 										"comment": "emacs-lucid is earlier than 1:27.2-10.el9_4"
 									},
@@ -139,13 +126,26 @@
 										"comment": "emacs-nox is signed with AlmaLinux OS 9 key"
 									}
 								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246510005",
+										"comment": "emacs-filesystem is earlier than 1:27.2-10.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232074006",
+										"comment": "emacs-filesystem is signed with AlmaLinux OS 9 key"
+									}
+								]
 							}
 						]
 					}
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alba:tst:20223893007",
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
 						"comment": "AlmaLinux 9 is installed"
 					}
 				]
@@ -153,7 +153,7 @@
 		],
 		"criterions": [
 			{
-				"test_ref": "oval:org.almalinux.alba:tst:20223893008",
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
 				"comment": "AlmaLinux must be installed"
 			}
 		]

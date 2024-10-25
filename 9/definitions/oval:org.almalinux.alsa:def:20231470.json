@@ -6,9 +6,9 @@
 		"Title": "ALSA-2023:1470: kernel security, bug fix, and enhancement update (Important)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2023:1470",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-1470.html"
+				"ref_id": "RHSA-2023:1470",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:1470"
 			},
 			{
 				"ref_id": "CVE-2022-4269",
@@ -125,19 +125,6 @@
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20225214002",
 										"comment": "kernel is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20231470005",
-										"comment": "kernel-abi-stablelists is earlier than 0:5.14.0-162.22.2.el9_1"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20225249006",
-										"comment": "kernel-abi-stablelists is signed with AlmaLinux OS 9 key"
 									}
 								]
 							},
@@ -275,19 +262,6 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20231470027",
-										"comment": "kernel-doc is earlier than 0:5.14.0-162.22.2.el9_1"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20225249028",
-										"comment": "kernel-doc is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20231470029",
 										"comment": "kernel-modules is earlier than 0:5.14.0-162.22.2.el9_1"
 									},
@@ -327,7 +301,7 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20231470035",
+										"test_ref": "oval:org.almalinux.alsa:tst:20231470054",
 										"comment": "kernel-tools-libs is earlier than 0:5.14.0-162.22.2.el9_1"
 									},
 									{
@@ -340,7 +314,7 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20231470037",
+										"test_ref": "oval:org.almalinux.alsa:tst:20231470055",
 										"comment": "kernel-tools-libs-devel is earlier than 0:5.14.0-162.22.2.el9_1"
 									},
 									{
@@ -353,7 +327,7 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20231470039",
+										"test_ref": "oval:org.almalinux.alsa:tst:20231470056",
 										"comment": "kernel-zfcpdump is earlier than 0:5.14.0-162.22.2.el9_1"
 									},
 									{
@@ -366,7 +340,7 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20231470041",
+										"test_ref": "oval:org.almalinux.alsa:tst:20231470057",
 										"comment": "kernel-zfcpdump-core is earlier than 0:5.14.0-162.22.2.el9_1"
 									},
 									{
@@ -379,7 +353,7 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20231470043",
+										"test_ref": "oval:org.almalinux.alsa:tst:20231470058",
 										"comment": "kernel-zfcpdump-devel is earlier than 0:5.14.0-162.22.2.el9_1"
 									},
 									{
@@ -392,7 +366,7 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20231470045",
+										"test_ref": "oval:org.almalinux.alsa:tst:20231470059",
 										"comment": "kernel-zfcpdump-devel-matched is earlier than 0:5.14.0-162.22.2.el9_1"
 									},
 									{
@@ -405,7 +379,7 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20231470047",
+										"test_ref": "oval:org.almalinux.alsa:tst:20231470060",
 										"comment": "kernel-zfcpdump-modules is earlier than 0:5.14.0-162.22.2.el9_1"
 									},
 									{
@@ -418,7 +392,7 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20231470049",
+										"test_ref": "oval:org.almalinux.alsa:tst:20231470061",
 										"comment": "kernel-zfcpdump-modules-extra is earlier than 0:5.14.0-162.22.2.el9_1"
 									},
 									{
@@ -450,6 +424,32 @@
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20225249056",
 										"comment": "python3-perf is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20231470005",
+										"comment": "kernel-abi-stablelists is earlier than 0:5.14.0-162.22.2.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225249006",
+										"comment": "kernel-abi-stablelists is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20231470027",
+										"comment": "kernel-doc is earlier than 0:5.14.0-162.22.2.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225249028",
+										"comment": "kernel-doc is signed with AlmaLinux OS 9 key"
 									}
 								]
 							}

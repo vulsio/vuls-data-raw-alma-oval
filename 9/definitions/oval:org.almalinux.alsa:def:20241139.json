@@ -6,9 +6,9 @@
 		"Title": "ALSA-2024:1139: keylime security update (Low)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2024:1139",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-1139.html"
+				"ref_id": "RHSA-2024:1139",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:1139"
 			},
 			{
 				"ref_id": "CVE-2023-3674",
@@ -118,19 +118,6 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20241139007",
-										"comment": "keylime-selinux is earlier than 0:7.3.0-13.el9_3"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20228444008",
-										"comment": "keylime-selinux is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20241139009",
 										"comment": "keylime-tenant is earlier than 0:7.3.0-13.el9_3"
 									},
@@ -163,6 +150,19 @@
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20228444014",
 										"comment": "python3-keylime is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20241139007",
+										"comment": "keylime-selinux is earlier than 0:7.3.0-13.el9_3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228444008",
+										"comment": "keylime-selinux is signed with AlmaLinux OS 9 key"
 									}
 								]
 							}

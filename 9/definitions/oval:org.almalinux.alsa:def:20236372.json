@@ -6,9 +6,9 @@
 		"Title": "ALSA-2023:6372: gdb security update (Low)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2023:6372",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-6372.html"
+				"ref_id": "RHSA-2023:6372",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:6372"
 			},
 			{
 				"ref_id": "CVE-2021-3826",
@@ -92,19 +92,6 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20236372003",
-										"comment": "gdb-doc is earlier than 0:10.2-11.el9"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20236372004",
-										"comment": "gdb-doc is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20236372005",
 										"comment": "gdb-gdbserver is earlier than 0:10.2-11.el9"
 									},
@@ -137,6 +124,19 @@
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20236372010",
 										"comment": "gdb-minimal is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236372003",
+										"comment": "gdb-doc is earlier than 0:10.2-11.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236372004",
+										"comment": "gdb-doc is signed with AlmaLinux OS 9 key"
 									}
 								]
 							}

@@ -6,9 +6,9 @@
 		"Title": "ALSA-2024:6464: glib2 security update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2024:6464",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-6464.html"
+				"ref_id": "RHSA-2024:6464",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:6464"
 			},
 			{
 				"ref_id": "CVE-2024-34397",
@@ -105,19 +105,6 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20246464005",
-										"comment": "glib2-doc is earlier than 0:2.68.4-14.el9_4.1"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20236631006",
-										"comment": "glib2-doc is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20246464007",
 										"comment": "glib2-static is earlier than 0:2.68.4-14.el9_4.1"
 									},
@@ -131,12 +118,25 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20246464009",
+										"test_ref": "oval:org.almalinux.alsa:tst:20246464010",
 										"comment": "glib2-tests is earlier than 0:2.68.4-14.el9_4.1"
 									},
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20236631010",
 										"comment": "glib2-tests is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246464005",
+										"comment": "glib2-doc is earlier than 0:2.68.4-14.el9_4.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236631006",
+										"comment": "glib2-doc is signed with AlmaLinux OS 9 key"
 									}
 								]
 							}
@@ -145,7 +145,7 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alba:tst:20223893007",
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
 						"comment": "AlmaLinux 9 is installed"
 					}
 				]
@@ -153,7 +153,7 @@
 		],
 		"criterions": [
 			{
-				"test_ref": "oval:org.almalinux.alba:tst:20223893008",
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
 				"comment": "AlmaLinux must be installed"
 			}
 		]

@@ -6,9 +6,9 @@
 		"Title": "ALSA-2024:2551: bind security update (Important)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2024:2551",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-2551.html"
+				"ref_id": "RHSA-2024:2551",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:2551"
 			},
 			{
 				"ref_id": "CVE-2023-4408",
@@ -190,25 +190,12 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20242551005",
+										"test_ref": "oval:org.almalinux.alsa:tst:20242551022",
 										"comment": "bind-devel is earlier than 32:9.16.23-18.el9_4.1"
 									},
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20226763006",
 										"comment": "bind-devel is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20242551007",
-										"comment": "bind-dnssec-doc is earlier than 32:9.16.23-18.el9_4.1"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20226763008",
-										"comment": "bind-dnssec-doc is signed with AlmaLinux OS 9 key"
 									}
 								]
 							},
@@ -229,38 +216,12 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20242551011",
-										"comment": "bind-doc is earlier than 32:9.16.23-18.el9_4.1"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20228068012",
-										"comment": "bind-doc is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20242551013",
+										"test_ref": "oval:org.almalinux.alsa:tst:20242551023",
 										"comment": "bind-libs is earlier than 32:9.16.23-18.el9_4.1"
 									},
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20226763012",
 										"comment": "bind-libs is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20242551015",
-										"comment": "bind-license is earlier than 32:9.16.23-18.el9_4.1"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20226763014",
-										"comment": "bind-license is signed with AlmaLinux OS 9 key"
 									}
 								]
 							},
@@ -281,12 +242,12 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20242551019",
-										"comment": "python3-bind is earlier than 32:9.16.23-18.el9_4.1"
+										"test_ref": "oval:org.almalinux.alsa:tst:20242551024",
+										"comment": "bind-dyndb-ldap is earlier than 0:11.9-9.el9_4.alma.1"
 									},
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20226763018",
-										"comment": "python3-bind is signed with AlmaLinux OS 9 key"
+										"test_ref": "oval:org.almalinux.alsa:tst:20241789022",
+										"comment": "bind-dyndb-ldap is signed with AlmaLinux OS 9 key"
 									}
 								]
 							},
@@ -294,12 +255,51 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20242551021",
-										"comment": "bind-dyndb-ldap is earlier than 0:11.9-9.el9_4.alma.1"
+										"test_ref": "oval:org.almalinux.alsa:tst:20242551007",
+										"comment": "bind-dnssec-doc is earlier than 32:9.16.23-18.el9_4.1"
 									},
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20241789022",
-										"comment": "bind-dyndb-ldap is signed with AlmaLinux OS 9 key"
+										"test_ref": "oval:org.almalinux.alsa:tst:20226763008",
+										"comment": "bind-dnssec-doc is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242551011",
+										"comment": "bind-doc is earlier than 32:9.16.23-18.el9_4.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228068012",
+										"comment": "bind-doc is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242551015",
+										"comment": "bind-license is earlier than 32:9.16.23-18.el9_4.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226763014",
+										"comment": "bind-license is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242551019",
+										"comment": "python3-bind is earlier than 32:9.16.23-18.el9_4.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226763018",
+										"comment": "python3-bind is signed with AlmaLinux OS 9 key"
 									}
 								]
 							}

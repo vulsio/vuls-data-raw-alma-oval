@@ -6,9 +6,9 @@
 		"Title": "ALSA-2022:7326: pki-core security update (Important)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2022:7326",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-7326.html"
+				"ref_id": "RHSA-2022:7326",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2022:7326"
 			},
 			{
 				"ref_id": "CVE-2022-2414",
@@ -65,6 +65,32 @@
 					{
 						"operator": "OR",
 						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227326013",
+										"comment": "pki-symkey is earlier than 0:11.0.6-2.el9_0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227326014",
+										"comment": "pki-symkey is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227326015",
+										"comment": "pki-tools is earlier than 0:11.0.6-2.el9_0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227326016",
+										"comment": "pki-tools is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
 							{
 								"operator": "AND",
 								"criterions": [
@@ -140,32 +166,6 @@
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20227326012",
 										"comment": "pki-server is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20227326013",
-										"comment": "pki-symkey is earlier than 0:11.0.6-2.el9_0"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20227326014",
-										"comment": "pki-symkey is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20227326015",
-										"comment": "pki-tools is earlier than 0:11.0.6-2.el9_0"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20227326016",
-										"comment": "pki-tools is signed with AlmaLinux OS 9 key"
 									}
 								]
 							},

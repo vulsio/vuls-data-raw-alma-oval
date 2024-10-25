@@ -6,9 +6,9 @@
 		"Title": "ALSA-2024:4623: qt5-qtbase security update (Important)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2024:4623",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-4623.html"
+				"ref_id": "RHSA-2024:4623",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:4623"
 			},
 			{
 				"ref_id": "CVE-2024-39936",
@@ -85,19 +85,6 @@
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20236369010",
 										"comment": "qt5-qtbase is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20244623003",
-										"comment": "qt5-qtbase-common is earlier than 0:5.15.9-10.el9_4"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20236369012",
-										"comment": "qt5-qtbase-common is signed with AlmaLinux OS 9 key"
 									}
 								]
 							},
@@ -204,13 +191,26 @@
 										"comment": "qt5-qtbase-static is signed with AlmaLinux OS 9 key"
 									}
 								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244623003",
+										"comment": "qt5-qtbase-common is earlier than 0:5.15.9-10.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236369012",
+										"comment": "qt5-qtbase-common is signed with AlmaLinux OS 9 key"
+									}
+								]
 							}
 						]
 					}
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alba:tst:20223893007",
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
 						"comment": "AlmaLinux 9 is installed"
 					}
 				]
@@ -218,7 +218,7 @@
 		],
 		"criterions": [
 			{
-				"test_ref": "oval:org.almalinux.alba:tst:20223893008",
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
 				"comment": "AlmaLinux must be installed"
 			}
 		]

@@ -11,9 +11,9 @@
 				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-5709.html"
 			},
 			{
-				"ref_id": "ALSA-2022:5709",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-5709.html"
+				"ref_id": "RHSA-2022:5709",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2022:5709"
 			},
 			{
 				"ref_id": "CVE-2022-21540",
@@ -68,7 +68,7 @@
 					"text": "CVE-2022-21540",
 					"public": "20220719",
 					"href": "https://access.redhat.com/security/cve/CVE-2022-21540",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-402",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
 				},
@@ -76,7 +76,7 @@
 					"text": "CVE-2022-21541",
 					"public": "20220719",
 					"href": "https://access.redhat.com/security/cve/CVE-2022-21541",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-284",
 					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N"
 				},
@@ -84,7 +84,7 @@
 					"text": "CVE-2022-34169",
 					"public": "20220719",
 					"href": "https://access.redhat.com/security/cve/CVE-2022-34169",
-					"impact": "important",
+					"impact": "Important",
 					"cwe": "CWE-192",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
 				}
@@ -130,7 +130,7 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20225709005",
+										"test_ref": "oval:org.almalinux.alsa:tst:20225709034",
 										"comment": "java-1.8.0-openjdk-demo-fastdebug is earlier than 1:1.8.0.342.b07-1.el9_0"
 									},
 									{
@@ -143,7 +143,7 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20225709007",
+										"test_ref": "oval:org.almalinux.alsa:tst:20225709035",
 										"comment": "java-1.8.0-openjdk-demo-slowdebug is earlier than 1:1.8.0.342.b07-1.el9_0"
 									},
 									{
@@ -169,7 +169,7 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20225709011",
+										"test_ref": "oval:org.almalinux.alsa:tst:20225709036",
 										"comment": "java-1.8.0-openjdk-devel-fastdebug is earlier than 1:1.8.0.342.b07-1.el9_0"
 									},
 									{
@@ -182,7 +182,7 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20225709013",
+										"test_ref": "oval:org.almalinux.alsa:tst:20225709037",
 										"comment": "java-1.8.0-openjdk-devel-slowdebug is earlier than 1:1.8.0.342.b07-1.el9_0"
 									},
 									{
@@ -195,7 +195,7 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20225709015",
+										"test_ref": "oval:org.almalinux.alsa:tst:20225709038",
 										"comment": "java-1.8.0-openjdk-fastdebug is earlier than 1:1.8.0.342.b07-1.el9_0"
 									},
 									{
@@ -221,7 +221,7 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20225709019",
+										"test_ref": "oval:org.almalinux.alsa:tst:20225709039",
 										"comment": "java-1.8.0-openjdk-headless-fastdebug is earlier than 1:1.8.0.342.b07-1.el9_0"
 									},
 									{
@@ -234,12 +234,64 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20225709021",
+										"test_ref": "oval:org.almalinux.alsa:tst:20225709040",
 										"comment": "java-1.8.0-openjdk-headless-slowdebug is earlier than 1:1.8.0.342.b07-1.el9_0"
 									},
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20222137022",
 										"comment": "java-1.8.0-openjdk-headless-slowdebug is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225709041",
+										"comment": "java-1.8.0-openjdk-slowdebug is earlier than 1:1.8.0.342.b07-1.el9_0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20222137028",
+										"comment": "java-1.8.0-openjdk-slowdebug is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225709029",
+										"comment": "java-1.8.0-openjdk-src is earlier than 1:1.8.0.342.b07-1.el9_0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20222137030",
+										"comment": "java-1.8.0-openjdk-src is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225709042",
+										"comment": "java-1.8.0-openjdk-src-fastdebug is earlier than 1:1.8.0.342.b07-1.el9_0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20222137032",
+										"comment": "java-1.8.0-openjdk-src-fastdebug is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225709043",
+										"comment": "java-1.8.0-openjdk-src-slowdebug is earlier than 1:1.8.0.342.b07-1.el9_0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20222137034",
+										"comment": "java-1.8.0-openjdk-src-slowdebug is signed with AlmaLinux OS 9 key"
 									}
 								]
 							},
@@ -266,58 +318,6 @@
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20222137026",
 										"comment": "java-1.8.0-openjdk-javadoc-zip is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20225709027",
-										"comment": "java-1.8.0-openjdk-slowdebug is earlier than 1:1.8.0.342.b07-1.el9_0"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20222137028",
-										"comment": "java-1.8.0-openjdk-slowdebug is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20225709029",
-										"comment": "java-1.8.0-openjdk-src is earlier than 1:1.8.0.342.b07-1.el9_0"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20222137030",
-										"comment": "java-1.8.0-openjdk-src is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20225709031",
-										"comment": "java-1.8.0-openjdk-src-fastdebug is earlier than 1:1.8.0.342.b07-1.el9_0"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20222137032",
-										"comment": "java-1.8.0-openjdk-src-fastdebug is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20225709033",
-										"comment": "java-1.8.0-openjdk-src-slowdebug is earlier than 1:1.8.0.342.b07-1.el9_0"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20222137034",
-										"comment": "java-1.8.0-openjdk-src-slowdebug is signed with AlmaLinux OS 9 key"
 									}
 								]
 							}

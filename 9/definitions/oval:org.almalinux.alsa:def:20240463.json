@@ -6,9 +6,9 @@
 		"Title": "ALSA-2024:0463: rpm security update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2024:0463",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-0463.html"
+				"ref_id": "RHSA-2024:0463",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:0463"
 			},
 			{
 				"ref_id": "CVE-2021-35937",
@@ -139,19 +139,6 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20240463005",
-										"comment": "rpm-apidocs is earlier than 0:4.16.1.3-27.el9_3"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20240463006",
-										"comment": "rpm-apidocs is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20240463007",
 										"comment": "rpm-build is earlier than 0:4.16.1.3-27.el9_3"
 									},
@@ -165,7 +152,7 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20240463009",
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463033",
 										"comment": "rpm-build-libs is earlier than 0:4.16.1.3-27.el9_3"
 									},
 									{
@@ -178,20 +165,7 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20240463011",
-										"comment": "rpm-cron is earlier than 0:4.16.1.3-27.el9_3"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20240463012",
-										"comment": "rpm-cron is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20240463013",
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463034",
 										"comment": "rpm-devel is earlier than 0:4.16.1.3-27.el9_3"
 									},
 									{
@@ -204,7 +178,7 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20240463015",
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463035",
 										"comment": "rpm-libs is earlier than 0:4.16.1.3-27.el9_3"
 									},
 									{
@@ -308,12 +282,38 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20240463031",
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463036",
 										"comment": "rpm-sign-libs is earlier than 0:4.16.1.3-27.el9_3"
 									},
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20240463032",
 										"comment": "rpm-sign-libs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463005",
+										"comment": "rpm-apidocs is earlier than 0:4.16.1.3-27.el9_3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463006",
+										"comment": "rpm-apidocs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463011",
+										"comment": "rpm-cron is earlier than 0:4.16.1.3-27.el9_3"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240463012",
+										"comment": "rpm-cron is signed with AlmaLinux OS 9 key"
 									}
 								]
 							}

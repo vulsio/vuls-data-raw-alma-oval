@@ -6,9 +6,9 @@
 		"Title": "ALSA-2023:5532: nodejs security and bug fix update (Important)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2023:5532",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-5532.html"
+				"ref_id": "RHSA-2023:5532",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:5532"
 			},
 			{
 				"ref_id": "CVE-2023-32002",
@@ -126,19 +126,6 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20235532003",
-										"comment": "nodejs-docs is earlier than 1:16.20.2-1.el9_2"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20226595004",
-										"comment": "nodejs-docs is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20235532005",
 										"comment": "nodejs-full-i18n is earlier than 1:16.20.2-1.el9_2"
 									},
@@ -152,7 +139,7 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20235532007",
+										"test_ref": "oval:org.almalinux.alsa:tst:20235532010",
 										"comment": "nodejs-libs is earlier than 1:16.20.2-1.el9_2"
 									},
 									{
@@ -171,6 +158,19 @@
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20226595010",
 										"comment": "npm is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20235532003",
+										"comment": "nodejs-docs is earlier than 1:16.20.2-1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226595004",
+										"comment": "nodejs-docs is signed with AlmaLinux OS 9 key"
 									}
 								]
 							}

@@ -6,9 +6,9 @@
 		"Title": "ALSA-2023:6330: edk2 security, bug fix, and enhancement update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2023:6330",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-6330.html"
+				"ref_id": "RHSA-2023:6330",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:6330"
 			},
 			{
 				"ref_id": "CVE-2019-14560",
@@ -96,6 +96,19 @@
 								"operator": "AND",
 								"criterions": [
 									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236330005",
+										"comment": "edk2-tools is earlier than 0:20230524-3.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232165006",
+										"comment": "edk2-tools is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20236330001",
 										"comment": "edk2-aarch64 is earlier than 0:20230524-3.el9"
 									},
@@ -115,19 +128,6 @@
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20232165004",
 										"comment": "edk2-ovmf is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20236330005",
-										"comment": "edk2-tools is earlier than 0:20230524-3.el9"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20232165006",
-										"comment": "edk2-tools is signed with AlmaLinux OS 9 key"
 									}
 								]
 							},

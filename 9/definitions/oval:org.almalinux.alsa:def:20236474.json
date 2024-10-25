@@ -6,9 +6,9 @@
 		"Title": "ALSA-2023:6474: podman security, bug fix, and enhancement update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2023:6474",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-6474.html"
+				"ref_id": "RHSA-2023:6474",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:6474"
 			},
 			{
 				"ref_id": "CVE-2022-41723",
@@ -295,19 +295,6 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20236474003",
-										"comment": "podman-docker is earlier than 2:4.6.1-5.el9"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20227954004",
-										"comment": "podman-docker is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20236474005",
 										"comment": "podman-gvproxy is earlier than 2:4.6.1-5.el9"
 									},
@@ -353,6 +340,19 @@
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20227954012",
 										"comment": "podman-tests is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236474003",
+										"comment": "podman-docker is earlier than 2:4.6.1-5.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227954004",
+										"comment": "podman-docker is signed with AlmaLinux OS 9 key"
 									}
 								]
 							}

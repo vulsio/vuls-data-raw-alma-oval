@@ -6,9 +6,9 @@
 		"Title": "ALSA-2024:2147: ipa security update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2024:2147",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-2147.html"
+				"ref_id": "RHSA-2024:2147",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:2147"
 			},
 			{
 				"ref_id": "CVE-2024-1481",
@@ -92,19 +92,6 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20242147003",
-										"comment": "ipa-client-common is earlier than 0:4.11.0-9.el9_4"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20240141004",
-										"comment": "ipa-client-common is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20242147005",
 										"comment": "ipa-client-epn is earlier than 0:4.11.0-9.el9_4"
 									},
@@ -124,6 +111,45 @@
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20240141008",
 										"comment": "ipa-client-samba is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242147013",
+										"comment": "ipa-server is earlier than 0:4.11.0-9.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240141014",
+										"comment": "ipa-server is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242147019",
+										"comment": "ipa-server-trust-ad is earlier than 0:4.11.0-9.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240141020",
+										"comment": "ipa-server-trust-ad is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242147003",
+										"comment": "ipa-client-common is earlier than 0:4.11.0-9.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240141004",
+										"comment": "ipa-client-common is signed with AlmaLinux OS 9 key"
 									}
 								]
 							},
@@ -157,19 +183,6 @@
 								"operator": "AND",
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20242147013",
-										"comment": "ipa-server is earlier than 0:4.11.0-9.el9_4"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20240141014",
-										"comment": "ipa-server is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20242147015",
 										"comment": "ipa-server-common is earlier than 0:4.11.0-9.el9_4"
 									},
@@ -189,19 +202,6 @@
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20240141018",
 										"comment": "ipa-server-dns is signed with AlmaLinux OS 9 key"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20242147019",
-										"comment": "ipa-server-trust-ad is earlier than 0:4.11.0-9.el9_4"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20240141020",
-										"comment": "ipa-server-trust-ad is signed with AlmaLinux OS 9 key"
 									}
 								]
 							},
