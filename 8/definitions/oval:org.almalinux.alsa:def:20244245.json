@@ -6,9 +6,9 @@
 		"Title": "ALSA-2024:4245: python3 security update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2024:4245",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-4245.html"
+				"ref_id": "RHSA-2024:4245",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:4245"
 			},
 			{
 				"ref_id": "CVE-2024-36039",
@@ -76,11 +76,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034810108",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034805034",
 								"comment": "python3.12-PyMySQL is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034810109",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034805035",
 								"comment": "python3.12-PyMySQL is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -88,12 +88,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20244245001",
-						"comment": "python3.12-PyMySQL is earlier than 0:1.1.0-3.el8_10"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20244245001",
+						"comment": "python3.12-PyMySQL is earlier than 0:1.1.0-3.el8_10"
 					}
 				]
 			}

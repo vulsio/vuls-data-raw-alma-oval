@@ -11,9 +11,9 @@
 				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1979.html"
 			},
 			{
-				"ref_id": "ALSA-2021:1979",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1979.html"
+				"ref_id": "RHSA-2021:1979",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2021:1979"
 			},
 			{
 				"ref_id": "CVE-2020-25097",
@@ -49,7 +49,7 @@
 					"text": "CVE-2020-25097",
 					"public": "20200904",
 					"href": "https://access.redhat.com/security/cve/CVE-2020-25097",
-					"impact": "important",
+					"impact": "Important",
 					"cwe": "CWE-444",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N"
 				}
@@ -70,166 +70,86 @@
 								"criterias": [
 									{
 										"operator": "OR",
-										"criterions": [
+										"criterias": [
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805696",
-												"comment": "libecap is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034804888",
+																"comment": "libecap is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034804889",
+																"comment": "libecap is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20193476004",
+														"comment": "libecap is earlier than 0:1.0.1-2.module_el8.5.0+2548+24c223d9"
+													}
+												]
 											},
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805697",
-												"comment": "libecap is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034804890",
+																"comment": "libecap-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034804891",
+																"comment": "libecap-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20193476005",
+														"comment": "libecap-devel is earlier than 0:1.0.1-2.module_el8.5.0+2548+24c223d9"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034804892",
+																"comment": "squid is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034804893",
+																"comment": "squid is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20211979001",
+														"comment": "squid is earlier than 7:4.11-4.module_el8.4.0+2339+2063f9d1.2"
+													}
+												]
 											}
 										]
 									}
 								],
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:201934760011",
-										"comment": "libecap is earlier than 0:1.0.1-2.module_el8.5.0+2548+24c223d9"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805696",
-												"comment": "libecap is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805697",
-												"comment": "libecap is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:201934760012",
-										"comment": "libecap is earlier than 0:1.0.1-2.module_el8.5.0+72+8ec05e37"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805698",
-												"comment": "libecap-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805699",
-												"comment": "libecap-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:201934760031",
-										"comment": "libecap-devel is earlier than 0:1.0.1-2.module_el8.5.0+2548+24c223d9"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805698",
-												"comment": "libecap-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805699",
-												"comment": "libecap-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:201934760032",
-										"comment": "libecap-devel is earlier than 0:1.0.1-2.module_el8.5.0+72+8ec05e37"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805700",
-												"comment": "squid is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805701",
-												"comment": "squid is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202119790051",
-										"comment": "squid is earlier than 7:4.11-4.module_el8.4.0+2339+2063f9d1.2"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805700",
-												"comment": "squid is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805701",
-												"comment": "squid is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202119790052",
-										"comment": "squid is earlier than 7:4.11-4.module_el8.4.0+2349+2063f9d1.2"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808678",
-												"comment": "squid is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808679",
-												"comment": "squid is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202119790053",
-										"comment": "squid is earlier than 7:4.11-4.module_el8.4.0+787+bd6d340e.2"
+										"test_ref": "oval:org.almalinux.alsa:tst:20192593007",
+										"comment": "Module squid:4 is enabled"
 									}
 								]
 							}
@@ -237,10 +157,6 @@
 					}
 				],
 				"criterions": [
-					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20192593007",
-						"comment": "Module squid:4 is enabled"
-					},
 					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"

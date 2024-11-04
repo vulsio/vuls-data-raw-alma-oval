@@ -11,9 +11,9 @@
 				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-2008.html"
 			},
 			{
-				"ref_id": "ALSA-2022:2008",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-2008.html"
+				"ref_id": "RHSA-2022:2008",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2022:2008"
 			},
 			{
 				"ref_id": "CVE-2021-3660",
@@ -58,7 +58,7 @@
 					"text": "CVE-2021-3660",
 					"public": "20210720",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-3660",
-					"impact": "low",
+					"impact": "Low",
 					"cwe": "CWE-1021",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N"
 				},
@@ -66,7 +66,7 @@
 					"text": "CVE-2021-3698",
 					"public": "20210827",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-3698",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-295",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
 				}
@@ -89,11 +89,11 @@
 										"operator": "OR",
 										"criterions": [
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808116",
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808352",
 												"comment": "cockpit is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 											},
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808117",
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808353",
 												"comment": "cockpit is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 											}
 										]
@@ -113,11 +113,11 @@
 										"operator": "OR",
 										"criterions": [
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808118",
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808354",
 												"comment": "cockpit-bridge is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 											},
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808119",
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808355",
 												"comment": "cockpit-bridge is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 											}
 										]
@@ -137,11 +137,35 @@
 										"operator": "OR",
 										"criterions": [
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808120",
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808360",
+												"comment": "cockpit-ws is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808361",
+												"comment": "cockpit-ws is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20222008009",
+										"comment": "cockpit-ws is earlier than 0:264.1-1.el8"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808356",
 												"comment": "cockpit-doc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 											},
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808121",
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808357",
 												"comment": "cockpit-doc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 											}
 										]
@@ -161,11 +185,11 @@
 										"operator": "OR",
 										"criterions": [
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808122",
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808358",
 												"comment": "cockpit-system is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 											},
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808123",
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034808359",
 												"comment": "cockpit-system is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 											}
 										]
@@ -175,30 +199,6 @@
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20222008007",
 										"comment": "cockpit-system is earlier than 0:264.1-1.el8"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808124",
-												"comment": "cockpit-ws is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808125",
-												"comment": "cockpit-ws is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20222008009",
-										"comment": "cockpit-ws is earlier than 0:264.1-1.el8"
 									}
 								]
 							}

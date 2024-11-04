@@ -6,9 +6,9 @@
 		"Title": "ALSA-2024:4620: libndp security update (Important)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2024:4620",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-4620.html"
+				"ref_id": "RHSA-2024:4620",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:4620"
 			},
 			{
 				"ref_id": "CVE-2024-5564",
@@ -76,11 +76,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034809540",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034810092",
 								"comment": "libndp is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034809541",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034810093",
 								"comment": "libndp is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -88,12 +88,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20244620001",
-						"comment": "libndp is earlier than 0:1.7-7.el8_10.alma.1"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20244620002",
+						"comment": "libndp is earlier than 0:1.7-7.el8_10.alma.1"
 					}
 				]
 			}

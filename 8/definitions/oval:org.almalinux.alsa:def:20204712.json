@@ -11,9 +11,9 @@
 				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-4712.html"
 			},
 			{
-				"ref_id": "ALSA-2020:4712",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-4712.html"
+				"ref_id": "RHSA-2020:4712",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2020:4712"
 			},
 			{
 				"ref_id": "CVE-2018-11782",
@@ -49,7 +49,7 @@
 					"text": "CVE-2018-11782",
 					"public": "20190731",
 					"href": "https://access.redhat.com/security/cve/CVE-2018-11782",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-617",
 					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
 				}
@@ -70,334 +70,254 @@
 								"criterias": [
 									{
 										"operator": "OR",
-										"criterions": [
+										"criterias": [
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805806",
-												"comment": "libserf is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034805186",
+																"comment": "libserf is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034805187",
+																"comment": "libserf is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20192512022",
+														"comment": "libserf is earlier than 0:1.3.9-9.module_el8.3.0+2053+ac338b6d"
+													}
+												]
 											},
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805807",
-												"comment": "libserf is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034805188",
+																"comment": "mod_dav_svn is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034805189",
+																"comment": "mod_dav_svn is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204712003",
+														"comment": "mod_dav_svn is earlier than 0:1.10.2-3.module+el8.3.0+6671+2675c974"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034805190",
+																"comment": "subversion is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034805191",
+																"comment": "subversion is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204712005",
+														"comment": "subversion is earlier than 0:1.10.2-3.module+el8.3.0+6671+2675c974"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034805192",
+																"comment": "subversion-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034805193",
+																"comment": "subversion-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204712007",
+														"comment": "subversion-devel is earlier than 0:1.10.2-3.module+el8.3.0+6671+2675c974"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034805194",
+																"comment": "subversion-gnome is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034805195",
+																"comment": "subversion-gnome is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204712009",
+														"comment": "subversion-gnome is earlier than 0:1.10.2-3.module+el8.3.0+6671+2675c974"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034805198",
+																"comment": "subversion-libs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034805199",
+																"comment": "subversion-libs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204712013",
+														"comment": "subversion-libs is earlier than 0:1.10.2-3.module+el8.3.0+6671+2675c974"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034805200",
+																"comment": "subversion-perl is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034805201",
+																"comment": "subversion-perl is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204712015",
+														"comment": "subversion-perl is earlier than 0:1.10.2-3.module+el8.3.0+6671+2675c974"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034805202",
+																"comment": "subversion-tools is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034805203",
+																"comment": "subversion-tools is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204712017",
+														"comment": "subversion-tools is earlier than 0:1.10.2-3.module+el8.3.0+6671+2675c974"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034805204",
+																"comment": "utf8proc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034805205",
+																"comment": "utf8proc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20192512023",
+														"comment": "utf8proc is earlier than 0:2.1.1-5.module_el8.3.0+2053+ac338b6d"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034805196",
+																"comment": "subversion-javahl is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034805197",
+																"comment": "subversion-javahl is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20204712011",
+														"comment": "subversion-javahl is earlier than 0:1.10.2-3.module+el8.3.0+6671+2675c974"
+													}
+												]
 											}
 										]
 									}
 								],
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202047120011",
-										"comment": "libserf is earlier than 0:1.3.9-9.module_el8.3.0+2053+ac338b6d"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805806",
-												"comment": "libserf is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805807",
-												"comment": "libserf is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202047120012",
-										"comment": "libserf is earlier than 0:1.3.9-9.module_el8.4.0+2266+ac338b6d"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805806",
-												"comment": "libserf is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805807",
-												"comment": "libserf is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202047120013",
-										"comment": "libserf is earlier than 0:1.3.9-9.module_el8.5.0+73+aa7e29ed"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805808",
-												"comment": "mod_dav_svn is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805809",
-												"comment": "mod_dav_svn is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204712003",
-										"comment": "mod_dav_svn is earlier than 0:1.10.2-3.module+el8.3.0+6671+2675c974"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805810",
-												"comment": "subversion is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805811",
-												"comment": "subversion is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204712005",
-										"comment": "subversion is earlier than 0:1.10.2-3.module+el8.3.0+6671+2675c974"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805812",
-												"comment": "subversion-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805813",
-												"comment": "subversion-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204712007",
-										"comment": "subversion-devel is earlier than 0:1.10.2-3.module+el8.3.0+6671+2675c974"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805814",
-												"comment": "subversion-gnome is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805815",
-												"comment": "subversion-gnome is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204712009",
-										"comment": "subversion-gnome is earlier than 0:1.10.2-3.module+el8.3.0+6671+2675c974"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805816",
-												"comment": "subversion-javahl is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805817",
-												"comment": "subversion-javahl is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204712011",
-										"comment": "subversion-javahl is earlier than 0:1.10.2-3.module+el8.3.0+6671+2675c974"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805818",
-												"comment": "subversion-libs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805819",
-												"comment": "subversion-libs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204712013",
-										"comment": "subversion-libs is earlier than 0:1.10.2-3.module+el8.3.0+6671+2675c974"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805820",
-												"comment": "subversion-perl is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805821",
-												"comment": "subversion-perl is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204712015",
-										"comment": "subversion-perl is earlier than 0:1.10.2-3.module+el8.3.0+6671+2675c974"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805822",
-												"comment": "subversion-tools is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805823",
-												"comment": "subversion-tools is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20204712017",
-										"comment": "subversion-tools is earlier than 0:1.10.2-3.module+el8.3.0+6671+2675c974"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805824",
-												"comment": "utf8proc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805825",
-												"comment": "utf8proc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202047120191",
-										"comment": "utf8proc is earlier than 0:2.1.1-5.module_el8.3.0+2053+ac338b6d"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805824",
-												"comment": "utf8proc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805825",
-												"comment": "utf8proc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202047120192",
-										"comment": "utf8proc is earlier than 0:2.1.1-5.module_el8.4.0+2266+ac338b6d"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805824",
-												"comment": "utf8proc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034805825",
-												"comment": "utf8proc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202047120193",
-										"comment": "utf8proc is earlier than 0:2.1.1-5.module_el8.5.0+73+aa7e29ed"
+										"test_ref": "oval:org.almalinux.alsa:tst:20192512021",
+										"comment": "Module subversion:1.10 is enabled"
 									}
 								]
 							}
@@ -405,10 +325,6 @@
 					}
 				],
 				"criterions": [
-					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20192512021",
-						"comment": "Module subversion:1.10 is enabled"
-					},
 					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"

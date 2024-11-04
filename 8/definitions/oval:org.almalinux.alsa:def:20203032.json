@@ -11,9 +11,9 @@
 				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-3032.html"
 			},
 			{
-				"ref_id": "ALSA-2020:3032",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-3032.html"
+				"ref_id": "RHSA-2020:3032",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2020:3032"
 			},
 			{
 				"ref_id": "CVE-2019-14857",
@@ -58,7 +58,7 @@
 					"text": "CVE-2019-14857",
 					"public": "20191002",
 					"href": "https://access.redhat.com/security/cve/CVE-2019-14857",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-601",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
 				},
@@ -66,7 +66,7 @@
 					"text": "CVE-2019-20479",
 					"public": "20191112",
 					"href": "https://access.redhat.com/security/cve/CVE-2019-20479",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-601",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
 				}
@@ -87,190 +87,86 @@
 								"criterias": [
 									{
 										"operator": "OR",
-										"criterions": [
+										"criterias": [
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034804608",
-												"comment": "cjose is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034805820",
+																"comment": "cjose is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034805821",
+																"comment": "cjose is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20203032008",
+														"comment": "cjose is earlier than 0:0.6.1-2.module_el8.3.0+2087+ac02cfd2"
+													}
+												]
 											},
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034804609",
-												"comment": "cjose is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034805822",
+																"comment": "cjose-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034805823",
+																"comment": "cjose-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20203032009",
+														"comment": "cjose-devel is earlier than 0:0.6.1-2.module_el8.3.0+2087+ac02cfd2"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034805824",
+																"comment": "mod_auth_openidc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034805825",
+																"comment": "mod_auth_openidc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20203032010",
+														"comment": "mod_auth_openidc is earlier than 0:2.3.7-4.module_el8.2.0+463+d53af530.3"
+													}
+												]
 											}
 										]
 									}
 								],
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202030320011",
-										"comment": "cjose is earlier than 0:0.6.1-2.module_el8.3.0+2087+ac02cfd2"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034804608",
-												"comment": "cjose is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034804609",
-												"comment": "cjose is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202030320012",
-										"comment": "cjose is earlier than 0:0.6.1-2.module_el8.4.0+2218+f2438af7"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034804608",
-												"comment": "cjose is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034804609",
-												"comment": "cjose is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202030320013",
-										"comment": "cjose is earlier than 0:0.6.1-2.module_el8.5.0+32+0dbd0c97"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034804610",
-												"comment": "cjose-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034804611",
-												"comment": "cjose-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202030320031",
-										"comment": "cjose-devel is earlier than 0:0.6.1-2.module_el8.3.0+2087+ac02cfd2"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034804610",
-												"comment": "cjose-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034804611",
-												"comment": "cjose-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202030320032",
-										"comment": "cjose-devel is earlier than 0:0.6.1-2.module_el8.4.0+2218+f2438af7"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034804610",
-												"comment": "cjose-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034804611",
-												"comment": "cjose-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202030320033",
-										"comment": "cjose-devel is earlier than 0:0.6.1-2.module_el8.5.0+32+0dbd0c97"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034804612",
-												"comment": "mod_auth_openidc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034804613",
-												"comment": "mod_auth_openidc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202030320051",
-										"comment": "mod_auth_openidc is earlier than 0:2.3.7-4.module_el8.3.0+2087+ac02cfd2.3"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808760",
-												"comment": "mod_auth_openidc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808761",
-												"comment": "mod_auth_openidc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202030320052",
-										"comment": "mod_auth_openidc is earlier than 0:2.3.7-4.module_el8.2.0+463+d53af530.3"
+										"test_ref": "oval:org.almalinux.alsa:tst:20203032007",
+										"comment": "Module mod_auth_openidc:2.3 is enabled"
 									}
 								]
 							}
@@ -278,10 +174,6 @@
 					}
 				],
 				"criterions": [
-					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20203032007",
-						"comment": "Module mod_auth_openidc:2.3 is enabled"
-					},
 					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"

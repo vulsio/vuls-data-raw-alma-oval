@@ -11,9 +11,9 @@
 				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4519.html"
 			},
 			{
-				"ref_id": "ALSA-2021:4519",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4519.html"
+				"ref_id": "RHSA-2021:4519",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2021:4519"
 			},
 			{
 				"ref_id": "CVE-2019-19004",
@@ -58,7 +58,7 @@
 					"text": "CVE-2019-19004",
 					"public": "20210211",
 					"href": "https://access.redhat.com/security/cve/CVE-2019-19004",
-					"impact": "low",
+					"impact": "Low",
 					"cwe": "CWE-190",
 					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L"
 				},
@@ -66,7 +66,7 @@
 					"text": "CVE-2019-19005",
 					"public": "20210211",
 					"href": "https://access.redhat.com/security/cve/CVE-2019-19005",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
 				}
 			]
@@ -82,11 +82,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034807374",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034807928",
 								"comment": "autotrace is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034807375",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034807929",
 								"comment": "autotrace is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -94,12 +94,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20214519001",
-						"comment": "autotrace is earlier than 0:0.31.1-53.el8"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20214519001",
+						"comment": "autotrace is earlier than 0:0.31.1-53.el8"
 					}
 				]
 			}

@@ -6,9 +6,9 @@
 		"Title": "ALSA-2023:7732: tracker-miners security update (Important)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2023:7732",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-7732.html"
+				"ref_id": "RHSA-2023:7732",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:7732"
 			},
 			{
 				"ref_id": "CVE-2023-5557",
@@ -76,11 +76,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034809502",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034809356",
 								"comment": "tracker-miners is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034809503",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034809357",
 								"comment": "tracker-miners is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -88,12 +88,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20237732001",
-						"comment": "tracker-miners is earlier than 0:2.1.5-2.el8_9.1"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20237732001",
+						"comment": "tracker-miners is earlier than 0:2.1.5-2.el8_9.1"
 					}
 				]
 			}

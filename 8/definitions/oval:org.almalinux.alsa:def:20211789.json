@@ -11,9 +11,9 @@
 				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1789.html"
 			},
 			{
-				"ref_id": "ALSA-2021:1789",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1789.html"
+				"ref_id": "RHSA-2021:1789",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2021:1789"
 			},
 			{
 				"ref_id": "CVE-2020-12695",
@@ -50,7 +50,7 @@
 					"text": "CVE-2020-12695",
 					"public": "20200608",
 					"href": "https://access.redhat.com/security/cve/CVE-2020-12695",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-20->(CWE-400|CWE-918)",
 					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:N/A:H"
 				}
@@ -73,11 +73,11 @@
 										"operator": "OR",
 										"criterions": [
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807368",
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807110",
 												"comment": "gssdp is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 											},
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807369",
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807111",
 												"comment": "gssdp is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 											}
 										]
@@ -97,11 +97,11 @@
 										"operator": "OR",
 										"criterions": [
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807370",
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807112",
 												"comment": "gssdp-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 											},
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807371",
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807113",
 												"comment": "gssdp-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 											}
 										]
@@ -121,35 +121,11 @@
 										"operator": "OR",
 										"criterions": [
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807372",
-												"comment": "gssdp-docs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807373",
-												"comment": "gssdp-docs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20211789005",
-										"comment": "gssdp-docs is earlier than 0:1.0.5-1.el8"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807194",
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807116",
 												"comment": "gupnp is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 											},
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807195",
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807117",
 												"comment": "gupnp is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 											}
 										]
@@ -169,11 +145,11 @@
 										"operator": "OR",
 										"criterions": [
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807196",
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807118",
 												"comment": "gupnp-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 											},
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807197",
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807119",
 												"comment": "gupnp-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 											}
 										]
@@ -183,6 +159,30 @@
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20211789009",
 										"comment": "gupnp-devel is earlier than 0:1.0.6-1.el8"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807114",
+												"comment": "gssdp-docs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807115",
+												"comment": "gssdp-docs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20211789005",
+										"comment": "gssdp-docs is earlier than 0:1.0.5-1.el8"
 									}
 								]
 							}

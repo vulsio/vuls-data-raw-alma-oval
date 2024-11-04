@@ -6,9 +6,9 @@
 		"Title": "ALSA-2022:7458: flatpak-builder security and bug fix update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2022:7458",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7458.html"
+				"ref_id": "RHSA-2022:7458",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2022:7458"
 			},
 			{
 				"ref_id": "CVE-2022-21682",
@@ -66,11 +66,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034803886",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034808516",
 								"comment": "flatpak-builder is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034803887",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034808517",
 								"comment": "flatpak-builder is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -78,12 +78,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20227458001",
-						"comment": "flatpak-builder is earlier than 0:1.0.14-2.el8"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20227458001",
+						"comment": "flatpak-builder is earlier than 0:1.0.14-2.el8"
 					}
 				]
 			}

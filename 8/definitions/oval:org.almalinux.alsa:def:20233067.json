@@ -6,9 +6,9 @@
 		"Title": "ALSA-2023:3067: autotrace security update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2023:3067",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-3067.html"
+				"ref_id": "RHSA-2023:3067",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:3067"
 			},
 			{
 				"ref_id": "CVE-2022-32323",
@@ -76,11 +76,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034807374",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034807928",
 								"comment": "autotrace is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034807375",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034807929",
 								"comment": "autotrace is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -88,12 +88,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20233067001",
-						"comment": "autotrace is earlier than 0:0.31.1-55.el8"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20233067001",
+						"comment": "autotrace is earlier than 0:0.31.1-55.el8"
 					}
 				]
 			}

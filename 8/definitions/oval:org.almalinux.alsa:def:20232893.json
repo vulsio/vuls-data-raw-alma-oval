@@ -6,9 +6,9 @@
 		"Title": "ALSA-2023:2893: python-mako security update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2023:2893",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-2893.html"
+				"ref_id": "RHSA-2023:2893",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:2893"
 			},
 			{
 				"ref_id": "CVE-2022-40023",
@@ -76,11 +76,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034806150",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034808842",
 								"comment": "python3-mako is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034806151",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034808843",
 								"comment": "python3-mako is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -88,12 +88,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20232893001",
-						"comment": "python3-mako is earlier than 0:1.0.6-14.el8"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20232893001",
+						"comment": "python3-mako is earlier than 0:1.0.6-14.el8"
 					}
 				]
 			}

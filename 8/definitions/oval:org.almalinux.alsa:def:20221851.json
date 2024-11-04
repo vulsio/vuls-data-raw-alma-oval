@@ -11,9 +11,9 @@
 				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-1851.html"
 			},
 			{
-				"ref_id": "ALSA-2022:1851",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-1851.html"
+				"ref_id": "RHSA-2022:1851",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2022:1851"
 			},
 			{
 				"ref_id": "CVE-2021-4213",
@@ -49,7 +49,7 @@
 					"text": "CVE-2021-4213",
 					"public": "20220209",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-4213",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-401",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H"
 				}
@@ -78,11 +78,11 @@
 														"operator": "OR",
 														"criterions": [
 															{
-																"test_ref": "oval:org.almalinux.alba:tst:2020034805002",
+																"test_ref": "oval:org.almalinux.alba:tst:2020034805690",
 																"comment": "jss is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 															},
 															{
-																"test_ref": "oval:org.almalinux.alba:tst:2020034805003",
+																"test_ref": "oval:org.almalinux.alba:tst:2020034805691",
 																"comment": "jss is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 															}
 														]
@@ -90,7 +90,7 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20221851001",
+														"test_ref": "oval:org.almalinux.alsa:tst:20221851028",
 														"comment": "jss is earlier than 0:4.9.3-1.module_el8.6.0+2764+9fc58d50"
 													}
 												]
@@ -102,11 +102,11 @@
 														"operator": "OR",
 														"criterions": [
 															{
-																"test_ref": "oval:org.almalinux.alba:tst:2020034805004",
+																"test_ref": "oval:org.almalinux.alba:tst:2020034805692",
 																"comment": "jss-javadoc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 															},
 															{
-																"test_ref": "oval:org.almalinux.alba:tst:2020034805005",
+																"test_ref": "oval:org.almalinux.alba:tst:2020034805693",
 																"comment": "jss-javadoc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 															}
 														]
@@ -114,7 +114,7 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20221851003",
+														"test_ref": "oval:org.almalinux.alsa:tst:20221851029",
 														"comment": "jss-javadoc is earlier than 0:4.9.3-1.module_el8.6.0+2764+9fc58d50"
 													}
 												]
@@ -126,203 +126,11 @@
 														"operator": "OR",
 														"criterions": [
 															{
-																"test_ref": "oval:org.almalinux.alba:tst:2020034805006",
-																"comment": "ldapjdk is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-															},
-															{
-																"test_ref": "oval:org.almalinux.alba:tst:2020034805007",
-																"comment": "ldapjdk is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-															}
-														]
-													}
-												],
-												"criterions": [
-													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20221851005",
-														"comment": "ldapjdk is earlier than 0:4.23.0-1.module_el8.6.0+2764+9fc58d50"
-													}
-												]
-											},
-											{
-												"operator": "AND",
-												"criterias": [
-													{
-														"operator": "OR",
-														"criterions": [
-															{
-																"test_ref": "oval:org.almalinux.alba:tst:2020034805008",
-																"comment": "ldapjdk-javadoc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-															},
-															{
-																"test_ref": "oval:org.almalinux.alba:tst:2020034805009",
-																"comment": "ldapjdk-javadoc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-															}
-														]
-													}
-												],
-												"criterions": [
-													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20221851007",
-														"comment": "ldapjdk-javadoc is earlier than 0:4.23.0-1.module_el8.6.0+2764+9fc58d50"
-													}
-												]
-											},
-											{
-												"operator": "AND",
-												"criterias": [
-													{
-														"operator": "OR",
-														"criterions": [
-															{
-																"test_ref": "oval:org.almalinux.alsa:tst:2020034805010",
-																"comment": "pki-acme is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-															},
-															{
-																"test_ref": "oval:org.almalinux.alsa:tst:2020034805011",
-																"comment": "pki-acme is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-															}
-														]
-													}
-												],
-												"criterions": [
-													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20221851009",
-														"comment": "pki-acme is earlier than 0:10.12.0-2.module_el8.6.0+2764+9fc58d50"
-													}
-												]
-											},
-											{
-												"operator": "AND",
-												"criterias": [
-													{
-														"operator": "OR",
-														"criterions": [
-															{
-																"test_ref": "oval:org.almalinux.alba:tst:2020034805012",
-																"comment": "pki-base is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-															},
-															{
-																"test_ref": "oval:org.almalinux.alba:tst:2020034805013",
-																"comment": "pki-base is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-															}
-														]
-													}
-												],
-												"criterions": [
-													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20221851011",
-														"comment": "pki-base is earlier than 0:10.12.0-2.module_el8.6.0+2764+9fc58d50"
-													}
-												]
-											},
-											{
-												"operator": "AND",
-												"criterias": [
-													{
-														"operator": "OR",
-														"criterions": [
-															{
-																"test_ref": "oval:org.almalinux.alba:tst:2020034805014",
-																"comment": "pki-base-java is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-															},
-															{
-																"test_ref": "oval:org.almalinux.alba:tst:2020034805015",
-																"comment": "pki-base-java is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-															}
-														]
-													}
-												],
-												"criterions": [
-													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20221851013",
-														"comment": "pki-base-java is earlier than 0:10.12.0-2.module_el8.6.0+2764+9fc58d50"
-													}
-												]
-											},
-											{
-												"operator": "AND",
-												"criterias": [
-													{
-														"operator": "OR",
-														"criterions": [
-															{
-																"test_ref": "oval:org.almalinux.alba:tst:2020034805016",
-																"comment": "pki-ca is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-															},
-															{
-																"test_ref": "oval:org.almalinux.alba:tst:2020034805017",
-																"comment": "pki-ca is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-															}
-														]
-													}
-												],
-												"criterions": [
-													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20221851015",
-														"comment": "pki-ca is earlier than 0:10.12.0-2.module_el8.6.0+2764+9fc58d50"
-													}
-												]
-											},
-											{
-												"operator": "AND",
-												"criterias": [
-													{
-														"operator": "OR",
-														"criterions": [
-															{
-																"test_ref": "oval:org.almalinux.alba:tst:2020034805018",
-																"comment": "pki-kra is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-															},
-															{
-																"test_ref": "oval:org.almalinux.alba:tst:2020034805019",
-																"comment": "pki-kra is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-															}
-														]
-													}
-												],
-												"criterions": [
-													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20221851017",
-														"comment": "pki-kra is earlier than 0:10.12.0-2.module_el8.6.0+2764+9fc58d50"
-													}
-												]
-											},
-											{
-												"operator": "AND",
-												"criterias": [
-													{
-														"operator": "OR",
-														"criterions": [
-															{
-																"test_ref": "oval:org.almalinux.alba:tst:2020034805020",
-																"comment": "pki-server is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-															},
-															{
-																"test_ref": "oval:org.almalinux.alba:tst:2020034805021",
-																"comment": "pki-server is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-															}
-														]
-													}
-												],
-												"criterions": [
-													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20221851019",
-														"comment": "pki-server is earlier than 0:10.12.0-2.module_el8.6.0+2764+9fc58d50"
-													}
-												]
-											},
-											{
-												"operator": "AND",
-												"criterias": [
-													{
-														"operator": "OR",
-														"criterions": [
-															{
-																"test_ref": "oval:org.almalinux.alba:tst:2020034805022",
+																"test_ref": "oval:org.almalinux.alba:tst:2020034805708",
 																"comment": "pki-symkey is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 															},
 															{
-																"test_ref": "oval:org.almalinux.alba:tst:2020034805023",
+																"test_ref": "oval:org.almalinux.alba:tst:2020034805709",
 																"comment": "pki-symkey is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 															}
 														]
@@ -330,7 +138,7 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20221851021",
+														"test_ref": "oval:org.almalinux.alsa:tst:20221851030",
 														"comment": "pki-symkey is earlier than 0:10.12.0-2.module_el8.6.0+2764+9fc58d50"
 													}
 												]
@@ -342,11 +150,11 @@
 														"operator": "OR",
 														"criterions": [
 															{
-																"test_ref": "oval:org.almalinux.alba:tst:2020034805024",
+																"test_ref": "oval:org.almalinux.alba:tst:2020034805710",
 																"comment": "pki-tools is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 															},
 															{
-																"test_ref": "oval:org.almalinux.alba:tst:2020034805025",
+																"test_ref": "oval:org.almalinux.alba:tst:2020034805711",
 																"comment": "pki-tools is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 															}
 														]
@@ -354,7 +162,7 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20221851023",
+														"test_ref": "oval:org.almalinux.alsa:tst:20221851031",
 														"comment": "pki-tools is earlier than 0:10.12.0-2.module_el8.6.0+2764+9fc58d50"
 													}
 												]
@@ -366,11 +174,203 @@
 														"operator": "OR",
 														"criterions": [
 															{
-																"test_ref": "oval:org.almalinux.alba:tst:2020034805026",
+																"test_ref": "oval:org.almalinux.alba:tst:2020034805694",
+																"comment": "ldapjdk is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034805695",
+																"comment": "ldapjdk is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20221851032",
+														"comment": "ldapjdk is earlier than 0:4.23.0-1.module_el8.6.0+2764+9fc58d50"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034805696",
+																"comment": "ldapjdk-javadoc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034805697",
+																"comment": "ldapjdk-javadoc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20221851033",
+														"comment": "ldapjdk-javadoc is earlier than 0:4.23.0-1.module_el8.6.0+2764+9fc58d50"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808266",
+																"comment": "pki-acme is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808267",
+																"comment": "pki-acme is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20221851034",
+														"comment": "pki-acme is earlier than 0:10.12.0-2.module_el8.6.0+2764+9fc58d50"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034805698",
+																"comment": "pki-base is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034805699",
+																"comment": "pki-base is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20221851035",
+														"comment": "pki-base is earlier than 0:10.12.0-2.module_el8.6.0+2764+9fc58d50"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034805700",
+																"comment": "pki-base-java is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034805701",
+																"comment": "pki-base-java is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20221851036",
+														"comment": "pki-base-java is earlier than 0:10.12.0-2.module_el8.6.0+2764+9fc58d50"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034805702",
+																"comment": "pki-ca is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034805703",
+																"comment": "pki-ca is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20221851037",
+														"comment": "pki-ca is earlier than 0:10.12.0-2.module_el8.6.0+2764+9fc58d50"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034805704",
+																"comment": "pki-kra is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034805705",
+																"comment": "pki-kra is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20221851038",
+														"comment": "pki-kra is earlier than 0:10.12.0-2.module_el8.6.0+2764+9fc58d50"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034805706",
+																"comment": "pki-server is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034805707",
+																"comment": "pki-server is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20221851039",
+														"comment": "pki-server is earlier than 0:10.12.0-2.module_el8.6.0+2764+9fc58d50"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034805712",
 																"comment": "python3-pki is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 															},
 															{
-																"test_ref": "oval:org.almalinux.alba:tst:2020034805027",
+																"test_ref": "oval:org.almalinux.alba:tst:2020034805713",
 																"comment": "python3-pki is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 															}
 														]
@@ -378,7 +378,7 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20221851025",
+														"test_ref": "oval:org.almalinux.alsa:tst:20221851040",
 														"comment": "python3-pki is earlier than 0:10.12.0-2.module_el8.6.0+2764+9fc58d50"
 													}
 												]
@@ -390,11 +390,11 @@
 														"operator": "OR",
 														"criterions": [
 															{
-																"test_ref": "oval:org.almalinux.alba:tst:2020034805028",
+																"test_ref": "oval:org.almalinux.alba:tst:2020034805714",
 																"comment": "tomcatjss is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 															},
 															{
-																"test_ref": "oval:org.almalinux.alba:tst:2020034805029",
+																"test_ref": "oval:org.almalinux.alba:tst:2020034805715",
 																"comment": "tomcatjss is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 															}
 														]
@@ -402,7 +402,7 @@
 												],
 												"criterions": [
 													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20221851027",
+														"test_ref": "oval:org.almalinux.alsa:tst:20221851041",
 														"comment": "tomcatjss is earlier than 0:7.7.1-1.module_el8.6.0+2764+9fc58d50"
 													}
 												]

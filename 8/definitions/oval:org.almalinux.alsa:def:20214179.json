@@ -11,9 +11,9 @@
 				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4179.html"
 			},
 			{
-				"ref_id": "ALSA-2021:4179",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4179.html"
+				"ref_id": "RHSA-2021:4179",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2021:4179"
 			},
 			{
 				"ref_id": "CVE-2020-36314",
@@ -49,7 +49,7 @@
 					"text": "CVE-2020-36314",
 					"public": "20210215",
 					"href": "https://access.redhat.com/security/cve/CVE-2020-36314",
-					"impact": "low",
+					"impact": "Low",
 					"cwe": "CWE-22",
 					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:L"
 				}
@@ -66,11 +66,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034804294",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034805316",
 								"comment": "file-roller is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034804295",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034805317",
 								"comment": "file-roller is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -78,12 +78,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20214179001",
-						"comment": "file-roller is earlier than 0:3.28.1-4.el8"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20214179001",
+						"comment": "file-roller is earlier than 0:3.28.1-4.el8"
 					}
 				]
 			}

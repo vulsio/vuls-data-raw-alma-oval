@@ -6,9 +6,9 @@
 		"Title": "ALSA-2022:7070: firefox security update (Important)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2022:7070",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7070.html"
+				"ref_id": "RHSA-2022:7070",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2022:7070"
 			},
 			{
 				"ref_id": "CVE-2022-42927",
@@ -117,11 +117,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034803504",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034803416",
 								"comment": "firefox is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034803505",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034803417",
 								"comment": "firefox is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -129,12 +129,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20227070001",
-						"comment": "firefox is earlier than 0:102.4.0-1.el8_6.alma"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20227070002",
+						"comment": "firefox is earlier than 0:102.4.0-1.el8_6.alma"
 					}
 				]
 			}

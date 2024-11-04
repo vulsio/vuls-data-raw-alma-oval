@@ -11,9 +11,9 @@
 				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-1801.html"
 			},
 			{
-				"ref_id": "ALSA-2022:1801",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-1801.html"
+				"ref_id": "RHSA-2022:1801",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2022:1801"
 			},
 			{
 				"ref_id": "CVE-2021-39358",
@@ -49,7 +49,7 @@
 					"text": "CVE-2021-39358",
 					"public": "20210822",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-39358",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-295",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
 				}
@@ -66,11 +66,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034808070",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034808244",
 								"comment": "gfbgraph is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034808071",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034808245",
 								"comment": "gfbgraph is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -78,12 +78,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20221801001",
-						"comment": "gfbgraph is earlier than 0:0.2.4-1.el8"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20221801001",
+						"comment": "gfbgraph is earlier than 0:0.2.4-1.el8"
 					}
 				]
 			}

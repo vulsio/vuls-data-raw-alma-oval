@@ -6,9 +6,9 @@
 		"Title": "ALSA-2022:7700: gdisk security update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2022:7700",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7700.html"
+				"ref_id": "RHSA-2022:7700",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2022:7700"
 			},
 			{
 				"ref_id": "CVE-2020-0256",
@@ -83,11 +83,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034808366",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034808602",
 								"comment": "gdisk is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034808367",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034808603",
 								"comment": "gdisk is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -95,12 +95,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20227700001",
-						"comment": "gdisk is earlier than 0:1.0.3-11.el8"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20227700001",
+						"comment": "gdisk is earlier than 0:1.0.3-11.el8"
 					}
 				]
 			}

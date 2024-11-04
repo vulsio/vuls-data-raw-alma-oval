@@ -11,9 +11,9 @@
 				"ref_url": "https://errata.almalinux.org/8/ALEA-2021-1906.html"
 			},
 			{
-				"ref_id": "ALEA-2021:1906",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALEA-2021-1906.html"
+				"ref_id": "RHEA-2021:1906",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHEA-2021:1906"
 			},
 			{
 				"ref_id": "CVE-2019-20391",
@@ -112,7 +112,7 @@
 					"text": "CVE-2019-20391",
 					"public": "20190426",
 					"href": "https://access.redhat.com/security/cve/CVE-2019-20391",
-					"impact": "low",
+					"impact": "Low",
 					"cwe": "CWE-119",
 					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
 				},
@@ -120,7 +120,7 @@
 					"text": "CVE-2019-20392",
 					"public": "20190307",
 					"href": "https://access.redhat.com/security/cve/CVE-2019-20392",
-					"impact": "low",
+					"impact": "Low",
 					"cwe": "CWE-119",
 					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
 				},
@@ -128,7 +128,7 @@
 					"text": "CVE-2019-20393",
 					"public": "20190329",
 					"href": "https://access.redhat.com/security/cve/CVE-2019-20393",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-416",
 					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
 				},
@@ -136,7 +136,7 @@
 					"text": "CVE-2019-20394",
 					"public": "20190426",
 					"href": "https://access.redhat.com/security/cve/CVE-2019-20394",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-416",
 					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
 				},
@@ -144,7 +144,7 @@
 					"text": "CVE-2019-20395",
 					"public": "20190308",
 					"href": "https://access.redhat.com/security/cve/CVE-2019-20395",
-					"impact": "low",
+					"impact": "Low",
 					"cwe": "CWE-674",
 					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
 				},
@@ -152,7 +152,7 @@
 					"text": "CVE-2019-20396",
 					"public": "20190329",
 					"href": "https://access.redhat.com/security/cve/CVE-2019-20396",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-125",
 					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N"
 				},
@@ -160,7 +160,7 @@
 					"text": "CVE-2019-20397",
 					"public": "20190328",
 					"href": "https://access.redhat.com/security/cve/CVE-2019-20397",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-416",
 					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
 				},
@@ -168,7 +168,7 @@
 					"text": "CVE-2019-20398",
 					"public": "20190429",
 					"href": "https://access.redhat.com/security/cve/CVE-2019-20398",
-					"impact": "low",
+					"impact": "Low",
 					"cwe": "CWE-476",
 					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
 				}
@@ -185,11 +185,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alea:tst:2020034804670",
+								"test_ref": "oval:org.almalinux.alea:tst:2020034805082",
 								"comment": "libyang is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alea:tst:2020034804671",
+								"test_ref": "oval:org.almalinux.alea:tst:2020034805083",
 								"comment": "libyang is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -197,12 +197,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alea:tst:20211906001",
-						"comment": "libyang is earlier than 0:1.0.184-1.el8"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alea:tst:20211906001",
+						"comment": "libyang is earlier than 0:1.0.184-1.el8"
 					}
 				]
 			}

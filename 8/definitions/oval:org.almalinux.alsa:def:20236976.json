@@ -6,9 +6,9 @@
 		"Title": "ALSA-2023:6976: libfastjson security update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2023:6976",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-6976.html"
+				"ref_id": "RHSA-2023:6976",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:6976"
 			},
 			{
 				"ref_id": "CVE-2020-12762",
@@ -59,7 +59,7 @@
 					"text": "CVE-2020-12762",
 					"public": "20200502",
 					"href": "https://access.redhat.com/security/cve/CVE-2020-12762",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-190->CWE-787",
 					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
 				}
@@ -76,11 +76,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034808966",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034809082",
 								"comment": "libfastjson is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034808967",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034809083",
 								"comment": "libfastjson is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -88,12 +88,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20236976001",
-						"comment": "libfastjson is earlier than 0:0.99.9-2.el8"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20236976001",
+						"comment": "libfastjson is earlier than 0:0.99.9-2.el8"
 					}
 				]
 			}

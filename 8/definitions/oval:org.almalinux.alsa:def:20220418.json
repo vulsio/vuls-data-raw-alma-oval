@@ -11,9 +11,9 @@
 				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-0418.html"
 			},
 			{
-				"ref_id": "ALSA-2022:0418",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-0418.html"
+				"ref_id": "RHSA-2022:0418",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2022:0418"
 			},
 			{
 				"ref_id": "CVE-2022-23959",
@@ -49,7 +49,7 @@
 					"text": "CVE-2022-23959",
 					"public": "20220125",
 					"href": "https://access.redhat.com/security/cve/CVE-2022-23959",
-					"impact": "important",
+					"impact": "Important",
 					"cwe": "CWE-444",
 					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N"
 				}
@@ -70,190 +70,110 @@
 								"criterias": [
 									{
 										"operator": "OR",
-										"criterions": [
+										"criterias": [
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808470",
-												"comment": "varnish is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808086",
+																"comment": "varnish is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808087",
+																"comment": "varnish is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20220418008",
+														"comment": "varnish is earlier than 0:6.0.8-1.module_el8.5.0+2620+03a0c2cc.1"
+													}
+												]
 											},
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808471",
-												"comment": "varnish is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808088",
+																"comment": "varnish-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808089",
+																"comment": "varnish-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20220418009",
+														"comment": "varnish-devel is earlier than 0:6.0.8-1.module_el8.5.0+2620+03a0c2cc.1"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808090",
+																"comment": "varnish-docs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808091",
+																"comment": "varnish-docs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20220418010",
+														"comment": "varnish-docs is earlier than 0:6.0.8-1.module_el8.5.0+2620+03a0c2cc.1"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808092",
+																"comment": "varnish-modules is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808093",
+																"comment": "varnish-modules is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20220418011",
+														"comment": "varnish-modules is earlier than 0:0.15.0-6.module_el8.5.0+2620+03a0c2cc"
+													}
+												]
 											}
 										]
 									}
 								],
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202204180011",
-										"comment": "varnish is earlier than 0:6.0.8-1.module_el8.5.0+2620+03a0c2cc.1"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808470",
-												"comment": "varnish is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808471",
-												"comment": "varnish is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202204180012",
-										"comment": "varnish is earlier than 0:6.0.8-1.module_el8.5.0+76+a10ffa55"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808472",
-												"comment": "varnish-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808473",
-												"comment": "varnish-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202204180031",
-										"comment": "varnish-devel is earlier than 0:6.0.8-1.module_el8.5.0+2620+03a0c2cc.1"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808472",
-												"comment": "varnish-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808473",
-												"comment": "varnish-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202204180032",
-										"comment": "varnish-devel is earlier than 0:6.0.8-1.module_el8.5.0+76+a10ffa55"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808474",
-												"comment": "varnish-docs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808475",
-												"comment": "varnish-docs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202204180051",
-										"comment": "varnish-docs is earlier than 0:6.0.8-1.module_el8.5.0+2620+03a0c2cc.1"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808474",
-												"comment": "varnish-docs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808475",
-												"comment": "varnish-docs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202204180052",
-										"comment": "varnish-docs is earlier than 0:6.0.8-1.module_el8.5.0+76+a10ffa55"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808476",
-												"comment": "varnish-modules is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808477",
-												"comment": "varnish-modules is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202204180071",
-										"comment": "varnish-modules is earlier than 0:0.15.0-6.module_el8.5.0+2620+03a0c2cc"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808476",
-												"comment": "varnish-modules is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808477",
-												"comment": "varnish-modules is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202204180072",
-										"comment": "varnish-modules is earlier than 0:0.15.0-6.module_el8.5.0+76+a10ffa55"
+										"test_ref": "oval:org.almalinux.alsa:tst:20204756009",
+										"comment": "Module varnish:6 is enabled"
 									}
 								]
 							}
@@ -261,10 +181,6 @@
 					}
 				],
 				"criterions": [
-					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20204756009",
-						"comment": "Module varnish:6 is enabled"
-					},
 					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"

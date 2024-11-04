@@ -11,9 +11,9 @@
 				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-1932.html"
 			},
 			{
-				"ref_id": "ALSA-2022:1932",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-1932.html"
+				"ref_id": "RHSA-2022:1932",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2022:1932"
 			},
 			{
 				"ref_id": "CVE-2021-43818",
@@ -49,7 +49,7 @@
 					"text": "CVE-2021-43818",
 					"public": "20211212",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-43818",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "(CWE-77|CWE-79)",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:H/A:L"
 				}
@@ -66,11 +66,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034807340",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034807602",
 								"comment": "python3-lxml is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034807341",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034807603",
 								"comment": "python3-lxml is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -78,12 +78,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20221932001",
-						"comment": "python3-lxml is earlier than 0:4.2.3-4.el8"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20221932001",
+						"comment": "python3-lxml is earlier than 0:4.2.3-4.el8"
 					}
 				]
 			}

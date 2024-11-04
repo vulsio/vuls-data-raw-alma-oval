@@ -11,9 +11,9 @@
 				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1686.html"
 			},
 			{
-				"ref_id": "ALSA-2021:1686",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-1686.html"
+				"ref_id": "RHSA-2021:1686",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2021:1686"
 			},
 			{
 				"ref_id": "CVE-2021-0326",
@@ -49,7 +49,7 @@
 					"text": "CVE-2021-0326",
 					"public": "20210204",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-0326",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-120",
 					"cvss3": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
 				}
@@ -66,11 +66,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034807020",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034807080",
 								"comment": "wpa_supplicant is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034807021",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034807081",
 								"comment": "wpa_supplicant is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -78,12 +78,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20211686001",
-						"comment": "wpa_supplicant is earlier than 1:2.9-5.el8"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20211686001",
+						"comment": "wpa_supplicant is earlier than 1:2.9-5.el8"
 					}
 				]
 			}

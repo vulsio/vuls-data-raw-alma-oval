@@ -11,9 +11,9 @@
 				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-5160.html"
 			},
 			{
-				"ref_id": "ALSA-2021:5160",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-5160.html"
+				"ref_id": "RHSA-2021:5160",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2021:5160"
 			},
 			{
 				"ref_id": "CVE-2021-44716",
@@ -58,7 +58,7 @@
 					"text": "CVE-2021-44716",
 					"public": "20211209",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-44716",
-					"impact": "important",
+					"impact": "Important",
 					"cwe": "CWE-400",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
 				},
@@ -66,7 +66,7 @@
 					"text": "CVE-2021-44717",
 					"public": "20211209",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-44717",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-200",
 					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
 				}
@@ -87,414 +87,230 @@
 								"criterias": [
 									{
 										"operator": "OR",
-										"criterions": [
+										"criterias": [
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803424",
-												"comment": "delve is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034803464",
+																"comment": "delve is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034803465",
+																"comment": "delve is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20214156001",
+														"comment": "delve is earlier than 0:1.6.0-1.module_el8.5.0+2604+960c7771"
+													}
+												]
 											},
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803425",
-												"comment": "delve is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034803466",
+																"comment": "go-toolset is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034803467",
+																"comment": "go-toolset is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20215160001",
+														"comment": "go-toolset is earlier than 0:1.16.12-1.module_el8.5.0+229+a8da3a51"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034803468",
+																"comment": "golang is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034803469",
+																"comment": "golang is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20215160002",
+														"comment": "golang is earlier than 0:1.16.12-1.module_el8.5.0+229+a8da3a51"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034803470",
+																"comment": "golang-bin is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034803471",
+																"comment": "golang-bin is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20215160003",
+														"comment": "golang-bin is earlier than 0:1.16.12-1.module_el8.5.0+229+a8da3a51"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034807596",
+																"comment": "golang-race is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034807597",
+																"comment": "golang-race is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20215160004",
+														"comment": "golang-race is earlier than 0:1.16.12-1.module_el8.5.0+2604+960c7771"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034803472",
+																"comment": "golang-docs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034803473",
+																"comment": "golang-docs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20215160005",
+														"comment": "golang-docs is earlier than 0:1.16.12-1.module_el8.5.0+229+a8da3a51"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034803474",
+																"comment": "golang-misc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034803475",
+																"comment": "golang-misc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20215160006",
+														"comment": "golang-misc is earlier than 0:1.16.12-1.module_el8.5.0+229+a8da3a51"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034803476",
+																"comment": "golang-src is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034803477",
+																"comment": "golang-src is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20215160007",
+														"comment": "golang-src is earlier than 0:1.16.12-1.module_el8.5.0+229+a8da3a51"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034803478",
+																"comment": "golang-tests is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034803479",
+																"comment": "golang-tests is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20215160008",
+														"comment": "golang-tests is earlier than 0:1.16.12-1.module_el8.5.0+229+a8da3a51"
+													}
+												]
 											}
 										]
 									}
 								],
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202141560011",
-										"comment": "delve is earlier than 0:1.6.0-1.module_el8.5.0+2604+960c7771"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803426",
-												"comment": "go-toolset is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803427",
-												"comment": "go-toolset is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202151600031",
-										"comment": "go-toolset is earlier than 0:1.16.12-1.module_el8.5.0+2604+960c7771"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803426",
-												"comment": "go-toolset is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803427",
-												"comment": "go-toolset is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202151600032",
-										"comment": "go-toolset is earlier than 0:1.16.12-1.module_el8.5.0+229+a8da3a51"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803428",
-												"comment": "golang is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803429",
-												"comment": "golang is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202151600051",
-										"comment": "golang is earlier than 0:1.16.12-1.module_el8.5.0+2604+960c7771"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803428",
-												"comment": "golang is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803429",
-												"comment": "golang is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202151600052",
-										"comment": "golang is earlier than 0:1.16.12-1.module_el8.5.0+229+a8da3a51"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803430",
-												"comment": "golang-bin is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803431",
-												"comment": "golang-bin is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202151600071",
-										"comment": "golang-bin is earlier than 0:1.16.12-1.module_el8.5.0+2604+960c7771"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803430",
-												"comment": "golang-bin is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803431",
-												"comment": "golang-bin is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202151600072",
-										"comment": "golang-bin is earlier than 0:1.16.12-1.module_el8.5.0+229+a8da3a51"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803432",
-												"comment": "golang-docs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803433",
-												"comment": "golang-docs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202151600091",
-										"comment": "golang-docs is earlier than 0:1.16.12-1.module_el8.5.0+2604+960c7771"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803432",
-												"comment": "golang-docs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803433",
-												"comment": "golang-docs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202151600092",
-										"comment": "golang-docs is earlier than 0:1.16.12-1.module_el8.5.0+229+a8da3a51"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803434",
-												"comment": "golang-misc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803435",
-												"comment": "golang-misc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202151600111",
-										"comment": "golang-misc is earlier than 0:1.16.12-1.module_el8.5.0+2604+960c7771"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803434",
-												"comment": "golang-misc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803435",
-												"comment": "golang-misc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202151600112",
-										"comment": "golang-misc is earlier than 0:1.16.12-1.module_el8.5.0+229+a8da3a51"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803436",
-												"comment": "golang-race is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803437",
-												"comment": "golang-race is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202151600131",
-										"comment": "golang-race is earlier than 0:1.16.12-1.module_el8.5.0+2604+960c7771"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803438",
-												"comment": "golang-src is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803439",
-												"comment": "golang-src is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202151600151",
-										"comment": "golang-src is earlier than 0:1.16.12-1.module_el8.5.0+2604+960c7771"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803438",
-												"comment": "golang-src is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803439",
-												"comment": "golang-src is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202151600152",
-										"comment": "golang-src is earlier than 0:1.16.12-1.module_el8.5.0+229+a8da3a51"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803440",
-												"comment": "golang-tests is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803441",
-												"comment": "golang-tests is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202151600171",
-										"comment": "golang-tests is earlier than 0:1.16.12-1.module_el8.5.0+2604+960c7771"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803440",
-												"comment": "golang-tests is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803441",
-												"comment": "golang-tests is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202151600172",
-										"comment": "golang-tests is earlier than 0:1.16.12-1.module_el8.5.0+229+a8da3a51"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
+										"test_ref": "oval:org.almalinux.alsa:tst:20241962024",
+										"comment": "Module go-toolset:rhel8 is enabled"
 									}
 								]
 							}
@@ -502,10 +318,6 @@
 					}
 				],
 				"criterions": [
-					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20191519017",
-						"comment": "Module go-toolset:rhel8 is enabled"
-					},
 					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"

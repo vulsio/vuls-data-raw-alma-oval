@@ -11,9 +11,9 @@
 				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4916.html"
 			},
 			{
-				"ref_id": "ALSA-2021:4916",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4916.html"
+				"ref_id": "RHSA-2021:4916",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2021:4916"
 			},
 			{
 				"ref_id": "CVE-2021-44227",
@@ -49,7 +49,7 @@
 					"text": "CVE-2021-44227",
 					"public": "20211126",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-44227",
-					"impact": "important",
+					"impact": "Important",
 					"cwe": "CWE-352",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H"
 				}
@@ -61,18 +61,45 @@
 		"criterias": [
 			{
 				"operator": "AND",
-				"criterions": [
+				"criterias": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20204667003",
-						"comment": "Module mailman:2.1 is enabled"
-					},
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:20214826003",
+												"comment": "mailman is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:20214826004",
+												"comment": "mailman is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20204667003",
+										"comment": "Module mailman:2.1 is enabled"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214916002",
+										"comment": "mailman is earlier than 3:2.1.29-12.module+el8.5.0+13466+327eb9f3.2"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
 					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
-					},
-					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20214916001",
-						"comment": "mailman is earlier than 3:2.1.29-12.module+el8.5.0+13466+327eb9f3.2"
 					}
 				]
 			}

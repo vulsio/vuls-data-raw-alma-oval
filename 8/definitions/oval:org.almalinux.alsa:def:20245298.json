@@ -6,9 +6,9 @@
 		"Title": "ALSA-2024:5298: gnome-shell security update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2024:5298",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-5298.html"
+				"ref_id": "RHSA-2024:5298",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:5298"
 			},
 			{
 				"ref_id": "CVE-2024-36472",
@@ -76,11 +76,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034804422",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034804528",
 								"comment": "gnome-shell is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034804423",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034804529",
 								"comment": "gnome-shell is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -88,12 +88,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20245298001",
-						"comment": "gnome-shell is earlier than 0:3.32.2-56.el8_10"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20245298001",
+						"comment": "gnome-shell is earlier than 0:3.32.2-56.el8_10"
 					}
 				]
 			}

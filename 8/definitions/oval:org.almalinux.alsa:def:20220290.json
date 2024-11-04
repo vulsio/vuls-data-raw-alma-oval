@@ -11,9 +11,9 @@
 				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-0290.html"
 			},
 			{
-				"ref_id": "ALSA-2022:0290",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-0290.html"
+				"ref_id": "RHSA-2022:0290",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2022:0290"
 			},
 			{
 				"ref_id": "CVE-2021-4104",
@@ -76,7 +76,7 @@
 					"text": "CVE-2021-4104",
 					"public": "20211210",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-4104",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-20",
 					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
 				},
@@ -84,7 +84,7 @@
 					"text": "CVE-2022-23302",
 					"public": "20220118",
 					"href": "https://access.redhat.com/security/cve/CVE-2022-23302",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-20",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
 				},
@@ -92,7 +92,7 @@
 					"text": "CVE-2022-23305",
 					"public": "20220118",
 					"href": "https://access.redhat.com/security/cve/CVE-2022-23305",
-					"impact": "important",
+					"impact": "Important",
 					"cwe": "CWE-20",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
 				},
@@ -100,7 +100,7 @@
 					"text": "CVE-2022-23307",
 					"public": "20220118",
 					"href": "https://access.redhat.com/security/cve/CVE-2022-23307",
-					"impact": "important",
+					"impact": "Important",
 					"cwe": "CWE-502",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
 				}
@@ -121,838 +121,374 @@
 								"criterias": [
 									{
 										"operator": "OR",
-										"criterions": [
+										"criterias": [
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808914",
-												"comment": "parfait is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808102",
+																"comment": "parfait is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808103",
+																"comment": "parfait is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202202900012",
+														"comment": "parfait is earlier than 0:0.5.4-4.module_el8.5.0+235+62ea7738"
+													}
+												]
 											},
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808915",
-												"comment": "parfait is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808104",
+																"comment": "parfait-examples is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808105",
+																"comment": "parfait-examples is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20220290032",
+														"comment": "parfait-examples is earlier than 0:0.5.4-4.module_el8.5.0+235+62ea7738"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808106",
+																"comment": "parfait-javadoc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808107",
+																"comment": "parfait-javadoc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20220290033",
+														"comment": "parfait-javadoc is earlier than 0:0.5.4-4.module_el8.5.0+235+62ea7738"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808108",
+																"comment": "pcp-parfait-agent is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808109",
+																"comment": "pcp-parfait-agent is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20220290034",
+														"comment": "pcp-parfait-agent is earlier than 0:0.5.4-4.module_el8.5.0+235+62ea7738"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808110",
+																"comment": "si-units is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808111",
+																"comment": "si-units is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202202900092",
+														"comment": "si-units is earlier than 0:0.6.5-2.module_el8.5.0+235+62ea7738"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808112",
+																"comment": "si-units-javadoc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808113",
+																"comment": "si-units-javadoc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20220290035",
+														"comment": "si-units-javadoc is earlier than 0:0.6.5-2.module_el8.5.0+235+62ea7738"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808114",
+																"comment": "unit-api is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808115",
+																"comment": "unit-api is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202202900132",
+														"comment": "unit-api is earlier than 0:1.0-5.module_el8.5.0+235+62ea7738"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808116",
+																"comment": "unit-api-javadoc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808117",
+																"comment": "unit-api-javadoc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20220290036",
+														"comment": "unit-api-javadoc is earlier than 0:1.0-5.module_el8.5.0+235+62ea7738"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808118",
+																"comment": "uom-lib is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808119",
+																"comment": "uom-lib is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202202900172",
+														"comment": "uom-lib is earlier than 0:1.0.1-6.module_el8.5.0+235+62ea7738"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808120",
+																"comment": "uom-lib-javadoc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808121",
+																"comment": "uom-lib-javadoc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20220290037",
+														"comment": "uom-lib-javadoc is earlier than 0:1.0.1-6.module_el8.5.0+235+62ea7738"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808122",
+																"comment": "uom-parent is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808123",
+																"comment": "uom-parent is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202202900212",
+														"comment": "uom-parent is earlier than 0:1.0.3-3.module_el8.5.0+235+62ea7738"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808124",
+																"comment": "uom-se is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808125",
+																"comment": "uom-se is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202202900232",
+														"comment": "uom-se is earlier than 0:1.0.4-3.module_el8.5.0+235+62ea7738"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808126",
+																"comment": "uom-se-javadoc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808127",
+																"comment": "uom-se-javadoc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20220290038",
+														"comment": "uom-se-javadoc is earlier than 0:1.0.4-3.module_el8.5.0+235+62ea7738"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808128",
+																"comment": "uom-systems is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808129",
+																"comment": "uom-systems is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202202900272",
+														"comment": "uom-systems is earlier than 0:0.7-1.module_el8.5.0+235+62ea7738"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808130",
+																"comment": "uom-systems-javadoc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034808131",
+																"comment": "uom-systems-javadoc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20220290039",
+														"comment": "uom-systems-javadoc is earlier than 0:0.7-1.module_el8.5.0+235+62ea7738"
+													}
+												]
 											}
 										]
 									}
 								],
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202202900011",
-										"comment": "parfait is earlier than 0:0.5.4-4.module_el8.5.0+2610+de2b8c0b"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808914",
-												"comment": "parfait is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808915",
-												"comment": "parfait is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202202900012",
-										"comment": "parfait is earlier than 0:0.5.4-4.module_el8.5.0+235+62ea7738"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808916",
-												"comment": "parfait-examples is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808917",
-												"comment": "parfait-examples is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202202900031",
-										"comment": "parfait-examples is earlier than 0:0.5.4-4.module_el8.5.0+2610+de2b8c0b"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808916",
-												"comment": "parfait-examples is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808917",
-												"comment": "parfait-examples is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202202900032",
-										"comment": "parfait-examples is earlier than 0:0.5.4-4.module_el8.5.0+235+62ea7738"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808918",
-												"comment": "parfait-javadoc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808919",
-												"comment": "parfait-javadoc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202202900051",
-										"comment": "parfait-javadoc is earlier than 0:0.5.4-4.module_el8.5.0+2610+de2b8c0b"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808918",
-												"comment": "parfait-javadoc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808919",
-												"comment": "parfait-javadoc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202202900052",
-										"comment": "parfait-javadoc is earlier than 0:0.5.4-4.module_el8.5.0+235+62ea7738"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808920",
-												"comment": "pcp-parfait-agent is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808921",
-												"comment": "pcp-parfait-agent is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202202900071",
-										"comment": "pcp-parfait-agent is earlier than 0:0.5.4-4.module_el8.5.0+2610+de2b8c0b"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808920",
-												"comment": "pcp-parfait-agent is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808921",
-												"comment": "pcp-parfait-agent is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202202900072",
-										"comment": "pcp-parfait-agent is earlier than 0:0.5.4-4.module_el8.5.0+235+62ea7738"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808922",
-												"comment": "si-units is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808923",
-												"comment": "si-units is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202202900091",
-										"comment": "si-units is earlier than 0:0.6.5-2.module_el8.5.0+2610+de2b8c0b"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808922",
-												"comment": "si-units is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808923",
-												"comment": "si-units is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202202900092",
-										"comment": "si-units is earlier than 0:0.6.5-2.module_el8.5.0+235+62ea7738"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808924",
-												"comment": "si-units-javadoc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808925",
-												"comment": "si-units-javadoc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202202900111",
-										"comment": "si-units-javadoc is earlier than 0:0.6.5-2.module_el8.5.0+2610+de2b8c0b"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808924",
-												"comment": "si-units-javadoc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808925",
-												"comment": "si-units-javadoc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202202900112",
-										"comment": "si-units-javadoc is earlier than 0:0.6.5-2.module_el8.5.0+235+62ea7738"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808926",
-												"comment": "unit-api is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808927",
-												"comment": "unit-api is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202202900131",
-										"comment": "unit-api is earlier than 0:1.0-5.module_el8.5.0+2610+de2b8c0b"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808926",
-												"comment": "unit-api is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808927",
-												"comment": "unit-api is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202202900132",
-										"comment": "unit-api is earlier than 0:1.0-5.module_el8.5.0+235+62ea7738"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808928",
-												"comment": "unit-api-javadoc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808929",
-												"comment": "unit-api-javadoc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202202900151",
-										"comment": "unit-api-javadoc is earlier than 0:1.0-5.module_el8.5.0+2610+de2b8c0b"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808928",
-												"comment": "unit-api-javadoc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808929",
-												"comment": "unit-api-javadoc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202202900152",
-										"comment": "unit-api-javadoc is earlier than 0:1.0-5.module_el8.5.0+235+62ea7738"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808930",
-												"comment": "uom-lib is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808931",
-												"comment": "uom-lib is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202202900171",
-										"comment": "uom-lib is earlier than 0:1.0.1-6.module_el8.5.0+2610+de2b8c0b"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808930",
-												"comment": "uom-lib is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808931",
-												"comment": "uom-lib is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202202900172",
-										"comment": "uom-lib is earlier than 0:1.0.1-6.module_el8.5.0+235+62ea7738"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808932",
-												"comment": "uom-lib-javadoc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808933",
-												"comment": "uom-lib-javadoc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202202900191",
-										"comment": "uom-lib-javadoc is earlier than 0:1.0.1-6.module_el8.5.0+2610+de2b8c0b"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808932",
-												"comment": "uom-lib-javadoc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808933",
-												"comment": "uom-lib-javadoc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202202900192",
-										"comment": "uom-lib-javadoc is earlier than 0:1.0.1-6.module_el8.5.0+235+62ea7738"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808934",
-												"comment": "uom-parent is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808935",
-												"comment": "uom-parent is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202202900211",
-										"comment": "uom-parent is earlier than 0:1.0.3-3.module_el8.5.0+2610+de2b8c0b"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808934",
-												"comment": "uom-parent is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808935",
-												"comment": "uom-parent is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202202900212",
-										"comment": "uom-parent is earlier than 0:1.0.3-3.module_el8.5.0+235+62ea7738"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808936",
-												"comment": "uom-se is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808937",
-												"comment": "uom-se is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202202900231",
-										"comment": "uom-se is earlier than 0:1.0.4-3.module_el8.5.0+2610+de2b8c0b"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808936",
-												"comment": "uom-se is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808937",
-												"comment": "uom-se is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202202900232",
-										"comment": "uom-se is earlier than 0:1.0.4-3.module_el8.5.0+235+62ea7738"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808938",
-												"comment": "uom-se-javadoc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808939",
-												"comment": "uom-se-javadoc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202202900251",
-										"comment": "uom-se-javadoc is earlier than 0:1.0.4-3.module_el8.5.0+2610+de2b8c0b"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808938",
-												"comment": "uom-se-javadoc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808939",
-												"comment": "uom-se-javadoc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202202900252",
-										"comment": "uom-se-javadoc is earlier than 0:1.0.4-3.module_el8.5.0+235+62ea7738"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808940",
-												"comment": "uom-systems is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808941",
-												"comment": "uom-systems is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202202900271",
-										"comment": "uom-systems is earlier than 0:0.7-1.module_el8.5.0+2610+de2b8c0b"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808940",
-												"comment": "uom-systems is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808941",
-												"comment": "uom-systems is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202202900272",
-										"comment": "uom-systems is earlier than 0:0.7-1.module_el8.5.0+235+62ea7738"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808942",
-												"comment": "uom-systems-javadoc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808943",
-												"comment": "uom-systems-javadoc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202202900291",
-										"comment": "uom-systems-javadoc is earlier than 0:0.7-1.module_el8.5.0+2610+de2b8c0b"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808942",
-												"comment": "uom-systems-javadoc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808943",
-												"comment": "uom-systems-javadoc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202202900292",
-										"comment": "uom-systems-javadoc is earlier than 0:0.7-1.module_el8.5.0+235+62ea7738"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
+										"test_ref": "oval:org.almalinux.alsa:tst:20220290031",
+										"comment": "Module parfait:0.5 is enabled"
 									}
 								]
 							}
@@ -960,10 +496,6 @@
 					}
 				],
 				"criterions": [
-					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20220290031",
-						"comment": "Module parfait:0.5 is enabled"
-					},
 					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"

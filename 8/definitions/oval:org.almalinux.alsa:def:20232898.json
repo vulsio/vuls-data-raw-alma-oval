@@ -6,9 +6,9 @@
 		"Title": "ALSA-2023:2898: libtar security update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2023:2898",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-2898.html"
+				"ref_id": "RHSA-2023:2898",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:2898"
 			},
 			{
 				"ref_id": "CVE-2021-33643",
@@ -127,11 +127,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034808964",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034808844",
 								"comment": "libtar is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034808965",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034808845",
 								"comment": "libtar is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -139,12 +139,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20232898001",
-						"comment": "libtar is earlier than 0:1.2.20-17.el8"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20232898001",
+						"comment": "libtar is earlier than 0:1.2.20-17.el8"
 					}
 				]
 			}

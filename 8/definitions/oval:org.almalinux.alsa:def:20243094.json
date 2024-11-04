@@ -6,9 +6,9 @@
 		"Title": "ALSA-2024:3094: perl-CPAN security update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2024:3094",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-3094.html"
+				"ref_id": "RHSA-2024:3094",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:3094"
 			},
 			{
 				"ref_id": "CVE-2023-31484",
@@ -76,11 +76,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034809668",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034809446",
 								"comment": "perl-CPAN is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034809669",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034809447",
 								"comment": "perl-CPAN is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -88,12 +88,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20243094001",
-						"comment": "perl-CPAN is earlier than 0:2.18-399.el8"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20243094001",
+						"comment": "perl-CPAN is earlier than 0:2.18-399.el8"
 					}
 				]
 			}

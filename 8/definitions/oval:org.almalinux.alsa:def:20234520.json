@@ -6,9 +6,9 @@
 		"Title": "ALSA-2023:4520: python-requests security update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2023:4520",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-4520.html"
+				"ref_id": "RHSA-2023:4520",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:4520"
 			},
 			{
 				"ref_id": "CVE-2023-32681",
@@ -76,11 +76,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034809132",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034808922",
 								"comment": "python3-requests is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034809133",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034808923",
 								"comment": "python3-requests is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -88,12 +88,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20234520001",
-						"comment": "python3-requests is earlier than 0:2.20.0-3.el8_8"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20234520001",
+						"comment": "python3-requests is earlier than 0:2.20.0-3.el8_8"
 					}
 				]
 			}

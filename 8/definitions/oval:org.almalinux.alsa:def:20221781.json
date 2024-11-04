@@ -11,9 +11,9 @@
 				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-1781.html"
 			},
 			{
-				"ref_id": "ALSA-2022:1781",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-1781.html"
+				"ref_id": "RHSA-2022:1781",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2022:1781"
 			},
 			{
 				"ref_id": "CVE-2021-43813",
@@ -49,7 +49,7 @@
 					"text": "CVE-2021-43813",
 					"public": "20211210",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-43813",
-					"impact": "low",
+					"impact": "Low",
 					"cwe": "CWE-22",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
 				}
@@ -66,11 +66,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034803934",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034804386",
 								"comment": "grafana is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034803935",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034804387",
 								"comment": "grafana is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -78,12 +78,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20221781001",
-						"comment": "grafana is earlier than 0:7.5.11-2.el8"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20221781001",
+						"comment": "grafana is earlier than 0:7.5.11-2.el8"
 					}
 				]
 			}

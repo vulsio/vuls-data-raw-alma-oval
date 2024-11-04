@@ -6,9 +6,9 @@
 		"Title": "ALSA-2024:1610: less security update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2024:1610",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-1610.html"
+				"ref_id": "RHSA-2024:1610",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:1610"
 			},
 			{
 				"ref_id": "CVE-2022-48624",
@@ -76,11 +76,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034809506",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034803082",
 								"comment": "less is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034809507",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034803083",
 								"comment": "less is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -88,12 +88,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20241610001",
-						"comment": "less is earlier than 0:530-2.el8_9"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20241610001",
+						"comment": "less is earlier than 0:530-2.el8_9"
 					}
 				]
 			}

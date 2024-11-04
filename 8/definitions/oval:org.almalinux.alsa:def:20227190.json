@@ -6,9 +6,9 @@
 		"Title": "ALSA-2022:7190: thunderbird security update (Important)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2022:7190",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7190.html"
+				"ref_id": "RHSA-2022:7190",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2022:7190"
 			},
 			{
 				"ref_id": "CVE-2022-39236",
@@ -185,11 +185,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034803470",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034807500",
 								"comment": "thunderbird is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034803471",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034807501",
 								"comment": "thunderbird is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -197,12 +197,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20227190001",
-						"comment": "thunderbird is earlier than 0:102.4.0-1.el8_6.alma.plus.1"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20227190002",
+						"comment": "thunderbird is earlier than 0:102.4.0-1.el8_6.alma.plus.1"
 					}
 				]
 			}

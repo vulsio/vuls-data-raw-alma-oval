@@ -11,9 +11,9 @@
 				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-4776.html"
 			},
 			{
-				"ref_id": "ALSA-2022:4776",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-4776.html"
+				"ref_id": "RHSA-2022:4776",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2022:4776"
 			},
 			{
 				"ref_id": "CVE-2022-1529",
@@ -58,7 +58,7 @@
 					"text": "CVE-2022-1529",
 					"public": "20220520",
 					"href": "https://access.redhat.com/security/cve/CVE-2022-1529",
-					"impact": "critical",
+					"impact": "Critical",
 					"cwe": "CWE-843",
 					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
 				},
@@ -66,7 +66,7 @@
 					"text": "CVE-2022-1802",
 					"public": "20220520",
 					"href": "https://access.redhat.com/security/cve/CVE-2022-1802",
-					"impact": "critical",
+					"impact": "Critical",
 					"cwe": "CWE-843",
 					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
 				}
@@ -83,11 +83,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034803504",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034803416",
 								"comment": "firefox is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034803505",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034803417",
 								"comment": "firefox is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -95,12 +95,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20224776001",
-						"comment": "firefox is earlier than 0:91.9.1-1.el8_6.alma"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20224776002",
+						"comment": "firefox is earlier than 0:91.9.1-1.el8_6.alma"
 					}
 				]
 			}

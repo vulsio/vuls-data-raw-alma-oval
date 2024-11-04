@@ -11,9 +11,9 @@
 				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-3918.html"
 			},
 			{
-				"ref_id": "ALSA-2021:3918",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-3918.html"
+				"ref_id": "RHSA-2021:3918",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2021:3918"
 			},
 			{
 				"ref_id": "CVE-2021-32626",
@@ -94,7 +94,7 @@
 					"text": "CVE-2021-32626",
 					"public": "20211004",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-32626",
-					"impact": "important",
+					"impact": "Important",
 					"cwe": "CWE-787",
 					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
 				},
@@ -102,7 +102,7 @@
 					"text": "CVE-2021-32627",
 					"public": "20211004",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-32627",
-					"impact": "important",
+					"impact": "Important",
 					"cwe": "CWE-190->(CWE-125|CWE-787)",
 					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
 				},
@@ -110,7 +110,7 @@
 					"text": "CVE-2021-32628",
 					"public": "20211004",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-32628",
-					"impact": "important",
+					"impact": "Important",
 					"cwe": "CWE-190->(CWE-125|CWE-787)",
 					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
 				},
@@ -118,7 +118,7 @@
 					"text": "CVE-2021-32675",
 					"public": "20211004",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-32675",
-					"impact": "important",
+					"impact": "Important",
 					"cwe": "CWE-770",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
 				},
@@ -126,7 +126,7 @@
 					"text": "CVE-2021-32687",
 					"public": "20211004",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-32687",
-					"impact": "important",
+					"impact": "Important",
 					"cwe": "CWE-190->(CWE-125|CWE-787)",
 					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
 				},
@@ -134,7 +134,7 @@
 					"text": "CVE-2021-41099",
 					"public": "20211004",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-41099",
-					"impact": "important",
+					"impact": "Important",
 					"cwe": "CWE-190->(CWE-125|CWE-787)",
 					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
 				}
@@ -155,150 +155,86 @@
 								"criterias": [
 									{
 										"operator": "OR",
-										"criterions": [
+										"criterias": [
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808442",
-												"comment": "redis is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034807486",
+																"comment": "redis is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034807487",
+																"comment": "redis is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20213918001",
+														"comment": "redis is earlier than 0:5.0.3-5.module_el8.4.0+2583+b9845322"
+													}
+												]
 											},
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808443",
-												"comment": "redis is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034807488",
+																"comment": "redis-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034807489",
+																"comment": "redis-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20213918002",
+														"comment": "redis-devel is earlier than 0:5.0.3-5.module_el8.4.0+2583+b9845322"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034807490",
+																"comment": "redis-doc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034807491",
+																"comment": "redis-doc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202139180051",
+														"comment": "redis-doc is earlier than 0:5.0.3-5.module_el8.4.0+2583+b9845322"
+													}
+												]
 											}
 										]
 									}
 								],
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202139180011",
-										"comment": "redis is earlier than 0:5.0.3-5.module_el8.4.0+2583+b9845322"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808442",
-												"comment": "redis is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808443",
-												"comment": "redis is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202139180012",
-										"comment": "redis is earlier than 0:5.0.3-5.module_el8.5.0+66+fc19ec12"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808444",
-												"comment": "redis-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808445",
-												"comment": "redis-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202139180031",
-										"comment": "redis-devel is earlier than 0:5.0.3-5.module_el8.4.0+2583+b9845322"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808444",
-												"comment": "redis-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808445",
-												"comment": "redis-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202139180032",
-										"comment": "redis-devel is earlier than 0:5.0.3-5.module_el8.5.0+66+fc19ec12"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808446",
-												"comment": "redis-doc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808447",
-												"comment": "redis-doc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202139180051",
-										"comment": "redis-doc is earlier than 0:5.0.3-5.module_el8.4.0+2583+b9845322"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808446",
-												"comment": "redis-doc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034808447",
-												"comment": "redis-doc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202139180052",
-										"comment": "redis-doc is earlier than 0:5.0.3-5.module_el8.5.0+66+fc19ec12"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
+										"test_ref": "oval:org.almalinux.alsa:tst:20192002007",
+										"comment": "Module redis:5 is enabled"
 									}
 								]
 							}
@@ -306,10 +242,6 @@
 					}
 				],
 				"criterions": [
-					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20192002007",
-						"comment": "Module redis:5 is enabled"
-					},
 					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"

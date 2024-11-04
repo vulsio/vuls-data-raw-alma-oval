@@ -6,9 +6,9 @@
 		"Title": "ALSA-2022:7928: device-mapper-multipath security update (Important)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2022:7928",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-7928.html"
+				"ref_id": "RHSA-2022:7928",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2022:7928"
 			},
 			{
 				"ref_id": "CVE-2022-3787",
@@ -68,11 +68,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034806288",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034808670",
 								"comment": "device-mapper-multipath is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034806289",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034808671",
 								"comment": "device-mapper-multipath is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -80,12 +80,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20227928001",
-						"comment": "device-mapper-multipath is earlier than 0:0.8.4-28.el8_7.1"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20227928001",
+						"comment": "device-mapper-multipath is earlier than 0:0.8.4-28.el8_7.1"
 					}
 				]
 			}

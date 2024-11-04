@@ -11,9 +11,9 @@
 				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4201.html"
 			},
 			{
-				"ref_id": "ALSA-2021:4201",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4201.html"
+				"ref_id": "RHSA-2021:4201",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2021:4201"
 			},
 			{
 				"ref_id": "CVE-2021-20095",
@@ -54,7 +54,7 @@
 					"text": "CVE-2021-20095",
 					"public": "20210428",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-20095",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-22",
 					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
 				},
@@ -62,7 +62,7 @@
 					"text": "CVE-2021-42771",
 					"public": "20210428",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-42771",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-22",
 					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
 				}
@@ -79,11 +79,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034807376",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034807620",
 								"comment": "python3-babel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034807377",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034807621",
 								"comment": "python3-babel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -91,12 +91,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20214201001",
-						"comment": "python3-babel is earlier than 0:2.5.1-7.el8"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20214201001",
+						"comment": "python3-babel is earlier than 0:2.5.1-7.el8"
 					}
 				]
 			}

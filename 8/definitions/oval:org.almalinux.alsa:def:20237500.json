@@ -6,9 +6,9 @@
 		"Title": "ALSA-2023:7500: thunderbird security update (Important)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2023:7500",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-7500.html"
+				"ref_id": "RHSA-2023:7500",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:7500"
 			},
 			{
 				"ref_id": "CVE-2023-6204",
@@ -178,11 +178,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034803470",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034807500",
 								"comment": "thunderbird is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034803471",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034807501",
 								"comment": "thunderbird is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -190,12 +190,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20237500001",
-						"comment": "thunderbird is earlier than 0:115.5.0-1.el8_9.alma.plus"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20237500002",
+						"comment": "thunderbird is earlier than 0:115.5.0-1.el8_9.alma.1"
 					}
 				]
 			}

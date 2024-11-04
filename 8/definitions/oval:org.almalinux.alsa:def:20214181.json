@@ -11,9 +11,9 @@
 				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4181.html"
 			},
 			{
-				"ref_id": "ALSA-2021:4181",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4181.html"
+				"ref_id": "RHSA-2021:4181",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2021:4181"
 			},
 			{
 				"ref_id": "CVE-2020-28896",
@@ -58,7 +58,7 @@
 					"text": "CVE-2020-28896",
 					"public": "20201120",
 					"href": "https://access.redhat.com/security/cve/CVE-2020-28896",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-319",
 					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N"
 				},
@@ -66,7 +66,7 @@
 					"text": "CVE-2021-3181",
 					"public": "20210119",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-3181",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-401",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
 				}
@@ -83,11 +83,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034807344",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034807614",
 								"comment": "mutt is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034807345",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034807615",
 								"comment": "mutt is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -95,12 +95,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20214181001",
-						"comment": "mutt is earlier than 5:2.0.7-1.el8"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20214181001",
+						"comment": "mutt is earlier than 5:2.0.7-1.el8"
 					}
 				]
 			}

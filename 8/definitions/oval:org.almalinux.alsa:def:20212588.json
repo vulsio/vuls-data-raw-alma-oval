@@ -11,9 +11,9 @@
 				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-2588.html"
 			},
 			{
-				"ref_id": "ALSA-2021:2588",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-2588.html"
+				"ref_id": "RHSA-2021:2588",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2021:2588"
 			},
 			{
 				"ref_id": "CVE-2019-15845",
@@ -121,7 +121,7 @@
 					"text": "CVE-2019-15845",
 					"public": "20191001",
 					"href": "https://access.redhat.com/security/cve/CVE-2019-15845",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-626->CWE-41",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
 				},
@@ -129,7 +129,7 @@
 					"text": "CVE-2019-16201",
 					"public": "20191001",
 					"href": "https://access.redhat.com/security/cve/CVE-2019-16201",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-400",
 					"cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
 				},
@@ -137,7 +137,7 @@
 					"text": "CVE-2019-16254",
 					"public": "20191025",
 					"href": "https://access.redhat.com/security/cve/CVE-2019-16254",
-					"impact": "low",
+					"impact": "Low",
 					"cwe": "CWE-113",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
 				},
@@ -145,7 +145,7 @@
 					"text": "CVE-2019-16255",
 					"public": "20191126",
 					"href": "https://access.redhat.com/security/cve/CVE-2019-16255",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-94",
 					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
 				},
@@ -153,7 +153,7 @@
 					"text": "CVE-2019-3881",
 					"public": "20180523",
 					"href": "https://access.redhat.com/security/cve/CVE-2019-3881",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-552",
 					"cvss3": "CVSS:3.0/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H"
 				},
@@ -161,7 +161,7 @@
 					"text": "CVE-2020-10663",
 					"public": "20200319",
 					"href": "https://access.redhat.com/security/cve/CVE-2020-10663",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-20->CWE-94",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
 				},
@@ -169,7 +169,7 @@
 					"text": "CVE-2020-10933",
 					"public": "20200331",
 					"href": "https://access.redhat.com/security/cve/CVE-2020-10933",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-805->CWE-200",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
 				},
@@ -177,7 +177,7 @@
 					"text": "CVE-2020-25613",
 					"public": "20200929",
 					"href": "https://access.redhat.com/security/cve/CVE-2020-25613",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-444",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
 				},
@@ -185,7 +185,7 @@
 					"text": "CVE-2021-28965",
 					"public": "20210405",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-28965",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-611",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
 				}
@@ -206,1646 +206,758 @@
 								"criterias": [
 									{
 										"operator": "OR",
-										"criterions": [
+										"criterias": [
 											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803636",
-												"comment": "ruby is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804598",
+																"comment": "ruby is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804599",
+																"comment": "ruby is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20212588064",
+														"comment": "ruby is earlier than 0:2.6.7-107.module_el8.4.0+2507+bbd85cce"
+													}
+												]
 											},
 											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803637",
-												"comment": "ruby is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804600",
+																"comment": "ruby-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804601",
+																"comment": "ruby-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20212588065",
+														"comment": "ruby-devel is earlier than 0:2.6.7-107.module_el8.4.0+2507+bbd85cce"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804606",
+																"comment": "ruby-libs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804607",
+																"comment": "ruby-libs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20212588066",
+														"comment": "ruby-libs is earlier than 0:2.6.7-107.module_el8.4.0+2507+bbd85cce"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804612",
+																"comment": "rubygem-bigdecimal is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804613",
+																"comment": "rubygem-bigdecimal is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20212588067",
+														"comment": "rubygem-bigdecimal is earlier than 0:1.4.1-107.module_el8.4.0+2507+bbd85cce"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804614",
+																"comment": "rubygem-bson is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804615",
+																"comment": "rubygem-bson is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20212588068",
+														"comment": "rubygem-bson is earlier than 0:4.5.0-1.module_el8.5.0+250+ba22dbf7"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804628",
+																"comment": "rubygem-io-console is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804629",
+																"comment": "rubygem-io-console is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20212588069",
+														"comment": "rubygem-io-console is earlier than 0:0.4.7-107.module_el8.4.0+2507+bbd85cce"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804630",
+																"comment": "rubygem-json is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804631",
+																"comment": "rubygem-json is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20212588070",
+														"comment": "rubygem-json is earlier than 0:2.1.0-107.module_el8.4.0+2507+bbd85cce"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804638",
+																"comment": "rubygem-mysql2 is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804639",
+																"comment": "rubygem-mysql2 is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20212588071",
+														"comment": "rubygem-mysql2 is earlier than 0:0.5.2-1.module_el8.5.0+250+ba22dbf7"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804644",
+																"comment": "rubygem-openssl is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804645",
+																"comment": "rubygem-openssl is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20212588072",
+														"comment": "rubygem-openssl is earlier than 0:2.1.2-107.module_el8.4.0+2507+bbd85cce"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804646",
+																"comment": "rubygem-pg is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804647",
+																"comment": "rubygem-pg is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20212588073",
+														"comment": "rubygem-pg is earlier than 0:1.1.4-1.module_el8.5.0+250+ba22dbf7"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804652",
+																"comment": "rubygem-psych is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804653",
+																"comment": "rubygem-psych is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20212588074",
+														"comment": "rubygem-psych is earlier than 0:3.1.0-107.module_el8.4.0+2507+bbd85cce"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804602",
+																"comment": "ruby-doc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804603",
+																"comment": "ruby-doc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202125880051",
+														"comment": "ruby-doc is earlier than 0:2.6.7-107.module_el8.4.0+2507+bbd85cce"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804608",
+																"comment": "rubygem-abrt is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804609",
+																"comment": "rubygem-abrt is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202125880092",
+														"comment": "rubygem-abrt is earlier than 0:0.3.0-4.module_el8.5.0+250+ba22dbf7"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804610",
+																"comment": "rubygem-abrt-doc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804611",
+																"comment": "rubygem-abrt-doc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20212588075",
+														"comment": "rubygem-abrt-doc is earlier than 0:0.3.0-4.module_el8.5.0+250+ba22dbf7"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804616",
+																"comment": "rubygem-bson-doc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804617",
+																"comment": "rubygem-bson-doc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202125880172",
+														"comment": "rubygem-bson-doc is earlier than 0:4.5.0-1.module_el8.5.0+250+ba22dbf7"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804618",
+																"comment": "rubygem-bundler is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804619",
+																"comment": "rubygem-bundler is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202125880191",
+														"comment": "rubygem-bundler is earlier than 0:1.17.2-107.module_el8.4.0+2507+bbd85cce"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804626",
+																"comment": "rubygem-did_you_mean is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804627",
+																"comment": "rubygem-did_you_mean is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202125880211",
+														"comment": "rubygem-did_you_mean is earlier than 0:1.3.0-107.module_el8.4.0+2507+bbd85cce"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034807136",
+																"comment": "rubygem-irb is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alsa:tst:2020034807137",
+																"comment": "rubygem-irb is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202125880251",
+														"comment": "rubygem-irb is earlier than 0:1.0.0-107.module_el8.4.0+2507+bbd85cce"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804632",
+																"comment": "rubygem-minitest is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804633",
+																"comment": "rubygem-minitest is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202125880291",
+														"comment": "rubygem-minitest is earlier than 0:5.11.3-107.module_el8.4.0+2507+bbd85cce"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804634",
+																"comment": "rubygem-mongo is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804635",
+																"comment": "rubygem-mongo is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202125880312",
+														"comment": "rubygem-mongo is earlier than 0:2.8.0-1.module_el8.5.0+250+ba22dbf7"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804636",
+																"comment": "rubygem-mongo-doc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804637",
+																"comment": "rubygem-mongo-doc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20212588076",
+														"comment": "rubygem-mongo-doc is earlier than 0:2.8.0-1.module_el8.5.0+250+ba22dbf7"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804640",
+																"comment": "rubygem-mysql2-doc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804641",
+																"comment": "rubygem-mysql2-doc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202125880372",
+														"comment": "rubygem-mysql2-doc is earlier than 0:0.5.2-1.module_el8.5.0+250+ba22dbf7"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804642",
+																"comment": "rubygem-net-telnet is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804643",
+																"comment": "rubygem-net-telnet is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202125880391",
+														"comment": "rubygem-net-telnet is earlier than 0:0.2.0-107.module_el8.4.0+2507+bbd85cce"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804648",
+																"comment": "rubygem-pg-doc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804649",
+																"comment": "rubygem-pg-doc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202125880452",
+														"comment": "rubygem-pg-doc is earlier than 0:1.1.4-1.module_el8.5.0+250+ba22dbf7"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804650",
+																"comment": "rubygem-power_assert is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804651",
+																"comment": "rubygem-power_assert is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202125880471",
+														"comment": "rubygem-power_assert is earlier than 0:1.1.3-107.module_el8.4.0+2507+bbd85cce"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804654",
+																"comment": "rubygem-rake is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804655",
+																"comment": "rubygem-rake is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202125880511",
+														"comment": "rubygem-rake is earlier than 0:12.3.3-107.module_el8.4.0+2507+bbd85cce"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804656",
+																"comment": "rubygem-rdoc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804657",
+																"comment": "rubygem-rdoc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202125880531",
+														"comment": "rubygem-rdoc is earlier than 0:6.1.2-107.module_el8.4.0+2507+bbd85cce"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804658",
+																"comment": "rubygem-test-unit is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804659",
+																"comment": "rubygem-test-unit is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202125880551",
+														"comment": "rubygem-test-unit is earlier than 0:3.2.9-107.module_el8.4.0+2507+bbd85cce"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804660",
+																"comment": "rubygem-xmlrpc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804661",
+																"comment": "rubygem-xmlrpc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202125880571",
+														"comment": "rubygem-xmlrpc is earlier than 0:0.3.0-107.module_el8.4.0+2507+bbd85cce"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804662",
+																"comment": "rubygems is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804663",
+																"comment": "rubygems is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:202125880591",
+														"comment": "rubygems is earlier than 0:3.0.3.1-107.module_el8.4.0+2507+bbd85cce"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804664",
+																"comment": "rubygems-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alba:tst:2020034804665",
+																"comment": "rubygems-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20212588077",
+														"comment": "rubygems-devel is earlier than 0:3.0.3.1-107.module_el8.4.0+2507+bbd85cce"
+													}
+												]
 											}
 										]
 									}
 								],
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880011",
-										"comment": "ruby is earlier than 0:2.6.7-107.module_el8.4.0+2507+bbd85cce"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803638",
-												"comment": "ruby is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803639",
-												"comment": "ruby is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880012",
-										"comment": "ruby is earlier than 0:2.6.7-107.module_el8.4.0+848+83b90ba8"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803640",
-												"comment": "ruby-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803641",
-												"comment": "ruby-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880031",
-										"comment": "ruby-devel is earlier than 0:2.6.7-107.module_el8.4.0+2507+bbd85cce"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803642",
-												"comment": "ruby-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803643",
-												"comment": "ruby-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880032",
-										"comment": "ruby-devel is earlier than 0:2.6.7-107.module_el8.4.0+848+83b90ba8"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803644",
-												"comment": "ruby-doc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803645",
-												"comment": "ruby-doc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880051",
-										"comment": "ruby-doc is earlier than 0:2.6.7-107.module_el8.4.0+2507+bbd85cce"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803646",
-												"comment": "ruby-doc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803647",
-												"comment": "ruby-doc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880052",
-										"comment": "ruby-doc is earlier than 0:2.6.7-107.module_el8.4.0+848+83b90ba8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803648",
-												"comment": "ruby-libs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803649",
-												"comment": "ruby-libs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880071",
-										"comment": "ruby-libs is earlier than 0:2.6.7-107.module_el8.4.0+2507+bbd85cce"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803650",
-												"comment": "ruby-libs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803651",
-												"comment": "ruby-libs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880072",
-										"comment": "ruby-libs is earlier than 0:2.6.7-107.module_el8.4.0+848+83b90ba8"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803652",
-												"comment": "rubygem-abrt is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803653",
-												"comment": "rubygem-abrt is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880091",
-										"comment": "rubygem-abrt is earlier than 0:0.3.0-4.module_el8.5.0+2623+08a8ba32"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803652",
-												"comment": "rubygem-abrt is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803653",
-												"comment": "rubygem-abrt is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880092",
-										"comment": "rubygem-abrt is earlier than 0:0.3.0-4.module_el8.5.0+250+ba22dbf7"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803654",
-												"comment": "rubygem-abrt-doc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803655",
-												"comment": "rubygem-abrt-doc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880111",
-										"comment": "rubygem-abrt-doc is earlier than 0:0.3.0-4.module_el8.5.0+2623+08a8ba32"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803654",
-												"comment": "rubygem-abrt-doc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803655",
-												"comment": "rubygem-abrt-doc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880112",
-										"comment": "rubygem-abrt-doc is earlier than 0:0.3.0-4.module_el8.5.0+250+ba22dbf7"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803656",
-												"comment": "rubygem-bigdecimal is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803657",
-												"comment": "rubygem-bigdecimal is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880131",
-										"comment": "rubygem-bigdecimal is earlier than 0:1.4.1-107.module_el8.4.0+2507+bbd85cce"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803658",
-												"comment": "rubygem-bigdecimal is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803659",
-												"comment": "rubygem-bigdecimal is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880132",
-										"comment": "rubygem-bigdecimal is earlier than 0:1.4.1-107.module_el8.4.0+848+83b90ba8"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803660",
-												"comment": "rubygem-bson is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803661",
-												"comment": "rubygem-bson is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880151",
-										"comment": "rubygem-bson is earlier than 0:4.5.0-1.module_el8.5.0+2623+08a8ba32"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803660",
-												"comment": "rubygem-bson is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803661",
-												"comment": "rubygem-bson is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880152",
-										"comment": "rubygem-bson is earlier than 0:4.5.0-1.module_el8.5.0+250+ba22dbf7"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803662",
-												"comment": "rubygem-bson-doc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803663",
-												"comment": "rubygem-bson-doc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880171",
-										"comment": "rubygem-bson-doc is earlier than 0:4.5.0-1.module_el8.5.0+2623+08a8ba32"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803662",
-												"comment": "rubygem-bson-doc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803663",
-												"comment": "rubygem-bson-doc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880172",
-										"comment": "rubygem-bson-doc is earlier than 0:4.5.0-1.module_el8.5.0+250+ba22dbf7"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803664",
-												"comment": "rubygem-bundler is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803665",
-												"comment": "rubygem-bundler is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880191",
-										"comment": "rubygem-bundler is earlier than 0:1.17.2-107.module_el8.4.0+2507+bbd85cce"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803666",
-												"comment": "rubygem-bundler is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803667",
-												"comment": "rubygem-bundler is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880192",
-										"comment": "rubygem-bundler is earlier than 0:1.17.2-107.module_el8.4.0+848+83b90ba8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803668",
-												"comment": "rubygem-did_you_mean is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803669",
-												"comment": "rubygem-did_you_mean is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880211",
-										"comment": "rubygem-did_you_mean is earlier than 0:1.3.0-107.module_el8.4.0+2507+bbd85cce"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803670",
-												"comment": "rubygem-did_you_mean is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803671",
-												"comment": "rubygem-did_you_mean is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880212",
-										"comment": "rubygem-did_you_mean is earlier than 0:1.3.0-107.module_el8.4.0+848+83b90ba8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803672",
-												"comment": "rubygem-io-console is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803673",
-												"comment": "rubygem-io-console is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880231",
-										"comment": "rubygem-io-console is earlier than 0:0.4.7-107.module_el8.4.0+2507+bbd85cce"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803674",
-												"comment": "rubygem-io-console is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803675",
-												"comment": "rubygem-io-console is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880232",
-										"comment": "rubygem-io-console is earlier than 0:0.4.7-107.module_el8.4.0+848+83b90ba8"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803676",
-												"comment": "rubygem-irb is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803677",
-												"comment": "rubygem-irb is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880251",
-										"comment": "rubygem-irb is earlier than 0:1.0.0-107.module_el8.4.0+2507+bbd85cce"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803678",
-												"comment": "rubygem-irb is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034803679",
-												"comment": "rubygem-irb is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880252",
-										"comment": "rubygem-irb is earlier than 0:1.0.0-107.module_el8.4.0+848+83b90ba8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803680",
-												"comment": "rubygem-json is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803681",
-												"comment": "rubygem-json is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880271",
-										"comment": "rubygem-json is earlier than 0:2.1.0-107.module_el8.4.0+2507+bbd85cce"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803682",
-												"comment": "rubygem-json is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803683",
-												"comment": "rubygem-json is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880272",
-										"comment": "rubygem-json is earlier than 0:2.1.0-107.module_el8.4.0+848+83b90ba8"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803684",
-												"comment": "rubygem-minitest is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803685",
-												"comment": "rubygem-minitest is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880291",
-										"comment": "rubygem-minitest is earlier than 0:5.11.3-107.module_el8.4.0+2507+bbd85cce"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803686",
-												"comment": "rubygem-minitest is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803687",
-												"comment": "rubygem-minitest is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880292",
-										"comment": "rubygem-minitest is earlier than 0:5.11.3-107.module_el8.4.0+848+83b90ba8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803688",
-												"comment": "rubygem-mongo is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803689",
-												"comment": "rubygem-mongo is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880311",
-										"comment": "rubygem-mongo is earlier than 0:2.8.0-1.module_el8.5.0+2623+08a8ba32"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803688",
-												"comment": "rubygem-mongo is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803689",
-												"comment": "rubygem-mongo is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880312",
-										"comment": "rubygem-mongo is earlier than 0:2.8.0-1.module_el8.5.0+250+ba22dbf7"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803690",
-												"comment": "rubygem-mongo-doc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803691",
-												"comment": "rubygem-mongo-doc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880331",
-										"comment": "rubygem-mongo-doc is earlier than 0:2.8.0-1.module_el8.5.0+2623+08a8ba32"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803690",
-												"comment": "rubygem-mongo-doc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803691",
-												"comment": "rubygem-mongo-doc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880332",
-										"comment": "rubygem-mongo-doc is earlier than 0:2.8.0-1.module_el8.5.0+250+ba22dbf7"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803692",
-												"comment": "rubygem-mysql2 is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803693",
-												"comment": "rubygem-mysql2 is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880351",
-										"comment": "rubygem-mysql2 is earlier than 0:0.5.2-1.module_el8.5.0+2623+08a8ba32"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803692",
-												"comment": "rubygem-mysql2 is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803693",
-												"comment": "rubygem-mysql2 is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880352",
-										"comment": "rubygem-mysql2 is earlier than 0:0.5.2-1.module_el8.5.0+250+ba22dbf7"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803694",
-												"comment": "rubygem-mysql2-doc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803695",
-												"comment": "rubygem-mysql2-doc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880371",
-										"comment": "rubygem-mysql2-doc is earlier than 0:0.5.2-1.module_el8.5.0+2623+08a8ba32"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803694",
-												"comment": "rubygem-mysql2-doc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803695",
-												"comment": "rubygem-mysql2-doc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880372",
-										"comment": "rubygem-mysql2-doc is earlier than 0:0.5.2-1.module_el8.5.0+250+ba22dbf7"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803696",
-												"comment": "rubygem-net-telnet is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803697",
-												"comment": "rubygem-net-telnet is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880391",
-										"comment": "rubygem-net-telnet is earlier than 0:0.2.0-107.module_el8.4.0+2507+bbd85cce"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803698",
-												"comment": "rubygem-net-telnet is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803699",
-												"comment": "rubygem-net-telnet is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880392",
-										"comment": "rubygem-net-telnet is earlier than 0:0.2.0-107.module_el8.4.0+848+83b90ba8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803700",
-												"comment": "rubygem-openssl is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803701",
-												"comment": "rubygem-openssl is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880411",
-										"comment": "rubygem-openssl is earlier than 0:2.1.2-107.module_el8.4.0+2507+bbd85cce"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803702",
-												"comment": "rubygem-openssl is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803703",
-												"comment": "rubygem-openssl is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880412",
-										"comment": "rubygem-openssl is earlier than 0:2.1.2-107.module_el8.4.0+848+83b90ba8"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803704",
-												"comment": "rubygem-pg is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803705",
-												"comment": "rubygem-pg is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880431",
-										"comment": "rubygem-pg is earlier than 0:1.1.4-1.module_el8.5.0+2623+08a8ba32"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803704",
-												"comment": "rubygem-pg is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803705",
-												"comment": "rubygem-pg is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880432",
-										"comment": "rubygem-pg is earlier than 0:1.1.4-1.module_el8.5.0+250+ba22dbf7"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803706",
-												"comment": "rubygem-pg-doc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803707",
-												"comment": "rubygem-pg-doc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880451",
-										"comment": "rubygem-pg-doc is earlier than 0:1.1.4-1.module_el8.5.0+2623+08a8ba32"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803706",
-												"comment": "rubygem-pg-doc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803707",
-												"comment": "rubygem-pg-doc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880452",
-										"comment": "rubygem-pg-doc is earlier than 0:1.1.4-1.module_el8.5.0+250+ba22dbf7"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803708",
-												"comment": "rubygem-power_assert is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803709",
-												"comment": "rubygem-power_assert is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880471",
-										"comment": "rubygem-power_assert is earlier than 0:1.1.3-107.module_el8.4.0+2507+bbd85cce"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803710",
-												"comment": "rubygem-power_assert is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803711",
-												"comment": "rubygem-power_assert is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880472",
-										"comment": "rubygem-power_assert is earlier than 0:1.1.3-107.module_el8.4.0+848+83b90ba8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803712",
-												"comment": "rubygem-psych is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803713",
-												"comment": "rubygem-psych is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880491",
-										"comment": "rubygem-psych is earlier than 0:3.1.0-107.module_el8.4.0+2507+bbd85cce"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803714",
-												"comment": "rubygem-psych is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803715",
-												"comment": "rubygem-psych is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880492",
-										"comment": "rubygem-psych is earlier than 0:3.1.0-107.module_el8.4.0+848+83b90ba8"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803716",
-												"comment": "rubygem-rake is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803717",
-												"comment": "rubygem-rake is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880511",
-										"comment": "rubygem-rake is earlier than 0:12.3.3-107.module_el8.4.0+2507+bbd85cce"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803718",
-												"comment": "rubygem-rake is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803719",
-												"comment": "rubygem-rake is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880512",
-										"comment": "rubygem-rake is earlier than 0:12.3.3-107.module_el8.4.0+848+83b90ba8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803720",
-												"comment": "rubygem-rdoc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803721",
-												"comment": "rubygem-rdoc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880531",
-										"comment": "rubygem-rdoc is earlier than 0:6.1.2-107.module_el8.4.0+2507+bbd85cce"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803722",
-												"comment": "rubygem-rdoc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803723",
-												"comment": "rubygem-rdoc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880532",
-										"comment": "rubygem-rdoc is earlier than 0:6.1.2-107.module_el8.4.0+848+83b90ba8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803724",
-												"comment": "rubygem-test-unit is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803725",
-												"comment": "rubygem-test-unit is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880551",
-										"comment": "rubygem-test-unit is earlier than 0:3.2.9-107.module_el8.4.0+2507+bbd85cce"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803726",
-												"comment": "rubygem-test-unit is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803727",
-												"comment": "rubygem-test-unit is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880552",
-										"comment": "rubygem-test-unit is earlier than 0:3.2.9-107.module_el8.4.0+848+83b90ba8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803728",
-												"comment": "rubygem-xmlrpc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803729",
-												"comment": "rubygem-xmlrpc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880571",
-										"comment": "rubygem-xmlrpc is earlier than 0:0.3.0-107.module_el8.4.0+2507+bbd85cce"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803730",
-												"comment": "rubygem-xmlrpc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803731",
-												"comment": "rubygem-xmlrpc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880572",
-										"comment": "rubygem-xmlrpc is earlier than 0:0.3.0-107.module_el8.4.0+848+83b90ba8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803732",
-												"comment": "rubygems is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803733",
-												"comment": "rubygems is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880591",
-										"comment": "rubygems is earlier than 0:3.0.3.1-107.module_el8.4.0+2507+bbd85cce"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803734",
-												"comment": "rubygems is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803735",
-												"comment": "rubygems is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880592",
-										"comment": "rubygems is earlier than 0:3.0.3.1-107.module_el8.4.0+848+83b90ba8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803736",
-												"comment": "rubygems-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803737",
-												"comment": "rubygems-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880611",
-										"comment": "rubygems-devel is earlier than 0:3.0.3.1-107.module_el8.4.0+2507+bbd85cce"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000911",
-										"comment": "AlmaLinux arch is aarch64|x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803738",
-												"comment": "rubygems-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alba:tst:2020034803739",
-												"comment": "rubygems-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:202125880612",
-										"comment": "rubygems-devel is earlier than 0:3.0.3.1-107.module_el8.4.0+848+83b90ba8"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
+										"test_ref": "oval:org.almalinux.alsa:tst:20212588063",
+										"comment": "Module ruby:2.6 is enabled"
 									}
 								]
 							}
@@ -1853,10 +965,6 @@
 					}
 				],
 				"criterions": [
-					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20212588063",
-						"comment": "Module ruby:2.6 is enabled"
-					},
 					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"

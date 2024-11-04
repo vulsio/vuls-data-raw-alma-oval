@@ -11,9 +11,9 @@
 				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-0891.html"
 			},
 			{
-				"ref_id": "ALSA-2022:0891",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2022-0891.html"
+				"ref_id": "RHSA-2022:0891",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2022:0891"
 			},
 			{
 				"ref_id": "CVE-2021-34798",
@@ -58,7 +58,7 @@
 					"text": "CVE-2021-34798",
 					"public": "20210916",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-34798",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-476",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
 				},
@@ -66,7 +66,7 @@
 					"text": "CVE-2021-39275",
 					"public": "20210916",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-39275",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-787",
 					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
 				}
@@ -87,30 +87,14 @@
 								"criterias": [
 									{
 										"operator": "OR",
-										"criterias": [
+										"criterions": [
 											{
-												"operator": "AND",
-												"criterias": [
-													{
-														"operator": "OR",
-														"criterions": [
-															{
-																"test_ref": "oval:org.almalinux.alsa:tst:2020034805508",
-																"comment": "mod_md is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-															},
-															{
-																"test_ref": "oval:org.almalinux.alsa:tst:2020034805509",
-																"comment": "mod_md is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-															}
-														]
-													}
-												],
-												"criterions": [
-													{
-														"test_ref": "oval:org.almalinux.alsa:tst:20204751015",
-														"comment": "mod_md is earlier than 1:2.0.8-8.module_el8.6.0+2872+fe0ff7aa"
-													}
-												]
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034804964",
+												"comment": "mod_md is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034804965",
+												"comment": "mod_md is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 											}
 										]
 									}
@@ -119,6 +103,10 @@
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20190980023",
 										"comment": "Module httpd:2.4 is enabled"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20220891001",
+										"comment": "mod_md is earlier than 1:2.0.8-8.module_el8.6.0+2872+fe0ff7aa"
 									}
 								]
 							}

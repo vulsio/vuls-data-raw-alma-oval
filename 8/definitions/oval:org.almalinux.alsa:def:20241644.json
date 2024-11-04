@@ -6,9 +6,9 @@
 		"Title": "ALSA-2024:1644: grafana-pcp security and bug fix update (Important)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2024:1644",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-1644.html"
+				"ref_id": "RHSA-2024:1644",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:1644"
 			},
 			{
 				"ref_id": "CVE-2024-1394",
@@ -76,11 +76,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034804666",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034803084",
 								"comment": "grafana-pcp is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034804667",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034803085",
 								"comment": "grafana-pcp is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -88,12 +88,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20241644001",
-						"comment": "grafana-pcp is earlier than 0:5.1.1-2.el8_9.alma.1"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20241644002",
+						"comment": "grafana-pcp is earlier than 0:5.1.1-2.el8_9.alma.1"
 					}
 				]
 			}

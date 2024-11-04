@@ -6,9 +6,9 @@
 		"Title": "ALSA-2024:0116: python-urllib3 security update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2024:0116",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-0116.html"
+				"ref_id": "RHSA-2024:0116",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:0116"
 			},
 			{
 				"ref_id": "CVE-2023-43804",
@@ -93,11 +93,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034807002",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034807012",
 								"comment": "python3-urllib3 is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034807003",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034807013",
 								"comment": "python3-urllib3 is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -105,12 +105,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20240116001",
-						"comment": "python3-urllib3 is earlier than 0:1.24.2-5.el8_9.2"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20240116001",
+						"comment": "python3-urllib3 is earlier than 0:1.24.2-5.el8_9.2"
 					}
 				]
 			}

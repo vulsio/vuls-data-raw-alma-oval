@@ -11,9 +11,9 @@
 				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-0618.html"
 			},
 			{
-				"ref_id": "ALSA-2021:0618",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-0618.html"
+				"ref_id": "RHSA-2021:0618",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2021:0618"
 			},
 			{
 				"ref_id": "CVE-2021-20230",
@@ -49,7 +49,7 @@
 					"text": "CVE-2021-20230",
 					"public": "20201011",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-20230",
-					"impact": "important",
+					"impact": "Important",
 					"cwe": "CWE-295",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
 				}
@@ -66,11 +66,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034806354",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034806842",
 								"comment": "stunnel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034806355",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034806843",
 								"comment": "stunnel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -78,12 +78,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20210618001",
-						"comment": "stunnel is earlier than 0:5.56-5.el8_3"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20210618001",
+						"comment": "stunnel is earlier than 0:5.56-5.el8_3"
 					}
 				]
 			}

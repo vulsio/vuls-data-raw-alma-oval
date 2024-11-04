@@ -6,9 +6,9 @@
 		"Title": "ALSA-2023:5249: ncurses security update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2023:5249",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-5249.html"
+				"ref_id": "RHSA-2023:5249",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:5249"
 			},
 			{
 				"ref_id": "CVE-2023-29491",
@@ -82,11 +82,11 @@
 										"operator": "OR",
 										"criterions": [
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807514",
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807812",
 												"comment": "ncurses is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 											},
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807515",
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807813",
 												"comment": "ncurses is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 											}
 										]
@@ -106,11 +106,107 @@
 										"operator": "OR",
 										"criterions": [
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807516",
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807816",
+												"comment": "ncurses-c++-libs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807817",
+												"comment": "ncurses-c++-libs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20235249014",
+										"comment": "ncurses-c++-libs is earlier than 0:6.1-9.20180224.el8_8.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807818",
+												"comment": "ncurses-compat-libs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807819",
+												"comment": "ncurses-compat-libs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20235249015",
+										"comment": "ncurses-compat-libs is earlier than 0:6.1-9.20180224.el8_8.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807820",
+												"comment": "ncurses-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807821",
+												"comment": "ncurses-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20235249016",
+										"comment": "ncurses-devel is earlier than 0:6.1-9.20180224.el8_8.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807822",
+												"comment": "ncurses-libs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807823",
+												"comment": "ncurses-libs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20235249017",
+										"comment": "ncurses-libs is earlier than 0:6.1-9.20180224.el8_8.1"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807814",
 												"comment": "ncurses-base is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 											},
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807517",
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807815",
 												"comment": "ncurses-base is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 											}
 										]
@@ -130,107 +226,11 @@
 										"operator": "OR",
 										"criterions": [
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807518",
-												"comment": "ncurses-c++-libs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807519",
-												"comment": "ncurses-c++-libs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20235249005",
-										"comment": "ncurses-c++-libs is earlier than 0:6.1-9.20180224.el8_8.1"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807520",
-												"comment": "ncurses-compat-libs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807521",
-												"comment": "ncurses-compat-libs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20235249007",
-										"comment": "ncurses-compat-libs is earlier than 0:6.1-9.20180224.el8_8.1"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807522",
-												"comment": "ncurses-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807523",
-												"comment": "ncurses-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20235249009",
-										"comment": "ncurses-devel is earlier than 0:6.1-9.20180224.el8_8.1"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807524",
-												"comment": "ncurses-libs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807525",
-												"comment": "ncurses-libs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20235249011",
-										"comment": "ncurses-libs is earlier than 0:6.1-9.20180224.el8_8.1"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807526",
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807824",
 												"comment": "ncurses-term is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 											},
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807527",
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807825",
 												"comment": "ncurses-term is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 											}
 										]

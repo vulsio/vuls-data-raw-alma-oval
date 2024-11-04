@@ -6,9 +6,9 @@
 		"Title": "ALSA-2023:7876: opensc security update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2023:7876",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-7876.html"
+				"ref_id": "RHSA-2023:7876",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:7876"
 			},
 			{
 				"ref_id": "CVE-2023-40660",
@@ -93,11 +93,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034806986",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034806996",
 								"comment": "opensc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034806987",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034806997",
 								"comment": "opensc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -105,12 +105,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20237876001",
-						"comment": "opensc is earlier than 0:0.20.0-7.el8_9"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20237876001",
+						"comment": "opensc is earlier than 0:0.20.0-7.el8_9"
 					}
 				]
 			}

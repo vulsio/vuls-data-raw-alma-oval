@@ -6,9 +6,9 @@
 		"Title": "ALSA-2023:0842: tar security update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2023:0842",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-0842.html"
+				"ref_id": "RHSA-2023:0842",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:0842"
 			},
 			{
 				"ref_id": "CVE-2022-48303",
@@ -66,11 +66,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034808368",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034808768",
 								"comment": "tar is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034808369",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034808769",
 								"comment": "tar is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -78,12 +78,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20230842001",
-						"comment": "tar is earlier than 2:1.30-6.el8_7.1"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20230842001",
+						"comment": "tar is earlier than 2:1.30-6.el8_7.1"
 					}
 				]
 			}

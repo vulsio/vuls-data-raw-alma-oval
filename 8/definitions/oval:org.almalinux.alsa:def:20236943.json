@@ -6,9 +6,9 @@
 		"Title": "ALSA-2023:6943: cloud-init security, bug fix, and enhancement update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2023:6943",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-6943.html"
+				"ref_id": "RHSA-2023:6943",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:6943"
 			},
 			{
 				"ref_id": "CVE-2023-1786",
@@ -76,11 +76,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alba:tst:2020034808956",
+								"test_ref": "oval:org.almalinux.alba:tst:2020034809074",
 								"comment": "cloud-init is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alba:tst:2020034808957",
+								"test_ref": "oval:org.almalinux.alba:tst:2020034809075",
 								"comment": "cloud-init is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -88,12 +88,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20236943001",
-						"comment": "cloud-init is earlier than 0:23.1.1-10.el8.alma.1"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20236943002",
+						"comment": "cloud-init is earlier than 0:23.1.1-10.el8.alma.1"
 					}
 				]
 			}

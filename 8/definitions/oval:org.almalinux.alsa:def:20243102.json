@@ -6,9 +6,9 @@
 		"Title": "ALSA-2024:3102: python-jinja2 security update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2024:3102",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-3102.html"
+				"ref_id": "RHSA-2024:3102",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:3102"
 			},
 			{
 				"ref_id": "CVE-2024-22195",
@@ -76,11 +76,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034807342",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034807604",
 								"comment": "python3-jinja2 is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034807343",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034807605",
 								"comment": "python3-jinja2 is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -88,12 +88,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20243102001",
-						"comment": "python3-jinja2 is earlier than 0:2.10.1-4.el8"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20243102001",
+						"comment": "python3-jinja2 is earlier than 0:2.10.1-4.el8"
 					}
 				]
 			}

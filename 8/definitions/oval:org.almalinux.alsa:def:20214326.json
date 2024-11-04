@@ -11,9 +11,9 @@
 				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4326.html"
 			},
 			{
-				"ref_id": "ALSA-2021:4326",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4326.html"
+				"ref_id": "RHSA-2021:4326",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2021:4326"
 			},
 			{
 				"ref_id": "CVE-2021-31535",
@@ -49,7 +49,7 @@
 					"text": "CVE-2021-31535",
 					"public": "20210518",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-31535",
-					"impact": "important",
+					"impact": "Important",
 					"cwe": "CWE-20->CWE-77",
 					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
 				}
@@ -72,11 +72,11 @@
 										"operator": "OR",
 										"criterions": [
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807050",
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807166",
 												"comment": "libX11 is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 											},
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807051",
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807167",
 												"comment": "libX11 is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 											}
 										]
@@ -96,35 +96,11 @@
 										"operator": "OR",
 										"criterions": [
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807052",
-												"comment": "libX11-common is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807053",
-												"comment": "libX11-common is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20214326003",
-										"comment": "libX11-common is earlier than 0:1.6.8-5.el8"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807054",
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807170",
 												"comment": "libX11-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 											},
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807055",
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807171",
 												"comment": "libX11-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 											}
 										]
@@ -144,11 +120,11 @@
 										"operator": "OR",
 										"criterions": [
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807056",
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807172",
 												"comment": "libX11-xcb is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 											},
 											{
-												"test_ref": "oval:org.almalinux.alsa:tst:2020034807057",
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807173",
 												"comment": "libX11-xcb is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 											}
 										]
@@ -158,6 +134,30 @@
 									{
 										"test_ref": "oval:org.almalinux.alsa:tst:20214326007",
 										"comment": "libX11-xcb is earlier than 0:1.6.8-5.el8"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807168",
+												"comment": "libX11-common is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807169",
+												"comment": "libX11-common is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20214326003",
+										"comment": "libX11-common is earlier than 0:1.6.8-5.el8"
 									}
 								]
 							}

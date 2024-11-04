@@ -6,9 +6,9 @@
 		"Title": "ALSA-2023:2866: git-lfs security and bug fix update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2023:2866",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2023-2866.html"
+				"ref_id": "RHSA-2023:2866",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:2866"
 			},
 			{
 				"ref_id": "CVE-2022-2880",
@@ -109,11 +109,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034803336",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034808514",
 								"comment": "git-lfs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034803337",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034808515",
 								"comment": "git-lfs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -121,12 +121,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20232866001",
-						"comment": "git-lfs is earlier than 0:3.2.0-2.el8"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20232866001",
+						"comment": "git-lfs is earlier than 0:3.2.0-2.el8"
 					}
 				]
 			}

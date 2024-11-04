@@ -11,9 +11,9 @@
 				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-0579.html"
 			},
 			{
-				"ref_id": "ALSA-2020:0579",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2020-0579.html"
+				"ref_id": "RHSA-2020:0579",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2020:0579"
 			},
 			{
 				"ref_id": "CVE-2019-15604",
@@ -94,7 +94,7 @@
 					"text": "CVE-2019-15604",
 					"public": "20200207",
 					"href": "https://access.redhat.com/security/cve/CVE-2019-15604",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-172",
 					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
 				},
@@ -102,7 +102,7 @@
 					"text": "CVE-2019-15605",
 					"public": "20200207",
 					"href": "https://access.redhat.com/security/cve/CVE-2019-15605",
-					"impact": "important",
+					"impact": "Important",
 					"cwe": "CWE-444",
 					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:L"
 				},
@@ -110,7 +110,7 @@
 					"text": "CVE-2019-15606",
 					"public": "20200207",
 					"href": "https://access.redhat.com/security/cve/CVE-2019-15606",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-138",
 					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
 				},
@@ -118,7 +118,7 @@
 					"text": "CVE-2019-16775",
 					"public": "20191212",
 					"href": "https://access.redhat.com/security/cve/CVE-2019-16775",
-					"impact": "low",
+					"impact": "Low",
 					"cwe": "CWE-20",
 					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:H/A:N"
 				},
@@ -126,7 +126,7 @@
 					"text": "CVE-2019-16776",
 					"public": "20191212",
 					"href": "https://access.redhat.com/security/cve/CVE-2019-16776",
-					"impact": "low",
+					"impact": "Low",
 					"cwe": "CWE-20",
 					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:H/A:N"
 				},
@@ -134,7 +134,7 @@
 					"text": "CVE-2019-16777",
 					"public": "20191212",
 					"href": "https://access.redhat.com/security/cve/CVE-2019-16777",
-					"impact": "low",
+					"impact": "Low",
 					"cwe": "CWE-20",
 					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:H/A:N"
 				}
@@ -155,262 +155,158 @@
 								"criterias": [
 									{
 										"operator": "OR",
-										"criterions": [
+										"criterias": [
 											{
-												"test_ref": "oval:org.almalinux.alea:tst:2020034803742",
-												"comment": "nodejs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alea:tst:2020034802722",
+																"comment": "nodejs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alea:tst:2020034802723",
+																"comment": "nodejs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20200579001",
+														"comment": "nodejs is earlier than 1:10.19.0-1.module+el8.1.0+5726+6ed65f8c"
+													}
+												]
 											},
 											{
-												"test_ref": "oval:org.almalinux.alea:tst:2020034803743",
-												"comment": "nodejs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alea:tst:2020034802726",
+																"comment": "nodejs-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alea:tst:2020034802727",
+																"comment": "nodejs-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20200579003",
+														"comment": "nodejs-devel is earlier than 1:10.19.0-1.module+el8.1.0+5726+6ed65f8c"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alea:tst:2020034802742",
+																"comment": "npm is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alea:tst:2020034802743",
+																"comment": "npm is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20200579011",
+														"comment": "npm is earlier than 1:6.13.4-1.10.19.0.1.module+el8.1.0+5726+6ed65f8c"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alea:tst:2020034802730",
+																"comment": "nodejs-docs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alea:tst:2020034802731",
+																"comment": "nodejs-docs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:20200579005",
+														"comment": "nodejs-docs is earlier than 1:10.19.0-1.module+el8.1.0+5726+6ed65f8c"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alea:tst:2020034802738",
+																"comment": "nodejs-nodemon is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alea:tst:2020034802739",
+																"comment": "nodejs-nodemon is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201929250071",
+														"comment": "nodejs-nodemon is earlier than 0:1.18.3-1.module_el8.3.0+2047+b07ac28e"
+													}
+												]
+											},
+											{
+												"operator": "AND",
+												"criterias": [
+													{
+														"operator": "OR",
+														"criterions": [
+															{
+																"test_ref": "oval:org.almalinux.alea:tst:2020034802740",
+																"comment": "nodejs-packaging is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+															},
+															{
+																"test_ref": "oval:org.almalinux.alea:tst:2020034802741",
+																"comment": "nodejs-packaging is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+															}
+														]
+													}
+												],
+												"criterions": [
+													{
+														"test_ref": "oval:org.almalinux.alsa:tst:201929250091",
+														"comment": "nodejs-packaging is earlier than 0:17-3.module_el8.3.0+2047+b07ac28e"
+													}
+												]
 											}
 										]
 									}
 								],
 								"criterions": [
 									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20200579001",
-										"comment": "nodejs is earlier than 1:10.19.0-1.module+el8.1.0+5726+6ed65f8c"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alea:tst:2020034803744",
-												"comment": "nodejs-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alea:tst:2020034803745",
-												"comment": "nodejs-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20200579003",
-										"comment": "nodejs-devel is earlier than 1:10.19.0-1.module+el8.1.0+5726+6ed65f8c"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alea:tst:2020034803746",
-												"comment": "nodejs-docs is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alea:tst:2020034803747",
-												"comment": "nodejs-docs is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20200579005",
-										"comment": "nodejs-docs is earlier than 1:10.19.0-1.module+el8.1.0+5726+6ed65f8c"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alea:tst:2020034803750",
-												"comment": "nodejs-nodemon is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alea:tst:2020034803751",
-												"comment": "nodejs-nodemon is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:201929250071",
-										"comment": "nodejs-nodemon is earlier than 0:1.18.3-1.module_el8.3.0+2047+b07ac28e"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:2019373500111",
-										"comment": "AlmaLinux arch is x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alea:tst:2020034803750",
-												"comment": "nodejs-nodemon is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alea:tst:2020034803751",
-												"comment": "nodejs-nodemon is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:201929250072",
-										"comment": "nodejs-nodemon is earlier than 0:1.18.3-1.module_el8.4.0+2224+b07ac28e"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:2019373500121",
-										"comment": "AlmaLinux arch is aarch64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alea:tst:2020034803750",
-												"comment": "nodejs-nodemon is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alea:tst:2020034803751",
-												"comment": "nodejs-nodemon is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:201929250073",
-										"comment": "nodejs-nodemon is earlier than 0:1.18.3-1.module_el8.5.0+81+7dbe79d3"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alea:tst:2020034803752",
-												"comment": "nodejs-packaging is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alea:tst:2020034803753",
-												"comment": "nodejs-packaging is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:201929250091",
-										"comment": "nodejs-packaging is earlier than 0:17-3.module_el8.3.0+2047+b07ac28e"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:2019373500111",
-										"comment": "AlmaLinux arch is x86_64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alea:tst:2020034803752",
-												"comment": "nodejs-packaging is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alea:tst:2020034803753",
-												"comment": "nodejs-packaging is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:201929250092",
-										"comment": "nodejs-packaging is earlier than 0:17-3.module_el8.4.0+2224+b07ac28e"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:2019373500121",
-										"comment": "AlmaLinux arch is aarch64"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alea:tst:2020034803752",
-												"comment": "nodejs-packaging is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alea:tst:2020034803753",
-												"comment": "nodejs-packaging is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:201929250093",
-										"comment": "nodejs-packaging is earlier than 0:17-3.module_el8.5.0+81+7dbe79d3"
-									},
-									{
-										"test_ref": "oval:org.almalinux.alea:tst:2020033000921",
-										"comment": "AlmaLinux arch is ppc64le"
-									}
-								]
-							},
-							{
-								"operator": "AND",
-								"criterias": [
-									{
-										"operator": "OR",
-										"criterions": [
-											{
-												"test_ref": "oval:org.almalinux.alea:tst:2020034803754",
-												"comment": "npm is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
-											},
-											{
-												"test_ref": "oval:org.almalinux.alea:tst:2020034803755",
-												"comment": "npm is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
-											}
-										]
-									}
-								],
-								"criterions": [
-									{
-										"test_ref": "oval:org.almalinux.alsa:tst:20200579011",
-										"comment": "npm is earlier than 1:6.13.4-1.10.19.0.1.module+el8.1.0+5726+6ed65f8c"
+										"test_ref": "oval:org.almalinux.alsa:tst:20192925013",
+										"comment": "Module nodejs:10 is enabled"
 									}
 								]
 							}
@@ -418,10 +314,6 @@
 					}
 				],
 				"criterions": [
-					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20192925013",
-						"comment": "Module nodejs:10 is enabled"
-					},
 					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"

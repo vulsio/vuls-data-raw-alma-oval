@@ -11,9 +11,9 @@
 				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4226.html"
 			},
 			{
-				"ref_id": "ALSA-2021:4226",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4226.html"
+				"ref_id": "RHSA-2021:4226",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2021:4226"
 			},
 			{
 				"ref_id": "CVE-2021-27358",
@@ -85,7 +85,7 @@
 					"text": "CVE-2021-27358",
 					"public": "20210217",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-27358",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-862->CWE-400",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
 				},
@@ -93,7 +93,7 @@
 					"text": "CVE-2021-3114",
 					"public": "20210120",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-3114",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-682",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
 				},
@@ -101,7 +101,7 @@
 					"text": "CVE-2021-33195",
 					"public": "20210518",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-33195",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-20",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
 				},
@@ -109,7 +109,7 @@
 					"text": "CVE-2021-33197",
 					"public": "20210521",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-33197",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-20",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
 				},
@@ -117,7 +117,7 @@
 					"text": "CVE-2021-34558",
 					"public": "20210713",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-34558",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-20",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
 				}
@@ -134,11 +134,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034803934",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034804386",
 								"comment": "grafana is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034803935",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034804387",
 								"comment": "grafana is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -146,12 +146,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20214226001",
-						"comment": "grafana is earlier than 0:7.5.9-4.el8"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20214226001",
+						"comment": "grafana is earlier than 0:7.5.9-4.el8"
 					}
 				]
 			}

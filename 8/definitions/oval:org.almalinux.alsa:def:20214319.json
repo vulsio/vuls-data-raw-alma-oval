@@ -11,9 +11,9 @@
 				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4319.html"
 			},
 			{
-				"ref_id": "ALSA-2021:4319",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2021-4319.html"
+				"ref_id": "RHSA-2021:4319",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2021:4319"
 			},
 			{
 				"ref_id": "CVE-2021-31292",
@@ -67,7 +67,7 @@
 					"text": "CVE-2021-31292",
 					"public": "20210726",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-31292",
-					"impact": "moderate",
+					"impact": "Moderate",
 					"cwe": "CWE-190->CWE-125",
 					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
 				},
@@ -75,7 +75,7 @@
 					"text": "CVE-2021-37618",
 					"public": "20210808",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-37618",
-					"impact": "low",
+					"impact": "Low",
 					"cwe": "CWE-125",
 					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H"
 				},
@@ -83,7 +83,7 @@
 					"text": "CVE-2021-37619",
 					"public": "20210808",
 					"href": "https://access.redhat.com/security/cve/CVE-2021-37619",
-					"impact": "low",
+					"impact": "Low",
 					"cwe": "CWE-125",
 					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H"
 				}
@@ -100,11 +100,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034807408",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034807654",
 								"comment": "compat-exiv2-026 is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034807409",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034807655",
 								"comment": "compat-exiv2-026 is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -112,12 +112,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20214319001",
-						"comment": "compat-exiv2-026 is earlier than 0:0.26-6.el8"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20214319001",
+						"comment": "compat-exiv2-026 is earlier than 0:0.26-6.el8"
 					}
 				]
 			}

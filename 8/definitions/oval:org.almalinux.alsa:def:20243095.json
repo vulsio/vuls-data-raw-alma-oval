@@ -6,9 +6,9 @@
 		"Title": "ALSA-2024:3095: vorbis-tools security update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2024:3095",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-3095.html"
+				"ref_id": "RHSA-2024:3095",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:3095"
 			},
 			{
 				"ref_id": "CVE-2023-43361",
@@ -76,11 +76,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034809684",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034809448",
 								"comment": "vorbis-tools is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034809685",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034809449",
 								"comment": "vorbis-tools is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -88,12 +88,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20243095001",
-						"comment": "vorbis-tools is earlier than 1:1.4.0-29.el8"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20243095001",
+						"comment": "vorbis-tools is earlier than 1:1.4.0-29.el8"
 					}
 				]
 			}

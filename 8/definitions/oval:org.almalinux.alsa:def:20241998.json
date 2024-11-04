@@ -6,9 +6,9 @@
 		"Title": "ALSA-2024:1998: libreswan security update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2024:1998",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-1998.html"
+				"ref_id": "RHSA-2024:1998",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:1998"
 			},
 			{
 				"ref_id": "CVE-2024-2357",
@@ -76,11 +76,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034807712",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034803492",
 								"comment": "libreswan is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034807713",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034803493",
 								"comment": "libreswan is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -88,12 +88,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20241998001",
-						"comment": "libreswan is earlier than 0:4.12-2.el8_9.2.alma.1"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20241998002",
+						"comment": "libreswan is earlier than 0:4.12-2.el8_9.2.alma.1"
 					}
 				]
 			}

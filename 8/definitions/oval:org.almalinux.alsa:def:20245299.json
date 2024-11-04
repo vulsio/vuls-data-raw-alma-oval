@@ -6,9 +6,9 @@
 		"Title": "ALSA-2024:5299: wget security update (Moderate)",
 		"reference": [
 			{
-				"ref_id": "ALSA-2024:5299",
-				"source": "ALSA",
-				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-5299.html"
+				"ref_id": "RHSA-2024:5299",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:5299"
 			},
 			{
 				"ref_id": "CVE-2024-38428",
@@ -76,11 +76,11 @@
 						"operator": "OR",
 						"criterions": [
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034809574",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034804364",
 								"comment": "wget is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
 							},
 							{
-								"test_ref": "oval:org.almalinux.alsa:tst:2020034809575",
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034804365",
 								"comment": "wget is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
 							}
 						]
@@ -88,12 +88,12 @@
 				],
 				"criterions": [
 					{
-						"test_ref": "oval:org.almalinux.alsa:tst:20245299001",
-						"comment": "wget is earlier than 0:1.19.5-12.el8_10"
-					},
-					{
 						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
 						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20245299001",
+						"comment": "wget is earlier than 0:1.19.5-12.el8_10"
 					}
 				]
 			}
