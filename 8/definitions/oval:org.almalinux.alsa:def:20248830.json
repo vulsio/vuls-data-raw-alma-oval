@@ -1,0 +1,108 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20248830",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:8830: bpftrace security update (Low)",
+		"reference": [
+			{
+				"ref_id": "CVE-2024-2313",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-2313"
+			},
+			{
+				"ref_id": "RHSA-2024:8830",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:8830"
+			},
+			{
+				"ref_id": "ALSA-2024:8830",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-8830.html"
+			}
+		],
+		"Description": "BPFtrace is a high-level tracing language for Linux enhanced Berkeley Packet Filter (eBPF) available in recent Linux kernels (4.x). BPFtrace uses LLVM as a backend to compile scripts to BPF-bytecode and makes use of BCC for interacting with the Linux BPF system, as well as existing Linux tracing capabilities: kernel dynamic tracing (kprobes), user-level dynamic tracing (uprobes), and tracepoints. The BPFtrace language is inspired by awk and C, and predecessor tracers such as DTrace and SystemTap  \n\nSecurity Fix(es):  \n\n  * bpftrace: unprivileged users can force loading of compromised linux headers (CVE-2024-2313)\n\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Low",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-11-05"
+			},
+			"updated": {
+				"date": "2024-11-05"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2269014",
+					"id": "2269014"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2024-2313",
+					"public": "20240310",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-2313",
+					"impact": "Low",
+					"cwe": "CWE-284",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:N/I:N/A:L"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterions": [
+							{
+								"test_ref": "oval:org.almalinux.alsa:tst:20248830002",
+								"comment": "bpftrace is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+							},
+							{
+								"test_ref": "oval:org.almalinux.alsa:tst:20248830003",
+								"comment": "bpftrace is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20248830001",
+						"comment": "bpftrace is earlier than 0:0.16.0-6.el8_10"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}
