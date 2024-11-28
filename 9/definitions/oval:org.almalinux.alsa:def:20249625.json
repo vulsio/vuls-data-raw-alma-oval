@@ -1,0 +1,97 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20249625",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:9625: squid security update (Important)",
+		"reference": [
+			{
+				"ref_id": "CVE-2024-45802",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-45802"
+			},
+			{
+				"ref_id": "RHSA-2024:9625",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:9625"
+			},
+			{
+				"ref_id": "ALSA-2024:9625",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-9625.html"
+			}
+		],
+		"Description": "Squid is a high-performance proxy caching server for web clients, supporting FTP, Gopher, and HTTP data objects.  \n\nSecurity Fix(es):  \n\n  * squid: Denial of Service processing ESI response content (CVE-2024-45802)\n\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-11-14"
+			},
+			"updated": {
+				"date": "2024-11-14"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2322154",
+					"id": "2322154"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2024-45802",
+					"public": "20241028",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-45802",
+					"impact": "Important",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20249625001",
+						"comment": "squid is earlier than 7:5.5-14.el9_5.3"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20225527002",
+						"comment": "squid is signed with AlmaLinux OS 9 key"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

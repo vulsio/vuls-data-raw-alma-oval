@@ -1,0 +1,213 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20249243",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:9243: postfix security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "CVE-2023-51764",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-51764"
+			},
+			{
+				"ref_id": "RHSA-2024:9243",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:9243"
+			},
+			{
+				"ref_id": "ALSA-2024:9243",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-9243.html"
+			}
+		],
+		"Description": "The postfix packages provide a Mail Transport Agent (MTA), which supports protocols like LDAP, SMTP AUTH (SASL), and TLS.  \n\nSecurity Fix(es):  \n\n  * postfix: SMTP smuggling vulnerability (CVE-2023-51764)\n\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.  \n\nAdditional Changes:  \n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.\n",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-11-12"
+			},
+			"updated": {
+				"date": "2024-11-12"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2255563",
+					"id": "2255563"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-51764",
+					"public": "20231218",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-51764",
+					"impact": "Moderate",
+					"cwe": "CWE-345->CWE-451",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249243001",
+										"comment": "postfix-pgsql is earlier than 2:3.5.25-1.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249243002",
+										"comment": "postfix-pgsql is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249243003",
+										"comment": "postfix-sqlite is earlier than 2:3.5.25-1.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249243004",
+										"comment": "postfix-sqlite is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249243005",
+										"comment": "postfix is earlier than 2:3.5.25-1.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249243006",
+										"comment": "postfix is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249243007",
+										"comment": "postfix-cdb is earlier than 2:3.5.25-1.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249243008",
+										"comment": "postfix-cdb is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249243009",
+										"comment": "postfix-ldap is earlier than 2:3.5.25-1.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249243010",
+										"comment": "postfix-ldap is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249243011",
+										"comment": "postfix-lmdb is earlier than 2:3.5.25-1.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249243012",
+										"comment": "postfix-lmdb is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249243013",
+										"comment": "postfix-mysql is earlier than 2:3.5.25-1.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249243014",
+										"comment": "postfix-mysql is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249243015",
+										"comment": "postfix-pcre is earlier than 2:3.5.25-1.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249243016",
+										"comment": "postfix-pcre is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249243017",
+										"comment": "postfix-perl-scripts is earlier than 2:3.5.25-1.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249243018",
+										"comment": "postfix-perl-scripts is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}
