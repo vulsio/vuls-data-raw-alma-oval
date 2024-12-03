@@ -1,0 +1,263 @@
+{
+	"id": "oval:org.almalinux.alsa:def:202410219",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:10219: perl-App-cpanminus:1.7044 security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "CVE-2024-45321",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-45321"
+			},
+			{
+				"ref_id": "RHSA-2024:10219",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:10219"
+			},
+			{
+				"ref_id": "ALSA-2024:10219",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2024-10219.html"
+			}
+		],
+		"Description": "The panminus is a script to get, unpack, build and install modules from CPAN.  \n\nSecurity Fix(es):  \n\n  * perl-App-cpanminus: Insecure HTTP in App::cpanminus Allows Code Execution Vulnerability (CVE-2024-45321)\n\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-11-25"
+			},
+			"updated": {
+				"date": "2024-11-25"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2308078",
+					"id": "2308078"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2024-45321",
+					"public": "20240827",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-45321",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809464",
+												"comment": "perl-CPAN-DistnameInfo is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809465",
+												"comment": "perl-CPAN-DistnameInfo is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202410219001",
+										"comment": "perl-CPAN-DistnameInfo is earlier than 0:0.12-13.module_el8.6.0+2810+886f1911"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:202410219003",
+												"comment": "perl-CPAN-Meta-Check is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:202410219004",
+												"comment": "perl-CPAN-Meta-Check is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202410219002",
+										"comment": "perl-CPAN-Meta-Check is earlier than 0:0.014-6.module_el8.10.0+3924+8d272be4"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:202410219006",
+												"comment": "perl-File-pushd is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:202410219007",
+												"comment": "perl-File-pushd is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202410219005",
+										"comment": "perl-File-pushd is earlier than 0:1.014-6.module_el8.6.0+2851+b32f1bac"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:202410219009",
+												"comment": "perl-Module-CPANfile is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:202410219010",
+												"comment": "perl-Module-CPANfile is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202410219008",
+										"comment": "perl-Module-CPANfile is earlier than 0:1.1002-7.module_el8.6.0+2792+592c5e39"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:202410219012",
+												"comment": "perl-Parse-PMFile is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:202410219013",
+												"comment": "perl-Parse-PMFile is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202410219011",
+										"comment": "perl-Parse-PMFile is earlier than 0:0.41-7.module_el8.6.0+2851+b32f1bac"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:202410219015",
+												"comment": "perl-String-ShellQuote is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:202410219016",
+												"comment": "perl-String-ShellQuote is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202410219014",
+										"comment": "perl-String-ShellQuote is earlier than 0:1.04-24.module_el8.6.0+2810+886f1911"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:202410219018",
+												"comment": "perl-App-cpanminus is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:202410219019",
+												"comment": "perl-App-cpanminus is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202410219017",
+										"comment": "perl-App-cpanminus is earlier than 0:1.7044-6.module_el8.10.0+3924+8d272be4"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}
