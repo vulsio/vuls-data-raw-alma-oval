@@ -1,0 +1,325 @@
+{
+	"id": "oval:org.almalinux.alsa:def:202410791",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:10791: postgresql security update (Important)",
+		"reference": [
+			{
+				"ref_id": "CVE-2024-10976",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-10976"
+			},
+			{
+				"ref_id": "CVE-2024-10978",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-10978"
+			},
+			{
+				"ref_id": "CVE-2024-10979",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-10979"
+			},
+			{
+				"ref_id": "RHSA-2024:10791",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:10791"
+			},
+			{
+				"ref_id": "ALSA-2024:10791",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-10791.html"
+			}
+		],
+		"Description": "PostgreSQL is an advanced object-relational database management system (DBMS).  \n\nSecurity Fix(es):  \n\n  * postgresql: PostgreSQL SET ROLE, SET SESSION AUTHORIZATION reset to wrong user ID (CVE-2024-10978)\n  * postgresql: PostgreSQL PL/Perl environment variable changes execute arbitrary code (CVE-2024-10979)\n  * postgresql: PostgreSQL row security below e.g. subqueries disregards user ID changes (CVE-2024-10976)\n\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-12-04"
+			},
+			"updated": {
+				"date": "2024-12-04"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2326251",
+					"id": "2326251"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2326253",
+					"id": "2326253"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2326263",
+					"id": "2326263"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2024-10976",
+					"public": "20241114",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-10976",
+					"impact": "Moderate",
+					"cwe": "CWE-1250",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N"
+				},
+				{
+					"text": "CVE-2024-10978",
+					"public": "20241114",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-10978",
+					"impact": "Moderate",
+					"cwe": "CWE-266",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N"
+				},
+				{
+					"text": "CVE-2024-10979",
+					"public": "20241114",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-10979",
+					"impact": "Important",
+					"cwe": "CWE-15",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202410791001",
+										"comment": "postgresql is earlier than 0:13.18-1.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224771002",
+										"comment": "postgresql is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202410791002",
+										"comment": "postgresql-contrib is earlier than 0:13.18-1.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224771004",
+										"comment": "postgresql-contrib is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202410791003",
+										"comment": "postgresql-plperl is earlier than 0:13.18-1.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224771006",
+										"comment": "postgresql-plperl is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202410791004",
+										"comment": "postgresql-plpython3 is earlier than 0:13.18-1.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224771008",
+										"comment": "postgresql-plpython3 is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202410791005",
+										"comment": "postgresql-pltcl is earlier than 0:13.18-1.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224771010",
+										"comment": "postgresql-pltcl is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202410791006",
+										"comment": "postgresql-private-libs is earlier than 0:13.18-1.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224771014",
+										"comment": "postgresql-private-libs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202410791007",
+										"comment": "postgresql-server is earlier than 0:13.18-1.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224771016",
+										"comment": "postgresql-server is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202410791008",
+										"comment": "postgresql-upgrade is earlier than 0:13.18-1.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224771022",
+										"comment": "postgresql-upgrade is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202410791009",
+										"comment": "postgresql-docs is earlier than 0:13.18-1.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20231693006",
+										"comment": "postgresql-docs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202410791010",
+										"comment": "postgresql-private-devel is earlier than 0:13.18-1.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224771012",
+										"comment": "postgresql-private-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202410791011",
+										"comment": "postgresql-server-devel is earlier than 0:13.18-1.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224771018",
+										"comment": "postgresql-server-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202410791012",
+										"comment": "postgresql-static is earlier than 0:13.18-1.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20231693022",
+										"comment": "postgresql-static is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202410791013",
+										"comment": "postgresql-test is earlier than 0:13.18-1.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20224771020",
+										"comment": "postgresql-test is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202410791014",
+										"comment": "postgresql-upgrade-devel is earlier than 0:13.18-1.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20231693028",
+										"comment": "postgresql-upgrade-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202410791015",
+										"comment": "postgresql-test-rpm-macros is earlier than 0:13.18-1.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20234327032",
+										"comment": "postgresql-test-rpm-macros is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}
