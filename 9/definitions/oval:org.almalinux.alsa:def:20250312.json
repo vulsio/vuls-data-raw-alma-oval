@@ -1,0 +1,122 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20250312",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2025:0312: raptor2 security update (Important)",
+		"reference": [
+			{
+				"ref_id": "CVE-2024-57823",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-57823"
+			},
+			{
+				"ref_id": "RHSA-2025:0312",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2025:0312"
+			},
+			{
+				"ref_id": "ALSA-2025:0312",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2025-0312.html"
+			}
+		],
+		"Description": "Raptor is the RDF Parser Toolkit for Redland that provides a set of standalone RDF parsers, generating triples from RDF/XML or N-Triples.   \n\nSecurity Fix(es):  \n\n  * raptor: integer underflow when normalizing a URI with the turtle parser (CVE-2024-57823)\n\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2025 AlmaLinux OS",
+			"issued": {
+				"date": "2025-01-14"
+			},
+			"updated": {
+				"date": "2025-01-14"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2336921",
+					"id": "2336921"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2024-57823",
+					"public": "20250110",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-57823",
+					"impact": "Important",
+					"cwe": "CWE-191",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250312001",
+										"comment": "raptor2 is earlier than 0:2.0.15-32.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250312002",
+										"comment": "raptor2 is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250312003",
+										"comment": "raptor2-devel is earlier than 0:2.0.15-32.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250312004",
+										"comment": "raptor2-devel is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}
