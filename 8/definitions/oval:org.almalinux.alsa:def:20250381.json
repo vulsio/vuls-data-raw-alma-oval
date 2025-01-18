@@ -1,0 +1,418 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20250381",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2025:0381: .NET 8.0 security update (Important)",
+		"reference": [
+			{
+				"ref_id": "CVE-2025-21172",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2025-21172"
+			},
+			{
+				"ref_id": "CVE-2025-21173",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2025-21173"
+			},
+			{
+				"ref_id": "CVE-2025-21176",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2025-21176"
+			},
+			{
+				"ref_id": "RHSA-2025:0381",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2025:0381"
+			},
+			{
+				"ref_id": "ALSA-2025:0381",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2025-0381.html"
+			}
+		],
+		"Description": ".NET is a managed-software framework. It implements a subset of the .NET framework APIs and several new APIs, and it includes a CLR implementation.  \n\nNew versions of .NET that address a security vulnerability are now available. The updated versions are .NET SDK 8.0.112 and .NET Runtime 8.0.1.12.  \n\nSecurity Fix(es):  \n\n  * dotnet: .NET and Visual Studio Remote Code Execution Vulnerability (CVE-2025-21172)\n  * dotnet: .NET Elevation of Privilege Vulnerability (CVE-2025-21173)\n  * dotnet: .NET, .NET Framework, and Visual Studio Remote Code Execution Vulnerability (CVE-2025-21176)\n\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.Security Fix(es):  \n\n  * dotnet: .NET Elevation of Privilege Vulnerability (CVE-2025-21173)\n  * dotnet: .NET, .NET Framework, and Visual Studio Remote Code Execution Vulnerability (CVE-2025-21176)\n  * dotnet: .NET and Visual Studio Remote Code Execution Vulnerability (CVE-2025-21172)\n\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2025 AlmaLinux OS",
+			"issued": {
+				"date": "2025-01-16"
+			},
+			"updated": {
+				"date": "2025-01-16"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2337893",
+					"id": "2337893"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2337926",
+					"id": "2337926"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2337927",
+					"id": "2337927"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2025-21172",
+					"public": "20250114",
+					"href": "https://access.redhat.com/security/cve/CVE-2025-21172",
+					"impact": "Important",
+					"cwe": "(CWE-122|CWE-190)",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2025-21173",
+					"public": "20250114",
+					"href": "https://access.redhat.com/security/cve/CVE-2025-21173",
+					"impact": "Important",
+					"cwe": "CWE-379",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2025-21176",
+					"public": "20250114",
+					"href": "https://access.redhat.com/security/cve/CVE-2025-21176",
+					"impact": "Important",
+					"cwe": "CWE-126",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809338",
+												"comment": "aspnetcore-runtime-8.0 is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809339",
+												"comment": "aspnetcore-runtime-8.0 is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250381001",
+										"comment": "aspnetcore-runtime-8.0 is earlier than 0:8.0.12-1.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809366",
+												"comment": "aspnetcore-runtime-dbg-8.0 is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809367",
+												"comment": "aspnetcore-runtime-dbg-8.0 is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250381002",
+										"comment": "aspnetcore-runtime-dbg-8.0 is earlier than 0:8.0.12-1.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809340",
+												"comment": "aspnetcore-targeting-pack-8.0 is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809341",
+												"comment": "aspnetcore-targeting-pack-8.0 is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250381003",
+										"comment": "aspnetcore-targeting-pack-8.0 is earlier than 0:8.0.12-1.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809342",
+												"comment": "dotnet-apphost-pack-8.0 is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809343",
+												"comment": "dotnet-apphost-pack-8.0 is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250381004",
+										"comment": "dotnet-apphost-pack-8.0 is earlier than 0:8.0.12-1.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809344",
+												"comment": "dotnet-hostfxr-8.0 is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809345",
+												"comment": "dotnet-hostfxr-8.0 is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250381005",
+										"comment": "dotnet-hostfxr-8.0 is earlier than 0:8.0.12-1.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809346",
+												"comment": "dotnet-runtime-8.0 is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809347",
+												"comment": "dotnet-runtime-8.0 is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250381006",
+										"comment": "dotnet-runtime-8.0 is earlier than 0:8.0.12-1.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809368",
+												"comment": "dotnet-runtime-dbg-8.0 is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809369",
+												"comment": "dotnet-runtime-dbg-8.0 is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250381007",
+										"comment": "dotnet-runtime-dbg-8.0 is earlier than 0:8.0.12-1.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809348",
+												"comment": "dotnet-sdk-8.0 is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809349",
+												"comment": "dotnet-sdk-8.0 is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250381008",
+										"comment": "dotnet-sdk-8.0 is earlier than 0:8.0.112-1.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809370",
+												"comment": "dotnet-sdk-dbg-8.0 is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809371",
+												"comment": "dotnet-sdk-dbg-8.0 is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250381009",
+										"comment": "dotnet-sdk-dbg-8.0 is earlier than 0:8.0.112-1.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809352",
+												"comment": "dotnet-targeting-pack-8.0 is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809353",
+												"comment": "dotnet-targeting-pack-8.0 is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250381010",
+										"comment": "dotnet-targeting-pack-8.0 is earlier than 0:8.0.12-1.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809354",
+												"comment": "dotnet-templates-8.0 is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809355",
+												"comment": "dotnet-templates-8.0 is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250381011",
+										"comment": "dotnet-templates-8.0 is earlier than 0:8.0.112-1.el8_10"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809350",
+												"comment": "dotnet-sdk-8.0-source-built-artifacts is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034809351",
+												"comment": "dotnet-sdk-8.0-source-built-artifacts is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250381012",
+										"comment": "dotnet-sdk-8.0-source-built-artifacts is earlier than 0:8.0.112-1.el8_10"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}
