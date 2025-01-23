@@ -1,0 +1,321 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20250595",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2025:0595: redis:6 security update (Important)",
+		"reference": [
+			{
+				"ref_id": "CVE-2022-24834",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-24834"
+			},
+			{
+				"ref_id": "CVE-2022-35977",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-35977"
+			},
+			{
+				"ref_id": "CVE-2022-36021",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-36021"
+			},
+			{
+				"ref_id": "CVE-2023-22458",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-22458"
+			},
+			{
+				"ref_id": "CVE-2023-25155",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-25155"
+			},
+			{
+				"ref_id": "CVE-2023-28856",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-28856"
+			},
+			{
+				"ref_id": "CVE-2023-45145",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-45145"
+			},
+			{
+				"ref_id": "CVE-2024-31228",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-31228"
+			},
+			{
+				"ref_id": "CVE-2024-31449",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-31449"
+			},
+			{
+				"ref_id": "CVE-2024-46981",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-46981"
+			},
+			{
+				"ref_id": "RHSA-2025:0595",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2025:0595"
+			},
+			{
+				"ref_id": "ALSA-2025:0595",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2025-0595.html"
+			}
+		],
+		"Description": "Redis is an advanced key-value store. It is often referred to as a data-structure server since keys can contain strings, hashes, lists, sets, and sorted sets. For performance, Redis works with an in-memory data set. You can persist it either by dumping the data set to disk every once in a while, or by appending each command to a log.  \n\nSecurity Fix(es):  \n\n  * redis: Integer overflow in the Redis HRANDFIELD and ZRANDMEMBER commands may lead to denial-of-service (CVE-2023-22458)\n  * redis: Integer overflow in the Redis SETRANGE and SORT/SORT_RO commands may result with false OOM panic (CVE-2022-35977)\n  * redis: Specially crafted SRANDMEMBER, ZRANDMEMBER, and HRANDFIELD commands can trigger an integer overflow (CVE-2022-36021)\n  * redis: String matching commands (like SCAN or KEYS) with a specially crafted pattern to trigger a denial-of-service attack (CVE-2023-25155)\n  * redis: Insufficient validation of HINCRBYFLOAT command (CVE-2023-28856)\n  * redis: heap overflow in the lua cjson and cmsgpack libraries (CVE-2022-24834)\n  * redis: possible bypass of Unix socket permissions on startup (CVE-2023-45145)\n  * redis: Lua library commands may lead to stack overflow and RCE in Redis (CVE-2024-31449)\n  * redis: Denial-of-service due to unbounded pattern matching in Redis (CVE-2024-31228)\n  * redis: Redis' Lua library commands may lead to remote code execution (CVE-2024-46981)\n\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2025 AlmaLinux OS",
+			"issued": {
+				"date": "2025-01-22"
+			},
+			"updated": {
+				"date": "2025-01-22"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2163132",
+					"id": "2163132"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2163133",
+					"id": "2163133"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2174305",
+					"id": "2174305"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2174306",
+					"id": "2174306"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2187525",
+					"id": "2187525"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2221662",
+					"id": "2221662"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2244940",
+					"id": "2244940"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2317056",
+					"id": "2317056"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2317058",
+					"id": "2317058"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2336004",
+					"id": "2336004"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-24834",
+					"public": "20230710",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-24834",
+					"impact": "Moderate",
+					"cwe": "CWE-680",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-35977",
+					"public": "20230117",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-35977",
+					"impact": "Moderate",
+					"cwe": "CWE-190",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-36021",
+					"public": "20230228",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-36021",
+					"impact": "Moderate",
+					"cwe": "CWE-190->CWE-407",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-22458",
+					"public": "20230117",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-22458",
+					"impact": "Moderate",
+					"cwe": "CWE-190",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-25155",
+					"public": "20230228",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-25155",
+					"impact": "Moderate",
+					"cwe": "CWE-190",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-28856",
+					"public": "20230417",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-28856",
+					"impact": "Moderate",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-45145",
+					"public": "20231018",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-45145",
+					"impact": "Low",
+					"cwe": "CWE-269",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N"
+				},
+				{
+					"text": "CVE-2024-31228",
+					"public": "20241007",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-31228",
+					"impact": "Moderate",
+					"cwe": "CWE-674",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2024-31449",
+					"public": "20241007",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-31449",
+					"impact": "Moderate",
+					"cwe": "(CWE-121|CWE-20)",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2024-46981",
+					"public": "20250106",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-46981",
+					"impact": "Important",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807486",
+												"comment": "redis is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807487",
+												"comment": "redis is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250595001",
+										"comment": "redis is earlier than 0:6.2.17-1.module_el8.10.0+3946+3de613d5"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807488",
+												"comment": "redis-devel is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807489",
+												"comment": "redis-devel is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250595002",
+										"comment": "redis-devel is earlier than 0:6.2.17-1.module_el8.10.0+3946+3de613d5"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterias": [
+									{
+										"operator": "OR",
+										"criterions": [
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807490",
+												"comment": "redis-doc is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+											},
+											{
+												"test_ref": "oval:org.almalinux.alsa:tst:2020034807491",
+												"comment": "redis-doc is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+											}
+										]
+									}
+								],
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250595003",
+										"comment": "redis-doc is earlier than 0:6.2.17-1.module_el8.10.0+3946+3de613d5"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}
