@@ -1,0 +1,108 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20250743",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2025:0743: keepalived security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "CVE-2024-41184",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-41184"
+			},
+			{
+				"ref_id": "RHSA-2025:0743",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2025:0743"
+			},
+			{
+				"ref_id": "ALSA-2025:0743",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/8/ALSA-2025-0743.html"
+			}
+		],
+		"Description": "The keepalived utility provides simple and robust facilities for load balancing and high availability. The load balancing framework relies on the well-known and widely used IP Virtual Server (IPVS) kernel module providing layer-4 (transport layer) load balancing. Keepalived implements a set of checkers to dynamically and adaptively maintain and manage a load balanced server pool according to the health of the servers. Keepalived also implements the Virtual Router Redundancy Protocol (VRRPv2) to achieve high availability with director failover.  \n\nSecurity Fix(es):  \n\n  * keepalived: Integer overflow vulnerability in vrrp_ipsets_handler (CVE-2024-41184)\n\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2025 AlmaLinux OS",
+			"issued": {
+				"date": "2025-01-28"
+			},
+			"updated": {
+				"date": "2025-01-28"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:8",
+					"cpe:/a:almalinux:almalinux:8::appstream",
+					"cpe:/a:almalinux:almalinux:8::powertools",
+					"cpe:/a:almalinux:almalinux:8::highavailability",
+					"cpe:/a:almalinux:almalinux:8::nfv",
+					"cpe:/a:almalinux:almalinux:8::realtime",
+					"cpe:/a:almalinux:almalinux:8::resilientstorage",
+					"cpe:/a:almalinux:almalinux:8::sap",
+					"cpe:/a:almalinux:almalinux:8::sap_hana",
+					"cpe:/a:almalinux:almalinux:8::supplementary",
+					"cpe:/o:almalinux:almalinux:8",
+					"cpe:/o:almalinux:almalinux:8::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2298532",
+					"id": "2298532"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2024-41184",
+					"public": "20240718",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-41184",
+					"impact": "Moderate",
+					"cwe": "CWE-190",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterions": [
+							{
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034808294",
+								"comment": "keepalived is signed with AlmaLinux OS 8 key (51d6647ec21ad6ea)"
+							},
+							{
+								"test_ref": "oval:org.almalinux.alsa:tst:2020034808295",
+								"comment": "keepalived is signed with AlmaLinux OS 8 key (2ae81e8aced7258b)"
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20191992003",
+						"comment": "AlmaLinux 8 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20250743001",
+						"comment": "keepalived is earlier than 0:2.1.5-10.el8_10"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20191992005",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}
