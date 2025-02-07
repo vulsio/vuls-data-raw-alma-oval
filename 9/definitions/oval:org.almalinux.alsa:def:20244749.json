@@ -1,0 +1,182 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20244749",
+	"version": "637",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:4749: edk2 security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "RHSA-2024:4749",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:4749"
+			},
+			{
+				"ref_id": "CVE-2022-36765",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-36765"
+			},
+			{
+				"ref_id": "CVE-2023-45236",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-45236"
+			},
+			{
+				"ref_id": "CVE-2023-45237",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-45237"
+			},
+			{
+				"ref_id": "ALSA-2024:4749",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-4749.html"
+			}
+		],
+		"Description": "EDK (Embedded Development Kit) is a project to enable UEFI support for Virtual Machines. This package contains a sample 64-bit UEFI firmware for QEMU and KVM. \n\nSecurity Fix(es):\n\n* EDK2: integer overflow in CreateHob() could lead to HOB OOB R/W (CVE-2022-36765)\n* edk2: Predictable TCP Initial Sequence Numbers (CVE-2023-45236)\n* edk2: Use of a Weak PseudoRandom Number Generator (CVE-2023-45237)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-07-23"
+			},
+			"updated": {
+				"date": "2024-07-23"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2257584",
+					"id": "2257584"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2258703",
+					"id": "2258703"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2258706",
+					"id": "2258706"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-36765",
+					"public": "20240109",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-36765",
+					"impact": "Moderate",
+					"cwe": "CWE-680",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:L/I:L/A:H"
+				},
+				{
+					"text": "CVE-2023-45236",
+					"public": "20240116",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-45236",
+					"impact": "Moderate",
+					"cwe": "CWE-200",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2023-45237",
+					"public": "20240116",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-45237",
+					"impact": "Moderate",
+					"cwe": "CWE-338",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244749005",
+										"comment": "edk2-tools is earlier than 0:20231122-6.el9_4.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232165006",
+										"comment": "edk2-tools is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244749001",
+										"comment": "edk2-aarch64 is earlier than 0:20231122-6.el9_4.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232165002",
+										"comment": "edk2-aarch64 is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244749003",
+										"comment": "edk2-ovmf is earlier than 0:20231122-6.el9_4.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232165004",
+										"comment": "edk2-ovmf is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20244749007",
+										"comment": "edk2-tools-doc is earlier than 0:20231122-6.el9_4.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232165008",
+										"comment": "edk2-tools-doc is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

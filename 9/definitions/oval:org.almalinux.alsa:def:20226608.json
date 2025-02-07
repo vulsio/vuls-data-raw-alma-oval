@@ -1,0 +1,104 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20226608",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:6608: dbus-broker security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "RHSA-2022:6608",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2022:6608"
+			},
+			{
+				"ref_id": "CVE-2022-31212",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-31212"
+			},
+			{
+				"ref_id": "CVE-2022-31213",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-31213"
+			},
+			{
+				"ref_id": "ALSA-2022:6608",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-6608.html"
+			}
+		],
+		"Description": "dbus-broker is an implementation of a message bus as defined by the D-Bus specification. Its aim is to provide high performance and reliability, while keeping compatibility to the D-Bus reference implementation. It is exclusively written for Linux systems, and makes use of many modern features provided by recent Linux kernel releases.\n\nSecurity Fix(es):\n\n* dbus-broker: a stack buffer over-read if a malicious Exec line is supplied (CVE-2022-31212)\n* dbus-broker: null pointer reference when supplying a malformed XML config file (CVE-2022-31213)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-09-20"
+			},
+			"updated": {
+				"date": "2022-09-20"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2094718",
+					"id": "2094718"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2094722",
+					"id": "2094722"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-31212",
+					"public": "20220603",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-31212",
+					"impact": "Moderate",
+					"cwe": "CWE-125->CWE-126",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-31213",
+					"public": "20220603",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-31213",
+					"impact": "Moderate",
+					"cwe": "CWE-476",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20226608001",
+						"comment": "dbus-broker is earlier than 0:28-5.1.el9_0"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20226608002",
+						"comment": "dbus-broker is signed with AlmaLinux OS 9 key"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

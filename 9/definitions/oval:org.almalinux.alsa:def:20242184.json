@@ -1,0 +1,135 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20242184",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:2184: libsndfile security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "RHSA-2024:2184",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:2184"
+			},
+			{
+				"ref_id": "CVE-2022-33065",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-33065"
+			},
+			{
+				"ref_id": "ALSA-2024:2184",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-2184.html"
+			}
+		],
+		"Description": "libsndfile is a C library for reading and writing files containing sampled sound, such as AIFF, AU, or WAV. \n\nSecurity Fix(es):\n\n* libsndfile: integer overflow in src/mat4.c and src/au.c leads to DoS (CVE-2022-33065)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-04-30"
+			},
+			"updated": {
+				"date": "2024-04-30"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2238934",
+					"id": "2238934"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-33065",
+					"public": "20230913",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-33065",
+					"impact": "Moderate",
+					"cwe": "CWE-190",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242184001",
+										"comment": "libsndfile is earlier than 0:1.0.31-8.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242184002",
+										"comment": "libsndfile is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242184003",
+										"comment": "libsndfile-devel is earlier than 0:1.0.31-8.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242184004",
+										"comment": "libsndfile-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242184007",
+										"comment": "libsndfile-utils is earlier than 0:1.0.31-8.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242184006",
+										"comment": "libsndfile-utils is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

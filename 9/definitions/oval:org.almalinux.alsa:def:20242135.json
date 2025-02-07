@@ -1,0 +1,424 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20242135",
+	"version": "639",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:2135: qemu-kvm security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "RHSA-2024:2135",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:2135"
+			},
+			{
+				"ref_id": "CVE-2023-3019",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-3019"
+			},
+			{
+				"ref_id": "CVE-2023-3255",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-3255"
+			},
+			{
+				"ref_id": "CVE-2023-42467",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-42467"
+			},
+			{
+				"ref_id": "CVE-2023-5088",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-5088"
+			},
+			{
+				"ref_id": "CVE-2023-6683",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-6683"
+			},
+			{
+				"ref_id": "ALSA-2024:2135",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-2135.html"
+			}
+		],
+		"Description": "Kernel-based Virtual Machine (KVM) is a full virtualization solution for Linux on a variety of architectures. The qemu-kvm packages provide the user-space component for running virtual machines that use KVM.\n\nSecurity Fix(es):\n\n* QEMU: e1000e: heap use-after-free in e1000e_write_packet_to_guest() (CVE-2023-3019)\n* QEMU: VNC: infinite loop in inflate_buffer() leads to denial of service (CVE-2023-3255)\n* QEMU: improper IDE controller reset can lead to MBR overwrite (CVE-2023-5088)\n* QEMU: VNC: NULL pointer dereference in qemu_clipboard_request() (CVE-2023-6683)\n* QEMU: am53c974: denial of service due to division by zero (CVE-2023-42467)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-04-30"
+			},
+			"updated": {
+				"date": "2024-04-30"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2218486",
+					"id": "2218486"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2222351",
+					"id": "2222351"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2238291",
+					"id": "2238291"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2247283",
+					"id": "2247283"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2254825",
+					"id": "2254825"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-3019",
+					"public": "20230601",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-3019",
+					"impact": "Moderate",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-3255",
+					"public": "20230704",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-3255",
+					"impact": "Moderate",
+					"cwe": "CWE-835",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-42467",
+					"public": "20230911",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-42467",
+					"impact": "Low",
+					"cwe": "CWE-369",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2023-5088",
+					"public": "20230921",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-5088",
+					"impact": "Moderate",
+					"cwe": "CWE-821",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2023-6683",
+					"public": "20240112",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-6683",
+					"impact": "Moderate",
+					"cwe": "CWE-476",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242135001",
+										"comment": "qemu-guest-agent is earlier than 17:8.2.0-11.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225263002",
+										"comment": "qemu-guest-agent is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242135003",
+										"comment": "qemu-img is earlier than 17:8.2.0-11.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225263004",
+										"comment": "qemu-img is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242135040",
+										"comment": "qemu-kvm is earlier than 17:8.2.0-11.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225263006",
+										"comment": "qemu-kvm is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242135041",
+										"comment": "qemu-kvm-audio-pa is earlier than 17:8.2.0-11.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225263008",
+										"comment": "qemu-kvm-audio-pa is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242135042",
+										"comment": "qemu-kvm-block-blkio is earlier than 17:8.2.0-11.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236368010",
+										"comment": "qemu-kvm-block-blkio is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242135043",
+										"comment": "qemu-kvm-block-curl is earlier than 17:8.2.0-11.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225263010",
+										"comment": "qemu-kvm-block-curl is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242135044",
+										"comment": "qemu-kvm-block-rbd is earlier than 17:8.2.0-11.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225263012",
+										"comment": "qemu-kvm-block-rbd is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242135045",
+										"comment": "qemu-kvm-common is earlier than 17:8.2.0-11.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225263014",
+										"comment": "qemu-kvm-common is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242135046",
+										"comment": "qemu-kvm-core is earlier than 17:8.2.0-11.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225263016",
+										"comment": "qemu-kvm-core is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242135047",
+										"comment": "qemu-kvm-device-display-virtio-gpu is earlier than 17:8.2.0-11.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225263018",
+										"comment": "qemu-kvm-device-display-virtio-gpu is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242135048",
+										"comment": "qemu-kvm-device-display-virtio-gpu-ccw is earlier than 17:8.2.0-11.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225263020",
+										"comment": "qemu-kvm-device-display-virtio-gpu-ccw is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242135049",
+										"comment": "qemu-kvm-device-display-virtio-gpu-pci is earlier than 17:8.2.0-11.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225263024",
+										"comment": "qemu-kvm-device-display-virtio-gpu-pci is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242135050",
+										"comment": "qemu-kvm-device-display-virtio-vga is earlier than 17:8.2.0-11.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225263028",
+										"comment": "qemu-kvm-device-display-virtio-vga is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242135051",
+										"comment": "qemu-kvm-device-usb-host is earlier than 17:8.2.0-11.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225263032",
+										"comment": "qemu-kvm-device-usb-host is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242135052",
+										"comment": "qemu-kvm-device-usb-redirect is earlier than 17:8.2.0-11.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225263034",
+										"comment": "qemu-kvm-device-usb-redirect is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242135053",
+										"comment": "qemu-kvm-docs is earlier than 17:8.2.0-11.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225263036",
+										"comment": "qemu-kvm-docs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242135054",
+										"comment": "qemu-kvm-tools is earlier than 17:8.2.0-11.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225263038",
+										"comment": "qemu-kvm-tools is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242135055",
+										"comment": "qemu-kvm-ui-egl-headless is earlier than 17:8.2.0-11.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225263040",
+										"comment": "qemu-kvm-ui-egl-headless is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242135056",
+										"comment": "qemu-kvm-ui-opengl is earlier than 17:8.2.0-11.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225263042",
+										"comment": "qemu-kvm-ui-opengl is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242135057",
+										"comment": "qemu-pr-helper is earlier than 17:8.2.0-11.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225263044",
+										"comment": "qemu-pr-helper is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

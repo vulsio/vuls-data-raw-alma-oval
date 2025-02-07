@@ -1,0 +1,152 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20226854",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:6854: gnutls and nettle security, bug fix, and enhancement update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "RHSA-2022:6854",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2022:6854"
+			},
+			{
+				"ref_id": "CVE-2022-2509",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-2509"
+			},
+			{
+				"ref_id": "ALSA-2022:6854",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-6854.html"
+			}
+		],
+		"Description": "The gnutls packages provide the GNU Transport Layer Security (GnuTLS) library, which implements cryptographic algorithms and protocols such as SSL, TLS, and DTLS.\n\nNettle is a cryptographic library that is designed to fit easily in almost any context: In crypto toolkits for object-oriented languages, such as C++, Python, or Pike, in applications like LSH or GNUPG, or even in kernel space.\n\nThe following packages have been upgraded to a later upstream version: gnutls (3.7.6), nettle (3.8).\n\nSecurity Fix(es):\n\n* gnutls: Double free during gnutls_pkcs7_verify. (CVE-2022-2509)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nBug Fix(es):\n\n* [IBM 9.1] [P10] POWER10 performance enhancements for cryptography: nettle - incremental work (BZ#2102589)\n* Allow enabling KTLS in AlmaLinux 9.1 (BZ#2108532)\n* DES-CBC bag is decryptable under FIPS (BZ#2115314)\n* allow signature verification using RSA keys <2k in FIPS mode (BZ#2119770)",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-10-11"
+			},
+			"updated": {
+				"date": "2022-10-11"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2108977",
+					"id": "2108977"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-2509",
+					"public": "20220729",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-2509",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226854001",
+										"comment": "gnutls is earlier than 0:3.7.6-12.el9_0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226854002",
+										"comment": "gnutls is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226854003",
+										"comment": "gnutls-c++ is earlier than 0:3.7.6-12.el9_0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226854004",
+										"comment": "gnutls-c++ is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226854005",
+										"comment": "gnutls-dane is earlier than 0:3.7.6-12.el9_0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226854006",
+										"comment": "gnutls-dane is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226854007",
+										"comment": "gnutls-devel is earlier than 0:3.7.6-12.el9_0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226854008",
+										"comment": "gnutls-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226854011",
+										"comment": "gnutls-utils is earlier than 0:3.7.6-12.el9_0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226854010",
+										"comment": "gnutls-utils is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

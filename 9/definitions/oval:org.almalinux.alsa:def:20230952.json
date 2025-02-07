@@ -1,0 +1,112 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20230952",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:0952: python-setuptools security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "RHSA-2023:0952",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:0952"
+			},
+			{
+				"ref_id": "CVE-2022-40897",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-40897"
+			},
+			{
+				"ref_id": "ALSA-2023:0952",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-0952.html"
+			}
+		],
+		"Description": "The python-setuptools package provides a collection of enhancements to Python distribution utilities allowing convenient building and distribution of Python packages.\n\nSecurity Fix(es):\n\n* pypa-setuptools: Regular Expression Denial of Service (ReDoS) in package_index.py (CVE-2022-40897)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-02-28"
+			},
+			"updated": {
+				"date": "2023-02-28"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2158559",
+					"id": "2158559"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-40897",
+					"public": "20221222",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-40897",
+					"impact": "Moderate",
+					"cwe": "CWE-185",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230952001",
+										"comment": "python3-setuptools is earlier than 0:53.0.0-10.el9_1.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230952002",
+										"comment": "python3-setuptools is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230952003",
+										"comment": "python3-setuptools-wheel is earlier than 0:53.0.0-10.el9_1.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230952004",
+										"comment": "python3-setuptools-wheel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

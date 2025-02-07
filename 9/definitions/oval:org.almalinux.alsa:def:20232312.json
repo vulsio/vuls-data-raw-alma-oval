@@ -1,0 +1,97 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20232312",
+	"version": "637",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:2312: jackson security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "RHSA-2023:2312",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:2312"
+			},
+			{
+				"ref_id": "CVE-2020-36518",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-36518"
+			},
+			{
+				"ref_id": "ALSA-2023:2312",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-2312.html"
+			}
+		],
+		"Description": "Jackson is a suite of data-processing tools for Java, including the flagship streaming JSON parser / generator library, matching data-binding library, and additional modules to process data encoded in various other data formats.\n\nSecurity Fix(es):\n\n* jackson-databind: denial of service via a large depth of nested objects (CVE-2020-36518)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-05-09"
+			},
+			"updated": {
+				"date": "2023-05-09"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2064698",
+					"id": "2064698"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2020-36518",
+					"public": "20200813",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-36518",
+					"impact": "Moderate",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20232312001",
+						"comment": "pki-jackson-databind is earlier than 0:2.14.1-2.el9"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20232312002",
+						"comment": "pki-jackson-databind is signed with AlmaLinux OS 9 key"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

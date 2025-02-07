@@ -1,0 +1,215 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20232165",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:2165: edk2 security, bug fix, and enhancement update (Important)",
+		"reference": [
+			{
+				"ref_id": "RHSA-2023:2165",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:2165"
+			},
+			{
+				"ref_id": "CVE-2021-38578",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-38578"
+			},
+			{
+				"ref_id": "CVE-2022-4304",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-4304"
+			},
+			{
+				"ref_id": "CVE-2022-4450",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-4450"
+			},
+			{
+				"ref_id": "CVE-2023-0215",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-0215"
+			},
+			{
+				"ref_id": "CVE-2023-0286",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-0286"
+			},
+			{
+				"ref_id": "ALSA-2023:2165",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-2165.html"
+			}
+		],
+		"Description": "EDK (Embedded Development Kit) is a project to enable UEFI support for Virtual Machines. This package contains a sample 64-bit UEFI firmware for QEMU and KVM. \n\nSecurity Fix(es):\n\n* openssl: X.400 address type confusion in X.509 GeneralName (CVE-2023-0286)\n* edk2: integer underflow in SmmEntryPoint function leads to potential SMM privilege escalation (CVE-2021-38578)\n* openssl: timing attack in RSA Decryption implementation (CVE-2022-4304)\n* openssl: double free after calling PEM_read_bio_ex (CVE-2022-4450)\n* openssl: use-after-free following BIO_new_NDEF (CVE-2023-0215)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-05-09"
+			},
+			"updated": {
+				"date": "2023-05-09"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1960321",
+					"id": "1960321"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2164440",
+					"id": "2164440"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2164487",
+					"id": "2164487"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2164492",
+					"id": "2164492"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2164494",
+					"id": "2164494"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-38578",
+					"public": "20220303",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-38578",
+					"impact": "Moderate",
+					"cwe": "(CWE-124|CWE-787)",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:L"
+				},
+				{
+					"text": "CVE-2022-4304",
+					"public": "20230207",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-4304",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N"
+				},
+				{
+					"text": "CVE-2022-4450",
+					"public": "20230207",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-4450",
+					"impact": "Moderate",
+					"cwe": "CWE-415",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-0215",
+					"public": "20230207",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-0215",
+					"impact": "Moderate",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-0286",
+					"public": "20230207",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-0286",
+					"impact": "Moderate",
+					"cwe": "CWE-704",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232165005",
+										"comment": "edk2-tools is earlier than 0:20221207gitfff6d81270b5-9.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232165006",
+										"comment": "edk2-tools is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232165001",
+										"comment": "edk2-aarch64 is earlier than 0:20221207gitfff6d81270b5-9.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232165002",
+										"comment": "edk2-aarch64 is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232165003",
+										"comment": "edk2-ovmf is earlier than 0:20221207gitfff6d81270b5-9.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232165004",
+										"comment": "edk2-ovmf is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232165007",
+										"comment": "edk2-tools-doc is earlier than 0:20221207gitfff6d81270b5-9.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232165008",
+										"comment": "edk2-tools-doc is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

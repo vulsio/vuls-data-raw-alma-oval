@@ -1,0 +1,232 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20232249",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:2249: xorg-x11-server-Xwayland security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "RHSA-2023:2249",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:2249"
+			},
+			{
+				"ref_id": "CVE-2022-3550",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-3550"
+			},
+			{
+				"ref_id": "CVE-2022-3551",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-3551"
+			},
+			{
+				"ref_id": "CVE-2022-4283",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-4283"
+			},
+			{
+				"ref_id": "CVE-2022-46340",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-46340"
+			},
+			{
+				"ref_id": "CVE-2022-46341",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-46341"
+			},
+			{
+				"ref_id": "CVE-2022-46342",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-46342"
+			},
+			{
+				"ref_id": "CVE-2022-46343",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-46343"
+			},
+			{
+				"ref_id": "CVE-2022-46344",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-46344"
+			},
+			{
+				"ref_id": "CVE-2023-0494",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-0494"
+			},
+			{
+				"ref_id": "ALSA-2023:2249",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-2249.html"
+			}
+		],
+		"Description": "Xwayland is an X server for running X clients under Wayland.\n\nSecurity Fix(es):\n\n* xorg-x11-server: buffer overflow in _GetCountedString() in xkb/xkb.c (CVE-2022-3550)\n* xorg-x11-server: XkbGetKbdByName use-after-free (CVE-2022-4283)\n* xorg-x11-server: XTestSwapFakeInput stack overflow (CVE-2022-46340)\n* xorg-x11-server: XIPassiveUngrab out-of-bounds access (CVE-2022-46341)\n* xorg-x11-server: XvdiSelectVideoNotify use-after-free (CVE-2022-46342)\n* xorg-x11-server: ScreenSaverSetAttributes use-after-free (CVE-2022-46343)\n* xorg-x11-server: XIChangeProperty out-of-bounds access (CVE-2022-46344)\n* xorg-x11-server: DeepCopyPointerClasses use-after-free leads to privilege elevation (CVE-2023-0494)\n* xorg-x11-server: memory leak in ProcXkbGetKbdByName() in xkb/xkb.c (CVE-2022-3551)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-05-09"
+			},
+			"updated": {
+				"date": "2023-05-09"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2140698",
+					"id": "2140698"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2140701",
+					"id": "2140701"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2151755",
+					"id": "2151755"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2151756",
+					"id": "2151756"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2151757",
+					"id": "2151757"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2151758",
+					"id": "2151758"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2151760",
+					"id": "2151760"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2151761",
+					"id": "2151761"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2165995",
+					"id": "2165995"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-3550",
+					"public": "20221017",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-3550",
+					"impact": "Important",
+					"cwe": "(CWE-119|CWE-120)",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-3551",
+					"public": "20221017",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-3551",
+					"impact": "Moderate",
+					"cwe": "(CWE-401|CWE-404)",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-4283",
+					"public": "20221214",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-4283",
+					"impact": "Important",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-46340",
+					"public": "20221214",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-46340",
+					"impact": "Important",
+					"cwe": "CWE-121",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-46341",
+					"public": "20221214",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-46341",
+					"impact": "Important",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-46342",
+					"public": "20221214",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-46342",
+					"impact": "Important",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-46343",
+					"public": "20221214",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-46343",
+					"impact": "Important",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2022-46344",
+					"public": "20221214",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-46344",
+					"impact": "Important",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				},
+				{
+					"text": "CVE-2023-0494",
+					"public": "20230207",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-0494",
+					"impact": "Important",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20232249001",
+						"comment": "xorg-x11-server-Xwayland is earlier than 0:21.1.3-7.el9"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20228222002",
+						"comment": "xorg-x11-server-Xwayland is signed with AlmaLinux OS 9 key"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

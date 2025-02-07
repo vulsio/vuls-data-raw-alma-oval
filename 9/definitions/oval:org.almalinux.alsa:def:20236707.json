@@ -1,0 +1,260 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20236707",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:6707: avahi security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "RHSA-2023:6707",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:6707"
+			},
+			{
+				"ref_id": "CVE-2021-3468",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-3468"
+			},
+			{
+				"ref_id": "CVE-2021-3502",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-3502"
+			},
+			{
+				"ref_id": "CVE-2023-1981",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-1981"
+			},
+			{
+				"ref_id": "ALSA-2023:6707",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-6707.html"
+			}
+		],
+		"Description": "Avahi is an implementation of the DNS Service Discovery and Multicast DNS specifications for Zero Configuration Networking. It facilitates service discovery on a local network. Avahi and Avahi-aware applications allow you to plug your computer into a network and, with no configuration, view other people to chat with, view printers to print with, and find shared files on other computers.\n\nSecurity Fix(es):\n\n* avahi: Local DoS by event-busy-loop from writing long lines to /run/avahi-daemon/socket (CVE-2021-3468)\n* avahi: reachable assertion in avahi_s_host_name_resolver_start when trying to resolve badly-formatted hostnames (CVE-2021-3502)\n* avahi: avahi-daemon can be crashed via DBus (CVE-2023-1981)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-11-07"
+			},
+			"updated": {
+				"date": "2023-11-07"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1939614",
+					"id": "1939614"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/1946914",
+					"id": "1946914"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2185911",
+					"id": "2185911"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-3468",
+					"public": "20210310",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-3468",
+					"impact": "Moderate",
+					"cwe": "CWE-835",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2021-3502",
+					"public": "20210329",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-3502",
+					"impact": "Moderate",
+					"cwe": "CWE-617->CWE-476",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-1981",
+					"public": "20220426",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-1981",
+					"impact": "Moderate",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236707001",
+										"comment": "avahi is earlier than 0:0.8-15.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236707002",
+										"comment": "avahi is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236707003",
+										"comment": "avahi-compat-howl is earlier than 0:0.8-15.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236707004",
+										"comment": "avahi-compat-howl is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236707005",
+										"comment": "avahi-compat-howl-devel is earlier than 0:0.8-15.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236707006",
+										"comment": "avahi-compat-howl-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236707007",
+										"comment": "avahi-compat-libdns_sd is earlier than 0:0.8-15.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236707008",
+										"comment": "avahi-compat-libdns_sd is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236707009",
+										"comment": "avahi-compat-libdns_sd-devel is earlier than 0:0.8-15.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236707010",
+										"comment": "avahi-compat-libdns_sd-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236707011",
+										"comment": "avahi-devel is earlier than 0:0.8-15.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236707012",
+										"comment": "avahi-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236707013",
+										"comment": "avahi-glib is earlier than 0:0.8-15.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236707014",
+										"comment": "avahi-glib is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236707015",
+										"comment": "avahi-glib-devel is earlier than 0:0.8-15.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236707016",
+										"comment": "avahi-glib-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236707017",
+										"comment": "avahi-libs is earlier than 0:0.8-15.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236707018",
+										"comment": "avahi-libs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236707021",
+										"comment": "avahi-tools is earlier than 0:0.8-15.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20236707020",
+										"comment": "avahi-tools is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

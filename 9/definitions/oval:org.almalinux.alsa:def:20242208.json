@@ -1,0 +1,348 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20242208",
+	"version": "637",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:2208: freerdp security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "RHSA-2024:2208",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:2208"
+			},
+			{
+				"ref_id": "CVE-2023-39350",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-39350"
+			},
+			{
+				"ref_id": "CVE-2023-39351",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-39351"
+			},
+			{
+				"ref_id": "CVE-2023-39352",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-39352"
+			},
+			{
+				"ref_id": "CVE-2023-39353",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-39353"
+			},
+			{
+				"ref_id": "CVE-2023-39354",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-39354"
+			},
+			{
+				"ref_id": "CVE-2023-39356",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-39356"
+			},
+			{
+				"ref_id": "CVE-2023-40181",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-40181"
+			},
+			{
+				"ref_id": "CVE-2023-40186",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-40186"
+			},
+			{
+				"ref_id": "CVE-2023-40188",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-40188"
+			},
+			{
+				"ref_id": "CVE-2023-40567",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-40567"
+			},
+			{
+				"ref_id": "CVE-2023-40569",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-40569"
+			},
+			{
+				"ref_id": "CVE-2023-40589",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-40589"
+			},
+			{
+				"ref_id": "ALSA-2024:2208",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-2208.html"
+			}
+		],
+		"Description": "FreeRDP is a free implementation of the Remote Desktop Protocol (RDP), released under the Apache license. The xfreerdp client can connect to RDP servers such as Microsoft Windows machines, xrdp, and VirtualBox.\n\nSecurity Fix(es):\n\n* freerdp: Incorrect offset calculation leading to DOS (CVE-2023-39350)\n* freerdp: Null Pointer Dereference leading DOS in RemoteFX (CVE-2023-39351)\n* freerdp: invalid offset validation leading to Out Of Bound Write (CVE-2023-39352)\n* freerdp: missing offset validation leading to Out-of-Bounds Read in gdi_multi_opaque_rect (CVE-2023-39356)\n* freerdp: Integer overflow leading to out-of-bound write vulnerability in gdi_CreateSurface (CVE-2023-40186)\n* freerdp: Out-of-bounds write in clear_decompress_bands_data (CVE-2023-40567)\n* freerdp: Out-of-bounds write in the `progressive_decompress` function due to incorrect calculations (CVE-2023-40569)\n* freerdp: buffer overflow in ncrush_decompress causes crash with crafted input (CVE-2023-40589)\n* freerdp: missing offset validation leading to Out Of Bound Read (CVE-2023-39353)\n* freerdp: Out-Of-Bounds Read in nsc_rle_decompress_data (CVE-2023-39354)\n* freerdp: integer-Underflow leading to Out-Of-Bound Read in zgfx_decompress_segment (CVE-2023-40181)\n* freerdp: Out-of-bounds read in general_LumaToYUV444 (CVE-2023-40188)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-04-30"
+			},
+			"updated": {
+				"date": "2024-04-30"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2236606",
+					"id": "2236606"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2236650",
+					"id": "2236650"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2236656",
+					"id": "2236656"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2236669",
+					"id": "2236669"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2236730",
+					"id": "2236730"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2236750",
+					"id": "2236750"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2236759",
+					"id": "2236759"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2236763",
+					"id": "2236763"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2236766",
+					"id": "2236766"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2236774",
+					"id": "2236774"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2236779",
+					"id": "2236779"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2236784",
+					"id": "2236784"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-39350",
+					"public": "20230831",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-39350",
+					"impact": "Moderate",
+					"cwe": "CWE-191",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-39351",
+					"public": "20230831",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-39351",
+					"impact": "Moderate",
+					"cwe": "CWE-476",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-39352",
+					"public": "20230831",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-39352",
+					"impact": "Moderate",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-39353",
+					"public": "20230831",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-39353",
+					"impact": "Low",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-39354",
+					"public": "20230831",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-39354",
+					"impact": "Low",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-39356",
+					"public": "20230831",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-39356",
+					"impact": "Moderate",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-40181",
+					"public": "20230901",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-40181",
+					"impact": "Low",
+					"cwe": "(CWE-125|CWE-191)",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-40186",
+					"public": "20230901",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-40186",
+					"impact": "Moderate",
+					"cwe": "(CWE-190|CWE-787)",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-40188",
+					"public": "20230901",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-40188",
+					"impact": "Low",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-40567",
+					"public": "20230901",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-40567",
+					"impact": "Moderate",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-40569",
+					"public": "20230901",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-40569",
+					"impact": "Moderate",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-40589",
+					"public": "20230831",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-40589",
+					"impact": "Moderate",
+					"cwe": "CWE-120",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242208001",
+										"comment": "freerdp is earlier than 2:2.11.2-1.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232326002",
+										"comment": "freerdp is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242208010",
+										"comment": "freerdp-devel is earlier than 2:2.11.2-1.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232326004",
+										"comment": "freerdp-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242208011",
+										"comment": "freerdp-libs is earlier than 2:2.11.2-1.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232326006",
+										"comment": "freerdp-libs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242208012",
+										"comment": "libwinpr is earlier than 2:2.11.2-1.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232326008",
+										"comment": "libwinpr is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242208013",
+										"comment": "libwinpr-devel is earlier than 2:2.11.2-1.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232326010",
+										"comment": "libwinpr-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

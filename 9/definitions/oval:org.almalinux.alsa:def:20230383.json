@@ -1,0 +1,146 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20230383",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:0383: libXpm security update (Important)",
+		"reference": [
+			{
+				"ref_id": "RHSA-2023:0383",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:0383"
+			},
+			{
+				"ref_id": "CVE-2022-44617",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-44617"
+			},
+			{
+				"ref_id": "CVE-2022-46285",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-46285"
+			},
+			{
+				"ref_id": "CVE-2022-4883",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-4883"
+			},
+			{
+				"ref_id": "ALSA-2023:0383",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-0383.html"
+			}
+		],
+		"Description": "X.Org X11 libXpm runtime library.\n\nSecurity Fix(es):\n\n* libXpm: compression commands depend on $PATH (CVE-2022-4883)\n* libXpm: Runaway loop on width of 0 and enormous height (CVE-2022-44617)\n* libXpm: Infinite loop on unclosed comments (CVE-2022-46285)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-01-23"
+			},
+			"updated": {
+				"date": "2023-01-23"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2160092",
+					"id": "2160092"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2160193",
+					"id": "2160193"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2160213",
+					"id": "2160213"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-44617",
+					"public": "20230117",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-44617",
+					"impact": "Moderate",
+					"cwe": "CWE-20->CWE-835",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-46285",
+					"public": "20230117",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-46285",
+					"impact": "Moderate",
+					"cwe": "CWE-835",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-4883",
+					"public": "20230117",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-4883",
+					"impact": "Important",
+					"cwe": "CWE-426",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230383001",
+										"comment": "libXpm is earlier than 0:3.5.13-8.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230383002",
+										"comment": "libXpm is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230383003",
+										"comment": "libXpm-devel is earlier than 0:3.5.13-8.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230383004",
+										"comment": "libXpm-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

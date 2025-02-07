@@ -1,0 +1,828 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20237753",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:7753: fence-agents security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "RHSA-2023:7753",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:7753"
+			},
+			{
+				"ref_id": "CVE-2023-37920",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-37920"
+			},
+			{
+				"ref_id": "CVE-2023-43804",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-43804"
+			},
+			{
+				"ref_id": "ALSA-2023:7753",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-7753.html"
+			}
+		],
+		"Description": "The fence-agents packages provide a collection of scripts for handling remote power management for cluster devices. They allow failed or unreachable nodes to be forcibly restarted and removed from the cluster. \n\nSecurity Fix(es):\n\n* python-certifi: Removal of e-Tugra root certificate (CVE-2023-37920)\n* python-urllib3: Cookie request header isn't stripped during cross-origin redirects (CVE-2023-43804)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-12-12"
+			},
+			"updated": {
+				"date": "2023-12-12"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2226586",
+					"id": "2226586"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2242493",
+					"id": "2242493"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-37920",
+					"public": "20230725",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-37920",
+					"impact": "Low",
+					"cwe": "CWE-345",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+				},
+				{
+					"text": "CVE-2023-43804",
+					"public": "20231004",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-43804",
+					"impact": "Moderate",
+					"cwe": "CWE-200",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753110",
+										"comment": "fence-agents-aliyun is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161002",
+										"comment": "fence-agents-aliyun is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753111",
+										"comment": "fence-agents-all is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161004",
+										"comment": "fence-agents-all is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753112",
+										"comment": "fence-agents-aws is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161012",
+										"comment": "fence-agents-aws is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753113",
+										"comment": "fence-agents-azure-arm is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161014",
+										"comment": "fence-agents-azure-arm is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753114",
+										"comment": "fence-agents-compute is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161026",
+										"comment": "fence-agents-compute is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753115",
+										"comment": "fence-agents-gce is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161036",
+										"comment": "fence-agents-gce is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753116",
+										"comment": "fence-agents-kdump is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161064",
+										"comment": "fence-agents-kdump is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753117",
+										"comment": "fence-agents-kubevirt is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161066",
+										"comment": "fence-agents-kubevirt is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753118",
+										"comment": "fence-agents-openstack is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161072",
+										"comment": "fence-agents-openstack is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753119",
+										"comment": "fence-agents-redfish is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161074",
+										"comment": "fence-agents-redfish is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753120",
+										"comment": "fence-agents-zvm is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161094",
+										"comment": "fence-agents-zvm is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753121",
+										"comment": "fence-virt is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161096",
+										"comment": "fence-virt is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753122",
+										"comment": "fence-virtd is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161098",
+										"comment": "fence-virtd is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753123",
+										"comment": "fence-virtd-cpg is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161100",
+										"comment": "fence-virtd-cpg is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753124",
+										"comment": "fence-virtd-libvirt is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161102",
+										"comment": "fence-virtd-libvirt is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753125",
+										"comment": "fence-virtd-multicast is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161104",
+										"comment": "fence-virtd-multicast is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753126",
+										"comment": "fence-virtd-serial is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161106",
+										"comment": "fence-virtd-serial is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753127",
+										"comment": "fence-virtd-tcp is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161108",
+										"comment": "fence-virtd-tcp is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753128",
+										"comment": "ha-cloud-support is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161110",
+										"comment": "ha-cloud-support is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753129",
+										"comment": "fence-agents-amt-ws is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161006",
+										"comment": "fence-agents-amt-ws is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753130",
+										"comment": "fence-agents-apc is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161008",
+										"comment": "fence-agents-apc is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753131",
+										"comment": "fence-agents-apc-snmp is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161010",
+										"comment": "fence-agents-apc-snmp is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753132",
+										"comment": "fence-agents-bladecenter is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161016",
+										"comment": "fence-agents-bladecenter is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753133",
+										"comment": "fence-agents-brocade is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161018",
+										"comment": "fence-agents-brocade is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753134",
+										"comment": "fence-agents-cisco-mds is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161020",
+										"comment": "fence-agents-cisco-mds is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753135",
+										"comment": "fence-agents-cisco-ucs is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161022",
+										"comment": "fence-agents-cisco-ucs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753136",
+										"comment": "fence-agents-common is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161024",
+										"comment": "fence-agents-common is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753137",
+										"comment": "fence-agents-drac5 is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161028",
+										"comment": "fence-agents-drac5 is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753138",
+										"comment": "fence-agents-eaton-snmp is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161030",
+										"comment": "fence-agents-eaton-snmp is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753139",
+										"comment": "fence-agents-emerson is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161032",
+										"comment": "fence-agents-emerson is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753140",
+										"comment": "fence-agents-eps is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161034",
+										"comment": "fence-agents-eps is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753141",
+										"comment": "fence-agents-heuristics-ping is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161038",
+										"comment": "fence-agents-heuristics-ping is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753142",
+										"comment": "fence-agents-hpblade is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161040",
+										"comment": "fence-agents-hpblade is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753143",
+										"comment": "fence-agents-ibm-powervs is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161042",
+										"comment": "fence-agents-ibm-powervs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753144",
+										"comment": "fence-agents-ibm-vpc is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161044",
+										"comment": "fence-agents-ibm-vpc is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753145",
+										"comment": "fence-agents-ibmblade is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161046",
+										"comment": "fence-agents-ibmblade is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753146",
+										"comment": "fence-agents-ifmib is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161048",
+										"comment": "fence-agents-ifmib is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753147",
+										"comment": "fence-agents-ilo-moonshot is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161050",
+										"comment": "fence-agents-ilo-moonshot is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753148",
+										"comment": "fence-agents-ilo-mp is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161052",
+										"comment": "fence-agents-ilo-mp is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753149",
+										"comment": "fence-agents-ilo-ssh is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161054",
+										"comment": "fence-agents-ilo-ssh is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753150",
+										"comment": "fence-agents-ilo2 is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161056",
+										"comment": "fence-agents-ilo2 is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753151",
+										"comment": "fence-agents-intelmodular is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161058",
+										"comment": "fence-agents-intelmodular is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753152",
+										"comment": "fence-agents-ipdu is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161060",
+										"comment": "fence-agents-ipdu is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753153",
+										"comment": "fence-agents-ipmilan is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161062",
+										"comment": "fence-agents-ipmilan is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753154",
+										"comment": "fence-agents-lpar is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161068",
+										"comment": "fence-agents-lpar is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753155",
+										"comment": "fence-agents-mpath is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161070",
+										"comment": "fence-agents-mpath is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753156",
+										"comment": "fence-agents-rhevm is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161076",
+										"comment": "fence-agents-rhevm is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753157",
+										"comment": "fence-agents-rsa is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161078",
+										"comment": "fence-agents-rsa is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753158",
+										"comment": "fence-agents-rsb is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161080",
+										"comment": "fence-agents-rsb is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753159",
+										"comment": "fence-agents-sbd is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161082",
+										"comment": "fence-agents-sbd is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753160",
+										"comment": "fence-agents-scsi is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161084",
+										"comment": "fence-agents-scsi is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753161",
+										"comment": "fence-agents-virsh is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161086",
+										"comment": "fence-agents-virsh is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753162",
+										"comment": "fence-agents-vmware-rest is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161088",
+										"comment": "fence-agents-vmware-rest is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753163",
+										"comment": "fence-agents-vmware-soap is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161090",
+										"comment": "fence-agents-vmware-soap is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20237753164",
+										"comment": "fence-agents-wti is earlier than 0:4.10.0-55.el9_3.2.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232161092",
+										"comment": "fence-agents-wti is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

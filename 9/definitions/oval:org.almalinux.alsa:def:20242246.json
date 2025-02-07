@@ -1,0 +1,122 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20242246",
+	"version": "638",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:2246: ansible-core bug fix, enhancement, and security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "RHSA-2024:2246",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:2246"
+			},
+			{
+				"ref_id": "CVE-2024-0690",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-0690"
+			},
+			{
+				"ref_id": "ALSA-2024:2246",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-2246.html"
+			}
+		],
+		"Description": "Ansible is a radically simple model-driven configuration management, multi-node deployment, and remote task execution system. Ansible works over SSH and does not require any software or daemons to be installed on remote nodes. Extension modules can be written in any language and are transferred to managed machines automatically.\n\nSecurity Fix(es):\n\n* ansible-core: possible information leak in tasks that ignore ANSIBLE_NO_LOG configuration (CVE-2024-0690)\n\nBug Fix(es):\n\n* Update ansible-core to 2.14.14 (JIRA:AlmaLinux-23783)",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-04-30"
+			},
+			"updated": {
+				"date": "2024-04-30"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2259013",
+					"id": "2259013"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2024-0690",
+					"public": "20240118",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-0690",
+					"impact": "Moderate",
+					"cwe": "CWE-117",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:N/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242246001",
+										"comment": "ansible-core is earlier than 1:2.14.14-1.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242246002",
+										"comment": "ansible-core is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242246003",
+										"comment": "ansible-test is earlier than 1:2.14.14-1.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20242246004",
+										"comment": "ansible-test is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

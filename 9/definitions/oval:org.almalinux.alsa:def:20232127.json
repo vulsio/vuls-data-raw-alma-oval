@@ -1,0 +1,408 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20232127",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:2127: samba security update (Important)",
+		"reference": [
+			{
+				"ref_id": "RHSA-2023:2127",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:2127"
+			},
+			{
+				"ref_id": "CVE-2022-38023",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-38023"
+			},
+			{
+				"ref_id": "ALSA-2023:2127",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-2127.html"
+			}
+		],
+		"Description": "Samba is an open-source implementation of the Server Message Block (SMB) protocol and the related Common Internet File System (CIFS) protocol, which allow PC-compatible machines to share files, printers, and various information.\n\nSecurity Fix(es):\n\n* samba: RC4/HMAC-MD5 NetLogon Secure Channel is weak and should be avoided (CVE-2022-38023)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-05-04"
+			},
+			"updated": {
+				"date": "2023-05-04"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2154362",
+					"id": "2154362"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-38023",
+					"public": "20221216",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-38023",
+					"impact": "Important",
+					"cwe": "CWE-328",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232127001",
+										"comment": "ctdb is earlier than 0:4.16.4-103.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228317002",
+										"comment": "ctdb is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232127048",
+										"comment": "libsmbclient is earlier than 0:4.16.4-103.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228317004",
+										"comment": "libsmbclient is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232127049",
+										"comment": "libsmbclient-devel is earlier than 0:4.16.4-103.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228317006",
+										"comment": "libsmbclient-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232127050",
+										"comment": "libwbclient is earlier than 0:4.16.4-103.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228317008",
+										"comment": "libwbclient is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232127051",
+										"comment": "libwbclient-devel is earlier than 0:4.16.4-103.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228317010",
+										"comment": "libwbclient-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232127052",
+										"comment": "python3-samba is earlier than 0:4.16.4-103.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228317012",
+										"comment": "python3-samba is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232127053",
+										"comment": "samba is earlier than 0:4.16.4-103.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228317014",
+										"comment": "samba is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232127054",
+										"comment": "samba-client is earlier than 0:4.16.4-103.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228317016",
+										"comment": "samba-client is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232127055",
+										"comment": "samba-client-libs is earlier than 0:4.16.4-103.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228317018",
+										"comment": "samba-client-libs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232127056",
+										"comment": "samba-common-libs is earlier than 0:4.16.4-103.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228317022",
+										"comment": "samba-common-libs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232127057",
+										"comment": "samba-common-tools is earlier than 0:4.16.4-103.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228317024",
+										"comment": "samba-common-tools is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232127058",
+										"comment": "samba-devel is earlier than 0:4.16.4-103.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228317026",
+										"comment": "samba-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232127059",
+										"comment": "samba-krb5-printing is earlier than 0:4.16.4-103.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228317028",
+										"comment": "samba-krb5-printing is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232127060",
+										"comment": "samba-libs is earlier than 0:4.16.4-103.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228317030",
+										"comment": "samba-libs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232127061",
+										"comment": "samba-test is earlier than 0:4.16.4-103.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228317034",
+										"comment": "samba-test is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232127062",
+										"comment": "samba-test-libs is earlier than 0:4.16.4-103.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228317036",
+										"comment": "samba-test-libs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232127063",
+										"comment": "samba-vfs-iouring is earlier than 0:4.16.4-103.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228317038",
+										"comment": "samba-vfs-iouring is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232127064",
+										"comment": "samba-winbind is earlier than 0:4.16.4-103.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228317040",
+										"comment": "samba-winbind is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232127065",
+										"comment": "samba-winbind-clients is earlier than 0:4.16.4-103.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228317042",
+										"comment": "samba-winbind-clients is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232127066",
+										"comment": "samba-winbind-krb5-locator is earlier than 0:4.16.4-103.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228317044",
+										"comment": "samba-winbind-krb5-locator is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232127067",
+										"comment": "samba-winbind-modules is earlier than 0:4.16.4-103.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228317046",
+										"comment": "samba-winbind-modules is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232127068",
+										"comment": "samba-winexe is earlier than 0:4.16.4-103.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228317048",
+										"comment": "samba-winexe is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232127019",
+										"comment": "samba-common is earlier than 0:4.16.4-103.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228317020",
+										"comment": "samba-common is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232127031",
+										"comment": "samba-pidl is earlier than 0:4.16.4-103.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228317032",
+										"comment": "samba-pidl is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

@@ -1,0 +1,165 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20245192",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:5192: 389-ds-base security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "RHSA-2024:5192",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:5192"
+			},
+			{
+				"ref_id": "CVE-2024-5953",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-5953"
+			},
+			{
+				"ref_id": "CVE-2024-6237",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-6237"
+			},
+			{
+				"ref_id": "ALSA-2024:5192",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-5192.html"
+			}
+		],
+		"Description": "389 Directory Server is an LDAP version 3 (LDAPv3) compliant server. The base packages include the Lightweight Directory Access Protocol (LDAP) server and command-line utilities for server administration.\n\nSecurity Fix(es):\n\n* 389-ds-base: Malformed userPassword hash may cause Denial of Service (CVE-2024-5953)\n* 389-ds-base: unauthenticated user can trigger a DoS by sending a specific extended search request (CVE-2024-6237)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-08-12"
+			},
+			"updated": {
+				"date": "2024-08-12"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2292104",
+					"id": "2292104"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2293579",
+					"id": "2293579"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2024-5953",
+					"public": "20240613",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-5953",
+					"impact": "Moderate",
+					"cwe": "CWE-1288",
+					"cvss3": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2024-6237",
+					"public": "20240709",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-6237",
+					"impact": "Moderate",
+					"cwe": "CWE-230",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20245192001",
+										"comment": "389-ds-base is earlier than 0:2.4.5-9.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228162002",
+										"comment": "389-ds-base is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20245192003",
+										"comment": "389-ds-base-devel is earlier than 0:2.4.5-9.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20243837008",
+										"comment": "389-ds-base-devel is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20245192005",
+										"comment": "389-ds-base-libs is earlier than 0:2.4.5-9.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228162004",
+										"comment": "389-ds-base-libs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20245192007",
+										"comment": "python3-lib389 is earlier than 0:2.4.5-9.el9_4"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228162006",
+										"comment": "python3-lib389 is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

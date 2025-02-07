@@ -1,0 +1,153 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20230958",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:0958: vim security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "RHSA-2023:0958",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:0958"
+			},
+			{
+				"ref_id": "CVE-2022-47024",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-47024"
+			},
+			{
+				"ref_id": "ALSA-2023:0958",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-0958.html"
+			}
+		],
+		"Description": "Vim (Vi IMproved) is an updated and improved version of the vi editor.\n\nSecurity Fix(es):\n\n* vim: no check if the return value of XChangeGC() is NULL (CVE-2022-47024)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-02-28"
+			},
+			"updated": {
+				"date": "2023-02-28"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2163613",
+					"id": "2163613"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-47024",
+					"public": "20230120",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-47024",
+					"impact": "Moderate",
+					"cwe": "CWE-252->CWE-476",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230958001",
+										"comment": "vim-X11 is earlier than 2:8.2.2637-20.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225242002",
+										"comment": "vim-X11 is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230958003",
+										"comment": "vim-common is earlier than 2:8.2.2637-20.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225242004",
+										"comment": "vim-common is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230958005",
+										"comment": "vim-enhanced is earlier than 2:8.2.2637-20.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225242006",
+										"comment": "vim-enhanced is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230958009",
+										"comment": "vim-minimal is earlier than 2:8.2.2637-20.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225242010",
+										"comment": "vim-minimal is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20230958007",
+										"comment": "vim-filesystem is earlier than 2:8.2.2637-20.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225242008",
+										"comment": "vim-filesystem is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

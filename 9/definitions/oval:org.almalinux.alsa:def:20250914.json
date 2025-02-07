@@ -1,0 +1,306 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20250914",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2025:0914: galera and mariadb security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "CVE-2023-22084",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-22084"
+			},
+			{
+				"ref_id": "CVE-2024-21096",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-21096"
+			},
+			{
+				"ref_id": "RHSA-2025:0914",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2025:0914"
+			},
+			{
+				"ref_id": "ALSA-2025:0914",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2025-0914.html"
+			}
+		],
+		"Description": "MariaDB is a community developed fork from MySQL - a multi-user, multi-threaded SQL database server. It is a client/server implementation consisting of a server daemon (mariadbd) and many different client programs and libraries. The base package contains the standard MariaDB/MySQL client programs and utilities.  \n\nSecurity Fix(es):  \n\n  * mysql: InnoDB unspecified vulnerability (CPU Oct 2023) (CVE-2023-22084)\n  * mysql: Client: mysqldump unspecified vulnerability (CPU Apr 2024) (CVE-2024-21096)\n\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2025 AlmaLinux OS",
+			"issued": {
+				"date": "2025-02-04"
+			},
+			"updated": {
+				"date": "2025-02-04"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2245023",
+					"id": "2245023"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2275452",
+					"id": "2275452"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-22084",
+					"public": "20231017",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-22084",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2024-21096",
+					"public": "20240416",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-21096",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250914001",
+										"comment": "galera is earlier than 0:26.4.20-1.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20235684030",
+										"comment": "galera is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250914002",
+										"comment": "mariadb is earlier than 3:10.5.27-1.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225948002",
+										"comment": "mariadb is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250914003",
+										"comment": "mariadb-backup is earlier than 3:10.5.27-1.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225948004",
+										"comment": "mariadb-backup is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250914004",
+										"comment": "mariadb-common is earlier than 3:10.5.27-1.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225948006",
+										"comment": "mariadb-common is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250914005",
+										"comment": "mariadb-embedded is earlier than 3:10.5.27-1.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225948010",
+										"comment": "mariadb-embedded is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250914006",
+										"comment": "mariadb-errmsg is earlier than 3:10.5.27-1.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225948014",
+										"comment": "mariadb-errmsg is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250914007",
+										"comment": "mariadb-gssapi-server is earlier than 3:10.5.27-1.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225948016",
+										"comment": "mariadb-gssapi-server is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250914008",
+										"comment": "mariadb-oqgraph-engine is earlier than 3:10.5.27-1.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225948018",
+										"comment": "mariadb-oqgraph-engine is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250914009",
+										"comment": "mariadb-pam is earlier than 3:10.5.27-1.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225948020",
+										"comment": "mariadb-pam is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250914010",
+										"comment": "mariadb-server is earlier than 3:10.5.27-1.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225948022",
+										"comment": "mariadb-server is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250914011",
+										"comment": "mariadb-server-galera is earlier than 3:10.5.27-1.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225948024",
+										"comment": "mariadb-server-galera is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250914012",
+										"comment": "mariadb-server-utils is earlier than 3:10.5.27-1.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225948026",
+										"comment": "mariadb-server-utils is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250914013",
+										"comment": "mariadb-devel is earlier than 3:10.5.27-1.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225948008",
+										"comment": "mariadb-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250914014",
+										"comment": "mariadb-embedded-devel is earlier than 3:10.5.27-1.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225948012",
+										"comment": "mariadb-embedded-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20250914015",
+										"comment": "mariadb-test is earlier than 3:10.5.27-1.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225948028",
+										"comment": "mariadb-test is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

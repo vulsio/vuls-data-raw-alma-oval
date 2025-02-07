@@ -1,0 +1,200 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20241239",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:1239: opencryptoki security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "RHSA-2024:1239",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:1239"
+			},
+			{
+				"ref_id": "CVE-2024-0914",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-0914"
+			},
+			{
+				"ref_id": "ALSA-2024:1239",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-1239.html"
+			}
+		],
+		"Description": "The opencryptoki packages contain version 2.11 of the PKCS#11 API, implemented for IBM Cryptocards, such as IBM 4764 and 4765 crypto cards. These packages includes support for the IBM 4758 Cryptographic CoProcessor (with the PKCS#11 firmware loaded), the IBM eServer Cryptographic Accelerator (FC 4960 on IBM eServer System p), the IBM Crypto Express2 (FC 0863 or FC 0870 on IBM System z), and the IBM CP Assist for Cryptographic Function (FC 3863 on IBM System z). The opencryptoki packages also bring a software token implementation that can be used without any cryptographic hardware. These packages contain the Slot Daemon (pkcsslotd) and general utilities.\n\nSecurity Fix(es):\n\n* opencryptoki: timing side-channel in handling of RSA PKCS#1 v1.5 padded ciphertexts (Marvin) (CVE-2024-0914)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-03-07"
+			},
+			"updated": {
+				"date": "2024-03-07"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2260407",
+					"id": "2260407"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2024-0914",
+					"public": "20240125",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-0914",
+					"impact": "Moderate",
+					"cwe": "CWE-385->CWE-208->CWE-203",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20241239017",
+										"comment": "opencryptoki is earlier than 0:3.21.0-9.el9_3.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20241239002",
+										"comment": "opencryptoki is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20241239018",
+										"comment": "opencryptoki-ccatok is earlier than 0:3.21.0-9.el9_3.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20241239004",
+										"comment": "opencryptoki-ccatok is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20241239019",
+										"comment": "opencryptoki-devel is earlier than 0:3.21.0-9.el9_3.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20241239006",
+										"comment": "opencryptoki-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20241239020",
+										"comment": "opencryptoki-ep11tok is earlier than 0:3.21.0-9.el9_3.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20241239008",
+										"comment": "opencryptoki-ep11tok is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20241239021",
+										"comment": "opencryptoki-icatok is earlier than 0:3.21.0-9.el9_3.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20241239010",
+										"comment": "opencryptoki-icatok is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20241239022",
+										"comment": "opencryptoki-icsftok is earlier than 0:3.21.0-9.el9_3.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20241239012",
+										"comment": "opencryptoki-icsftok is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20241239023",
+										"comment": "opencryptoki-libs is earlier than 0:3.21.0-9.el9_3.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20241239014",
+										"comment": "opencryptoki-libs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20241239024",
+										"comment": "opencryptoki-swtok is earlier than 0:3.21.0-9.el9_3.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20241239016",
+										"comment": "opencryptoki-swtok is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

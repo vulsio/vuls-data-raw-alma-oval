@@ -1,0 +1,122 @@
+{
+	"id": "oval:org.almalinux.alsa:def:202411217",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:11217: skopeo security update (Important)",
+		"reference": [
+			{
+				"ref_id": "CVE-2024-34156",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-34156"
+			},
+			{
+				"ref_id": "RHSA-2024:11217",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:11217"
+			},
+			{
+				"ref_id": "ALSA-2024:11217",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-11217.html"
+			}
+		],
+		"Description": "The skopeo command lets you inspect images from container image registries, get images and image layers, and use signatures to create and verify files.   \n\nSecurity Fix(es):  \n\n  * encoding/gob: golang: Calling Decoder.Decode on a message which contains deeply nested structures can cause a panic due to stack exhaustion (CVE-2024-34156)\n\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-12-17"
+			},
+			"updated": {
+				"date": "2024-12-17"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2310528",
+					"id": "2310528"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2024-34156",
+					"public": "20240906",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-34156",
+					"impact": "Important",
+					"cwe": "CWE-674",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202411217001",
+										"comment": "skopeo is earlier than 2:1.16.1-2.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227955002",
+										"comment": "skopeo is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:202411217002",
+										"comment": "skopeo-tests is earlier than 2:1.16.1-2.el9_5"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20227955004",
+										"comment": "skopeo-tests is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

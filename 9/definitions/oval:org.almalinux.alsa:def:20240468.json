@@ -1,0 +1,291 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20240468",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:0468: grub2 security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "RHSA-2024:0468",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:0468"
+			},
+			{
+				"ref_id": "CVE-2023-4001",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-4001"
+			},
+			{
+				"ref_id": "ALSA-2024:0468",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-0468.html"
+			}
+		],
+		"Description": "The grub2 packages provide version 2 of the Grand Unified Boot Loader (GRUB), a highly configurable and customizable boot loader with modular architecture. The packages support a variety of kernel formats, file systems, computer architectures, and hardware devices.\n\nSecurity Fix(es):\n\n* grub2: bypass the GRUB password protection feature (CVE-2023-4001)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-01-25"
+			},
+			"updated": {
+				"date": "2024-01-25"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2224951",
+					"id": "2224951"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-4001",
+					"public": "20240109",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-4001",
+					"impact": "Moderate",
+					"cwe": "CWE-290",
+					"cvss3": "CVSS:3.1/AV:P/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240468030",
+										"comment": "grub2-efi-aa64 is earlier than 1:2.06-70.el9_3.2.alma.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225099004",
+										"comment": "grub2-efi-aa64 is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240468031",
+										"comment": "grub2-efi-aa64-cdboot is earlier than 1:2.06-70.el9_3.2.alma.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225099006",
+										"comment": "grub2-efi-aa64-cdboot is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240468032",
+										"comment": "grub2-efi-x64 is earlier than 1:2.06-70.el9_3.2.alma.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225099010",
+										"comment": "grub2-efi-x64 is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240468033",
+										"comment": "grub2-efi-x64-cdboot is earlier than 1:2.06-70.el9_3.2.alma.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225099012",
+										"comment": "grub2-efi-x64-cdboot is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240468034",
+										"comment": "grub2-pc is earlier than 1:2.06-70.el9_3.2.alma.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225099016",
+										"comment": "grub2-pc is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240468035",
+										"comment": "grub2-ppc64le is earlier than 1:2.06-70.el9_3.2.alma.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225099020",
+										"comment": "grub2-ppc64le is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240468036",
+										"comment": "grub2-tools is earlier than 1:2.06-70.el9_3.2.alma.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225099024",
+										"comment": "grub2-tools is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240468037",
+										"comment": "grub2-tools-efi is earlier than 1:2.06-70.el9_3.2.alma.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225099026",
+										"comment": "grub2-tools-efi is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240468038",
+										"comment": "grub2-tools-extra is earlier than 1:2.06-70.el9_3.2.alma.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225099028",
+										"comment": "grub2-tools-extra is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240468039",
+										"comment": "grub2-tools-minimal is earlier than 1:2.06-70.el9_3.2.alma.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225099030",
+										"comment": "grub2-tools-minimal is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240468040",
+										"comment": "grub2-common is earlier than 1:2.06-70.el9_3.2.alma.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225099002",
+										"comment": "grub2-common is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240468041",
+										"comment": "grub2-efi-aa64-modules is earlier than 1:2.06-70.el9_3.2.alma.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225099008",
+										"comment": "grub2-efi-aa64-modules is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240468042",
+										"comment": "grub2-efi-x64-modules is earlier than 1:2.06-70.el9_3.2.alma.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225099014",
+										"comment": "grub2-efi-x64-modules is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240468043",
+										"comment": "grub2-pc-modules is earlier than 1:2.06-70.el9_3.2.alma.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225099018",
+										"comment": "grub2-pc-modules is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20240468044",
+										"comment": "grub2-ppc64le-modules is earlier than 1:2.06-70.el9_3.2.alma.2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225099022",
+										"comment": "grub2-ppc64le-modules is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

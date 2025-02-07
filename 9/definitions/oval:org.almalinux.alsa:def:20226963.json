@@ -1,0 +1,168 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20226963",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:6963: nodejs security update (Important)",
+		"reference": [
+			{
+				"ref_id": "RHSA-2022:6963",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2022:6963"
+			},
+			{
+				"ref_id": "CVE-2022-35255",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-35255"
+			},
+			{
+				"ref_id": "CVE-2022-35256",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-35256"
+			},
+			{
+				"ref_id": "ALSA-2022:6963",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-6963.html"
+			}
+		],
+		"Description": "Node.js is a software development platform for building fast and scalable network applications in the JavaScript programming language. \n\nThe following packages have been upgraded to a later upstream version: nodejs (16.17.1).\n\nSecurity Fix(es):\n\n* nodejs: weak randomness in WebCrypto keygen (CVE-2022-35255)\n* nodejs: HTTP Request Smuggling due to incorrect parsing of header fields (CVE-2022-35256)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-10-18"
+			},
+			"updated": {
+				"date": "2022-10-18"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2130517",
+					"id": "2130517"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2130518",
+					"id": "2130518"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-35255",
+					"public": "20220923",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-35255",
+					"impact": "Important",
+					"cwe": "CWE-330",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+				},
+				{
+					"text": "CVE-2022-35256",
+					"public": "20220923",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-35256",
+					"impact": "Moderate",
+					"cwe": "CWE-444",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226963001",
+										"comment": "nodejs is earlier than 1:16.17.1-1.el9_0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226595002",
+										"comment": "nodejs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226963005",
+										"comment": "nodejs-full-i18n is earlier than 1:16.17.1-1.el9_0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226595006",
+										"comment": "nodejs-full-i18n is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226963010",
+										"comment": "nodejs-libs is earlier than 1:16.17.1-1.el9_0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226595008",
+										"comment": "nodejs-libs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226963009",
+										"comment": "npm is earlier than 1:8.15.0-1.16.17.1.1.el9_0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226595010",
+										"comment": "npm is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226963003",
+										"comment": "nodejs-docs is earlier than 1:16.17.1-1.el9_0"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226595004",
+										"comment": "nodejs-docs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

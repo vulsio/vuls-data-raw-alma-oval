@@ -1,0 +1,304 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20233711",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:3711: libtiff security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "RHSA-2023:3711",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:3711"
+			},
+			{
+				"ref_id": "CVE-2022-48281",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-48281"
+			},
+			{
+				"ref_id": "CVE-2023-0795",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-0795"
+			},
+			{
+				"ref_id": "CVE-2023-0796",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-0796"
+			},
+			{
+				"ref_id": "CVE-2023-0797",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-0797"
+			},
+			{
+				"ref_id": "CVE-2023-0798",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-0798"
+			},
+			{
+				"ref_id": "CVE-2023-0799",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-0799"
+			},
+			{
+				"ref_id": "CVE-2023-0800",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-0800"
+			},
+			{
+				"ref_id": "CVE-2023-0801",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-0801"
+			},
+			{
+				"ref_id": "CVE-2023-0802",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-0802"
+			},
+			{
+				"ref_id": "CVE-2023-0803",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-0803"
+			},
+			{
+				"ref_id": "CVE-2023-0804",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-0804"
+			},
+			{
+				"ref_id": "ALSA-2023:3711",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-3711.html"
+			}
+		],
+		"Description": "The libtiff packages contain a library of functions for manipulating Tagged Image File Format (TIFF) files.\n\nSecurity Fix(es):\n\n* libtiff: heap-based buffer overflow in processCropSelections() in tools/tiffcrop.c (CVE-2022-48281)\n* libtiff: out-of-bounds read in extractContigSamplesShifted16bits() in tools/tiffcrop.c (CVE-2023-0795)\n* libtiff: out-of-bounds read in extractContigSamplesShifted24bits() in tools/tiffcrop.c (CVE-2023-0796)\n* libtiff: out-of-bounds read in _TIFFmemcpy() in libtiff/tif_unix.c when called by functions in tools/tiffcrop.c (CVE-2023-0797)\n* libtiff: out-of-bounds read in extractContigSamplesShifted8bits() in tools/tiffcrop.c (CVE-2023-0798)\n* libtiff: use-after-free in extractContigSamplesShifted32bits() in tools/tiffcrop.c (CVE-2023-0799)\n* libtiff: out-of-bounds write in extractContigSamplesShifted16bits() in tools/tiffcrop.c (CVE-2023-0800)\n* libtiff: out-of-bounds write in _TIFFmemcpy() in libtiff/tif_unix.c when called by functions in tools/tiffcrop.c (CVE-2023-0801)\n* libtiff: out-of-bounds write in extractContigSamplesShifted32bits() in tools/tiffcrop.c (CVE-2023-0802)\n* libtiff: out-of-bounds write in extractContigSamplesShifted16bits() in tools/tiffcrop.c (CVE-2023-0803)\n* libtiff: out-of-bounds write in extractContigSamplesShifted24bits() in tools/tiffcrop.c (CVE-2023-0804)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-06-21"
+			},
+			"updated": {
+				"date": "2023-06-21"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2163606",
+					"id": "2163606"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2170119",
+					"id": "2170119"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2170146",
+					"id": "2170146"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2170151",
+					"id": "2170151"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2170157",
+					"id": "2170157"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2170162",
+					"id": "2170162"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2170167",
+					"id": "2170167"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2170172",
+					"id": "2170172"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2170178",
+					"id": "2170178"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2170187",
+					"id": "2170187"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2170192",
+					"id": "2170192"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-48281",
+					"public": "20230123",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-48281",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-0795",
+					"public": "20230212",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-0795",
+					"impact": "Moderate",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-0796",
+					"public": "20230212",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-0796",
+					"impact": "Moderate",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-0797",
+					"public": "20230212",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-0797",
+					"impact": "Moderate",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-0798",
+					"public": "20230212",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-0798",
+					"impact": "Moderate",
+					"cwe": "CWE-125",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-0799",
+					"public": "20230212",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-0799",
+					"impact": "Moderate",
+					"cwe": "CWE-416",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-0800",
+					"public": "20230212",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-0800",
+					"impact": "Moderate",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:H"
+				},
+				{
+					"text": "CVE-2023-0801",
+					"public": "20230212",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-0801",
+					"impact": "Moderate",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:H"
+				},
+				{
+					"text": "CVE-2023-0802",
+					"public": "20230212",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-0802",
+					"impact": "Moderate",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:H"
+				},
+				{
+					"text": "CVE-2023-0803",
+					"public": "20230212",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-0803",
+					"impact": "Moderate",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:H"
+				},
+				{
+					"text": "CVE-2023-0804",
+					"public": "20230212",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-0804",
+					"impact": "Moderate",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233711001",
+										"comment": "libtiff is earlier than 0:4.4.0-8.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228194002",
+										"comment": "libtiff is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233711003",
+										"comment": "libtiff-devel is earlier than 0:4.4.0-8.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228194004",
+										"comment": "libtiff-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20233711006",
+										"comment": "libtiff-tools is earlier than 0:4.4.0-8.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228194006",
+										"comment": "libtiff-tools is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

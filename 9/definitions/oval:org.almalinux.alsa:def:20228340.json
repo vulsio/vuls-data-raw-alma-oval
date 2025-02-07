@@ -1,0 +1,148 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20228340",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:8340: freetype security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "RHSA-2022:8340",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2022:8340"
+			},
+			{
+				"ref_id": "CVE-2022-27404",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-27404"
+			},
+			{
+				"ref_id": "CVE-2022-27405",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-27405"
+			},
+			{
+				"ref_id": "CVE-2022-27406",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-27406"
+			},
+			{
+				"ref_id": "ALSA-2022:8340",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-8340.html"
+			}
+		],
+		"Description": "FreeType is a free, high-quality, portable font engine that can open and manage font files. FreeType loads, hints, and renders individual glyphs efficiently.\n\nSecurity Fix(es):\n\n* FreeType: Buffer overflow in sfnt_init_face (CVE-2022-27404)\n* FreeType: Segmentation violation via FNT_Size_Request (CVE-2022-27405)\n* Freetype: Segmentation violation via FT_Request_Size (CVE-2022-27406)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-11-15"
+			},
+			"updated": {
+				"date": "2022-11-15"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2077985",
+					"id": "2077985"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2077989",
+					"id": "2077989"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2077991",
+					"id": "2077991"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-27404",
+					"public": "20220422",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-27404",
+					"impact": "Moderate",
+					"cwe": "CWE-787",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:H"
+				},
+				{
+					"text": "CVE-2022-27405",
+					"public": "20220422",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-27405",
+					"impact": "Moderate",
+					"cwe": "CWE-824",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-27406",
+					"public": "20220422",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-27406",
+					"impact": "Moderate",
+					"cwe": "CWE-824",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228340001",
+										"comment": "freetype is earlier than 0:2.10.4-9.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228340002",
+										"comment": "freetype is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228340003",
+										"comment": "freetype-devel is earlier than 0:2.10.4-9.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228340004",
+										"comment": "freetype-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

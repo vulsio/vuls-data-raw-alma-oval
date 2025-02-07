@@ -1,0 +1,97 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20241147",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:1147: rear security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "RHSA-2024:1147",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:1147"
+			},
+			{
+				"ref_id": "CVE-2024-23301",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-23301"
+			},
+			{
+				"ref_id": "ALSA-2024:1147",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-1147.html"
+			}
+		],
+		"Description": "Relax-and-Recover is a recovery and system migration utility. The utility produces a bootable image and restores from backup using this image. It allows to restore to different hardware and can therefore be also used as a migration utility.\n\nSecurity Fix(es):\n\n* rear: creates a world-readable initrd (CVE-2024-23301)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-03-05"
+			},
+			"updated": {
+				"date": "2024-03-05"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2258396",
+					"id": "2258396"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2024-23301",
+					"public": "20240113",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-23301",
+					"impact": "Moderate",
+					"cwe": "CWE-359",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20241147003",
+						"comment": "rear is earlier than 0:2.6-21.el9_3.alma"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20241147002",
+						"comment": "rear is signed with AlmaLinux OS 9 key"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

@@ -1,0 +1,139 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20235071",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:5071: libcap security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "RHSA-2023:5071",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:5071"
+			},
+			{
+				"ref_id": "CVE-2023-2602",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-2602"
+			},
+			{
+				"ref_id": "CVE-2023-2603",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-2603"
+			},
+			{
+				"ref_id": "ALSA-2023:5071",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-5071.html"
+			}
+		],
+		"Description": "Libcap is a library for getting and setting POSIX.1e (formerly POSIX 6) draft 15 capabilities.\n\nSecurity Fix(es):\n\n* libcap: Integer Overflow in _libcap_strdup() (CVE-2023-2603)\n* libcap: Memory Leak on pthread_create() Error (CVE-2023-2602)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-09-12"
+			},
+			"updated": {
+				"date": "2023-09-12"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2209113",
+					"id": "2209113"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2209114",
+					"id": "2209114"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-2602",
+					"public": "20230516",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-2602",
+					"impact": "Low",
+					"cwe": "CWE-401",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2023-2603",
+					"public": "20230516",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-2603",
+					"impact": "Moderate",
+					"cwe": "CWE-190",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20235071001",
+										"comment": "libcap is earlier than 0:2.48-9.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20235071002",
+										"comment": "libcap is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20235071003",
+										"comment": "libcap-devel is earlier than 0:2.48-9.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20235071004",
+										"comment": "libcap-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

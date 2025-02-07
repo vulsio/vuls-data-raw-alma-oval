@@ -1,0 +1,164 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20232502",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:2502: dhcp security and enhancement update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "RHSA-2023:2502",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:2502"
+			},
+			{
+				"ref_id": "CVE-2022-2928",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-2928"
+			},
+			{
+				"ref_id": "CVE-2022-2929",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-2929"
+			},
+			{
+				"ref_id": "ALSA-2023:2502",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-2502.html"
+			}
+		],
+		"Description": "The Dynamic Host Configuration Protocol (DHCP) is a protocol that allows individual devices on an IP network to get their own network configuration information, including an IP address, a subnet mask, and a broadcast address. The dhcp packages provide a relay agent and ISC DHCP service required to enable and administer DHCP on a network.\n\nSecurity Fix(es):\n\n* dhcp: option refcount overflow when leasequery is enabled leading to dhcpd abort (CVE-2022-2928)\n* dhcp: DHCP memory leak (CVE-2022-2929)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-05-09"
+			},
+			"updated": {
+				"date": "2023-05-09"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2132001",
+					"id": "2132001"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2132002",
+					"id": "2132002"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-2928",
+					"public": "20221005",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-2928",
+					"impact": "Moderate",
+					"cwe": "CWE-190",
+					"cvss3": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-2929",
+					"public": "20221005",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-2929",
+					"impact": "Moderate",
+					"cvss3": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232502001",
+										"comment": "dhcp-client is earlier than 12:4.4.2-18.b1.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228385002",
+										"comment": "dhcp-client is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232502005",
+										"comment": "dhcp-relay is earlier than 12:4.4.2-18.b1.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228385006",
+										"comment": "dhcp-relay is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232502007",
+										"comment": "dhcp-server is earlier than 12:4.4.2-18.b1.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228385008",
+										"comment": "dhcp-server is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232502003",
+										"comment": "dhcp-common is earlier than 12:4.4.2-18.b1.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228385004",
+										"comment": "dhcp-common is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

@@ -1,0 +1,421 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20249114",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2024:9114: gnome-shell and gnome-shell-extensions security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "CVE-2024-36472",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2024-36472"
+			},
+			{
+				"ref_id": "RHSA-2024:9114",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2024:9114"
+			},
+			{
+				"ref_id": "ALSA-2024:9114",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2024-9114.html"
+			}
+		],
+		"Description": "GNOME Shell acts as a compositing manager for the desktop, and displays both application windows and other objects. It provides core interface functions like switching windows, launching applications, and notifications. It takes advantage of the capabilities of modern graphics hardware and introduces innovative user interface concepts.   \n\nSecurity Fix(es):  \n\n  * gnome-shell: code execution in portal helper (CVE-2024-36472)\n\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.  \n\nAdditional Changes:  \n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.\n",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2024 AlmaLinux OS",
+			"issued": {
+				"date": "2024-11-12"
+			},
+			"updated": {
+				"date": "2024-11-12"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2283750",
+					"id": "2283750"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2024-36472",
+					"public": "20240528",
+					"href": "https://access.redhat.com/security/cve/CVE-2024-36472",
+					"impact": "Moderate",
+					"cwe": "CWE-83",
+					"cvss3": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114001",
+										"comment": "gnome-shell is earlier than 0:40.10-21.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114002",
+										"comment": "gnome-shell is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114003",
+										"comment": "gnome-classic-session is earlier than 0:40.7-19.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114004",
+										"comment": "gnome-classic-session is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114005",
+										"comment": "gnome-shell-extension-apps-menu is earlier than 0:40.7-19.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114006",
+										"comment": "gnome-shell-extension-apps-menu is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114007",
+										"comment": "gnome-shell-extension-auto-move-windows is earlier than 0:40.7-19.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114008",
+										"comment": "gnome-shell-extension-auto-move-windows is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114009",
+										"comment": "gnome-shell-extension-classification-banner is earlier than 0:40.7-19.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114010",
+										"comment": "gnome-shell-extension-classification-banner is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114011",
+										"comment": "gnome-shell-extension-common is earlier than 0:40.7-19.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114012",
+										"comment": "gnome-shell-extension-common is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114013",
+										"comment": "gnome-shell-extension-custom-menu is earlier than 0:40.7-19.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114014",
+										"comment": "gnome-shell-extension-custom-menu is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114015",
+										"comment": "gnome-shell-extension-dash-to-dock is earlier than 0:40.7-19.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114016",
+										"comment": "gnome-shell-extension-dash-to-dock is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114017",
+										"comment": "gnome-shell-extension-dash-to-panel is earlier than 0:40.7-19.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114018",
+										"comment": "gnome-shell-extension-dash-to-panel is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114019",
+										"comment": "gnome-shell-extension-desktop-icons is earlier than 0:40.7-19.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114020",
+										"comment": "gnome-shell-extension-desktop-icons is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114021",
+										"comment": "gnome-shell-extension-drive-menu is earlier than 0:40.7-19.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114022",
+										"comment": "gnome-shell-extension-drive-menu is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114023",
+										"comment": "gnome-shell-extension-gesture-inhibitor is earlier than 0:40.7-19.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114024",
+										"comment": "gnome-shell-extension-gesture-inhibitor is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114025",
+										"comment": "gnome-shell-extension-heads-up-display is earlier than 0:40.7-19.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114026",
+										"comment": "gnome-shell-extension-heads-up-display is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114027",
+										"comment": "gnome-shell-extension-launch-new-instance is earlier than 0:40.7-19.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114028",
+										"comment": "gnome-shell-extension-launch-new-instance is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114029",
+										"comment": "gnome-shell-extension-native-window-placement is earlier than 0:40.7-19.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114030",
+										"comment": "gnome-shell-extension-native-window-placement is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114031",
+										"comment": "gnome-shell-extension-panel-favorites is earlier than 0:40.7-19.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114032",
+										"comment": "gnome-shell-extension-panel-favorites is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114033",
+										"comment": "gnome-shell-extension-places-menu is earlier than 0:40.7-19.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114034",
+										"comment": "gnome-shell-extension-places-menu is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114035",
+										"comment": "gnome-shell-extension-screenshot-window-sizer is earlier than 0:40.7-19.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114036",
+										"comment": "gnome-shell-extension-screenshot-window-sizer is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114037",
+										"comment": "gnome-shell-extension-systemMonitor is earlier than 0:40.7-19.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114038",
+										"comment": "gnome-shell-extension-systemMonitor is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114039",
+										"comment": "gnome-shell-extension-top-icons is earlier than 0:40.7-19.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114040",
+										"comment": "gnome-shell-extension-top-icons is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114041",
+										"comment": "gnome-shell-extension-updates-dialog is earlier than 0:40.7-19.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114042",
+										"comment": "gnome-shell-extension-updates-dialog is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114043",
+										"comment": "gnome-shell-extension-user-theme is earlier than 0:40.7-19.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114044",
+										"comment": "gnome-shell-extension-user-theme is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114045",
+										"comment": "gnome-shell-extension-window-list is earlier than 0:40.7-19.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114046",
+										"comment": "gnome-shell-extension-window-list is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114047",
+										"comment": "gnome-shell-extension-windowsNavigator is earlier than 0:40.7-19.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114048",
+										"comment": "gnome-shell-extension-windowsNavigator is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114049",
+										"comment": "gnome-shell-extension-workspace-indicator is earlier than 0:40.7-19.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20249114050",
+										"comment": "gnome-shell-extension-workspace-indicator is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

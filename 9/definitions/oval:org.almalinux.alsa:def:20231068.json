@@ -1,0 +1,152 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20231068",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:1068: libjpeg-turbo security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "RHSA-2023:1068",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:1068"
+			},
+			{
+				"ref_id": "CVE-2021-46822",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2021-46822"
+			},
+			{
+				"ref_id": "ALSA-2023:1068",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-1068.html"
+			}
+		],
+		"Description": "The libjpeg-turbo packages contain a library of functions for manipulating JPEG images. They also contain simple client programs for accessing the libjpeg functions. These packages provide the same functionality and API as libjpeg but with better performance.\n\nSecurity Fix(es):\n\n* libjpeg-turbo: heap buffer overflow in get_word_rgb_row() in rdppm.c (CVE-2021-46822)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-03-06"
+			},
+			"updated": {
+				"date": "2023-03-06"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2100044",
+					"id": "2100044"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2021-46822",
+					"public": "20210407",
+					"href": "https://access.redhat.com/security/cve/CVE-2021-46822",
+					"impact": "Moderate",
+					"cwe": "CWE-119",
+					"cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20231068001",
+										"comment": "libjpeg-turbo is earlier than 0:2.0.90-6.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20231068002",
+										"comment": "libjpeg-turbo is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20231068003",
+										"comment": "libjpeg-turbo-devel is earlier than 0:2.0.90-6.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20231068004",
+										"comment": "libjpeg-turbo-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20231068011",
+										"comment": "libjpeg-turbo-utils is earlier than 0:2.0.90-6.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20231068006",
+										"comment": "libjpeg-turbo-utils is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20231068007",
+										"comment": "turbojpeg is earlier than 0:2.0.90-6.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20231068008",
+										"comment": "turbojpeg is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20231068009",
+										"comment": "turbojpeg-devel is earlier than 0:2.0.90-6.el9_1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20231068010",
+										"comment": "turbojpeg-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

@@ -1,0 +1,87 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20225716",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2022:5716: grafana security update (Important)",
+		"reference": [
+			{
+				"ref_id": "ALSA-2022:5716",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2022-5716.html"
+			},
+			{
+				"ref_id": "RHSA-2022:5716",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2022:5716"
+			},
+			{
+				"ref_id": "CVE-2022-31107",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-31107"
+			}
+		],
+		"Description": "Grafana is an open source, feature rich metrics dashboard and graph editor for\nGraphite, InfluxDB & OpenTSDB.\nSecurity Fix(es):\n* grafana: OAuth account takeover (CVE-2022-31107)\nFor more details about the security issue(s), including the impact, a CVSS\nscore, acknowledgments, and other related information, refer to the CVE page(s)\nlisted in the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2022 AlmaLinux OS",
+			"issued": {
+				"date": "2022-07-26"
+			},
+			"updated": {
+				"date": "2022-07-26"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2104367",
+					"id": "2104367"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-31107",
+					"public": "20220714",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-31107",
+					"impact": "Important",
+					"cwe": "CWE-287",
+					"cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:L"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20225716001",
+						"comment": "grafana is earlier than 0:7.5.11-5.el9_0"
+					},
+					{
+						"test_ref": "oval:org.almalinux.alsa:tst:20225716002",
+						"comment": "grafana is signed with AlmaLinux OS 9 key"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

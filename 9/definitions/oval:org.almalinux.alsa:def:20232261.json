@@ -1,0 +1,277 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20232261",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:2261: bind security and bug fix update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "RHSA-2023:2261",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:2261"
+			},
+			{
+				"ref_id": "CVE-2022-2795",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-2795"
+			},
+			{
+				"ref_id": "CVE-2022-3094",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-3094"
+			},
+			{
+				"ref_id": "CVE-2022-3736",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-3736"
+			},
+			{
+				"ref_id": "CVE-2022-3924",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-3924"
+			},
+			{
+				"ref_id": "ALSA-2023:2261",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-2261.html"
+			}
+		],
+		"Description": "The Berkeley Internet Name Domain (BIND) is an implementation of the Domain Name System (DNS) protocols. BIND includes a DNS server (named); a resolver library (routines for applications to use when interfacing with DNS); and tools for verifying that the DNS server is operating correctly.\n\nSecurity Fix(es):\n\n* bind: processing large delegations may severely degrade resolver performance (CVE-2022-2795)\n* bind: flooding with UPDATE requests may lead to DoS (CVE-2022-3094)\n* bind: sending specific queries to the resolver may cause a DoS (CVE-2022-3736)\n* bind: sending specific queries to the resolver may cause a DoS (CVE-2022-3924)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-05-09"
+			},
+			"updated": {
+				"date": "2023-05-09"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2128584",
+					"id": "2128584"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2164032",
+					"id": "2164032"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2164038",
+					"id": "2164038"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2164039",
+					"id": "2164039"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-2795",
+					"public": "20220921",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-2795",
+					"impact": "Moderate",
+					"cwe": "CWE-20->CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2022-3094",
+					"public": "20230125",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-3094",
+					"impact": "Moderate",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-3736",
+					"public": "20230125",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-3736",
+					"impact": "Moderate",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-3924",
+					"public": "20230125",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-3924",
+					"impact": "Moderate",
+					"cwe": "CWE-20",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232261001",
+										"comment": "bind is earlier than 32:9.16.23-11.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226763002",
+										"comment": "bind is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232261003",
+										"comment": "bind-chroot is earlier than 32:9.16.23-11.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226763004",
+										"comment": "bind-chroot is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232261020",
+										"comment": "bind-devel is earlier than 32:9.16.23-11.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226763006",
+										"comment": "bind-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232261009",
+										"comment": "bind-dnssec-utils is earlier than 32:9.16.23-11.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226763010",
+										"comment": "bind-dnssec-utils is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232261021",
+										"comment": "bind-libs is earlier than 32:9.16.23-11.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226763012",
+										"comment": "bind-libs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232261017",
+										"comment": "bind-utils is earlier than 32:9.16.23-11.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226763016",
+										"comment": "bind-utils is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232261007",
+										"comment": "bind-dnssec-doc is earlier than 32:9.16.23-11.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226763008",
+										"comment": "bind-dnssec-doc is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232261011",
+										"comment": "bind-doc is earlier than 32:9.16.23-11.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20228068012",
+										"comment": "bind-doc is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232261015",
+										"comment": "bind-license is earlier than 32:9.16.23-11.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226763014",
+										"comment": "bind-license is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232261019",
+										"comment": "python3-bind is earlier than 32:9.16.23-11.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20226763018",
+										"comment": "python3-bind is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

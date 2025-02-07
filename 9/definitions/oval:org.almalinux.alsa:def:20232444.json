@@ -1,0 +1,204 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20232444",
+	"version": "636",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:2444: net-snmp security and bug fix update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "RHSA-2023:2444",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:2444"
+			},
+			{
+				"ref_id": "CVE-2022-44792",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-44792"
+			},
+			{
+				"ref_id": "CVE-2022-44793",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2022-44793"
+			},
+			{
+				"ref_id": "ALSA-2023:2444",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-2444.html"
+			}
+		],
+		"Description": "The net-snmp packages provide various libraries and tools for the Simple Network Management Protocol (SNMP), including an SNMP library, an extensible agent, tools for requesting or setting information from SNMP agents, tools for generating and handling SNMP traps, a version of the netstat command which uses SNMP, and a Tk/Perl Management Information Base (MIB) browser.\n\nSecurity Fix(es):\n\n* net-snmp: NULL Pointer Exception when handling ipDefaultTTL (CVE-2022-44792)\n* net-snmp: NULL Pointer Exception when handling pv6IpForwarding (CVE-2022-44793)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the AlmaLinux Release Notes linked from the References section.",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-05-09"
+			},
+			"updated": {
+				"date": "2023-05-09"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2141897",
+					"id": "2141897"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2141898",
+					"id": "2141898"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2022-44792",
+					"public": "20221107",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-44792",
+					"impact": "Moderate",
+					"cwe": "CWE-476",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2022-44793",
+					"public": "20221107",
+					"href": "https://access.redhat.com/security/cve/CVE-2022-44793",
+					"impact": "Moderate",
+					"cwe": "CWE-476",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232444001",
+										"comment": "net-snmp is earlier than 1:5.9.1-9.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232444002",
+										"comment": "net-snmp is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232444015",
+										"comment": "net-snmp-agent-libs is earlier than 1:5.9.1-9.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232444004",
+										"comment": "net-snmp-agent-libs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232444016",
+										"comment": "net-snmp-devel is earlier than 1:5.9.1-9.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232444006",
+										"comment": "net-snmp-devel is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232444017",
+										"comment": "net-snmp-libs is earlier than 1:5.9.1-9.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232444008",
+										"comment": "net-snmp-libs is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232444009",
+										"comment": "net-snmp-perl is earlier than 1:5.9.1-9.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232444010",
+										"comment": "net-snmp-perl is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232444011",
+										"comment": "net-snmp-utils is earlier than 1:5.9.1-9.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232444012",
+										"comment": "net-snmp-utils is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232444013",
+										"comment": "python3-net-snmp is earlier than 1:5.9.1-9.el9"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20232444014",
+										"comment": "python3-net-snmp is signed with AlmaLinux OS 9 key"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}

@@ -1,0 +1,234 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20235738",
+	"version": "637",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2023:5738: go-toolset and golang security and bug fix update (Important)",
+		"reference": [
+			{
+				"ref_id": "RHSA-2023:5738",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2023:5738"
+			},
+			{
+				"ref_id": "CVE-2023-29409",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-29409"
+			},
+			{
+				"ref_id": "CVE-2023-39325",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-39325"
+			},
+			{
+				"ref_id": "CVE-2023-44487",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2023-44487"
+			},
+			{
+				"ref_id": "ALSA-2023:5738",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2023-5738.html"
+			}
+		],
+		"Description": "Go Toolset provides the Go programming language tools and libraries. Go is alternatively known as golang. \n\nThe golang packages provide the Go programming language compiler.\n\nSecurity Fix(es):\n\n* golang: net/http, x/net/http2: rapid stream resets can cause excessive work [CVE-2023-44487] (CVE-2023-39325)\n* HTTP/2: Multiple HTTP/2 enabled web servers are vulnerable to a DDoS attack (Rapid Reset Attack) (CVE-2023-44487)\n* golang: crypto/tls: slow verification of certificate chains containing large RSA keys (CVE-2023-29409)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nBug Fix(es):\n\n* Midstream dist-git patches (BZ#2223637)",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Important",
+			"Rights": "Copyright 2023 AlmaLinux OS",
+			"issued": {
+				"date": "2023-10-16"
+			},
+			"updated": {
+				"date": "2023-10-16"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/2228743",
+					"id": "2228743"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2242803",
+					"id": "2242803"
+				},
+				{
+					"href": "https://bugzilla.redhat.com/2243296",
+					"id": "2243296"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2023-29409",
+					"public": "20230802",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-29409",
+					"impact": "Moderate",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+				},
+				{
+					"text": "CVE-2023-39325",
+					"public": "20231010",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-39325",
+					"impact": "Important",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				},
+				{
+					"text": "CVE-2023-44487",
+					"public": "20231010",
+					"href": "https://access.redhat.com/security/cve/CVE-2023-44487",
+					"impact": "Important",
+					"cwe": "CWE-400",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20235738016",
+										"comment": "golang is earlier than 0:1.19.13-1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246913015",
+										"comment": "golang is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20235738017",
+										"comment": "golang-bin is earlier than 0:1.19.13-1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246913016",
+										"comment": "golang-bin is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20235738018",
+										"comment": "golang-race is earlier than 0:1.19.13-1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20225799010",
+										"comment": "golang-race is signed with AlmaLinux OS 9 key"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20235738019",
+										"comment": "go-toolset is earlier than 0:1.19.13-1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246913014",
+										"comment": "go-toolset is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20235738020",
+										"comment": "golang-docs is earlier than 0:1.19.13-1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246913017",
+										"comment": "golang-docs is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20235738021",
+										"comment": "golang-misc is earlier than 0:1.19.13-1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246913018",
+										"comment": "golang-misc is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20235738022",
+										"comment": "golang-src is earlier than 0:1.19.13-1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246913019",
+										"comment": "golang-src is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20235738023",
+										"comment": "golang-tests is earlier than 0:1.19.13-1.el9_2"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20246913020",
+										"comment": "golang-tests is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}
