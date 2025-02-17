@@ -1,0 +1,434 @@
+{
+	"id": "oval:org.almalinux.alsa:def:20251346",
+	"version": "635",
+	"class": "patch",
+	"metadata": {
+		"Title": "ALSA-2025:1346: gcc security update (Moderate)",
+		"reference": [
+			{
+				"ref_id": "CVE-2020-11023",
+				"source": "CVE",
+				"ref_url": "https://access.redhat.com/security/cve/CVE-2020-11023"
+			},
+			{
+				"ref_id": "RHSA-2025:1346",
+				"source": "RHSA",
+				"ref_url": "https://access.redhat.com/errata/RHSA-2025:1346"
+			},
+			{
+				"ref_id": "ALSA-2025:1346",
+				"source": "ALSA",
+				"ref_url": "https://errata.almalinux.org/9/ALSA-2025-1346.html"
+			}
+		],
+		"Description": "The gcc packages provide compilers for C, C++, Java, Fortran, Objective C, and Ada 95 GNU, as well as related support libraries.  \n\nSecurity Fix(es):  \n\n  * jquery: Untrusted code execution via <option> tag in HTML passed to DOM manipulation methods (CVE-2020-11023)\n\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n",
+		"advisory": {
+			"from": "packager@almalinux.org",
+			"Severity": "Moderate",
+			"Rights": "Copyright 2025 AlmaLinux OS",
+			"issued": {
+				"date": "2025-02-12"
+			},
+			"updated": {
+				"date": "2025-02-12"
+			},
+			"affected_cpe_list": {
+				"Cpe": [
+					"cpe:/a:almalinux:almalinux:9",
+					"cpe:/a:almalinux:almalinux:9::appstream",
+					"cpe:/a:almalinux:almalinux:9::crb",
+					"cpe:/a:almalinux:almalinux:9::highavailability",
+					"cpe:/a:almalinux:almalinux:9::nfv",
+					"cpe:/a:almalinux:almalinux:9::realtime",
+					"cpe:/a:almalinux:almalinux:9::resilientstorage",
+					"cpe:/a:almalinux:almalinux:9::sap",
+					"cpe:/a:almalinux:almalinux:9::sap_hana",
+					"cpe:/a:almalinux:almalinux:9::supplementary",
+					"cpe:/o:almalinux:almalinux:9",
+					"cpe:/o:almalinux:almalinux:9::baseos"
+				]
+			},
+			"bugzilla": [
+				{
+					"href": "https://bugzilla.redhat.com/1850004",
+					"id": "1850004"
+				}
+			],
+			"cve": [
+				{
+					"text": "CVE-2020-11023",
+					"public": "20200429",
+					"href": "https://access.redhat.com/security/cve/CVE-2020-11023",
+					"impact": "Moderate",
+					"cwe": "CWE-79",
+					"cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+				}
+			]
+		}
+	},
+	"criteria": {
+		"operator": "OR",
+		"criterias": [
+			{
+				"operator": "AND",
+				"criterias": [
+					{
+						"operator": "OR",
+						"criterias": [
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346001",
+										"comment": "cpp is earlier than 0:11.5.0-5.el9_5.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346002",
+										"comment": "cpp is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346003",
+										"comment": "gcc is earlier than 0:11.5.0-5.el9_5.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346004",
+										"comment": "gcc is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346005",
+										"comment": "gcc-c++ is earlier than 0:11.5.0-5.el9_5.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346006",
+										"comment": "gcc-c++ is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346007",
+										"comment": "gcc-gfortran is earlier than 0:11.5.0-5.el9_5.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346008",
+										"comment": "gcc-gfortran is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346009",
+										"comment": "gcc-offload-nvptx is earlier than 0:11.5.0-5.el9_5.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346010",
+										"comment": "gcc-offload-nvptx is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346011",
+										"comment": "gcc-plugin-annobin is earlier than 0:11.5.0-5.el9_5.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346012",
+										"comment": "gcc-plugin-annobin is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346013",
+										"comment": "libasan is earlier than 0:11.5.0-5.el9_5.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346014",
+										"comment": "libasan is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346015",
+										"comment": "libatomic is earlier than 0:11.5.0-5.el9_5.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346016",
+										"comment": "libatomic is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346017",
+										"comment": "libgcc is earlier than 0:11.5.0-5.el9_5.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346018",
+										"comment": "libgcc is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346019",
+										"comment": "libgccjit is earlier than 0:11.5.0-5.el9_5.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346020",
+										"comment": "libgccjit is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346021",
+										"comment": "libgccjit-devel is earlier than 0:11.5.0-5.el9_5.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346022",
+										"comment": "libgccjit-devel is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346023",
+										"comment": "libgfortran is earlier than 0:11.5.0-5.el9_5.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346024",
+										"comment": "libgfortran is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346025",
+										"comment": "libgomp is earlier than 0:11.5.0-5.el9_5.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346026",
+										"comment": "libgomp is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346027",
+										"comment": "libgomp-offload-nvptx is earlier than 0:11.5.0-5.el9_5.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346028",
+										"comment": "libgomp-offload-nvptx is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346029",
+										"comment": "libitm is earlier than 0:11.5.0-5.el9_5.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346030",
+										"comment": "libitm is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346031",
+										"comment": "libitm-devel is earlier than 0:11.5.0-5.el9_5.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346032",
+										"comment": "libitm-devel is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346033",
+										"comment": "liblsan is earlier than 0:11.5.0-5.el9_5.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251309034",
+										"comment": "liblsan is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346034",
+										"comment": "libquadmath is earlier than 0:11.5.0-5.el9_5.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346035",
+										"comment": "libquadmath is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346036",
+										"comment": "libstdc++-devel is earlier than 0:11.5.0-5.el9_5.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346037",
+										"comment": "libstdc++-devel is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346038",
+										"comment": "libquadmath-devel is earlier than 0:11.5.0-5.el9_5.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346039",
+										"comment": "libquadmath-devel is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346040",
+										"comment": "libstdc++ is earlier than 0:11.5.0-5.el9_5.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346041",
+										"comment": "libstdc++ is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346042",
+										"comment": "libstdc++-docs is earlier than 0:11.5.0-5.el9_5.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346043",
+										"comment": "libstdc++-docs is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346044",
+										"comment": "libtsan is earlier than 0:11.5.0-5.el9_5.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346045",
+										"comment": "libtsan is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346046",
+										"comment": "libubsan is earlier than 0:11.5.0-5.el9_5.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346047",
+										"comment": "libubsan is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346048",
+										"comment": "gcc-plugin-devel is earlier than 0:11.5.0-5.el9_5.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346049",
+										"comment": "gcc-plugin-devel is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							},
+							{
+								"operator": "AND",
+								"criterions": [
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346050",
+										"comment": "libstdc++-static is earlier than 0:11.5.0-5.el9_5.alma.1"
+									},
+									{
+										"test_ref": "oval:org.almalinux.alsa:tst:20251346051",
+										"comment": "libstdc++-static is signed with AlmaLinux OS 9 key (d36cb86cb86b3716)"
+									}
+								]
+							}
+						]
+					}
+				],
+				"criterions": [
+					{
+						"test_ref": "oval:org.almalinux.alba:tst:20225749023",
+						"comment": "AlmaLinux 9 is installed"
+					}
+				]
+			}
+		],
+		"criterions": [
+			{
+				"test_ref": "oval:org.almalinux.alba:tst:20225749024",
+				"comment": "AlmaLinux must be installed"
+			}
+		]
+	}
+}
